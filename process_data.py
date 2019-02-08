@@ -35,15 +35,17 @@ df = pd.read_csv('data/src/orderedOnetSkillsByComputerization.csv')
 automatibility = {}
 for row in tqdm(df.itertuples()):
     i = skills_inv[row.Skill]
-    automatibility[i] = row.correlation
+    skills[i] = {
+        'name': row.Skill,
+        'automatibility': row.correlation
+    }
 
-with open('data/game.json', 'w') as f:
+with open('data/jobs.json', 'w') as f:
     json.dump({
-        'idx': {
-            'job': jobs,
-            'skills': skills
-        },
+        'idx': jobs,
         'job_skill': job_skill.tolist(),
         'job_job': job_job.tolist(),
-        'automatibility':  automatibility
     }, f)
+
+with open('data/skills.json', 'w') as f:
+    json.dump(skills, f)
