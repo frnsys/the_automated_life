@@ -1,5 +1,5 @@
 import math from 'mathjs';
-import Skills from './skill.js';
+import Skills from './skill';
 
 // For weighted random sampling of skills
 const skillWeights = Object.values(Skills).map(s => s.automatibility);
