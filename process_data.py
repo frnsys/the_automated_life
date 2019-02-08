@@ -10,15 +10,17 @@ skills = {}
 df = pd.read_csv('data/src/jobSkillRcaMat.csv', delimiter='\t')
 n_jobs = len(df)
 skills = {i: name.strip() for i, name in enumerate(df.columns.tolist()[2:])}
-job_skill = np.zeros((n_jobs, len(skills)))
 for i, r in tqdm(df.iterrows()):
-    jobs[i] = r[' Job Title'].strip()
     vals = r.tolist()[2:]
+    job_skills = {}
     for j, v in enumerate(vals):
-        job_skill[i][j] = v
-print('Job-Skill:', job_skill.shape)
+        if v > 0: job_skills[j] = v
+    jobs[i] = {
+        'name': r[' Job Title'].strip(),
+        'skills': job_skills
+    }
 
-jobs_inv = {name: i for i, name in jobs.items()}
+jobs_inv = {j['name']: i for i, j in jobs.items()}
 skills_inv = {name: i for i, name in skills.items()}
 
 # Job-job similarity
@@ -28,7 +30,6 @@ for i, r in tqdm(df.iterrows()):
     a = jobs_inv[r['Title 1']]
     b = jobs_inv[r['Title 2']]
     job_job[a][b] = job_job[b][a] = r['Skill Sim']
-print('Job-Job:', job_job.shape)
 
 # Skill-automation exposure
 df = pd.read_csv('data/src/orderedOnetSkillsByComputerization.csv')
@@ -46,8 +47,7 @@ for row in tqdm(df.itertuples()):
 
 with open('data/jobs.json', 'w') as f:
     json.dump({
-        'idx': jobs,
-        'job_skill': job_skill.tolist(),
+        'jobs': jobs,
         'job_job': job_job.tolist(),
     }, f)
 
