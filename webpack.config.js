@@ -17,12 +17,6 @@ module.exports = {
           plugins: ['@babel/plugin-proposal-class-properties']
         }
       }
-    }, {
-      test: /\.json$/,
-      exclude: /node_modules/,
-      use: {
-        loader: 'json'
-      }
     }]
   },
   resolve: {
