@@ -35,9 +35,13 @@ df = pd.read_csv('data/src/orderedOnetSkillsByComputerization.csv')
 automatibility = {}
 for row in tqdm(df.itertuples()):
     i = skills_inv[row.Skill]
+
+    # Convert from [-1, 1] to [0, 1]
+    auto = (row.correlation + 1)/2
+
     skills[i] = {
         'name': row.Skill,
-        'automatibility': row.correlation
+        'automatibility': auto
     }
 
 with open('data/jobs.json', 'w') as f:
