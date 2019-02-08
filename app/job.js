@@ -8,7 +8,7 @@ class Job {
     this.skills = skills;
 
     // TODO
-    this.wage = null;
+    this.wage = Math.random() * 100;
   }
 }
 

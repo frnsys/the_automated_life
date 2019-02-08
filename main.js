@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {render} from 'react-dom';
+import Player from './app/player';
+import Jobs from './app/job';
 
 class App extends Component {
   render() {
@@ -7,5 +9,17 @@ class App extends Component {
   }
 }
 
-let main = document.getElementById('main');
+const main = document.getElementById('main');
 render(<App />, main);
+
+// Game setup
+const player = new Player();
+// Random job for now
+player.job = Jobs[10];
+
+// Game loop
+function loop() {
+  console.log('tick');
+  requestAnimationFrame(loop);
+}
+loop();
