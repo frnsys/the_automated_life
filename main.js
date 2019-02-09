@@ -17,6 +17,8 @@ const player = new Player();
 // Random job for now
 player.job = Jobs[10];
 
+console.log(player.job.similar);
+
 // Game loop
 function loop() {
   console.log('tick');
