@@ -2,7 +2,7 @@ import skills from '../data/skills.json'
 
 class Skill {
   constructor(id, name, automatibility) {
-    this.id = id;
+    this.id = id.toString();
     this.name = name;
     this.automatibility = automatibility;
   }

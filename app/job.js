@@ -15,6 +15,34 @@ class Job {
   get similar() {
     return this._similar.map(id => Jobs[id]);
   }
+
+  applyRobot(robot) {
+    let robotSkillWeight = 0;
+    let totalSkillWeight = 0;
+    this.skills.forEach(s => {
+      totalSkillWeight += s.weight;
+      if (robot.skills.includes(s.skill.id)) {
+        robotSkillWeight += s.weight;
+      }
+    });
+
+    let robotAdjacentSkillWeight = 0;
+    robot.skills.forEach(skillId => {
+      this.skills.forEach(s => {
+        if (s.skill.id !== skillId) {
+          // robotAdjacentSkillWeight += (s.weight * sim[skillId, s.skillid]);
+          robotAdjacentSkillWeight += (s.weight * 0.0);
+        }
+      });
+    });
+
+    let displacement = robotSkillWeight/totalSkillWeight;
+    let productivityGains = robotAdjacentSkillWeight/totalSkillWeight;
+    let wageChange = this.wage * (productivityGains - displacement) * robot.productivity;
+    this.wage += wageChange;
+
+    return wageChange;
+  }
 }
 
 const Jobs = Object.assign({}, ...Object.keys(jobs.jobs).map(k => {
