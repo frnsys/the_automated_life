@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import createRobot from '../robot';
-import releaseRobot from '../logic';
+import robots from '../robots';
+import logic from '../logic';
 
 class App extends Component {
   render() {
@@ -14,6 +14,7 @@ class App extends Component {
             return <li key={r.id}>Robot {r.id} {(r.productivity*100).toFixed(1)}%</li>;
           })}
         </ul>
+
         <h1>Jobs</h1>
         <ul>
           {Object.keys(this.props.jobs).map(id => {
@@ -30,17 +31,10 @@ const mapStateToProps = (state, props) => {
     return state;
 };
 
-function updateUser(newUser) {
-    return {
-        type: 'updateUser',
-        payload: newUser
-    };
-}
-
 const mapActionsToProps = {
   createRobot: () => {
-    let robot = createRobot();
-    releaseRobot(robot);
+    let robot = robots.create();
+    logic.releaseRobot(robot);
     return {
       type: 'robot:create',
       payload: robot

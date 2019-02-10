@@ -2,9 +2,4 @@ function reducer(state={}, action) {
   return state;
 }
 
-export default {
-  reducer: reducer,
-  initialState: {
-    cash: 0
-  }
-};
+export default { reducer, initialState: { cash: 0 }};

@@ -4,7 +4,4 @@ function reducer(state={}, action) {
   return state;
 }
 
-export default {
-  reducer: reducer,
-  initialState: skills
-}
+export default { reducer, initialState: skills };

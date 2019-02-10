@@ -11,7 +11,4 @@ function reducer(state={}, {type, payload}) {
   return state;
 }
 
-export default {
-  reducer: reducer,
-  initialState: jobs
-};
+export default { reducer, initialState: jobs };
