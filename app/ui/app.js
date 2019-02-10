@@ -2,11 +2,13 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import robots from '../robots';
 import logic from '../logic';
+import Scene from './scene';
 
 class App extends Component {
   render() {
     return (
       <div>
+        <Scene />
         <h1>Robots</h1>
         <div onClick={this.props.createRobot}>Create Robot</div>
         <ul>
