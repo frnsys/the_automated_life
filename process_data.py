@@ -1,4 +1,5 @@
 import json
+import random
 import numpy as np
 import pandas as pd
 from tqdm import tqdm
@@ -45,6 +46,9 @@ for idx, job in jobs.items():
         similar = [id for id in cands if job_job[idx][id] >= min_sim]
     job['similar'] = [int(id) for id in similar]
 
+    # TODO
+    job['wage'] = random.randint(0, 100)
+
 # Skill-automation exposure
 df = pd.read_csv('data/src/orderedOnetSkillsByComputerization.csv')
 automatibility = {}
@@ -60,10 +64,7 @@ for row in tqdm(df.itertuples()):
     }
 
 with open('data/jobs.json', 'w') as f:
-    json.dump({
-        'jobs': jobs,
-        'job_job': job_job.tolist(),
-    }, f)
+    json.dump(jobs, f)
 
 with open('data/skills.json', 'w') as f:
     json.dump(skills, f)

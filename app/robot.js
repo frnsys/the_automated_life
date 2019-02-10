@@ -1,26 +1,20 @@
 import math from 'mathjs';
-import Skills from './skill';
+import skills from '../data/skills.json'
 
 // For weighted random sampling of skills
-const skillWeights = Object.values(Skills).map(s => s.automatibility);
+const skillWeights = Object.values(skills).map(s => s.automatibility);
 
 function randomSkills(n) {
-  return math.pickRandom(Object.keys(Skills), skillWeights, n);
+  return math.pickRandom(Object.keys(skills), skillWeights, n);
 }
 
-
-class Robot {
-  static random() {
-    let nSkills = math.random(2, 5);
-    let skills = randomSkills(nSkills);
-    let productivity = math.random();
-    return new Robot(skills, productivity);
-  }
-
-  constructor(skills, productivity) {
-    this.skills = skills;
-    this.productivity = productivity;
-  }
+// Create a random robot
+function createRobot() {
+  let nSkills = math.random(2, 5);
+  let skills = randomSkills(nSkills);
+  let productivity = math.random();
+  let id = math.randomInt(0, 1000); // TODO proper id system
+  return { id, skills, productivity };
 }
 
-export default Robot;
+export default createRobot;
