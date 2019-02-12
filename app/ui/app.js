@@ -26,6 +26,9 @@ class App extends Component {
     return (
       <div>
         <GlobalStyle />
+        <h1>Cash: ${this.props.player.cash.toFixed(2)}</h1>
+        <h1>Job: {this.props.player.job.name}</h1>
+        <h1>Wage: ${this.props.player.job.wage.toFixed(2)}</h1>
         <Notifications children={add => (this.notifications.current = add)} />
         <h1>Robots</h1>
         <div onClick={this.createRobot}>Create Robot</div>
@@ -39,7 +42,7 @@ class App extends Component {
         <ul>
           {Object.keys(this.props.jobs).map(id => {
             let job = this.props.jobs[id];
-            return <li key={id}>{job.name} : ${job.wage.toFixed(2)}</li>;
+            return <li key={id}>{job.name} : ${job.wage.toFixed(2)} <div onClick={() => this.props.setJob(job)}>SET JOB</div></li>;
           })}
         </ul>
         <Scene />
@@ -59,6 +62,13 @@ const mapActionsToProps = {
     return {
       type: 'robot:create',
       payload: robot
+    };
+  },
+
+  setJob: (job) => {
+    return {
+      type: 'player:hire',
+      payload: job
     };
   }
 };

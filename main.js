@@ -12,6 +12,10 @@ render(
 
 // Game loop
 function loop() {
+  // TESTING earn money
+  store.dispatch({
+    type: 'player:income'
+  });
   requestAnimationFrame(loop);
 }
 loop();
