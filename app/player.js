@@ -6,12 +6,17 @@ function reducer(state={}, action) {
     case 'player:hire':
       state.job = action.payload;
       return {...state}
+    case 'player:train':
+      state.skills.push(action.payload.skill);
+      state.cash -= action.payload.cost;
+      return {...state}
   }
   return state;
 }
 
 export default { reducer, initialState: {
   cash: 0,
+  skills: [],
   job: {
     name: 'Unemployed',
     wage: 0

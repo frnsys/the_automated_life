@@ -59,8 +59,12 @@ for row in tqdm(df.itertuples()):
     auto = (row.correlation + 1)/2
 
     skills[i] = {
+        'id': i,
         'name': row.Skill,
-        'automatibility': auto
+        'automatibility': auto,
+
+        # TODO
+        'price': random.randint(1000, 10000)
     }
 
 with open('data/jobs.json', 'w') as f:

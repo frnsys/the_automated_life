@@ -24,4 +24,5 @@ export const HUD = styled('div')`
   border-radius: 0.5em;
   color: #fff;
   padding: 0.5em;
+  max-width: 200px;
 `;

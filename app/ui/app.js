@@ -6,8 +6,18 @@ import Scene from './scene';
 import Notifications from './notifications';
 import { GlobalStyle, HUD } from './styles'
 
+const Training = (props) => {
+  let availableSkills = Object.keys(props.skills)
+    .filter(id => !props.player.skills.includes(id));
+  return <ul>
+    {availableSkills.map(id => {
+      let s = props.skills[id];
+      return <li key={id} onClick={() => props.buySkill(s)}>{s.name} (${s.price})</li>;
+    })}
+  </ul>
+}
+
 const NewRobot = (props) => {
-  console.log(props.skills);
   return <div>
     This robot is capable of the following skills with {(props.productivity * 100).toFixed(2)}% efficiency:
     <ul>
@@ -46,7 +56,9 @@ class App extends Component {
           <div>Cash: ${this.props.player.cash.toFixed(2)}</div>
           <div>Job: {this.props.player.job.name}</div>
           <div>Wage: ${this.props.player.job.wage.toFixed(2)}</div>
+          <Training {...this.props} />
         </HUD>
+
 
         <Scene />
 
@@ -88,6 +100,16 @@ const mapActionsToProps = {
     return {
       type: 'player:hire',
       payload: job
+    };
+  },
+
+  buySkill: (skill) => {
+    return {
+      type: 'player:train',
+      payload: {
+        skill: skill.id.toString(),
+        cost: skill.price,
+      }
     };
   }
 };
