@@ -2,6 +2,7 @@ import json
 import random
 import numpy as np
 import pandas as pd
+import networkx as nx
 from tqdm import tqdm
 
 jobs = {}
@@ -33,6 +34,7 @@ for i, r in tqdm(df.iterrows()):
     job_job[a][b] = job_job[b][a] = r['Skill Sim']
 
 max_neighbors = 6
+min_neighbors = 3 # min so that the graph is connected
 min_similarity = 0.6
 for idx, job in jobs.items():
     min_sim = min_similarity
@@ -41,9 +43,10 @@ for idx, job in jobs.items():
 
     # if no similar, incrementally reduce minimum similarity
     # until we get at least one
-    while len(similar) == 0:
+    while len(similar) < min_neighbors:
         min_sim -= 0.05
         similar = [id for id in cands if job_job[idx][id] >= min_sim]
+        similar = list(set(similar))
     job['similar'] = [int(id) for id in similar]
 
     # TODO
@@ -66,6 +69,21 @@ for row in tqdm(df.itertuples()):
         # TODO
         'price': random.randint(1000, 10000)
     }
+
+# Create job graph
+G = nx.Graph()
+for id, job in jobs.items():
+    for id_ in job['similar']:
+        G.add_edge(int(id), int(id_))
+
+if not nx.is_connected(G):
+    raise Exception('Graph should be fully connected. Try increasing min_neighbors')
+
+# Compute positions of job nodes
+positions = nx.spring_layout(G)
+positions = {id: pos.tolist() for id, pos in positions.items()}
+with open('data/pos.json', 'w') as f:
+    json.dump(positions, f)
 
 with open('data/jobs.json', 'w') as f:
     json.dump(jobs, f)
