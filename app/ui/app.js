@@ -48,6 +48,8 @@ class App extends Component {
           <div>Wage: ${this.props.player.job.wage.toFixed(2)}</div>
         </HUD>
 
+        <Scene />
+
         <h1>Robots</h1>
         <div onClick={this.createRobot}>Create Robot</div>
         <ul>
@@ -60,10 +62,9 @@ class App extends Component {
         <ul>
           {Object.keys(this.props.jobs).map(id => {
             let job = this.props.jobs[id];
-            return <li key={id}>{job.name} : ${job.wage.toFixed(2)} <div onClick={() => this.props.setJob(job)}>SET JOB</div></li>;
+            return <li key={id}>{job.name} : ${job.wage.toFixed(2)} : {Object.keys(job.skills).length} skills <div onClick={() => this.props.setJob(job)}>SET JOB</div></li>;
           })}
         </ul>
-        <Scene />
       </div>
     );
   }

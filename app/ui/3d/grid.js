@@ -1,35 +1,6 @@
 import * as THREE from 'three';
 import Cell from './cell';
 
-const defaultColor = 0x23ce61;
-
-const types = {
-  g: {
-    name: 'grass',
-    color: 0x23ce61
-  },
-  d: {
-    name: 'desert',
-    color: 0xeac73a
-  },
-  f: {
-    name: 'forest',
-    color: 0x158911
-  },
-  j: {
-    name: 'jungle',
-    color: 0x5ac138
-  },
-  o: {
-    name: 'ocean',
-    color: 0x0b18a5
-  },
-  a: {
-    name: 'arctic',
-    color: 0xe0e2f9
-  }
-};
-
 class Grid {
   constructor(cols, rows, size) {
     this.nCols = cols;
@@ -47,7 +18,7 @@ class Grid {
       this.grid[col] = [];
       for (let row=0; row<this.nRows; row++) {
         this.grid[col].push(null);
-        this.setCellAt(col, row, defaultColor);
+        // this.setCellAt(col, row, defaultColor);
       }
     }
     this.group.position.x = -this.width/2;
@@ -112,25 +83,6 @@ class Grid {
       };
     });
   }
-}
-
-Grid.fromMap = function(map, cellSize) {
-  let nRows = map.length, nCols = 0;
-  map.forEach((row) => {
-    if (row.length > nCols) {
-      nCols = row.length;
-    }
-  });
-  let grid = new Grid(nCols, nRows, cellSize);
-
-  map.forEach((row, r) => {
-    row.forEach((type, c) => {
-      let data = types[type];
-      grid.setCellAt(c, r, data.color, data);
-    });
-  });
-
-  return grid;
 }
 
 export default Grid;

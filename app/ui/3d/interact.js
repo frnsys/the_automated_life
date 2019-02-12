@@ -64,7 +64,11 @@ class InteractionLayer {
         top -= tooltip.clientHeight;
       }
       tooltip.style.top = `${top}px`;
-      tooltip.innerText = `${obj.col}, ${obj.row} (${obj.data.name})`;
+      if (obj.data.tooltip) {
+        tooltip.innerHTML = obj.data.tooltip;
+      } else {
+        tooltip.innerText = `${obj.col}, ${obj.row} (${obj.data.name})`;
+      }
     } else {
       tooltip.style.display = 'none';
     }

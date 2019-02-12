@@ -9,6 +9,10 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     font-family: 'Arimo', 'Helvetiva', sans-serif;
   }
+
+  .tooltip h5, .tooltip h6 {
+    margin: 0;
+  }
 `;
 
 export const HUD = styled('div')`
