@@ -1,6 +1,9 @@
 import math from 'mathjs';
 import skills from '../data/skills.json'
 
+const nameLength = 6;
+const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'.split('');
+
 function reducer(state=[], action) {
   switch (action.type) {
     case 'robot:create':
@@ -23,7 +26,8 @@ function create() {
   let skills = randomSkills(nSkills);
   let productivity = math.random();
   let id = math.randomInt(0, 1000); // TODO proper id system
-  return { id, skills, productivity };
+  let name = [...Array(nameLength)].map(_ => math.pickRandom(chars)).join('');
+  return { id, name, skills, productivity };
 }
 
 export default { create, reducer, initialState: [] };

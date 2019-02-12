@@ -4,16 +4,16 @@ import { animated, useTransition } from 'react-spring';
 import styled from 'styled-components';
 
 let id = 0;
+const defaultTimeout = 30000;
 
 const Container = styled('div')`
   position: fixed;
   z-index: 1000;
   width: 0 auto;
-  top: ${props => (props.top ? '30px' : 'unset')};
-  bottom: ${props => (props.top ? 'unset' : '30px')};
+  top: ${props => (props.top ? '1em' : 'unset')};
+  bottom: ${props => (props.top ? 'unset' : '1em')};
   margin: 0 auto;
-  left: 30px;
-  right: 30px;
+  right: 1em;
   display: flex;
   flex-direction: ${props => (props.top ? 'column-reverse' : 'column')};
   pointer-events: none;
@@ -26,30 +26,31 @@ const Container = styled('div')`
 const Message = styled(animated.div)`
   box-sizing: border-box;
   position: relative;
-  overflow: hidden;
   width: 40ch;
+  margin-bottom: 0.5em;
   @media (max-width: 680px) {
     width: 100%;
   }
 `;
 
+const Title = styled('h5')`
+  font-size: 1em;
+  margin: 0 0 0.5em 0;
+`;
+
 export const Content = styled('div')`
   color: white;
-  background: #445159;
-  opacity: 0.9;
-  padding: 12px 22px;
+  background: rgba(0,0,0,0.8);
+  padding: 0.5em;
   font-size: 1em;
   display: grid;
   grid-template-columns: ${props => (props.canClose === false ? '1fr' : '1fr auto')};
-  grid-gap: 10px;
-  overflow: hidden;
+  grid-gap: 0.5em;
   height: auto;
-  border-radius: 3px;
-  margin-top: ${props => (props.top ? '0' : '10px')};
-  margin-bottom: ${props => (props.top ? '10px' : '0')};
+  overflow: hidden;
 `;
 
-function Notifications({ config = { tension: 125, friction: 20, precision: 0.1 }, timeout = 300000000, children }) {
+function Notifications({ config = { tension: 125, friction: 20, precision: 0.1 }, timeout = defaultTimeout, children }) {
   const [refMap] = useState(() => new WeakMap())
   const [cancelMap] = useState(() => new WeakMap())
   const [items, setItems] = useState([])
@@ -65,13 +66,16 @@ function Notifications({ config = { tension: 125, friction: 20, precision: 0.1 }
     config: (item, state) => (state === 'leave' ? [{ duration: timeout }, config, config] : config),
   })
 
-  useEffect(() => void children(msg => setItems(state => [...state, { key: id++, msg }])), [])
+  useEffect(() => void children((title, msg) => setItems(state => [...state, { key: id++, title, msg }])), [])
   return (
     <Container top={true}>
       {transitions.map(({ key, item, props: { ...style } }) => (
         <Message key={key} style={style}>
           <Content ref={ref => ref && refMap.set(item, ref)}>
-            <p>{item.msg}</p>
+            <div>
+              <Title>{item.title}</Title>
+              {item.msg}
+            </div>
           </Content>
         </Message>
       ))}

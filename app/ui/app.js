@@ -6,6 +6,16 @@ import Scene from './scene';
 import Notifications from './notifications';
 import { GlobalStyle, HUD } from './styles'
 
+const NewRobot = (props) => {
+  console.log(props.skills);
+  return <div>
+    This robot is capable of the following skills with {(props.productivity * 100).toFixed(2)}% efficiency:
+    <ul>
+      {props.skills.map(s => <li key={s.name}>{s.name}</li>)}
+    </ul>
+  </div>;
+}
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -13,19 +23,24 @@ class App extends Component {
     this.createRobot = this.createRobot.bind(this);
   }
 
-  notify(msg) {
-    this.notifications.current(msg);
+  notify(title, msg) {
+    this.notifications.current(title, msg);
   }
 
   createRobot() {
     let action = this.props.createRobot();
-    this.notify(`created robot: ${action.payload.id}`);
+    let robot = action.payload;
+    let title = `Robot model ${robot.name} released.`;
+    let skills = robot.skills.map(id => this.props.skills[id]);
+    console.log(action.payload.skills);
+    this.notify(title, <NewRobot {...robot} skills={skills} />);
   }
 
   render() {
     return (
       <div>
         <GlobalStyle />
+        <Notifications children={add => (this.notifications.current = add)} />
 
         <HUD>
           <div>Cash: ${this.props.player.cash.toFixed(2)}</div>
@@ -33,7 +48,6 @@ class App extends Component {
           <div>Wage: ${this.props.player.job.wage.toFixed(2)}</div>
         </HUD>
 
-        <Notifications children={add => (this.notifications.current = add)} />
         <h1>Robots</h1>
         <div onClick={this.createRobot}>Create Robot</div>
         <ul>
