@@ -43,7 +43,11 @@ class InteractionLayer {
     let intersects = this.raycaster.intersectObjects(this.selectables);
     if (intersects.length > 0) {
       let obj = intersects[0].object,
-          pos = intersects[0].point;
+          pos = intersects[0].point,
+          cell = obj.obj;
+      if (cell.data.onClick) {
+        cell.data.onClick();
+      }
     }
   }
 
