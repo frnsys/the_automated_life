@@ -4,7 +4,7 @@ import robots from '../robots';
 import logic from '../logic';
 import Scene from './scene';
 import Notifications from './notifications';
-import { GlobalStyle } from './styles'
+import { GlobalStyle, HUD } from './styles'
 
 class App extends Component {
   constructor(props) {
@@ -26,9 +26,13 @@ class App extends Component {
     return (
       <div>
         <GlobalStyle />
-        <h1>Cash: ${this.props.player.cash.toFixed(2)}</h1>
-        <h1>Job: {this.props.player.job.name}</h1>
-        <h1>Wage: ${this.props.player.job.wage.toFixed(2)}</h1>
+
+        <HUD>
+          <div>Cash: ${this.props.player.cash.toFixed(2)}</div>
+          <div>Job: {this.props.player.job.name}</div>
+          <div>Wage: ${this.props.player.job.wage.toFixed(2)}</div>
+        </HUD>
+
         <Notifications children={add => (this.notifications.current = add)} />
         <h1>Robots</h1>
         <div onClick={this.createRobot}>Create Robot</div>
