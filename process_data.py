@@ -4,26 +4,44 @@ import numpy as np
 import pandas as pd
 import networkx as nx
 from tqdm import tqdm
+from collections import defaultdict
 
 jobs = {}
 skills = {}
 
+MIN_SKILLS = 7
+MIN_SKILL_WEIGHT = 1.0
+
 # Job-skill matrix
 df = pd.read_csv('data/src/jobSkillRcaMat.csv', delimiter='\t')
 n_jobs = len(df)
+n_skills = []
 skills = {i: name.strip() for i, name in enumerate(df.columns.tolist()[2:])}
 for i, r in tqdm(df.iterrows()):
     vals = r.tolist()[2:]
     job_skills = {}
     for j, v in enumerate(vals):
-        if v > 0: job_skills[j] = v
+        if v >= MIN_SKILL_WEIGHT: job_skills[j] = v
     jobs[i] = {
         'name': r[' Job Title'].strip(),
         'skills': job_skills
     }
+    n_skills.append(len(job_skills))
+    # print('n skills:', len(job_skills))
+    assert len(job_skills) >= MIN_SKILLS
+print('Mean skills:', np.mean(n_skills))
 
 jobs_inv = {j['name']: i for i, j in jobs.items()}
 skills_inv = {name: i for i, name in skills.items()}
+
+# Skill-skill similarity
+skill_skill = pd.read_csv('data/src/skillSkill.csv', delimiter='\t')
+skill_sim = defaultdict(dict)
+for i, r in tqdm(skill_skill.iterrows()):
+    a = skills_inv[r['Skill 1']]
+    b = skills_inv[r['Skill 2']]
+    keys = sorted([a, b])
+    skill_sim[keys[0]][keys[1]] = r['Weight']
 
 # Job-job similarity
 df = pd.read_csv('data/src/jobJobSkillSims.tsv', delimiter='\t')
@@ -80,13 +98,16 @@ if not nx.is_connected(G):
     raise Exception('Graph should be fully connected. Try increasing min_neighbors')
 
 # Compute positions of job nodes
-positions = nx.spring_layout(G)
-positions = {id: pos.tolist() for id, pos in positions.items()}
-with open('data/pos.json', 'w') as f:
-    json.dump(positions, f)
+positions = nx.spring_layout(G, k=0.1)
+nodes = [{'id': id, 'position': pos.tolist()} for id, pos in positions.items()]
+with open('data/nodes.json', 'w') as f:
+    json.dump(nodes, f)
 
 with open('data/jobs.json', 'w') as f:
     json.dump(jobs, f)
 
 with open('data/skills.json', 'w') as f:
     json.dump(skills, f)
+
+with open('data/skillSims.json', 'w') as f:
+    json.dump(skill_sim, f)
