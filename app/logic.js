@@ -1,4 +1,5 @@
 import store from './store';
+import skillSims from '../data/skillSims.json';
 
 // Release a robot into the world,
 // which affects the wages of jobs
@@ -37,9 +38,11 @@ function automateJob(job, robot) {
   robot.skills.forEach(skillId => {
     Object.keys(job.skills).forEach(id => {
       if (id !== skillId) {
-        // TODO waiting on skill-skill similarity matrix
-        // robotAdjacentSkillWeight += (s.weight * sim[skillId, s.skillid]);
-        robotAdjacentSkillWeight += job.skills[id] * 0.0;
+        // Get correct ordering of indices
+        let a = parseInt(id) < parseInt(skillId) ? id : skillId;
+        let b = parseInt(id) < parseInt(skillId) ? skillId : id;
+        let sim = (skillSims[a] || {})[b] || 0;
+        robotAdjacentSkillWeight += job.skills[id] * sim;
       }
     });
   });
@@ -47,7 +50,6 @@ function automateJob(job, robot) {
   let displacement = robotSkillWeight/totalSkillWeight;
   let productivityGains = robotAdjacentSkillWeight/totalSkillWeight;
   let wageChange = job.wage * (productivityGains - displacement) * robot.productivity;
-
   return wageChange;
 }
 
