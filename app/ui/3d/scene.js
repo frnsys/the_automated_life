@@ -38,7 +38,7 @@ class Scene {
     }, false);
 
     this.controls = new OrbitControls(this.camera, this.renderer.domElement);
-    this.controls.enableRotate = true;
+    this.controls.enableRotate = false;
     // for orthographic
     this.controls.maxZoom = 0.4;
     this.controls.minZoom = 0.001;
