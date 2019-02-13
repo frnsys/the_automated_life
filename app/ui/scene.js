@@ -7,7 +7,6 @@ import {connect} from 'react-redux';
 import Graph from './3d/graph';
 
 import jobs from '../../data/jobs.json';
-import nodes from '../../data/nodes.json';
 
 class Scene extends Component {
   componentDidMount() {
@@ -20,21 +19,10 @@ class Scene extends Component {
     });
     this.element.appendChild(this.scene.renderer.domElement);
 
-    let edges = [];
-    Object.keys(jobs).forEach(id => {
-      jobs[id].similar.forEach(id_ => {
-        let edge = [id, id_].sort().join('_');
-        edges.push(edge);
-      });
-      edges = [...new Set(edges)];
-    });
-
-    this.graph = new Graph(nodes, edges, 1);
-    const interactables = this.graph.nodes.map((c) => c.mesh);
+    this.graph = new Graph(10, this.scene.camera);
     this.scene.add(this.graph.group);
-    this.ixn = new InteractionLayer(this.scene, interactables);
+    this.ixn = new InteractionLayer(this.scene, this.graph.interactables);
     this.start();
-    console.log(this.graph.nodes[0]);
   }
 
   componentWillUnmount() {
@@ -53,19 +41,6 @@ class Scene extends Component {
   }
 
   animate() {
-    // Only render edges that have a node in
-    // the camera view
-    let camera = this.scene.camera;
-    camera.updateMatrix();
-    camera.updateMatrixWorld();
-    let frustum = new THREE.Frustum();
-    frustum.setFromMatrix(new THREE.Matrix4().multiplyMatrices(camera.projectionMatrix, camera.matrixWorldInverse));
-    let visible = this.graph.nodes.filter(n => frustum.containsPoint({x: n.x, y: n.y, z: 0})).map(n => n.id);
-    this.graph.edges.forEach(e => {
-      let [a, b] = e.userData.nodes;
-      e.visible = visible.includes(a) || visible.includes(b);
-    });
-
     this.scene.render();
     this.frameId = requestAnimationFrame(this.animate.bind(this));
   }

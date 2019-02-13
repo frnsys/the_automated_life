@@ -97,12 +97,6 @@ for id, job in jobs.items():
 if not nx.is_connected(G):
     raise Exception('Graph should be fully connected. Try increasing min_neighbors')
 
-# Compute positions of job nodes
-positions = nx.spring_layout(G, k=0.1)
-nodes = [{'id': id, 'position': pos.tolist()} for id, pos in positions.items()]
-with open('data/nodes.json', 'w') as f:
-    json.dump(nodes, f)
-
 with open('data/jobs.json', 'w') as f:
     json.dump(jobs, f)
 
