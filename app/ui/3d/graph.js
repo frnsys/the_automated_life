@@ -16,7 +16,7 @@ function makeEdge(points, lineMat) {
 class Graph {
   constructor(jobs, cellSize) {
     this.lineMat = new THREE.LineBasicMaterial( {
-      color: 0xff0000,
+      color: 0x888888,
       linewidth: 1
     } );
     this.cellSize = cellSize;
