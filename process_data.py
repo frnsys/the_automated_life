@@ -21,6 +21,17 @@ for job in data['nodes']:
         'y': job['y']
     }
 
+# Center the layout
+max_x = max(job_network_layout.values(), key=lambda pt: pt['x'])['x']
+max_y = max(job_network_layout.values(), key=lambda pt: pt['y'])['y']
+min_x = min(job_network_layout.values(), key=lambda pt: pt['x'])['x']
+min_y = min(job_network_layout.values(), key=lambda pt: pt['y'])['y']
+x_offset = (max_x - min_x)/2 + min_x
+y_offset = (max_y - min_y)/2 + min_y
+for pt in job_network_layout.values():
+    pt['x'] -= x_offset
+    pt['y'] -= y_offset
+
 # Job-skill matrix
 df = pd.read_csv('data/src/jobSkillRcaMat.csv', delimiter='\t')
 n_jobs = len(df)
