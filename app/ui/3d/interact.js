@@ -40,7 +40,7 @@ class InteractionLayer {
     this.updateMouse(ev);
     this.raycaster.setFromCamera(this.mouse, this.scene.camera);
 
-    let intersects = this.raycaster.intersectObjects(this.selectables);
+    let intersects = this.raycaster.intersectObjects(this.selectables.filter(s => s.visible));
     if (intersects.length > 0) {
       let obj = intersects[0].object,
           pos = intersects[0].point,
@@ -71,7 +71,7 @@ class InteractionLayer {
       if (obj.data.tooltip) {
         tooltip.innerHTML = obj.data.tooltip;
       } else {
-        tooltip.innerText = `${obj.col}, ${obj.row} (${obj.data.name})`;
+        tooltip.innerText = `${obj.data.name}`;
       }
     } else {
       tooltip.style.display = 'none';

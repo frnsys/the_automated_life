@@ -20,7 +20,6 @@ function makeEdge(points, lineMat) {
 class Graph {
   constructor(jobs, cellSize) {
     this.lineMat = new MeshLineMaterial({
-      opacity: 0.5,
       lineWidth: 0.005,
       color: 0x0000ff,
       resolution: resolution,
@@ -33,11 +32,14 @@ class Graph {
     this.nodes = Object.keys(jobs).map(id => {
       let j = jobs[id];
       let node = new Cell(j.pos.x, j.pos.y, this.cellSize, 0xff0000, {
-          name: j.name,
+        name: j.name,
+        onClick: () => {
+          this.reveal(id);
+        }
       });
 
       // All hidden by default
-      // node.mesh.visible = false;
+      node.mesh.visible = false;
 
       this.edges[id] = {};
       this.group.add(node.mesh);
@@ -51,10 +53,11 @@ class Graph {
     Object.keys(jobs).map(id => {
       let j = jobs[id];
       let n = this.nodes[id];
-      j.similar.map(k => {
+      j.similar.slice(0, 2).map(k => {
         if (!this.edges[id][k]) {
           let m = this.nodes[k];
           let edgeMesh = makeEdge([[n.x, n.y], [m.x, m.y]], this.lineMat);
+          edgeMesh.visible = false;
           this.edges[id][k] = edgeMesh;
           this.edges[k][id] = edgeMesh;
           this.group.add(edgeMesh);
@@ -62,46 +65,14 @@ class Graph {
       });
     });
 
-    // TODO
-    this.interactables = [];
+    this.interactables = Object.values(this.nodes).map(n => n.mesh);
   }
 
-  setFocus(cx, cy, camera) {
-    this.cells.map(c => this.group.remove(c.mesh));
-    this.edges.map(e => this.group.remove(e));
-    this.cells.splice(0, this.cells.length);
-    this.edges.splice(0, this.edges.length);
-
-    let focal = new Cell(cx, cy, this.cellSize, 0xff0000, {
-        name: `${cx}_${cy}`,
-    });
-    this.group.add(focal.mesh);
-    this.cells.push(focal);
-
-    let nAdjacent = 6;
-    let interval = (2*Math.PI)/nAdjacent;
-    [...Array(nAdjacent).keys()].map(i => {
-      let theta = i * interval;
-      let x = cx + (Math.cos(theta) * radius);
-      let y = cy + (Math.sin(theta) * radius);
-      let cell = new Cell(x, y, this.cellSize, 0x0000ff, {
-        name: `${x}_${y}`,
-        onClick: () => {
-          // camera.position.setX(x);
-          // camera.position.setY(y);
-          this.setFocus(x, y, camera);
-        }
-      });
-      this.group.add(cell.mesh);
-      let edgeMesh = makeEdge([[cx, cy], [x, y]], this.lineMat);
-      this.group.add(edgeMesh);
-      this.edges.push(edgeMesh);
-      this.cells.push(cell);
-    });
-
-    this.interactables.splice(0, this.interactables.length);
-    this.cells.forEach((c) => {
-      this.interactables.push(c.mesh);
+  reveal(job_id) {
+    this.nodes[job_id].mesh.visible = true;
+    Object.keys(this.edges[job_id]).map(neighb => {
+      this.nodes[neighb].mesh.visible = true;
+      this.edges[job_id][neighb].visible = true;
     });
   }
 }
