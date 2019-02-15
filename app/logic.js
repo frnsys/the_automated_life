@@ -49,6 +49,8 @@ function automateJob(job, robot) {
 
   let displacement = robotSkillWeight/totalSkillWeight;
   let productivityGains = robotAdjacentSkillWeight/totalSkillWeight;
+  console.log(`d: ${displacement}`);
+  console.log(`p: ${productivityGains}`);
   let wageChange = job.wage * (productivityGains - displacement) * robot.productivity;
   return wageChange;
 }

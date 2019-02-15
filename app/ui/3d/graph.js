@@ -18,7 +18,7 @@ function makeEdge(points, lineMat) {
 }
 
 class Graph {
-  constructor(cellSize, camera) {
+  constructor(jobs, cellSize) {
     this.lineMat = new MeshLineMaterial({
       opacity: 0.5,
       lineWidth: 0.005,
@@ -26,12 +26,44 @@ class Graph {
       resolution: resolution,
       sizeAttenuation: true
     });
-    this.group = new THREE.Group();
-    this.cells = [];
-    this.edges = [];
-    this.interactables = [];
     this.cellSize = cellSize;
-    this.setFocus(0, 0, camera);
+    this.group = new THREE.Group();
+
+    this.edges = {};
+    this.nodes = Object.keys(jobs).map(id => {
+      let j = jobs[id];
+      let node = new Cell(j.pos.x, j.pos.y, this.cellSize, 0xff0000, {
+          name: j.name,
+      });
+
+      // All hidden by default
+      // node.mesh.visible = false;
+
+      this.edges[id] = {};
+      this.group.add(node.mesh);
+      return {id: id, node: node};
+    }).reduce((acc, n) => {
+      acc[n.id] = n.node;
+      return acc;
+    }, {});
+
+    // Edges
+    Object.keys(jobs).map(id => {
+      let j = jobs[id];
+      let n = this.nodes[id];
+      j.similar.map(k => {
+        if (!this.edges[id][k]) {
+          let m = this.nodes[k];
+          let edgeMesh = makeEdge([[n.x, n.y], [m.x, m.y]], this.lineMat);
+          this.edges[id][k] = edgeMesh;
+          this.edges[k][id] = edgeMesh;
+          this.group.add(edgeMesh);
+        }
+      });
+    });
+
+    // TODO
+    this.interactables = [];
   }
 
   setFocus(cx, cy, camera) {
