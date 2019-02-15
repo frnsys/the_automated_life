@@ -1,30 +1,24 @@
 import Cell from './cell';
 import * as THREE from 'three';
-import { MeshLine, MeshLineMaterial } from 'three.meshline';
 
 const radius = 42;
-const resolution = new THREE.Vector2( window.innerWidth, window.innerHeight );
 
 function makeEdge(points, lineMat) {
   let geo = new THREE.Geometry();
-  let line = new MeshLine();
   points.forEach(p => {
     let [x, y] = p;
     let v = new THREE.Vector3(x, y, -1);
     geo.vertices.push(v);
   });
-  line.setGeometry(geo);
-  return new THREE.Mesh(line.geometry, lineMat);
+  return new THREE.Line(geo, lineMat);
 }
 
 class Graph {
   constructor(jobs, cellSize) {
-    this.lineMat = new MeshLineMaterial({
-      lineWidth: 0.005,
-      color: 0x0000ff,
-      resolution: resolution,
-      sizeAttenuation: true
-    });
+    this.lineMat = new THREE.LineBasicMaterial( {
+      color: 0xff0000,
+      linewidth: 1
+    } );
     this.cellSize = cellSize;
     this.group = new THREE.Group();
 
