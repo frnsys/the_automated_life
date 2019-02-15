@@ -9,6 +9,17 @@ class Cell {
     this.y = y;
     this.data= data || {};
 
+    this.geometry = makeHexagon(x, y, size);
+    this.mesh = new THREE.Mesh(this.geometry, material);
+    this.setColor(color);
+
+    // to recover this object from raycasting intersection
+    this.mesh.obj = this;
+  }
+
+  // color order:
+  // top right, top center, top left, bottom left, bottom center, bottom right
+  setColor(color) {
     let colors = [
       color,
       color,
@@ -25,19 +36,21 @@ class Cell {
       return colorCache[c];
     });
 
-    this.geometry = makeHexagon(x, y, size, colors);
-    this.mesh = new THREE.Mesh(this.geometry, material);
+    let triangles = THREE.ShapeUtils.triangulateShape(this.geometry.vertices, []);
+    this.geometry.faces.forEach((face, i) => {
+      face.vertexColors[0] = colors[triangles[i][0]];
+      face.vertexColors[1] = colors[triangles[i][1]];
+      face.vertexColors[2] = colors[triangles[i][2]];
+    });
+    this.geometry.elementsNeedUpdate = true
 
-    // to recover this object from raycasting intersection
-    this.mesh.obj = this;
   }
 }
 
-// color order:
-// top right, top center, top left, bottom left, bottom center, bottom right
-function makeHexagon(x, y, size, colors) {
+function makeHexagon(x, y, size) {
   let vertices = [];
   let geometry = new THREE.Geometry();
+  geometry.dynamic = true;
   for (let i=0; i<6; i++) {
     let angle_deg = 60 * i + 30;
     let angle_rad = Math.PI / 180 * angle_deg;
@@ -49,9 +62,6 @@ function makeHexagon(x, y, size, colors) {
   let triangles = THREE.ShapeUtils.triangulateShape(vertices, []);
   for(let i=0; i<triangles.length; i++) {
     let face = new THREE.Face3(triangles[i][0], triangles[i][1], triangles[i][2]);
-    face.vertexColors[0] = colors[triangles[i][0]];
-    face.vertexColors[1] = colors[triangles[i][1]];
-    face.vertexColors[2] = colors[triangles[i][2]];
     geometry.faces.push(face);
   }
   return geometry;

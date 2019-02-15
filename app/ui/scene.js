@@ -19,7 +19,7 @@ class Scene extends Component {
     });
     this.element.appendChild(this.scene.renderer.domElement);
 
-    this.graph = new Graph(jobs, 2);
+    this.graph = new Graph(jobs, 6);
     this.graph.reveal(1);
     this.scene.add(this.graph.group);
     this.ixn = new InteractionLayer(this.scene, this.graph.interactables);

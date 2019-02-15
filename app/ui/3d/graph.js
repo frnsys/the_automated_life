@@ -47,6 +47,7 @@ class Graph {
     Object.keys(jobs).map(id => {
       let j = jobs[id];
       let n = this.nodes[id];
+      // TODO remove restriction
       j.similar.slice(0, 2).map(k => {
         if (!this.edges[id][k]) {
           let m = this.nodes[k];
@@ -63,9 +64,15 @@ class Graph {
   }
 
   reveal(job_id) {
+    Object.values(this.nodes)
+      // .filter(n => n.mesh.visible)
+      .forEach(n => n.setColor(0x888888));
+
     this.nodes[job_id].mesh.visible = true;
+    this.nodes[job_id].setColor(0x0000ff);
     Object.keys(this.edges[job_id]).map(neighb => {
       this.nodes[neighb].mesh.visible = true;
+      this.nodes[neighb].setColor(0xff0000);
       this.edges[job_id][neighb].visible = true;
     });
   }
