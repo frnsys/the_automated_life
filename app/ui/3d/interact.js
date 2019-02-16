@@ -42,11 +42,11 @@ class InteractionLayer {
 
     let intersects = this.raycaster.intersectObjects(this.selectables.filter(s => s.visible));
     if (intersects.length > 0) {
-      let obj = intersects[0].object,
+      let mesh = intersects[0].object,
           pos = intersects[0].point,
-          cell = obj.obj;
-      if (cell.data.onClick) {
-        cell.data.onClick();
+          node = mesh.obj;
+      if (node.data.onClick) {
+        node.data.onClick();
       }
     }
   }
@@ -61,17 +61,19 @@ class InteractionLayer {
       let mesh = intersects[0].object,
           pos = intersects[0].point,
           obj = mesh.obj;
-      tooltip.style.display = 'block';
-      tooltip.style.left = `${ev.pageX + 5}px`;
-      let top = ev.pageY + 5;
-      if (tooltip.clientHeight + top > window.innerHeight) {
-        top -= tooltip.clientHeight;
-      }
-      tooltip.style.top = `${top}px`;
       if (obj.data.tooltip) {
-        tooltip.innerHTML = obj.data.tooltip;
-      } else {
-        tooltip.innerText = `${obj.data.name}`;
+        tooltip.style.display = 'block';
+        tooltip.style.left = `${ev.pageX + 5}px`;
+        let top = ev.pageY + 5;
+        if (tooltip.clientHeight + top > window.innerHeight) {
+          top -= tooltip.clientHeight;
+        }
+        tooltip.style.top = `${top}px`;
+        if (typeof obj.data.tooltip === 'function') {
+          tooltip.innerHTML = obj.data.tooltip();
+        } else {
+          tooltip.innerHTML = obj.data.tooltip;
+        }
       }
     } else {
       tooltip.style.display = 'none';

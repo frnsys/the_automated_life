@@ -3,7 +3,7 @@ import * as THREE from 'three';
 const colorCache = {};
 const material = new THREE.MeshBasicMaterial({ vertexColors: THREE.VertexColors });
 
-class Cell {
+class Node {
   constructor(x, y, size, color, data) {
     this.x = x;
     this.y = y;
@@ -72,4 +72,4 @@ function shadeColor(color, percent) {
   return 0x1000000+(Math.round((t-R)*p)+R)*0x10000+(Math.round((t-G)*p)+G)*0x100+(Math.round((t-B)*p)+B);
 }
 
-export default Cell;
+export default Node;
