@@ -2,8 +2,15 @@ import Node from './node';
 import * as THREE from 'three';
 
 const radius = 42;
-const lineMat = new THREE.LineBasicMaterial({
-  color: 0x888888,
+const unfocusedColor = 0xeeeeee;
+const focusedColor = 0x0000ff;
+const neighbColor = 0xff0000;
+const focusedLineMat = new THREE.LineBasicMaterial({
+  color: 0x00ff00,
+  linewidth: 1
+});
+const defaultLineMat = new THREE.LineBasicMaterial({
+  color: 0xeeeeee,
   linewidth: 1
 });
 
@@ -14,7 +21,7 @@ function makeLine(points) {
     let v = new THREE.Vector3(x, y, -1);
     geo.vertices.push(v);
   });
-  return new THREE.Line(geo, lineMat);
+  return new THREE.Line(geo, defaultLineMat);
 }
 
 class Graph {
@@ -27,7 +34,7 @@ class Graph {
     // Create mapping of job_id->node
     this.nodes = Object.keys(jobs).map(id => {
       let j = jobs[id];
-      let node = new Node(j.pos.x, j.pos.y, this.nodeSize, 0xff0000, {
+      let node = new Node(j.pos.x, j.pos.y, this.nodeSize, unfocusedColor, {
         onClick: () => {
           this.reveal(id);
         },
@@ -46,6 +53,7 @@ class Graph {
     }, {});
 
     // Create edges
+    this._edges = [];
     Object.keys(jobs).map(id => {
       let j = jobs[id];
       let n = this.nodes[id];
@@ -61,6 +69,7 @@ class Graph {
           this.edges[id][k] = edgeMesh;
           this.edges[k][id] = edgeMesh;
           this.group.add(edgeMesh);
+          this._edges.push(edgeMesh);
         }
       });
     });
@@ -72,21 +81,38 @@ class Graph {
   // Reveal the node and its neighbors
   // for the given job id
   reveal(job_id) {
-    // Set all nodes to muted
+    // Set all nodes and edges to muted
     Object.values(this.nodes)
       .filter(n => n.mesh.visible)
-      .forEach(n => n.setColor(0x888888));
+      .forEach(n => {
+        n.mesh.position.setZ(0);
+        n.setColor(unfocusedColor);
+      });
+    Object.values(this._edges)
+      .filter(e => e.visible)
+      .forEach(e => {
+        e.position.setZ(0);
+        e.material = defaultLineMat;
+      });
 
     // Set focus node color
-    this.nodes[job_id].mesh.visible = true;
-    this.nodes[job_id].setColor(0x0000ff);
+    let node = this.nodes[job_id];
+    node.mesh.visible = true;
+    node.setColor(focusedColor);
+    node.mesh.position.setZ(1);
 
     // Set outward edges to visible,
     // and color neighboring nodes
     Object.keys(this.edges[job_id]).map(neighb => {
-      this.nodes[neighb].mesh.visible = true;
-      this.nodes[neighb].setColor(0xff0000);
-      this.edges[job_id][neighb].visible = true;
+      let node = this.nodes[neighb];
+      node.mesh.visible = true;
+      node.setColor(neighbColor);
+      node.mesh.position.setZ(1);
+
+      let line = this.edges[job_id][neighb];
+      line.visible = true;
+      line.material = focusedLineMat;
+      line.position.setZ(1);
     });
   }
 }
