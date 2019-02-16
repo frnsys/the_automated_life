@@ -1,10 +1,12 @@
 import Node from './node';
 import * as THREE from 'three';
+import skills from '../../../data/skills.json'
 
-const radius = 42;
+const topNSkills = 5;
 const unfocusedColor = 0xeeeeee;
 const focusedColor = 0x0000ff;
 const neighbColor = 0xff0000;
+
 const focusedLineMat = new THREE.LineBasicMaterial({
   color: 0x00ff00,
   linewidth: 1
@@ -38,7 +40,12 @@ class Graph {
         onClick: () => {
           this.reveal(id);
         },
-        tooltip: j.name
+        tooltip: () => {
+          let requiredSkills = Object.keys(j.skills)
+            .sort((id_a, id_b) => j.skills[id_b] - j.skills[id_a])
+            .map(id => `${skills[id].name}: ${j.skills[id].toFixed(1)}`).slice(0, topNSkills);
+          return `<b>${j.name}</b><br />${requiredSkills.join('<br />')}`;
+        }
       });
 
       // All hidden by default
