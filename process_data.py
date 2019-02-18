@@ -32,6 +32,10 @@ for pt in job_network_layout.values():
     pt['x'] -= x_offset
     pt['y'] -= y_offset
 
+# Job mean wages
+wages = pd.read_csv('data/src/job_wages.csv')
+wages = {r[' Job Title']: r['A_MEAN'] for _, r in wages.iterrows()}
+
 # Job-skill matrix
 df = pd.read_csv('data/src/jobSkillRcaMat.csv', delimiter='\t')
 n_jobs = len(df)
@@ -45,13 +49,16 @@ for i, r in tqdm(df.iterrows()):
         skill_weights.append(v)
         if v >= MIN_SKILL_WEIGHT: job_skills[j] = v
     id = r['Job Code']
+    name = r[' Job Title'].strip()
     try:
         job_network_layout[id]
+        wage = wages[name]
     except KeyError:
-        print('missing:', id, r[' Job Title'])
+        print('skipping:', id, r[' Job Title'])
         continue
     jobs[i] = {
-        'name': r[' Job Title'].strip(),
+        'name': name,
+        'wage': wage,
         'skills': job_skills,
         'pos': job_network_layout[id]
     }
@@ -102,9 +109,6 @@ for idx, job in jobs.items():
         similar = [id for id in cands if job_job[idx][id] >= min_sim]
         similar = list(set(similar))
     job['similar'] = [int(id) for id in similar]
-
-    # TODO
-    job['wage'] = random.randint(0, 100)
 
 # Skill-automation exposure
 df = pd.read_csv('data/src/orderedOnetSkillsByComputerization.csv')
