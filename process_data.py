@@ -96,7 +96,7 @@ for i, r in tqdm(df.iterrows()):
         continue
 
 min_neighbors = 1 # min so that the graph is connected
-min_similarity = 0.5
+min_similarity = 0.7
 for idx, job in jobs.items():
     min_sim = min_similarity
     cands = np.argsort(job_job[idx])
@@ -133,6 +133,21 @@ G = nx.Graph()
 for id, job in jobs.items():
     for id_ in job['similar']:
         G.add_edge(int(id), int(id_))
+
+# Ensure the graph is connected
+while not nx.is_connected(G):
+    components = sorted(nx.connected_components(G), key=lambda c: len(c), reverse=True)
+
+    # Biggest component is the primary one
+    primary = components.pop(0)
+    component = components[0]
+    most_similar = None
+    for node in component:
+        other = max(primary, key=lambda n: job_job[node][n])
+        sim = job_job[node][other]
+        if most_similar is None or sim > most_similar[-1]:
+            most_similar = (node, other, sim)
+    G.add_edge(most_similar[0], most_similar[1])
 
 if not nx.is_connected(G):
     raise Exception('Graph should be fully connected. Try increasing min_neighbors')
