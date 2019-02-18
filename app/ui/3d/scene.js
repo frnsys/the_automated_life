@@ -23,12 +23,8 @@ class Scene {
 
     let aspect = opts.width/opts.height;
     this.camera = new THREE.OrthographicCamera(-D*aspect, D*aspect, D, -D, NEAR, FAR);
-    // this.camera.zoom = 0.00095;
-    // this.camera.position.y = -50;
-    // this.camera.position.z = 400;
     this.camera.zoom = 0.01;
-    // this.camera.position.y = -50;
-    this.camera.position.z = 600;
+    this.camera.position.z = 10;
     this.camera.updateProjectionMatrix();
 
     window.addEventListener('resize', () => {

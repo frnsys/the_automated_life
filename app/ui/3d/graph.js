@@ -44,7 +44,8 @@ class Graph {
       let tooltip = `<b>${j.name}</b><br />${requiredSkills.join('<br />')}`;
       let node = new Node(j.pos.x, j.pos.y, this.nodeSize, unfocusedColor, {
         onClick: () => {
-          if (logic.isQualifiedForJob(id)) {
+          // TODO temporarily disabling
+          if (logic.isQualifiedForJob(id) || true) {
             this.reveal(id);
           } else {
             alert('Not qualified for this job');
@@ -115,9 +116,29 @@ class Graph {
 
     // Set outward edges to visible,
     // and color neighboring nodes
+    let bounds = {
+      left: node.x,
+      top: node.y,
+      right: node.x,
+      bottom: node.y
+    };
     Object.keys(this.edges[job_id]).map(neighb => {
       let node = this.nodes[neighb];
       node.mesh.visible = true;
+
+      // Determine bounding box
+      if (node.x < bounds.left) {
+        bounds.left = node.x - this.nodeSize;
+      }
+      if (node.y < bounds.bottom) {
+        bounds.bottom = node.y - this.nodeSize;
+      }
+      if (node.x > bounds.right) {
+        bounds.right = node.x + this.nodeSize;
+      }
+      if (node.y > bounds.top) {
+        bounds.top = node.y + this.nodeSize;
+      }
 
       if (logic.isQualifiedForJob(neighb)) {
         node.setColor(neighbColor);
@@ -131,6 +152,7 @@ class Graph {
       line.material = focusedLineMat;
       line.position.setZ(1);
     });
+    this.onReveal(bounds);
   }
 }
 
