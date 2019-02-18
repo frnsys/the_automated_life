@@ -55,4 +55,12 @@ function automateJob(job, robot) {
   return wageChange;
 }
 
-export default { releaseRobot };
+// Check if player is qualified for the job
+// with the given id.
+function isQualifiedForJob(id) {
+  let {player, jobs} = store.getState();
+  return Object.keys(jobs[id].skills)
+    .every(skillId => player.skills.includes(skillId));
+}
+
+export default { releaseRobot, isQualifiedForJob };

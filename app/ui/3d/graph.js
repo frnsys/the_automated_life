@@ -1,11 +1,13 @@
 import Node from './node';
 import * as THREE from 'three';
 import skills from '../../../data/skills.json'
+import logic from '../../logic';
 
 const topNSkills = 5;
 const unfocusedColor = 0xeeeeee;
 const focusedColor = 0x0000ff;
 const neighbColor = 0xff0000;
+const neighbColorUnqualified = 0x660000;
 
 const focusedLineMat = new THREE.LineBasicMaterial({
   color: 0x00ff00,
@@ -36,16 +38,19 @@ class Graph {
     // Create mapping of job_id->node
     this.nodes = Object.keys(jobs).map(id => {
       let j = jobs[id];
+      let requiredSkills = Object.keys(j.skills)
+        .sort((id_a, id_b) => j.skills[id_b] - j.skills[id_a])
+        .map(id => `${skills[id].name}: ${j.skills[id].toFixed(1)}`).slice(0, topNSkills);
+      let tooltip = `<b>${j.name}</b><br />${requiredSkills.join('<br />')}`;
       let node = new Node(j.pos.x, j.pos.y, this.nodeSize, unfocusedColor, {
         onClick: () => {
-          this.reveal(id);
+          if (logic.isQualifiedForJob(id)) {
+            this.reveal(id);
+          } else {
+            alert('Not qualified for this job');
+          }
         },
-        tooltip: () => {
-          let requiredSkills = Object.keys(j.skills)
-            .sort((id_a, id_b) => j.skills[id_b] - j.skills[id_a])
-            .map(id => `${skills[id].name}: ${j.skills[id].toFixed(1)}`).slice(0, topNSkills);
-          return `<b>${j.name}</b><br />${requiredSkills.join('<br />')}`;
-        }
+        tooltip: tooltip
       });
 
       // All hidden by default
@@ -113,7 +118,12 @@ class Graph {
     Object.keys(this.edges[job_id]).map(neighb => {
       let node = this.nodes[neighb];
       node.mesh.visible = true;
-      node.setColor(neighbColor);
+
+      if (logic.isQualifiedForJob(neighb)) {
+        node.setColor(neighbColor);
+      } else {
+        node.setColor(neighbColorUnqualified);
+      }
       node.mesh.position.setZ(1);
 
       let line = this.edges[job_id][neighb];

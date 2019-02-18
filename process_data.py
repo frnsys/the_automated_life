@@ -56,7 +56,8 @@ for i, r in tqdm(df.iterrows()):
     except KeyError:
         print('skipping:', id, r[' Job Title'])
         continue
-    jobs[i] = {
+    idx = len(jobs)
+    jobs[idx] = {
         'name': name,
         'wage': wage,
         'skills': job_skills,
