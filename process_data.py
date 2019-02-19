@@ -12,6 +12,17 @@ skills = {}
 MIN_SKILLS = 7
 MIN_SKILL_WEIGHT = 1.5
 
+data = pd.read_csv('data/src/job_industries.csv')
+industries = {}
+for i, r in data.iterrows():
+    inds = r['cleanedIndustry']
+    if not isinstance(inds, str): continue
+    if not isinstance(r['Code'], str): continue
+
+    inds = inds.replace('\'', '"')
+    id, _ = r['Code'].split('.')
+    industries[id] = [i.strip() for i in json.loads(inds)]
+
 # Job node positions for network layout
 job_network_layout = {}
 data = json.load(open('data/src/jobNetwork.json'))
@@ -43,34 +54,39 @@ n_skills = []
 skills = {i: name.strip() for i, name in enumerate(df.columns.tolist()[2:])}
 skill_weights = []
 for i, r in tqdm(df.iterrows()):
+    id = r['Job Code']
+    name = r[' Job Title'].strip()
     vals = r.tolist()[2:]
+
+    # Get job skills above minimum weight
     job_skills = {}
     for j, v in enumerate(vals):
         skill_weights.append(v)
         if v >= MIN_SKILL_WEIGHT: job_skills[j] = v
-    id = r['Job Code']
-    name = r[' Job Title'].strip()
+
+    # Try to get required data
+    # if some is absent, skip this job
     try:
         job_network_layout[id]
         wage = wages[name]
+        inds = industries[id]
     except KeyError:
         print('skipping:', id, r[' Job Title'])
         continue
+
+    # Save data
     idx = len(jobs)
     jobs[idx] = {
         'name': name,
         'wage': wage,
         'skills': job_skills,
-        'pos': job_network_layout[id]
+        'pos': job_network_layout[id],
+        'industries': inds
     }
+
     n_skills.append(len(job_skills))
-    # print('n skills:', len(job_skills))
     assert len(job_skills) >= MIN_SKILLS
 print('Mean skills:', np.mean(n_skills))
-# print('Mean skill weight:', np.mean(skill_weights))
-# print('Min skill weight:', np.min(skill_weights))
-# print('Max skill weight:', np.max(skill_weights))
-# print('Percentile skill weight:', np.percentile(skill_weights, 80))
 
 jobs_inv = {j['name']: i for i, j in jobs.items()}
 skills_inv = {name: i for i, name in skills.items()}
@@ -84,7 +100,7 @@ for i, r in tqdm(skill_skill.iterrows()):
     keys = sorted([a, b])
     skill_sim[keys[0]][keys[1]] = r['Weight']
 
-# Job-job similarity
+# Job-job similarity (for job network)
 df = pd.read_csv('data/src/jobJobSkillSims.tsv', delimiter='\t')
 job_job = np.zeros((n_jobs, n_jobs))
 for i, r in tqdm(df.iterrows()):
@@ -96,6 +112,7 @@ for i, r in tqdm(df.iterrows()):
         # skipped job
         continue
 
+# Build the job network edges
 min_neighbors = 1 # min so that the graph is connected
 min_similarity = 0.7
 for idx, job in jobs.items():
