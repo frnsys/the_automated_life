@@ -31,14 +31,12 @@ function newSkill(job, robot) {
 // which affects the wages of jobs
 function releaseRobot(robot) {
   let {jobs} = store.getState();
-  let updates = [];
-  Object.keys(jobs).forEach(id => {
-    let job = jobs[id];
+  let updates = Object.values(jobs).map(job => {
     let wageChange = automateJob(job, robot);
-    updates.push({
-      id: id,
+    return {
+      id: job.id,
       wage: job.wage * wageChange
-    });
+    };
   });
 
   store.dispatch({
@@ -52,6 +50,7 @@ function releaseRobot(robot) {
 function automateJob(job, robot) {
   let d = displacement(job, robot);
   let p = productivity(job, robot);
+  console.log(`productivity: ${p}`);
   return d * p;
 }
 
