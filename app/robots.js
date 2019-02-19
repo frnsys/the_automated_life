@@ -16,16 +16,19 @@ function reducer(state=[], action) {
 }
 
 // For weighted random sampling of skills
-const skillWeights = Object.values(skills).map(s => s.automatibility);
+let remainingSkills = [...Object.keys(skills)];
 
 function randomSkills(n) {
-  return math.pickRandom(Object.keys(skills), skillWeights, n);
+  let skillWeights = remainingSkills.map(s_id => skills[s_id].automatibility);
+  return math.pickRandom(remainingSkills, skillWeights, n);
 }
 
 // Create a random robot
 function create() {
-  let nSkills = math.random(2, 5);
+  let nSkills = math.random(1, 3);
   let skills = randomSkills(nSkills);
+  remainingSkills = remainingSkills.filter(s_id => !skills.includes(s_id));
+
   let efficiency = math.random();
   let id = math.randomInt(0, 1000); // TODO proper id system
   let name = [...Array(nameLength)].map(_ => math.pickRandom(chars)).join('');

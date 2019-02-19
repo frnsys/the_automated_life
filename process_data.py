@@ -64,12 +64,14 @@ for i, r in tqdm(df.iterrows()):
     for j, v in enumerate(vals):
         if v >= MIN_SKILL_WEIGHT: job_skills[j] = v
 
+    # Default to no industries
+    inds = industries.get(id, [])
+
     # Try to get required data
     # if some is absent, skip this job
     try:
         job_network_layout[id]
         wage = wages[name]
-        inds = industries[id]
     except KeyError:
         print('skipping:', id, r[' Job Title'])
         continue
@@ -77,6 +79,7 @@ for i, r in tqdm(df.iterrows()):
     # Save data
     idx = len(jobs)
     jobs[idx] = {
+        'id': idx,
         'name': name,
         'wage': wage,
         'skills': job_skills,

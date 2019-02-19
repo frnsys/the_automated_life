@@ -42,7 +42,6 @@ class App extends Component {
     let robot = action.payload;
     let title = `Robot model ${robot.name} released.`;
     let skills = robot.skills.map(id => this.props.skills[id]);
-    console.log(action.payload.skills);
     this.notify(title, <NewRobot {...robot} skills={skills} />);
   }
 

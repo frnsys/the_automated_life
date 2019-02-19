@@ -14,9 +14,10 @@ function productivity(job, robot) {
   let industriesRobotTotal = job.industries.reduce((acc, ind) => {
     return acc + robot.industryWeights[ind];
   }, 0);
-  return industriesRobotTotal/job.industriesSkillTotal;
+  return 1 + industriesRobotTotal/job.industriesSkillTotal;
 }
 
+// Global benefit across all jobs
 function deepeningAutomation(job, robot) {
   return robot.efficiency;
 }
@@ -32,10 +33,12 @@ function newSkill(job, robot) {
 function releaseRobot(robot) {
   let {jobs} = store.getState();
   let updates = Object.values(jobs).map(job => {
-    let wageChange = automateJob(job, robot);
+    let d = displacement(job, robot);
+    let p = productivity(job, robot);
+    let newWage = job.wage * d * p;
     return {
       id: job.id,
-      wage: job.wage * wageChange
+      wage: newWage
     };
   });
 
@@ -43,15 +46,6 @@ function releaseRobot(robot) {
     type: 'job:updates',
     payload: updates
   });
-}
-
-// Adjust wage for a single job
-// based on effects of the specified robot
-function automateJob(job, robot) {
-  let d = displacement(job, robot);
-  let p = productivity(job, robot);
-  console.log(`productivity: ${p}`);
-  return d * p;
 }
 
 // Check if player is qualified for the job
