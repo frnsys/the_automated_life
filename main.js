@@ -12,10 +12,13 @@ render(
 
 // Game loop
 function loop() {
+  // TODO Note that this will trigger re-renders;
+  // we need to be careful about re-rendering every frame
+  // as this will slow things down, e.g. notifications
   // TESTING earn money
-  store.dispatch({
-    type: 'player:income'
-  });
+  // store.dispatch({
+  //   type: 'player:income'
+  // });
   requestAnimationFrame(loop);
 }
 loop();
