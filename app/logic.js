@@ -13,7 +13,7 @@ Object.keys(industries).forEach((ind) => {
 
 // Update based on how much of the wage of job j is attributed to robot skills
 function displacement(job, robot) {
-  let robotShare = robot.skills.reduce((acc, id) => acc + job.wage * (job.skills[id] || 0), 0);
+  let robotShare = robot.skills.reduce((acc, id) => acc + (job.skills[id] || 0), 0) * job.wage;
   let jobShare = job.skillsTotal * job.wage;
   return 1 - (robotShare/jobShare);
 }
@@ -36,6 +36,13 @@ function productivity(job, robot) {
 
 function deepeningAutomation(job, robot) {
   return robot.efficiency;
+}
+
+function newSkill(job, robot) {
+  // TODO cache on robot
+  let robotShare = robot.skills.reduce((acc, id) => acc + (job.skills[id] || 0), 0);
+  let jobShare = job.skillsTotal;
+  return robotShare/jobShare * robot.efficiency;
 }
 
 // Release a robot into the world,
