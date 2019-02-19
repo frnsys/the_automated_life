@@ -19,7 +19,7 @@ const Training = (props) => {
 
 const NewRobot = (props) => {
   return <div>
-    This robot is capable of the following skills with {(props.productivity * 100).toFixed(2)}% efficiency:
+    This robot is capable of the following skills with {(props.efficiency * 100).toFixed(2)}% efficiency:
     <ul>
       {props.skills.map(s => <li key={s.name}>{s.name}</li>)}
     </ul>
@@ -66,7 +66,7 @@ class App extends Component {
         <div onClick={this.createRobot}>Create Robot</div>
         <ul>
           {this.props.robots.map(r => {
-            return <li key={r.id}>Robot {r.id} {(r.productivity*100).toFixed(1)}%</li>;
+            return <li key={r.id}>Robot {r.id} {(r.efficiency*100).toFixed(1)}%</li>;
           })}
         </ul>
 

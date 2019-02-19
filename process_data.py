@@ -47,12 +47,13 @@ for pt in job_network_layout.values():
 wages = pd.read_csv('data/src/job_wages.csv')
 wages = {r[' Job Title']: r['A_MEAN'] for _, r in wages.iterrows()}
 
+# Industry->jobs lookup
+industries_jobs = defaultdict(list)
+
 # Job-skill matrix
 df = pd.read_csv('data/src/jobSkillRcaMat.csv', delimiter='\t')
-n_jobs = len(df)
-n_skills = []
 skills = {i: name.strip() for i, name in enumerate(df.columns.tolist()[2:])}
-skill_weights = []
+n_jobs = len(df)
 for i, r in tqdm(df.iterrows()):
     id = r['Job Code']
     name = r[' Job Title'].strip()
@@ -61,7 +62,6 @@ for i, r in tqdm(df.iterrows()):
     # Get job skills above minimum weight
     job_skills = {}
     for j, v in enumerate(vals):
-        skill_weights.append(v)
         if v >= MIN_SKILL_WEIGHT: job_skills[j] = v
 
     # Try to get required data
@@ -83,11 +83,11 @@ for i, r in tqdm(df.iterrows()):
         'pos': job_network_layout[id],
         'industries': inds
     }
-
-    n_skills.append(len(job_skills))
+    for ind in inds:
+        industries_jobs[ind].append(idx)
     assert len(job_skills) >= MIN_SKILLS
-print('Mean skills:', np.mean(n_skills))
 
+# Inverse indices for lookups
 jobs_inv = {j['name']: i for i, j in jobs.items()}
 skills_inv = {name: i for i, name in skills.items()}
 
@@ -178,3 +178,6 @@ with open('data/skills.json', 'w') as f:
 
 with open('data/skillSims.json', 'w') as f:
     json.dump(skill_sim, f)
+
+with open('data/industries.json', 'w') as f:
+    json.dump(industries_jobs, f)

@@ -24,10 +24,10 @@ function randomSkills(n) {
 function create() {
   let nSkills = math.random(2, 5);
   let skills = randomSkills(nSkills);
-  let productivity = math.random();
+  let efficiency = math.random();
   let id = math.randomInt(0, 1000); // TODO proper id system
   let name = [...Array(nameLength)].map(_ => math.pickRandom(chars)).join('');
-  return { id, name, skills, productivity };
+  return { id, name, skills, efficiency };
 }
 
 export default { create, reducer, initialState: [] };
