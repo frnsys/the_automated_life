@@ -1,15 +1,6 @@
 import store from './store';
 import jobs from '../data/jobs.json'
 import skillSims from '../data/skillSims.json';
-import industries from '../data/industries.json';
-
-// Precompute & cache values we'll reuse often
-const industryWeights = {};
-Object.keys(industries).forEach((ind) => {
-  industryWeights[ind] = industries[ind].reduce((acc, job_id) => {
-    return acc + Object.values(jobs[job_id].skills).reduce((acc, cur) => acc + cur, 0);
-  }, 0);
-});
 
 // Update based on how much of the wage of job j is attributed to robot skills
 function displacement(job, robot) {
@@ -21,17 +12,9 @@ function displacement(job, robot) {
 // Productivity gains are felt by jobs that are in the same industry as other jobs which are impacted by automation. Therefore relies on whether two jobs are found in the same industry (indicator function I_jk), and how much the alter job relies on the automated skill. Is normalised by the sum of the RCA of all skills in all jobs in the same industry
 function productivity(job, robot) {
   let industriesRobotTotal = job.industries.reduce((acc, ind) => {
-    // TODO this can be cached for each robot
-    let robotIndustryWeight = industries[ind].reduce((acc, job_id) => {
-      let job = jobs[job_id];
-      return acc + robot.skills.reduce((acc, id) => acc + (job.skills[id] || 0), 0);
-    }, 0);
-    return acc + robotIndustryWeight;
+    return acc + robot.industryWeights[ind];
   }, 0);
-
-  // TODO this can be cached on each job
-  let industriesSkillTotal = job.industries.reduce((acc, ind) => acc + industryWeights[ind], 0);
-  return industriesRobotTotal/industriesSkillTotal;
+  return industriesRobotTotal/job.industriesSkillTotal;
 }
 
 function deepeningAutomation(job, robot) {
@@ -39,7 +22,6 @@ function deepeningAutomation(job, robot) {
 }
 
 function newSkill(job, robot) {
-  // TODO cache on robot
   let robotShare = robot.skills.reduce((acc, id) => acc + (job.skills[id] || 0), 0);
   let jobShare = job.skillsTotal;
   return robotShare/jobShare * robot.efficiency;
