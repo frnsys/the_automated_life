@@ -6,11 +6,21 @@ import industries from '../data/industries.json';
 const nameLength = 6;
 const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'.split('');
 
-function reducer(state=[], action) {
+function reducer(state={}, action) {
   switch (action.type) {
     case 'robot:create':
-      state.push(action.payload);
-      return [...state];
+      let robot = action.payload;
+      state[id] = robot;
+      return {...state};
+    case 'robot:countdown':
+      Object.values(state).forEach((r) => {
+        r.countdown = Math.max(0, r.countdown - action.payload);
+      });
+      return {...state};
+    case 'robot:deepened':
+      let id = action.payload;
+      state[id].deepened = true;
+      return {...state};
   }
   return state;
 }
@@ -42,7 +52,12 @@ function create() {
     }, 0);
   });
 
-  return { id, name, skills, efficiency, industryWeights };
+  // Countdown to deepening automation
+  // should be in ms
+  let countdown = math.random(1*60*1000, 10*60*1000);
+  let deepened = false;
+
+  return { id, name, skills, efficiency, countdown, deepened, industryWeights };
 }
 
 export default { create, reducer, initialState: [] };

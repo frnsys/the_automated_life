@@ -18,8 +18,19 @@ function productivity(job, robot) {
 }
 
 // Global benefit across all jobs
-function deepeningAutomation(job, robot) {
-  return robot.efficiency;
+function deepeningAutomation(robot) {
+  let {jobs} = store.getState();
+  let updates = Object.values(jobs).map(job => {
+    let newWage = job.wage * (1 + robot.efficiency);
+    return {
+      id: job.id,
+      wage: newWage
+    };
+  });
+  store.dispatch({
+    type: 'job:updates',
+    payload: updates
+  });
 }
 
 function newSkill(job, robot) {

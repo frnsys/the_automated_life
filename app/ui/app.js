@@ -64,7 +64,7 @@ class App extends Component {
         <h1>Robots</h1>
         <div onClick={this.createRobot}>Create Robot</div>
         <ul>
-          {this.props.robots.map(r => {
+          {Object.values(this.props.robots).map(r => {
             return <li key={r.id}>Robot {r.id} {(r.efficiency*100).toFixed(1)}%</li>;
           })}
         </ul>
