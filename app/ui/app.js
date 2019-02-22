@@ -5,6 +5,7 @@ import time from '../time';
 import logic from '../logic';
 import Scene from './scene';
 import Work from './work';
+import School from './school';
 import Notifications from './notifications';
 import { GlobalStyle, HUD } from './styles'
 
@@ -63,6 +64,7 @@ class App extends Component {
         </HUD>
 
         <Work />
+        <School />
 
         <Scene />
 

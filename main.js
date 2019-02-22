@@ -40,6 +40,17 @@ function loop(now) {
         type: 'player:expenses'
       });
 
+      if (player.job.name == 'Student') {
+        store.dispatch({
+          type: 'player:learn'
+        });
+        if (player.schoolCountdown <= 0) {
+          store.dispatch({
+            type: 'player:graduate'
+          });
+        }
+      }
+
       // Check game end state
       if (player.startAge + newDate.years >= config.retirementAge) {
         if (player.cash >= config.retirementSavingsMin) {

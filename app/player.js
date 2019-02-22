@@ -1,4 +1,15 @@
 import config from './config';
+import education from '../data/education.json'
+
+const student = {
+  name: 'Student',
+  wage: 0
+};
+const unemployed = {
+  name: 'Unemployed',
+  wage: 0
+};
+
 
 function reducer(state={}, action) {
   switch (action.type) {
@@ -11,9 +22,25 @@ function reducer(state={}, action) {
     case 'player:hire':
       state.job = action.payload;
       return {...state}
+
     case 'player:train':
       state.skills.push(action.payload.skill);
       state.cash -= action.payload.cost;
+      return {...state}
+
+    case 'player:enroll':
+      let nextLevel = education[state.education+1];
+      state.cash -= nextLevel.cost;
+      state.job = student;
+      state.schoolCountdown = nextLevel.years * 12;
+      return {...state}
+    case 'player:learn':
+      state.schoolCountdown -= 1;
+      return {...state}
+    case 'player:graduate':
+      state.education += 1;
+      state.schoolCountdown = 0;
+      state.job = unemployed;
       return {...state}
 
     case 'player:work':
@@ -31,8 +58,7 @@ export default { reducer, initialState: {
   performance: 0,
   cash: 0,
   skills: [],
-  job: {
-    name: 'Unemployed',
-    wage: 0
-  }
+  education: 0,
+  schoolCountdown: 0, // months
+  job: unemployed,
 }};
