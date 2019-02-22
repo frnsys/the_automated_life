@@ -41,7 +41,6 @@ class Graph {
       let requiredSkills = Object.keys(j.skills)
         .sort((id_a, id_b) => j.skills[id_b] - j.skills[id_a])
         .map(id => `${skills[id].name}: ${j.skills[id].toFixed(1)}`).slice(0, topNSkills);
-      let tooltip = `<b>${j.name}</b><br />${requiredSkills.join('<br />')}`;
       let node = new Node(j.pos.x, j.pos.y, this.nodeSize, unfocusedColor, {
         onClick: () => {
           // TODO temporarily disabling
@@ -51,7 +50,10 @@ class Graph {
             alert('Not qualified for this job');
           }
         },
-        tooltip: tooltip
+        tooltip: () => {
+          // TODO let player know if they have the skill or not
+          return `<b>${j.name}</b><br />${requiredSkills.join('<br />')}`;
+        }
       });
 
       // All hidden by default

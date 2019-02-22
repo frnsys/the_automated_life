@@ -1,7 +1,12 @@
+import config from './config';
+
 function reducer(state={}, action) {
   switch (action.type) {
     case 'player:income':
       state.cash += state.job.wage;
+      return {...state}
+    case 'player:expenses':
+      state.cash -= config.monthlyExpenses;
       return {...state}
     case 'player:hire':
       state.job = action.payload;

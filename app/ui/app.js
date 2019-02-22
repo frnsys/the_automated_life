@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import robots from '../robots';
+import time from '../time';
 import logic from '../logic';
 import Scene from './scene';
 import Notifications from './notifications';
@@ -46,12 +47,14 @@ class App extends Component {
   }
 
   render() {
+    let date = time.timeToDate(this.props.time);
     return (
       <div>
         <GlobalStyle />
         <Notifications children={add => (this.notifications.current = add)} />
 
         <HUD>
+          <div>Time: {date.month}/{date.year}</div>
           <div>Cash: ${this.props.player.cash.toFixed(2)}</div>
           <div>Job: {this.props.player.job.name}</div>
           <div>Wage: ${this.props.player.job.wage.toFixed(2)}</div>

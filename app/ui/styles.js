@@ -25,4 +25,6 @@ export const HUD = styled('div')`
   color: #fff;
   padding: 0.5em;
   max-width: 200px;
+  max-height: 200px;
+  overflow-y: scroll;
 `;
