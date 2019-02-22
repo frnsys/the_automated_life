@@ -20,6 +20,7 @@ function reducer(state={}, action) {
 }
 
 export default { reducer, initialState: {
+  startAge: 18,
   cash: 0,
   skills: [],
   job: {

@@ -4,6 +4,7 @@ import {Provider} from 'react-redux';
 import store from './app/store';
 import timeLogic from './app/time';
 import logic from './app/logic';
+import config from './app/config';
 import App from './app/ui/app';
 
 render(
@@ -16,16 +17,18 @@ render(
 let lastTime = 0;
 function loop(now) {
   let elapsed = now - lastTime; // ms
-  let {robots, time} = store.getState();
+  let {player, robots, time} = store.getState();
 
   if (!isNaN(elapsed)) {
     store.dispatch({
       type: 'time',
       payload: elapsed
     });
+
+    // Check if new month
     let {month} = timeLogic.timeToDate(time);
-    let newMonth = timeLogic.timeToDate(time + elapsed).month;
-    if (month !== newMonth) {
+    let newDate = timeLogic.timeToDate(time + elapsed);
+    if (month !== newDate.month) {
       // TODO Note that this will trigger re-renders;
       // we need to be careful about re-rendering every frame
       // as this will slow things down, e.g. notifications
@@ -36,6 +39,15 @@ function loop(now) {
       store.dispatch({
         type: 'player:expenses'
       });
+
+      // Check game end state
+      if (player.startAge + newDate.years >= config.retirementAge) {
+        if (player.cash >= config.retirementSavingsMin) {
+          alert('game over, you win');
+        } else {
+          alert('game over, you lose');
+        }
+      }
     }
   }
 

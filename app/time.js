@@ -16,6 +16,7 @@ function timeToDate(ms) {
   let year = config.startYear + years
   return {
     year: year,
+    years: years,
     month: (months % 12) + 1
   };
 }
