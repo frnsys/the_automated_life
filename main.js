@@ -51,6 +51,10 @@ function loop(now) {
     }
   }
 
+  store.dispatch({
+    type: 'player:slack'
+  });
+
   // Countdown robots to deepening automation
   store.dispatch({
     type: 'robot:countdown',

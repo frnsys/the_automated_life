@@ -28,3 +28,18 @@ export const HUD = styled('div')`
   max-height: 200px;
   overflow-y: scroll;
 `;
+
+export const Bar = styled('div')`
+  width: 20em;
+  height: 1em;
+  background: grey;
+  position: relative;
+`;
+
+export const BarFill = styled('div')`
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: red;
+`;

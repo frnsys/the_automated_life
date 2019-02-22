@@ -4,6 +4,7 @@ import robots from '../robots';
 import time from '../time';
 import logic from '../logic';
 import Scene from './scene';
+import Work from './work';
 import Notifications from './notifications';
 import { GlobalStyle, HUD } from './styles'
 
@@ -61,6 +62,7 @@ class App extends Component {
           <Training {...this.props} />
         </HUD>
 
+        <Work />
 
         <Scene />
 

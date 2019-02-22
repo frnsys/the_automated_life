@@ -1,4 +1,5 @@
 import store from './store';
+import config from './config';
 import jobs from '../data/jobs.json'
 import skillSims from '../data/skillSims.json';
 
@@ -69,6 +70,16 @@ function isQualifiedForJob(id) {
   let {player, jobs} = store.getState();
   return Object.keys(jobs[id].skills)
     .every(skillId => player.skills.includes(skillId));
+}
+
+// Do work for a job, returning skill changes
+// `performance` in [0-1]
+function work(job, performance) {
+  let changes = {};
+  Object.keys(job.skills).forEach((s_id) => {
+    changes[s_id] = performance * (job.skills[skill_id]/job.skillsTotal) * config.maxSkillChangePerWork;
+  });
+  return changes;
 }
 
 export default { releaseRobot, isQualifiedForJob };
