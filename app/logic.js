@@ -11,6 +11,10 @@ function displacement(job, robot) {
 
 // Productivity gains are felt by jobs that are in the same industry as other jobs which are impacted by automation. Therefore relies on whether two jobs are found in the same industry (indicator function I_jk), and how much the alter job relies on the automated skill. Is normalised by the sum of the RCA of all skills in all jobs in the same industry
 function productivity(job, robot) {
+  // For jobs where we don't have any industry labels
+  if (job.industriesSkillTotal == 0) {
+    return 1;
+  }
   let industriesRobotTotal = job.industries.reduce((acc, ind) => {
     return acc + robot.industryWeights[ind];
   }, 0);
