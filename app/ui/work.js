@@ -1,15 +1,13 @@
-import config from 'config';
+import React from 'react';
 import {connect} from 'react-redux';
-import React, {Component} from 'react';
 import { Bar, BarFill } from './styles'
+import config from 'config';
 
-class Work extends Component {
-  render() {
-    return <div>
-      <h1 onClick={this.props.work}>WORK</h1>
-      <Bar><BarFill style={{width: `${this.props.player.performance}%`}} /></Bar>
-    </div>;
-  }
+const Work = (props) => {
+  return <div>
+    <h1 onClick={props.work}>WORK</h1>
+    <Bar><BarFill style={{width: `${props.player.performance}%`}} /></Bar>
+  </div>;
 }
 
 const mapStateToProps = (state, props) => {

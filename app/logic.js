@@ -111,8 +111,6 @@ function newSkill(job, robot) {
   return robotShare/jobShare * robot.efficiency;
 }
 
-
-
 // Do work for a job, returning skill changes
 // `performance` in [0-1]
 function work(job, performance) {
