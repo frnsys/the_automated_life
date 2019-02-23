@@ -12,4 +12,10 @@ function timeToDate(ms) {
   };
 }
 
-export default { timeToDate };
+function timeProgress(ms) {
+  let sec = ms/1000;
+  let months = sec/config.secPerMonth;
+  return months - Math.floor(months);
+}
+
+export default { timeToDate, timeProgress };

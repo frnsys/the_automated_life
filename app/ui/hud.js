@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {connect} from 'react-redux';
 import util from '../util';
+import { Bar, BarFill } from './styles'
 
 const HUDStyle = styled('div')`
   position: fixed;
@@ -21,6 +22,7 @@ const HUD = (props) => {
   let date = util.timeToDate(props.time);
   return (
     <HUDStyle>
+      <Bar><BarFill style={{width: `${util.timeProgress(props.time)*100}%`}} /></Bar>
       <div>Time: {date.month}/{date.year}</div>
       <div>Cash: ${props.player.cash.toFixed(2)}</div>
       <div>Job: {props.player.job.name}</div>

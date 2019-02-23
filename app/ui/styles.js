@@ -19,6 +19,7 @@ export const GlobalStyle = createGlobalStyle`
 
 export const Bar = styled('div')`
   width: 20em;
+  max-width: 100%;
   height: 1em;
   background: #eee;
   position: relative;
