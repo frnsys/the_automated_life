@@ -1,4 +1,5 @@
 import config from 'config';
+import skills from 'data/skills.json'
 import education from 'data/education.json'
 
 const student = {
@@ -14,10 +15,13 @@ const initialState = {
   startAge: 18,
   performance: 0,
   cash: 0,
-  skills: [],
   education: 0,
   schoolCountdown: 0, // months
-  job: unemployed
+  job: unemployed,
+  skills: Object.keys(skills).reduce((obj, s_id) => {
+    obj[s_id] = 0;
+    return obj;
+  }, {}),
 };
 
 

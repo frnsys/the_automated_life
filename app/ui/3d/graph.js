@@ -44,6 +44,7 @@ class Graph {
       let node = new Node(j.pos.x, j.pos.y, this.nodeSize, unfocusedColor, {
         // Click on job node
         onClick: () => {
+          console.log(logic.probabilityForJob(j));
           this.reveal(id);
         },
         tooltip: () => {

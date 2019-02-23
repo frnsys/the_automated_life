@@ -11,6 +11,9 @@ Object.keys(industries).forEach((ind) => {
 Object.values(jobs).forEach((job) => {
   job.skillsTotal = Object.values(job.skills).reduce((acc, cur) => acc + cur);
   job.industriesSkillTotal = job.industries.reduce((acc, ind) => acc + industryWeights[ind], 0);
+
+  // TODO this is temporary until we load actual education level
+  job.requiredEducation = 0;
 });
 
 function reducer(state={}, {type, payload}) {

@@ -121,4 +121,25 @@ function work(job, performance) {
   return changes;
 }
 
-export default { deepeningAutomation };
+// Probability of being hired for a job
+function probabilityForJob(job) {
+  let {player} = store.getState();
+  let performance = player.performance/100;
+
+  let education = 1;
+  if (job.requiredEducation > 0) {
+    education = 1 - (job.requiredEducation - player.education)/job.requiredEducation;
+  }
+  // Being "overeducated" doesn't provide advantage
+  education = Math.min(education, 1);
+
+  let skills = Object.keys(job.skills).reduce((acc, s_id) => {
+    return acc + (job.skills[s_id] * player.skills[s_id]);
+  }, 0);
+  skills /= job.skillsTotal;
+
+  console.log(`performance: ${performance}, education: ${education}, skills: ${skills}`);
+  return (performance + education + skills)/3;
+}
+
+export default { deepeningAutomation, probabilityForJob };
