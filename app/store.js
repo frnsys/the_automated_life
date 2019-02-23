@@ -1,8 +1,8 @@
-import jobs from './jobs';
-import skills from './skills';
-import robots from './robots';
-import player from './player';
-import time from './time';
+import jobs from './state/jobs';
+import skills from './state/skills';
+import robots from './state/robots';
+import player from './state/player';
+import time from './state/time';
 import { createStore, combineReducers } from 'redux';
 
 const allReducers = combineReducers({

@@ -1,5 +1,5 @@
-import config from './config';
-import education from '../data/education.json'
+import config from 'config';
+import education from 'data/education.json'
 
 const student = {
   name: 'Student',
@@ -8,6 +8,16 @@ const student = {
 const unemployed = {
   name: 'Unemployed',
   wage: 0
+};
+
+const initialState = {
+  startAge: 18,
+  performance: 0,
+  cash: 0,
+  skills: [],
+  education: 0,
+  schoolCountdown: 0, // months
+  job: unemployed
 };
 
 
@@ -21,11 +31,6 @@ function reducer(state={}, action) {
       return {...state}
     case 'player:hire':
       state.job = action.payload;
-      return {...state}
-
-    case 'player:train':
-      state.skills.push(action.payload.skill);
-      state.cash -= action.payload.cost;
       return {...state}
 
     case 'player:enroll':
@@ -53,12 +58,4 @@ function reducer(state={}, action) {
   return state;
 }
 
-export default { reducer, initialState: {
-  startAge: 18,
-  performance: 0,
-  cash: 0,
-  skills: [],
-  education: 0,
-  schoolCountdown: 0, // months
-  job: unemployed,
-}};
+export default { reducer, initialState }

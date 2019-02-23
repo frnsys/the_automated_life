@@ -1,4 +1,4 @@
-import skills from '../data/skills.json'
+import skills from 'data/skills.json'
 
 function reducer(state={}, action) {
   return state;

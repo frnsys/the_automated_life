@@ -5,7 +5,7 @@ import InteractionLayer from './3d/interact';
 import ThreeScene from './3d/scene';
 import {connect} from 'react-redux';
 import Graph from './3d/graph';
-import jobs from '../../data/jobs.json';
+import jobs from 'data/jobs.json';
 
 // Compute and apply necessary zoom
 // to contain the specified bounds, w/ padding

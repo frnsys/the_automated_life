@@ -1,13 +1,4 @@
-import config from './config';
-
-function reducer(state=0, action) {
-  switch (action.type) {
-    case 'time':
-      // Increment game time
-      return state + action.payload;
-  }
-  return state;
-}
+import config from 'config';
 
 function timeToDate(ms) {
   let sec = ms/1000;
@@ -21,4 +12,4 @@ function timeToDate(ms) {
   };
 }
 
-export default { reducer, timeToDate };
+export default { timeToDate };

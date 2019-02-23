@@ -1,10 +1,10 @@
 import React from 'react';
 import {render} from 'react-dom';
 import {Provider} from 'react-redux';
+import config from 'config';
 import store from './app/store';
-import timeLogic from './app/time';
 import logic from './app/logic';
-import config from './app/config';
+import util from './app/util';
 import App from './app/ui/app';
 
 render(
@@ -26,8 +26,8 @@ function loop(now) {
     });
 
     // Check if new month
-    let {month} = timeLogic.timeToDate(time);
-    let newDate = timeLogic.timeToDate(time + elapsed);
+    let {month} = util.timeToDate(time);
+    let newDate = util.timeToDate(time + elapsed);
     if (month !== newDate.month) {
       // TODO Note that this will trigger re-renders;
       // we need to be careful about re-rendering every frame

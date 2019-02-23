@@ -1,7 +1,6 @@
-import config from '../config';
+import config from 'config';
 import {connect} from 'react-redux';
 import React, {Component} from 'react';
-
 import { Bar, BarFill } from './styles'
 
 class Work extends Component {

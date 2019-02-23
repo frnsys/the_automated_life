@@ -15,20 +15,6 @@ export const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export const HUD = styled('div')`
-  position: fixed;
-  z-index: 1000;
-  left: 1em;
-  top: 1em;
-  background: rgba(0,0,0,0.8);
-  border-radius: 0.5em;
-  color: #fff;
-  padding: 0.5em;
-  max-width: 200px;
-  max-height: 200px;
-  overflow-y: scroll;
-`;
-
 export const Bar = styled('div')`
   width: 20em;
   height: 1em;

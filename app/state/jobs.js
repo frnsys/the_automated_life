@@ -1,5 +1,5 @@
-import jobs from '../data/jobs.json'
-import industries from '../data/industries.json';
+import jobs from 'data/jobs.json'
+import industries from 'data/industries.json';
 
 // Precompute & cache values we'll reuse often
 const industryWeights = {};

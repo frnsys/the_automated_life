@@ -1,6 +1,6 @@
 import Node from './node';
 import * as THREE from 'three';
-import skills from '../../../data/skills.json'
+import skills from 'data/skills.json'
 import logic from '../../logic';
 
 const topNSkills = 5;
@@ -42,13 +42,9 @@ class Graph {
         .sort((id_a, id_b) => j.skills[id_b] - j.skills[id_a])
         .map(id => `${skills[id].name}: ${j.skills[id].toFixed(1)}`).slice(0, topNSkills);
       let node = new Node(j.pos.x, j.pos.y, this.nodeSize, unfocusedColor, {
+        // Click on job node
         onClick: () => {
-          // TODO temporarily disabling
-          if (logic.isQualifiedForJob(id) || true) {
-            this.reveal(id);
-          } else {
-            alert('Not qualified for this job');
-          }
+          this.reveal(id);
         },
         tooltip: () => {
           // TODO let player know if they have the skill or not
@@ -142,7 +138,9 @@ class Graph {
         bounds.top = node.y + this.nodeSize;
       }
 
-      if (logic.isQualifiedForJob(neighb)) {
+      // TODO color by probability of getting job
+      // and by level of automation
+      if (neighb) {
         node.setColor(neighbColor);
       } else {
         node.setColor(neighbColorUnqualified);

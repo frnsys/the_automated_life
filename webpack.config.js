@@ -20,6 +20,10 @@ module.exports = {
     }]
   },
   resolve: {
-    extensions: ['.js']
+    extensions: ['.js'],
+    alias: {
+      'data': path.resolve('./data'),
+      'config': path.resolve('./config'),
+    }
   }
 };
