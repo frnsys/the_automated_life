@@ -14,10 +14,11 @@ const App = () => {
       <Notifications children={add => (window.notify = add)} />
 
       <HUD />
-      <Work />
-      <School />
 
       <Scene />
+
+      <Work />
+      <School />
     </div>
   );
 }

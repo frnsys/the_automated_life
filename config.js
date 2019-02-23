@@ -5,6 +5,6 @@ export default {
   retirementAge: 65,
   retirementSavingsMin: 500000,
   maxSkillChangePerWork: 0.01,
-  workPerClick: 1,
+  workPerClick: 10,
   slackPerFrame: 1,
 };
