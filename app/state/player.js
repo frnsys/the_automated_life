@@ -29,7 +29,7 @@ const initialState = {
 function reducer(state={}, action) {
   switch (action.type) {
     case 'player:income':
-      state.cash += state.job.wage;
+      state.cash += state.job.wage/12;
       return {...state}
     case 'player:expenses':
       state.cash -= config.monthlyExpenses;
