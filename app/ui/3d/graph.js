@@ -52,7 +52,7 @@ const tooltip = (job) => {
             } else if (s.automatibility >= 0.4) {
               risk = 'moderate';
             }
-            return `<li class="${automatedSkills.includes(s.id) ? 'automated' : ''}"><div class="automation-icon automation-icon-${risk}"></div>${s.name} ${automatedSkills.includes(s.id) ? '(automated)' : ''}</li>`;
+            return `<li class="${automatedSkills.includes(s.id) ? 'automated' : ''}"><div class="automation-icon automation-icon-${risk}"></div>${s.name} ${automatedSkills.includes(s.id) ? '(automated)' : ''}${player.skills[s.id] > 0 ? `<span style="opacity:${player.skills[s.id]}">✓</span>` : ''}</li>`;
           }).join('')}
         </ul>
       </div>
