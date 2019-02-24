@@ -4,7 +4,7 @@ import { animated, useTransition } from 'react-spring';
 import styled from 'styled-components';
 
 let id = 0;
-const defaultTimeout = 10000;
+const defaultTimeout = 15000;
 
 const Container = styled('div')`
   position: fixed;
@@ -39,8 +39,9 @@ const Title = styled('h5')`
 `;
 
 export const Content = styled('div')`
-  color: white;
-  background: rgba(0,0,0,0.8);
+  border: 2px solid black;
+  color: #000;
+  background: #fff;
   padding: 0.5em;
   font-size: 1em;
   display: grid;
