@@ -1,0 +1,1088 @@
+,Code,cleanedIndustry
+0,13-2011.00,"['Professional, Scientific, and Technical Services ']"
+1,13-2011.01,
+2,13-2011.02,
+3,27-2011.00,"['Information ', 'Arts, Entertainment, and Recreation ']"
+4,15-2011.00,"['Finance and Insurance ', 'Professional, Scientific, and Technical Services ']"
+5,51-9191.00,['Manufacturing ']
+6,23-1021.00,['Government ']
+7,11-3011.00,"['Educational Services ', 'Government ', 'Health Care and Social Assistance ', 'Professional, Scientific, and Technical Services ']"
+8,25-3011.00,['Educational Services ']
+9,11-2011.00,"['Professional, Scientific, and Technical Services ', 'Information ']"
+10,11-2011.01,
+11,41-3011.00,"['Information ', 'Professional, Scientific, and Technical Services ']"
+12,17-3021.00,"['Manufacturing ', 'Professional, Scientific, and Technical Services ']"
+13,17-2011.00,"['Manufacturing ', 'Professional, Scientific, and Technical Services ', 'Government ']"
+14,13-1011.00,"['Arts, Entertainment, and Recreation ']"
+15,19-4011.00,"['Manufacturing ', 'Agriculture, Forestry, Fishing, and Hunting ', 'Educational Services ', 'Professional, Scientific, and Technical Services ']"
+16,19-4011.01,
+17,19-4011.02,
+18,17-2021.00,"['Professional, Scientific, and Technical Services ', 'Government ', 'Agriculture, Forestry, Fishing, and Hunting ', 'Manufacturing ', 'Educational Services ']"
+19,45-2091.00,"['Agriculture, Forestry, Fishing, and Hunting ', 'Wholesale Trade ']"
+20,45-2011.00,['Government ']
+21,25-1041.00,['Educational Services ']
+22,45-2099.00,"['Agriculture, Forestry, Fishing, and Hunting ', 'Wholesale Trade ']"
+23,53-2021.00,['Government ']
+24,53-1011.00,['Transportation and Warehousing ']
+25,49-3011.00,"['Transportation and Warehousing ', 'Manufacturing ', 'Government ']"
+26,51-2011.00,['Manufacturing ']
+27,53-2022.00,"['Transportation and Warehousing ', 'Government ']"
+28,53-2011.00,['Transportation and Warehousing ']
+29,53-3011.00,"['Health Care and Social Assistance ', 'Transportation and Warehousing ', 'Government ']"
+30,39-3091.00,"['Arts, Entertainment, and Recreation ', 'Government ']"
+31,29-1061.00,['Health Care and Social Assistance ']
+32,45-2021.00,"['Agriculture, Forestry, Fishing, and Hunting ']"
+33,33-9011.00,"['Government ', 'Other Services (Except Public Administration) ']"
+34,19-1011.00,"['Agriculture, Forestry, Fishing, and Hunting ', 'Educational Services ', 'Professional, Scientific, and Technical Services ']"
+35,39-2011.00,"['Agriculture, Forestry, Fishing, and Hunting ']"
+36,19-3091.00,"['Professional, Scientific, and Technical Services ', 'Government ']"
+37,19-3091.01,
+38,19-3091.02,
+39,25-1061.00,['Educational Services ']
+40,13-2021.00,"['Government ', 'Real Estate and Rental and Leasing ']"
+41,13-2021.01,
+42,13-2021.02,
+43,23-1022.00,"['Government ', 'Professional, Scientific, and Technical Services ']"
+44,17-1011.00,"['Professional, Scientific, and Technical Services ']"
+45,17-3011.00,"['Professional, Scientific, and Technical Services ', 'Construction ']"
+46,17-3011.01,
+47,17-3011.02,
+48,11-9041.00,"['Manufacturing ', 'Professional, Scientific, and Technical Services ']"
+49,11-9041.01,
+50,25-1031.00,['Educational Services ']
+51,25-4011.00,"['Educational Services ', 'Government ', 'Information ', 'Arts, Entertainment, and Recreation ', 'Other Services (Except Public Administration) ']"
+52,25-1062.00,['Educational Services ']
+53,27-1011.00,"['Professional, Scientific, and Technical Services ']"
+54,25-1121.00,['Educational Services ']
+55,27-1019.00,['Government ']
+56,51-2099.00,"['Manufacturing ', 'Administrative and Support Services ']"
+57,19-2011.00,"['Educational Services ', 'Government ']"
+58,27-2021.00,"['Arts, Entertainment, and Recreation ']"
+59,29-9091.00,"['Health Care and Social Assistance ', 'Educational Services ', 'Arts, Entertainment, and Recreation ']"
+60,19-2021.00,"['Professional, Scientific, and Technical Services ', 'Government ', 'Educational Services ']"
+61,25-1051.00,['Educational Services ']
+62,27-4011.00,"['Information ', 'Real Estate and Rental and Leasing ', 'Arts, Entertainment, and Recreation ', 'Educational Services ']"
+63,25-9011.00,['Educational Services ']
+64,29-1181.00,"['Health Care and Social Assistance ', 'Educational Services ']"
+65,53-6031.00,"['Retail Trade ', 'Other Services (Except Public Administration) ']"
+66,49-3021.00,"['Other Services (Except Public Administration) ', 'Retail Trade ']"
+67,49-3022.00,['Other Services (Except Public Administration) ']
+68,49-3023.00,"['Retail Trade ', 'Other Services (Except Public Administration) ']"
+69,49-3023.01,
+70,49-3023.02,
+71,49-2091.00,"['Transportation and Warehousing ', 'Manufacturing ', 'Government ']"
+72,39-6011.00,"['Accommodation and Food Services ', 'Transportation and Warehousing ']"
+73,33-3011.00,['Government ']
+74,51-3011.00,"['Retail Trade ', 'Manufacturing ', 'Accommodation and Food Services ']"
+75,39-5011.00,['Other Services (Except Public Administration) ']
+76,35-3011.00,['Accommodation and Food Services ']
+77,49-3091.00,['Retail Trade ']
+78,43-3011.00,"['Administrative and Support Services ', 'Finance and Insurance ', 'Health Care and Social Assistance ']"
+79,43-3021.00,"['Health Care and Social Assistance ', 'Professional, Scientific, and Technical Services ']"
+80,43-3021.01,
+81,43-3021.02,
+82,19-1021.00,"['Professional, Scientific, and Technical Services ', 'Manufacturing ', 'Educational Services ']"
+83,25-1042.00,['Educational Services ']
+84,19-1029.00,"['Government ', 'Professional, Scientific, and Technical Services ', 'Educational Services ']"
+85,19-1029.01,
+86,19-1029.02,
+87,19-1029.03,
+88,19-4021.00,"['Professional, Scientific, and Technical Services ', 'Educational Services ', 'Government ']"
+89,17-2031.00,"['Manufacturing ', 'Professional, Scientific, and Technical Services ', 'Educational Services ', 'Health Care and Social Assistance ']"
+90,47-2011.00,"['Construction ', 'Manufacturing ']"
+91,43-3031.00,"['Professional, Scientific, and Technical Services ', 'Retail Trade ']"
+92,47-2021.00,['Construction ']
+93,53-6011.00,"['Government ', 'Transportation and Warehousing ']"
+94,27-3021.00,['Information ']
+95,27-4012.00,['Information ']
+96,43-4011.00,['Finance and Insurance ']
+97,13-2031.00,"['Government ', 'Educational Services ', 'Professional, Scientific, and Technical Services ']"
+98,37-2019.00,['Administrative and Support Services ']
+99,49-3031.00,"['Transportation and Warehousing ', 'Wholesale Trade ', 'Government ', 'Other Services (Except Public Administration) ']"
+100,53-3022.00,"['Educational Services ', 'Transportation and Warehousing ', 'Government ']"
+101,53-3021.00,"['Government ', 'Transportation and Warehousing ']"
+102,13-1199.00,"['Government ', 'Professional, Scientific, and Technical Services ', 'Educational Services ']"
+103,13-1199.01,
+104,13-1199.02,
+105,13-1199.03,
+106,13-1199.04,
+107,13-1199.05,
+108,13-1199.06,
+109,25-1011.00,['Educational Services ']
+110,51-3021.00,['Retail Trade ']
+111,13-1021.00,"['Wholesale Trade ', 'Manufacturing ', 'Agriculture, Forestry, Fishing, and Hunting ', 'Retail Trade ']"
+112,51-7011.00,['Manufacturing ']
+113,49-9061.00,"['Wholesale Trade ', 'Other Services (Except Public Administration) ']"
+114,27-4031.00,['Information ']
+115,53-5021.00,['Transportation and Warehousing ']
+116,53-5021.01,
+117,53-5021.02,
+118,53-5021.03,
+119,29-2031.00,['Health Care and Social Assistance ']
+120,25-2023.00,['Educational Services ']
+121,25-2032.00,['Educational Services ']
+122,43-5011.00,['Transportation and Warehousing ']
+123,43-5011.01,
+124,47-2031.00,['Construction ']
+125,47-2031.01,
+126,47-2031.02,
+127,47-2041.00,"['Construction ', 'Retail Trade ']"
+128,17-1021.00,"['Government ', 'Professional, Scientific, and Technical Services ']"
+129,41-2011.00,"['Retail Trade ', 'Accommodation and Food Services ']"
+130,47-2051.00,['Construction ']
+131,35-1011.00,['Accommodation and Food Services ']
+132,17-2041.00,"['Manufacturing ', 'Professional, Scientific, and Technical Services ']"
+133,51-9011.00,['Manufacturing ']
+134,51-8091.00,['Manufacturing ']
+135,19-4031.00,"['Manufacturing ', 'Professional, Scientific, and Technical Services ']"
+136,25-1052.00,['Educational Services ']
+137,19-2031.00,"['Manufacturing ', 'Professional, Scientific, and Technical Services ', 'Government ']"
+138,21-1021.00,"['Health Care and Social Assistance ', 'Government ', 'Educational Services ']"
+139,39-9011.00,"['Health Care and Social Assistance ', 'Other Services (Except Public Administration) ', 'Educational Services ']"
+140,39-9011.01,
+141,29-1011.00,['Health Care and Social Assistance ']
+142,27-2032.00,"['Educational Services ', 'Arts, Entertainment, and Recreation ']"
+143,17-3022.00,"['Professional, Scientific, and Technical Services ', 'Government ']"
+144,17-2051.00,"['Professional, Scientific, and Technical Services ', 'Government ', 'Construction ']"
+145,17-2051.01,
+146,13-1031.00,"['Finance and Insurance ', 'Government ']"
+147,13-1031.01,
+148,13-1031.02,
+149,53-7061.00,"['Other Services (Except Public Administration) ', 'Retail Trade ']"
+150,51-9192.00,['Manufacturing ']
+151,21-2011.00,['Other Services (Except Public Administration) ']
+152,19-3031.00,"['Educational Services ', 'Health Care and Social Assistance ']"
+153,19-3031.01,
+154,19-3031.02,
+155,19-3031.03,
+156,27-2022.00,"['Educational Services ', 'Arts, Entertainment, and Recreation ']"
+157,51-9121.00,['Manufacturing ']
+158,51-2021.00,['Manufacturing ']
+159,49-9091.00,"['Retail Trade ', 'Arts, Entertainment, and Recreation ', 'Government ', 'Wholesale Trade ']"
+160,35-3021.00,['Accommodation and Food Services ']
+161,27-1021.00,"['Manufacturing ', 'Professional, Scientific, and Technical Services ', 'Wholesale Trade ']"
+162,49-9092.00,"['Administrative and Support Services ', 'Construction ']"
+163,53-2012.00,"['Transportation and Warehousing ', 'Educational Services ', 'Health Care and Social Assistance ']"
+164,43-2099.00,"['Government ', 'Health Care and Social Assistance ', 'Educational Services ']"
+165,25-1122.00,['Educational Services ']
+166,21-1099.00,"['Health Care and Social Assistance ', 'Government ', 'Other Services (Except Public Administration) ']"
+167,21-1094.00,"['Health Care and Social Assistance ', 'Government ', 'Other Services (Except Public Administration) ']"
+168,11-3111.00,"['Management of Companies and Enterprises ', 'Finance and Insurance ', 'Professional, Scientific, and Technical Services ', 'Government ']"
+169,13-1141.00,"['Government ', 'Finance and Insurance ', 'Management of Companies and Enterprises ', 'Professional, Scientific, and Technical Services ']"
+170,13-1041.00,"['Government ', 'Finance and Insurance ']"
+171,13-1041.01,
+172,13-1041.02,
+173,13-1041.03,
+174,13-1041.04,
+175,13-1041.06,
+176,13-1041.07,
+177,15-1111.00,"['Professional, Scientific, and Technical Services ', 'Government ']"
+178,11-3021.00,"['Professional, Scientific, and Technical Services ', 'Information ', 'Finance and Insurance ', 'Management of Companies and Enterprises ']"
+179,17-2061.00,"['Professional, Scientific, and Technical Services ', 'Manufacturing ']"
+180,15-1143.00,"['Professional, Scientific, and Technical Services ', 'Information ', 'Finance and Insurance ']"
+181,15-1143.01,
+182,15-1152.00,"['Professional, Scientific, and Technical Services ', 'Information ']"
+183,51-4012.00,['Manufacturing ']
+184,15-1199.00,"['Government ', 'Professional, Scientific, and Technical Services ']"
+185,15-1199.01,
+186,15-1199.02,
+187,15-1199.03,
+188,15-1199.04,
+189,15-1199.05,
+190,15-1199.06,
+191,15-1199.07,
+192,15-1199.08,
+193,15-1199.09,
+194,15-1199.10,
+195,15-1199.11,
+196,15-1199.12,
+197,43-9011.00,"['Professional, Scientific, and Technical Services ', 'Government ', 'Finance and Insurance ']"
+198,15-1131.00,"['Professional, Scientific, and Technical Services ', 'Information ']"
+199,25-1021.00,['Educational Services ']
+200,15-1121.00,"['Professional, Scientific, and Technical Services ', 'Finance and Insurance ']"
+201,15-1121.01,
+202,15-1151.00,"['Professional, Scientific, and Technical Services ', 'Educational Services ', 'Information ']"
+203,49-2011.00,"['Wholesale Trade ', 'Retail Trade ', 'Other Services (Except Public Administration) ']"
+204,51-4011.00,['Manufacturing ']
+205,39-6012.00,"['Accommodation and Food Services ', 'Real Estate and Rental and Leasing ', 'Other Services (Except Public Administration) ', 'Health Care and Social Assistance ']"
+206,19-1031.00,"['Government ', 'Other Services (Except Public Administration) ']"
+207,19-1031.01,
+208,19-1031.02,
+209,19-1031.03,
+210,47-4011.00,"['Government ', 'Professional, Scientific, and Technical Services ']"
+211,47-4099.00,"['Construction ', 'Government ']"
+212,47-4099.02,
+213,47-4099.03,
+214,47-2061.00,['Construction ']
+215,11-9021.00,['Construction ']
+216,47-5041.00,"['Mining, Quarrying, and Oil and Gas Extraction ']"
+217,49-9012.00,"['Utilities ', 'Government ']"
+218,53-7011.00,"['Manufacturing ', 'Wholesale Trade ', 'Transportation and Warehousing ']"
+219,35-2019.00,"['Accommodation and Food Services ', 'Other Services (Except Public Administration) ', 'Retail Trade ']"
+220,35-2011.00,['Accommodation and Food Services ']
+221,35-2012.00,"['Health Care and Social Assistance ', 'Educational Services ', 'Accommodation and Food Services ']"
+222,35-2013.00,['Other Services (Except Public Administration) ']
+223,35-2014.00,['Accommodation and Food Services ']
+224,35-2015.00,"['Accommodation and Food Services ', 'Retail Trade ']"
+225,51-9193.00,['Manufacturing ']
+226,33-3012.00,['Government ']
+227,43-4021.00,"['Finance and Insurance ', 'Administrative and Support Services ']"
+228,13-1051.00,"['Construction ', 'Manufacturing ']"
+229,39-3092.00,"['Arts, Entertainment, and Recreation ', 'Information ']"
+230,21-1019.00,"['Health Care and Social Assistance ', 'Government ', 'Educational Services ']"
+231,41-2021.00,"['Real Estate and Rental and Leasing ', 'Retail Trade ', 'Other Services (Except Public Administration) ']"
+232,35-3022.00,"['Accommodation and Food Services ', 'Retail Trade ']"
+233,35-3022.01,
+234,43-5021.00,"['Health Care and Social Assistance ', 'Transportation and Warehousing ', 'Professional, Scientific, and Technical Services ']"
+235,23-2091.00,"['Government ', 'Administrative and Support Services ']"
+236,43-4031.00,['Government ']
+237,43-4031.01,
+238,43-4031.02,
+239,43-4031.03,
+240,27-1012.00,"['Arts, Entertainment, and Recreation ']"
+241,53-7021.00,"['Construction ', 'Manufacturing ', 'Transportation and Warehousing ']"
+242,13-2041.00,"['Finance and Insurance ', 'Management of Companies and Enterprises ']"
+243,43-4041.00,"['Finance and Insurance ', 'Wholesale Trade ', 'Retail Trade ']"
+244,43-4041.01,
+245,43-4041.02,
+246,13-2071.00,"['Educational Services ', 'Finance and Insurance ', 'Professional, Scientific, and Technical Services ']"
+247,13-2071.01,
+248,25-1111.00,['Educational Services ']
+249,33-9091.00,"['Government ', 'Administrative and Support Services ', 'Educational Services ']"
+250,51-9021.00,"['Manufacturing ', 'Mining, Quarrying, and Oil and Gas Extraction ']"
+251,25-4012.00,"['Arts, Entertainment, and Recreation ', 'Educational Services ', 'Government ']"
+252,43-4051.00,"['Finance and Insurance ', 'Administrative and Support Services ', 'Retail Trade ']"
+253,43-4051.03,
+254,51-9031.00,"['Manufacturing ', 'Retail Trade ']"
+255,51-9032.00,['Manufacturing ']
+256,51-4031.00,"['Manufacturing ', 'Administrative and Support Services ']"
+257,27-2031.00,"['Arts, Entertainment, and Recreation ', 'Accommodation and Food Services ']"
+258,43-9021.00,"['Administrative and Support Services ', 'Professional, Scientific, and Technical Services ', 'Finance and Insurance ']"
+259,15-1141.00,"['Professional, Scientific, and Technical Services ', 'Finance and Insurance ', 'Information ', 'Educational Services ']"
+260,41-9011.00,"['Professional, Scientific, and Technical Services ', 'Wholesale Trade ', 'Retail Trade ', 'Administrative and Support Services ']"
+261,31-9091.00,['Health Care and Social Assistance ']
+262,29-2021.00,['Health Care and Social Assistance ']
+263,51-9081.00,"['Manufacturing ', 'Health Care and Social Assistance ']"
+264,29-1029.00,"['Health Care and Social Assistance ', 'Government ']"
+265,29-1021.00,['Health Care and Social Assistance ']
+266,47-5011.00,"['Mining, Quarrying, and Oil and Gas Extraction ']"
+267,27-1029.00,"['Professional, Scientific, and Technical Services ', 'Information ']"
+268,43-9031.00,"['Information ', 'Professional, Scientific, and Technical Services ', 'Manufacturing ']"
+269,33-3021.00,['Government ']
+270,33-3021.01,
+271,33-3021.02,
+272,33-3021.03,
+273,33-3021.05,
+274,33-3021.06,
+275,29-2032.00,['Health Care and Social Assistance ']
+276,29-2051.00,['Health Care and Social Assistance ']
+277,29-1031.00,"['Health Care and Social Assistance ', 'Government ']"
+278,35-9011.00,['Accommodation and Food Services ']
+279,21-2021.00,['Other Services (Except Public Administration) ']
+280,35-9021.00,['Accommodation and Food Services ']
+281,43-5032.00,"['Transportation and Warehousing ', 'Administrative and Support Services ']"
+282,17-3019.00,"['Professional, Scientific, and Technical Services ', 'Manufacturing ', 'Construction ']"
+283,53-7031.00,"['Construction ', 'Mining, Quarrying, and Oil and Gas Extraction ']"
+284,51-4032.00,['Manufacturing ']
+285,53-3031.00,"['Accommodation and Food Services ', 'Wholesale Trade ', 'Retail Trade ']"
+286,47-2081.00,['Construction ']
+287,47-5021.00,"['Construction ', 'Mining, Quarrying, and Oil and Gas Extraction ', 'Professional, Scientific, and Technical Services ']"
+288,25-1063.00,['Educational Services ']
+289,19-3011.00,"['Government ', 'Professional, Scientific, and Technical Services ']"
+290,19-3011.01,
+291,27-3041.00,['Information ']
+292,11-9039.00,"['Educational Services ', 'Government ']"
+293,11-9039.01,
+294,11-9039.02,
+295,11-9032.00,['Educational Services ']
+296,11-9033.00,['Educational Services ']
+297,11-9031.00,"['Health Care and Social Assistance ', 'Other Services (Except Public Administration) ', 'Educational Services ']"
+298,25-1081.00,['Educational Services ']
+299,25-9099.00,"['Educational Services ', 'Government ']"
+300,21-1012.00,"['Educational Services ', 'Health Care and Social Assistance ']"
+301,49-2092.00,"['Wholesale Trade ', 'Other Services (Except Public Administration) ']"
+302,17-3023.00,"['Manufacturing ', 'Professional, Scientific, and Technical Services ', 'Government ']"
+303,17-3023.01,
+304,17-3023.03,
+305,51-2022.00,['Manufacturing ']
+306,17-3012.00,"['Professional, Scientific, and Technical Services ', 'Manufacturing ', 'Construction ']"
+307,17-3012.01,
+308,17-3012.02,
+309,49-2093.00,"['Transportation and Warehousing ', 'Government ', 'Manufacturing ']"
+310,49-2094.00,"['Manufacturing ', 'Government ', 'Wholesale Trade ']"
+311,49-2095.00,"['Utilities ', 'Government ']"
+312,17-2071.00,"['Professional, Scientific, and Technical Services ', 'Manufacturing ', 'Utilities ']"
+313,49-9051.00,"['Utilities ', 'Construction ', 'Government ']"
+314,47-2111.00,['Construction ']
+315,17-3024.00,"['Manufacturing ', 'Professional, Scientific, and Technical Services ']"
+316,17-3024.01,
+317,51-2023.00,['Manufacturing ']
+318,49-2096.00,"['Retail Trade ', 'Other Services (Except Public Administration) ', 'Wholesale Trade ', 'Manufacturing ']"
+319,49-2097.00,"['Retail Trade ', 'Construction ', 'Other Services (Except Public Administration) ']"
+320,17-2072.00,"['Manufacturing ', 'Professional, Scientific, and Technical Services ', 'Information ', 'Government ']"
+321,17-2072.01,
+322,25-2021.00,['Educational Services ']
+323,47-4021.00,['Construction ']
+324,43-4061.00,['Government ']
+325,39-4011.00,['Other Services (Except Public Administration) ']
+326,11-9161.00,"['Government ', 'Health Care and Social Assistance ']"
+327,29-2041.00,"['Health Care and Social Assistance ', 'Government ']"
+328,51-2031.00,['Manufacturing ']
+329,25-1032.00,['Educational Services ']
+330,17-3029.00,"['Government ', 'Manufacturing ', 'Professional, Scientific, and Technical Services ']"
+331,17-3029.01,
+332,17-3029.02,
+333,17-3029.03,
+334,17-3029.04,
+335,17-3029.05,
+336,17-3029.06,
+337,17-3029.07,
+338,17-3029.08,
+339,17-3029.09,
+340,17-3029.10,
+341,17-3029.11,
+342,17-3029.12,
+343,17-2199.00,"['Government ', 'Manufacturing ', 'Professional, Scientific, and Technical Services ']"
+344,17-2199.01,
+345,17-2199.02,
+346,17-2199.03,
+347,17-2199.04,
+348,17-2199.05,
+349,17-2199.06,
+350,17-2199.07,
+351,17-2199.08,
+352,17-2199.09,
+353,17-2199.10,
+354,17-2199.11,
+355,25-1123.00,['Educational Services ']
+356,27-2099.00,"['Arts, Entertainment, and Recreation ', 'Information ']"
+357,39-3099.00,"['Arts, Entertainment, and Recreation ', 'Government ']"
+358,17-3025.00,"['Professional, Scientific, and Technical Services ', 'Government ', 'Administrative and Support Services ']"
+359,17-2081.00,"['Professional, Scientific, and Technical Services ', 'Government ']"
+360,17-2081.01,
+361,19-4091.00,"['Professional, Scientific, and Technical Services ', 'Government ']"
+362,25-1053.00,['Educational Services ']
+363,19-2041.00,"['Government ', 'Professional, Scientific, and Technical Services ']"
+364,19-2041.01,
+365,19-2041.02,
+366,19-2041.03,
+367,19-1041.00,"['Government ', 'Health Care and Social Assistance ', 'Professional, Scientific, and Technical Services ', 'Educational Services ']"
+368,51-9194.00,"['Manufacturing ', 'Retail Trade ']"
+369,53-7032.00,"['Construction ', 'Mining, Quarrying, and Oil and Gas Extraction ']"
+370,43-6011.00,"['Educational Services ', 'Government ', 'Professional, Scientific, and Technical Services ', 'Finance and Insurance ']"
+371,29-1128.00,['Health Care and Social Assistance ']
+372,47-5031.00,"['Mining, Quarrying, and Oil and Gas Extraction ', 'Government ', 'Professional, Scientific, and Technical Services ']"
+373,47-5099.00,"['Mining, Quarrying, and Oil and Gas Extraction ', 'Construction ']"
+374,51-4021.00,['Manufacturing ']
+375,51-6091.00,['Manufacturing ']
+376,51-9041.00,['Manufacturing ']
+377,51-6092.00,['Manufacturing ']
+378,49-9093.00,['Manufacturing ']
+379,45-4021.00,"['Agriculture, Forestry, Fishing, and Hunting ', 'Administrative and Support Services ']"
+380,29-1062.00,['Health Care and Social Assistance ']
+381,25-9021.00,"['Educational Services ', 'Government ']"
+382,49-3041.00,"['Wholesale Trade ', 'Agriculture, Forestry, Fishing, and Hunting ']"
+383,13-1074.00,"['Agriculture, Forestry, Fishing, and Hunting ']"
+384,11-9013.00,"['Agriculture, Forestry, Fishing, and Hunting ']"
+385,11-9013.01,
+386,11-9013.02,
+387,11-9013.03,
+388,45-2092.00,"['Agriculture, Forestry, Fishing, and Hunting ']"
+389,45-2092.01,
+390,45-2092.02,
+391,45-2093.00,"['Agriculture, Forestry, Fishing, and Hunting ']"
+392,27-1022.00,"['Wholesale Trade ', 'Manufacturing ']"
+393,47-4031.00,['Construction ']
+394,51-2091.00,['Manufacturing ']
+395,43-4071.00,"['Health Care and Social Assistance ', 'Professional, Scientific, and Technical Services ', 'Government ', 'Administrative and Support Services ']"
+396,27-4032.00,['Information ']
+397,13-2051.00,"['Finance and Insurance ', 'Professional, Scientific, and Technical Services ', 'Management of Companies and Enterprises ']"
+398,43-3099.00,"['Finance and Insurance ', 'Management of Companies and Enterprises ']"
+399,13-2061.00,"['Finance and Insurance ', 'Government ', 'Management of Companies and Enterprises ']"
+400,11-3031.00,"['Finance and Insurance ', 'Professional, Scientific, and Technical Services ', 'Management of Companies and Enterprises ']"
+401,11-3031.01,
+402,11-3031.02,
+403,13-2099.00,"['Finance and Insurance ', 'Government ']"
+404,13-2099.01,
+405,13-2099.02,
+406,13-2099.03,
+407,13-2099.04,
+408,27-1013.00,"['Arts, Entertainment, and Recreation ']"
+409,33-2021.00,['Government ']
+410,33-2021.01,
+411,33-2021.02,
+412,33-2011.00,['Government ']
+413,33-2011.01,
+414,33-2011.02,
+415,47-1011.00,['Construction ']
+416,47-1011.03,
+417,33-1011.00,['Government ']
+418,45-1011.00,"['Agriculture, Forestry, Fishing, and Hunting ']"
+419,45-1011.05,
+420,45-1011.06,
+421,45-1011.07,
+422,45-1011.08,
+423,33-1021.00,['Government ']
+424,33-1021.01,
+425,33-1021.02,
+426,35-1012.00,['Accommodation and Food Services ']
+427,53-1021.00,"['Transportation and Warehousing ', 'Wholesale Trade ', 'Manufacturing ']"
+428,53-1021.01,
+429,37-1011.00,"['Administrative and Support Services ', 'Accommodation and Food Services ', 'Educational Services ']"
+430,37-1012.00,['Administrative and Support Services ']
+431,49-1011.00,"['Retail Trade ', 'Other Services (Except Public Administration) ', 'Government ', 'Manufacturing ']"
+432,41-1012.00,"['Wholesale Trade ', 'Finance and Insurance ']"
+433,43-1011.00,"['Finance and Insurance ', 'Health Care and Social Assistance ', 'Retail Trade ']"
+434,39-1021.00,"['Health Care and Social Assistance ', 'Other Services (Except Public Administration) ', 'Arts, Entertainment, and Recreation ']"
+435,39-1021.01,
+436,33-1012.00,['Government ']
+437,51-1011.00,['Manufacturing ']
+438,33-1099.00,"['Administrative and Support Services ', 'Government ', 'Retail Trade ']"
+439,41-1011.00,['Retail Trade ']
+440,53-1031.00,"['Transportation and Warehousing ', 'Wholesale Trade ', 'Government ']"
+441,33-3031.00,['Government ']
+442,,"['Agriculture, Forestry, Fishing, and Hunting ']"
+443,45-3011.00,
+444,45-3021.00,
+445,39-9031.00,"['Arts, Entertainment, and Recreation ', 'Other Services (Except Public Administration) ']"
+446,53-2031.00,['Transportation and Warehousing ']
+447,47-2042.00,"['Construction ', 'Retail Trade ']"
+448,47-2043.00,['Construction ']
+449,27-1023.00,['Retail Trade ']
+450,51-3091.00,"['Manufacturing ', 'Retail Trade ']"
+451,51-3092.00,['Manufacturing ']
+452,51-3093.00,"['Manufacturing ', 'Accommodation and Food Services ']"
+453,35-9099.00,['Accommodation and Food Services ']
+454,35-2021.00,"['Accommodation and Food Services ', 'Retail Trade ']"
+455,51-3099.00,"['Manufacturing ', 'Retail Trade ']"
+456,19-1012.00,"['Manufacturing ', 'Professional, Scientific, and Technical Services ', 'Management of Companies and Enterprises ']"
+457,35-3041.00,"['Health Care and Social Assistance ', 'Accommodation and Food Services ']"
+458,11-9051.00,['Accommodation and Food Services ']
+459,25-1124.00,['Educational Services ']
+460,19-4092.00,['Government ']
+461,19-4093.00,['Government ']
+462,45-4011.00,"['Government ', 'Agriculture, Forestry, Fishing, and Hunting ']"
+463,33-2022.00,['Government ']
+464,19-1032.00,"['Government ', 'Agriculture, Forestry, Fishing, and Hunting ']"
+465,25-1043.00,['Educational Services ']
+466,51-4022.00,['Manufacturing ']
+467,51-4071.00,['Manufacturing ']
+468,13-1131.00,"['Other Services (Except Public Administration) ', 'Educational Services ', 'Health Care and Social Assistance ']"
+469,39-4021.00,['Other Services (Except Public Administration) ']
+470,11-9061.00,['Other Services (Except Public Administration) ']
+471,51-9051.00,['Manufacturing ']
+472,51-7021.00,"['Manufacturing ', 'Other Services (Except Public Administration) ']"
+473,39-3012.00,"['Arts, Entertainment, and Recreation ', 'Government ', 'Accommodation and Food Services ', 'Other Services (Except Public Administration) ']"
+474,43-3041.00,"['Government ', 'Arts, Entertainment, and Recreation ', 'Accommodation and Food Services ']"
+475,41-2012.00,"['Government ', 'Arts, Entertainment, and Recreation ', 'Accommodation and Food Services ']"
+476,39-3011.00,"['Accommodation and Food Services ', 'Arts, Entertainment, and Recreation ', 'Government ']"
+477,11-9071.00,"['Government ', 'Accommodation and Food Services ', 'Arts, Entertainment, and Recreation ']"
+478,39-3019.00,"['Arts, Entertainment, and Recreation ', 'Accommodation and Food Services ', 'Government ', 'Other Services (Except Public Administration) ']"
+479,39-1011.00,"['Accommodation and Food Services ', 'Government ', 'Arts, Entertainment, and Recreation ']"
+480,33-9031.00,"['Government ', 'Arts, Entertainment, and Recreation ', 'Accommodation and Food Services ']"
+481,53-7071.00,"['Transportation and Warehousing ', 'Mining, Quarrying, and Oil and Gas Extraction ', 'Utilities ']"
+482,51-8092.00,"['Utilities ', 'Transportation and Warehousing ', 'Mining, Quarrying, and Oil and Gas Extraction ']"
+483,11-1021.00,"['Retail Trade ', 'Professional, Scientific, and Technical Services ', 'Manufacturing ']"
+484,29-9092.00,"['Health Care and Social Assistance ', 'Educational Services ']"
+485,19-3092.00,"['Government ', 'Professional, Scientific, and Technical Services ', 'Educational Services ']"
+486,25-1064.00,['Educational Services ']
+487,19-4041.00,"['Mining, Quarrying, and Oil and Gas Extraction ', 'Professional, Scientific, and Technical Services ']"
+488,19-4041.01,
+489,19-4041.02,
+490,19-2042.00,"['Professional, Scientific, and Technical Services ', 'Mining, Quarrying, and Oil and Gas Extraction ', 'Government ']"
+491,47-2121.00,"['Construction ', 'Retail Trade ']"
+492,45-2041.00,"['Agriculture, Forestry, Fishing, and Hunting ', 'Manufacturing ', 'Wholesale Trade ']"
+493,25-1191.00,['Educational Services ']
+494,27-1024.00,"['Professional, Scientific, and Technical Services ', 'Manufacturing ', 'Information ']"
+495,51-9022.00,['Manufacturing ']
+496,51-4033.00,['Manufacturing ']
+497,37-3019.00,"['Government ', 'Administrative and Support Services ']"
+498,39-5012.00,['Other Services (Except Public Administration) ']
+499,47-4041.00,['Administrative and Support Services ']
+500,17-2111.00,"['Manufacturing ', 'Construction ', 'Professional, Scientific, and Technical Services ', 'Government ']"
+501,17-2111.01,
+502,17-2111.02,
+503,17-2111.03,
+504,29-1199.00,"['Health Care and Social Assistance ', 'Government ']"
+505,29-1199.01,
+506,29-1199.04,
+507,29-1199.05,
+508,21-1091.00,"['Health Care and Social Assistance ', 'Government ', 'Other Services (Except Public Administration) ']"
+509,25-1071.00,['Educational Services ']
+510,29-2099.00,['Health Care and Social Assistance ']
+511,29-2099.01,
+512,29-2099.05,
+513,29-2099.06,
+514,29-2099.07,
+515,29-9099.00,"['Health Care and Social Assistance ', 'Government ']"
+516,29-9099.01,
+517,21-1022.00,['Health Care and Social Assistance ']
+518,31-9099.00,"['Health Care and Social Assistance ', 'Government ', 'Educational Services ']"
+519,31-9099.01,
+520,31-9099.02,
+521,29-2092.00,"['Retail Trade ', 'Health Care and Social Assistance ']"
+522,51-4191.00,['Manufacturing ']
+523,49-9021.00,['Construction ']
+524,49-9021.01,
+525,49-9021.02,
+526,53-3032.00,"['Transportation and Warehousing ', 'Wholesale Trade ']"
+527,47-3019.00,['Construction ']
+528,47-3011.00,['Construction ']
+529,47-3012.00,['Construction ']
+530,47-3013.00,['Construction ']
+531,47-5081.00,"['Mining, Quarrying, and Oil and Gas Extraction ', 'Construction ']"
+532,49-9098.00,"['Construction ', 'Other Services (Except Public Administration) ', 'Retail Trade ']"
+533,47-3014.00,['Construction ']
+534,47-3015.00,['Construction ']
+535,51-9198.00,"['Manufacturing ', 'Administrative and Support Services ']"
+536,47-3016.00,['Construction ']
+537,47-4051.00,['Government ']
+538,19-3093.00,"['Government ', 'Professional, Scientific, and Technical Services ']"
+539,25-1125.00,['Educational Services ']
+540,53-7041.00,"['Manufacturing ', 'Mining, Quarrying, and Oil and Gas Extraction ']"
+541,49-9031.00,"['Retail Trade ', 'Other Services (Except Public Administration) ']"
+542,25-1192.00,['Educational Services ']
+543,31-1011.00,['Health Care and Social Assistance ']
+544,35-9031.00,['Accommodation and Food Services ']
+545,43-4081.00,['Accommodation and Food Services ']
+546,43-4161.00,"['Government ', 'Health Care and Social Assistance ', 'Retail Trade ', 'Administrative and Support Services ']"
+547,11-3121.00,"['Management of Companies and Enterprises ', 'Professional, Scientific, and Technical Services ', 'Manufacturing ', 'Government ']"
+548,13-1071.00,"['Administrative and Support Services ', 'Professional, Scientific, and Technical Services ', 'Government ', 'Health Care and Social Assistance ']"
+549,19-2043.00,"['Government ', 'Professional, Scientific, and Technical Services ']"
+550,17-3026.00,['Manufacturing ']
+551,17-2112.00,"['Manufacturing ', 'Professional, Scientific, and Technical Services ']"
+552,17-2112.01,
+553,49-9041.00,"['Manufacturing ', 'Other Services (Except Public Administration) ', 'Wholesale Trade ']"
+554,11-3051.00,['Manufacturing ']
+555,11-3051.01,
+556,11-3051.02,
+557,11-3051.03,
+558,11-3051.04,
+559,11-3051.05,
+560,11-3051.06,
+561,53-7051.00,"['Transportation and Warehousing ', 'Manufacturing ', 'Wholesale Trade ', 'Administrative and Support Services ']"
+562,19-3032.00,"['Professional, Scientific, and Technical Services ']"
+563,43-4199.00,"['Government ', 'Educational Services ', 'Health Care and Social Assistance ']"
+564,15-1122.00,"['Professional, Scientific, and Technical Services ', 'Finance and Insurance ']"
+565,51-9061.00,"['Manufacturing ', 'Administrative and Support Services ']"
+566,49-9099.00,"['Administrative and Support Services ', 'Wholesale Trade ', 'Retail Trade ', 'Government ', 'Construction ']"
+567,49-9099.01,
+568,25-9031.00,['Educational Services ']
+569,25-9031.01,
+570,47-2131.00,['Construction ']
+571,47-2132.00,['Construction ']
+572,13-1032.00,['Finance and Insurance ']
+573,43-9041.00,['Finance and Insurance ']
+574,43-9041.01,
+575,43-9041.02,
+576,41-3021.00,['Finance and Insurance ']
+577,13-2053.00,['Finance and Insurance ']
+578,27-1025.00,"['Professional, Scientific, and Technical Services ', 'Retail Trade ']"
+579,29-1063.00,['Health Care and Social Assistance ']
+580,27-3091.00,"['Professional, Scientific, and Technical Services ', 'Educational Services ', 'Health Care and Social Assistance ']"
+581,43-4111.00,"['Health Care and Social Assistance ', 'Professional, Scientific, and Technical Services ', 'Educational Services ']"
+582,37-2011.00,"['Administrative and Support Services ', 'Educational Services ']"
+583,51-9071.00,"['Retail Trade ', 'Manufacturing ', 'Wholesale Trade ']"
+584,51-9071.01,
+585,51-9071.06,
+586,51-9071.07,
+587,23-1023.00,['Government ']
+588,23-1012.00,['Government ']
+589,25-2012.00,['Educational Services ']
+590,13-1075.00,['Other Services (Except Public Administration) ']
+591,53-7062.00,"['Transportation and Warehousing ', 'Administrative and Support Services ', 'Wholesale Trade ', 'Manufacturing ', 'Retail Trade ']"
+592,17-1012.00,"['Professional, Scientific, and Technical Services ', 'Administrative and Support Services ']"
+593,37-3011.00,['Administrative and Support Services ']
+594,51-4034.00,['Manufacturing ']
+595,51-6011.00,"['Other Services (Except Public Administration) ', 'Health Care and Social Assistance ', 'Accommodation and Food Services ']"
+596,25-1112.00,['Educational Services ']
+597,23-1011.00,"['Professional, Scientific, and Technical Services ', 'Government ']"
+598,51-4192.00,"['Manufacturing ', 'Government ']"
+599,43-6012.00,"['Professional, Scientific, and Technical Services ', 'Government ']"
+600,23-2099.00,"['Government ', 'Professional, Scientific, and Technical Services ']"
+601,11-1031.00,['Government ']
+602,25-4021.00,"['Educational Services ', 'Government ']"
+603,43-4121.00,"['Government ', 'Educational Services ']"
+604,25-1082.00,['Educational Services ']
+605,25-4031.00,"['Government ', 'Educational Services ']"
+606,29-2061.00,['Health Care and Social Assistance ']
+607,19-1099.00,"['Educational Services ', 'Government ', 'Administrative and Support Services ', 'Professional, Scientific, and Technical Services ']"
+608,19-4099.00,"['Educational Services ', 'Professional, Scientific, and Technical Services ', 'Government ', 'Administrative and Support Services ']"
+609,19-4099.01,
+610,19-4099.02,
+611,19-4099.03,
+612,33-9092.00,"['Arts, Entertainment, and Recreation ', 'Government ', 'Other Services (Except Public Administration) ']"
+613,53-3033.00,"['Transportation and Warehousing ', 'Retail Trade ', 'Wholesale Trade ']"
+614,53-7033.00,"['Mining, Quarrying, and Oil and Gas Extraction ']"
+615,43-4131.00,['Finance and Insurance ']
+616,13-2072.00,['Finance and Insurance ']
+617,39-3093.00,"['Arts, Entertainment, and Recreation ', 'Accommodation and Food Services ', 'Other Services (Except Public Administration) ']"
+618,49-9094.00,['Administrative and Support Services ']
+619,53-4011.00,['Transportation and Warehousing ']
+620,53-4012.00,['Transportation and Warehousing ']
+621,11-9081.00,['Accommodation and Food Services ']
+622,45-4023.00,['Manufacturing ']
+623,45-4022.00,"['Agriculture, Forestry, Fishing, and Hunting ']"
+624,45-4029.00,"['Agriculture, Forestry, Fishing, and Hunting ']"
+625,13-1081.00,"['Manufacturing ', 'Government ', 'Professional, Scientific, and Technical Services ', 'Management of Companies and Enterprises ']"
+626,13-1081.01,
+627,13-1081.02,
+628,53-7063.00,"['Manufacturing ', 'Transportation and Warehousing ']"
+629,51-4041.00,['Manufacturing ']
+630,29-2035.00,['Health Care and Social Assistance ']
+631,37-2012.00,"['Accommodation and Food Services ', 'Other Services (Except Public Administration) ', 'Health Care and Social Assistance ', 'Administrative and Support Services ']"
+632,43-9051.00,"['Administrative and Support Services ', 'Professional, Scientific, and Technical Services ', 'Finance and Insurance ', 'Information ']"
+633,49-9071.00,"['Real Estate and Rental and Leasing ', 'Manufacturing ', 'Government ']"
+634,49-9043.00,['Manufacturing ']
+635,39-5091.00,['Information ']
+636,13-1111.00,"['Professional, Scientific, and Technical Services ', 'Government ', 'Finance and Insurance ']"
+637,11-9199.00,['Government ']
+638,11-9199.01,
+639,11-9199.02,
+640,11-9199.03,
+641,11-9199.04,
+642,11-9199.07,
+643,11-9199.08,
+644,11-9199.09,
+645,11-9199.10,
+646,11-9199.11,
+647,39-5092.00,['Other Services (Except Public Administration) ']
+648,49-9095.00,"['Retail Trade ', 'Manufacturing ', 'Construction ']"
+649,17-2121.00,"['Professional, Scientific, and Technical Services ', 'Manufacturing ', 'Government ']"
+650,17-2121.01,
+651,17-2121.02,
+652,13-1161.00,"['Professional, Scientific, and Technical Services ', 'Finance and Insurance ']"
+653,11-2021.00,"['Professional, Scientific, and Technical Services ', 'Management of Companies and Enterprises ', 'Manufacturing ', 'Finance and Insurance ']"
+654,21-1013.00,"['Health Care and Social Assistance ', 'Government ']"
+655,31-9011.00,"['Other Services (Except Public Administration) ', 'Health Care and Social Assistance ']"
+656,53-7199.00,"['Retail Trade ', 'Transportation and Warehousing ', 'Wholesale Trade ', 'Administrative and Support Services ']"
+657,17-2131.00,"['Manufacturing ', 'Professional, Scientific, and Technical Services ']"
+658,19-2032.00,"['Professional, Scientific, and Technical Services ', 'Manufacturing ']"
+659,15-2099.00,"['Professional, Scientific, and Technical Services ', 'Government ', 'Educational Services ']"
+660,25-1022.00,['Educational Services ']
+661,15-2091.00,"['Educational Services ', 'Professional, Scientific, and Technical Services ', 'Finance and Insurance ', 'Government ']"
+662,15-2021.00,"['Government ', 'Professional, Scientific, and Technical Services ', 'Educational Services ']"
+663,51-3022.00,"['Manufacturing ', 'Retail Trade ']"
+664,49-9011.00,"['Construction ', 'Retail Trade ']"
+665,17-3013.00,"['Manufacturing ', 'Professional, Scientific, and Technical Services ']"
+666,17-3027.00,"['Manufacturing ', 'Professional, Scientific, and Technical Services ']"
+667,17-3027.01,
+668,17-2141.00,"['Manufacturing ', 'Professional, Scientific, and Technical Services ']"
+669,17-2141.01,
+670,17-2141.02,
+671,27-4099.00,"['Information ', 'Government ']"
+672,27-3099.00,"['Information ', 'Educational Services ']"
+673,29-2012.00,['Health Care and Social Assistance ']
+674,29-2011.00,['Health Care and Social Assistance ']
+675,29-2011.01,
+676,29-2011.02,
+677,29-2011.03,
+678,11-9111.00,['Health Care and Social Assistance ']
+679,51-9082.00,"['Manufacturing ', 'Health Care and Social Assistance ', 'Professional, Scientific, and Technical Services ']"
+680,31-9092.00,['Health Care and Social Assistance ']
+681,31-9093.00,['Health Care and Social Assistance ']
+682,49-9062.00,"['Wholesale Trade ', 'Health Care and Social Assistance ', 'Other Services (Except Public Administration) ']"
+683,29-2071.00,['Health Care and Social Assistance ']
+684,19-1042.00,"['Professional, Scientific, and Technical Services ', 'Educational Services ', 'Health Care and Social Assistance ']"
+685,43-6013.00,['Health Care and Social Assistance ']
+686,31-9094.00,"['Health Care and Social Assistance ', 'Administrative and Support Services ']"
+687,13-1121.00,"['Other Services (Except Public Administration) ', 'Accommodation and Food Services ', 'Arts, Entertainment, and Recreation ', 'Administrative and Support Services ']"
+688,21-1023.00,"['Health Care and Social Assistance ', 'Government ']"
+689,21-1014.00,['Health Care and Social Assistance ']
+690,27-1026.00,"['Retail Trade ', 'Wholesale Trade ', 'Professional, Scientific, and Technical Services ']"
+691,51-4199.00,"['Manufacturing ', 'Administrative and Support Services ']"
+692,51-4051.00,['Manufacturing ']
+693,43-5041.00,"['Government ', 'Utilities ', 'Administrative and Support Services ']"
+694,19-1022.00,"['Professional, Scientific, and Technical Services ', 'Manufacturing ', 'Government ', 'Educational Services ']"
+695,25-2022.00,['Educational Services ']
+696,51-4035.00,['Manufacturing ']
+697,49-9044.00,"['Construction ', 'Manufacturing ']"
+698,47-5042.00,"['Mining, Quarrying, and Oil and Gas Extraction ']"
+699,53-7111.00,"['Mining, Quarrying, and Oil and Gas Extraction ']"
+700,17-2151.00,"['Mining, Quarrying, and Oil and Gas Extraction ', 'Professional, Scientific, and Technical Services ']"
+701,47-5049.00,"['Mining, Quarrying, and Oil and Gas Extraction ', 'Administrative and Support Services ']"
+702,51-9023.00,['Manufacturing ']
+703,49-3042.00,"['Wholesale Trade ', 'Construction ', 'Government ', 'Real Estate and Rental and Leasing ']"
+704,51-4061.00,"['Manufacturing ', 'Professional, Scientific, and Technical Services ']"
+705,51-7031.00,['Manufacturing ']
+706,41-9012.00,"['Retail Trade ', 'Educational Services ']"
+707,51-9195.00,['Manufacturing ']
+708,51-9195.03,
+709,51-9195.04,
+710,51-9195.05,
+711,51-9195.07,
+712,51-4072.00,['Manufacturing ']
+713,39-4031.00,['Other Services (Except Public Administration) ']
+714,39-3021.00,['Information ']
+715,53-3099.00,"['Retail Trade ', 'Government ', 'Wholesale Trade ', 'Administrative and Support Services ']"
+716,49-3051.00,"['Retail Trade ', 'Other Services (Except Public Administration) ', 'Arts, Entertainment, and Recreation ']"
+717,53-5022.00,"['Transportation and Warehousing ', 'Arts, Entertainment, and Recreation ']"
+718,49-3052.00,['Retail Trade ']
+719,27-1014.00,"['Information ', 'Professional, Scientific, and Technical Services ']"
+720,51-4081.00,['Manufacturing ']
+721,25-4013.00,"['Arts, Entertainment, and Recreation ', 'Government ', 'Educational Services ']"
+722,27-2041.00,"['Other Services (Except Public Administration) ', 'Educational Services ']"
+723,27-2041.01,
+724,27-2041.04,
+725,49-9063.00,"['Retail Trade ', 'Other Services (Except Public Administration) ']"
+726,27-2042.00,"['Other Services (Except Public Administration) ', 'Arts, Entertainment, and Recreation ']"
+727,27-2042.01,
+728,27-2042.02,
+729,11-9121.00,"['Professional, Scientific, and Technical Services ', 'Government ', 'Manufacturing ']"
+730,11-9121.01,
+731,11-9121.02,
+732,15-1142.00,"['Professional, Scientific, and Technical Services ', 'Information ', 'Educational Services ']"
+733,43-4141.00,['Finance and Insurance ']
+734,39-2021.00,"['Other Services (Except Public Administration) ', 'Professional, Scientific, and Technical Services ', 'Retail Trade ']"
+735,17-2161.00,"['Utilities ', 'Professional, Scientific, and Technical Services ', 'Government ']"
+736,29-2033.00,['Health Care and Social Assistance ']
+737,51-8011.00,['Utilities ']
+738,19-4051.00,"['Utilities ', 'Administrative and Support Services ', 'Professional, Scientific, and Technical Services ']"
+739,19-4051.01,
+740,19-4051.02,
+741,29-1151.00,['Health Care and Social Assistance ']
+742,29-1161.00,['Health Care and Social Assistance ']
+743,29-1171.00,['Health Care and Social Assistance ']
+744,31-1014.00,['Health Care and Social Assistance ']
+745,25-1072.00,['Educational Services ']
+746,29-1064.00,['Health Care and Social Assistance ']
+747,29-9011.00,"['Government ', 'Manufacturing ', 'Professional, Scientific, and Technical Services ']"
+748,29-9012.00,"['Government ', 'Manufacturing ', 'Professional, Scientific, and Technical Services ']"
+749,29-1122.00,"['Health Care and Social Assistance ', 'Educational Services ']"
+750,29-1122.01,
+751,31-2012.00,['Health Care and Social Assistance ']
+752,31-2011.00,['Health Care and Social Assistance ']
+753,43-9199.00,"['Educational Services ', 'Government ']"
+754,43-9061.00,"['Health Care and Social Assistance ', 'Educational Services ']"
+755,43-9071.00,"['Administrative and Support Services ', 'Finance and Insurance ', 'Information ']"
+756,47-2073.00,"['Construction ', 'Government ']"
+757,15-2031.00,"['Finance and Insurance ', 'Professional, Scientific, and Technical Services ', 'Government ']"
+758,51-9083.00,"['Manufacturing ', 'Retail Trade ', 'Health Care and Social Assistance ']"
+759,29-2057.00,['Health Care and Social Assistance ']
+760,29-2081.00,"['Health Care and Social Assistance ', 'Retail Trade ']"
+761,29-1041.00,"['Health Care and Social Assistance ', 'Retail Trade ']"
+762,29-1022.00,['Health Care and Social Assistance ']
+763,43-4151.00,"['Wholesale Trade ', 'Retail Trade ', 'Manufacturing ']"
+764,31-1015.00,['Health Care and Social Assistance ']
+765,29-1023.00,['Health Care and Social Assistance ']
+766,29-2091.00,"['Manufacturing ', 'Health Care and Social Assistance ', 'Retail Trade ', 'Government ']"
+767,49-3053.00,"['Retail Trade ', 'Administrative and Support Services ', 'Arts, Entertainment, and Recreation ']"
+768,51-9111.00,"['Manufacturing ', 'Administrative and Support Services ']"
+769,53-7064.00,"['Retail Trade ', 'Manufacturing ', 'Administrative and Support Services ', 'Transportation and Warehousing ', 'Wholesale Trade ']"
+770,47-2141.00,['Construction ']
+771,51-9122.00,"['Other Services (Except Public Administration) ', 'Manufacturing ']"
+772,51-9123.00,['Manufacturing ']
+773,51-9196.00,['Manufacturing ']
+774,47-2142.00,"['Construction ', 'Professional, Scientific, and Technical Services ']"
+775,23-2011.00,"['Professional, Scientific, and Technical Services ', 'Government ']"
+776,33-3041.00,"['Government ', 'Educational Services ']"
+777,53-6021.00,['Other Services (Except Public Administration) ']
+778,41-2022.00,"['Retail Trade ', 'Wholesale Trade ']"
+779,51-4062.00,['Manufacturing ']
+780,51-7032.00,['Manufacturing ']
+781,47-2071.00,"['Construction ', 'Government ']"
+782,43-3051.00,"['Professional, Scientific, and Technical Services ', 'Health Care and Social Assistance ', 'Administrative and Support Services ']"
+783,29-1065.00,['Health Care and Social Assistance ']
+784,39-9021.00,['Health Care and Social Assistance ']
+785,39-9099.00,"['Other Services (Except Public Administration) ', 'Government ', 'Health Care and Social Assistance ']"
+786,13-2052.00,['Finance and Insurance ']
+787,37-2021.00,['Administrative and Support Services ']
+788,37-3012.00,"['Administrative and Support Services ', 'Agriculture, Forestry, Fishing, and Hunting ', 'Wholesale Trade ']"
+789,17-2171.00,"['Mining, Quarrying, and Oil and Gas Extraction ', 'Management of Companies and Enterprises ', 'Professional, Scientific, and Technical Services ', 'Manufacturing ']"
+790,51-8093.00,"['Manufacturing ', 'Mining, Quarrying, and Oil and Gas Extraction ', 'Transportation and Warehousing ']"
+791,29-1051.00,"['Retail Trade ', 'Health Care and Social Assistance ']"
+792,31-9095.00,"['Retail Trade ', 'Health Care and Social Assistance ']"
+793,29-2052.00,"['Retail Trade ', 'Health Care and Social Assistance ']"
+794,25-1126.00,['Educational Services ']
+795,31-9097.00,['Health Care and Social Assistance ']
+796,27-4021.00,"['Professional, Scientific, and Technical Services ']"
+797,51-9151.00,"['Retail Trade ', 'Other Services (Except Public Administration) ', 'Professional, Scientific, and Technical Services ']"
+798,19-2099.00,"['Government ', 'Educational Services ', 'Professional, Scientific, and Technical Services ']"
+799,19-2099.01,
+800,31-2022.00,['Health Care and Social Assistance ']
+801,31-2021.00,['Health Care and Social Assistance ']
+802,29-1123.00,['Health Care and Social Assistance ']
+803,29-1071.00,['Health Care and Social Assistance ']
+804,29-1071.01,
+805,29-1069.00,"['Health Care and Social Assistance ', 'Government ']"
+806,29-1069.01,
+807,29-1069.02,
+808,29-1069.03,
+809,29-1069.04,
+810,29-1069.05,
+811,29-1069.06,
+812,29-1069.07,
+813,29-1069.08,
+814,29-1069.09,
+815,29-1069.10,
+816,29-1069.11,
+817,29-1069.12,
+818,19-2012.00,"['Professional, Scientific, and Technical Services ', 'Educational Services ', 'Government ', 'Health Care and Social Assistance ']"
+819,25-1054.00,['Educational Services ']
+820,47-2072.00,['Construction ']
+821,47-2151.00,"['Construction ', 'Government ']"
+822,51-8099.00,"['Manufacturing ', 'Government ', 'Administrative and Support Services ', 'Mining, Quarrying, and Oil and Gas Extraction ']"
+823,51-8099.01,
+824,51-8099.02,
+825,51-8099.03,
+826,51-8099.04,
+827,47-2161.00,['Construction ']
+828,51-4193.00,['Manufacturing ']
+829,47-2152.00,['Construction ']
+830,47-2152.01,
+831,47-2152.02,
+832,29-1081.00,['Health Care and Social Assistance ']
+833,33-3051.00,['Government ']
+834,33-3051.01,
+835,33-3051.03,
+836,43-5031.00,['Government ']
+837,25-1065.00,['Educational Services ']
+838,19-3094.00,"['Government ', 'Professional, Scientific, and Technical Services ']"
+839,43-5051.00,['Government ']
+840,43-5052.00,['Government ']
+841,43-5053.00,['Government ']
+842,11-9131.00,['Government ']
+843,25-1199.00,['Educational Services ']
+844,51-4052.00,['Manufacturing ']
+845,51-8012.00,"['Utilities ', 'Government ']"
+846,51-8013.00,"['Utilities ', 'Government ']"
+847,49-9069.00,"['Government ', 'Wholesale Trade ', 'Other Services (Except Public Administration) ', 'Manufacturing ']"
+848,51-5111.00,"['Manufacturing ', 'Information ']"
+849,25-2011.00,"['Health Care and Social Assistance ', 'Educational Services ', 'Other Services (Except Public Administration) ']"
+850,51-6021.00,['Other Services (Except Public Administration) ']
+851,51-5113.00,['Manufacturing ']
+852,51-5112.00,['Manufacturing ']
+853,33-9021.00,['Administrative and Support Services ']
+854,21-1092.00,['Government ']
+855,43-3061.00,"['Government ', 'Manufacturing ']"
+856,27-2012.00,['Information ']
+857,27-2012.01,
+858,27-2012.02,
+859,27-2012.03,
+860,27-2012.04,
+861,27-2012.05,
+862,51-9199.00,"['Manufacturing ', 'Administrative and Support Services ']"
+863,51-9199.01,
+864,43-5061.00,['Manufacturing ']
+865,43-9081.00,"['Information ', 'Professional, Scientific, and Technical Services ']"
+866,11-9141.00,['Real Estate and Rental and Leasing ']
+867,29-1024.00,['Health Care and Social Assistance ']
+868,33-9099.00,"['Educational Services ', 'Government ', 'Transportation and Warehousing ']"
+869,33-9099.02,
+870,31-1013.00,"['Health Care and Social Assistance ', 'Government ']"
+871,29-2053.00,"['Health Care and Social Assistance ', 'Government ']"
+872,29-1066.00,['Health Care and Social Assistance ']
+873,19-3039.00,"['Government ', 'Health Care and Social Assistance ']"
+874,19-3039.01,
+875,25-1066.00,['Educational Services ']
+876,27-3012.00,"['Arts, Entertainment, and Recreation ', 'Accommodation and Food Services ']"
+877,11-2031.00,"['Other Services (Except Public Administration) ', 'Educational Services ', 'Professional, Scientific, and Technical Services ']"
+878,27-3031.00,"['Other Services (Except Public Administration) ', 'Professional, Scientific, and Technical Services ', 'Educational Services ']"
+879,53-7072.00,"['Mining, Quarrying, and Oil and Gas Extraction ', 'Transportation and Warehousing ', 'Wholesale Trade ']"
+880,13-1023.00,"['Manufacturing ', 'Government ']"
+881,11-3061.00,"['Manufacturing ', 'Management of Companies and Enterprises ', 'Wholesale Trade ', 'Government ']"
+882,29-1124.00,['Health Care and Social Assistance ']
+883,27-3011.00,['Information ']
+884,27-4013.00,"['Government ', 'Information ']"
+885,49-2021.00,"['Information ', 'Construction ', 'Government ', 'Other Services (Except Public Administration) ']"
+886,49-2021.01,
+887,29-2034.00,['Health Care and Social Assistance ']
+888,49-3043.00,"['Transportation and Warehousing ', 'Government ']"
+889,53-4099.00,"['Transportation and Warehousing ', 'Government ']"
+890,53-4013.00,['Transportation and Warehousing ']
+891,47-4061.00,"['Transportation and Warehousing ', 'Government ', 'Construction ']"
+892,53-4021.00,['Transportation and Warehousing ']
+893,53-4031.00,['Transportation and Warehousing ']
+894,41-9021.00,['Real Estate and Rental and Leasing ']
+895,41-9022.00,['Real Estate and Rental and Leasing ']
+896,43-4171.00,"['Health Care and Social Assistance ', 'Other Services (Except Public Administration) ', 'Professional, Scientific, and Technical Services ']"
+897,25-1193.00,['Educational Services ']
+898,39-9032.00,"['Government ', 'Health Care and Social Assistance ', 'Other Services (Except Public Administration) ', 'Arts, Entertainment, and Recreation ']"
+899,29-1125.00,"['Health Care and Social Assistance ', 'Government ']"
+900,29-1125.01,
+901,29-1125.02,
+902,49-3092.00,['Retail Trade ']
+903,49-9045.00,"['Manufacturing ', 'Construction ']"
+904,53-7081.00,"['Administrative and Support Services ', 'Government ']"
+905,29-1141.00,['Health Care and Social Assistance ']
+906,29-1141.01,
+907,29-1141.02,
+908,29-1141.03,
+909,29-1141.04,
+910,21-1015.00,"['Health Care and Social Assistance ', 'Government ']"
+911,47-2171.00,['Construction ']
+912,21-2099.00,['Other Services (Except Public Administration) ']
+913,27-3022.00,['Information ']
+914,43-4181.00,"['Transportation and Warehousing ', 'Administrative and Support Services ']"
+915,39-9041.00,"['Health Care and Social Assistance ', 'Educational Services ']"
+916,29-1126.00,['Health Care and Social Assistance ']
+917,29-2054.00,['Health Care and Social Assistance ']
+918,41-2031.00,['Retail Trade ']
+919,49-9096.00,"['Construction ', 'Manufacturing ', 'Transportation and Warehousing ', 'Mining, Quarrying, and Oil and Gas Extraction ']"
+920,47-5051.00,"['Mining, Quarrying, and Oil and Gas Extraction ', 'Manufacturing ']"
+921,51-4023.00,['Manufacturing ']
+922,47-5061.00,"['Mining, Quarrying, and Oil and Gas Extraction ']"
+923,47-2181.00,['Construction ']
+924,47-5012.00,"['Mining, Quarrying, and Oil and Gas Extraction ']"
+925,47-5071.00,"['Mining, Quarrying, and Oil and Gas Extraction ', 'Construction ']"
+926,53-5011.00,"['Transportation and Warehousing ', 'Government ']"
+927,41-9099.00,"['Retail Trade ', 'Wholesale Trade ']"
+928,41-9031.00,"['Wholesale Trade ', 'Professional, Scientific, and Technical Services ', 'Manufacturing ', 'Information ']"
+929,11-2022.00,"['Wholesale Trade ', 'Retail Trade ', 'Manufacturing ', 'Professional, Scientific, and Technical Services ']"
+930,41-3099.00,"['Professional, Scientific, and Technical Services ', 'Administrative and Support Services ', 'Information ', 'Retail Trade ']"
+931,41-3099.01,
+932,41-4012.00,"['Wholesale Trade ', 'Manufacturing ']"
+933,41-4011.00,"['Wholesale Trade ', 'Professional, Scientific, and Technical Services ', 'Manufacturing ']"
+934,41-4011.07,
+935,51-7041.00,['Manufacturing ']
+936,25-2031.00,['Educational Services ']
+937,43-6014.00,"['Educational Services ', 'Health Care and Social Assistance ', 'Other Services (Except Public Administration) ', 'Professional, Scientific, and Technical Services ']"
+938,41-3031.00,['Finance and Insurance ']
+939,41-3031.01,
+940,41-3031.02,
+941,41-3031.03,
+942,49-2098.00,"['Administrative and Support Services ', 'Construction ']"
+943,33-9032.00,['Administrative and Support Services ']
+944,47-4091.00,['Construction ']
+945,25-3021.00,"['Educational Services ', 'Other Services (Except Public Administration) ']"
+946,51-9141.00,['Manufacturing ']
+947,51-9012.00,['Manufacturing ']
+948,47-4071.00,"['Administrative and Support Services ', 'Government ', 'Construction ']"
+949,47-5013.00,"['Mining, Quarrying, and Oil and Gas Extraction ']"
+950,27-1027.00,"['Information ', 'Arts, Entertainment, and Recreation ', 'Professional, Scientific, and Technical Services ']"
+951,51-6051.00,['Manufacturing ']
+952,51-6031.00,['Manufacturing ']
+953,39-5093.00,['Other Services (Except Public Administration) ']
+954,47-2211.00,"['Construction ', 'Manufacturing ']"
+955,53-5031.00,"['Transportation and Warehousing ', 'Government ']"
+956,43-5071.00,"['Manufacturing ', 'Wholesale Trade ', 'Retail Trade ', 'Transportation and Warehousing ']"
+957,51-6041.00,"['Manufacturing ', 'Other Services (Except Public Administration) ', 'Retail Trade ']"
+958,51-6042.00,['Manufacturing ']
+959,49-9097.00,"['Transportation and Warehousing ', 'Government ']"
+960,39-5094.00,"['Other Services (Except Public Administration) ', 'Health Care and Social Assistance ']"
+961,51-3023.00,['Manufacturing ']
+962,39-1012.00,"['Government ', 'Accommodation and Food Services ', 'Arts, Entertainment, and Recreation ']"
+963,11-9151.00,"['Health Care and Social Assistance ', 'Government ', 'Other Services (Except Public Administration) ']"
+964,21-1093.00,"['Health Care and Social Assistance ', 'Government ']"
+965,19-4061.00,"['Professional, Scientific, and Technical Services ', 'Educational Services ']"
+966,19-4061.01,
+967,25-1069.00,['Educational Services ']
+968,19-3099.00,"['Government ', 'Educational Services ', 'Professional, Scientific, and Technical Services ']"
+969,19-3099.01,
+970,25-1113.00,['Educational Services ']
+971,21-1029.00,"['Government ', 'Health Care and Social Assistance ']"
+972,19-3041.00,"['Professional, Scientific, and Technical Services ', 'Educational Services ', 'Government ']"
+973,25-1067.00,['Educational Services ']
+974,15-1132.00,"['Professional, Scientific, and Technical Services ', 'Information ', 'Finance and Insurance ']"
+975,15-1133.00,"['Professional, Scientific, and Technical Services ', 'Manufacturing ', 'Information ']"
+976,19-1013.00,"['Professional, Scientific, and Technical Services ', 'Agriculture, Forestry, Fishing, and Hunting ', 'Educational Services ', 'Government ', 'Wholesale Trade ']"
+977,47-2231.00,['Construction ']
+978,27-4014.00,"['Information ', 'Arts, Entertainment, and Recreation ']"
+979,25-2059.00,"['Educational Services ', 'Health Care and Social Assistance ']"
+980,25-2059.01,
+981,25-2052.00,['Educational Services ']
+982,25-2053.00,['Educational Services ']
+983,25-2051.00,"['Educational Services ', 'Health Care and Social Assistance ']"
+984,25-2054.00,['Educational Services ']
+985,29-1127.00,"['Health Care and Social Assistance ', 'Educational Services ']"
+986,51-8021.00,"['Government ', 'Manufacturing ', 'Educational Services ', 'Health Care and Social Assistance ']"
+987,43-9111.00,"['Government ', 'Finance and Insurance ', 'Professional, Scientific, and Technical Services ', 'Educational Services ', 'Health Care and Social Assistance ']"
+988,43-9111.01,
+989,15-2041.00,"['Professional, Scientific, and Technical Services ', 'Government ', 'Finance and Insurance ']"
+990,15-2041.01,
+991,15-2041.02,
+992,43-5081.00,"['Retail Trade ', 'Wholesale Trade ']"
+993,43-5081.01,
+994,43-5081.02,
+995,43-5081.03,
+996,43-5081.04,
+997,47-2022.00,['Construction ']
+998,47-2221.00,['Construction ']
+999,51-2041.00,"['Manufacturing ', 'Construction ']"
+1000,21-1011.00,['Health Care and Social Assistance ']
+1001,53-4041.00,['Government ']
+1002,29-1067.00,['Health Care and Social Assistance ']
+1003,29-2055.00,['Health Care and Social Assistance ']
+1004,19-3022.00,"['Professional, Scientific, and Technical Services ']"
+1005,17-3031.00,"['Professional, Scientific, and Technical Services ', 'Government ']"
+1006,17-3031.01,
+1007,17-3031.02,
+1008,17-1022.00,"['Professional, Scientific, and Technical Services ', 'Government ']"
+1009,17-1022.01,
+1010,43-2011.00,"['Health Care and Social Assistance ', 'Administrative and Support Services ', 'Retail Trade ']"
+1011,51-6052.00,"['Retail Trade ', 'Other Services (Except Public Administration) ']"
+1012,53-7121.00,"['Transportation and Warehousing ', 'Manufacturing ']"
+1013,47-2082.00,['Construction ']
+1014,13-2081.00,['Government ']
+1015,13-2082.00,"['Professional, Scientific, and Technical Services ']"
+1016,53-3041.00,"['Transportation and Warehousing ', 'Health Care and Social Assistance ']"
+1017,25-9041.00,"['Educational Services ', 'Health Care and Social Assistance ']"
+1018,25-3099.00,['Educational Services ']
+1019,25-3099.02,
+1020,51-2092.00,"['Manufacturing ', 'Administrative and Support Services ']"
+1021,27-3042.00,"['Professional, Scientific, and Technical Services ', 'Manufacturing ', 'Information ']"
+1022,49-2022.00,"['Information ', 'Construction ']"
+1023,49-9052.00,"['Information ', 'Construction ']"
+1024,41-9041.00,['Administrative and Support Services ']
+1025,43-2021.00,"['Health Care and Social Assistance ', 'Information ', 'Administrative and Support Services ']"
+1026,43-3071.00,['Finance and Insurance ']
+1027,47-2053.00,['Construction ']
+1028,51-6061.00,['Manufacturing ']
+1029,51-6062.00,['Manufacturing ']
+1030,51-6063.00,['Manufacturing ']
+1031,51-6064.00,['Manufacturing ']
+1032,51-6099.00,"['Manufacturing ', 'Administrative and Support Services ']"
+1033,29-1129.00,['Health Care and Social Assistance ']
+1034,47-2044.00,['Construction ']
+1035,51-2093.00,['Manufacturing ']
+1036,51-9197.00,['Manufacturing ']
+1037,49-3093.00,['Retail Trade ']
+1038,23-2093.00,"['Professional, Scientific, and Technical Services ', 'Finance and Insurance ']"
+1039,51-4111.00,['Manufacturing ']
+1040,51-4194.00,"['Manufacturing ', 'Other Services (Except Public Administration) ']"
+1041,39-7011.00,"['Arts, Entertainment, and Recreation ', 'Administrative and Support Services ']"
+1042,53-6041.00,"['Government ', 'Professional, Scientific, and Technical Services ']"
+1043,11-3131.00,"['Management of Companies and Enterprises ', 'Professional, Scientific, and Technical Services ', 'Educational Services ', 'Finance and Insurance ']"
+1044,13-1151.00,"['Professional, Scientific, and Technical Services ', 'Health Care and Social Assistance ', 'Finance and Insurance ', 'Educational Services ']"
+1045,33-3052.00,"['Government ', 'Transportation and Warehousing ']"
+1046,53-6061.00,"['Transportation and Warehousing ', 'Government ']"
+1047,53-6051.00,"['Government ', 'Transportation and Warehousing ', 'Other Services (Except Public Administration) ']"
+1048,53-6051.01,
+1049,53-6051.07,
+1050,53-6051.08,
+1051,33-9093.00,['Government ']
+1052,53-6099.00,['Transportation and Warehousing ']
+1053,11-3071.00,"['Transportation and Warehousing ', 'Wholesale Trade ', 'Government ', 'Manufacturing ']"
+1054,11-3071.01,
+1055,11-3071.02,
+1056,11-3071.03,
+1057,41-3041.00,['Administrative and Support Services ']
+1058,39-7012.00,"['Administrative and Support Services ', 'Arts, Entertainment, and Recreation ']"
+1059,37-3013.00,['Administrative and Support Services ']
+1060,27-2023.00,"['Government ', 'Arts, Entertainment, and Recreation ', 'Other Services (Except Public Administration) ']"
+1061,51-6093.00,"['Manufacturing ', 'Other Services (Except Public Administration) ']"
+1062,19-3051.00,"['Government ', 'Professional, Scientific, and Technical Services ']"
+1063,39-3031.00,"['Information ', 'Arts, Entertainment, and Recreation ', 'Administrative and Support Services ']"
+1064,29-1131.00,"['Professional, Scientific, and Technical Services ']"
+1065,31-9096.00,"['Professional, Scientific, and Technical Services ']"
+1066,29-2056.00,"['Professional, Scientific, and Technical Services ']"
+1067,25-1194.00,['Educational Services ']
+1068,35-3031.00,['Accommodation and Food Services ']
+1069,49-9064.00,"['Retail Trade ', 'Other Services (Except Public Administration) ']"
+1070,51-8031.00,"['Government ', 'Utilities ']"
+1071,15-1134.00,"['Professional, Scientific, and Technical Services ', 'Information ']"
+1072,43-5111.00,"['Administrative and Support Services ', 'Manufacturing ', 'Wholesale Trade ', 'Retail Trade ']"
+1073,51-4121.00,"['Manufacturing ', 'Construction ']"
+1074,51-4121.06,
+1075,51-4121.07,
+1076,51-4122.00,['Manufacturing ']
+1077,53-7073.00,"['Mining, Quarrying, and Oil and Gas Extraction ']"
+1078,13-1022.00,"['Wholesale Trade ', 'Retail Trade ', 'Management of Companies and Enterprises ']"
+1079,49-9081.00,"['Utilities ', 'Other Services (Except Public Administration) ', 'Construction ']"
+1080,51-7099.00,['Manufacturing ']
+1081,51-7042.00,['Manufacturing ']
+1082,43-9022.00,"['Government ', 'Educational Services ', 'Administrative and Support Services ']"
+1083,27-3043.00,"['Professional, Scientific, and Technical Services ', 'Information ']"
+1084,27-3043.04,
+1085,27-3043.05,
+1086,19-1023.00,"['Government ', 'Professional, Scientific, and Technical Services ']"
