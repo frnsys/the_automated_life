@@ -12,8 +12,66 @@ export const GlobalStyle = createGlobalStyle`
     background: #eee;
   }
 
+  .tooltip {
+    background: #fff;
+    border: 2px solid black;
+    padding: 0.5em;
+  }
   .tooltip h5, .tooltip h6 {
     margin: 0;
+  }
+
+  .job-status {
+    display: flex;
+  }
+  .job-risk {
+    flex: 1.5;
+  }
+  .job-risk-low {
+    color: #39e567;
+  }
+  .job-risk-moderate {
+    color: #f9993e;
+  }
+  .job-risk-high {
+    color: #fe0f0f;
+  }
+  .job-tooltip {
+    min-width: 20em;
+  }
+  .job-tooltip h3 {
+    margin: 0 0 0.5em 0;
+    font-size: 1em;
+  }
+  .job-skills {
+    margin-top: 0.5em;
+    border-top: 2px solid black;
+  }
+  .job-skills ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .job-skills h5 {
+    margin: 0.5em 0 0.25em 0;
+    font-size: 1em;
+  }
+
+  .automation-icon {
+    width: 8px;
+    height: 8px;
+    border-radius: 10em;
+    display: inline-block;
+    margin-right: 4px;
+  }
+  .automation-icon-low {
+    background: #39e567;
+  }
+  .automation-icon-moderate {
+    background: #f9993e;
+  }
+  .automation-icon-high {
+    background: #fe0f0f;
   }
 `;
 

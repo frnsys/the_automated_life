@@ -142,4 +142,16 @@ function probabilityForJob(job) {
   return (performance + education + skills)/3;
 }
 
-export default { deepeningAutomation, probabilityForJob };
+// How much a job is automated
+function percentAutomated(job) {
+  let {robots} = store.getState();
+  let automated = Object.values(robots).reduce((acc, r) => {
+    return acc.concat(r.skills);
+  }, []);
+  let score = Object.keys(job.skills).reduce((acc, s_id) => {
+    return acc + (automated.includes(s_id) ? job.skills[s_id] : 0);
+  }, 0);
+  return score/job.skillsTotal;
+}
+
+export default { deepeningAutomation, probabilityForJob, percentAutomated };

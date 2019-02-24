@@ -2,19 +2,61 @@ import Node from './node';
 import * as THREE from 'three';
 import skills from 'data/skills.json'
 import logic from '../../logic';
+import store from '../../store';
 
 const topNSkills = 5;
-const unfocusedColor = 0xeeeeee;
+const visitedColor = 0xf4ed61;
+const unfocusedColor = 0xaaaaaa;
 const focusedColor = 0x0000ff;
 const neighbColor = 0xff0000;
 const neighbColorUnqualified = 0x660000;
+
+const tooltip = (job) => {
+  let {player} = store.getState();
+  let risk = 'low';
+  if (job.automationRisk >= 0.8) {
+    risk = 'high';
+  } else if (job.automationRisk >= 0.4) {
+    risk = 'moderate';
+  }
+  let automated = logic.percentAutomated(job);
+  let hadJob = player.pastJobs.includes(job.id);
+
+  let requiredSkills = Object.keys(job.skills)
+    .sort((id_a, id_b) => job.skills[id_b] - job.skills[id_a])
+    .map(id => skills[id]).slice(0, topNSkills);
+
+  return `
+    <div class="job-tooltip">
+      <h3>${job.name}${hadJob ? ' (past job)' : ''}</h3>
+      <div class="job-status">
+        <div class="job-risk job-risk-${risk}">automation risk: ${risk}</div>
+        <div class="job-automated">${(automated*100).toFixed(0)}% automated</div>
+      </div>
+      <div class="job-skills">
+        <h5>Important skills</h5>
+        <ul>
+          ${requiredSkills.map((s) => {
+            let risk = 'low';
+            if (s.automatibility >= 0.8) {
+              risk = 'high';
+            } else if (s.automatibility >= 0.4) {
+              risk = 'moderate';
+            }
+            return `<li><div class="automation-icon automation-icon-${risk}"></div>${s.name}</li>`;
+          }).join('')}
+        </ul>
+      </div>
+    </div>
+  `;
+};
 
 const focusedLineMat = new THREE.LineBasicMaterial({
   color: 0x00ff00,
   linewidth: 1
 });
 const defaultLineMat = new THREE.LineBasicMaterial({
-  color: 0xeeeeee,
+  color: 0xaaaaaa,
   linewidth: 1
 });
 
@@ -38,19 +80,17 @@ class Graph {
     // Create mapping of job_id->node
     this.nodes = Object.keys(jobs).map(id => {
       let j = jobs[id];
-      let requiredSkills = Object.keys(j.skills)
-        .sort((id_a, id_b) => j.skills[id_b] - j.skills[id_a])
-        .map(id => `${skills[id].name}: ${j.skills[id].toFixed(1)}`).slice(0, topNSkills);
       let node = new Node(j.pos.x, j.pos.y, this.nodeSize, unfocusedColor, {
+        id: parseInt(id),
+
         // Click on job node
         onClick: () => {
           console.log(logic.probabilityForJob(j));
+          let job = jobs[id];
+          this.onNodeClick(job);
           this.reveal(id);
         },
-        tooltip: () => {
-          // TODO let player know if they have the skill or not
-          return `<b>${j.name}</b><br />${requiredSkills.join('<br />')}`;
-        }
+        tooltip: () => tooltip(j)
       });
 
       // All hidden by default
@@ -93,12 +133,17 @@ class Graph {
   // Reveal the node and its neighbors
   // for the given job id
   reveal(job_id) {
+    let {player} = store.getState();
     // Set all nodes and edges to muted
     Object.values(this.nodes)
       .filter(n => n.mesh.visible)
       .forEach(n => {
         n.mesh.position.setZ(0);
-        n.setColor(unfocusedColor);
+        if (player.pastJobs.includes(n.data.id)) {
+          n.setColor(visitedColor);
+        } else {
+          n.setColor(unfocusedColor);
+        }
       });
     Object.values(this._edges)
       .filter(e => e.visible)
@@ -141,7 +186,9 @@ class Graph {
 
       // TODO color by probability of getting job
       // and by level of automation
-      if (neighb) {
+      if (player.pastJobs.includes(node.data.id)) {
+        node.setColor(visitedColor);
+      } else if (neighb) {
         node.setColor(neighbColor);
       } else {
         node.setColor(neighbColorUnqualified);

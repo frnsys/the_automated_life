@@ -22,6 +22,7 @@ const initialState = {
     obj[s_id] = 0;
     return obj;
   }, {}),
+  pastJobs: []
 };
 
 
@@ -33,7 +34,11 @@ function reducer(state={}, action) {
     case 'player:expenses':
       state.cash -= config.monthlyExpenses;
       return {...state}
+
     case 'player:hire':
+      if (state.job.id) {
+        state.pastJobs.push(state.job.id);
+      }
       state.job = action.payload;
       return {...state}
 

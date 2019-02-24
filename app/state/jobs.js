@@ -1,4 +1,5 @@
 import jobs from 'data/jobs.json'
+import skills from 'data/skills.json'
 import industries from 'data/industries.json';
 
 // Precompute & cache values we'll reuse often
@@ -11,6 +12,12 @@ Object.keys(industries).forEach((ind) => {
 Object.values(jobs).forEach((job) => {
   job.skillsTotal = Object.values(job.skills).reduce((acc, cur) => acc + cur);
   job.industriesSkillTotal = job.industries.reduce((acc, ind) => acc + industryWeights[ind], 0);
+
+  // Weighted mean risk of a job at being automated
+  let risk = Object.keys(job.skills).reduce((acc, s_id) => {
+    return acc + (job.skills[s_id] * skills[s_id].automatibility);
+  }, 0);
+  job.automationRisk = risk/job.skillsTotal;
 
   // TODO this is temporary until we load actual education level
   job.requiredEducation = 0;

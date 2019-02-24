@@ -44,7 +44,8 @@ class Scene extends Component {
     this.graph = new Graph(jobs, 6);
     this.graph.onReveal = (bounds) => {
       zoomToFit(bounds, camera, 10);
-    }
+    };
+    this.graph.onNodeClick = this.props.setJob;
     this.graph.reveal(1);
     this.scene.add(this.graph.group);
     this.ixn = new InteractionLayer(this.scene, this.graph.interactables);
