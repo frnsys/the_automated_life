@@ -1,6 +1,5 @@
 import json
 import yaml
-import random
 import numpy as np
 import pandas as pd
 import networkx as nx
@@ -144,10 +143,7 @@ for row in tqdm(df.itertuples()):
     skills[i] = {
         'id': i,
         'name': row.Skill,
-        'automatibility': auto,
-
-        # TODO
-        'price': random.randint(1000, 10000)
+        'automatibility': auto
     }
 
 # Create job graph
