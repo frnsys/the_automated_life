@@ -56,6 +56,13 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0.5em 0 0.25em 0;
     font-size: 1em;
   }
+  .job-applied {
+    text-align: center;
+    background: #000;
+    color: #fff;
+    padding: 0.2em;
+    margin-bottom: 0.5em;
+  }
 
   .automation-icon {
     width: 8px;

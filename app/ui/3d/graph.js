@@ -9,6 +9,7 @@ const topNSkills = 5;
 const visitedColor = 0xf4ed61;
 const unfocusedColor = 0xaaaaaa;
 const focusedColor = 0x0000ff;
+const appliedColor = 0x79d889;
 const neighbColor = 0xff0000;
 const neighbColorUnqualified = 0x660000;
 
@@ -27,6 +28,7 @@ const tooltip = (job) => {
   }
   let automated = logic.percentAutomated(job);
   let hadJob = player.pastJobs.includes(job.id);
+  let applied = player.application && player.application.id == job.id;
 
   let requiredSkills = Object.keys(job.skills)
     .sort((id_a, id_b) => job.skills[id_b] - job.skills[id_a])
@@ -34,6 +36,7 @@ const tooltip = (job) => {
 
   return `
     <div class="job-tooltip">
+      ${applied ? `<div class="job-applied">Application Out</div>` : ''}
       <h3>${job.name}${hadJob ? ' (past job)' : ''}</h3>
       <div class="job-status">
         <div class="job-risk job-risk-${risk}">automation risk: ${risk}</div>
@@ -89,12 +92,21 @@ class Graph {
       let node = new Node(j.pos.x, j.pos.y, this.nodeSize, unfocusedColor, {
         id: parseInt(id),
 
-        // Click on job node
+        // Click on job node to apply to job
         onClick: () => {
-          console.log(logic.probabilityForJob(j));
-          let job = jobs[id];
-          this.onNodeClick(job);
-          this.reveal(id);
+          let {player} = store.getState();
+          let neighbIds = Object.keys(this.edges[this.focusedNodeId]);
+          if (!player.application && neighbIds.includes(id)) {
+            store.dispatch({
+              type: 'player:apply',
+              payload: {
+                id: id,
+                prob: logic.probabilityForJob(j)
+              }
+            });
+            this.appliedNode = node;
+            node.setColor(appliedColor);
+          }
         },
         tooltip: () => tooltip(j)
       });
@@ -140,16 +152,14 @@ class Graph {
   // for the given job id
   reveal(job_id, center=false) {
     let {player} = store.getState();
+    this.focusedNodeId = job_id;
+
     // Set all nodes and edges to muted
     Object.values(this.nodes)
       .filter(n => n.mesh.visible)
       .forEach(n => {
         n.mesh.position.setZ(0);
-        if (player.pastJobs.includes(n.data.id)) {
-          n.setColor(visitedColor);
-        } else {
-          n.setColor(unfocusedColor);
-        }
+        this.resetNodeColor(n, player);
       });
     Object.values(this._edges)
       .filter(e => e.visible)
@@ -172,6 +182,7 @@ class Graph {
       right: focusNode.x,
       bottom: focusNode.y
     };
+
     Object.keys(this.edges[job_id]).map(neighb => {
       let node = this.nodes[neighb];
       node.mesh.visible = true;
@@ -207,6 +218,17 @@ class Graph {
       line.position.setZ(1);
     });
     this.onReveal(focusNode, bounds, center);
+  }
+
+  resetNodeColor(node, player) {
+    let neighbIds = Object.keys(this.edges[this.focusedNodeId]);
+    if (player.pastJobs.includes(node.data.id)) {
+      node.setColor(visitedColor);
+    } else if (neighbIds.includes(node.data.id.toString())) {
+      node.setColor(neighbColor);
+    } else {
+      node.setColor(unfocusedColor);
+    }
   }
 }
 

@@ -18,6 +18,7 @@ const initialState = {
   education: 0,
   schoolCountdown: 0, // months
   job: unemployed,
+  application: null,
   skills: Object.keys(skills).reduce((obj, s_id) => {
     obj[s_id] = 0;
     return obj;
@@ -35,11 +36,29 @@ function reducer(state={}, action) {
       state.cash -= config.monthlyExpenses;
       return {...state}
 
+    case 'player:apply': {
+      if (!state.application) {
+        state.application = action.payload;
+        state.application.countdown = config.applicationMinMonths - 1;
+      }
+      return {...state}
+    }
+    case 'player:application': {
+      if (state.application) {
+        if (state.application.countdown <= 0) {
+          state.application = null;
+        } else {
+          state.application.countdown = Math.max(state.application.countdown - 1, 0);
+        }
+      }
+      return {...state}
+    }
     case 'player:hire':
       if (state.job.id) {
         state.pastJobs.push(state.job.id);
       }
-      state.job = action.payload;
+      state.application = null;
+      state.job = action.payload; // TODO should we just assign the id, in case this object and the actual job become desync?
       return {...state}
 
     case 'player:enroll':

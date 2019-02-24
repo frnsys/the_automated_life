@@ -49,7 +49,6 @@ class Scene extends Component {
       }
       zoomToFit(bounds, camera, 10);
     };
-    graph.onNodeClick = this.props.setJob;
     this.scene.add(graph.group);
 
     this.ixn = new InteractionLayer(this.scene, graph.interactables);
@@ -81,17 +80,4 @@ class Scene extends Component {
   }
 }
 
-const mapStateToProps = (state, props) => {
-    return state;
-};
-
-const mapActionsToProps = {
-  setJob: (job) => {
-    return {
-      type: 'player:hire',
-      payload: job
-    };
-  }
-};
-
-export default connect(mapStateToProps, mapActionsToProps)(Scene);
+export default Scene;

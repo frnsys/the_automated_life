@@ -28,6 +28,7 @@ const HUD = (props) => {
       <div>Cash: ${props.player.cash.toFixed(2)}</div>
       <div>Job: {props.player.job.name}</div>
       <div>Wage: ${props.player.job.wage.toFixed(2)}</div>
+      {props.player.application ? <div>Applied to {props.jobs[props.player.application.id].name}</div> : ''}
     </HUDStyle>
   );
 }
@@ -37,6 +38,7 @@ const mapStateToProps = (state, props) => {
   return {
     time: state.time,
     player: state.player,
+    jobs: state.jobs
   };
 };
 

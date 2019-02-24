@@ -2,13 +2,14 @@ import config from 'config';
 import store from './store';
 import logic from './logic';
 import util from './util';
+import graph from './ui/3d/graph';
 import skills from 'data/skills.json'
 
 // Game loop
 let lastTime = 0;
 function loop(now) {
   let elapsed = now - lastTime; // ms
-  let {scenario, player, robots, time} = store.getState();
+  let {scenario, player, robots, time, jobs} = store.getState();
 
   let nextRobot = scenario.schedule[0];
   let date = util.timeToDate(time);
@@ -67,6 +68,26 @@ function loop(now) {
       // Countdown robots to deepening automation
       store.dispatch({
         type: 'robot:countdown'
+      });
+
+      // Countdown player application
+      if (player.application && player.application.countdown <= 0) {
+        let job = jobs[player.application.id];
+        if (true || Math.random() <= player.application.prob) {
+          store.dispatch({
+            type: 'player:hire',
+            payload: job
+          });
+          notify(`You were hired as a ${job.name}.`);
+          graph.reveal(player.application.id);
+        } else {
+          notify(`Your application as a ${job.name} was rejected.`);
+          graph.resetNodeColor(graph.appliedNode, player);
+          graph.appliedNode = null;
+        }
+      }
+      store.dispatch({
+        type: 'player:application'
       });
 
       if (player.job.name == 'Student') {

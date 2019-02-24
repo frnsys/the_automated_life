@@ -7,5 +7,6 @@ export default {
   maxSkillChangePerWork: 0.01,
   workPerClick: 10,
   slackPerFrame: 1,
-  startingJobs: [0, 1, 2, 3]
+  startingJobs: [0, 1, 2, 3],
+  applicationMinMonths: 1
 };
