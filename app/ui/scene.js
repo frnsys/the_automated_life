@@ -73,6 +73,7 @@ class Scene extends Component {
   animate() {
     this.scene.render();
 
+    // Position and scale annotation layer
     let camera = this.scene.camera;
     var width = window.innerWidth, height = window.innerHeight;
     var widthHalf = width / 2, heightHalf = height / 2;
@@ -83,7 +84,14 @@ class Scene extends Component {
     pos.y = - ( pos.y * heightHalf ) + heightHalf;
     this.graph.annos.style.top = `${pos.y}px`;
     this.graph.annos.style.left = `${pos.x}px`;
-    this.graph.annos.style.transform = `scale(${camera.zoom*210})`; // TODO actually compute this value
+
+    let pos2 = new THREE.Vector3(1, 1, 0);
+    pos2.project(camera);
+    pos2.x = ( pos2.x * widthHalf ) + widthHalf;
+    pos2.y = - ( pos2.y * heightHalf ) + heightHalf;
+    let d = pos.distanceTo(pos2);
+
+    this.graph.annos.style.transform = `scale(${d/1.448})`;
 
     this.frameId = requestAnimationFrame(this.animate.bind(this));
   }

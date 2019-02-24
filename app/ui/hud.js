@@ -6,7 +6,7 @@ import { Bar, BarFill } from './styles'
 
 const HUDStyle = styled('div')`
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   left: 1em;
   top: 1em;
   color: #000;

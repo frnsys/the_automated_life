@@ -89,7 +89,7 @@ class Graph {
     this.annos = document.createElement('div');
     this.annos.id = 'annotations';
     this.annos.style.position = 'absolute';
-    this.annos.style.zIndex = '2';
+    this.annos.style.zIndex = '1';
     this.annos.style.pointerEvents = 'none';
     document.body.appendChild(this.annos);
 

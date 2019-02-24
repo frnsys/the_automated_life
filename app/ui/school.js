@@ -6,7 +6,7 @@ import { Button } from './styles'
 
 const SchoolStyle = styled('div')`
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   right: 1em;
   top: 5em;
   color: #000;
