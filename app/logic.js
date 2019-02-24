@@ -135,7 +135,7 @@ function percentAutomated(job) {
     return acc.concat(r.skills);
   }, []);
   let score = Object.keys(job.skills).reduce((acc, s_id) => {
-    return acc + (automated.includes(s_id) ? job.skills[s_id] : 0);
+    return acc + (automated.includes(parseInt(s_id)) ? job.skills[s_id] : 0);
   }, 0);
   return score/job.skillsTotal;
 }
