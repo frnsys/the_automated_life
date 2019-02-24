@@ -2,6 +2,7 @@ import math from 'mathjs';
 import store from './store';
 import config from 'config';
 import skills from 'data/skills.json'
+import industries from 'data/industries.json'
 
 const nameLength = 6;
 const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'.split('');
@@ -14,35 +15,20 @@ function randomSkills(n) {
   return math.pickRandom(remainingSkills, skillWeights, n);
 }
 
-// Create a random robot
-function create() {
-  let nSkills = math.random(1, 3);
-  let skills = randomSkills(nSkills);
-  remainingSkills = remainingSkills.filter(s_id => !skills.includes(s_id));
-
-  let efficiency = math.random();
-  let id = math.randomInt(0, 1000); // TODO proper id system
-  let name = [...Array(nameLength)].map(_ => math.pickRandom(chars)).join('');
+function createRobot(robot) {
+  let {jobs} = store.getState();
+  robot.deepened = false;
 
   // Precompute & cache
   let industryWeights = {};
   Object.keys(industries).forEach((ind) => {
     industryWeights[ind] = industries[ind].reduce((acc, job_id) => {
       let job = jobs[job_id];
-      return acc + skills.reduce((acc, id) => acc + (job.skills[id] || 0), 0);
+      return acc + robot.skills.reduce((acc, id) => acc + (job.skills[id] || 0), 0);
     }, 0);
   });
+  robot.industryWeights = industryWeights;
 
-  // Countdown to deepening automation
-  // should be in ms
-  let countdown = math.random(1*60*1000, 10*60*1000);
-  let deepened = false;
-
-  return { id, name, skills, efficiency, countdown, deepened, industryWeights };
-}
-
-function createRobot() {
-  let robot = create();
   releaseRobot(robot);
   store.dispatch({
     type: 'robot:create',
@@ -154,4 +140,4 @@ function percentAutomated(job) {
   return score/job.skillsTotal;
 }
 
-export default { deepeningAutomation, probabilityForJob, percentAutomated };
+export default { deepeningAutomation, probabilityForJob, percentAutomated, createRobot };

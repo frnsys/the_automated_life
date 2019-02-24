@@ -8,7 +8,8 @@ function timeToDate(ms) {
   return {
     year: year,
     years: years,
-    month: (months % 12) + 1
+    month: (months % 12) + 1,
+    months: months
   };
 }
 

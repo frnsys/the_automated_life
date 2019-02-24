@@ -11,6 +11,7 @@ const WorkStyle = styled('div')`
   top: 1em;
   color: #000;
   border: 2px solid black;
+  user-select: none;
 `;
 
 const WorkButton = styled('div')`

@@ -6,19 +6,20 @@ function reducer(state={}, action) {
   switch (action.type) {
     case 'robot:create':
       let robot = action.payload;
-      state[id] = robot;
+      state[robot.id] = robot;
       return {...state};
 
     case 'robot:countdown':
       Object.values(state).forEach((r) => {
-        r.countdown = Math.max(0, r.countdown - action.payload);
+        r.deepeningCountdown = Math.max(0, r.deepeningCountdown - 1);
       });
       return {...state};
 
-    case 'robot:deepened':
+    case 'robot:deepened': {
       let id = action.payload;
       state[id].deepened = true;
       return {...state};
+    }
   }
   return state;
 }

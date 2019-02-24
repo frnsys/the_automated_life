@@ -1,4 +1,5 @@
 import json
+import yaml
 import random
 import numpy as np
 import pandas as pd
@@ -172,6 +173,18 @@ while not nx.is_connected(G):
 
 if not nx.is_connected(G):
     raise Exception('Graph should be fully connected. Try increasing min_neighbors')
+
+# Robot release schedules/scenarios
+scenarios = yaml.load(open('data/src/robotSchedules.yml'))
+for scenario in scenarios:
+    for i, robot in enumerate(scenario['schedule']):
+        robot['id'] = i
+
+        # convert to skill ids
+        robot['skills'] = [skills_inv[s] for s in robot['skills']]
+
+with open('data/scenarios.json', 'w') as f:
+    json.dump(scenarios, f)
 
 with open('data/jobs.json', 'w') as f:
     json.dump(jobs, f)

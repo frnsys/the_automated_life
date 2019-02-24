@@ -4,7 +4,7 @@ import { animated, useTransition } from 'react-spring';
 import styled from 'styled-components';
 
 let id = 0;
-const defaultTimeout = 30000;
+const defaultTimeout = 10000;
 
 const Container = styled('div')`
   position: fixed;
@@ -68,7 +68,7 @@ function Notifications({ config = { tension: 125, friction: 20, precision: 0.1 }
 
   useEffect(() => void children((title, msg) => setItems(state => [...state, { key: id++, title, msg }])), [])
   return (
-    <Container top={true}>
+    <Container top={false}>
       {transitions.map(({ key, item, props: { ...style } }) => (
         <Message key={key} style={style}>
           <Content ref={ref => ref && refMap.set(item, ref)}>
