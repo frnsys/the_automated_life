@@ -8,6 +8,7 @@ import { GlobalStyle } from './styles'
 import Modal from 'react-modal';
 
 import loop from '../loop';
+import graph from './3d/graph';
 import config from 'config';
 import store from '../store';
 import jobs from 'data/jobs.json'
@@ -60,6 +61,7 @@ class StartMenu extends Component {
       type: 'player:hire',
       payload: jobs[this.state.selectedJob]
     });
+    graph.reveal(this.state.selectedJob, true);
     loop();
     this.props.closeModal();
   }

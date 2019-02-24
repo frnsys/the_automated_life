@@ -4,8 +4,8 @@ import React, {Component} from 'react';
 import InteractionLayer from './3d/interact';
 import ThreeScene from './3d/scene';
 import {connect} from 'react-redux';
-import Graph from './3d/graph';
-import jobs from 'data/jobs.json';
+import graph from './3d/graph';
+
 
 // Compute and apply necessary zoom
 // to contain the specified bounds, w/ padding
@@ -41,14 +41,18 @@ class Scene extends Component {
     this.element.appendChild(this.scene.renderer.domElement);
 
     let camera = this.scene.camera;
-    this.graph = new Graph(jobs, 6);
-    this.graph.onReveal = (bounds) => {
+    graph.onReveal = (focusNode, bounds, center) => {
+      if (center) {
+        camera.position.set(focusNode.x, focusNode.y, camera.position.z);
+        this.scene.controls.target.set(focusNode.x, focusNode.y, 0);
+        this.scene.controls.update();
+      }
       zoomToFit(bounds, camera, 10);
     };
-    this.graph.onNodeClick = this.props.setJob;
-    this.graph.reveal(1);
-    this.scene.add(this.graph.group);
-    this.ixn = new InteractionLayer(this.scene, this.graph.interactables);
+    graph.onNodeClick = this.props.setJob;
+    this.scene.add(graph.group);
+
+    this.ixn = new InteractionLayer(this.scene, graph.interactables);
     this.start();
   }
 

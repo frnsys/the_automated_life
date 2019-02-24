@@ -3,6 +3,7 @@ import * as THREE from 'three';
 import skills from 'data/skills.json'
 import logic from '../../logic';
 import store from '../../store';
+import jobs from 'data/jobs.json';
 
 const topNSkills = 5;
 const visitedColor = 0xf4ed61;
@@ -137,7 +138,7 @@ class Graph {
 
   // Reveal the node and its neighbors
   // for the given job id
-  reveal(job_id) {
+  reveal(job_id, center=false) {
     let {player} = store.getState();
     // Set all nodes and edges to muted
     Object.values(this.nodes)
@@ -158,18 +159,18 @@ class Graph {
       });
 
     // Set focus node color
-    let node = this.nodes[job_id];
-    node.mesh.visible = true;
-    node.setColor(focusedColor);
-    node.mesh.position.setZ(1);
+    let focusNode = this.nodes[job_id];
+    focusNode.mesh.visible = true;
+    focusNode.setColor(focusedColor);
+    focusNode.mesh.position.setZ(1);
 
     // Set outward edges to visible,
     // and color neighboring nodes
     let bounds = {
-      left: node.x,
-      top: node.y,
-      right: node.x,
-      bottom: node.y
+      left: focusNode.x,
+      top: focusNode.y,
+      right: focusNode.x,
+      bottom: focusNode.y
     };
     Object.keys(this.edges[job_id]).map(neighb => {
       let node = this.nodes[neighb];
@@ -205,8 +206,11 @@ class Graph {
       line.material = focusedLineMat;
       line.position.setZ(1);
     });
-    this.onReveal(bounds);
+    this.onReveal(focusNode, bounds, center);
   }
 }
 
-export default Graph;
+
+const nodeSize = 6;
+const graph = new Graph(jobs, nodeSize);
+export default graph;
