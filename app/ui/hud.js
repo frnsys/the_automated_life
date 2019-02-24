@@ -24,6 +24,7 @@ const HUD = (props) => {
     <HUDStyle>
       <Bar><BarFill style={{width: `${util.timeProgress(props.time)*100}%`}} /></Bar>
       <div>Time: {date.month}/{date.year}</div>
+      <div>Age: {props.player.startAge + date.years}</div>
       <div>Cash: ${props.player.cash.toFixed(2)}</div>
       <div>Job: {props.player.job.name}</div>
       <div>Wage: ${props.player.job.wage.toFixed(2)}</div>
