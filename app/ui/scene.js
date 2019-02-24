@@ -6,7 +6,6 @@ import ThreeScene from './3d/scene';
 import {connect} from 'react-redux';
 import graph from './3d/graph';
 
-
 // Compute and apply necessary zoom
 // to contain the specified bounds, w/ padding
 function zoomToFit(bounds, cam, padding) {
@@ -50,6 +49,7 @@ class Scene extends Component {
       zoomToFit(bounds, camera, 10);
     };
     this.scene.add(graph.group);
+    this.graph = graph;
 
     this.ixn = new InteractionLayer(this.scene, graph.interactables);
     this.start();
@@ -72,6 +72,19 @@ class Scene extends Component {
 
   animate() {
     this.scene.render();
+
+    let camera = this.scene.camera;
+    var width = window.innerWidth, height = window.innerHeight;
+    var widthHalf = width / 2, heightHalf = height / 2;
+
+    let pos = new THREE.Vector3(0, 0, 0);
+    pos.project(camera);
+    pos.x = ( pos.x * widthHalf ) + widthHalf;
+    pos.y = - ( pos.y * heightHalf ) + heightHalf;
+    this.graph.annos.style.top = `${pos.y}px`;
+    this.graph.annos.style.left = `${pos.x}px`;
+    this.graph.annos.style.transform = `scale(${camera.zoom*210})`; // TODO actually compute this value
+
     this.frameId = requestAnimationFrame(this.animate.bind(this));
   }
 

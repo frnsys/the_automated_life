@@ -86,6 +86,17 @@ class Graph {
 
     this.edges = {};
 
+    this.annos = document.createElement('div');
+    this.annos.id = 'annotations';
+    this.annos.style.position = 'absolute';
+    this.annos.style.zIndex = '2';
+    this.annos.style.pointerEvents = 'none';
+    document.body.appendChild(this.annos);
+
+    // for debugging
+    let origin = new Node(0, 0, this.nodeSize, 0x000000);
+    this.group.add(origin.mesh);
+
     // Create mapping of job_id->node
     this.nodes = Object.keys(jobs).map(id => {
       let j = jobs[id];
@@ -113,6 +124,15 @@ class Graph {
 
       // All hidden by default
       node.mesh.visible = false;
+
+      const anno = document.createElement('div');
+      anno.classList.add('annotation');
+      anno.innerHTML = j.name;
+      anno.style.top = `${-node.y}px`
+      anno.style.left = `${node.x}px`
+      anno.style.display = 'none';
+      node.anno = anno;
+      this.annos.appendChild(anno);
 
       this.edges[id] = {};
       this.group.add(node.mesh);
@@ -160,6 +180,7 @@ class Graph {
       .forEach(n => {
         n.mesh.position.setZ(0);
         this.resetNodeColor(n, player);
+        n.anno.style.display = 'none';
       });
     Object.values(this._edges)
       .filter(e => e.visible)
@@ -171,6 +192,7 @@ class Graph {
     // Set focus node color
     let focusNode = this.nodes[job_id];
     focusNode.mesh.visible = true;
+    focusNode.anno.style.display = 'block';
     focusNode.setColor(focusedColor);
     focusNode.mesh.position.setZ(1);
 
@@ -186,6 +208,7 @@ class Graph {
     Object.keys(this.edges[job_id]).map(neighb => {
       let node = this.nodes[neighb];
       node.mesh.visible = true;
+      node.anno.style.display = 'block';
 
       // Determine bounding box
       if (node.x < bounds.left) {

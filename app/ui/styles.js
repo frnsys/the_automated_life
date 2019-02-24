@@ -21,6 +21,13 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
 
+  .annotation {
+    position: absolute;
+    font-size: 0.3em;
+    line-height: 1;
+    max-width: 60px;
+  }
+
   .job-status {
     display: flex;
   }
