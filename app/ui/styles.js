@@ -73,6 +73,11 @@ export const GlobalStyle = createGlobalStyle`
   .automation-icon-high {
     background: #fe0f0f;
   }
+
+  .automated {
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
 `;
 
 export const Bar = styled('div')`

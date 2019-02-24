@@ -12,7 +12,12 @@ const neighbColor = 0xff0000;
 const neighbColorUnqualified = 0x660000;
 
 const tooltip = (job) => {
-  let {player} = store.getState();
+  let {player, robots} = store.getState();
+
+  let automatedSkills = Object.values(robots).reduce((acc, r) => {
+    return acc.concat(r.skills);
+  }, []);
+
   let risk = 'low';
   if (job.automationRisk >= 0.8) {
     risk = 'high';
@@ -43,7 +48,7 @@ const tooltip = (job) => {
             } else if (s.automatibility >= 0.4) {
               risk = 'moderate';
             }
-            return `<li><div class="automation-icon automation-icon-${risk}"></div>${s.name}</li>`;
+            return `<li class="${automatedSkills.includes(s.id) ? 'automated' : ''}"><div class="automation-icon automation-icon-${risk}"></div>${s.name} ${automatedSkills.includes(s.id) ? '(automated)' : ''}</li>`;
           }).join('')}
         </ul>
       </div>

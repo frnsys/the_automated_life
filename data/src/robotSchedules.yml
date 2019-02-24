@@ -1,9 +1,9 @@
 - name: Scenario A
   schedule:
       - months: 1
-        name: OratorBot
+        name: ProgBot
         skills:
-            - "Oral Comprehension"
+            - "Programming"
         deepeningCountdown: 12
         efficiency: 0.8
       - months: 8
@@ -17,7 +17,7 @@
       - months: 1
         name: RepairBot
         skills:
-            - "Repairing"
+            - "Programming"
         deepeningCountdown: 12
         efficiency: 0.8
       - months: 8
