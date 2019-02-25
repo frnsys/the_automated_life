@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import loop from '../loop';
 import graph from './3d/graph';
 import config from 'config';
-import store from '../store';
+import store from 'store';
 import jobs from 'data/jobs.json'
 import styled from 'styled-components';
 import { Button } from './styles'

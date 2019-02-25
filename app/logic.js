@@ -1,5 +1,5 @@
 import math from 'mathjs';
-import store from './store';
+import store from 'store';
 import config from 'config';
 import skills from 'data/skills.json'
 import industries from 'data/industries.json'

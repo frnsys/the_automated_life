@@ -1,5 +1,5 @@
 import config from 'config';
-import store from './store';
+import store from 'store';
 import logic from './logic';
 import util from './util';
 import graph from './ui/3d/graph';

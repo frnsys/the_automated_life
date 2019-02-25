@@ -27,6 +27,7 @@ module.exports = {
     alias: {
       'data': path.resolve('./data'),
       'config': path.resolve('./config'),
+      'store': path.resolve('./app/store')
     }
   }
 };

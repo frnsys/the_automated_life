@@ -2,7 +2,7 @@ import Node from './node';
 import * as THREE from 'three';
 import skills from 'data/skills.json'
 import logic from '../../logic';
-import store from '../../store';
+import store from 'store';
 import jobs from 'data/jobs.json';
 import config from 'config';
 
