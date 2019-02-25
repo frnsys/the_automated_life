@@ -4,17 +4,6 @@ import config from 'config';
 import skills from 'data/skills.json'
 import industries from 'data/industries.json'
 
-const nameLength = 6;
-const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'.split('');
-
-// For weighted random sampling of skills
-let remainingSkills = [...Object.keys(skills)];
-
-function randomSkills(n) {
-  let skillWeights = remainingSkills.map(s_id => skills[s_id].automatibility);
-  return math.pickRandom(remainingSkills, skillWeights, n);
-}
-
 function createRobot(robot) {
   let {jobs} = store.getState();
   robot.deepened = false;
@@ -91,6 +80,7 @@ function deepeningAutomation(robot) {
   });
 }
 
+// A new skill resulting from the creation of a robot
 function newSkill(job, robot) {
   let robotShare = robot.skills.reduce((acc, id) => acc + (job.skills[id] || 0), 0);
   let jobShare = job.skillsTotal;
