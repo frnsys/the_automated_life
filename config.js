@@ -1,3 +1,4 @@
+const params = location.search.slice(1);
 export default {
   startYear: 2019,
   secPerMonth: 10,
@@ -8,5 +9,6 @@ export default {
   workPerClick: 10,
   slackPerFrame: 1,
   startingJobs: [0, 1, 2, 3],
-  applicationMinMonths: 1
+  applicationMinMonths: 1,
+  debug: params.includes('debug')
 };

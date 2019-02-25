@@ -4,6 +4,7 @@ import skills from 'data/skills.json'
 import logic from '../../logic';
 import store from '../../store';
 import jobs from 'data/jobs.json';
+import config from 'config';
 
 const topNSkills = 5;
 const visitedColor = 0xf4ed61;
@@ -93,9 +94,10 @@ class Graph {
     this.annos.style.pointerEvents = 'none';
     document.body.appendChild(this.annos);
 
-    // for debugging
-    let origin = new Node(0, 0, this.nodeSize, 0x000000);
-    this.group.add(origin.mesh);
+    if (config.debug) {
+      let origin = new Node(0, 0, this.nodeSize, 0x000000);
+      this.group.add(origin.mesh);
+    }
 
     // Create mapping of job_id->node
     this.nodes = Object.keys(jobs).map(id => {

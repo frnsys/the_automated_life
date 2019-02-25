@@ -12,3 +12,5 @@ npm start
 ```
 
 Then visit `localhost:8080`
+
+To play in debug mode: `localhost:8080/?debug`
