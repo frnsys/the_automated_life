@@ -8,12 +8,6 @@ import styled from 'styled-components';
 import { Button } from './styles'
 
 const StartMenuStyle = styled('div')`
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-
   .selected {
     background: #39e567;
     color: #fff;

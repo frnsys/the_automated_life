@@ -10,5 +10,7 @@ export default {
   slackPerFrame: 1,
   startingJobs: [0, 1, 2, 3],
   applicationMinMonths: 1,
+  skillTrainingMonths: 3,
+  skillTrainingGain: 0.1,
   debug: params.includes('debug')
 };

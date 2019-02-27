@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import {connect} from 'react-redux';
 import util from '../util';
 import { Bar, BarFill } from './styles'
+import skills from 'data/skills.json'
 
 const HUDStyle = styled('div')`
   position: fixed;
@@ -29,6 +30,8 @@ const HUD = (props) => {
       <div>Job: {props.player.job.name}</div>
       <div>Wage: ${props.player.job.wage.toFixed(2)}</div>
       {props.player.application ? <div>Applied to {props.jobs[props.player.application.id].name}</div> : ''}
+      {props.player.training ? <div>Training in {skills[props.player.training.skill].name}</div> : ''}
+      {props.children}
     </HUDStyle>
   );
 }

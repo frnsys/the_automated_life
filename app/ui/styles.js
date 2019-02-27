@@ -12,6 +12,12 @@ export const GlobalStyle = createGlobalStyle`
     background: #eee;
   }
 
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
   .tooltip {
     background: #fff;
     border: 2px solid black;
@@ -108,16 +114,19 @@ export const BarFill = styled('div')`
   left: 0;
   bottom: 0;
   background: #39e567;
+  background: linear-gradient(to bottom, #7de984 0%,#4bab48 100%);
 `;
 
 export const Button = styled('div')`
   color: #fff;
-  background: #395be5;
+  background: ${props => props.disabled ? '#aaa' : '#395be5'};
+  ${props => props.highlight ? 'background: #ea432a;' : ''}
+  cursor: ${props => props.disabled ? 'default' : 'pointer'};
   text-align: center;
   padding: 0.25em 0.5em;
   font-weight: bold;
-  cursor: pointer;
   &:hover {
-    background: #2f51d8;
+    background: ${props => props.disabled ? '#aaa' : '#2f51d8'};
+    ${props => props.highlight ? 'background: #ea432a;' : ''}
   }
 `;

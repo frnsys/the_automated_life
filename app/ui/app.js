@@ -4,9 +4,10 @@ import HUD from './hud';
 import Work from './work';
 import School from './school';
 import Notifications from './notifs';
-import { GlobalStyle } from './styles'
+import { GlobalStyle, Button } from './styles'
 import Modal from 'react-modal';
 import StartMenu from './startMenu';
+import Skills from './skills';
 
 Modal.setAppElement('#main');
 const customStyles = {
@@ -28,6 +29,7 @@ class App extends Component {
     super();
 
     this.state = {
+      modal: StartMenu,
       modalIsOpen: true
     };
 
@@ -47,10 +49,12 @@ class App extends Component {
           onRequestClose={this.closeModal}
           style={customStyles}
           contentLabel='Game Alert'>
-          <StartMenu closeModal={this.closeModal} />
+          <this.state.modal closeModal={this.closeModal} />
         </Modal>
 
-        <HUD />
+        <HUD>
+          <Button onClick={() => this.setState({modalIsOpen: true, modal: Skills})}>Manage Skills</Button>
+        </HUD>
         <Work />
         <School />
 
