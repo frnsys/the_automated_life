@@ -208,7 +208,11 @@ df = df.loc[df['Element Name'] =='Required Level of Education']
 for i, r in df.iterrows():
     # Collapse 3-6 into one cateogry
     if (i+1) == 3:
-        education.append('Secondary Degree')
+        education.append({
+            'name': 'Secondary Degree',
+            'years': 4, # TODO
+            'cost': 150000 # TODO
+        })
     elif (i+1) in [4,5,6]:
         continue
     else:
@@ -216,7 +220,11 @@ for i, r in df.iterrows():
         desc = desc.split(' - ')[0]
         desc = desc.split('(')[0]
         desc = desc.strip()
-        education.append(desc)
+        education.append({
+            'name': desc,
+            'years': 4, # TODO
+            'cost': 150000 # TODO
+        })
 
 with open('data/education.json', 'w') as f:
     json.dump(education, f)
