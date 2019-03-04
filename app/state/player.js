@@ -1,4 +1,5 @@
 import config from 'config';
+import logic from '../logic';
 import skills from 'data/skills.json'
 import education from 'data/education.json'
 
@@ -98,7 +99,15 @@ function reducer(state={}, action) {
 
     case 'player:work':
       state.performance = Math.min(state.performance + config.workPerClick, 100);
+
+      // Improve skills used on this job
+      let skillChanges = logic.workSkillGain(state.job, state.performance)
+      Object.keys(skillChanges).map((s_id) => {
+        state.skills[s_id] += skillChanges[s_id];
+      });
+
       return {...state}
+
     case 'player:slack':
       state.performance = Math.max(state.performance - config.slackPerFrame, 0);
       return {...state}

@@ -35,6 +35,11 @@ const PerformanceLabel = styled('div')`
 
 
 const Work = (props) => {
+  // Don't show work minigame if not employed
+  let job = props.player.job.name;
+  if (job == 'Unemployed' || job == 'Student') {
+    return <div></div>;
+  }
   return <WorkStyle>
     <WorkButton onClick={props.work}>WORK</WorkButton>
     <Bar><BarFill style={{width: `${props.player.performance}%`}} /></Bar>

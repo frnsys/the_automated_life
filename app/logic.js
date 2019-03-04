@@ -89,10 +89,10 @@ function newSkill(job, robot) {
 
 // Do work for a job, returning skill changes
 // `performance` in [0-1]
-function work(job, performance) {
+function workSkillGain(job, performance) {
   let changes = {};
   Object.keys(job.skills).forEach((s_id) => {
-    changes[s_id] = performance * (job.skills[skill_id]/job.skillsTotal) * config.maxSkillChangePerWork;
+    changes[s_id] = performance * (job.skills[s_id]/job.skillsTotal) * config.maxSkillChangePerWork;
   });
   return changes;
 }
@@ -128,4 +128,4 @@ function percentAutomated(job) {
   return score/job.skillsTotal;
 }
 
-export default { deepeningAutomation, probabilityForJob, percentAutomated, createRobot };
+export default { deepeningAutomation, probabilityForJob, percentAutomated, createRobot, workSkillGain };
