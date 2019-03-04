@@ -102,12 +102,10 @@ function probabilityForJob(job) {
   let {player} = store.getState();
   let performance = player.performance/100;
 
-  let education = 1;
-  if (job.requiredEducation > 0) {
-    education = 1 - (job.requiredEducation - player.education)/job.requiredEducation;
-  }
-  // Being "overeducated" doesn't provide advantage
-  education = Math.min(education, 1);
+  let education = job.education.slice(0, player.education+1).reduce((acc, percent) => {
+    return acc + percent;
+  }, 0);
+  education /= 100;
 
   let skills = Object.keys(job.skills).reduce((acc, s_id) => {
     return acc + (job.skills[s_id] * player.skills[s_id]);

@@ -18,9 +18,6 @@ Object.values(jobs).forEach((job) => {
     return acc + (job.skills[s_id] * skills[s_id].automatibility);
   }, 0);
   job.automationRisk = risk/job.skillsTotal;
-
-  // TODO this is temporary until we load actual education level
-  job.requiredEducation = 0;
 });
 
 function reducer(state={}, {type, payload}) {
