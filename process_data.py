@@ -1,4 +1,5 @@
 import json
+import math
 import yaml
 import numpy as np
 import pandas as pd
@@ -43,6 +44,25 @@ for pt in job_network_layout.values():
     pt['x'] -= x_offset
     pt['y'] -= y_offset
 
+# Education levels
+education_levels = defaultdict(dict)
+df = pd.read_csv('data/src/Education, Training, and Experience.tsv', delimiter='\t')
+df = df.loc[df['Element Name'] =='Required Level of Education']
+for i, r in df.iterrows():
+    id = r['O*NET-SOC Code']
+    id = id[:-3]
+    education_levels[id][r['Category']] = r['Data Value']
+education_levels = dict(education_levels)
+
+# Collapse 3-6 education levels
+for key, levels in education_levels.items():
+    levels_list = [levels[1], levels[2]]
+    levels_list.append(sum(levels[i] for i in range(3, 7)))
+    for i in range(7,13):
+        levels_list.append(levels[i])
+    education_levels[key] = levels_list
+    assert math.isclose(sum(levels_list), 100, abs_tol=1e-1)
+
 # Job mean wages
 wages = pd.read_csv('data/src/job_wages.csv')
 wages = {r[' Job Title']: r['A_MEAN'] for _, r in wages.iterrows()}
@@ -72,6 +92,7 @@ for i, r in tqdm(df.iterrows()):
     try:
         job_network_layout[id]
         wage = wages[name]
+        ed_levels = education_levels[id]
     except KeyError:
         print('skipping:', id, r[' Job Title'])
         continue
@@ -84,7 +105,8 @@ for i, r in tqdm(df.iterrows()):
         'wage': wage,
         'skills': job_skills,
         'pos': job_network_layout[id],
-        'industries': inds
+        'industries': inds,
+        'education': ed_levels
     }
     for ind in inds:
         industries_jobs[ind].append(idx)
@@ -178,6 +200,26 @@ for scenario in scenarios:
 
         # convert to skill ids
         robot['skills'] = [skills_inv[s] for s in robot['skills']]
+
+# Education level names
+education = []
+df = pd.read_csv('data/src/Education, Training, and Experience Categories.csv')
+df = df.loc[df['Element Name'] =='Required Level of Education']
+for i, r in df.iterrows():
+    # Collapse 3-6 into one cateogry
+    if (i+1) == 3:
+        education.append('Secondary Degree')
+    elif (i+1) in [4,5,6]:
+        continue
+    else:
+        desc = r['Category Description']
+        desc = desc.split(' - ')[0]
+        desc = desc.split('(')[0]
+        desc = desc.strip()
+        education.append(desc)
+
+with open('data/education.json', 'w') as f:
+    json.dump(education, f)
 
 with open('data/scenarios.json', 'w') as f:
     json.dump(scenarios, f)

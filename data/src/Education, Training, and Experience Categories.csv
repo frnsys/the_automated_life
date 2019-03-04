@@ -1,0 +1,42 @@
+Element ID,Element Name,Scale ID,Scale Name,Category,Category Description
+2.D.1,Required Level of Education,RL,Required Level Of Education (Categories 1-12),1,Less than a High School Diploma
+2.D.1,Required Level of Education,RL,Required Level Of Education (Categories 1-12),2,High School Diploma (or GED or High School Equivalence Certificate)
+2.D.1,Required Level of Education,RL,Required Level Of Education (Categories 1-12),3,"Post-Secondary Certificate - awarded for training completed after high school (for example, in Personnel Services, Engineering-related Technologies, Vocational Home Economics, Construction Trades, Mechanics and Repairers, Precision Production Trades)"
+2.D.1,Required Level of Education,RL,Required Level Of Education (Categories 1-12),4,Some College Courses
+2.D.1,Required Level of Education,RL,Required Level Of Education (Categories 1-12),5,Associate's Degree (or other 2-year degree)
+2.D.1,Required Level of Education,RL,Required Level Of Education (Categories 1-12),6,Bachelor's Degree
+2.D.1,Required Level of Education,RL,Required Level Of Education (Categories 1-12),7,"Post-Baccalaureate Certificate - awarded for completion of an organized program of study; designed for people who have completed a Baccalaureate degree, but do not meet the requirements of academic degrees carrying the title of Master"
+2.D.1,Required Level of Education,RL,Required Level Of Education (Categories 1-12),8,Master's Degree
+2.D.1,Required Level of Education,RL,Required Level Of Education (Categories 1-12),9,"Post-Master's Certificate - awarded for completion of an organized program of study; designed for people who have completed a Master's degree, but do not meet the requirements of academic degrees at the doctoral level"
+2.D.1,Required Level of Education,RL,Required Level Of Education (Categories 1-12),10,"First Professional Degree - awarded for completion of a program that: requires at least 2 years of college work before entrance into the program, includes a total of at least 6 academic years of work to complete, and provides all remaining academic requirements to begin practice in a profession"
+2.D.1,Required Level of Education,RL,Required Level Of Education (Categories 1-12),11,Doctoral Degree
+2.D.1,Required Level of Education,RL,Required Level Of Education (Categories 1-12),12,Post-Doctoral Training
+3.A.1,Related Work Experience,RW,Related Work Experience (Categories 1-11),1,None
+3.A.1,Related Work Experience,RW,Related Work Experience (Categories 1-11),2,Up to and including 1 month
+3.A.1,Related Work Experience,RW,Related Work Experience (Categories 1-11),3,"Over 1 month, up to and including 3 months"
+3.A.1,Related Work Experience,RW,Related Work Experience (Categories 1-11),4,"Over 3 months, up to and including 6 months"
+3.A.1,Related Work Experience,RW,Related Work Experience (Categories 1-11),5,"Over 6 months, up to and including 1 year"
+3.A.1,Related Work Experience,RW,Related Work Experience (Categories 1-11),6,"Over 1 year, up to and including 2 years"
+3.A.1,Related Work Experience,RW,Related Work Experience (Categories 1-11),7,"Over 2 years, up to and including 4 years"
+3.A.1,Related Work Experience,RW,Related Work Experience (Categories 1-11),8,"Over 4 years, up to and including 6 years"
+3.A.1,Related Work Experience,RW,Related Work Experience (Categories 1-11),9,"Over 6 years, up to and including 8 years"
+3.A.1,Related Work Experience,RW,Related Work Experience (Categories 1-11),10,"Over 8 years, up to and including 10 years"
+3.A.1,Related Work Experience,RW,Related Work Experience (Categories 1-11),11,Over 10 years
+3.A.2,On-Site or In-Plant Training,PT,On-Site Or In-Plant Training (Categories 1-9),1,None
+3.A.2,On-Site or In-Plant Training,PT,On-Site Or In-Plant Training (Categories 1-9),2,Up to and including 1 month
+3.A.2,On-Site or In-Plant Training,PT,On-Site Or In-Plant Training (Categories 1-9),3,"Over 1 month, up to and including 3 months"
+3.A.2,On-Site or In-Plant Training,PT,On-Site Or In-Plant Training (Categories 1-9),4,"Over 3 months, up to and including 6 months"
+3.A.2,On-Site or In-Plant Training,PT,On-Site Or In-Plant Training (Categories 1-9),5,"Over 6 months, up to and including 1 year"
+3.A.2,On-Site or In-Plant Training,PT,On-Site Or In-Plant Training (Categories 1-9),6,"Over 1 year, up to and including 2 years"
+3.A.2,On-Site or In-Plant Training,PT,On-Site Or In-Plant Training (Categories 1-9),7,"Over 2 years, up to and including 4 years"
+3.A.2,On-Site or In-Plant Training,PT,On-Site Or In-Plant Training (Categories 1-9),8,"Over 4 years, up to and including 10 years"
+3.A.2,On-Site or In-Plant Training,PT,On-Site Or In-Plant Training (Categories 1-9),9,Over 10 years
+3.A.3,On-the-Job Training,OJ,On-The-Job Training (Categories 1-9),1,None or short demonstration
+3.A.3,On-the-Job Training,OJ,On-The-Job Training (Categories 1-9),2,"Anything beyond short demonstration, up to and including 1 month"
+3.A.3,On-the-Job Training,OJ,On-The-Job Training (Categories 1-9),3,"Over 1 month, up to and including 3 months"
+3.A.3,On-the-Job Training,OJ,On-The-Job Training (Categories 1-9),4,"Over 3 months, up to and including 6 months"
+3.A.3,On-the-Job Training,OJ,On-The-Job Training (Categories 1-9),5,"Over 6 months, up to and including 1 year"
+3.A.3,On-the-Job Training,OJ,On-The-Job Training (Categories 1-9),6,"Over 1 year, up to and including 2 years"
+3.A.3,On-the-Job Training,OJ,On-The-Job Training (Categories 1-9),7,"Over 2 years, up to and including 4 years"
+3.A.3,On-the-Job Training,OJ,On-The-Job Training (Categories 1-9),8,"Over 4 years, up to and including 10 years"
+3.A.3,On-the-Job Training,OJ,On-The-Job Training (Categories 1-9),9,Over 10 years
