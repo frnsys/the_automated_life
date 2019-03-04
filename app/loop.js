@@ -64,13 +64,6 @@ function loop(now) {
       store.dispatch({
         type: 'player:expenses'
       });
-      store.dispatch({
-        type: 'player:train'
-      });
-      if (player.training && player.training.countdown == 0) {
-        notify(`You completed training in ${skills[player.training.skill].name}.`)
-      }
-
       // Countdown robots to deepening automation
       store.dispatch({
         type: 'robot:countdown'

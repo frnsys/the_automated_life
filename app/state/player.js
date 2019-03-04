@@ -25,8 +25,7 @@ const initialState = {
     obj[s_id] = Math.random(); // TODO temporary
     return obj;
   }, {}),
-  pastJobs: [],
-  training: null
+  pastJobs: []
 };
 
 
@@ -77,26 +76,6 @@ function reducer(state={}, action) {
       state.education += 1;
       state.schoolCountdown = 0;
       state.job = unemployed;
-      return {...state}
-
-    case 'player:startTraining': {
-      state.training = {
-        skill: action.payload,
-        countdown: config.skillTrainingMonths
-      };
-      return {...state}
-    }
-
-    case 'player:train':
-      if (!state.training) {
-        return state;
-      }
-      state.training.countdown -= 1;
-      if (state.training.countdown <= 0) {
-        state.skills[state.training.skill] += config.skillTrainingGain;
-        state.training = null;
-      }
-      state.jobProficiency = logic.jobProficiency(state.job, state);
       return {...state}
 
     case 'player:work':
