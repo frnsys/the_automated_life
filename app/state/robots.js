@@ -24,4 +24,4 @@ function reducer(state={}, action) {
   return state;
 }
 
-export default { reducer, initialState: [] };
+export default { reducer, initialState: {} };

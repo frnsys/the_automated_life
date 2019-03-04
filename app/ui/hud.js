@@ -28,7 +28,7 @@ const HUD = (props) => {
       <div>Age: {props.player.startAge + date.years}</div>
       <div>Cash: ${props.player.cash.toFixed(2)}</div>
       <div>Job: {props.player.job.name}</div>
-      <div>Wage: ${props.player.job.wage.toFixed(2)}</div>
+      <div>Wage: ${(props.player.job.wage/12).toFixed(2)}</div>
       {props.player.application ? <div>Applied to {props.jobs[props.player.application.id].name}</div> : ''}
       {props.player.training ? <div>Training in {skills[props.player.training.skill].name}</div> : ''}
       {props.children}

@@ -10,6 +10,7 @@ Object.keys(industries).forEach((ind) => {
   }, 0);
 });
 Object.values(jobs).forEach((job) => {
+  job.baseWage = job.wage;
   job.skillsTotal = Object.values(job.skills).reduce((acc, cur) => acc + cur);
   job.industriesSkillTotal = job.industries.reduce((acc, ind) => acc + industryWeights[ind], 0);
 

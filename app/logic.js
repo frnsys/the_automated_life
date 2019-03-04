@@ -28,11 +28,25 @@ function createRobot(robot) {
 // Release a robot into the world,
 // which affects the wages of jobs
 function releaseRobot(robot) {
-  let {jobs} = store.getState();
+  let {jobs, robots} = store.getState();
+
+  // The new robot isn't yet included in the state,
+  // so manually include here
+  robots = Object.values(robots).concat([robot]);
+  let automatedSkills = robots.reduce((acc, robot) => {
+    return acc.concat(robot.skills)
+  }, []);
+
   let updates = Object.values(jobs).map(job => {
-    let d = displacement(job, robot);
-    let p = productivity(job, robot);
-    let newWage = job.wage * d * p;
+    let percentNotAutomated = Object.keys(job.skills).reduce((acc, s_id) => {
+      if (automatedSkills.includes(parseInt(s_id))) {
+        return acc;
+      } else {
+        return acc + job.skills[s_id];
+      }
+    }, 0);
+    percentNotAutomated /= job.skillsTotal;
+    let newWage = job.baseWage * percentNotAutomated;
     return {
       id: job.id,
       wage: newWage
@@ -43,25 +57,6 @@ function releaseRobot(robot) {
     type: 'job:updates',
     payload: updates
   });
-}
-
-// Update based on how much of the wage of job j is attributed to robot skills
-function displacement(job, robot) {
-  let robotShare = robot.skills.reduce((acc, id) => acc + (job.skills[id] || 0), 0) * job.wage;
-  let jobShare = job.skillsTotal * job.wage;
-  return 1 - (robotShare/jobShare);
-}
-
-// Productivity gains are felt by jobs that are in the same industry as other jobs which are impacted by automation. Therefore relies on whether two jobs are found in the same industry (indicator function I_jk), and how much the alter job relies on the automated skill. Is normalised by the sum of the RCA of all skills in all jobs in the same industry
-function productivity(job, robot) {
-  // For jobs where we don't have any industry labels
-  if (job.industriesSkillTotal == 0) {
-    return 1;
-  }
-  let industriesRobotTotal = job.industries.reduce((acc, ind) => {
-    return acc + robot.industryWeights[ind];
-  }, 0);
-  return 1 + industriesRobotTotal/job.industriesSkillTotal;
 }
 
 // Global benefit across all jobs
