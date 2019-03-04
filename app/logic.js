@@ -97,6 +97,14 @@ function workSkillGain(job, performance) {
   return changes;
 }
 
+function jobProficiency(job, player) {
+  let proficiency = Object.keys(job.skills).reduce((acc, s_id) => {
+    return acc + (job.skills[s_id] * player.skills[s_id]);
+  }, 0);
+  proficiency /= job.skillsTotal;
+  return proficiency;
+}
+
 // Probability of being hired for a job
 function probabilityForJob(job) {
   let {player} = store.getState();
@@ -107,10 +115,7 @@ function probabilityForJob(job) {
   }, 0);
   education /= 100;
 
-  let skills = Object.keys(job.skills).reduce((acc, s_id) => {
-    return acc + (job.skills[s_id] * player.skills[s_id]);
-  }, 0);
-  skills /= job.skillsTotal;
+  let skills = jobProficiency(job, player);
 
   console.log(`performance: ${performance}, education: ${education}, skills: ${skills}`);
   return (performance + education + skills)/3;
@@ -128,4 +133,4 @@ function percentAutomated(job) {
   return score/job.skillsTotal;
 }
 
-export default { deepeningAutomation, probabilityForJob, percentAutomated, createRobot, workSkillGain };
+export default { deepeningAutomation, probabilityForJob, percentAutomated, createRobot, workSkillGain, jobProficiency };

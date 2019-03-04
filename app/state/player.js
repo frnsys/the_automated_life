@@ -19,6 +19,7 @@ const initialState = {
   education: 0,
   schoolCountdown: 0, // months
   job: unemployed,
+  jobProficiency: 0,
   application: null,
   skills: Object.keys(skills).reduce((obj, s_id) => {
     obj[s_id] = Math.random(); // TODO temporary
@@ -95,6 +96,7 @@ function reducer(state={}, action) {
         state.skills[state.training.skill] += config.skillTrainingGain;
         state.training = null;
       }
+      state.jobProficiency = logic.jobProficiency(state.job, state);
       return {...state}
 
     case 'player:work':
@@ -103,13 +105,15 @@ function reducer(state={}, action) {
       // Improve skills used on this job
       let skillChanges = logic.workSkillGain(state.job, state.performance)
       Object.keys(skillChanges).map((s_id) => {
-        state.skills[s_id] += skillChanges[s_id];
+        state.skills[s_id] = Math.min(1, state.skills[s_id] + skillChanges[s_id]);
       });
+      state.jobProficiency = logic.jobProficiency(state.job, state);
 
       return {...state}
 
     case 'player:slack':
-      state.performance = Math.max(state.performance - config.slackPerFrame, 0);
+      let slack = config.slackPerFrame * (1-state.jobProficiency) + config.minSlackPerFrame;
+      state.performance = Math.max(state.performance - slack, 0);
       return {...state}
   }
   return state;
