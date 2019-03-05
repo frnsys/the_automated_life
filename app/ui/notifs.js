@@ -4,9 +4,10 @@ import { animated, useTransition } from 'react-spring';
 import styled from 'styled-components';
 
 let id = 0;
-const defaultTimeout = 15000;
+const defaultTimeout = 6000;
 
 const Container = styled('div')`
+  font-size: 0.8em;
   position: fixed;
   z-index: 1000;
   width: 0 auto;
@@ -35,7 +36,11 @@ const Message = styled(animated.div)`
 
 const Title = styled('h5')`
   font-size: 1em;
-  margin: 0 0 0.5em 0;
+  margin: 0;
+`;
+
+const Body = styled('div')`
+  margin-top: 0.5em;
 `;
 
 export const Content = styled('div')`
@@ -75,7 +80,7 @@ function Notifications({ config = { tension: 125, friction: 20, precision: 0.1 }
           <Content ref={ref => ref && refMap.set(item, ref)}>
             <div>
               <Title>{item.title}</Title>
-              {item.msg}
+              {item.msg ? <Body>{item.msg}</Body> : ''}
             </div>
           </Content>
         </Message>
