@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import Scene from './scene';
 import HUD from './hud';
 import Work from './work';
-import School from './school';
 import Notifications from './notifs';
 import { GlobalStyle, Button } from './styles'
 import Modal from 'react-modal';
 import StartMenu from './startMenu';
 import Skills from './skills';
+import School from './school';
 
 Modal.setAppElement('#main');
 const customStyles = {
@@ -53,10 +53,10 @@ class App extends Component {
         </Modal>
 
         <HUD>
-          <Button onClick={() => this.setState({modalIsOpen: true, modal: Skills})}>Manage Skills</Button>
+          <Button onClick={() => this.setState({modalIsOpen: true, modal: Skills})}>View Skills</Button>
+          <Button onClick={() => this.setState({modalIsOpen: true, modal: School})}>School</Button>
         </HUD>
         <Work />
-        <School />
 
         <Scene />
       </div>

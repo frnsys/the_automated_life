@@ -12,5 +12,9 @@ export default {
   minSlackPerFrame: 0.02,
   startingJobs: [0, 1, 2, 3],
   applicationMinMonths: 1,
+  loanTerms: {
+    interestRate: 0.058,
+    years: 10
+  },
   debug: params.includes('debug')
 };

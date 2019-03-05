@@ -2,7 +2,6 @@ import {connect} from 'react-redux';
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Bar, BarFill } from './styles'
-import store from 'store';
 import skills from 'data/skills.json'
 
 const SkillsStyle = styled('div')`

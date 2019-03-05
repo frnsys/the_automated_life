@@ -16,6 +16,7 @@ const initialState = {
   startAge: 18,
   performance: 0,
   cash: 0,
+  debt: [],
   education: 0,
   schoolCountdown: 0, // months
   job: unemployed,
@@ -36,6 +37,19 @@ function reducer(state={}, action) {
       return {...state}
     case 'player:expenses':
       state.cash -= config.monthlyExpenses;
+      notify(`You paid $${config.monthlyExpenses} in living expenses.`);
+      let debtPayment = state.debt.reduce((acc, debt) => {
+        if (debt.countdown > 0 && debt.startedPayments) {
+          debt.countdown--;
+          return acc + debt.monthlyPayment;
+        } else {
+          return acc;
+        }
+      }, 0);
+      if (debtPayment) {
+        state.cash -= debtPayment;
+        notify(`You paid $${debtPayment} in debt payments.`);
+      }
       return {...state}
 
     case 'player:apply': {
@@ -59,6 +73,13 @@ function reducer(state={}, action) {
       if (state.job.id) {
         state.pastJobs.push(state.job.id);
       }
+      if (state.job.name == 'Student') {
+        // Dropped out of school, loan repayment kicks in
+        notify('You dropped out of school.')
+        if (state.debt) {
+          state.debt[state.debt.length-1].startedPayments = true;
+        }
+      }
       state.application = null;
       state.job = action.payload; // TODO should we just assign the id, in case this object and the actual job become desync?
       return {...state}
@@ -76,6 +97,9 @@ function reducer(state={}, action) {
       state.education += 1;
       state.schoolCountdown = 0;
       state.job = unemployed;
+      if (state.debt) {
+        state.debt[state.debt.length-1].startedPayments = true;
+      }
       return {...state}
 
     case 'player:work':
@@ -93,6 +117,21 @@ function reducer(state={}, action) {
     case 'player:slack':
       let slack = config.slackPerFrame * (1-state.jobProficiency) + config.minSlackPerFrame;
       state.performance = Math.max(state.performance - slack, 0);
+      return {...state}
+
+    case 'player:loan':
+      let amount = action.payload;
+      let i = config.loanTerms.interestRate/12;
+      let n = config.loanTerms.years * 12;
+      let D = ((1+i)**n - 1)/(i*(1+i)**n);
+      let monthlyPayment = Math.round(amount/D);
+      state.debt.push({
+        amount: amount,
+        monthlyPayment: monthlyPayment,
+        countdown: config.loanTerms.years * 12,
+        startedPayments: false
+      });
+      state.cash += amount;
       return {...state}
   }
   return state;

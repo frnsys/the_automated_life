@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import util from '../util';
 import { Bar, BarFill } from './styles'
 import skills from 'data/skills.json'
+import education from 'data/education.json'
 
 const HUDStyle = styled('div')`
   position: fixed;
@@ -13,7 +14,6 @@ const HUDStyle = styled('div')`
   color: #000;
   padding: 0.5em;
   max-width: 200px;
-  max-height: 200px;
   border: 2px solid black;
   background: #fff;
 `;
@@ -21,6 +21,11 @@ const HUDStyle = styled('div')`
 
 const HUD = (props) => {
   let date = util.timeToDate(props.time);
+  let schoolEl = '';
+  if (props.player.education < education.length - 1 && props.player.job.name == 'Student') {
+    schoolEl = <div>In school for {props.player.schoolCountdown} more months</div>;
+  }
+
   return (
     <HUDStyle>
       <Bar><BarFill style={{width: `${util.timeProgress(props.time)*100}%`}} /></Bar>
@@ -28,9 +33,10 @@ const HUD = (props) => {
       <div>Age: {props.player.startAge + date.years}</div>
       <div>Cash: ${props.player.cash.toFixed(2)}</div>
       <div>Job: {props.player.job.name}</div>
-      <div>Wage: ${(props.player.job.wage/12).toFixed(2)}</div>
+      <div>Wage: ${(props.player.job.wage/12).toFixed(2)}/mo</div>
+      <div>Education: {education[props.player.education].name}</div>
+      {schoolEl}
       {props.player.application ? <div>Applied to {props.jobs[props.player.application.id].name}</div> : ''}
-      {props.player.training ? <div>Training in {skills[props.player.training.skill].name}</div> : ''}
       {props.children}
     </HUDStyle>
   );
