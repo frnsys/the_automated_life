@@ -25,7 +25,8 @@ const HUD = (props) => {
 
   return (
     <HUDStyle>
-      {inSchool ? <div className='school-notice'>In School</div> : ''}
+      {props.player.gameOver ? <div className='hud-notice'>Game Over</div> : ''}
+      {inSchool ? <div className='hud-notice'>In School</div> : ''}
       <Bar><BarFill style={{width: `${util.timeProgress(props.time)*100}%`}} /></Bar>
       <div>Time: {date.month}/{date.year}</div>
       <div>Age: {props.player.startAge + date.years}</div>

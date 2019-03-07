@@ -99,7 +99,7 @@ export const GlobalStyle = createGlobalStyle`
     opacity: 0.5;
   }
 
-  .school-notice {
+  .hud-notice {
     background: red;
     color: #fff;
     text-align: center;
