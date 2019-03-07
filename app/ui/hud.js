@@ -21,13 +21,11 @@ const HUDStyle = styled('div')`
 
 const HUD = (props) => {
   let date = util.timeToDate(props.time);
-  let schoolEl = '';
-  if (props.player.job.name == 'Student') {
-    schoolEl = <div>In school for {props.player.schoolCountdown} more months</div>;
-  }
+  let inSchool = props.player.job.name == 'Student';
 
   return (
     <HUDStyle>
+      {inSchool ? <div className='school-notice'>In School</div> : ''}
       <Bar><BarFill style={{width: `${util.timeProgress(props.time)*100}%`}} /></Bar>
       <div>Time: {date.month}/{date.year}</div>
       <div>Age: {props.player.startAge + date.years}</div>
@@ -35,7 +33,7 @@ const HUD = (props) => {
       <div>Job: {props.player.job.name}</div>
       <div>Wage: ${(props.player.job.wage/12).toFixed(2)}/mo</div>
       <div>Education: {education[props.player.education].name}</div>
-      {schoolEl}
+      {inSchool ? <div>In school for {props.player.schoolCountdown} more months</div> : ''}
       {props.player.application ? <div>Applied to {props.jobs[props.player.application.id].name}</div> : ''}
       {props.children}
     </HUDStyle>

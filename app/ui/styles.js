@@ -98,6 +98,13 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: line-through;
     opacity: 0.5;
   }
+
+  .school-notice {
+    background: red;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+  }
 `;
 
 export const Bar = styled('div')`
