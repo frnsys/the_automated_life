@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import {connect} from 'react-redux';
-import util from '../util';
 import { Bar, BarFill } from './styles'
 import skills from 'data/skills.json'
 import education from 'data/education.json'
@@ -20,16 +19,15 @@ const HUDStyle = styled('div')`
 
 
 const HUD = (props) => {
-  let date = util.timeToDate(props.time);
   let inSchool = props.player.job.name == 'Student';
 
   return (
     <HUDStyle>
       {props.player.gameOver ? <div className='hud-notice'>Game Over</div> : ''}
       {inSchool ? <div className='hud-notice'>In School</div> : ''}
-      <Bar><BarFill style={{width: `${util.timeProgress(props.time)*100}%`}} /></Bar>
-      <div>Time: {date.month}/{date.year}</div>
-      <div>Age: {props.player.startAge + date.years}</div>
+      <Bar><BarFill style={{width: `${props.time.monthProgress*100}%`}} /></Bar>
+      <div>Time: {props.time.month}/{props.time.year}</div>
+      <div>Age: {props.player.startAge + props.time.years}</div>
       <div>Cash: ${props.player.cash.toFixed(2)}</div>
       <div>Job: {props.player.job.name}</div>
       <div>Wage: ${(props.player.job.wage/12).toFixed(2)}/mo</div>

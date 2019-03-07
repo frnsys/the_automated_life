@@ -1,7 +1,6 @@
 import config from 'config';
 import store from 'store';
 import logic from './logic';
-import util from './util';
 import graph from './ui/3d/graph';
 import skills from 'data/skills.json'
 
@@ -28,9 +27,8 @@ function loop(now) {
   }
 
   let nextRobot = scenario.schedule[0];
-  let date = util.timeToDate(time);
   if (nextRobot) {
-    if (date.months >= nextRobot.months) {
+    if (time.months >= nextRobot.months) {
       logic.createRobot(nextRobot);
       store.dispatch({
         type: 'scenario:increment'
@@ -48,7 +46,7 @@ function loop(now) {
 
     // Teaser news stories
     scenario.schedule.forEach((r, i) => {
-      if (!r.teased && date.months == r.months - 6){
+      if (!r.teased && time.months == r.months - 6){
         let skillsList = r.skills.map((s_id) => skills[s_id].name);
         skillsList = [skillsList.slice(0, -1).join(', '), skillsList.slice(-1)[0]].join(skillsList.length < 2 ? '' : ' and ');
         notify(`Researchers in South Korea make breakthrough`,
@@ -62,14 +60,17 @@ function loop(now) {
   }
 
   if (!isNaN(elapsed)) {
+    let inSchool = player.job.name == 'Student';
     store.dispatch({
       type: 'time',
-      payload: elapsed
+      payload: {
+        speedup: inSchool ? config.schoolTimeSpeedup : 1,
+        elapsed: elapsed
+      }
     });
 
     // Check if new month
-    let newDate = util.timeToDate(time + elapsed);
-    if (date.month !== newDate.month) {
+    if (time.newMonth) {
       // TODO Note that this will trigger re-renders;
       // we need to be careful about re-rendering every frame
       // as this will slow things down, e.g. notifications
@@ -117,7 +118,7 @@ function loop(now) {
       }
 
       // Check game end state
-      if (player.startAge + newDate.years >= config.retirementAge) {
+      if (player.startAge + time.years >= config.retirementAge) {
         if (player.cash >= config.retirementSavingsMin) {
           alert('game over, you win');
         } else {

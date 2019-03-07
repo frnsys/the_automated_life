@@ -19,7 +19,7 @@ const store = createStore(allReducers, {
   player: player.initialState,
   robots: robots.initialState,
   scenario: scenario.initialState,
-  time: 0
+  time: time.initialState
 });
 
 export default store;
