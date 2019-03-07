@@ -2,6 +2,7 @@ const params = location.search.slice(1);
 export default {
   startYear: 2019,
   secPerMonth: 10,
+  schoolTimeSpeedup: 20,
   monthlyExpenses: 1000,
   retirementAge: 65,
   retirementSavingsMin: 500000,

@@ -22,7 +22,7 @@ const HUDStyle = styled('div')`
 const HUD = (props) => {
   let date = util.timeToDate(props.time);
   let schoolEl = '';
-  if (props.player.education < education.length - 1 && props.player.job.name == 'Student') {
+  if (props.player.job.name == 'Student') {
     schoolEl = <div>In school for {props.player.schoolCountdown} more months</div>;
   }
 
