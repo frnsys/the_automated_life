@@ -13,6 +13,7 @@ const unemployed = {
 };
 
 const initialState = {
+  gameOver: false,
   startAge: 18,
   performance: 0,
   cash: 0,
@@ -132,6 +133,10 @@ function reducer(state={}, action) {
         startedPayments: false
       });
       state.cash += amount;
+      return {...state}
+
+    case 'player:gameOver':
+      state.gameOver = true;
       return {...state}
   }
   return state;

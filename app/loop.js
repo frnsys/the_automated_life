@@ -11,7 +11,10 @@ function loop(now) {
   let elapsed = now - lastTime; // ms
   let {scenario, player, robots, time, jobs} = store.getState();
 
-  if (player.cash <= config.gameOverBalance) {
+  if (!player.gameOver && player.cash <= config.gameOverBalance) {
+    store.dispatch({
+      type: 'player:gameOver'
+    });
     alert('Game Over');
   }
 
