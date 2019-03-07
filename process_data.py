@@ -13,6 +13,11 @@ skills = {}
 MIN_SKILLS = 7
 MIN_SKILL_WEIGHT = 1.5
 
+skill_edits = pd.read_csv('data/src/Clean Skills - orderedOnetSkillsByComputerization.csv')
+omitted_skills = skill_edits[skill_edits['Omit?'] == 1.0]['Skill'].tolist()
+renamed_skills = skill_edits[skill_edits['Omit?'] != 1.0][['Skill', 'Short name']].dropna()
+renamed_skills = dict(zip(renamed_skills['Skill'], renamed_skills['Short name']))
+
 data = pd.read_csv('data/src/job_industries.csv')
 industries = {}
 for i, r in data.iterrows():
@@ -73,6 +78,9 @@ industries_jobs = defaultdict(list)
 # Job-skill matrix
 df = pd.read_csv('data/src/jobSkillRcaMat.csv', delimiter='\t')
 skills = {i: name.strip() for i, name in enumerate(df.columns.tolist()[2:])}
+skills_inv = {name: i for i, name in skills.items()}
+omitted_skills = [skills_inv[name] for name in omitted_skills]
+
 n_jobs = len(df)
 for i, r in tqdm(df.iterrows()):
     id = r['Job Code']
@@ -81,8 +89,9 @@ for i, r in tqdm(df.iterrows()):
 
     # Get job skills above minimum weight
     job_skills = {}
-    for j, v in enumerate(vals):
-        if v >= MIN_SKILL_WEIGHT: job_skills[j] = v
+    for s_id, v in enumerate(vals):
+        if s_id in omitted_skills: continue
+        if v >= MIN_SKILL_WEIGHT: job_skills[s_id] = v
 
     # Default to no industries
     inds = industries.get(id, [])
@@ -114,7 +123,6 @@ for i, r in tqdm(df.iterrows()):
 
 # Inverse indices for lookups
 jobs_inv = {j['name']: i for i, j in jobs.items()}
-skills_inv = {name: i for i, name in skills.items()}
 
 # Skill-skill similarity
 skill_skill = pd.read_csv('data/src/skillSkill.csv', delimiter='\t')
@@ -162,9 +170,12 @@ for row in tqdm(df.itertuples()):
     # Convert from [-1, 1] to [0, 1]
     auto = (row.correlation + 1)/2
 
+    name = row.Skill
+    name = renamed_skills.get(name, name)
+
     skills[i] = {
         'id': i,
-        'name': row.Skill,
+        'name': name,
         'automatibility': auto
     }
 
