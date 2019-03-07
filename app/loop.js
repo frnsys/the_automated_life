@@ -8,7 +8,13 @@ import skills from 'data/skills.json'
 // Game loop
 let lastTime = 0;
 function loop(now) {
+  // Get elapsed time, capping it
+  // to a reasonable amount
+  // (to prevent the game from running away
+  // if the user is focused elsewhere)
   let elapsed = now - lastTime; // ms
+  elapsed = Math.min(elapsed, 100);
+
   let {scenario, player, robots, time, jobs} = store.getState();
 
   // Check game over
