@@ -3,9 +3,11 @@ import {connect} from 'react-redux';
 import React, { Component } from 'react';
 import { Button } from './styles'
 import education from 'data/education.json';
+import graph from './3d/graph';
 
 class School extends Component {
   enrollSchool(withLoan, totalCost) {
+    graph.reveal(null);
     this.props.enrollSchool();
 		if (withLoan) {
 			this.props.getLoan(totalCost);

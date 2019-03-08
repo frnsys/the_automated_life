@@ -191,6 +191,9 @@ class Graph {
         e.material = defaultLineMat;
       });
 
+    // If unemployed or student, job_id is null
+    if (job_id === null) return;
+
     // Set focus node color
     let focusNode = this.nodes[job_id];
     focusNode.mesh.visible = true;
@@ -246,7 +249,7 @@ class Graph {
   }
 
   resetNodeColor(node, player) {
-    let neighbIds = Object.keys(this.edges[this.focusedNodeId]);
+    let neighbIds = this.focusedNodeId ? Object.keys(this.edges[this.focusedNodeId]) : [];
     if (player.pastJobs.includes(node.data.id)) {
       node.setColor(visitedColor);
     } else if (neighbIds.includes(node.data.id.toString())) {
