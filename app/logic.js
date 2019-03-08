@@ -63,7 +63,7 @@ function releaseRobot(robot) {
 function deepeningAutomation(robot) {
   let {jobs} = store.getState();
   let updates = Object.values(jobs).map(job => {
-    let newWage = job.wage * (1 + robot.efficiency);
+    let newWage = job.wage * (1 + (config.deepeningAutomationAlpha * robot.efficiency));
     return {
       id: job.id,
       wage: newWage

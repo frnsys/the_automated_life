@@ -7,6 +7,7 @@ export default {
   retirementAge: 65,
   retirementSavingsMin: 500000,
   gameOverBalance: -10000,
+  deepeningAutomationAlpha: 0.05,
   maxSkillChangePerWork: 0.01,
   workPerClick: 10,
   slackPerFrame: 1,
