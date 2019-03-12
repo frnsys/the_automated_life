@@ -41,7 +41,7 @@ const HUD = (props) => {
       </div>
       <div style={{display: 'flex'}}>
         <Stat name='Cash'>🏦 ${numeral(props.player.cash).format('0,0.00a')}</Stat>
-        <Stat name='Monthly wage'>💸 ${numeral(props.player.job.wage/12).format('0,0.00a')}/mo</Stat>
+        <Stat name='Monthly wage'>💸 ${numeral(props.player.job.wage/12).format('0,0.0a')}/mo</Stat>
       </div>
       <Stat name='Level of education'>🎓 {education[props.player.education].name}</Stat>
       {inSchool ? <div style={{fontSize: '0.75em', color: '#888'}}>In school for {props.player.schoolCountdown} more months</div> : ''}

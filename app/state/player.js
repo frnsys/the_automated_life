@@ -2,6 +2,7 @@ import config from 'config';
 import logic from '../logic';
 import skills from 'data/skills.json'
 import education from 'data/education.json'
+import graph from '../ui/3d/graph';
 
 const student = {
   name: 'Student',
@@ -101,6 +102,8 @@ function reducer(state={}, action) {
       if (state.debt.length > 0) {
         state.debt[state.debt.length-1].startedPayments = true;
       }
+      graph.unlock();
+      notify('Congratulations! You graduated.')
       return {...state}
 
     case 'player:work':

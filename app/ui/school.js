@@ -7,7 +7,7 @@ import graph from './3d/graph';
 
 class School extends Component {
   enrollSchool(withLoan, totalCost) {
-    graph.reveal(null);
+    graph.lock();
     this.props.enrollSchool();
 		if (withLoan) {
 			this.props.getLoan(totalCost);

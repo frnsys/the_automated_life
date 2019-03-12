@@ -84,6 +84,7 @@ class Graph {
   constructor(jobs, nodeSize) {
     this.nodeSize = nodeSize;
     this.group = new THREE.Group();
+    this.locked = false;
 
     this.edges = {};
 
@@ -108,8 +109,15 @@ class Graph {
         // Click on job node to apply to job
         onClick: () => {
           let {player} = store.getState();
-          let neighbIds = Object.keys(this.edges[this.focusedNodeId]);
-          if (!player.application && neighbIds.includes(id)) {
+          if (this.locked) return;
+          let valid = false;
+          if (this.focusedNodeId) {
+            let neighbIds = Object.keys(this.edges[this.focusedNodeId]);
+            valid = neighbIds.includes(id);
+          } else {
+            valid = true;
+          }
+          if (!player.application && valid) {
             store.dispatch({
               type: 'player:apply',
               payload: {
@@ -168,6 +176,22 @@ class Graph {
 
     // All nodes are interactable
     this.interactables = Object.values(this.nodes).map(n => n.mesh);
+  }
+
+  lock() {
+    this.locked = true;
+    this.reveal(null);
+  }
+
+  unlock() {
+    this.locked = false;
+    Object.values(this.nodes)
+      .filter(n => n.mesh.visible)
+      .forEach(n => {
+        n.mesh.position.setZ(1);
+        n.setColor(neighbColor);
+        n.anno.style.display = 'block';
+      });
   }
 
   // Reveal the node and its neighbors
