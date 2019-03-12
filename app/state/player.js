@@ -98,7 +98,7 @@ function reducer(state={}, action) {
       state.education += 1;
       state.schoolCountdown = 0;
       state.job = unemployed;
-      if (state.debt) {
+      if (state.debt.length > 0) {
         state.debt[state.debt.length-1].startedPayments = true;
       }
       return {...state}
