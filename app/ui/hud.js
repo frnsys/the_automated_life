@@ -6,6 +6,10 @@ import skills from 'data/skills.json'
 import education from 'data/education.json'
 import numeral from 'numeral';
 
+const months = [
+  'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+];
+
 const HUDStyle = styled('div')`
   position: fixed;
   z-index: 2;
@@ -32,17 +36,17 @@ const HUD = (props) => {
       {inSchool ? <div className='hud-notice'>In School</div> : ''}
       <Bar><BarFill style={{width: `${props.time.monthProgress*100}%`}} /></Bar>
       <div style={{display: 'flex'}}>
-        <Stat name='Date'>📅 {props.time.month}/{props.time.year}</Stat>
+        <Stat name='Date'>📅 {months[props.time.month-1]} {props.time.year}</Stat>
         <Stat name='Age'>🎂 {props.player.startAge + props.time.years}</Stat>
       </div>
       <div style={{display: 'flex'}}>
         <Stat name='Cash'>🏦 ${numeral(props.player.cash).format('0,0.00a')}</Stat>
         <Stat name='Monthly wage'>💸 ${numeral(props.player.job.wage/12).format('0,0.00a')}/mo</Stat>
       </div>
-      <Stat name='Current job'>🛠️ {props.player.job.name}</Stat>
-      {props.player.application ? <div style={{fontSize: '0.75em', color: '#888'}}>Applied to {props.jobs[props.player.application.id].name}</div> : ''}
       <Stat name='Level of education'>🎓 {education[props.player.education].name}</Stat>
       {inSchool ? <div style={{fontSize: '0.75em', color: '#888'}}>In school for {props.player.schoolCountdown} more months</div> : ''}
+      <Stat name='Current job'>🛠️ {props.player.job.name}</Stat>
+      {props.player.application ? <div style={{fontSize: '0.75em', color: '#888'}}>Applied to {props.jobs[props.player.application.id].name}</div> : ''}
       <div style={{marginTop: '1em', display: 'flex'}}>
         {props.children}
       </div>
