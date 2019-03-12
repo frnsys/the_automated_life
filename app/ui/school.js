@@ -31,14 +31,18 @@ class School extends Component {
 			if (needsLoan) {
 				loanInfo = <div>
 					<h3>You can't afford school. If you enroll, you will receive a loan to cover all costs with the following terms:</h3>
-					<h4>Interest rate: {(config.loanTerms.interestRate*100).toFixed(1)}% fixed, {config.loanTerms.years}-year</h4>
+          <div className='item-box'>
+            <div><b>Interest rate:</b> {(config.loanTerms.interestRate*100).toFixed(1)}% fixed, {config.loanTerms.years}-year</div>
+          </div>
 				</div>;
 			}
 
 			body = (
 				<div>
-					<h2>Next level: {nextLevel.name}</h2>
-					<h2>Cost, with living expenses: ${totalCost.toLocaleString()}</h2>
+          <div className='item-box'>
+            <div><b>Next level:</b> {nextLevel.name}</div>
+            <div><b>Cost, with living expenses:</b> ${totalCost.toLocaleString()}</div>
+          </div>
 					{loanInfo}
 					<Button onClick={() => this.enrollSchool(needsLoan, totalCost)}>Enroll</Button>
 				</div>

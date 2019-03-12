@@ -116,6 +116,17 @@ export const GlobalStyle = createGlobalStyle`
   .info-tooltip::after {
     border-top-width: 0 !important;
   }
+
+  .ReactModal__Content h3 {
+    margin: 0 0 1em 0;
+  }
+
+  .item-box {
+    background: #eee;
+    border: 1px solid #aaa;
+    padding: 0.5em;
+    margin: 1em 0;
+  }
 `;
 
 export const Bar = styled('div')`

@@ -16,12 +16,15 @@ const customStyles = {
     zIndex: 10
   },
   content: {
-    top                   : '50%',
-    left                  : '50%',
-    right                 : 'auto',
-    bottom                : 'auto',
-    marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)'
+    border: '4px solid black',
+    borderRadius: 0,
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    maxWidth: '420px'
   }
 };
 
