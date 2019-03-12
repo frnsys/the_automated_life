@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import { Bar, BarFill } from './styles'
 import skills from 'data/skills.json'
 import education from 'data/education.json'
+import numeral from 'numeral';
 
 const HUDStyle = styled('div')`
   position: fixed;
@@ -18,6 +19,10 @@ const HUDStyle = styled('div')`
 `;
 
 
+const Stat = (props) => {
+  return <div style={{margin: '0.25em 0', flex: 1}}><span data-tip={props.name} style={{cursor:'help'}}>{props.children}</span></div>
+}
+
 const HUD = (props) => {
   let inSchool = props.player.job.name == 'Student';
 
@@ -26,15 +31,21 @@ const HUD = (props) => {
       {props.player.gameOver ? <div className='hud-notice'>Game Over</div> : ''}
       {inSchool ? <div className='hud-notice'>In School</div> : ''}
       <Bar><BarFill style={{width: `${props.time.monthProgress*100}%`}} /></Bar>
-      <div>Time: {props.time.month}/{props.time.year}</div>
-      <div>Age: {props.player.startAge + props.time.years}</div>
-      <div>Cash: ${props.player.cash.toFixed(2)}</div>
-      <div>Job: {props.player.job.name}</div>
-      <div>Wage: ${(props.player.job.wage/12).toFixed(2)}/mo</div>
-      <div>Education: {education[props.player.education].name}</div>
-      {inSchool ? <div>In school for {props.player.schoolCountdown} more months</div> : ''}
-      {props.player.application ? <div>Applied to {props.jobs[props.player.application.id].name}</div> : ''}
-      {props.children}
+      <div style={{display: 'flex'}}>
+        <Stat name='Date'>📅 {props.time.month}/{props.time.year}</Stat>
+        <Stat name='Age'>🎂 {props.player.startAge + props.time.years}</Stat>
+      </div>
+      <div style={{display: 'flex'}}>
+        <Stat name='Cash'>🏦 ${numeral(props.player.cash).format('0,0.00a')}</Stat>
+        <Stat name='Monthly wage'>💸 ${numeral(props.player.job.wage/12).format('0,0.00a')}/mo</Stat>
+      </div>
+      <Stat name='Current job'>🛠️ {props.player.job.name}</Stat>
+      {props.player.application ? <div style={{fontSize: '0.75em', color: '#888'}}>Applied to {props.jobs[props.player.application.id].name}</div> : ''}
+      <Stat name='Level of education'>🎓 {education[props.player.education].name}</Stat>
+      {inSchool ? <div style={{fontSize: '0.75em', color: '#888'}}>In school for {props.player.schoolCountdown} more months</div> : ''}
+      <div style={{marginTop: '1em', display: 'flex'}}>
+        {props.children}
+      </div>
     </HUDStyle>
   );
 }

@@ -105,6 +105,17 @@ export const GlobalStyle = createGlobalStyle`
     text-align: center;
     font-weight: bold;
   }
+
+  .info-tooltip {
+    background: #222 !important;
+    border-radius: 0 !important;
+    padding: 0.3em 0.5em !important;
+    margin-top: 0 !important;
+    opacity: 1 !important;
+  }
+  .info-tooltip::after {
+    border-top-width: 0 !important;
+  }
 `;
 
 export const Bar = styled('div')`
@@ -132,6 +143,7 @@ export const Button = styled('div')`
   text-align: center;
   padding: 0.25em 0.5em;
   font-weight: bold;
+  flex: 1;
   &:hover {
     background: ${props => props.disabled ? '#aaa' : '#2f51d8'};
     ${props => props.highlight ? 'background: #ea432a;' : ''}

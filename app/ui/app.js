@@ -5,6 +5,7 @@ import Work from './work';
 import Notifications from './notifs';
 import { GlobalStyle, Button } from './styles'
 import Modal from 'react-modal';
+import ReactTooltip from 'react-tooltip'
 import StartMenu from './startMenu';
 import Skills from './skills';
 import School from './school';
@@ -42,6 +43,7 @@ class App extends Component {
     return (
       <div>
         <GlobalStyle />
+        <ReactTooltip className='info-tooltip' />
         <Notifications children={add => (window.notify = add)} />
 
         <Modal
@@ -53,7 +55,7 @@ class App extends Component {
         </Modal>
 
         <HUD>
-          <Button onClick={() => this.setState({modalIsOpen: true, modal: Skills})}>View Skills</Button>
+          <Button onClick={() => this.setState({modalIsOpen: true, modal: Skills})}>Skills</Button>
           <Button onClick={() => this.setState({modalIsOpen: true, modal: School})}>School</Button>
         </HUD>
         <Work />
