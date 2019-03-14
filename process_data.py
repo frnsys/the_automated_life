@@ -237,8 +237,29 @@ for i, r in df.iterrows():
             'cost': 150000 # TODO
         })
 
+# TODO this will be scraped
+# for secondary degrees, players
+# choose a specific program
+import random
+secondary_programs = [{
+    'name': 'Bio-Engineering',
+    'job':  random.choice(list(jobs.values()))['id'],
+    'years': 4
+}, {
+    'name': 'Management',
+    'job':  random.choice(list(jobs.values()))['id'],
+    'years': 4
+}, {
+    'name': 'Computer Science',
+    'job':  random.choice(list(jobs.values()))['id'],
+    'years': 4
+}]
+
 with open('data/education.json', 'w') as f:
     json.dump(education, f)
+
+with open('data/programs.json', 'w') as f:
+    json.dump(secondary_programs, f)
 
 with open('data/scenarios.json', 'w') as f:
     json.dump(scenarios, f)
