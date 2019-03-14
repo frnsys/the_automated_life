@@ -183,21 +183,27 @@ class Graph {
     this.reveal(null);
   }
 
-  unlock() {
+  unlock(job_id, player=null) {
     this.locked = false;
-    Object.values(this.nodes)
-      .filter(n => n.mesh.visible)
-      .forEach(n => {
-        n.mesh.position.setZ(1);
-        n.setColor(neighbColor);
-        n.anno.style.display = 'block';
-      });
+    if (job_id) {
+      this.reveal(job_id, true, player);
+    } else {
+      Object.values(this.nodes)
+        .filter(n => n.mesh.visible)
+        .forEach(n => {
+          n.mesh.position.setZ(1);
+          n.setColor(neighbColor);
+          n.anno.style.display = 'block';
+        });
+    }
   }
 
   // Reveal the node and its neighbors
   // for the given job id
-  reveal(job_id, center=false) {
-    let {player} = store.getState();
+  reveal(job_id, center=false, player=null) {
+    if (!player) {
+      player = store.getState().player;
+    }
     this.focusedNodeId = job_id;
 
     // Set all nodes and edges to muted
