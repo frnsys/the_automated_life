@@ -8,6 +8,12 @@ import programs from 'data/programs.json';
 import jobs from 'data/jobs.json';
 import graph from './3d/graph';
 
+function toTitleCase(str) {
+  return str.replace(/\w\S*/g, (txt) => {
+    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+  });
+}
+
 const ProgramInfoStyle = styled('div')`
   background: ${props => props.selected ? '#7efc82' : 'none'};
   &:hover {
@@ -53,12 +59,12 @@ class School extends Component {
       if (nextLevel.name == 'Secondary Degree') {
         programsInfo = <div style={{margin: '1em 0 0 0'}}>
           <h3 style={{margin: '0 0 0.5em 0'}}>Select a program to enroll in:</h3>
-          <ul style={{maxHeight: '100px', overflowY: 'scroll'}}>
+          <ul style={{maxHeight: '150px', overflowY: 'scroll'}}>
             {programs.map((p, i) => {
-              return <li key={p.name} onClick={() => this.setState({selectedProgram: i})}>
+              return <li key={i} onClick={() => this.setState({selectedProgram: i})}>
                 <ProgramInfoStyle selected={i == this.state.selectedProgram}>
-                  <h5>{p.name} <span style={{color: '#777', fontWeight: 'normal'}}>{p.years} years</span></h5>
-                  <span style={{fontSize: '0.8em', color: '#777'}}>Leads to a job as <span style={{color: '#222'}}>{jobs[p.job].name}</span></span>
+                  <h5>{toTitleCase(jobs[p.job.toString()].name)} <span style={{color: '#777', fontWeight: 'normal'}}>{p.years} years</span></h5>
+                  <span style={{fontSize: '0.8em', color: '#777'}}>Study <span style={{color: '#222'}}>{p.name}</span></span>
                 </ProgramInfoStyle>
               </li>;
             })}

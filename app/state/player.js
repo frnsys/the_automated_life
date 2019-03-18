@@ -20,7 +20,7 @@ const initialState = {
   performance: 0,
   cash: 0,
   debt: [],
-  education: 0,
+  education: 1,
   program: null,
   postGradJob: unemployed,
   schoolCountdown: 0, // months
