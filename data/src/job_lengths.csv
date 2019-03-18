@@ -1,0 +1,575 @@
+,job,length,course_name
+0,25-1071,More than 4 years,Emergency Medical Technology/Technician (EMT Paramedic)
+1,23-1011,More than 4 years,Law
+2,25-1081,More than 4 years,"Education, General"
+3,23-1022,More than 4 years,Law
+4,25-1112,More than 4 years,Law
+5,23-1012,More than 4 years,Law
+6,23-1023,More than 4 years,Law
+7,23-1021,More than 4 years,Law
+8,11-9111,More than 4 years,Health/Health Care Administration/Management
+9,21-1013,More than 4 years,Social Work
+10,11-9039,More than 4 years,"Educational Leadership and Administration, General"
+11,21-1022,More than 4 years,Social Work
+12,21-1023,More than 4 years,Social Work
+13,25-1113,More than 4 years,Social Work
+14,21-1021,More than 4 years,Social Work
+15,21-1092,More than 4 years,Social Work
+16,11-9033,More than 4 years,"Educational Leadership and Administration, General"
+17,11-9032,More than 4 years,"Educational Leadership and Administration, General"
+18,29-1062,More than 4 years,Medicine
+19,29-1069,More than 4 years,Medicine
+20,11-9031,More than 4 years,"Educational Leadership and Administration, General"
+21,25-9031,More than 4 years,Curriculum and Instruction
+22,29-1171,More than 4 years,Family Practice Nurse/Nursing
+23,29-1051,More than 4 years,Pharmacy
+24,11-1031,More than 4 years,Public Administration
+25,25-2052,More than 4 years,"Special Education and Teaching, General"
+26,25-2051,More than 4 years,"Special Education and Teaching, General"
+27,25-2059,More than 4 years,"Special Education and Teaching, General"
+28,25-2054,More than 4 years,"Special Education and Teaching, General"
+29,25-2053,More than 4 years,"Special Education and Teaching, General"
+30,21-1012,More than 4 years,Counselor Education/School Counseling and Guidance Services
+31,11-9131,More than 4 years,Public Administration
+32,21-2011,More than 4 years,Divinity/Ministry
+33,29-1123,More than 4 years,Physical Therapy/Therapist
+34,17-2199,More than 4 years,"Engineering, General"
+35,29-1071,More than 4 years,Physician Assistant
+36,29-1122,More than 4 years,Occupational Therapy/Therapist
+37,21-1014,More than 4 years,Mental Health Counseling/Counselor
+38,29-1021,More than 4 years,Dentistry
+39,25-3011,More than 4 years,Teaching English as a Second or Foreign Language/ESL Language Instructor
+40,25-4021,More than 4 years,Library and Information Science
+41,25-1082,More than 4 years,Library and Information Science
+42,25-9011,More than 4 years,Educational/Instructional Technology
+43,15-2031,More than 4 years,Management Science
+44,29-1131,More than 4 years,Veterinary Medicine
+45,19-1041,More than 4 years,Epidemiology
+46,19-3051,More than 4 years,"City/Urban, Community and Regional Planning"
+47,29-1011,More than 4 years,Chiropractic
+48,29-1199,More than 4 years,Acupuncture and Oriental Medicine
+49,29-1151,More than 4 years,Nurse Anesthetist
+50,11-9161,More than 4 years,Homeland Security
+51,29-1041,More than 4 years,Optometry
+52,25-3021,More than 4 years,Adult and Continuing Education and Teaching
+53,29-9012,More than 4 years,Environmental Health
+54,29-1081,More than 4 years,Podiatric Medicine/Podiatry
+55,29-1161,More than 4 years,Nurse Midwife/Nursing Midwifery
+56,19-2032,More than 4 years,Materials Science
+57,29-2091,More than 4 years,Orthotist/Prosthetist
+58,51-9082,More than 4 years,Orthotist/Prosthetist
+59,29-9099,More than 4 years,Traditional Chinese Medicine and Chinese Herbology
+60,29-9092,More than 4 years,Genetic Counseling/Counselor
+61,31-1014,Less than one year,Nursing Assistant/Aide and Patient Care Assistant/Aide
+62,51-4121,Less than one year,Welding Technology/Welder
+63,51-4122,Less than one year,Welding Technology/Welder
+64,25-1194,Less than one year,Truck and Bus Driver/Commercial Vehicle Operator and Instructor
+65,53-3021,Less than one year,Truck and Bus Driver/Commercial Vehicle Operator and Instructor
+66,53-3022,Less than one year,Truck and Bus Driver/Commercial Vehicle Operator and Instructor
+67,53-3032,Less than one year,Truck and Bus Driver/Commercial Vehicle Operator and Instructor
+68,53-3033,Less than one year,Truck and Bus Driver/Commercial Vehicle Operator and Instructor
+69,29-2041,Less than one year,Emergency Medical Technology/Technician (EMT Paramedic)
+70,49-3023,Less than one year,Automobile/Automotive Mechanics Technology/Technician
+71,49-2096,Less than one year,Automobile/Automotive Mechanics Technology/Technician
+72,49-2093,Less than one year,Automobile/Automotive Mechanics Technology/Technician
+73,39-9011,Less than one year,Child Care Provider/Assistant
+74,47-1011,Less than one year,Electrician
+75,31-9011,Less than one year,Massage Therapy/Therapeutic Massage
+76,13-2082,Less than one year,Accounting Technology/Technician and Bookkeeping
+77,43-9111,Less than one year,Accounting Technology/Technician and Bookkeeping
+78,43-3031,Less than one year,Accounting Technology/Technician and Bookkeeping
+79,43-4011,Less than one year,Accounting Technology/Technician and Bookkeeping
+80,43-3051,Less than one year,Accounting Technology/Technician and Bookkeeping
+81,43-6013,Less than one year,Medical Office Assistant/Specialist
+82,31-9097,Less than one year,Phlebotomy Technician/Phlebotomist
+83,43-1011,Less than one year,Office Management and Supervision
+84,41-3031,Less than one year,Financial Planning and Services
+85,13-2071,Less than one year,Financial Planning and Services
+86,17-3013,Less than one year,"Drafting and Design Technology/Technician, General"
+87,51-4192,Less than one year,Machine Tool Technology/Machinist
+88,51-4191,Less than one year,Machine Tool Technology/Machinist
+89,51-4033,Less than one year,Machine Tool Technology/Machinist
+90,51-4041,Less than one year,Machine Tool Technology/Machinist
+91,51-4081,Less than one year,Machine Tool Technology/Machinist
+92,49-9081,Less than one year,Industrial Mechanics and Maintenance Technology
+93,49-9043,Less than one year,Industrial Mechanics and Maintenance Technology
+94,49-9041,Less than one year,Industrial Mechanics and Maintenance Technology
+95,47-4021,Less than one year,Industrial Mechanics and Maintenance Technology
+96,49-9044,Less than one year,Industrial Mechanics and Maintenance Technology
+97,49-9045,Less than one year,Industrial Mechanics and Maintenance Technology
+98,17-3012,Less than one year,"Drafting and Design Technology/Technician, General"
+99,13-1032,Less than one year,Autobody/Collision and Repair Technology/Technician
+100,43-9021,Less than one year,Business/Office Automation/Technology/Data Entry
+101,49-2094,Less than one year,Computer Installation and Repair Technology/Technician
+102,53-3011,Less than one year,Emergency Care Attendant (EMT Ambulance)
+103,51-4011,Less than one year,Machine Shop Technology/Assistant
+104,51-2041,Less than one year,Machine Shop Technology/Assistant
+105,41-9021,Less than one year,Real Estate
+106,41-9022,Less than one year,Real Estate
+107,11-9141,Less than one year,Real Estate
+108,13-2021,Less than one year,Real Estate
+109,51-4194,Less than one year,Machine Shop Technology/Assistant
+110,47-2031,Less than one year,Carpentry/Carpenter
+111,51-4031,Less than one year,Machine Tool Technology/Machinist
+112,51-4023,Less than one year,Machine Tool Technology/Machinist
+113,49-2011,Less than one year,Computer Installation and Repair Technology/Technician
+114,43-4051,Less than one year,Customer Service Support/Call Center/Teleservice Operation
+115,51-4032,Less than one year,Machine Tool Technology/Machinist
+116,51-4022,Less than one year,Machine Tool Technology/Machinist
+117,51-4034,Less than one year,Machine Tool Technology/Machinist
+118,51-4021,Less than one year,Machine Tool Technology/Machinist
+119,51-4035,Less than one year,Machine Tool Technology/Machinist
+120,15-1151,Less than one year,Computer Support Specialist
+121,43-5011,Less than one year,General Office Occupations and Clerical Services
+122,35-2012,Less than one year,Food Preparation/Professional Cooking/Kitchen Assistant
+123,43-9022,Less than one year,General Office Occupations and Clerical Services
+124,43-3061,Less than one year,General Office Occupations and Clerical Services
+125,43-9061,Less than one year,General Office Occupations and Clerical Services
+126,43-9041,Less than one year,General Office Occupations and Clerical Services
+127,31-9099,Less than one year,Medication Aide
+128,53-5021,Less than one year,Marine Science/Merchant Marine Officer
+129,53-5031,Less than one year,Marine Science/Merchant Marine Officer
+130,49-9071,Less than one year,Building/Property Maintenance
+131,37-1011,Less than one year,Building/Property Maintenance
+132,31-1011,Less than one year,Home Health Aide/Home Attendant
+133,39-9021,Less than one year,Home Health Aide/Home Attendant
+134,51-9141,Less than one year,Industrial Electronics Technology/Technician
+135,17-1021,Less than one year,Geographic Information Science and Cartography
+136,43-9011,Less than one year,Data Processing and Data Processing Technology/Technician
+137,49-2092,Less than one year,"Electrical/Electronics Equipment Installation and Repair, General"
+138,51-4012,Less than one year,Computer Numerically Controlled (CNC) Machinist Technology/CNC Machinist
+139,47-2152,Less than one year,Plumbing Technology/Plumber
+140,51-9071,Less than one year,Metal and Jewelry Arts
+141,41-3099,Less than one year,Retailing and Retail Operations
+142,47-4071,Less than one year,Plumbing Technology/Plumber
+143,49-9092,Less than one year,"Diver, Professional and Instructor"
+144,41-3041,Less than one year,Selling Skills and Sales Operations
+145,31-9093,Less than one year,Sterile Processing Technology/Technician
+146,47-5021,Less than one year,Construction/Heavy Equipment/Earthmoving Equipment Operation
+147,47-4051,Less than one year,Construction/Heavy Equipment/Earthmoving Equipment Operation
+148,47-4061,Less than one year,Construction/Heavy Equipment/Earthmoving Equipment Operation
+149,45-4022,Less than one year,Construction/Heavy Equipment/Earthmoving Equipment Operation
+150,47-5042,Less than one year,Construction/Heavy Equipment/Earthmoving Equipment Operation
+151,47-5041,Less than one year,Construction/Heavy Equipment/Earthmoving Equipment Operation
+152,47-2071,Less than one year,Construction/Heavy Equipment/Earthmoving Equipment Operation
+153,47-2072,Less than one year,Construction/Heavy Equipment/Earthmoving Equipment Operation
+154,47-2073,Less than one year,Construction/Heavy Equipment/Earthmoving Equipment Operation
+155,53-7032,Less than one year,Construction/Heavy Equipment/Earthmoving Equipment Operation
+156,53-7031,Less than one year,Construction/Heavy Equipment/Earthmoving Equipment Operation
+157,53-7021,Less than one year,Construction/Heavy Equipment/Earthmoving Equipment Operation
+158,53-7041,Less than one year,Construction/Heavy Equipment/Earthmoving Equipment Operation
+159,41-2022,Less than one year,Selling Skills and Sales Operations
+160,41-4011,Less than one year,Selling Skills and Sales Operations
+161,41-3011,Less than one year,Selling Skills and Sales Operations
+162,29-2099,Less than one year,Renal/Dialysis Technologist/Technician
+163,53-4021,Less than one year,Railroad and Railway Transportation
+164,53-4031,Less than one year,Railroad and Railway Transportation
+165,53-4041,Less than one year,Railroad and Railway Transportation
+166,53-1031,Less than one year,Railroad and Railway Transportation
+167,53-4013,Less than one year,Railroad and Railway Transportation
+168,53-4011,Less than one year,Railroad and Railway Transportation
+169,51-4111,Less than one year,Tool and Die Technology/Technician
+170,51-8031,Less than one year,Water Quality and Wastewater Treatment Management and Recycling Technology/Technician
+171,51-7042,Less than one year,Cabinetmaking and Millwork
+172,43-5061,Less than one year,"Parts, Warehousing, and Inventory Management Operations"
+173,47-2044,Less than one year,Mason/Masonry
+174,47-2021,Less than one year,Mason/Masonry
+175,47-2022,Less than one year,Mason/Masonry
+176,51-7031,Less than one year,Cabinetmaking and Millwork
+177,51-7032,Less than one year,Cabinetmaking and Millwork
+178,51-7041,Less than one year,Cabinetmaking and Millwork
+179,51-7011,Less than one year,Cabinetmaking and Millwork
+180,35-3011,Less than one year,Bartending/Bartender
+181,25-4031,Less than one year,Library and Archives Assisting
+182,31-2012,Less than one year,Rehabilitation Aide
+183,31-2022,Less than one year,Rehabilitation Aide
+184,31-9094,Less than one year,Medical Transcription/Transcriptionist
+185,49-9031,Less than one year,Appliance Installation and Repair Technology/Technician
+186,47-2231,Less than one year,Solar Energy Technology/Technician
+187,49-3053,Less than one year,Small Engine Mechanics and Repair Technology/Technician
+188,29-1023,Less than one year,Orthodontics/Orthodontology
+189,49-2021,Less than one year,Communications Systems Installation and Repair Technology
+190,49-2022,Less than one year,Communications Systems Installation and Repair Technology
+191,49-2097,Less than one year,Communications Systems Installation and Repair Technology
+192,27-4013,Less than one year,Communications Systems Installation and Repair Technology
+193,49-9052,Less than one year,Communications Systems Installation and Repair Technology
+194,43-5032,Less than one year,"Traffic, Customs, and Transportation Clerk/Technician"
+195,29-2035,Less than one year,Magnetic Resonance Imaging (MRI) Technology/Technician
+196,43-4171,Less than one year,Receptionist
+197,47-4011,Less than one year,Building/Home/Construction Inspection/Inspector
+198,47-2081,Less than one year,Drywall Installation/Drywaller
+199,49-9063,Less than one year,Musical Instrument Fabrication and Repair
+200,47-4041,Less than one year,Hazardous Materials Management and Waste Technology/Technician
+201,33-9092,Less than one year,Natural Resources Law Enforcement and Protective Services
+202,47-5013,Less than one year,Mining Technology/Technician
+203,51-7021,Less than one year,Furniture Design and Manufacturing
+204,39-2021,Less than one year,Dog/Pet/Animal Grooming
+205,51-9083,Less than one year,Ophthalmic Laboratory Technology/Technician
+206,47-2181,Less than one year,Roofer
+207,53-2031,Less than one year,Airline Flight Attendant
+208,19-4011,Less than one year,Food Technology and Processing
+209,29-1022,Less than one year,Oral/Maxillofacial Surgery
+210,47-5012,Less than one year,Well Drilling/Driller
+211,47-5011,Less than one year,Well Drilling/Driller
+212,51-3023,Less than one year,Meat Cutting/Meat Cutter
+213,51-3021,Less than one year,Meat Cutting/Meat Cutter
+214,47-2221,Less than one year,Metal Building Assembly/Assembler
+215,51-6042,Less than one year,"Shoe, Boot and Leather Repair"
+216,51-6041,Less than one year,"Shoe, Boot and Leather Repair"
+217,49-3052,At least two but less than four years,Motorcycle Maintenance and Repair Technology/Technician
+218,17-3021,At least two but less than four years,Aeronautical/Aerospace Engineering Technology/Technician
+219,23-2091,At least two but less than four years,Court Reporting/Court Reporter
+220,47-2131,At least two but less than four years,Insulator
+221,47-2132,At least two but less than four years,Insulator
+222,31-9092,At least one but less than two years,Medical/Clinical Assistant
+223,39-5094,At least one but less than two years,"Cosmetology/Cosmetologist, General"
+224,39-5012,At least one but less than two years,"Cosmetology/Cosmetologist, General"
+225,39-5092,At least one but less than two years,"Cosmetology/Cosmetologist, General"
+226,39-5091,At least one but less than two years,"Cosmetology/Cosmetologist, General"
+227,29-2061,At least one but less than two years,Licensed Practical/Vocational Nurse Training
+228,49-9021,At least one but less than two years,"Heating, Air Conditioning, Ventilation and Refrigeration Maintenance Technology/Technician"
+229,31-9091,At least one but less than two years,Dental Assisting/Assistant
+230,39-5011,At least one but less than two years,Barbering/Barber
+231,47-2111,At least one but less than two years,Electrician
+232,49-9097,At least one but less than two years,Electrician
+233,49-2098,At least one but less than two years,Electrician
+234,29-2052,At least one but less than two years,Pharmacy Technician/Assistant
+235,49-3031,At least one but less than two years,Diesel Mechanics Technology/Technician
+236,51-9122,At least one but less than two years,Autobody/Collision and Repair Technology/Technician
+237,49-3022,At least one but less than two years,Autobody/Collision and Repair Technology/Technician
+238,49-3021,At least one but less than two years,Autobody/Collision and Repair Technology/Technician
+239,49-9051,At least one but less than two years,Lineworker
+240,49-3051,At least one but less than two years,Marine Maintenance/Fitter and Ship Repair Technology/Technician
+241,43-6012,At least one but less than two years,Legal Administrative Assistant/Secretary
+242,51-9061,At least one but less than two years,Quality Control Technology/Technician
+243,29-2057,At least one but less than two years,Ophthalmic Technician/Technologist
+244,51-4061,At least one but less than two years,Sheet Metal Technology/Sheetworking
+245,47-2211,At least one but less than two years,Sheet Metal Technology/Sheetworking
+246,51-4062,At least one but less than two years,Sheet Metal Technology/Sheetworking
+247,51-2031,At least one but less than two years,Engine Machinist
+248,51-6093,At least one but less than two years,Upholstery/Upholsterer
+249,49-9064,At least one but less than two years,Watchmaking and Jewelrymaking
+250,51-2093,At least one but less than two years,Watchmaking and Jewelrymaking
+251,49-9094,At least one but less than two years,Locksmithing and Safe Repair
+252,47-2141,At least one but less than two years,Painting/Painter and Wall Coverer
+253,47-2142,At least one but less than two years,Painting/Painter and Wall Coverer
+254,47-2121,At least one but less than two years,Glazier
+255,47-2051,At least one but less than two years,Concrete Finishing/Concrete Finisher
+256,11-9199,4 years,"Business Administration and Management, General"
+257,25-1011,4 years,"Business Administration and Management, General"
+258,25-2031,4 years,"Biology/Biological Sciences, General"
+259,11-9121,4 years,"Biology/Biological Sciences, General"
+260,11-9041,4 years,Mechanical Engineering
+261,19-3039,4 years,"Psychology, General"
+262,25-1066,4 years,"Psychology, General"
+263,25-1032,4 years,Mechanical Engineering
+264,19-3031,4 years,"Psychology, General"
+265,25-1042,4 years,"Biology/Biological Sciences, General"
+266,19-3032,4 years,"Psychology, General"
+267,19-1029,4 years,"Biology/Biological Sciences, General"
+268,13-2031,4 years,Accounting
+269,13-2041,4 years,Accounting
+270,25-1122,4 years,Speech Communication and Rhetoric
+271,11-3021,4 years,"Computer and Information Sciences, General"
+272,25-1121,4 years,"Art/Art Studies, General"
+273,27-3043,4 years,Speech Communication and Rhetoric
+274,15-1111,4 years,"Computer and Information Sciences, General"
+275,19-3094,4 years,"Political Science and Government, General"
+276,17-2011,4 years,Mechanical Engineering
+277,13-2011,4 years,Accounting
+278,25-1065,4 years,"Political Science and Government, General"
+279,13-2061,4 years,Accounting
+280,13-2081,4 years,Accounting
+281,25-1021,4 years,"Computer and Information Sciences, General"
+282,15-1199,4 years,"Computer and Information Sciences, General"
+283,19-3011,4 years,"Economics, General"
+284,15-1133,4 years,Computer Science
+285,25-1123,4 years,"English Language and Literature, General"
+286,11-2011,4 years,"Marketing/Marketing Management, General"
+287,25-1063,4 years,"Economics, General"
+288,19-3022,4 years,"Economics, General"
+289,13-2051,4 years,"Finance, General"
+290,11-3031,4 years,"Finance, General"
+291,33-1012,4 years,Criminal Justice/Safety Studies
+292,13-2052,4 years,"Finance, General"
+293,15-1132,4 years,Computer Science
+294,13-2099,4 years,"Finance, General"
+295,13-2072,4 years,"Finance, General"
+296,27-3011,4 years,Speech Communication and Rhetoric
+297,27-3031,4 years,Speech Communication and Rhetoric
+298,19-3041,4 years,Sociology
+299,11-2021,4 years,"Marketing/Marketing Management, General"
+300,13-1161,4 years,"Marketing/Marketing Management, General"
+301,27-3012,4 years,Speech Communication and Rhetoric
+302,15-1131,4 years,Computer Science
+303,27-3041,4 years,Journalism
+304,17-2141,4 years,Mechanical Engineering
+305,25-1067,4 years,Sociology
+306,25-1193,4 years,Sport and Fitness Administration/Management
+307,25-2021,4 years,Elementary Education and Teaching
+308,25-1022,4 years,"Mathematics, General"
+309,15-1152,4 years,Computer Science
+310,29-1128,4 years,Kinesiology and Exercise Science
+311,39-9031,4 years,Sport and Fitness Administration/Management
+312,27-2022,4 years,Sport and Fitness Administration/Management
+313,33-1011,4 years,Criminal Justice/Safety Studies
+314,15-2041,4 years,"Mathematics, General"
+315,19-3093,4 years,"History, General"
+316,25-1125,4 years,"History, General"
+317,27-1013,4 years,"Art/Art Studies, General"
+318,15-2021,4 years,"Mathematics, General"
+319,15-1134,4 years,Computer Science
+320,27-3022,4 years,Journalism
+321,19-1042,4 years,Biochemistry
+322,27-2012,4 years,"Drama and Dramatics/Theatre Arts, General"
+323,25-2022,4 years,Physical Education Teaching and Coaching
+324,27-3091,4 years,Spanish Language and Literature
+325,25-1124,4 years,Spanish Language and Literature
+326,15-1142,4 years,"Computer and Information Sciences, General"
+327,15-1141,4 years,"Computer and Information Sciences, General"
+328,27-3021,4 years,Journalism
+329,25-1126,4 years,Bible/Biblical Studies
+330,25-1041,4 years,"Animal Sciences, General"
+331,17-2072,4 years,Electrical and Electronics Engineering
+332,17-2071,4 years,Electrical and Electronics Engineering
+333,25-1052,4 years,"Chemistry, General"
+334,19-2031,4 years,"Chemistry, General"
+335,27-4021,4 years,"Art/Art Studies, General"
+336,27-2042,4 years,"Music, General"
+337,21-1094,4 years,"Public Health, General"
+338,27-1012,4 years,"Art/Art Studies, General"
+339,17-2051,4 years,"Civil Engineering, General"
+340,25-1192,4 years,"Human Development and Family Studies, General"
+341,21-1091,4 years,"Public Health, General"
+342,19-2041,4 years,Environmental Science
+343,25-1053,4 years,Environmental Science
+344,11-9013,4 years,"Animal Sciences, General"
+345,25-1062,4 years,Jewish/Judaic Studies
+346,27-2011,4 years,"Drama and Dramatics/Theatre Arts, General"
+347,25-9021,4 years,Child Development
+348,29-1127,4 years,Audiology/Audiologist and Speech-Language Pathology/Pathologist
+349,25-1031,4 years,Interior Design
+350,17-2041,4 years,Chemical Engineering
+351,11-9051,4 years,"Hospitality Administration/Management, General"
+352,19-3091,4 years,Anthropology
+353,29-1031,4 years,Dietetics/Dietitian
+354,19-1021,4 years,Biochemistry
+355,27-2021,4 years,"Health and Physical Education/Fitness, General"
+356,25-1061,4 years,Anthropology
+357,11-9081,4 years,"Hospitality Administration/Management, General"
+358,29-1181,4 years,Audiology/Audiologist and Speech-Language Pathology/Pathologist
+359,13-1071,4 years,"Human Resources Management/Personnel Administration, General"
+360,27-2041,4 years,"Music Performance, General"
+361,27-4032,4 years,Cinematography and Film/Video Production
+362,19-2012,4 years,"Physics, General"
+363,45-1011,4 years,"Animal Sciences, General"
+364,25-1051,4 years,"Geology/Earth Science, General"
+365,29-2051,4 years,Dietetics/Dietitian
+366,25-1054,4 years,"Physics, General"
+367,13-1075,4 years,"Human Resources Management/Personnel Administration, General"
+368,11-3121,4 years,"Human Resources Management/Personnel Administration, General"
+369,13-1151,4 years,"Human Resources Management/Personnel Administration, General"
+370,15-2011,4 years,"Statistics, General"
+371,17-2061,4 years,"Computer Engineering, General"
+372,17-2031,4 years,Bioengineering and Biomedical Engineering
+373,19-2042,4 years,"Geology/Earth Science, General"
+374,13-1141,4 years,"Human Resources Management/Personnel Administration, General"
+375,11-3111,4 years,"Human Resources Management/Personnel Administration, General"
+376,11-3131,4 years,"Human Resources Management/Personnel Administration, General"
+377,17-2112,4 years,Industrial Engineering
+378,25-1043,4 years,"Natural Resources/Conservation, General"
+379,19-2043,4 years,"Geology/Earth Science, General"
+380,19-1011,4 years,"Animal Sciences, General"
+381,17-1011,4 years,Architecture
+382,19-1031,4 years,"Natural Resources/Conservation, General"
+383,11-2031,4 years,Public Relations/Image Management
+384,25-1064,4 years,Geography
+385,19-1023,4 years,"Wildlife, Fish and Wildlands Science and Management"
+386,19-3092,4 years,Geography
+387,29-9091,4 years,Athletic Training/Trainer
+388,29-2011,4 years,Clinical Laboratory Science/Medical Technology/Technologist
+389,13-1081,4 years,Operations Management and Supervision
+390,49-1011,4 years,Operations Management and Supervision
+391,51-1011,4 years,Operations Management and Supervision
+392,19-1032,4 years,"Natural Resources/Conservation, General"
+393,27-2032,4 years,"Dance, General"
+394,27-2031,4 years,"Dance, General"
+395,25-4011,4 years,"Art History, Criticism and Conservation"
+396,25-4012,4 years,"Art History, Criticism and Conservation"
+397,25-4013,4 years,"Art History, Criticism and Conservation"
+398,13-2053,4 years,Insurance
+399,19-1013,4 years,Agronomy and Crop Science
+400,15-2091,4 years,"Applied Mathematics, General"
+401,27-3042,4 years,"Professional, Technical, Business, and Scientific Writing"
+402,19-1022,4 years,"Microbiology, General"
+403,17-2131,4 years,Materials Engineering
+404,33-3031,4 years,"Wildlife, Fish and Wildlands Science and Management"
+405,13-1011,4 years,"Purchasing, Procurement/Acquisitions and Contracts Management"
+406,17-2171,4 years,Petroleum Engineering
+407,25-2023,4 years,Agricultural Teacher Education
+408,25-2032,4 years,Agricultural Teacher Education
+409,19-1012,4 years,Food Science
+410,19-4092,4 years,Forensic Science and Technology
+411,41-1011,4 years,Retailing and Retail Operations
+412,17-2081,4 years,Environmental/Environmental Health Engineering
+413,17-2111,4 years,Environmental/Environmental Health Engineering
+414,13-1023,4 years,"Sales, Distribution, and Marketing Operations, General"
+415,41-3021,4 years,Insurance
+416,13-1031,4 years,Insurance
+417,17-1012,4 years,Landscape Architecture
+418,21-1015,4 years,Vocational Rehabilitation Counseling/Counselor
+419,17-2021,4 years,Agricultural Engineering
+420,29-1125,4 years,Therapeutic Recreation/Recreational Therapy
+421,19-2021,4 years,"Atmospheric Sciences and Meteorology, General"
+422,11-3061,4 years,"Purchasing, Procurement/Acquisitions and Contracts Management"
+423,39-7012,4 years,Tourism and Travel Services Management
+424,19-2011,4 years,Astronomy
+425,13-1121,4 years,Meeting and Event Planning
+426,17-2161,4 years,Nuclear Engineering
+427,17-2151,4 years,Geological/Geophysical Engineering
+428,43-4041,4 years,Banking and Financial Support Services
+429,43-4131,4 years,Banking and Financial Support Services
+430,43-3071,4 years,Banking and Financial Support Services
+431,43-4141,4 years,Banking and Financial Support Services
+432,43-3011,4 years,Banking and Financial Support Services
+433,17-2121,4 years,Naval Architecture and Marine Engineering
+434,45-3011,4 years,Fishing and Fisheries Sciences and Management
+435,29-2033,4 years,Nuclear Medical Technology/Technologist
+436,51-5112,4 years,"Graphic and Printing Equipment Operator, General Production"
+437,51-9194,4 years,"Graphic Communications, Other"
+438,45-2011,4 years,Agricultural and Food Products Processing
+439,29-1141,2 years,Registered Nursing/Registered Nurse
+440,25-1072,2 years,Registered Nursing/Registered Nurse
+441,11-3071,2 years,"Business Administration and Management, General"
+442,11-9151,2 years,"Business Administration and Management, General"
+443,11-2022,2 years,"Business Administration and Management, General"
+444,11-9021,2 years,"Business Administration and Management, General"
+445,11-3051,2 years,"Business Administration and Management, General"
+446,13-1051,2 years,"Business Administration and Management, General"
+447,11-1021,2 years,"Business Administration and Management, General"
+448,11-1011,2 years,"Business Administration and Management, General"
+449,13-1111,2 years,"Business Administration and Management, General"
+450,11-3011,2 years,"Business Administration and Management, General"
+451,25-1111,2 years,Criminal Justice/Safety Studies
+452,15-1143,2 years,"Computer and Information Sciences, General"
+453,15-1122,2 years,Computer Science
+454,15-1121,2 years,"Computer and Information Sciences, General"
+455,27-1024,2 years,Graphic Design
+456,35-1011,2 years,Culinary Arts/Chef Training
+457,19-3099,2 years,"Social Sciences, General"
+458,33-3021,2 years,Criminal Justice/Police Science
+459,33-9021,2 years,Criminal Justice/Police Science
+460,33-3051,2 years,Criminal Justice/Police Science
+461,33-3011,2 years,Criminal Justice/Police Science
+462,25-2011,2 years,Early Childhood Education and Teaching
+463,35-1012,2 years,Culinary Arts/Chef Training
+464,27-1014,2 years,Graphic Design
+465,29-2034,2 years,Radiologic Technology/Science - Radiographer
+466,35-2014,2 years,Culinary Arts/Chef Training
+467,25-2012,2 years,Early Childhood Education and Teaching
+468,23-2093,2 years,Legal Assistant/Paralegal
+469,23-2011,2 years,Legal Assistant/Paralegal
+470,13-1022,2 years,Fashion Merchandising
+471,29-2054,2 years,Respiratory Care Therapy/Therapist
+472,17-3023,2 years,"Electrical, Electronic and Communications Engineering Technology/Technician"
+473,19-4061,2 years,"Social Sciences, General"
+474,41-4012,2 years,Fashion Merchandising
+475,29-2021,2 years,Dental Hygiene/Hygienist
+476,29-1126,2 years,Respiratory Care Therapy/Therapist
+477,33-2011,2 years,Fire Science/Fire-fighting
+478,33-2021,2 years,Fire Science/Fire-fighting
+479,27-1022,2 years,Fashion/Apparel Design
+480,27-1011,2 years,Graphic Design
+481,29-2071,2 years,Health Information/Medical Records Technology/Technician
+482,27-1021,2 years,"Design and Visual Communications, General"
+483,29-2056,2 years,Veterinary/Animal Health Technology/Technician and Veterinary Assistant
+484,33-2022,2 years,Fire Science/Fire-fighting
+485,31-2021,2 years,Physical Therapy Technician/Assistant
+486,21-2021,2 years,Bible/Biblical Studies
+487,29-1124,2 years,Medical Radiologic Technology/Science - Radiation Therapist
+488,31-2011,2 years,Occupational Therapist Assistant
+489,29-9011,2 years,Occupational Safety and Health Technology/Technician
+490,17-3026,2 years,Industrial Technology/Technician
+491,51-3011,2 years,Baking and Pastry Arts/Baker/Pastry Chef
+492,33-3012,2 years,"Corrections and Criminal Justice, Other"
+493,27-1025,2 years,Interior Design
+494,29-2032,2 years,Diagnostic Medical Sonography/Sonographer and Ultrasound Technician
+495,27-1027,2 years,"Design and Visual Communications, General"
+496,17-3024,2 years,Instrumentation Technology/Technician
+497,17-3027,2 years,Mechanical Engineering/Mechanical Technology/Technician
+498,43-6011,2 years,"Administrative Assistant and Secretarial Science, General"
+499,43-6014,2 years,"Administrative Assistant and Secretarial Science, General"
+500,17-3029,2 years,"Heating, Ventilation, Air Conditioning and Refrigeration Engineering Technology/Technician"
+501,27-4031,2 years,Cinematography and Film/Video Production
+502,29-2012,2 years,Clinical/Medical Laboratory Technician
+503,49-3011,2 years,Airframe Mechanics and Aircraft Maintenance Technology/Technician
+504,51-2011,2 years,Airframe Mechanics and Aircraft Maintenance Technology/Technician
+505,17-3011,2 years,"Drafting and Design Technology/Technician, General"
+506,29-2055,2 years,Surgical Technology/Technologist
+507,27-4014,2 years,Recording Arts Technology/Technician
+508,33-3052,2 years,Security and Loss Prevention Services
+509,39-4011,2 years,"Funeral Service and Mortuary Science, General"
+510,39-4031,2 years,"Funeral Service and Mortuary Science, General"
+511,11-9061,2 years,"Funeral Service and Mortuary Science, General"
+512,17-3022,2 years,Construction Engineering Technology/Technician
+513,27-4011,2 years,Recording Arts Technology/Technician
+514,37-1012,2 years,"Applied Horticulture/Horticulture Operations, General"
+515,31-1013,2 years,Psychiatric/Mental Health Services Technician
+516,29-2053,2 years,Psychiatric/Mental Health Services Technician
+517,21-1011,2 years,Substance Abuse/Addiction Counseling
+518,43-4061,2 years,Community Organization and Advocacy
+519,19-4041,2 years,Petroleum Technology/Technician
+520,27-4012,2 years,Radio and Television Broadcasting Technology/Technician
+521,19-4031,2 years,Chemical Technology/Technician
+522,51-8091,2 years,Chemical Technology/Technician
+523,51-9011,2 years,Chemical Technology/Technician
+524,29-2031,2 years,Cardiovascular Technology/Technologist
+525,25-9041,2 years,Teacher Assistant/Aide
+526,19-4099,2 years,"Science Technologies/Technicians, Other"
+527,19-4091,2 years,"Science Technologies/Technicians, Other"
+528,49-9099,2 years,"Electrical/Electronics Equipment Installation and Repair, General"
+529,49-3042,2 years,Heavy Equipment Maintenance Technology/Technician
+530,19-2099,2 years,Natural Sciences
+531,37-3012,2 years,Landscaping and Groundskeeping
+532,39-2011,2 years,Equestrian/Equine Studies
+533,33-1021,2 years,Fire Services Administration
+534,53-2011,2 years,Airline/Commercial/Professional Pilot and Flight Crew
+535,53-2012,2 years,Airline/Commercial/Professional Pilot and Flight Crew
+536,17-3031,2 years,Surveying Technology/Surveying
+537,51-5111,2 years,"Graphic Communications, General"
+538,17-1022,2 years,Surveying Technology/Surveying
+539,49-9062,2 years,Biomedical Technology/Technician
+540,41-1012,2 years,Selling Skills and Sales Operations
+541,19-4051,2 years,Nuclear/Nuclear Power Technology/Technician
+542,49-3041,2 years,Agricultural Mechanics and Equipment/Machine Technology
+543,49-3043,2 years,Heavy Equipment Maintenance Technology/Technician
+544,41-9011,2 years,Retailing and Retail Operations
+545,43-9031,2 years,Prepress/Desktop Publishing and Digital Imaging Design
+546,51-8011,2 years,Nuclear/Nuclear Power Technology/Technician
+547,19-4021,2 years,Biology Technician/Biotechnology Laboratory Technician
+548,51-6092,2 years,Apparel and Textile Manufacture
+549,49-9095,2 years,Building/Construction Site Management/Manager
+550,19-4093,2 years,Forest Technology/Technician
+551,29-2081,2 years,Opticianry/Ophthalmic Dispensing Optician
+552,49-2091,2 years,Avionics Maintenance Technology/Technician
+553,51-9081,2 years,Dental Laboratory Technology/Technician
+554,53-2022,2 years,Air Traffic Controller
+555,53-2021,2 years,Air Traffic Controller
+556,17-3025,2 years,Environmental Engineering Technology/Environmental Technology
+557,45-2041,2 years,Agricultural/Farm Supplies Retailing and Wholesaling
+558,13-1021,2 years,Agricultural/Farm Supplies Retailing and Wholesaling
+559,45-2091,2 years,Agricultural Power Machinery Operation
+560,39-1021,2 years,Salon/Beauty Salon Management/Manager
+561,51-4071,2 years,Ironworking/Ironworker
+562,29-2092,2 years,Hearing Instrument Specialist
+563,47-2011,2 years,Boilermaking/Boilermaker
+564,21-1093,2 years,Developmental Services Worker
+565,11-9071,2 years,Casino Management
+566,39-1012,2 years,Casino Management
+567,39-1011,2 years,Casino Management
+568,41-9012,2 years,Fashion Modeling
+569,47-5031,2 years,Blasting/Blaster
+570,47-2042,2 years,"Carpet, Floor, and Tile Worker"
+571,47-2043,2 years,"Carpet, Floor, and Tile Worker"
+572,47-2041,2 years,"Carpet, Floor, and Tile Worker"
+573,47-2053,2 years,"Carpet, Floor, and Tile Worker"
