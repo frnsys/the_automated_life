@@ -27,17 +27,53 @@ const ProgramInfoStyle = styled('div')`
   }
 `;
 
-class School extends Component {
+const IndustryStyle = styled('h3')`
+  cursor: pointer;
+  margin: 1em 0 0 0;
+  color: red;
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+class IndustryPrograms extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedProgram: 0
+      open: props.open || false
+    };
+  }
+
+  render() {
+    let ind = this.props.industry;
+    return <div>
+      <IndustryStyle onClick={() => this.setState({open: !this.state.open})}>{ind}</IndustryStyle>
+      <ul style={{display: this.state.open ? 'block' : 'none'}}>
+        {programs[ind].map((p, i) => {
+          return <li key={i} onClick={() => this.props.onClick(p)}>
+            <ProgramInfoStyle selected={this.props.selected == p}>
+              <h5>{toTitleCase(jobs[p.job.toString()].name)} <span style={{color: '#777', fontWeight: 'normal'}}>{p.years} years</span></h5>
+              <span style={{fontSize: '0.8em', color: '#777'}}>Study <span style={{color: '#222'}}>{p.name}</span></span>
+            </ProgramInfoStyle>
+          </li>;
+        })}
+      </ul>
+    </div>;
+  }
+}
+
+class School extends Component {
+  constructor(props) {
+    super(props);
+    let ind = Object.keys(programs)[0];
+    this.state = {
+      selectedProgram: programs[ind][0]
     };
   }
 
   enrollSchool(withLoan, totalCost) {
     graph.lock();
-    let nextJob = this.props.jobs[programs[this.state.selectedProgram].job];
+    let nextJob = this.props.jobs[this.state.selectedProgram.job];
     this.props.enrollSchool(this.state.selectedProgram, nextJob);
 		if (withLoan) {
 			this.props.getLoan(totalCost);
@@ -60,13 +96,11 @@ class School extends Component {
         programsInfo = <div style={{margin: '1em 0 0 0'}}>
           <h3 style={{margin: '0 0 0.5em 0'}}>Select a program to enroll in:</h3>
           <ul style={{maxHeight: '150px', overflowY: 'scroll'}}>
-            {programs.map((p, i) => {
-              return <li key={i} onClick={() => this.setState({selectedProgram: i})}>
-                <ProgramInfoStyle selected={i == this.state.selectedProgram}>
-                  <h5>{toTitleCase(jobs[p.job.toString()].name)} <span style={{color: '#777', fontWeight: 'normal'}}>{p.years} years</span></h5>
-                  <span style={{fontSize: '0.8em', color: '#777'}}>Study <span style={{color: '#222'}}>{p.name}</span></span>
-                </ProgramInfoStyle>
-              </li>;
+            {Object.keys(programs).map((ind, i) => {
+              return <IndustryPrograms key={i}
+                industry={ind}
+                open={i == 0} selected={this.state.selectedProgram}
+                onClick={(p) => this.setState({selectedProgram: p})} />;
             })}
           </ul>
         </div>;

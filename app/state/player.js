@@ -2,7 +2,6 @@ import config from 'config';
 import logic from '../logic';
 import skills from 'data/skills.json'
 import education from 'data/education.json'
-import programs from 'data/programs.json';
 import graph from '../ui/3d/graph';
 
 const student = {
@@ -93,7 +92,7 @@ function reducer(state={}, action) {
       let {program, nextJob} = action.payload;
       let nextLevel = education[state.education+1];
       if (nextLevel.name == 'Secondary Degree') {
-        state.program = programs[program];
+        state.program = program;
         state.postGradJob = nextJob;
       }
       state.cash -= nextLevel.cost;

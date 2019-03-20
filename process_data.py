@@ -126,6 +126,10 @@ for i, r in tqdm(df.iterrows()):
 
 # Inverse indices for lookups
 jobs_inv = {j['name']: i for i, j in jobs.items()}
+jobs_industries = {}
+for ind, job_ids in industries_jobs.items():
+    for id in job_ids:
+        jobs_industries[id] = ind
 
 # Skill-skill similarity
 skill_skill = pd.read_csv('data/src/skillSkill.csv', delimiter='\t')
@@ -248,14 +252,17 @@ program_years = {
     '4 years': 4,
     '2 years': 2
 }
-secondary_programs = []
+secondary_programs = defaultdict(list)
 programs_df = pd.read_csv('data/src/job_lengths.csv')
 for i, r in programs_df.iterrows():
     job_id = job_onet_id_to_id.get(r.job)
     if job_id is None:
         print('Skipping', r.job)
         continue
-    secondary_programs.append({
+    ind = jobs_industries.get(job_id)
+    if ind is None:
+        continue
+    secondary_programs[ind].append({
         'name': r.course_name,
         'job': job_id,
         'years': program_years[r.length]
