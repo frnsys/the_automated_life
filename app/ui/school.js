@@ -2,13 +2,43 @@ import config from 'config';
 import {connect} from 'react-redux';
 import React, { Component } from 'react';
 import { Button } from './styles'
+import styled from 'styled-components';
 import education from 'data/education.json';
+import programs from 'data/programs.json';
+import jobs from 'data/jobs.json';
 import graph from './3d/graph';
 
+function toTitleCase(str) {
+  return str.replace(/\w\S*/g, (txt) => {
+    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+  });
+}
+
+const ProgramInfoStyle = styled('div')`
+  background: ${props => props.selected ? '#7efc82' : 'none'};
+  &:hover {
+    background: #aefcb0;
+  }
+  cursor: pointer;
+  margin-bottom: 0.5em;
+
+  h5 {
+    margin: 0;
+  }
+`;
+
 class School extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedProgram: 0
+    };
+  }
+
   enrollSchool(withLoan, totalCost) {
     graph.lock();
-    this.props.enrollSchool();
+    let nextJob = this.props.jobs[programs[this.state.selectedProgram].job];
+    this.props.enrollSchool(this.state.selectedProgram, nextJob);
 		if (withLoan) {
 			this.props.getLoan(totalCost);
 		}
@@ -16,17 +46,34 @@ class School extends Component {
   }
 
   render() {
-		let alreadyEnrolled = this.props.job.name == 'Student';
-		let fullyEducated = !(this.props.education < education.length - 1);
+		let alreadyEnrolled = this.props.player.job.name == 'Student';
+		let fullyEducated = !(this.props.player.education < education.length - 1);
 		let body = '';
 		if (alreadyEnrolled) {
 			body = <h2>You are already enrolled.</h2>;
 		} else if (fullyEducated) {
 			body = <h2>You are fully educated.</h2>;
 		} else {
-			let nextLevel = education[this.props.education+1];
+			let nextLevel = education[this.props.player.education+1];
+			let programsInfo = '';
+      if (nextLevel.name == 'Secondary Degree') {
+        programsInfo = <div style={{margin: '1em 0 0 0'}}>
+          <h3 style={{margin: '0 0 0.5em 0'}}>Select a program to enroll in:</h3>
+          <ul style={{maxHeight: '150px', overflowY: 'scroll'}}>
+            {programs.map((p, i) => {
+              return <li key={i} onClick={() => this.setState({selectedProgram: i})}>
+                <ProgramInfoStyle selected={i == this.state.selectedProgram}>
+                  <h5>{toTitleCase(jobs[p.job.toString()].name)} <span style={{color: '#777', fontWeight: 'normal'}}>{p.years} years</span></h5>
+                  <span style={{fontSize: '0.8em', color: '#777'}}>Study <span style={{color: '#222'}}>{p.name}</span></span>
+                </ProgramInfoStyle>
+              </li>;
+            })}
+          </ul>
+        </div>;
+      }
+
 			let totalCost = (nextLevel.years * 12 * config.monthlyExpenses) + nextLevel.cost;
-			let needsLoan = totalCost > this.props.cash;
+			let needsLoan = totalCost > this.props.player.cash;
 			let loanInfo = '';
 			if (needsLoan) {
 				loanInfo = <div>
@@ -42,6 +89,7 @@ class School extends Component {
           <div className='item-box'>
             <div><b>Next level:</b> {nextLevel.name}</div>
             <div><b>Cost, with living expenses:</b> ${totalCost.toLocaleString()}</div>
+            {programsInfo}
           </div>
 					{loanInfo}
 					<Button onClick={() => this.enrollSchool(needsLoan, totalCost)}>Enroll</Button>
@@ -57,13 +105,20 @@ class School extends Component {
 }
 
 const mapStateToProps = (state, props) => {
-  return state.player;
+  return {
+    player: state.player,
+    jobs: state.jobs
+  };
 };
 
 const mapActionsToProps = {
-  enrollSchool: () => {
+  enrollSchool: (selectedProgram, nextJob) => {
     return {
-      type: 'player:enroll'
+      type: 'player:enroll',
+      payload: {
+        program: selectedProgram,
+        nextJob: nextJob
+      }
     };
   },
 	getLoan: (amount) => {

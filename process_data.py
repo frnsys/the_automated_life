@@ -82,6 +82,7 @@ skills_inv = {name: i for i, name in skills.items()}
 omitted_skills = [skills_inv[name] for name in omitted_skills]
 
 n_jobs = len(df)
+job_onet_id_to_id = {}
 for i, r in tqdm(df.iterrows()):
     id = r['Job Code']
     name = r[' Job Title'].strip()
@@ -119,6 +120,8 @@ for i, r in tqdm(df.iterrows()):
     }
     for ind in inds:
         industries_jobs[ind].append(idx)
+
+    job_onet_id_to_id[id] = idx
     assert len(job_skills) >= MIN_SKILLS
 
 # Inverse indices for lookups
@@ -237,8 +240,32 @@ for i, r in df.iterrows():
             'cost': 150000 # TODO
         })
 
+program_years = {
+    'More than 4 years': 6,
+    'Less than one year': 0.5,
+    'At least two but less than four years': 3,
+    'At least one but less than two years': 1.5,
+    '4 years': 4,
+    '2 years': 2
+}
+secondary_programs = []
+programs_df = pd.read_csv('data/src/job_lengths.csv')
+for i, r in programs_df.iterrows():
+    job_id = job_onet_id_to_id.get(r.job)
+    if job_id is None:
+        print('Skipping', r.job)
+        continue
+    secondary_programs.append({
+        'name': r.course_name,
+        'job': job_id,
+        'years': program_years[r.length]
+    })
+
 with open('data/education.json', 'w') as f:
     json.dump(education, f)
+
+with open('data/programs.json', 'w') as f:
+    json.dump(secondary_programs, f)
 
 with open('data/scenarios.json', 'w') as f:
     json.dump(scenarios, f)

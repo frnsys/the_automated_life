@@ -2,6 +2,7 @@ import config from 'config';
 import logic from '../logic';
 import skills from 'data/skills.json'
 import education from 'data/education.json'
+import programs from 'data/programs.json';
 import graph from '../ui/3d/graph';
 
 const student = {
@@ -19,7 +20,9 @@ const initialState = {
   performance: 0,
   cash: 0,
   debt: [],
-  education: 0,
+  education: 1,
+  program: null,
+  postGradJob: unemployed,
   schoolCountdown: 0, // months
   job: unemployed,
   jobProficiency: 0,
@@ -87,10 +90,15 @@ function reducer(state={}, action) {
       return {...state}
 
     case 'player:enroll':
+      let {program, nextJob} = action.payload;
       let nextLevel = education[state.education+1];
+      if (nextLevel.name == 'Secondary Degree') {
+        state.program = programs[program];
+        state.postGradJob = nextJob;
+      }
       state.cash -= nextLevel.cost;
       state.job = student;
-      state.schoolCountdown = nextLevel.years * 12;
+      state.schoolCountdown = (state.program ? state.program.years : nextLevel.years) * 12;
       return {...state}
     case 'player:learn':
       state.schoolCountdown -= 1;
@@ -102,7 +110,15 @@ function reducer(state={}, action) {
       if (state.debt.length > 0) {
         state.debt[state.debt.length-1].startedPayments = true;
       }
-      graph.unlock();
+
+      if (state.program !== null) {
+        graph.unlock(state.program.job, state);
+        state.program = null;
+        state.job = state.postGradJob;
+        state.postGradJob = unemployed;
+      } else {
+        graph.unlock();
+      }
       notify('Congratulations! You graduated.')
       return {...state}
 
