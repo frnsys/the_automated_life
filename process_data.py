@@ -268,6 +268,13 @@ for i, r in programs_df.iterrows():
         'years': program_years[r.length]
     })
 
+
+# Shorter job names
+names = pd.read_csv('data/src/job_names.csv')
+for j in jobs.values():
+    short_name = names[names.name == j['name']].short_name.values[0]
+    j['name'] = short_name
+
 with open('data/education.json', 'w') as f:
     json.dump(education, f)
 
