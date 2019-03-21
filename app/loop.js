@@ -89,6 +89,7 @@ function loop(now) {
       // Countdown player application
       if (player.application && player.application.countdown <= 0) {
         let job = jobs[player.application.id];
+        // TODO temporarily accepted to all jobs
         if (true || Math.random() <= player.application.prob) {
           store.dispatch({
             type: 'player:hire',
@@ -97,7 +98,7 @@ function loop(now) {
           notify(`You were hired as a ${job.name}.`);
           graph.reveal(player.application.id);
         } else {
-          notify(`Your application as a ${job.name} was rejected.`);
+          notify(`Your application as a ${job.name} was rejected because of your ${player.application.mainFactor}.`);
           graph.resetNodeColor(graph.appliedNode, player);
           graph.appliedNode = null;
         }

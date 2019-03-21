@@ -118,11 +118,13 @@ class Graph {
             valid = true;
           }
           if (!player.application && valid) {
+            let {prob, mainFactor} = logic.probabilityForJob(j);
             store.dispatch({
               type: 'player:apply',
               payload: {
                 id: id,
-                prob: logic.probabilityForJob(j)
+                prob: prob,
+                mainFactor: mainFactor
               }
             });
             this.appliedNode = node;

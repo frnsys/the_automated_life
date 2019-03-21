@@ -112,8 +112,16 @@ function probabilityForJob(job) {
 
   let skills = jobProficiency(job, player);
 
+  let factors = { performance, education, skills };
+  let mainFactor = Object.keys(factors).reduce((m, k) => {
+    if (m === null) return k;
+    return factors[k] < factors[m] ? k : m
+  }, null);
+
   console.log(`performance: ${performance}, education: ${education}, skills: ${skills}`);
-  return (performance + education + skills)/3;
+  console.log(mainFactor);
+  let prob = (performance + education + skills)/3;
+  return { prob, mainFactor };
 }
 
 // How much a job is automated
