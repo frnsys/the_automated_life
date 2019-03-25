@@ -5,7 +5,7 @@ legislators,legislator
 advertising and promotions managers,advertising manager
 marketing managers,marketing manager
 sales managers,sales manager
-public relations and fundraising managers,public relations and fundraising manager
+public relations and fundraising managers,PR and fundraising manager
 administrative services managers,administrative services manager
 computer and information systems managers,computer and information systems manager
 financial managers,financial manager
@@ -166,9 +166,9 @@ substance abuse and behavioral disorder counselors,substance abuse and behaviora
 marriage and family therapists,marriage and family therapist
 mental health counselors,mental health counselor
 rehabilitation counselors,rehabilitation counselor
-"child, family, and school social workers","child, family, and school social worker"
+"child, family, and school social workers",family social worker
 healthcare social workers,healthcare social worker
-mental health and substance abuse social workers,mental health and substance abuse social worker
+mental health and substance abuse social workers,mental health worker
 health educators,health educator
 probation officers and correctional treatment specialists,probation officer
 social and human service assistants,social and human service assistant
@@ -177,7 +177,7 @@ clergy,clergy
 "directors, religious activities and education",religious education director
 lawyers,lawyer
 judicial law clerks,judicial law clerk
-"administrative law judges, adjudicators, and hearing officers",hearing officer
+"administrative law judges, adjudicators, and hearing officers",adjudicator
 "arbitrators, mediators, and conciliators",arbitrator
 "judges, magistrate judges, and magistrates","judge
 "
@@ -192,7 +192,7 @@ court reporters,court reporter
 "agricultural sciences teachers, postsecondary",postsecondary agricultural sciences teacher
 "biological science teachers, postsecondary",postsecondary biological science teacher
 "forestry and conservation science teachers, postsecondary",postsecondary forestry and conservation science teacher
-"atmospheric, earth, marine, and space sciences teachers, postsecondary",postsecondary atmospheric/earth/marine/space sciences teacher
+"atmospheric, earth, marine, and space sciences teachers, postsecondary",postsecondary earth sciences teacher
 "chemistry teachers, postsecondary",postsecondary chemistry teacher
 "environmental science teachers, postsecondary",postsecondary environmental science teacher
 "physics teachers, postsecondary",postsecondary physics teacher
@@ -213,7 +213,7 @@ court reporters,court reporter
 "art, drama, and music teachers, postsecondary",postsecondary art/drama/music teacher
 "communications teachers, postsecondary",postsecondary communications teacher
 "english language and literature teachers, postsecondary",postsecondary english language/literature teacher
-"foreign language and literature teachers, postsecondary","foreign language and literature teachers, postsecondary"
+"foreign language and literature teachers, postsecondary",postsecondary foreign language teacher
 "history teachers, postsecondary",postsecondary history teacher
 "philosophy and religion teachers, postsecondary",postsecondary philosophy/religion teacher
 graduate teaching assistants,graduate teaching assistant
@@ -524,7 +524,7 @@ terrazzo workers and finishers,terrazzo finisher
 construction laborers,construction laborer
 "paving, surfacing, and tamping equipment operators",paving equipment operator
 pile-driver operators,pile-driver operator
-operating engineers and other construction equipment operators,operating engineer
+operating engineers and other construction equipment operators,construction engineer
 drywall and ceiling tile installers,drywall installer
 tapers,taper
 electricians,electrician
@@ -556,7 +556,7 @@ highway maintenance workers,highway maintenance worker
 rail-track laying and maintenance equipment operators,rail maintenance equipment operator
 septic tank servicers and sewer pipe cleaners,septic/sewer servicer
 segmental pavers,segmental paver
-"construction and related workers, all other",construction work
+"construction and related workers, all other",construction worker
 "derrick operators, oil and gas",derrick operator
 "rotary drill operators, oil and gas",rotary drill operator
 "service unit operators, oil, gas, and mining",oil/gas/mining service unit operator
@@ -566,7 +566,7 @@ continuous mining machine operators,continuous mining machine operator
 mine cutting and channeling machine operators,mine cutting machine operator
 "rock splitters, quarry",rock splitter
 "roof bolters, mining",mining roof bolter
-"roustabouts, oil and gas",roustabout
+"roustabouts, oil and gas",unskilled oil rig worker
 helpers--extraction workers,extraction worker helper
 "first-line supervisors of mechanics, installers, and repairers",mechanic supervisor
 "computer, automated teller, and office machine repairers",computer repairer
@@ -687,7 +687,7 @@ furniture finishers,furniture finisher
 nuclear power reactor operators,nuclear power reactor operator
 power distributors and dispatchers,power distributor/dispatcher
 power plant operators,power plant operator
-stationary engineers and boiler operators,stationary engineer
+stationary engineers and boiler operators,boiler operator
 water and wastewater treatment plant and system operators,water/wastewater treatment plant operator
 chemical plant and system operators,chemical plant operator
 gas plant operators,gas plant operator

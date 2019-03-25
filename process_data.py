@@ -275,6 +275,19 @@ for j in jobs.values():
     short_name = names[names.name == j['name']].short_name.values[0]
     j['name'] = short_name
 
+# Compute automation risk for jobs
+for j in jobs.values():
+    automatibility = 0
+    for s_id, weight in j['skills'].items():
+        automatibility += skills[s_id]['automatibility'] * weight
+    automatibility /= sum(j['skills'].values())
+    j['automationRisk'] = automatibility
+
+# Normalize
+z = max(j['automationRisk'] for j in jobs.values())
+for j in jobs.values():
+    j['automationRisk'] /= z
+
 with open('data/education.json', 'w') as f:
     json.dump(education, f)
 
