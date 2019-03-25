@@ -6,11 +6,13 @@ import graph from '../ui/3d/graph';
 
 const student = {
   name: 'Student',
-  wage: 0
+  wage: 0,
+  wageAfterTaxes: 0
 };
 const unemployed = {
   name: 'Unemployed',
-  wage: 0
+  wage: 0,
+  wageAfterTaxes: 0
 };
 
 const initialState = {
@@ -19,7 +21,7 @@ const initialState = {
   performance: 0,
   cash: 0,
   debt: [],
-  education: 1,
+  education: config.startHighSchool ? 1 : 0,
   program: null,
   postGradJob: unemployed,
   schoolCountdown: 0, // months
@@ -37,7 +39,7 @@ const initialState = {
 function reducer(state={}, action) {
   switch (action.type) {
     case 'player:income':
-      state.cash += state.job.wage/12;
+      state.cash += state.job.wageAfterTaxes/12;
       return {...state}
     case 'player:expenses':
       state.cash -= config.monthlyExpenses;
@@ -84,6 +86,7 @@ function reducer(state={}, action) {
           state.debt[state.debt.length-1].startedPayments = true;
         }
       }
+      state.performance = 0;
       state.application = null;
       state.job = action.payload; // TODO should we just assign the id, in case this object and the actual job become desync?
       return {...state}

@@ -136,4 +136,5 @@ function percentAutomated(job) {
   return score/job.skillsTotal;
 }
 
-export default { deepeningAutomation, probabilityForJob, percentAutomated, createRobot, workSkillGain, jobProficiency };
+export default { deepeningAutomation, probabilityForJob, percentAutomated, createRobot,
+  workSkillGain, jobProficiency};

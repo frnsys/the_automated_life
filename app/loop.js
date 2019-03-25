@@ -71,10 +71,6 @@ function loop(now) {
 
     // Check if new month
     if (time.newMonth) {
-      // TODO Note that this will trigger re-renders;
-      // we need to be careful about re-rendering every frame
-      // as this will slow things down, e.g. notifications
-      // TESTING earn money
       store.dispatch({
         type: 'player:income'
       });
@@ -89,8 +85,7 @@ function loop(now) {
       // Countdown player application
       if (player.application && player.application.countdown <= 0) {
         let job = jobs[player.application.id];
-        // TODO temporarily accepted to all jobs
-        if (true || Math.random() <= player.application.prob) {
+        if (config.perfectApplicant || Math.random() <= player.application.prob) {
           store.dispatch({
             type: 'player:hire',
             payload: job

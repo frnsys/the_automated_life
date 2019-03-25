@@ -273,7 +273,7 @@ for i, r in programs_df.iterrows():
 names = pd.read_csv('data/src/job_names.csv')
 for j in jobs.values():
     short_name = names[names.name == j['name']].short_name.values[0]
-    j['name'] = short_name
+    j['name'] = short_name.title()
 
 # Compute automation risk for jobs
 for j in jobs.values():
