@@ -76,6 +76,7 @@ class School extends Component {
     let nextJob = this.props.jobs[this.state.selectedProgram.job];
     this.props.enrollSchool(this.state.selectedProgram, nextJob);
 		if (withLoan) {
+      console.log(totalCost);
 			this.props.getLoan(totalCost);
 		}
     this.props.closeModal();
@@ -106,7 +107,8 @@ class School extends Component {
         </div>;
       }
 
-			let totalCost = (nextLevel.years * 12 * config.monthlyExpenses) + nextLevel.cost;
+      let years = nextLevel.name == 'Secondary Degree' ? this.state.selectedProgram.years : nextLevel.years;
+			let totalCost = (years * 12 * config.monthlyExpenses) + (nextLevel.cost * years);
 			let needsLoan = totalCost > this.props.player.cash;
 			let loanInfo = '';
 			if (needsLoan) {

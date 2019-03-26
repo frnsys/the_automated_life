@@ -220,6 +220,7 @@ for scenario in scenarios:
         robot['skills'] = [skills_inv[s] for s in robot['skills']]
 
 # Education level names
+education_ref = json.load(open('data/src/education.json'))
 education = []
 df = pd.read_csv('data/src/Education, Training, and Experience Categories.csv')
 df = df.loc[df['Element Name'] =='Required Level of Education']
@@ -228,8 +229,8 @@ for i, r in df.iterrows():
     if (i+1) == 3:
         education.append({
             'name': 'Secondary Degree',
-            'years': 4, # TODO
-            'cost': 150000 # TODO
+            'years': -1, # specified elsewhere
+            'cost': education_ref['Secondary Degree']['annualCost']
         })
     elif (i+1) in [4,5,6]:
         continue
@@ -240,8 +241,8 @@ for i, r in df.iterrows():
         desc = desc.strip()
         education.append({
             'name': desc,
-            'years': 4, # TODO
-            'cost': 150000 # TODO
+            'years': education_ref[desc]['years'],
+            'cost': education_ref[desc]['annualCost']
         })
 
 program_years = {

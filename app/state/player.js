@@ -98,9 +98,10 @@ function reducer(state={}, action) {
         state.program = program;
         state.postGradJob = nextJob;
       }
-      state.cash -= nextLevel.cost;
+      let years = state.program ? state.program.years : nextLevel.years;
+      state.cash -= nextLevel.cost * years;
       state.job = student;
-      state.schoolCountdown = (state.program ? state.program.years : nextLevel.years) * 12;
+      state.schoolCountdown = years * 12;
       return {...state}
     case 'player:learn':
       state.schoolCountdown -= 1;

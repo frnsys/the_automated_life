@@ -1,0 +1,38 @@
+{
+  "Less than a High School Diploma": {
+    "years": 0,
+    "annualCost": 0
+  },
+  "High School Diploma": {
+    "years": 2,
+    "annualCost": 0
+  },
+  "Secondary Degree": {
+    "years": -1,
+    "annualCost": 50000
+  },
+  "Post-Baccalaureate Certificate": {
+    "years": 1,
+    "annualCost": 15000
+  },
+  "First Professional Degree": {
+    "years": 4,
+    "annualCost": 20000
+  },
+  "Post-Master's Certificate": {
+    "years": 2,
+    "annualCost": 0
+  },
+  "Master's Degree": {
+    "years": 2,
+    "annualCost": 25000
+  },
+  "Doctoral Degree": {
+    "years": 6,
+    "annualCost": 0
+  },
+  "Post-Doctoral Training": {
+    "years": 5,
+    "annualCost": 0
+  }
+}
