@@ -1,6 +1,5 @@
 import json
 import math
-import yaml
 import numpy as np
 import pandas as pd
 import networkx as nx
@@ -13,8 +12,14 @@ skills = {}
 MIN_SKILLS = 7
 MIN_SKILL_WEIGHT = 1.5
 
+omit = [
+    'Required Level of Education',
+    'Related Work Experience',
+    'On-Site or In-Plant Training',
+    'Education and Training', 'Transportation'
+]
 skill_edits = pd.read_csv('data/src/Clean Skills - orderedOnetSkillsByComputerization.csv')
-omitted_skills = skill_edits[skill_edits['Omit?'] == 1.0]['Skill'].tolist()
+omitted_skills = skill_edits[skill_edits['Omit?'] == 1.0]['Skill'].tolist() + omit
 renamed_skills = skill_edits[skill_edits['Omit?'] != 1.0][['Skill', 'Short name']].dropna()
 renamed_skills = dict(zip(renamed_skills['Skill'], renamed_skills['Short name']))
 
@@ -80,6 +85,26 @@ df = pd.read_csv('data/src/jobSkillRcaMat.csv', delimiter='\t')
 skills = {i: name.strip() for i, name in enumerate(df.columns.tolist()[2:])}
 skills_inv = {name: i for i, name in skills.items()}
 omitted_skills = [skills_inv[name] for name in omitted_skills]
+
+# Skill groupings
+skill_groups_df = pd.read_csv('data/src/onet_content_model_reference.tsv', delimiter='\t')
+skill_groups = {}
+for i, row in skill_groups_df.iterrows():
+    id = row['Element ID'].split('.')
+    # if id[0] != '1': continue
+    if len(id) == 3:
+        skill_groups[row['Element ID']] = {
+            'name': row['Element Name'],
+            'skills': []
+        }
+    elif len(id) > 3:
+        skill_name = row['Element Name']
+        skill_id = skills_inv.get(skill_name)
+        if skill_id is None or skill_id in omitted_skills:
+            continue
+        group_id = '.'.join(id[:3])
+        skill_groups[group_id]['skills'].append(skill_id)
+skill_groups = {id: g for id, g in skill_groups.items() if g['skills']}
 
 n_jobs = len(df)
 job_onet_id_to_id = {}
@@ -210,15 +235,6 @@ while not nx.is_connected(G):
 if not nx.is_connected(G):
     raise Exception('Graph should be fully connected. Try increasing min_neighbors')
 
-# Robot release schedules/scenarios
-scenarios = yaml.load(open('data/src/robotSchedules.yml'))
-for scenario in scenarios:
-    for i, robot in enumerate(scenario['schedule']):
-        robot['id'] = i
-
-        # convert to skill ids
-        robot['skills'] = [skills_inv[s] for s in robot['skills']]
-
 # Education level names
 education_ref = json.load(open('data/src/education.json'))
 education = []
@@ -295,14 +311,14 @@ with open('data/education.json', 'w') as f:
 with open('data/programs.json', 'w') as f:
     json.dump(secondary_programs, f)
 
-with open('data/scenarios.json', 'w') as f:
-    json.dump(scenarios, f)
-
 with open('data/jobs.json', 'w') as f:
     json.dump(jobs, f)
 
 with open('data/skills.json', 'w') as f:
     json.dump(skills, f)
+
+with open('data/skillGroups.json', 'w') as f:
+    json.dump(list(skill_groups.values()), f)
 
 with open('data/skillSims.json', 'w') as f:
     json.dump(skill_sim, f)
