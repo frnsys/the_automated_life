@@ -12,12 +12,7 @@ skills = {}
 MIN_SKILLS = 7
 MIN_SKILL_WEIGHT = 1.5
 
-omit = [
-    'Required Level of Education',
-    'Related Work Experience',
-    'On-Site or In-Plant Training',
-    'Education and Training', 'Transportation'
-]
+omit = [l.strip() for l in open('data/src/omitSkills.txt', 'r').readlines()]
 skill_edits = pd.read_csv('data/src/Clean Skills - orderedOnetSkillsByComputerization.csv')
 omitted_skills = skill_edits[skill_edits['Omit?'] == 1.0]['Skill'].tolist() + omit
 renamed_skills = skill_edits[skill_edits['Omit?'] != 1.0][['Skill', 'Short name']].dropna()
