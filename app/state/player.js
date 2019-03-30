@@ -131,7 +131,7 @@ function reducer(state={}, action) {
       // Improve skills used on this job
       let skillChanges = logic.workSkillGain(state.job, state.performance)
       Object.keys(skillChanges).map((s_id) => {
-        state.skills[s_id] = Math.min(1, state.skills[s_id] + skillChanges[s_id]);
+        state.skills[s_id] = Math.min(1, (state.skills[s_id] || 0) + skillChanges[s_id]);
       });
       state.jobProficiency = logic.jobProficiency(state.job, state);
 

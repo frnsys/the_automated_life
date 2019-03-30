@@ -8,6 +8,7 @@ export default {
   retirementSavingsMin: 500000,
   gameOverBalance: -10000,
   deepeningAutomationAlpha: 0.05,
+  newRobotSkillMinImportance: 0.03,
   startingJobs: [428, 721, 333, 717],
   applicationMinMonths: 1,
   loanTerms: {

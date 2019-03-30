@@ -21,11 +21,12 @@ class Skills extends Component {
   render() {
     let skillChanges = logic.workSkillGain(this.props.job, 1);
     let changingSkills = Object.keys(skillChanges);
+    let robotSkills = Object.keys(skills).filter((s_id) => skills[s_id].automatibility == 0);
 
     return <SkillsStyle>
       <h3>Your Skills</h3>
       {skillGroups.map((group) => {
-        return (<div>
+        return (<div key={group.name}>
           <h4>{group.name}</h4>
           <table>
             <tbody>
@@ -38,6 +39,18 @@ class Skills extends Component {
           </table>
         </div>);
       })}
+      {robotSkills.length > 0 ? <div>
+        <h4>Robot Maintenance</h4>
+        <table>
+          <tbody>
+            {robotSkills.map((s_id) => {
+              return <tr key={s_id}>
+                <td>{changingSkills.includes(s_id) ? <img title="Improving on this job" alt="Improving on this job" src="/arrow.png" style={{width: '12px'}} /> : ''} {skills[s_id].name}</td>
+                <td><Bar style={{width: '3em', height: '1.5em', background: 'none'}}><BarFill style={{width: `${(this.props.skills[s_id] || 0)*100}%`}} /></Bar></td></tr>;
+            })}
+          </tbody>
+        </table>
+      </div> : ''}
     </SkillsStyle>
   }
 }

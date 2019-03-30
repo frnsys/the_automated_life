@@ -36,6 +36,39 @@ function reducer(state={}, {type, payload}) {
         state[u.id].wageAfterTaxes = wageAfterTaxes(u.wage);
       });
       return {...state}
+    case 'job:newSkill':
+      let robot = payload;
+      notify(`The productivity effects of ${robot.name} are widespread.`);
+
+      let s_id = Object.keys(skills).length;
+      skills[s_id] = {
+        id: s_id,
+        name: `Maintaining ${robot.name}`,
+        automatibility: 0
+      };
+
+      // If the replaced skills
+      // were important enough to a job,
+      // add this new skill to that job
+      Object.values(state).map((job) => {
+        let p = Object.keys(job.skills).reduce((acc, s) => {
+          if (robot.skills.includes(parseInt(s))) {
+            return acc + job.skills[s];
+          }
+          return acc;
+        }, 0);
+        p /= job.skillsTotal;
+        if (p >= config.newRobotSkillMinImportance) {
+          job.skills[s_id] = p;
+
+          // Remove old skills
+          robot.skills.forEach((s) => {
+            delete job.skills[s];
+          });
+          job.skillsTotal = Object.values(job.skills).reduce((acc, cur) => acc + cur);
+        }
+      });
+      return {...state}
   }
   return state;
 }

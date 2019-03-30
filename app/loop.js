@@ -135,6 +135,10 @@ function loop(now) {
       type: 'robot:deepened',
       payload: r.id
     });
+    store.dispatch({
+      type: 'job:newSkill',
+      payload: r
+    });
   });
 
   lastTime = now;
