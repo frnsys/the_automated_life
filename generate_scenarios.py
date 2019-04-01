@@ -3,6 +3,45 @@ import string
 import random
 import pandas as pd
 
+nations = pd.read_csv('data/src/nations.csv')
+nation_adjs = []
+for i, r in nations.iterrows():
+    nation = r['Country name']
+    adj = r['Adjectivals'].split(', ')[-1]
+    adj = adj.split(' or ')[0]
+    nation_adjs.append(adj)
+
+def make_news(skills):
+    nation = random.choice(nation_adjs)
+    headline = '{nation} {researchers} {action}'.format(
+        nation=nation,
+        researchers=random.choice([
+            'researchers',
+            'scientists',
+            'engineers'
+        ]),
+        action=random.choice([
+            'make breakthrough',
+            'make advancement',
+            'make discovery',
+            'advance robotics',
+            'develop new tech'
+        ])
+    )
+    body = random.choice([
+        'Robotics researchers at the {nation} Institute of Technology pioneered a new technique in {skill} today.',
+        'The {nation} Institute of Technology unveiled an algorithm capable of {skill}.',
+        'The {nation} Institute of Technology showcased a system competitive with humans at {skill}.',
+        'A new algorithm from The {nation} Institute of Technology performs {skill} like a human.'
+    ])
+    body = body.format(nation=nation, skill=skill)
+
+    return {
+        'headline': headline,
+        'body': body
+    }
+
+
 def bot_name():
     return '{}{}-{}'.format(
         random.choice(string.ascii_uppercase),
@@ -37,7 +76,8 @@ for i in range(n_scenarios):
             'name': bot_name(),
             'skills': [skills_idx[skill]],
             'deepeningCountdown': random.randint(2*12, 25*12),
-            'efficiency': random.random()
+            'efficiency': random.random(),
+            'news': make_news(skill)
         })
 
     scenario = {

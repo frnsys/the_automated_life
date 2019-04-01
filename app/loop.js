@@ -49,8 +49,7 @@ function loop(now) {
       if (!r.teased && time.months == r.months - 6){
         let skillsList = r.skills.map((s_id) => skills[s_id].name);
         skillsList = [skillsList.slice(0, -1).join(', '), skillsList.slice(-1)[0]].join(skillsList.length < 2 ? '' : ' and ');
-        notify(`Researchers in South Korea make breakthrough`,
-          `Robotics researchers at the South Korea Institute of Technology pioneered a new technique in ${skillsList} today.`);
+        notify(r.news.headline, r.news.body);
         store.dispatch({
           type: 'scenario:teased',
           payload: i
