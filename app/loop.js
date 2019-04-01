@@ -40,7 +40,7 @@ function loop(now) {
       if (nextRobot.efficiency >= 0.75) {
         efficiencyDesc = 'excels at';
       }
-      notify(`RoboCo releases "${nextRobot.name}"`,
+      notify(`🤖 RoboCo releases "${nextRobot.name}"`,
         `A new robot from RoboCo hit the market today. The ${nextRobot.name} ${efficiencyDesc} ${skillsList}.`);
     }
 
@@ -49,7 +49,7 @@ function loop(now) {
       if (!r.teased && time.months == r.months - 6){
         let skillsList = r.skills.map((s_id) => skills[s_id].name);
         skillsList = [skillsList.slice(0, -1).join(', '), skillsList.slice(-1)[0]].join(skillsList.length < 2 ? '' : ' and ');
-        notify(r.news.headline, r.news.body);
+        notify(`💡 ${r.news.headline}`, r.news.body);
         store.dispatch({
           type: 'scenario:teased',
           payload: i
@@ -67,6 +67,13 @@ function loop(now) {
         elapsed: elapsed
       }
     });
+
+    if (time.newYear) {
+      let age = player.startAge + time.years;
+      if ((age) % 10 == 0) {
+        notify(`🎂 Happy ${age}th birthday!`, `You're ${config.retirementAge - age} years from retirement.`);
+      }
+    }
 
     // Check if new month
     if (time.newMonth) {
@@ -89,10 +96,10 @@ function loop(now) {
             type: 'player:hire',
             payload: job
           });
-          notify(`You were hired as a ${job.name}.`);
+          notify(`🎉 You were hired as a ${job.name}.`);
           graph.reveal(player.application.id);
         } else {
-          notify(`Your application as a ${job.name} was rejected because of your ${player.application.mainFactor}.`);
+          notify(`😞 Your application as a ${job.name} was rejected because of your ${player.application.mainFactor}.`);
           graph.resetNodeColor(graph.appliedNode, player);
           graph.appliedNode = null;
         }

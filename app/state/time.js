@@ -6,7 +6,8 @@ const initialState = {
   month: 1,
   months: 0,
   monthProgress: 0,
-  newMonth: false
+  newMonth: false,
+  newYear: false
 }
 
 function reducer(state={}, action) {
@@ -16,11 +17,17 @@ function reducer(state={}, action) {
       elapsed /= 1000; // to sec
       let secPerMonth = config.secPerMonth/speedup;
       state.monthProgress += elapsed/secPerMonth;
+      state.newYear = false;
       if (state.monthProgress >= 1) {
         state.monthProgress = state.monthProgress - 1;
         state.months += 1;
         state.month = (state.months % 12) + 1;
-        state.years = Math.floor(state.months/12);
+
+        let years = Math.floor(state.months/12);
+        if (years != state.years) {
+          state.newYear = true;
+        }
+        state.years = years;
         state.year = config.startYear + state.years;
         state.newMonth = true;
       } else {
