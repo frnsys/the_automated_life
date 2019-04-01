@@ -46,7 +46,7 @@ function loop(now) {
 
     // Teaser news stories
     scenario.schedule.forEach((r, i) => {
-      if (!r.teased && time.months == r.months - 6){
+      if (!r.teased && time.months == r.months - config.newRobotWarningMonths){
         let skillsList = r.skills.map((s_id) => skills[s_id].name);
         skillsList = [skillsList.slice(0, -1).join(', '), skillsList.slice(-1)[0]].join(skillsList.length < 2 ? '' : ' and ');
         notify(`💡 ${r.news.headline}`, r.news.body);

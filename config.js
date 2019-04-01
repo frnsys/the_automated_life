@@ -1,7 +1,7 @@
 const params = location.search.slice(1);
 export default {
   startYear: 2019,
-  secPerMonth: 8,
+  secPerMonth: 3,
   schoolTimeSpeedup: 20,
   monthlyExpenses: 1000,
   retirementAge: 65,
@@ -9,6 +9,7 @@ export default {
   gameOverBalance: -10000,
   deepeningAutomationAlpha: 0.05,
   newRobotSkillMinImportance: 0.03,
+  newRobotWarningMonths: 8,
   startingJobs: [428, 721, 333, 717],
   applicationMinMonths: 1,
   loanTerms: {
