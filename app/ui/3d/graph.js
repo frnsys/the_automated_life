@@ -150,8 +150,13 @@ class Graph {
       const anno = document.createElement('div');
       anno.classList.add('annotation');
       anno.innerHTML = j.name;
+
+      // node positions seem to become off
+      // the further from the origin,
+      // this is a hand-adjustment that improves the positioning
       anno.style.top = `${-node.y}px`
-      anno.style.left = `${node.x}px`
+      anno.style.left = `${node.x * (node.x > 0 ? 1.04 : 1.01)}px`
+
       anno.style.display = 'none';
       node.anno = anno;
       this.annos.appendChild(anno);
