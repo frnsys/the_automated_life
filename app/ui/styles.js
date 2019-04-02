@@ -50,7 +50,7 @@ export const GlobalStyle = createGlobalStyle`
     color: #fe0f0f;
   }
   .job-tooltip {
-    min-width: 20em;
+    width: 20em;
   }
   .job-tooltip h3 {
     margin: 0 0 0.5em 0;
@@ -59,11 +59,24 @@ export const GlobalStyle = createGlobalStyle`
   .job-skills {
     margin-top: 0.5em;
     border-top: 2px solid black;
+    font-size: 0.75em;
   }
   .job-skills ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .job-skills li {
+    padding: 0.2em;
+    padding-right: 8px;
+    width: 32%;
+    box-sizing: border-box;
+    background: #eee;
+    margin-bottom: 0.5em;
+    position: relative;
   }
   .job-skills h5 {
     margin: 0.5em 0 0.25em 0;
@@ -77,26 +90,73 @@ export const GlobalStyle = createGlobalStyle`
     margin-bottom: 0.5em;
   }
 
-  .automation-icon {
+  .skill-level-bar {
+    width: 6px;
+    display: inline-block;
+    background: #bbb;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+  }
+  .skill-level-bar-fill {
+    background: #555;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .automation-low {
+    border-top: 3px solid #39e567;
+  }
+  .automation-moderate {
+    border-top: 3px solid #f9993e;
+  }
+  .automation-high {
+    border-top: 3px solid #fe0f0f;
+  }
+
+  .job-legend {
+    display: flex;
+    justify-content: space-between;
+  }
+  .skill-legend .skill-level-bar {
+    position: relative;
+    height: 10px;
+  }
+  .skill-legend .skill-level-bar-fill {
+    height: 65%;
+  }
+  .automation-legend {
+    font-size: 0.9em;
+  }
+  .automation-legend > div {
     width: 8px;
     height: 8px;
-    border-radius: 10em;
     display: inline-block;
-    margin-right: 4px;
   }
-  .automation-icon-low {
+  .automation-low-key {
     background: #39e567;
   }
-  .automation-icon-moderate {
+  .automation-moderate-key {
     background: #f9993e;
   }
-  .automation-icon-high {
+  .automation-high-key {
     background: #fe0f0f;
   }
 
   .automated {
-    text-decoration: line-through;
-    opacity: 0.5;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: rgba(255,255,255,0.9);
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .hud-notice {

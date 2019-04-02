@@ -3,7 +3,7 @@ export default {
   startYear: 2019,
   secPerMonth: 3,
   schoolTimeSpeedup: 20,
-  monthlyExpenses: 1000,
+  monthlyExpenses: 1500,
   retirementAge: 65,
   retirementSavingsMin: 500000,
   gameOverBalance: -10000,

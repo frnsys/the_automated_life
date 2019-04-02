@@ -6,7 +6,7 @@ import store from 'store';
 import jobs from 'data/jobs.json';
 import config from 'config';
 
-const topNSkills = 5;
+const topNSkills = 12;
 const visitedColor = 0xf4ed61;
 const unfocusedColor = 0xaaaaaa;
 const focusedColor = 0x0000ff;
@@ -48,14 +48,24 @@ const tooltip = (job) => {
         <ul>
           ${requiredSkills.map((s) => {
             let risk = 'low';
-            if (s.automatibility >= 0.8) {
+            if (s.automatibility >= 0.7) {
               risk = 'high';
             } else if (s.automatibility >= 0.4) {
               risk = 'moderate';
             }
-            return `<li class="${automatedSkills.includes(s.id) ? 'automated' : ''}"><div class="automation-icon automation-icon-${risk}"></div>${s.name} ${automatedSkills.includes(s.id) ? '(automated)' : ''}${player.skills[s.id] > 0 ? `<span style="opacity:${player.skills[s.id]}">✓</span>` : ''}</li>`;
+            return `<li class="automation-${risk}">${automatedSkills.includes(s.id) ? '<div class="automated"><div>Automated</div></div>' : ''}${s.name} <div class="skill-level-bar"><div class="skill-level-bar-fill" style="height:${player.skills[s.id] * 100}%;"></div></div></li>`;
           }).join('')}
         </ul>
+        <div class="job-legend">
+          <div class="automation-legend">
+            <div class="automation-low-key"></div> low risk
+            <div class="automation-moderate-key"></div> mid risk
+            <div class="automation-high-key"></div> high risk
+          </div>
+          <div class="skill-legend">
+            <div class="skill-level-bar"><div class="skill-level-bar-fill"></div></div> your skill level
+          </div>
+        </div>
       </div>
     </div>
   `;
