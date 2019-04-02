@@ -77,6 +77,7 @@ export const GlobalStyle = createGlobalStyle`
     background: #eee;
     margin-bottom: 0.5em;
     position: relative;
+    word-wrap: break-word;
   }
   .job-skills h5 {
     margin: 0.5em 0 0.25em 0;
