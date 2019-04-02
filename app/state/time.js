@@ -7,7 +7,8 @@ const initialState = {
   months: 0,
   monthProgress: 0,
   newMonth: false,
-  newYear: false
+  newYear: false,
+  paused: false
 }
 
 function reducer(state={}, action) {
@@ -33,6 +34,14 @@ function reducer(state={}, action) {
       } else {
         state.newMonth = false;
       }
+      return {...state};
+
+    case 'time:pause':
+      state.paused = true;
+      return {...state};
+
+    case 'time:unpause':
+      state.paused = false;
       return {...state};
   }
   return state;
