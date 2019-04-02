@@ -72,12 +72,12 @@ function Notifications({ config = { tension: 125, friction: 20, precision: 0.1 }
     config: (item, state) => (state === 'leave' ? [{ duration: timeout }, config, config] : config),
   })
 
-  useEffect(() => void children((title, msg) => setItems(state => [...state, { key: id++, title, msg }])), [])
+  useEffect(() => void children((title, msg, style={}) => setItems(state => [...state, { key: id++, title, msg, style }])), [])
   return (
     <Container top={false}>
       {transitions.map(({ key, item, props: { ...style } }) => (
-        <Message key={key} style={style}>
-          <Content ref={ref => ref && refMap.set(item, ref)}>
+        <Message key={key}>
+          <Content ref={ref => ref && refMap.set(item, ref)} style={item.style}>
             <div>
               <Title>{item.title}</Title>
               {item.msg ? <Body>{item.msg}</Body> : ''}

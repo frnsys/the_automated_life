@@ -100,10 +100,10 @@ function loop(now) {
               type: 'player:hire',
               payload: job
             });
-            notify(`🎉 You were hired as a ${job.name}.`);
+            notify(`🎉 You were hired as a ${job.name}.`, '', {background: '#1fd157', color: '#fff'});
             graph.reveal(player.application.id);
           } else {
-            notify(`😞 Your application as a ${job.name} was rejected because of your ${player.application.mainFactor}.`);
+            notify(`😞 Your application as a ${job.name} was rejected because of your ${player.application.mainFactor}.`, '', {background: '#ea432a', color: '#fff'});
             graph.resetNodeColor(graph.appliedNode, player);
             graph.appliedNode = null;
           }
