@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "webpack-dev-server --watch --progress --mode=development",
+    "start": "concurrently -n \"WEBPACK,FLASK\" -c \"bgBlue.bold,bgGreen.bold\" \"npm run webpack\" \"npm run flask\"",
+    "webpack": "webpack --watch --progress",
+    "flask": "FLASK_APP=app.py FLASK_DEBUG=1 flask run",
     "build": "webpack --colors --progress --mode=production"
   },
   "dependencies": {
@@ -27,6 +29,7 @@
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.4",
+    "concurrently": "^4.1.0",
     "json-loader": "^0.5.7",
     "webpack": "^4.21.0",
     "webpack-cli": "^3.1.2",

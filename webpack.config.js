@@ -3,10 +3,11 @@ var path = require('path');
 module.exports = {
   entry: ['@babel/polyfill', './main'],
   output: {
-    filename: 'dist.js'
+    filename: 'dist.js',
+    path: __dirname + '/static'
   },
   devServer: {
-    publicPath: '/dist/'
+    publicPath: '/static/'
   },
   devtool: 'source-map',
   module: {
