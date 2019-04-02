@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 const WorkStyle = styled('div')`
   position: fixed;
-  z-index: 2;
+  z-index: 2000;
   right: 1em;
   top: 1em;
   color: #000;
