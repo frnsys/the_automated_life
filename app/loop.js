@@ -71,7 +71,9 @@ function loop(now) {
     if (time.newYear) {
       let age = player.startAge + time.years;
       if ((age) % 10 == 0) {
-        notify(`🎂 Happy ${age}th birthday!`, `You're ${config.retirementAge - age} years from retirement.`);
+        let yearsLeft = config.retirementAge - age;
+        let estimate = Math.round(player.cash + ((player.cash/time.years) * yearsLeft));
+        notify(`🎂 Happy ${age}th birthday!`, `You're ${yearsLeft} years from retirement. At this rate, you'll save $${estimate.toLocaleString()} by then.`);
       }
     }
 

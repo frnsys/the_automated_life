@@ -11,7 +11,7 @@ export default {
   newRobotSkillMinImportance: 0.03,
   newRobotWarningMonths: 8,
   startingJobs: [428, 721, 333, 717],
-  applicationMinMonths: 1,
+  applicationMinMonths: 2,
   loanTerms: {
     interestRate: 0.058,
     years: 10
