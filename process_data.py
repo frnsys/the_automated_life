@@ -12,6 +12,10 @@ skills = {}
 MIN_SKILLS = 7
 MIN_SKILL_WEIGHT = 1.5
 
+# Increase this to further space out nodes
+# in the job network (e.g. to reduce overlaps)
+NETWORK_SCALE = 1.8
+
 omit = [l.strip() for l in open('data/src/omitSkills.txt', 'r').readlines()]
 skill_edits = pd.read_csv('data/src/Clean Skills - orderedOnetSkillsByComputerization.csv')
 omitted_skills = skill_edits[skill_edits['Omit?'] == 1.0]['Skill'].tolist() + omit
@@ -34,8 +38,8 @@ job_network_layout = {}
 data = json.load(open('data/src/jobNetwork.json'))
 for job in data['nodes']:
     job_network_layout[job['id']] = {
-        'x': job['x'],
-        'y': job['y']
+        'x': job['x'] * NETWORK_SCALE,
+        'y': job['y'] * NETWORK_SCALE
     }
 
 # Center the layout
