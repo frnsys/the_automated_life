@@ -150,13 +150,15 @@ export const GlobalStyle = createGlobalStyle`
     left: 0;
     right: 0;
     bottom: 0;
-    top: 0;
+    top: -3px;
+    border: 2px solid #888;
     background: rgba(255,255,255,0.9);
     text-align: center;
     font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
   }
 
   .hud-notice {
