@@ -3,6 +3,10 @@ import styled, { createGlobalStyle } from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i');
 
+  canvas {
+    cursor: grab;
+  }
+
   html,
   body {
     overflow: hidden;

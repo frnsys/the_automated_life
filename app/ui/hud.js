@@ -12,10 +12,6 @@ const months = [
 ];
 
 const HUDStyle = styled('div')`
-  position: fixed;
-  z-index: 2;
-  left: 1em;
-  top: 1em;
   color: #000;
   padding: 0.5em;
   max-width: 200px;
@@ -56,7 +52,7 @@ const HUD = (props) => {
         <Stat name='Age'>🎂 {props.player.startAge + props.time.years}</Stat>
       </div>
       <div style={{display: 'flex'}}>
-        <Stat name='Cash'>🏦 ${numeral(props.player.cash).format('0,0.00a')}</Stat>
+        <Stat name='Savings'>🏦 ${numeral(props.player.cash).format('0,0.00a')}</Stat>
         <Stat name='Monthly wage'>💸 ${numeral(props.player.job.wageAfterTaxes/12).format('0,0.0a')}/mo</Stat>
       </div>
       <div data-tip={expensesDesc} style={{fontSize: '0.75em', color: '#888'}}>${(props.player.expenses.living + props.player.expenses.debt).toLocaleString()}/month in expenses</div>

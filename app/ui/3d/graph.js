@@ -118,8 +118,8 @@ class Graph {
 
         // Click on job node to apply to job
         onClick: () => {
+          if (window.paused || this.locked) return;
           let {player} = store.getState();
-          if (this.locked) return;
           let valid = false;
           if (this.focusedNodeId) {
             let neighbIds = Object.keys(this.edges[this.focusedNodeId]);

@@ -45,6 +45,7 @@ class StartMenu extends Component {
     });
     graph.reveal(this.state.selectedJob, true);
     loop();
+    window.paused = true;
     this.props.closeModal();
   }
 

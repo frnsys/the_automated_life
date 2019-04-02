@@ -5,13 +5,9 @@ import config from 'config';
 import styled from 'styled-components';
 
 const WorkStyle = styled('div')`
-  position: fixed;
-  z-index: 2000;
-  right: 1em;
-  top: 1em;
-  color: #000;
   border: 2px solid black;
   user-select: none;
+  position: relative;
 `;
 
 const WorkButton = styled('div')`
@@ -53,6 +49,7 @@ const mapStateToProps = (state, props) => {
 
 const mapActionsToProps = {
   work: () => {
+    if (window.paused) return;
     return {
       type: 'player:work'
     };

@@ -16,7 +16,7 @@ function loop(now) {
 
   let {scenario, player, robots, time, jobs} = store.getState();
 
-  if (!time.paused) {
+  if (!window.paused) {
 
     // Check game over
     if (player.gameOver) return;
