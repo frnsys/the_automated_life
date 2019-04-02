@@ -63,6 +63,7 @@ const PauseResume = styled('div')`
   bottom: 0;
   padding: 1em;
   text-align: center;
+  z-index: 2;
 `
 
 const PauseResumeButton = styled('div')`
