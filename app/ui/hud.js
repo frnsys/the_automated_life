@@ -41,6 +41,10 @@ const Stat = (props) => {
 
 const HUD = (props) => {
   let inSchool = props.player.job.name == 'Student';
+  let expensesDesc = `$${props.player.expenses.living.toLocaleString()} living`;
+  if (props.player.expenses.debt > 0) {
+    expensesDesc += `, $${props.player.expenses.debt.toLocaleString()} debt`;
+  }
 
   return (
     <HUDStyle>
@@ -55,6 +59,7 @@ const HUD = (props) => {
         <Stat name='Cash'>🏦 ${numeral(props.player.cash).format('0,0.00a')}</Stat>
         <Stat name='Monthly wage'>💸 ${numeral(props.player.job.wageAfterTaxes/12).format('0,0.0a')}/mo</Stat>
       </div>
+      <div data-tip={expensesDesc} style={{fontSize: '0.75em', color: '#888'}}>${(props.player.expenses.living + props.player.expenses.debt).toLocaleString()}/month in expenses</div>
       <Stat name='Level of education'>🎓 {education[props.player.education].name}</Stat>
       {inSchool ? <div style={{fontSize: '0.75em', color: '#888'}}>In school for {props.player.schoolCountdown} more months</div> : ''}
       <Stat name='Current job'>🛠️ {props.player.job.name}</Stat>

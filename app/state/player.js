@@ -21,6 +21,10 @@ const initialState = {
   performance: 0,
   cash: 0,
   debt: [],
+  expenses: {
+    living: config.monthlyExpenses,
+    debt: 0
+  },
   education: config.startHighSchool ? 1 : 0,
   program: null,
   postGradJob: unemployed,
@@ -43,7 +47,6 @@ function reducer(state={}, action) {
       return {...state}
     case 'player:expenses':
       state.cash -= config.monthlyExpenses;
-      notify(`You paid $${config.monthlyExpenses} in living expenses.`);
       let debtPayment = state.debt.reduce((acc, debt) => {
         if (debt.countdown > 0 && debt.startedPayments) {
           debt.countdown--;
@@ -53,8 +56,8 @@ function reducer(state={}, action) {
         }
       }, 0);
       if (debtPayment) {
+        state.expenses.debt = debtPayment;
         state.cash -= debtPayment;
-        notify(`You paid $${debtPayment} in debt payments.`);
       }
       return {...state}
 
