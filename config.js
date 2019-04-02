@@ -10,7 +10,7 @@ export default {
   deepeningAutomationAlpha: 0.05,
   newRobotSkillMinImportance: 0.03,
   newRobotWarningMonths: 8,
-  startingJobs: [428, 721, 333, 717],
+  startingJobs: [643, 721, 333, 717],
   applicationMinMonths: 2,
   loanTerms: {
     interestRate: 0.058,
