@@ -8,13 +8,23 @@ import styled from 'styled-components';
 import { Button } from './styles'
 
 const StartMenuStyle = styled('div')`
+  h2 {
+    margin: 0;
+  }
+  h3 {
+    margin-bottom: 0;
+  }
+  ul {
+    margin: 0.5em 0 1em;
+  }
+
   .selected {
     background: #39e567;
-    color: #fff;
   }
 
   li {
     cursor: pointer;
+    padding: 0.2em;
   }
 `;
 
@@ -40,7 +50,10 @@ class StartMenu extends Component {
 
   render() {
     return <StartMenuStyle>
-      <h3>Select your starting job</h3>
+      <h2>Welcome to Automation World!</h2>
+      <p>This game is an exploration of job mobility against the proliferation of automation. Your starting job has a high risk of automation. Try to end up in a job that is relatively safe from automation.</p>
+      <p><b><u>Your goal is to retire at age {config.retirementAge} with a nest egg of ${config.retirementSavingsMin.toLocaleString()}.</u></b></p>
+      <h3>Select your starting job:</h3>
       <ul>
         {config.startingJobs.map((id) => {
           return <li

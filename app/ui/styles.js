@@ -31,7 +31,6 @@ export const GlobalStyle = createGlobalStyle`
     position: absolute;
     font-size: 0.3em;
     line-height: 1;
-    max-width: 60px;
   }
 
   .job-status {
