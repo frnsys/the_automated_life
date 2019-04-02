@@ -11,7 +11,7 @@ for i, r in nations.iterrows():
     adj = adj.split(' or ')[0]
     nation_adjs.append(adj)
 
-def make_news(skills):
+def make_news(skill):
     nation = random.choice(nation_adjs)
     headline = '{nation} {researchers} {action}'.format(
         nation=nation,
@@ -34,7 +34,7 @@ def make_news(skills):
         'The {nation} Institute of Technology showcased a system competitive with humans at {skill}.',
         'A new algorithm from The {nation} Institute of Technology performs {skill} like a human.'
     ])
-    body = body.format(nation=nation, skill=skill)
+    body = body.format(nation=nation, skill=skill.lower())
 
     return {
         'headline': headline,
