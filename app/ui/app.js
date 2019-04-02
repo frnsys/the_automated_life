@@ -53,6 +53,7 @@ class App extends Component {
           isOpen={this.state.modalIsOpen}
           onRequestClose={this.closeModal}
           style={customStyles}
+          shouldCloseOnOverlayClick={!this.state.modal.requireChoice}
           contentLabel='Game Alert'>
           <this.state.modal closeModal={this.closeModal} />
         </Modal>

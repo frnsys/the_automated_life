@@ -19,6 +19,8 @@ const StartMenuStyle = styled('div')`
 `;
 
 class StartMenu extends Component {
+  static requireChoice = true;
+
   constructor(props) {
     super(props);
     this.state = {
