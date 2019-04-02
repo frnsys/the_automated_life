@@ -29,7 +29,7 @@ const initialState = {
   jobProficiency: 0,
   application: null,
   skills: Object.keys(skills).reduce((obj, s_id) => {
-    obj[s_id] = Math.random(); // TODO temporary
+    obj[s_id] = 0.1;
     return obj;
   }, {}),
   pastJobs: []
@@ -79,6 +79,14 @@ function reducer(state={}, action) {
       if (state.job.id) {
         state.pastJobs.push(state.job.id);
       }
+
+      // starting job, set skills
+      if (state.pastJobs.length == 0) {
+        Object.keys(action.payload.skills).forEach((s_id) => {
+          state.skills[s_id] = 0.2;
+        });
+      }
+
       if (state.job.name == 'Student') {
         // Dropped out of school, loan repayment kicks in
         notify('You dropped out of school.')
