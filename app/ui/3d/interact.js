@@ -3,7 +3,7 @@ const tooltip = document.createElement('div');
 tooltip.classList.add('tooltip');
 tooltip.style.position = 'absolute';
 tooltip.style.display = 'none';
-tooltip.style.zIndex = '10';
+tooltip.style.zIndex = '10000';
 tooltip.style.pointerEvents = 'none';
 document.body.appendChild(tooltip);
 

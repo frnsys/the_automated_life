@@ -117,7 +117,19 @@ export const GlobalStyle = createGlobalStyle`
     border-top: 3px solid #fe0f0f;
   }
 
-  .job-legend {
+  .skills-legend {
+    font-size: 0.9em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 0.5em;
+    border-top: 2px solid black;
+    z-index: 10;
+  }
+
+  .job-legend, .skills-legend {
     display: flex;
     justify-content: space-between;
   }
@@ -141,9 +153,11 @@ export const GlobalStyle = createGlobalStyle`
   }
   .automation-moderate-key {
     background: #f9993e;
+    margin-left: 8px;
   }
   .automation-high-key {
     background: #fe0f0f;
+    margin-left: 8px;
   }
 
   .automated {
@@ -175,11 +189,19 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0.3em 0.5em !important;
     margin-top: 0 !important;
     opacity: 1 !important;
+    z-index: 1000000;
   }
   .info-tooltip::after {
     border-top-width: 0 !important;
   }
 
+  .ReactModal__Content {
+    overflow-y: hidden !important;
+    padding: 0 !important;
+  }
+  .ReactModal__Content > div{
+    padding: 1em;
+  }
   .ReactModal__Content h3 {
     margin: 0 0 1em 0;
   }
