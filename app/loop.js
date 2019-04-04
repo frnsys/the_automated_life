@@ -1,3 +1,4 @@
+import log from 'log';
 import config from 'config';
 import store from 'store';
 import logic from './logic';
@@ -24,6 +25,7 @@ function loop(now) {
       store.dispatch({
         type: 'player:gameOver'
       });
+      log('gameOver', {time: time});
       alert('Game Over');
       return;
     }
@@ -96,14 +98,20 @@ function loop(now) {
         if (player.application && player.application.countdown <= 0) {
           let job = jobs[player.application.id];
           if (config.perfectApplicant || Math.random() <= player.application.prob) {
+            if (player.job.name == 'Student') {
+              log('dropout', {education: player.education, time: time});
+            }
+
             store.dispatch({
               type: 'player:hire',
               payload: job
             });
             notify(`🎉 You were hired as a ${job.name}.`, '', {background: '#1fd157', color: '#fff'});
+            log('hired', {job: job.id, time: time});
             graph.reveal(player.application.id);
           } else {
             notify(`😞 Your application as a ${job.name} was rejected because of your ${player.application.mainFactor}.`, '', {background: '#ea432a', color: '#fff'});
+            log('rejected', {job: job.id, time: time});
             graph.resetNodeColor(graph.appliedNode, player);
             graph.appliedNode = null;
           }
@@ -120,6 +128,7 @@ function loop(now) {
             store.dispatch({
               type: 'player:graduate'
             });
+            log('graduated', {education: state.education, time: time});
           }
         }
 
@@ -127,8 +136,10 @@ function loop(now) {
         if (player.startAge + time.years >= config.retirementAge) {
           if (player.cash >= config.retirementSavingsMin) {
             alert('game over, you win');
+            log('gameEnd', {success: true, cash: player.cash, time: time});
           } else {
             alert('game over, you lose');
+            log('gameEnd', {success: false, cash: player.cash, time: time});
           }
         }
       }

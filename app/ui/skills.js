@@ -64,7 +64,7 @@ class Skills extends Component {
           <div className="automation-high-key"></div> high risk
         </div>
         <div>
-          <img title="Improving on this job" alt="Improving on this job" src="/arrow.png" style={{width: '10px', margin: '0 2px'}} /> improving skill
+          <img title="Improving on this job" alt="Improving on this job" src="/static/arrow.png" style={{width: '10px', margin: '0 2px'}} /> improving skill
         </div>
         <div className="skill-legend">
           <div className="skill-level-bar"><div className="skill-level-bar-fill"></div></div> your skill level
@@ -86,7 +86,7 @@ class Skills extends Component {
                 }
                 return <li className={`automation-${risk}`} key={s_id}>
                   {automatedSkills.includes(s.id) ? <div className="automated"><div>Automated</div></div> : ''}
-                  {changingSkills.includes(s_id.toString()) ? <img title="Improving on this job" alt="Improving on this job" src="/arrow.png" style={{width: '10px', margin: '0 2px'}} /> : ''}
+                  {changingSkills.includes(s_id.toString()) ? <img title="Improving on this job" alt="Improving on this job" src="/static/arrow.png" style={{width: '10px', margin: '0 2px'}} /> : ''}
                   {s.name}
                   <div className="skill-level-bar">
                     <div className="skill-level-bar-fill" style={{height:`${this.props.skills[s.id] * 100}%`}}></div>
@@ -104,7 +104,7 @@ class Skills extends Component {
                 let risk = 'low';
                 return <li className={`automation-${risk}`} key={s_id}>
                   {automatedSkills.includes(s.id) ? <div className="automated"><div>Automated</div></div> : ''}
-                  {changingSkills.includes(s_id.toString()) ? <img title="Improving on this job" alt="Improving on this job" src="/arrow.png" style={{width: '10px', margin: '0 2px'}} /> : ''}
+                  {changingSkills.includes(s_id.toString()) ? <img title="Improving on this job" alt="Improving on this job" src="/static/arrow.png" style={{width: '10px', margin: '0 2px'}} /> : ''}
                   {s.name}
                   <div className="skill-level-bar">
                     <div className="skill-level-bar-fill" style={{height:`${(this.props.skills[s.id] || 0) * 100}%`}}></div>

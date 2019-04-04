@@ -1,3 +1,4 @@
+import log from 'log';
 import React, { Component } from 'react';
 import loop from '../loop';
 import graph from './3d/graph';
@@ -46,6 +47,7 @@ class StartMenu extends Component {
     graph.reveal(this.state.selectedJob, true);
     loop();
     window.paused = true;
+    log('started', {job: this.state.selectedJob});
     this.props.closeModal();
   }
 

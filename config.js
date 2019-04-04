@@ -47,6 +47,7 @@ export default {
   slackPerFrame: 1,
   minSlackPerFrame: 0.02,
 
+  enableLogging: false,
   debug: params.includes('debug'),
   perfectApplicant: false,
   startHighSchool: false

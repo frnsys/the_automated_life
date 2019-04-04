@@ -1,3 +1,4 @@
+import log from 'log';
 import Node from './node';
 import * as THREE from 'three';
 import skills from 'data/skills.json'
@@ -128,15 +129,18 @@ class Graph {
             valid = true;
           }
           if (!player.application && valid) {
+            let {time} = store.getState();
             let {prob, mainFactor} = logic.probabilityForJob(j);
+            let payload = {
+              id: id,
+              prob: prob,
+              mainFactor: mainFactor
+            }
             store.dispatch({
               type: 'player:apply',
-              payload: {
-                id: id,
-                prob: prob,
-                mainFactor: mainFactor
-              }
+              payload: payload
             });
+            log('applied', {application: payload, time: time});
             this.appliedNode = node;
             node.setColor(appliedColor);
           }

@@ -37,7 +37,7 @@ const Work = (props) => {
     return <div></div>;
   }
   return <WorkStyle>
-    <WorkButton onClick={props.work}>WORK</WorkButton>
+    <WorkButton onClick={() => {window.paused ? '' : props.work() }}>WORK</WorkButton>
     <Bar><BarFill style={{width: `${props.player.performance}%`}} /></Bar>
     <PerformanceLabel>Performance</PerformanceLabel>
   </WorkStyle>;
@@ -49,7 +49,6 @@ const mapStateToProps = (state, props) => {
 
 const mapActionsToProps = {
   work: () => {
-    if (window.paused) return;
     return {
       type: 'player:work'
     };

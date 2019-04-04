@@ -1,3 +1,4 @@
+import log from 'log';
 import math from 'mathjs';
 import scenarios from 'data/scenarios.json';
 
@@ -15,5 +16,6 @@ function reducer(state={}, action) {
 }
 
 let initialState = math.pickRandom(scenarios);
+log('scenario', initialState.name);
 
 export default { reducer, initialState };
