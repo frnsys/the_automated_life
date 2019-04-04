@@ -3,7 +3,7 @@ import uuid from 'uuid/v4';
 
 const IDENTIFIER = uuid();
 
-const log = (data) => {
+const log = (type, data) => {
   if (config.enableLogging) {
     fetch('/log', {
       headers: {
@@ -12,11 +12,14 @@ const log = (data) => {
       },
       method: 'POST',
       body: JSON.stringify({
+        type: type,
         id: IDENTIFIER,
         ev: data,
         ts: Date.now()
       })
     }).catch(err => { throw err });
+  } else {
+    console.log(`log:${type}:${JSON.stringify(data)}`);
   }
 }
 

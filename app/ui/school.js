@@ -7,6 +7,7 @@ import education from 'data/education.json';
 import programs from 'data/programs.json';
 import jobs from 'data/jobs.json';
 import graph from './3d/graph';
+import store from 'store';
 
 function toTitleCase(str) {
   return str.replace(/\w\S*/g, (txt) => {
@@ -73,11 +74,16 @@ class School extends Component {
 
   enrollSchool(withLoan, totalCost) {
     graph.lock();
+
+    let {time} = store.getState();
     let nextJob = this.props.jobs[this.state.selectedProgram.job];
+    let nextLevel = education[this.props.player.education+1];
+    log('enrolled', {nextEducation: nextLevel, program: this.state.selectedProgram, time: time});
+
     this.props.enrollSchool(this.state.selectedProgram, nextJob);
 		if (withLoan) {
-      console.log(totalCost);
 			this.props.getLoan(totalCost);
+      log('loan', {amount: totalCost, time: time});
 		}
     this.props.closeModal();
   }

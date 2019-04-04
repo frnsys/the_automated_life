@@ -27,6 +27,7 @@ module.exports = {
     extensions: ['.js'],
     alias: {
       'data': path.resolve('./data'),
+      'log': path.resolve('./app/log'),
       'config': path.resolve('./config'),
       'store': path.resolve('./app/store')
     }
