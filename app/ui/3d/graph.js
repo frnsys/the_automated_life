@@ -40,6 +40,7 @@ const tooltip = (job) => {
     <div class="job-tooltip">
       ${applied ? `<div class="job-applied">Application Out</div>` : ''}
       <h3>${job.name}${hadJob ? ' (past job)' : ''}</h3>
+      <h5>$${Math.round(job.wageAfterTaxes/12).toLocaleString()}/month</h5>
       <div class="job-status">
         <div class="job-risk job-risk-${risk}">automation risk: ${risk}</div>
         <div class="job-automated">${(automated*100).toFixed(0)}% automated</div>

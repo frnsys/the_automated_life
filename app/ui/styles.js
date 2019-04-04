@@ -55,9 +55,15 @@ export const GlobalStyle = createGlobalStyle`
   .job-tooltip {
     width: 20em;
   }
-  .job-tooltip h3 {
-    margin: 0 0 0.5em 0;
+  .job-tooltip h3,
+  .job-tooltip h5 {
+    margin: 0;
     font-size: 1em;
+  }
+  .job-tooltip h5 {
+    margin: 0 0 0.5em 0;
+    font-weight: normal;
+    font-size: 0.8em;
   }
   .job-skills {
     margin-top: 0.5em;
