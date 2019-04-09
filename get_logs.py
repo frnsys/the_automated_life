@@ -10,9 +10,9 @@ redis = redis.Redis(host='localhost', port=6379, db=1)
 logs = {}
 ids = [r.decode('utf8') for r in redis.keys('fow:*')]
 for id in ids:
-    log = [r.decode('utf8') for r in redis.lrange(id, 0, -1)]
+    log = [json.loads(r.decode('utf8')) for r in redis.lrange(id, 0, -1)]
     id = id.replace('fow:', '')
     logs[id] = log
 
 with open('data/logs.json', 'w') as f:
-    json.dump(logs)
+    json.dump(logs, f)
