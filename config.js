@@ -47,7 +47,7 @@ export default {
   slackPerFrame: 1,
   minSlackPerFrame: 0.02,
 
-  enableLogging: false,
+  enableLogging: window.location.hostname !== 'localhost',
   debug: params.includes('debug'),
   perfectApplicant: false,
   startHighSchool: false
