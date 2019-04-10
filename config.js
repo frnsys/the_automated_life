@@ -6,7 +6,7 @@ export default {
   monthlyExpenses: 1500,
   retirementAge: 65,
   retirementSavingsMin: 500000,
-  gameOverBalance: -25000,
+  gameOverBalance: -35000,
   deepeningAutomationAlpha: 0.05,
   newRobotSkillMinImportance: 0.03,
   newRobotWarningMonths: 8,
