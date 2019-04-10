@@ -19,6 +19,7 @@ const initialState = {
   gameOver: false,
   startAge: 18,
   performance: 0,
+  tasks: 0,
   cash: 0,
   debt: [],
   expenses: {
@@ -133,11 +134,12 @@ function reducer(state={}, action) {
       } else {
         graph.unlock();
       }
-      notify('Congratulations! You graduated.')
+      notify('Congratulations! You graduated.', {background: '#1fd157', color: '#fff'})
       return {...state}
 
     case 'player:work':
-      state.performance = Math.min(state.performance + config.workPerClick, 100);
+      state.performance = Math.min(state.performance + (config.baseWorkPerClick*(1+state.jobProficiency)/Math.sqrt(state.tasks)), 100);
+      state.tasks--;
 
       // Improve skills used on this job
       let skillChanges = logic.workSkillGain(state.job, state.performance)
@@ -149,8 +151,11 @@ function reducer(state={}, action) {
       return {...state}
 
     case 'player:slack':
-      let slack = config.slackPerFrame * (1-state.jobProficiency) + config.minSlackPerFrame;
-      state.performance = Math.max(state.performance - slack, 0);
+      state.performance = Math.max(state.performance - config.slackPerFrame, 0);
+      let taskMultiplier = 1/(Math.max(1, Math.sqrt(state.tasks/5)));
+      if (Math.random() <= (config.taskProb * taskMultiplier)) {
+        state.tasks++;
+      }
       return {...state}
 
     case 'player:loan':
