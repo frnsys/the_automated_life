@@ -37,7 +37,7 @@ const WorkArea = styled('div')`
   right: 1em;
   top: 1em;
   color: #000;
-  max-width: 280px;
+  max-width: 17.1em;
 `;
 
 const HUDArea = styled('div')`
@@ -132,7 +132,7 @@ class App extends Component {
 
         <WorkArea>
           <Work />
-          {this.state.paused ? <OnboardingHint style={{marginTop: '0.1em'}}>Press the <b>WORK</b> button to increase your <b>performance</b> at your job. This affects your chance of getting hired at new jobs.</OnboardingHint> : ''}
+          {this.state.paused ? <OnboardingHint style={{marginTop: '0.1em'}}><b>Work tasks</b> will pile up here. Click to complete them and to increase your <b>performance</b> at your job. This affects your chance of getting hired at new jobs.</OnboardingHint> : ''}
         </WorkArea>
 
         <PauseResume>

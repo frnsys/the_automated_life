@@ -128,7 +128,7 @@ function loop(now) {
             store.dispatch({
               type: 'player:graduate'
             });
-            log('graduated', {education: state.education, time: time});
+            log('graduated', {education: player.education, time: time});
           }
         }
 

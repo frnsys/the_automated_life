@@ -4,7 +4,7 @@ import { Bar, BarFill } from './styles'
 import config from 'config';
 import styled from 'styled-components';
 
-const WorkStyle = styled('div')`
+const WorkBar = styled('div')`
   border: 2px solid black;
   user-select: none;
   position: relative;
@@ -12,6 +12,8 @@ const WorkStyle = styled('div')`
 
 const WorkButton = styled('div')`
   color: #fff;
+  display: inline-block;
+  border: 1px solid #c41010;
   background: #ea432a;
   padding: 0.25em 0.5em;
   cursor: pointer;
@@ -36,11 +38,17 @@ const Work = (props) => {
   if (job == 'Unemployed' || job == 'Student') {
     return <div></div>;
   }
-  return <WorkStyle>
-    <WorkButton onClick={() => {window.paused ? '' : props.work() }}>WORK</WorkButton>
-    <Bar><BarFill style={{width: `${props.player.performance}%`}} /></Bar>
-    <PerformanceLabel>Performance</PerformanceLabel>
-  </WorkStyle>;
+  return <div>
+    <WorkBar>
+      <Bar><BarFill style={{width: `${props.player.performance}%`}} /></Bar>
+      <PerformanceLabel>Performance</PerformanceLabel>
+    </WorkBar>
+    <div>
+      {[...Array(props.player.tasks)].map((i) => {
+        return <WorkButton key={i} onClick={() => {window.paused ? '' : props.work() }}>Work</WorkButton>;
+      })}
+    </div>
+  </div>;
 }
 
 const mapStateToProps = (state, props) => {

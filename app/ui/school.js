@@ -1,3 +1,4 @@
+import log from 'log';
 import config from 'config';
 import {connect} from 'react-redux';
 import React, { Component } from 'react';
