@@ -134,7 +134,7 @@ function reducer(state={}, action) {
       } else {
         graph.unlock();
       }
-      notify('Congratulations! You graduated.', {background: '#1fd157', color: '#fff'})
+      notify('🎓 Congratulations! You graduated.', '', {background: '#1fd157', color: '#fff'});
       return {...state}
 
     case 'player:work':
@@ -151,9 +151,9 @@ function reducer(state={}, action) {
       return {...state}
 
     case 'player:slack':
-      state.performance = Math.max(state.performance - config.slackPerFrame, 0);
-      let taskMultiplier = 1/(Math.max(1, Math.sqrt(state.tasks/5)));
-      if (Math.random() <= (config.taskProb * taskMultiplier)) {
+      let multiplier = (Math.max(1, Math.sqrt(state.tasks/5)));
+      state.performance = Math.max(state.performance - (config.slackPerFrame * multiplier), 0);
+      if (Math.random() <= (config.taskProb * 1/multiplier)) {
         state.tasks++;
       }
       return {...state}
