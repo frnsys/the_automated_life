@@ -57,7 +57,7 @@ class Scene extends Component {
 
   componentWillUnmount() {
     this.stop();
-    this.element.removeChild(this.renderer.domElement);
+    this.element.removeChild(this.scene.renderer.domElement);
   }
 
   render() {
