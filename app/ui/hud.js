@@ -21,7 +21,7 @@ const HUDStyle = styled('div')`
 
 const ProgressStyle = styled('div')`
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   left: 1em;
   bottom: 1em;
   color: #000;

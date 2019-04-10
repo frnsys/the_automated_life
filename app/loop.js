@@ -45,7 +45,7 @@ function loop(now) {
           efficiencyDesc = 'excels at';
         }
         notify(`🤖 RoboCo releases "${nextRobot.name}"`,
-          `A new robot from RoboCo hit the market today. The ${nextRobot.name} ${efficiencyDesc} ${skillsList}.`);
+          `A new robot from RoboCo hit the market today. The ${nextRobot.name} ${efficiencyDesc} ${skillsList.toLowerCase()}.`);
       }
 
       // Teaser news stories
