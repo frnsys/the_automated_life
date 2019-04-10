@@ -145,9 +145,11 @@ function loop(now) {
       }
     }
 
-    store.dispatch({
-      type: 'player:slack'
-    });
+    if (player.job.name !== 'Unemployed') {
+      store.dispatch({
+        type: 'player:slack'
+      });
+    }
 
     // Check for deepening automation
     Object.values(robots).filter((r) => !r.deepened && r.deepeningCountdown <= 0).forEach((r) => {

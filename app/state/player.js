@@ -135,6 +135,12 @@ function reducer(state={}, action) {
         graph.unlock();
       }
       notify('🎓 Congratulations! You graduated.', '', {background: '#1fd157', color: '#fff'});
+
+      // Set full performance
+      // so player isn't penalized when applying to the
+      // first job out of school.
+      state.performance = 100;
+
       return {...state}
 
     case 'player:work':
