@@ -127,11 +127,13 @@ class School extends Component {
 				</div>;
 			}
 
+      let totalCostWageMonths = this.props.player.job !== 'Unemployed' ? ` (${Math.ceil(totalCost/(this.props.player.job.wageAfterTaxes/12))} months' wages)` : '';
+
 			body = (
 				<div>
           <div className='item-box'>
             <div><b>Next level:</b> {nextLevel.name}</div>
-            <div><b>Cost, with living expenses:</b> ${totalCost.toLocaleString()}</div>
+            <div><b>Cost, with living expenses:</b> ${totalCost.toLocaleString()}{totalCostWageMonths}</div>
             {programsInfo}
           </div>
 					{loanInfo}
