@@ -37,6 +37,7 @@ const Stat = (props) => {
 
 const HUD = (props) => {
   let inSchool = props.player.job.name == 'Student';
+  let unemployed = props.player.job.name == 'Unemployed';
   let expensesDesc = `$${props.player.expenses.living.toLocaleString()} living`;
   if (props.player.expenses.debt > 0) {
     expensesDesc += `, $${props.player.expenses.debt.toLocaleString()} debt`;
@@ -46,6 +47,7 @@ const HUD = (props) => {
     <HUDStyle>
       {props.player.gameOver ? <div className='hud-notice'>Game Over</div> : ''}
       {inSchool ? <div className='hud-notice'>In School</div> : ''}
+      {unemployed ? <div className='hud-notice'>Unemployed</div> : ''}
       <Bar><BarFill style={{width: `${props.time.monthProgress*100}%`}} /></Bar>
       <div style={{display: 'flex'}}>
         <Stat name='Date'>📅 {months[props.time.month-1]} {props.time.year}</Stat>

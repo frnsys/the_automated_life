@@ -3,6 +3,7 @@ export default {
   startYear: 2019,
   secPerMonth: 3,
   schoolTimeSpeedup: 20,
+  unemployedTimeSpeedup: 0.2,
   monthlyExpenses: 1500,
   retirementAge: 65,
   retirementSavingsMin: 500000,

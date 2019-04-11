@@ -64,10 +64,17 @@ function loop(now) {
 
     if (!isNaN(elapsed)) {
       let inSchool = player.job.name == 'Student';
+      let unemployed = player.job.name == 'Unemployed' && !player.application;
+      let speedup = 1;
+      if (inSchool) {
+        speedup = config.schoolTimeSpeedup;
+      } else if (unemployed) {
+        speedup = config.unemployedTimeSpeedup;
+      }
       store.dispatch({
         type: 'time',
         payload: {
-          speedup: inSchool ? config.schoolTimeSpeedup : 1,
+          speedup: speedup,
           elapsed: elapsed
         }
       });
