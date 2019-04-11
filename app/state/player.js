@@ -182,6 +182,10 @@ function reducer(state={}, action) {
     case 'player:gameOver':
       state.gameOver = true;
       return {...state}
+
+    case 'player:birthday':
+      state.expenses.living = Math.round(state.expenses.living * (1 + config.inflation));
+      return {...state}
   }
   return state;
 }

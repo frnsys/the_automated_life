@@ -86,6 +86,10 @@ function loop(now) {
           let estimate = Math.round(player.cash + ((player.cash/time.years) * yearsLeft));
           notify(`🎂 Happy ${age}th birthday!`, `You're ${yearsLeft} years from retirement. At this rate, you'll save $${estimate.toLocaleString()} by then.`);
         }
+        store.dispatch({
+          type: 'player:birthday'
+        });
+        notify('Your living expenses increased due to inflation.');
       }
 
       // Check if new month

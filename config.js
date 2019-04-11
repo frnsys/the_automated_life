@@ -9,6 +9,7 @@ export default {
   retirementSavingsMin: 500000,
   gameOverBalance: -35000,
   deepeningAutomationAlpha: 0.05,
+  inflation: 0.015,
   newRobotSkillMinImportance: 0.03,
   newRobotWarningMonths: 8,
   startingJobs: [643, 721, 333, 717],
