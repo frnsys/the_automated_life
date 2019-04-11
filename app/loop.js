@@ -141,6 +141,9 @@ function loop(now) {
             alert('game over, you lose');
             log('gameEnd', {success: false, cash: player.cash, time: time});
           }
+          store.dispatch({
+            type: 'player:gameOver'
+          });
         }
       }
     }
