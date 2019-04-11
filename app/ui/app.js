@@ -30,6 +30,24 @@ const customStyles = {
   }
 };
 
+const GameOver = styled('div')`
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0,0,0,0.75);
+`
+const GameOverAlert = styled('div')`
+  margin: 8em auto;
+  padding: 2em;
+  background: #fff;
+  max-width: 400px;
+  h2 {
+    margin-top: 0;
+  }
+`;
 
 const WorkArea = styled('div')`
   position: fixed;
@@ -88,11 +106,15 @@ class App extends Component {
     this.state = {
       modal: StartMenu,
       modalIsOpen: true,
-      paused: true
+      paused: true,
+      gameOver: null
     };
 
     this.openModal = () => this.setState({modalIsOpen: true});
     this.closeModal = () => this.setState({modalIsOpen: false});
+
+    // Hacky way to call game over
+    window.gameOver = (gameOver) => this.setState({gameOver});
   }
 
   togglePause() {
@@ -108,6 +130,14 @@ class App extends Component {
         <GlobalStyle />
         <ReactTooltip className='info-tooltip' />
         <Notifications children={add => (window.notify = add)} />
+
+        {this.state.gameOver ?
+          <GameOver>
+            <GameOverAlert>
+              <h2>{this.state.gameOver.icon} Game Over</h2>
+              {this.state.gameOver.text}
+            </GameOverAlert>
+          </GameOver> : ''}
 
         <Modal
           isOpen={this.state.modalIsOpen}

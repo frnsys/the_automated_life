@@ -26,7 +26,7 @@ function loop(now) {
         type: 'player:gameOver'
       });
       log('gameOver', {time: time});
-      alert('Game Over');
+      gameOver({icon: '💸', text: 'You accumulated too much debt.'});
       return;
     }
 
@@ -142,10 +142,10 @@ function loop(now) {
         // Check game end state
         if (player.startAge + time.years >= config.retirementAge) {
           if (player.cash >= config.retirementSavingsMin) {
-            alert('game over, you win');
+            gameOver({icon: '🏖️', text: 'You successfully survived automation and made it to retirement.'});
             log('gameEnd', {success: true, cash: player.cash, time: time});
           } else {
-            alert('game over, you lose');
+            gameOver({icon: '🤖', text: 'You weren\'t able to save enough to retire.'});
             log('gameEnd', {success: false, cash: player.cash, time: time});
           }
           store.dispatch({
