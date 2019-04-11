@@ -125,8 +125,13 @@ class Graph {
           let {player} = store.getState();
           let valid = false;
           if (this.focusedNodeId) {
-            let neighbIds = Object.keys(this.edges[this.focusedNodeId]);
-            valid = neighbIds.includes(id);
+            // Can re-apply to any past job
+            if (player.pastJobs.includes(parseInt(id))) {
+              valid = true;
+            } else {
+              let neighbIds = Object.keys(this.edges[this.focusedNodeId]);
+              valid = neighbIds.includes(id);
+            }
           } else {
             valid = true;
           }
