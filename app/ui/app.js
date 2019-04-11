@@ -55,7 +55,7 @@ const WorkArea = styled('div')`
   right: 1em;
   top: 1em;
   color: #000;
-  max-width: 17.1em;
+  width: 17.1em;
 `;
 
 const HUDArea = styled('div')`
