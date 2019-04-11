@@ -65,6 +65,15 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: normal;
     font-size: 0.8em;
   }
+  .job-industries {
+    font-size: 0.65em;
+  }
+  .job-industries > div {
+    padding: 2px;
+    background: #ddd;
+    display: inline-block;
+    margin-bottom: 1px;
+  }
   .job-skills {
     margin-top: 0.5em;
     border-top: 2px solid black;

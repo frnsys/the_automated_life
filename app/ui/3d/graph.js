@@ -41,6 +41,7 @@ const tooltip = (job) => {
       ${applied ? `<div class="job-applied">Application Out</div>` : ''}
       <h3>${job.name}${hadJob ? ' (past job)' : ''}</h3>
       <h5>$${Math.round(job.wageAfterTaxes/12).toLocaleString()}/month</h5>
+      <div class="job-industries">${job.industries.map((ind) => `<div>${config.industryIcons[ind]} ${ind.replace(' (Except Public Administration)', '')}</div>`).join(' ')}</div>
       <div class="job-status">
         <div class="job-risk job-risk-${risk}">automation risk: ${risk}</div>
         <div class="job-automated">${(automated*100).toFixed(0)}% automated</div>

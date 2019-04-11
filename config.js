@@ -18,6 +18,29 @@ export default {
     years: 10
   },
 
+  industryIcons: {
+    'Professional, Scientific, and Technical Services': '📝',
+    'Finance and Insurance': '💵',
+    'Manufacturing': '🏭',
+    'Government': '🏛️',
+    'Educational Services': '🏫',
+    'Health Care and Social Assistance': '🏥',
+    'Information': '🖥️',
+    'Arts, Entertainment, and Recreation': '🎭',
+    'Agriculture, Forestry, Fishing, and Hunting': '🌽',
+    'Wholesale Trade': '📦',
+    'Transportation and Warehousing': '🚚',
+    'Other Services (Except Public Administration)': '🅾️',
+    'Real Estate and Rental and Leasing': '🏘️',
+    'Construction': '🏗️',
+    'Retail Trade': '🛍️',
+    'Accommodation and Food Services': '🏨',
+    'Administrative and Support Services': '🗃️',
+    'Management of Companies and Enterprises': '📈',
+    'Mining, Quarrying, and Oil and Gas Extraction': '⛏️',
+    'Utilities': '💡'
+  },
+
   // <https://www.bankrate.com/finance/taxes/tax-brackets.aspx>
   taxBrackets: [{
     amount: 13600,
