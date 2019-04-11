@@ -21,12 +21,17 @@ def make_news(skill):
             'engineers'
         ]),
         action=random.choice([
-            'make breakthrough',
-            'make advancement',
-            'make discovery',
-            'advance robotics',
-            'develop new tech'
-        ])
+            'pioneered a new technique in {skill} today.',
+            'unveiled an algorithm capable of {skill}.',
+            'performs {skill} like a human.'
+        ]).format(skill=skill.lower())
+        # action=random.choice([
+        #     'make breakthrough',
+        #     'make advancement',
+        #     'make discovery',
+        #     'advance robotics',
+        #     'develop new tech'
+        # ])
     )
     body = random.choice([
         'Robotics researchers at the {nation} Institute of Technology pioneered a new technique in {skill} today.',
@@ -59,9 +64,11 @@ renamed_skills = dict(zip(renamed_skills['Skill'], renamed_skills['Short name'])
 skills = json.load(open('data/skills.json'))
 skills_idx = {s['name']: s['id'] for s in skills.values()}
 
+game_months = (65-18)*12
 start_month = 10
 n_scenarios = 2
 scenarios = []
+print('n skills', len(automation_schedule))
 for i in range(n_scenarios):
     schedule = []
     month = start_month
@@ -69,7 +76,7 @@ for i in range(n_scenarios):
         skill = row.Skill
         if skill in omitted_skills: continue
         skill = renamed_skills.get(skill, skill)
-        month += random.randint(4,12)
+        month += random.randint(0,6)
         schedule.append({
             'id': j,
             'months': month,
@@ -85,6 +92,11 @@ for i in range(n_scenarios):
         'schedule': schedule
     }
     scenarios.append(scenario)
+
+    # Check that there's enough game time
+    # to release all robots
+    print('End month:', month)
+    print('Game months:', game_months)
 
 with open('data/src/scenarios.json', 'w') as f:
     json.dump(scenarios, f, sort_keys=True, indent=2)

@@ -44,8 +44,7 @@ function loop(now) {
         if (nextRobot.efficiency >= 0.75) {
           efficiencyDesc = 'excels at';
         }
-        notify(`🤖 RoboCo releases "${nextRobot.name}"`,
-          `A new robot from RoboCo hit the market today. The ${nextRobot.name} ${efficiencyDesc} ${skillsList.toLowerCase()}.`);
+        notify(`🤖 RoboCo releases "${nextRobot.name}". It ${efficiencyDesc} ${skillsList.toLowerCase()}.`);
       }
 
       // Teaser news stories
@@ -53,7 +52,7 @@ function loop(now) {
         if (!r.teased && time.months == r.months - config.newRobotWarningMonths){
           let skillsList = r.skills.map((s_id) => skills[s_id].name);
           skillsList = [skillsList.slice(0, -1).join(', '), skillsList.slice(-1)[0]].join(skillsList.length < 2 ? '' : ' and ');
-          notify(`💡 ${r.news.headline}`, r.news.body);
+          notify(`💡 ${r.news.headline}`);
           store.dispatch({
             type: 'scenario:teased',
             payload: i

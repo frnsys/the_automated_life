@@ -70,7 +70,7 @@ export default {
   maxSkillChangePerWork: 0.002,
   baseWorkPerClick: 6,
   slackPerFrame: 0.05,
-  taskProb: 0.03,
+  taskProb: 0.04,
 
   enableLogging: window.location.hostname !== 'localhost',
   debug: params.includes('debug'),
