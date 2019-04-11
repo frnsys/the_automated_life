@@ -157,7 +157,7 @@ function reducer(state={}, action) {
       return {...state}
 
     case 'player:slack':
-      let multiplier = (Math.max(1, Math.sqrt(state.tasks/5)));
+      let multiplier = (Math.max(1, Math.sqrt(state.tasks/3)));
       state.performance = Math.max(state.performance - (config.slackPerFrame * multiplier), 0);
       if (Math.random() <= (config.taskProb * 1/multiplier)) {
         state.tasks++;

@@ -42,10 +42,10 @@ export default {
   }],
 
   // Work minigame
-  maxSkillChangePerWork: 0.01,
+  maxSkillChangePerWork: 0.002,
   baseWorkPerClick: 6,
   slackPerFrame: 0.05,
-  taskProb: 0.02,
+  taskProb: 0.03,
 
   enableLogging: window.location.hostname !== 'localhost',
   debug: params.includes('debug'),
