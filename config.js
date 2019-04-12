@@ -4,7 +4,11 @@ export default {
   secPerMonth: 3,
   schoolTimeSpeedup: 20,
   unemployedTimeSpeedup: 0.2,
-  monthlyExpenses: 1500,
+
+  // Using data for 1 adult across NY state from:
+  // <http://livingwage.mit.edu/states/36>
+  monthlyExpenses: 2200,
+
   retirementAge: 65,
   retirementSavingsMin: 500000,
   gameOverBalance: -35000,
