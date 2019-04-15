@@ -22,6 +22,7 @@ Object.keys(industries).forEach((ind) => {
   }, 0);
 });
 Object.values(jobs).forEach((job) => {
+  job.bestEducation = job.education.indexOf(Math.max(...job.education));
   job.baseWage = job.wage;
   job.wageAfterTaxes = wageAfterTaxes(job.wage);
   job.skillsTotal = Object.values(job.skills).reduce((acc, cur) => acc + cur);

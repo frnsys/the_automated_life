@@ -5,9 +5,10 @@ import skills from 'data/skills.json'
 import logic from '../../logic';
 import store from 'store';
 import jobs from 'data/jobs.json';
+import education from 'data/education.json';
 import config from 'config';
 
-const topNSkills = 12;
+const topNSkills = 9;
 const visitedColor = 0xf4ed61;
 const unfocusedColor = 0xaaaaaa;
 const focusedColor = 0x0000ff;
@@ -46,7 +47,7 @@ const tooltip = (job) => {
         <div class="job-automated">${(automated*100).toFixed(0)}% automated</div>
       </div>
       <div class="job-skills">
-        <h5>Important skills</h5>
+        <h5><span>Important skills</span> <span>🎓 ${education[job.bestEducation].name}</span></h5>
         <ul>
           ${requiredSkills.map((s) => {
             let risk = 'low';

@@ -79,6 +79,16 @@ export const GlobalStyle = createGlobalStyle`
     border-top: 2px solid black;
     font-size: 0.75em;
   }
+  .job-skills h5 {
+    display: flex;
+    justify-content: space-between;
+  }
+  .job-skills span {
+    display: block;
+  }
+  .job-skills span:last-child {
+    text-align: right;
+  }
   .job-skills ul {
     list-style-type: none;
     margin: 0;
