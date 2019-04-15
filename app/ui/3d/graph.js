@@ -13,7 +13,6 @@ const unfocusedColor = 0xaaaaaa;
 const focusedColor = 0x0000ff;
 const appliedColor = 0x79d889;
 const neighbColor = 0xff0000;
-const neighbColorUnqualified = 0x660000;
 
 const tooltip = (job) => {
   let {player, robots} = store.getState();
@@ -273,7 +272,20 @@ class Graph {
       bottom: focusNode.y
     };
 
-    Object.keys(this.edges[job_id]).map(neighb => {
+    let neighbors = Object.keys(this.edges[job_id]);
+    let toReveal = [...neighbors];
+
+    // TESTING revealing more than immediate neighbors
+    // toReveal = toReveal.map((id) => {
+    //   return Object.keys(this.edges[id]);
+    // }).reduce((acc, r) => {
+    //   return acc.concat(r);
+    // }, []).concat(toReveal);
+    // toReveal = [...new Set(toReveal)];
+
+    console.log(toReveal);
+
+    toReveal.map(neighb => {
       let node = this.nodes[neighb];
       node.mesh.visible = true;
       node.anno.style.display = 'block';
@@ -292,14 +304,11 @@ class Graph {
         bounds.top = node.y + this.nodeSize;
       }
 
-      // TODO color by probability of getting job
-      // and by level of automation
+      // Set colors
       if (player.pastJobs.includes(node.data.id)) {
         node.setColor(visitedColor);
-      } else if (neighb) {
+      } else if (neighbors.includes(neighb)) {
         node.setColor(neighbColor);
-      } else {
-        node.setColor(neighbColorUnqualified);
       }
       node.mesh.position.setZ(1);
 
