@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Scene from './scene';
 import HUD from './hud';
 import Work from './work';
-import Notifications from './notifs';
+import {Notifications, Message, Content, Title, Body, history} from './notifs';
 import { GlobalStyle, Button } from './styles'
 import Modal from 'react-modal';
 import ReactTooltip from 'react-tooltip'
@@ -92,6 +92,34 @@ const PauseResumeButton = styled('div')`
   }
 `
 
+const NotificationHistoryButton = styled('div')`
+  position: fixed;
+  right: 1em;
+  bottom: 1em;
+  cursor: pointer;
+  color: #888;
+  text-decoration: underline;
+  font-size: 0.8em;
+  z-index: 10;
+  background: #eee;
+`;
+
+const NotificationHistory = () => {
+  return <div style={{width: '440px', height: '70vh', overflowY: 'scroll'}}>
+    <h3>History</h3>
+    {history.map((h, i) => {
+      return <Message key={i} style={{width: '100%', fontSize: '0.8em'}}>
+        <Content style={h.style}>
+          <div>
+            <Title>{h.title}</Title>
+            {h.msg ? <Body>{h.msg}</Body> : ''}
+          </div>
+        </Content>
+      </Message>
+    })}
+  </div>;
+};
+
 class App extends Component {
   constructor() {
     super();
@@ -143,7 +171,7 @@ class App extends Component {
         </Modal>
 
         {this.state.paused ?
-            <OnboardingHint style={{position: 'fixed', right: '1em', bottom: '1em', zIndex: 2, maxWidth: '360px'}}>This is the job graph. Jobs are connected based on the similarity of their skills. The <b>blue</b> node is your current job. <br /><br /><b>Red</b> jobs are jobs you can <b>apply</b> to by clicking on them (it takes {config.applicationMinMonths} months to hear back). Your chance of getting hired depends on your relevant skill levels, your education, and your current job performance.<br /><br /><b>Yellow</b> jobs are jobs you've had previously. You can re-apply to them at any time.<br /><br />Mouse over a job to see its skill requirements, their risk of automation, and your current skill levels.</OnboardingHint> : ''}
+            <OnboardingHint style={{position: 'fixed', right: '1em', bottom: '1em', zIndex: 11, maxWidth: '360px'}}>This is the job graph. Jobs are connected based on the similarity of their skills. The <b>blue</b> node is your current job. <br /><br /><b>Red</b> jobs are jobs you can <b>apply</b> to by clicking on them (it takes {config.applicationMinMonths} months to hear back). Your chance of getting hired depends on your relevant skill levels, your education, and your current job performance.<br /><br /><b>Yellow</b> jobs are jobs you've had previously. You can re-apply to them at any time.<br /><br />Mouse over a job to see its skill requirements, their risk of automation, and your current skill levels.</OnboardingHint> : ''}
 
         <HUDArea>
           <PauseResumeButton onClick={this.togglePause.bind(this)}>{this.state.paused ? (this.state.started ? 'Resume' : 'Start') : 'Pause'}</PauseResumeButton>
@@ -153,6 +181,8 @@ class App extends Component {
           </HUD>
           {this.state.paused ? <OnboardingHint style={{marginTop: '0.1em'}}>Here you can see your current age, savings, income, expenses, education level, and job.<br /><br />The <b>Skills</b> menu will show you your skills, and the <b>School</b> menu is where you can enroll in school.</OnboardingHint>: ''}
         </HUDArea>
+
+        <NotificationHistoryButton onClick={() => this.setState({modalIsOpen: true, modal: NotificationHistory})}>Notification history</NotificationHistoryButton>
 
         <WorkArea>
           <Work />

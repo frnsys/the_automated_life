@@ -91,8 +91,12 @@ class School extends Component {
     graph.lock();
 
     let {time} = store.getState();
-    let nextJob = this.props.jobs[this.state.selectedProgram.job];
     let nextLevel = education[this.props.player.education+1];
+
+    let nextJob = null;
+    if (nextLevel.name == 'Secondary Degree') {
+      nextJob = this.props.jobs[this.state.selectedProgram.job];
+    }
     log('enrolled', {nextEducation: nextLevel, program: this.state.selectedProgram, time: time});
 
     this.props.enrollSchool(this.state.selectedProgram, nextJob);
@@ -106,6 +110,7 @@ class School extends Component {
   render() {
 		let alreadyEnrolled = this.props.player.job.name == 'Student';
 		let fullyEducated = !(this.props.player.education < education.length - 1);
+    let secondary = false;
 		let body = '';
 		if (alreadyEnrolled) {
 			body = <h2>You are already enrolled.</h2>;
@@ -114,7 +119,8 @@ class School extends Component {
 		} else {
 			let nextLevel = education[this.props.player.education+1];
 			let programsInfo = '';
-      if (nextLevel.name == 'Secondary Degree') {
+      let secondary = nextLevel.name == 'Secondary Degree';
+      if (secondary) {
         programsInfo = <div style={{margin: '1em 0 0 0'}}>
           <h3 style={{margin: 0, padding: '0px 0px 0.2em', borderBottom: '2px solid black'}}>Select a program to enroll in:</h3>
           <ul style={{maxHeight: '150px', overflowY: 'scroll'}}>
@@ -130,10 +136,11 @@ class School extends Component {
 
 			let loanInfo = '';
       let totalCost = 0;
-      if (this.state.selectedProgram) {
-        let years = nextLevel.name == 'Secondary Degree' ? this.state.selectedProgram.years : nextLevel.years;
+      let needsLoan = false;
+      if (!secondary || this.state.selectedProgram) {
+        let years = secondary ? this.state.selectedProgram.years : nextLevel.years;
         totalCost = (years * 12 * config.monthlyExpenses) + (nextLevel.cost * years);
-        let needsLoan = totalCost > this.props.player.cash;
+        needsLoan = totalCost > this.props.player.cash;
         if (needsLoan) {
           loanInfo = <div>
             <LoanWarning>You can't afford school. If you enroll, you will receive a loan to cover all costs with the following terms:</LoanWarning>
@@ -149,13 +156,13 @@ class School extends Component {
 				<div>
           <div className='item-box'>
             <div><b>Next level:</b> {nextLevel.name}</div>
-            {this.state.selectedProgram ?
+            {(!secondary || this.state.selectedProgram) ?
               <div><b>Cost, with living expenses:</b> ${totalCost.toLocaleString()}{totalCostWageMonths}</div>
                 : ''}
             {programsInfo}
           </div>
 					{loanInfo}
-          {this.state.selectedProgram ?
+          {(!secondary || this.state.selectedProgram) ?
             <Button onClick={() => this.enrollSchool(needsLoan, totalCost)}>Enroll</Button> : ''}
 				</div>
 			);

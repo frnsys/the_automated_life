@@ -6,6 +6,8 @@ import styled from 'styled-components';
 let id = 0;
 const defaultTimeout = 6000;
 
+const history = [];
+
 const Container = styled('div')`
   font-size: 0.8em;
   position: fixed;
@@ -43,7 +45,7 @@ const Body = styled('div')`
   margin-top: 0.5em;
 `;
 
-export const Content = styled('div')`
+const Content = styled('div')`
   border: 2px solid black;
   color: #000;
   background: #fff;
@@ -72,7 +74,10 @@ function Notifications({ config = { tension: 125, friction: 20, precision: 0.1 }
     config: (item, state) => (state === 'leave' ? [{ duration: timeout }, config, config] : config),
   })
 
-  useEffect(() => void children((title, msg, style={}) => setItems(state => [...state, { key: id++, title, msg, style }])), [])
+  useEffect(() => void children((title, msg, style={}) => {
+    history.unshift({title, msg, style});
+    setItems(state => [...state, { key: id++, title, msg, style }])
+  }), [])
   return (
     <Container top={false}>
       {transitions.map(({ key, item, props: { ...style } }) => (
@@ -89,4 +94,6 @@ function Notifications({ config = { tension: 125, friction: 20, precision: 0.1 }
   )
 }
 
-export default Notifications;
+export {
+  Notifications, Message, Content, Title, Body, history
+};
