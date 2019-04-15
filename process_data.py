@@ -177,7 +177,7 @@ for i, r in tqdm(df.iterrows()):
         continue
 
 # Build the job network edges
-min_neighbors = 1 # min so that the graph is connected
+min_neighbors = 3 # min so that the graph is connected
 min_similarity = 0.7
 for idx, job in jobs.items():
     min_sim = min_similarity

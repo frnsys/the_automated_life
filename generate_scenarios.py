@@ -56,6 +56,9 @@ def bot_name():
 automation_schedule = pd.read_csv('data/src/orderedOnetSkillsByComputerization.csv')
 automation_schedule = automation_schedule.iloc[::-1]
 
+# Limit skills we automate to only those w/ positive correlation
+automation_schedule = automation_schedule[automation_schedule.correlation > 0]
+
 skill_edits = pd.read_csv('data/src/Clean Skills - orderedOnetSkillsByComputerization.csv')
 omitted_skills = skill_edits[skill_edits['Omit?'] == 1.0]['Skill'].tolist()
 renamed_skills = skill_edits[skill_edits['Omit?'] != 1.0][['Skill', 'Short name']].dropna()
@@ -76,7 +79,7 @@ for i in range(n_scenarios):
         skill = row.Skill
         if skill in omitted_skills: continue
         skill = renamed_skills.get(skill, skill)
-        month += random.randint(0,6)
+        month += random.randint(4,8)
         schedule.append({
             'id': j,
             'months': month,
@@ -97,6 +100,7 @@ for i in range(n_scenarios):
     # to release all robots
     print('End month:', month)
     print('Game months:', game_months)
+    print('Schedule:', len(schedule))
 
 with open('data/src/scenarios.json', 'w') as f:
     json.dump(scenarios, f, sort_keys=True, indent=2)
