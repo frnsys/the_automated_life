@@ -118,8 +118,6 @@ function probabilityForJob(job) {
     return factors[k] < factors[m] ? k : m
   }, null);
 
-  console.log(`performance: ${performance}, education: ${education}, skills: ${skills}`);
-  console.log(mainFactor);
   let prob = (performance + education + skills)/3;
   return { prob, mainFactor, factors };
 }

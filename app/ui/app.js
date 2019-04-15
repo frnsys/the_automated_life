@@ -11,6 +11,7 @@ import Skills from './skills';
 import School from './school';
 import styled from 'styled-components';
 import config from 'config';
+import log from 'log';
 
 Modal.setAppElement('#main');
 const customStyles = {
@@ -48,6 +49,51 @@ const GameOverAlert = styled('div')`
     margin-top: 0;
   }
 `;
+
+const GameOverSurveyStyle = styled('div')`
+margin: 2em 0 0 0;
+.form-field {
+  margin: 0.5em 0;
+}
+label {
+  display: block;
+}
+input {
+  width: 100%;
+  box-sizing: border-box;
+}
+input[type=submit] {
+  border: none;
+  background: #395be5;
+  color: #fff;
+  font-weight: bold;
+  font-family: 'Arimo', 'Helvetiva', sans-serif;
+  padding: 0.25em 0.5em;
+  cursor: pointer;
+}
+`;
+
+class GameOverSurvey extends Component {
+  constructor() {
+    super();
+    this.state = {
+      occupation: ''
+    };
+  }
+
+  render() {
+    return <GameOverSurveyStyle>
+      <p>Thank you for playing Automation World.</p>
+      <form onSubmit={(ev) => {ev.preventDefault(); log('survey', this.state); return false;}}>
+        <div className="form-field">
+          <label>Occupation</label>
+          <input type='text' value={this.state.occupation} onChange={(ev) => this.setState({occupation: ev.target.value})} />
+        </div>
+        <input type='Submit' value='Submit' />
+      </form>
+    </GameOverSurveyStyle>
+  }
+}
 
 const WorkArea = styled('div')`
   position: fixed;
@@ -158,6 +204,7 @@ class App extends Component {
             <GameOverAlert>
               <h2>{this.state.gameOver.icon} Game Over</h2>
               {this.state.gameOver.text}
+              <GameOverSurvey />
             </GameOverAlert>
           </GameOver> : ''}
 
