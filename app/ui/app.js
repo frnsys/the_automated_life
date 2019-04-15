@@ -15,7 +15,7 @@ import config from 'config';
 Modal.setAppElement('#main');
 const customStyles = {
   overlay: {
-    zIndex: 10
+    zIndex: 12
   },
   content: {
     border: '4px solid black',
@@ -51,7 +51,7 @@ const GameOverAlert = styled('div')`
 
 const WorkArea = styled('div')`
   position: fixed;
-  z-index: 9;
+  z-index: 11;
   right: 1em;
   top: 1em;
   color: #000;
@@ -63,7 +63,7 @@ const HUDArea = styled('div')`
   z-index: 2;
   left: 1em;
   top: 1em;
-  max-width: 200px;
+  max-width: 220px;
 `;
 
 
@@ -74,28 +74,21 @@ const OnboardingHint = styled('div')`
   font-size: 0.9em;
 `;
 
-const PauseResume = styled('div')`
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 1em;
-  text-align: center;
-  z-index: 1;
-`
-
 const PauseResumeButton = styled('div')`
-  padding: 0.25em 0.5em;
+  padding: 0.1em 0.5em;
+  font-size: 0.8em;
   text-align: center;
-  background: red;
+  background: #395be5;
   color: #fff;
   font-weight: bold;
   display: inline-block;
   cursor: pointer;
   border: 2px solid black;
-  opacity: 0.5;
+  border-bottom: none;
+  box-sizing: border-box;
+  width: 100%;
   &:hover {
-    opacity: 1;
+    background: red;
   }
 `
 
@@ -104,6 +97,7 @@ class App extends Component {
     super();
 
     this.state = {
+      started: false,
       modal: StartMenu,
       modalIsOpen: true,
       paused: true,
@@ -120,7 +114,7 @@ class App extends Component {
   togglePause() {
     let paused = this.state.paused;
     window.paused = !paused;
-    this.setState({ paused: !paused });
+    this.setState({ paused: !paused, started: true });
   }
 
   render() {
@@ -149,9 +143,10 @@ class App extends Component {
         </Modal>
 
         {this.state.paused ?
-            <OnboardingHint style={{position: 'fixed', left: '300px', top: '1em', zIndex: 2, maxWidth: '360px'}}>This is the job graph. The <b>blue</b> node is your current job. <br /><br /><b>Red</b> jobs are jobs you can <b>apply</b> to by clicking on them (it takes {config.applicationMinMonths} months to hear back). Your chance of getting hired depends on your relevant skill levels, your education, and your current job performance.<br /><br /><b>Yellow</b> jobs are jobs you've had previously. You can re-apply to them at any time.<br /><br />Mouse over a job to see its skill requirements, their risk of automation, and your current skill levels.</OnboardingHint> : ''}
+            <OnboardingHint style={{position: 'fixed', left: '300px', top: '1em', zIndex: 2, maxWidth: '360px'}}>This is the job graph. Jobs are connected based on the similarity of their skills. The <b>blue</b> node is your current job. <br /><br /><b>Red</b> jobs are jobs you can <b>apply</b> to by clicking on them (it takes {config.applicationMinMonths} months to hear back). Your chance of getting hired depends on your relevant skill levels, your education, and your current job performance.<br /><br /><b>Yellow</b> jobs are jobs you've had previously. You can re-apply to them at any time.<br /><br />Mouse over a job to see its skill requirements, their risk of automation, and your current skill levels.</OnboardingHint> : ''}
 
         <HUDArea>
+          <PauseResumeButton onClick={this.togglePause.bind(this)}>{this.state.paused ? (this.state.started ? 'Resume' : 'Start') : 'Pause'}</PauseResumeButton>
           <HUD>
             <Button onClick={() => this.setState({modalIsOpen: true, modal: Skills})}>Skills</Button>
             <Button onClick={() => this.setState({modalIsOpen: true, modal: School})}>School</Button>
@@ -159,15 +154,10 @@ class App extends Component {
           {this.state.paused ? <OnboardingHint style={{marginTop: '0.1em'}}>Here you can see your current age, savings, income, expenses, education level, and job.<br /><br />The <b>Skills</b> menu will show you your skills, and the <b>School</b> menu is where you can enroll in school.</OnboardingHint>: ''}
         </HUDArea>
 
-
         <WorkArea>
           <Work />
           {this.state.paused ? <OnboardingHint style={{marginTop: '0.1em'}}><b>Work tasks</b> will pile up here. Click to complete them and to increase your <b>performance</b> at your job. This affects your chance of getting hired at new jobs.</OnboardingHint> : ''}
         </WorkArea>
-
-        <PauseResume>
-          <PauseResumeButton onClick={this.togglePause.bind(this)}>{this.state.paused ? 'Resume' : 'Pause'}</PauseResumeButton>
-        </PauseResume>
 
         <Scene />
       </div>

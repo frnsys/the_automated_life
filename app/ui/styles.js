@@ -258,6 +258,10 @@ export const Button = styled('div')`
   padding: 0.25em 0.5em;
   font-weight: bold;
   flex: 1;
+  margin-right: 1px;
+  &:last-child {
+    margin-right: 0;
+  }
   &:hover {
     background: ${props => props.disabled ? '#aaa' : '#2f51d8'};
     ${props => props.highlight ? 'background: #ea432a;' : ''}

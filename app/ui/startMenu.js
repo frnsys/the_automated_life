@@ -65,7 +65,7 @@ class StartMenu extends Component {
             className={this.state.selectedJob == id ? 'selected' : ''}>{jobs[id].name}</li>;
         })}
       </ul>
-      <Button onClick={this.startGame.bind(this)}>Start Game</Button>
+      <Button onClick={this.startGame.bind(this)}>Select Job</Button>
     </StartMenuStyle>
   }
 }

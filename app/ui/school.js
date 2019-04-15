@@ -16,6 +16,15 @@ function toTitleCase(str) {
   });
 }
 
+const SchoolStyle = styled('div')`
+  width: 440px;
+`;
+
+const LoanWarning = styled('div')`
+  color: #ff0000;
+  font-size: 1em !important;
+`;
+
 const ProgramInfoStyle = styled('div')`
   background: ${props => props.selected ? '#7efc82' : 'none'};
   &:hover {
@@ -30,9 +39,10 @@ const ProgramInfoStyle = styled('div')`
 `;
 
 const IndustryStyle = styled('h3')`
+  font-size: 1em;
   cursor: pointer;
-  margin: 1em 0 0 0;
-  color: red;
+  margin: 0.25em 0 0 0 !important;
+  color: #395be5;
   &:hover {
     text-decoration: underline;
   }
@@ -48,8 +58,12 @@ class IndustryPrograms extends Component {
 
   render() {
     let ind = this.props.industry;
+    let arrowStyle = {
+      verticalAlign: 'middle',
+      fontSize: '0.6em'
+    };
     return <div>
-      <IndustryStyle onClick={() => this.setState({open: !this.state.open})}>{ind}</IndustryStyle>
+      <IndustryStyle onClick={() => this.setState({open: !this.state.open})}><span style={arrowStyle}>{this.state.open ? '▼' : '▶'}</span> {ind}</IndustryStyle>
       <ul style={{display: this.state.open ? 'block' : 'none'}}>
         {programs[ind].map((p, i) => {
           return <li key={i} onClick={() => this.props.onClick(p)}>
@@ -69,7 +83,7 @@ class School extends Component {
     super(props);
     let ind = Object.keys(programs)[0];
     this.state = {
-      selectedProgram: programs[ind][0]
+      selectedProgram: null
     };
   }
 
@@ -102,50 +116,55 @@ class School extends Component {
 			let programsInfo = '';
       if (nextLevel.name == 'Secondary Degree') {
         programsInfo = <div style={{margin: '1em 0 0 0'}}>
-          <h3 style={{margin: '0 0 0.5em 0'}}>Select a program to enroll in:</h3>
+          <h3 style={{margin: 0, padding: '0px 0px 0.2em', borderBottom: '2px solid black'}}>Select a program to enroll in:</h3>
           <ul style={{maxHeight: '150px', overflowY: 'scroll'}}>
             {Object.keys(programs).map((ind, i) => {
               return <IndustryPrograms key={i}
                 industry={ind}
-                open={i == 0} selected={this.state.selectedProgram}
+                open={false} selected={this.state.selectedProgram}
                 onClick={(p) => this.setState({selectedProgram: p})} />;
             })}
           </ul>
         </div>;
       }
 
-      let years = nextLevel.name == 'Secondary Degree' ? this.state.selectedProgram.years : nextLevel.years;
-			let totalCost = (years * 12 * config.monthlyExpenses) + (nextLevel.cost * years);
-			let needsLoan = totalCost > this.props.player.cash;
 			let loanInfo = '';
-			if (needsLoan) {
-				loanInfo = <div>
-					<h3>You can't afford school. If you enroll, you will receive a loan to cover all costs with the following terms:</h3>
-          <div className='item-box'>
-            <div><b>Interest rate:</b> {(config.loanTerms.interestRate*100).toFixed(1)}% fixed, {config.loanTerms.years}-year</div>
-          </div>
-				</div>;
-			}
+      let totalCost = 0;
+      if (this.state.selectedProgram) {
+        let years = nextLevel.name == 'Secondary Degree' ? this.state.selectedProgram.years : nextLevel.years;
+        totalCost = (years * 12 * config.monthlyExpenses) + (nextLevel.cost * years);
+        let needsLoan = totalCost > this.props.player.cash;
+        if (needsLoan) {
+          loanInfo = <div>
+            <LoanWarning>You can't afford school. If you enroll, you will receive a loan to cover all costs with the following terms:</LoanWarning>
+            <div className='item-box'>
+              <div><b>Interest rate:</b> {(config.loanTerms.interestRate*100).toFixed(1)}% fixed, {config.loanTerms.years}-year</div>
+            </div>
+          </div>;
+        }
+      }
 
       let totalCostWageMonths = this.props.player.job !== 'Unemployed' ? ` (${Math.ceil(totalCost/(this.props.player.job.wageAfterTaxes/12))} months' wages)` : '';
-
 			body = (
 				<div>
           <div className='item-box'>
             <div><b>Next level:</b> {nextLevel.name}</div>
-            <div><b>Cost, with living expenses:</b> ${totalCost.toLocaleString()}{totalCostWageMonths}</div>
+            {this.state.selectedProgram ?
+              <div><b>Cost, with living expenses:</b> ${totalCost.toLocaleString()}{totalCostWageMonths}</div>
+                : ''}
             {programsInfo}
           </div>
 					{loanInfo}
-					<Button onClick={() => this.enrollSchool(needsLoan, totalCost)}>Enroll</Button>
+          {this.state.selectedProgram ?
+            <Button onClick={() => this.enrollSchool(needsLoan, totalCost)}>Enroll</Button> : ''}
 				</div>
 			);
 		}
 
-    return <div>
+    return <SchoolStyle>
       <h3>Education</h3>
 			{body}
-    </div>
+    </SchoolStyle>
   }
 }
 

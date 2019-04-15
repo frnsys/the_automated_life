@@ -42,7 +42,7 @@ class Scene {
     this.controls = new OrbitControls(this.camera, this.renderer.domElement);
     this.controls.enableRotate = false;
     // for orthographic
-    this.controls.maxZoom = 0.4;
+    this.controls.maxZoom = 0.02;
     this.controls.minZoom = 0.001;
     // for perspective
     // this.controls.minDistance = 400;

@@ -9,7 +9,7 @@ const defaultTimeout = 6000;
 const Container = styled('div')`
   font-size: 0.8em;
   position: fixed;
-  z-index: 1000;
+  z-index: 9;
   width: 0 auto;
   top: ${props => (props.top ? '1em' : 'unset')};
   bottom: ${props => (props.top ? 'unset' : '1em')};

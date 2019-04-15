@@ -35,11 +35,18 @@ const SkillsStyle = styled('div')`
     position: relative;
     word-wrap: break-word;
   }
+  h3 {
+    margin-bottom: 0;
+  }
   h4 {
     background: #111;
     color: #fff;
     padding: 0.3em;
     margin-bottom: 0.5em;
+  }
+  h5 {
+    margin: 0;
+    font-weight: normal;
   }
 
   > *:last-child {
@@ -72,6 +79,7 @@ class Skills extends Component {
       </div>
       <SkillsStyle>
         <h3>Your Skills</h3>
+        <h5>{((automatedSkills.length/Object.keys(skills).length)*100).toFixed(0)}% of skills have been automated</h5>
         {skillGroups.map((group) => {
           return (<div key={group.name}>
             <h4>{group.name}</h4>
