@@ -1,3 +1,4 @@
+import t from 'i18n';
 import config from 'config';
 import logic from '../logic';
 import skills from 'data/skills.json'
@@ -93,7 +94,7 @@ function reducer(state={}, action) {
 
       if (state.job.name == 'Student') {
         // Dropped out of school, loan repayment kicks in
-        notify('You dropped out of school.')
+        notify(t('drop_out'))
         if (state.debt) {
           state.debt[state.debt.length-1].startedPayments = true;
         }
@@ -134,7 +135,7 @@ function reducer(state={}, action) {
       } else {
         graph.unlock();
       }
-      notify('🎓 Congratulations! You graduated.', '', {background: '#1fd157', color: '#fff'});
+      notify(`🎓 ${t('graduated')}`, '', {background: '#1fd157', color: '#fff'});
 
       // Set full performance
       // so player isn't penalized when applying to the

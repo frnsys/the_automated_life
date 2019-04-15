@@ -29,7 +29,8 @@ module.exports = {
       'data': path.resolve('./data'),
       'log': path.resolve('./app/log'),
       'config': path.resolve('./config'),
-      'store': path.resolve('./app/store')
+      'store': path.resolve('./app/store'),
+      'i18n': path.resolve('./app/i18n')
     }
   }
 };

@@ -141,7 +141,7 @@ const PauseResumeButton = styled('div')`
 const NotificationHistoryButton = styled('div')`
   position: fixed;
   right: 1em;
-  bottom: 1em;
+  bottom: 0.2em;
   cursor: pointer;
   color: #888;
   text-decoration: underline;

@@ -1,3 +1,4 @@
+import t from 'i18n';
 import log from 'log';
 import config from 'config';
 import store from 'store';
@@ -26,7 +27,7 @@ function loop(now) {
         type: 'player:gameOver'
       });
       log('gameOver', {time: time});
-      gameOver({icon: '💸', text: 'You accumulated too much debt.'});
+      gameOver({icon: '💸', text: t('game_over_debt')});
       return;
     }
 
@@ -40,11 +41,7 @@ function loop(now) {
 
         let skillsList = nextRobot.skills.map((s_id) => skills[s_id].name);
         skillsList = [skillsList.slice(0, -1).join(', '), skillsList.slice(-1)[0]].join(skillsList.length < 2 ? '' : ' and ');
-        let efficiencyDesc = 'is capable of';
-        if (nextRobot.efficiency >= 0.75) {
-          efficiencyDesc = 'excels at';
-        }
-        notify(`🤖 RoboCo releases "${nextRobot.name}". It ${efficiencyDesc} ${skillsList.toLowerCase()}.`);
+        notify(`🤖 ${t('robot_release', {name: nextRobot.name, skills: skillsList.toLowerCase()})}`)
       }
 
       // Teaser news stories
@@ -83,12 +80,12 @@ function loop(now) {
         if ((age) % 10 == 0) {
           let yearsLeft = config.retirementAge - age;
           let estimate = Math.round(player.cash + ((player.cash/time.years) * yearsLeft));
-          notify(`🎂 Happy ${age}th birthday!`, `You're ${yearsLeft} years from retirement. At this rate, you'll save $${estimate.toLocaleString()} by then.`);
+          notify(`🎂 ${t('birthday_title', {age})}`, t('birthday_body', {yearsLeft: yearsLeft, estimate: estimate.toLocaleString()}));
         }
         store.dispatch({
           type: 'player:birthday'
         });
-        notify('Your living expenses increased due to inflation.');
+        notify(t('inflation'));
       }
 
       // Check if new month
@@ -116,11 +113,11 @@ function loop(now) {
               type: 'player:hire',
               payload: job
             });
-            notify(`🎉 You were hired as a ${job.name}.`, '', {background: '#1fd157', color: '#fff'});
+            notify(`🎉 ${t('hired', {name: job.name})}`, '', {background: '#1fd157', color: '#fff'});
             log('hired', {job: job.id, time: time});
             graph.reveal(player.application.id);
           } else {
-            notify(`😞 Your application as a ${job.name} was rejected because of your ${player.application.mainFactor}.`, '', {background: '#ea432a', color: '#fff'});
+            notify(`😞 ${t('rejected', {name: job.name, mainFactor: player.application.mainFactor})}`, '', {background: '#ea432a', color: '#fff'});
             log('rejected', {job: job.id, time: time});
             graph.resetNodeColor(graph.appliedNode, player);
             graph.appliedNode = null;
@@ -145,10 +142,10 @@ function loop(now) {
         // Check game end state
         if (player.startAge + time.years >= config.retirementAge) {
           if (player.cash >= config.retirementSavingsMin) {
-            gameOver({icon: '🏖️', text: 'You successfully survived automation and made it to retirement.'});
+            gameOver({icon: '🏖️', text: t('game_over_win')});
             log('gameEnd', {success: true, cash: player.cash, time: time});
           } else {
-            gameOver({icon: '🤖', text: 'You weren\'t able to save enough to retire.'});
+            gameOver({icon: '🤖', text: t('game_over_lose')});
             log('gameEnd', {success: false, cash: player.cash, time: time});
           }
           store.dispatch({

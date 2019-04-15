@@ -1,3 +1,4 @@
+import t from 'i18n';
 import config from 'config';
 import jobs from 'data/jobs.json'
 import skills from 'data/skills.json'
@@ -39,7 +40,7 @@ function reducer(state={}, {type, payload}) {
       return {...state}
     case 'job:newSkill':
       let robot = payload;
-      notify(`The productivity effects of ${robot.name} are widespread.`);
+      notify(t('deepening_automation', {name: robot.name}));
 
       let s_id = Object.keys(skills).length;
       skills[s_id] = {

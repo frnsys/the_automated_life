@@ -284,8 +284,6 @@ class Graph {
     // }, []).concat(toReveal);
     // toReveal = [...new Set(toReveal)];
 
-    console.log(toReveal);
-
     toReveal.map(neighb => {
       let node = this.nodes[neighb];
       node.mesh.visible = true;
