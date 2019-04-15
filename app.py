@@ -14,6 +14,7 @@ def log():
     data = request.get_json()
     id = data['id']
     del data['id']
+    data['ip'] = request.environ['REMOTE_ADDR']
     redis.lpush('fow:{}'.format(id), json.dumps(data))
     redis.save()
     return jsonify(success=True)

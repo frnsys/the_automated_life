@@ -137,7 +137,7 @@ class Graph {
           }
           if (!player.application && valid) {
             let {time} = store.getState();
-            let {prob, mainFactor} = logic.probabilityForJob(j);
+            let {prob, mainFactor, factors} = logic.probabilityForJob(j);
             let payload = {
               id: id,
               prob: prob,
@@ -147,7 +147,12 @@ class Graph {
               type: 'player:apply',
               payload: payload
             });
-            log('applied', {application: payload, time: time});
+            log('applied', {
+              factors: factors,
+              application: payload,
+              time: time,
+              job: {id: j.id, wage: j.wage}
+            });
             this.appliedNode = node;
             node.setColor(appliedColor);
           }

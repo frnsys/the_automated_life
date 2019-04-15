@@ -121,7 +121,7 @@ function probabilityForJob(job) {
   console.log(`performance: ${performance}, education: ${education}, skills: ${skills}`);
   console.log(mainFactor);
   let prob = (performance + education + skills)/3;
-  return { prob, mainFactor };
+  return { prob, mainFactor, factors };
 }
 
 // How much a job is automated
