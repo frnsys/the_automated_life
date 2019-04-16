@@ -6,6 +6,7 @@ import logic from './logic';
 import graph from './ui/3d/graph';
 import skills from 'data/skills.json'
 
+// Set default speedup
 window.speedup = 1;
 
 // Game loop
@@ -34,6 +35,7 @@ function loop(now) {
       return;
     }
 
+    // Prepare next scheduled robot for release
     let nextRobot = scenario.schedule[0];
     if (nextRobot) {
       if (time.months >= nextRobot.months) {
@@ -42,16 +44,18 @@ function loop(now) {
           type: 'scenario:increment'
         });
 
-        let skillsList = nextRobot.skills.map((s_id) => skills[s_id].name);
-        skillsList = [skillsList.slice(0, -1).join(', '), skillsList.slice(-1)[0]].join(skillsList.length < 2 ? '' : ' and ');
-        notify(`🤖 ${t('robot_release', {name: nextRobot.name, skills: skillsList.toLowerCase()})}`)
+        let skillNames = nextRobot.skills.map((s_id) => skills[s_id].name);
+        let skillsDesc = [skillNames.slice(0, -1).join(', '), skillNames.slice(-1)[0]]
+          .join(skillNames.length < 2 ? '' : ' and ').toLowerCase();
+        notify(`🤖 ${t('robot_release', {
+          name: nextRobot.name,
+          skills: skillsDesc})
+        }`);
       }
 
       // Teaser news stories
       scenario.schedule.forEach((r, i) => {
         if (!r.teased && time.months == r.months - config.newRobotWarningMonths){
-          let skillsList = r.skills.map((s_id) => skills[s_id].name);
-          skillsList = [skillsList.slice(0, -1).join(', '), skillsList.slice(-1)[0]].join(skillsList.length < 2 ? '' : ' and ');
           notify(`💡 ${r.news.headline}`);
           store.dispatch({
             type: 'scenario:teased',
@@ -64,6 +68,8 @@ function loop(now) {
     if (!isNaN(elapsed)) {
       let inSchool = player.job.name == 'Student';
       let unemployed = player.job.name == 'Unemployed' && !player.application;
+
+      // Tick time
       let speedup = window.speedup;
       if (inSchool) {
         speedup = config.schoolTimeSpeedup;
@@ -80,10 +86,14 @@ function loop(now) {
 
       if (time.newYear) {
         let age = player.startAge + time.years;
+
+        // Every tenth birthday, show retirement reminder
         if ((age) % 10 == 0) {
           let yearsLeft = config.retirementAge - age;
-          let estimate = Math.round(player.cash + ((player.cash/time.years) * yearsLeft));
-          notify(`🎂 ${t('birthday_title', {age})}`, t('birthday_body', {yearsLeft: yearsLeft, estimate: estimate.toLocaleString()}));
+          let estimate = Math.round(player.cash + ((player.cash/time.years) * yearsLeft))
+            .toLocaleString();
+          notify(`🎂 ${t('birthday_title', {age})}`,
+            t('birthday_body', {yearsLeft, estimate}));
         }
         store.dispatch({
           type: 'player:birthday'
@@ -99,6 +109,7 @@ function loop(now) {
         store.dispatch({
           type: 'player:expenses'
         });
+
         // Countdown robots to deepening automation
         store.dispatch({
           type: 'robot:countdown'
@@ -121,8 +132,10 @@ function loop(now) {
         // Countdown player application
         if (player.application && player.application.countdown <= 0) {
           let job = jobs[player.application.id];
+
+          // Hired
           if (config.perfectApplicant || Math.random() <= player.application.prob) {
-            if (player.job.name == 'Student') {
+            if (inSchool) {
               log('dropout', {education: player.education, time: logTime});
             }
 
@@ -130,11 +143,16 @@ function loop(now) {
               type: 'player:hire',
               payload: job
             });
-            notify(`🎉 ${t('hired', {name: job.name})}`, '', {background: '#1fd157', color: '#fff'});
+            notify(`🎉 ${t('hired', {name: job.name})}`,
+              '', {background: '#1fd157', color: '#fff'});
             log('hired', {job: job.id, time: logTime});
             graph.reveal(player.application.id);
+
+          // Rejected
           } else {
-            notify(`😞 ${t('rejected', {name: job.name, mainFactor: player.application.mainFactor})}`, '', {background: '#ea432a', color: '#fff'});
+            notify(`😞 ${t('rejected',
+              {name: job.name, mainFactor: player.application.mainFactor})}`,
+              '', {background: '#ea432a', color: '#fff'});
             log('rejected', {job: job.id, time: logTime});
             graph.resetNodeColor(graph.appliedNode, player);
             graph.appliedNode = null;
@@ -144,7 +162,8 @@ function loop(now) {
           type: 'player:application'
         });
 
-        if (player.job.name == 'Student') {
+        // Check school
+        if (inSchool) {
           store.dispatch({
             type: 'player:learn'
           });

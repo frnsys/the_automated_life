@@ -8,7 +8,6 @@ function releaseRobot(robot) {
   let {jobs, robots} = store.getState();
 
   robot.deepened = false;
-  releaseRobot(robot);
   store.dispatch({
     type: 'robot:create',
     payload: robot
