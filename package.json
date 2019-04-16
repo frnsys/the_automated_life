@@ -6,7 +6,8 @@
     "start": "concurrently -n \"WEBPACK,FLASK\" -c \"bgBlue.bold,bgGreen.bold\" \"npm run webpack\" \"npm run flask\"",
     "webpack": "webpack --watch --progress",
     "flask": "FLASK_APP=app.py FLASK_DEBUG=1 flask run",
-    "build": "webpack --colors --progress --mode=production"
+    "build": "webpack --colors --progress --mode=production",
+    "dev": "webpack-dev-server --watch --progress --mode=development"
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
@@ -15,6 +16,7 @@
     "react": "^16.5.2",
     "react-dom": "^16.8.1",
     "react-modal": "^3.8.1",
+    "react-radio-group": "^3.0.3",
     "react-redux": "^6.0.0",
     "react-spring": "^8.0.5",
     "react-tooltip": "^3.10.0",

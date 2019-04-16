@@ -6,6 +6,7 @@ import {Notifications, Message, Content, Title, Body, history} from './notifs';
 import { GlobalStyle, Button } from './styles'
 import Modal from 'react-modal';
 import ReactTooltip from 'react-tooltip'
+import {RadioGroup, Radio} from 'react-radio-group'
 import StartMenu from './startMenu';
 import Skills from './skills';
 import School from './school';
@@ -41,22 +42,24 @@ const GameOver = styled('div')`
   background: rgba(0,0,0,0.75);
 `
 const GameOverAlert = styled('div')`
-  margin: 8em auto;
+  margin: 2em auto;
   padding: 2em;
   background: #fff;
-  max-width: 400px;
+  max-width: 600px;
   h2 {
     margin-top: 0;
   }
 `;
 
 const GameOverSurveyStyle = styled('div')`
+border-top: 1px solid black;
 margin: 2em 0 0 0;
 .form-field {
-  margin: 0.5em 0;
+  margin: 0.5em 0 1em 0;
 }
 label {
   display: block;
+  font-weight: bold;
 }
 input {
   width: 100%;
@@ -71,26 +74,91 @@ input[type=submit] {
   padding: 0.25em 0.5em;
   cursor: pointer;
 }
+.form-radio-group {
+  display: flex;
+  > div {
+    flex: initial
+    margin-right: 1em
+  }
+  label, input {
+    display: inline;
+    width: auto;
+    font-weight: normal;
+  }
+}
 `;
 
 class GameOverSurvey extends Component {
   constructor() {
     super();
     this.state = {
-      occupation: ''
+      submitted: false,
+      occupation: '',
+      age: 0,
+      education: 0,
+      automation_social: 2,
+      automation_individual: 2
     };
+  }
+
+  submit(ev) {
+    ev.preventDefault();
+    log('survey', this.state);
+    this.setState({submitted: true});
+    return false;
   }
 
   render() {
     return <GameOverSurveyStyle>
       <p>Thank you for playing Automation World.</p>
-      <form onSubmit={(ev) => {ev.preventDefault(); log('survey', this.state); return false;}}>
-        <div className="form-field">
-          <label>Occupation</label>
-          <input type='text' value={this.state.occupation} onChange={(ev) => this.setState({occupation: ev.target.value})} />
-        </div>
-        <input type='Submit' value='Submit' />
-      </form>
+      {this.state.submitted ? <p>Your answers have been submitted.</p> :
+        <form onSubmit={(ev) => this.submit(ev)}>
+          <div className="form-field">
+            <label>Age</label>
+            <RadioGroup className='form-radio-group' name='age' selectedValue={this.state.age} onChange={(age) => this.setState({age})}>
+              <div><Radio value={0} id='age_0' /><label htmlFor='age_0'>&lt;18</label></div>
+              <div><Radio value={1} id='age_1' /><label htmlFor='age_1'>18-29</label></div>
+              <div><Radio value={2} id='age_2' /><label htmlFor='age_2'>30-44</label></div>
+              <div><Radio value={3} id='age_3' /><label htmlFor='age_3'>45-64</label></div>
+              <div><Radio value={4} id='age_4' /><label htmlFor='age_4'>65+</label></div>
+            </RadioGroup>
+          </div>
+          <div className="form-field">
+            <label>Education level</label>
+            <RadioGroup className='form-radio-group' name='education' selectedValue={this.state.education} onChange={(education) => this.setState({education})}>
+              <div><Radio value={0} id='edu_0' /><label htmlFor='edu_0'>Some high school</label></div>
+              <div><Radio value={1} id='edu_1' /><label htmlFor='edu_1'>High school</label></div>
+              <div><Radio value={2} id='edu_2' /><label htmlFor='edu_2'>Bachelors</label></div>
+              <div><Radio value={3} id='edu_3' /><label htmlFor='edu_3'>Masters</label></div>
+              <div><Radio value={4} id='edu_4' /><label htmlFor='edu_4'>PhD</label></div>
+            </RadioGroup>
+          </div>
+          <div className="form-field">
+            <label>Occupation</label>
+            <input type='text' value={this.state.occupation} onChange={(ev) => this.setState({occupation: ev.target.value})} />
+          </div>
+          <div className="form-field">
+            <label>Do you feel automation will benefit society economically?</label>
+            <RadioGroup className='form-radio-group' name='automation_social' selectedValue={this.state.automation_social} onChange={(automation_social) => this.setState({automation_social})}>
+              <div><Radio value={0} id='soc_0' /><label htmlFor='soc_0'>Strongly Disagree</label></div>
+              <div><Radio value={1} id='soc_1' /><label htmlFor='soc_1'>Disagree</label></div>
+              <div><Radio value={2} id='soc_2' /><label htmlFor='soc_2'>Neutral</label></div>
+              <div><Radio value={3} id='soc_3' /><label htmlFor='soc_3'>Agree</label></div>
+              <div><Radio value={4} id='soc_4' /><label htmlFor='soc_4'>Strongly Agree</label></div>
+            </RadioGroup>
+          </div>
+          <div className="form-field">
+            <label>Do you feel automation will benefit individual well-being?</label>
+            <RadioGroup className='form-radio-group' name='automation_individual' selectedValue={this.state.automation_individual} onChange={(automation_individual) => this.setState({automation_individual})}>
+              <div><Radio value={0} id='ind_0' /><label htmlFor='ind_0'>Strongly Disagree</label></div>
+              <div><Radio value={1} id='ind_1' /><label htmlFor='ind_1'>Disagree</label></div>
+              <div><Radio value={2} id='ind_2' /><label htmlFor='ind_2'>Neutral</label></div>
+              <div><Radio value={3} id='ind_3' /><label htmlFor='ind_3'>Agree</label></div>
+              <div><Radio value={4} id='ind_4' /><label htmlFor='ind_4'>Strongly Agree</label></div>
+            </RadioGroup>
+          </div>
+          <input type='Submit' value='Submit' />
+        </form>}
     </GameOverSurveyStyle>
   }
 }
