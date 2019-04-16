@@ -1,6 +1,5 @@
 import jobs from 'data/jobs.json'
 import skills from 'data/skills.json'
-import industries from 'data/industries.json';
 
 function reducer(state={}, action) {
   switch (action.type) {
