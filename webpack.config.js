@@ -1,10 +1,13 @@
 var path = require('path');
 
 module.exports = {
-  entry: ['@babel/polyfill', './main'],
+  entry: {
+    'main': ['@babel/polyfill', './main'],
+    'stats': ['@babel/polyfill', './stats']
+  },
   output: {
-    filename: 'dist.js',
-    path: __dirname + '/static'
+    path: path.resolve(__dirname, 'static'),
+    filename: '[name].js'
   },
   devServer: {
     publicPath: '/static/'
