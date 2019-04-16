@@ -1,3 +1,4 @@
+import t from 'i18n';
 import {connect} from 'react-redux';
 import React, { Component } from 'react';
 import styled from 'styled-components';
@@ -66,35 +67,35 @@ class Skills extends Component {
     return <div style={{padding: 0}}>
       <div className="skills-legend">
         <div className="automation-legend">
-          <div className="automation-low-key"></div> low risk
-          <div className="automation-moderate-key"></div> mid risk
-          <div className="automation-high-key"></div> high risk
+          <div className="automation-low-key"></div> {t('low_risk_automation')}
+          <div className="automation-moderate-key"></div> {t('mid_risk_automation')}
+          <div className="automation-high-key"></div> {t('high_risk_automation')}
         </div>
         <div>
-          <img title="Improving on this job" alt="Improving on this job" src="/static/arrow.png" style={{width: '10px', margin: '0 2px'}} /> improving skill
+          <img title={t('improving_on_job')} alt={t('improving_on_job')} src="/static/arrow.png" style={{width: '10px', margin: '0 2px'}} /> {t('improving_skill')}
         </div>
         <div className="skill-legend">
-          <div className="skill-level-bar"><div className="skill-level-bar-fill"></div></div> your skill level
+          <div className="skill-level-bar"><div className="skill-level-bar-fill"></div></div> {t('your_skill_level')}
         </div>
       </div>
       <SkillsStyle>
-        <h3>Your Skills</h3>
-        <h5>{((automatedSkills.length/Object.keys(skills).length)*100).toFixed(0)}% of skills have been automated</h5>
+        <h3>{t('your_skills')}</h3>
+        <h5>{t('percent_skills_automated', {percent: ((automatedSkills.length/Object.keys(skills).length)*100).toFixed(0)})}</h5>
         {skillGroups.map((group) => {
           return (<div key={group.name}>
             <h4>{group.name}</h4>
             <ul className="skill-group">
               {group.skills.map((s_id) => {
                 let s = skills[s_id];
-                let risk = 'low';
+                let risk = t('low');
                 if (s.automatibility >= 0.7) {
-                  risk = 'high';
+                  risk = t('high');
                 } else if (s.automatibility >= 0.4) {
-                  risk = 'moderate';
+                  risk = t('moderate');
                 }
                 return <li className={`automation-${risk}`} key={s_id}>
-                  {automatedSkills.includes(s.id) ? <div className="automated"><div>Automated</div></div> : ''}
-                  {changingSkills.includes(s_id.toString()) ? <img title="Improving on this job" alt="Improving on this job" src="/static/arrow.png" style={{width: '10px', margin: '0 2px'}} /> : ''}
+                  {automatedSkills.includes(s.id) ? <div className="automated"><div>{t('Automated')}</div></div> : ''}
+                  {changingSkills.includes(s_id.toString()) ? <img title={t('improving_on_job')} alt={t('improving_on_job')} src="/static/arrow.png" style={{width: '10px', margin: '0 2px'}} /> : ''}
                   {s.name}
                   <div className="skill-level-bar">
                     <div className="skill-level-bar-fill" style={{height:`${this.props.skills[s.id] * 100}%`}}></div>
@@ -105,14 +106,14 @@ class Skills extends Component {
           </div>);
         })}
         {robotSkills.length > 0 ? <div>
-          <h4>Robot Maintenance</h4>
+          <h4>{t('robot_maintenance')}</h4>
           <ul className="skill-group">
             {robotSkills.map((s_id) => {
                 let s = skills[s_id];
                 let risk = 'low';
                 return <li className={`automation-${risk}`} key={s_id}>
-                  {automatedSkills.includes(s.id) ? <div className="automated"><div>Automated</div></div> : ''}
-                  {changingSkills.includes(s_id.toString()) ? <img title="Improving on this job" alt="Improving on this job" src="/static/arrow.png" style={{width: '10px', margin: '0 2px'}} /> : ''}
+                  {automatedSkills.includes(s.id) ? <div className="automated"><div>{t('automated')}</div></div> : ''}
+                  {changingSkills.includes(s_id.toString()) ? <img title={t('improving_on_job')} alt={t('improving_on_job')} src="/static/arrow.png" style={{width: '10px', margin: '0 2px'}} /> : ''}
                   {s.name}
                   <div className="skill-level-bar">
                     <div className="skill-level-bar-fill" style={{height:`${(this.props.skills[s.id] || 0) * 100}%`}}></div>

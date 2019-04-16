@@ -4,8 +4,10 @@ import {Provider} from 'react-redux';
 import store from 'store';
 import App from './app/ui/app';
 
-render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById('main'));
+window.onPhrasesLoad = () => {
+  render(
+    <Provider store={store}>
+      <App />
+    </Provider>,
+    document.getElementById('main'));
+};

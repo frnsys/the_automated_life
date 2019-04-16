@@ -16,12 +16,14 @@ const lang = getPreferredLanguages().filter(l => availableLanguages.includes(l))
 let phrases = {};
 fetch(`/data/lang/${lang}.json`)
   .then(response => response.json())
-  .then(json => phrases = json);
+  .then(json => {
+    phrases = json;
+    window.onPhrasesLoad();
+  });
 
 function t(key, data) {
   data = data || {};
   let tmpl = phrases[key];
-  console.log(data);
   return Object.keys(data).reduce((acc, k) => {
     return acc.replace(`{${k}}`, data[k]);
   }, tmpl);

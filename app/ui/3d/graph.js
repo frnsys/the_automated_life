@@ -1,3 +1,4 @@
+import t from 'i18n';
 import log from 'log';
 import Node from './node';
 import * as THREE from 'three';
@@ -22,11 +23,11 @@ const tooltip = (job) => {
     return acc.concat(r.skills);
   }, []);
 
-  let risk = 'low';
+  let risk = t('low');
   if (job.automationRisk >= 0.8) {
-    risk = 'high';
+    risk = t('high');
   } else if (job.automationRisk >= 0.4) {
-    risk = 'moderate';
+    risk = t('moderate');
   }
   let automated = logic.percentAutomated(job);
   let hadJob = player.pastJobs.includes(job.id);
@@ -38,35 +39,35 @@ const tooltip = (job) => {
 
   return `
     <div class="job-tooltip">
-      ${applied ? `<div class="job-applied">Application Out</div>` : ''}
-      <h3>${job.name}${hadJob ? ' (past job)' : ''}</h3>
-      <h5>$${Math.round(job.wageAfterTaxes/12).toLocaleString()}/month</h5>
+      ${applied ? `<div class="job-applied">${t('application_out')}</div>` : ''}
+      <h3>${job.name}${hadJob ? ` (${t('past_job')})` : ''}</h3>
+      <h5>$${Math.round(job.wageAfterTaxes/12).toLocaleString()}/${t('month_unit')}</h5>
       <div class="job-industries">${job.industries.map((ind) => `<div>${config.industryIcons[ind]} ${ind.replace(' (Except Public Administration)', '')}</div>`).join(' ')}</div>
       <div class="job-status">
-        <div class="job-risk job-risk-${risk}">automation risk: ${risk}</div>
-        <div class="job-automated">${(automated*100).toFixed(0)}% automated</div>
+        <div class="job-risk job-risk-${risk}">${t('automation_risk')}: ${risk}</div>
+        <div class="job-automated">${(automated*100).toFixed(0)}% ${t('percent_automated')}</div>
       </div>
       <div class="job-skills">
-        <h5><span>Important skills</span> <span>🎓 ${education[job.bestEducation].name}</span></h5>
+        <h5><span>${t('important_skills')}</span> <span>🎓 ${education[job.bestEducation].name}</span></h5>
         <ul>
           ${requiredSkills.map((s) => {
-            let risk = 'low';
+            let risk = t('low');
             if (s.automatibility >= 0.7) {
-              risk = 'high';
+              risk = t('high');
             } else if (s.automatibility >= 0.4) {
-              risk = 'moderate';
+              risk = t('moderate');
             }
-            return `<li class="automation-${risk}">${automatedSkills.includes(s.id) ? '<div class="automated"><div>Automated</div></div>' : ''}${s.name} <div class="skill-level-bar"><div class="skill-level-bar-fill" style="height:${player.skills[s.id] * 100}%;"></div></div></li>`;
+            return `<li class="automation-${risk}">${automatedSkills.includes(s.id) ? `<div class="automated"><div>${t('automated')}</div></div>` : ''}${s.name} <div class="skill-level-bar"><div class="skill-level-bar-fill" style="height:${player.skills[s.id] * 100}%;"></div></div></li>`;
           }).join('')}
         </ul>
         <div class="job-legend">
           <div class="automation-legend">
-            <div class="automation-low-key"></div> low risk
-            <div class="automation-moderate-key"></div> mid risk
-            <div class="automation-high-key"></div> high risk
+            <div class="automation-low-key"></div> ${t('low_risk_automation')}
+            <div class="automation-moderate-key"></div> ${t('mid_risk_automation')}
+            <div class="automation-high-key"></div> ${t('high_risk_automation')}
           </div>
           <div class="skill-legend">
-            <div class="skill-level-bar"><div class="skill-level-bar-fill"></div></div> your skill level
+            <div class="skill-level-bar"><div class="skill-level-bar-fill"></div></div> ${t('your_skill_level')}
           </div>
         </div>
       </div>

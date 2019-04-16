@@ -1,3 +1,4 @@
+import t from 'i18n';
 import React from 'react';
 import {connect} from 'react-redux';
 import { Bar, BarFill } from './styles'
@@ -41,29 +42,29 @@ const Work = (props) => {
   let performance = 'Decent';
   let performanceColor = '#000';
   if (p <= 10) {
-    performance = 'Terrible';
+    performance = t('performance_terrible');
     performanceColor = '#f71d09';
   } else if (p <= 30) {
-    performance = 'Bad';
+    performance = t('performance_bad');
     performanceColor = '#ef5028';
   } else if (p <= 60) {
-    performance = 'Mediocre';
+    performance = t('performance_mediocre');
     performanceColor = '#efb428';
   } else if (p <= 80) {
-    performance = 'Good';
+    performance = t('performance_good');
     performanceColor = '#11c441';
   } else if (p <= 100) {
-    performance = 'Fantastic';
+    performance = t('performance_fantastic');
     performanceColor = '#d119e5';
   }
   return <div>
     <WorkBar>
       <Bar style={{background: '#fff'}}><BarFill style={{width: `${props.player.performance}%`, background: 'linear-gradient(to bottom, #eeeeee 0%,#cccccc 100%)'}} /></Bar>
-      <PerformanceLabel>Performance: <span style={{color: performanceColor}}>{performance}</span></PerformanceLabel>
+      <PerformanceLabel>{t('performance')}: <span style={{color: performanceColor}}>{performance}</span></PerformanceLabel>
     </WorkBar>
     <div>
       {[...Array(props.player.tasks)].map((i) => {
-        return <WorkButton key={i} onClick={() => {window.paused ? '' : props.work() }}>Work</WorkButton>;
+        return <WorkButton key={i} onClick={() => {window.paused ? '' : props.work() }}>{t('work_button')}</WorkButton>;
       })}
     </div>
   </div>;

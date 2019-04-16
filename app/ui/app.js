@@ -1,3 +1,4 @@
+import t from 'i18n';
 import React, { Component } from 'react';
 import Scene from './scene';
 import HUD from './hud';
@@ -70,7 +71,7 @@ input[type=submit] {
   background: #395be5;
   color: #fff;
   font-weight: bold;
-  font-family: 'Arimo', 'Helvetiva', sans-serif;
+  font-family: 'Arimo', 'Helvetica', sans-serif;
   padding: 0.25em 0.5em;
   cursor: pointer;
 }
@@ -110,11 +111,11 @@ class GameOverSurvey extends Component {
 
   render() {
     return <GameOverSurveyStyle>
-      <p>Thank you for playing Automation World.</p>
-      {this.state.submitted ? <p>Your answers have been submitted.</p> :
+      <p>{t('game_over_thanks')}</p>
+      {this.state.submitted ? <p>{t('survey_submitted')}</p> :
         <form onSubmit={(ev) => this.submit(ev)}>
           <div className="form-field">
-            <label>Age</label>
+            <label>{t('survey_age_label')}</label>
             <RadioGroup className='form-radio-group' name='age' selectedValue={this.state.age} onChange={(age) => this.setState({age})}>
               <div><Radio value={0} id='age_0' /><label htmlFor='age_0'>&lt;18</label></div>
               <div><Radio value={1} id='age_1' /><label htmlFor='age_1'>18-29</label></div>
@@ -124,7 +125,7 @@ class GameOverSurvey extends Component {
             </RadioGroup>
           </div>
           <div className="form-field">
-            <label>Education level</label>
+            <label>{t('survey_education_label')}</label>
             <RadioGroup className='form-radio-group' name='education' selectedValue={this.state.education} onChange={(education) => this.setState({education})}>
               <div><Radio value={0} id='edu_0' /><label htmlFor='edu_0'>Some high school</label></div>
               <div><Radio value={1} id='edu_1' /><label htmlFor='edu_1'>High school</label></div>
@@ -134,30 +135,30 @@ class GameOverSurvey extends Component {
             </RadioGroup>
           </div>
           <div className="form-field">
-            <label>Occupation</label>
+            <label>{t('survey_occupation_label')}</label>
             <input type='text' value={this.state.occupation} onChange={(ev) => this.setState({occupation: ev.target.value})} />
           </div>
           <div className="form-field">
-            <label>Do you feel automation will benefit society economically?</label>
+            <label>{t('survey_automation_society_question')}</label>
             <RadioGroup className='form-radio-group' name='automation_social' selectedValue={this.state.automation_social} onChange={(automation_social) => this.setState({automation_social})}>
-              <div><Radio value={0} id='soc_0' /><label htmlFor='soc_0'>Strongly Disagree</label></div>
-              <div><Radio value={1} id='soc_1' /><label htmlFor='soc_1'>Disagree</label></div>
-              <div><Radio value={2} id='soc_2' /><label htmlFor='soc_2'>Neutral</label></div>
-              <div><Radio value={3} id='soc_3' /><label htmlFor='soc_3'>Agree</label></div>
-              <div><Radio value={4} id='soc_4' /><label htmlFor='soc_4'>Strongly Agree</label></div>
+              <div><Radio value={0} id='soc_0' /><label htmlFor='soc_0'>{t('likert_0')}</label></div>
+              <div><Radio value={1} id='soc_1' /><label htmlFor='soc_1'>{t('likert_1')}</label></div>
+              <div><Radio value={2} id='soc_2' /><label htmlFor='soc_2'>{t('likert_2')}</label></div>
+              <div><Radio value={3} id='soc_3' /><label htmlFor='soc_3'>{t('likert_3')}</label></div>
+              <div><Radio value={4} id='soc_4' /><label htmlFor='soc_4'>{t('likert_4')}</label></div>
             </RadioGroup>
           </div>
           <div className="form-field">
-            <label>Do you feel automation will benefit individual well-being?</label>
+            <label>{t('survey_automation_individual_question')}</label>
             <RadioGroup className='form-radio-group' name='automation_individual' selectedValue={this.state.automation_individual} onChange={(automation_individual) => this.setState({automation_individual})}>
-              <div><Radio value={0} id='ind_0' /><label htmlFor='ind_0'>Strongly Disagree</label></div>
-              <div><Radio value={1} id='ind_1' /><label htmlFor='ind_1'>Disagree</label></div>
-              <div><Radio value={2} id='ind_2' /><label htmlFor='ind_2'>Neutral</label></div>
-              <div><Radio value={3} id='ind_3' /><label htmlFor='ind_3'>Agree</label></div>
-              <div><Radio value={4} id='ind_4' /><label htmlFor='ind_4'>Strongly Agree</label></div>
+              <div><Radio value={0} id='ind_0' /><label htmlFor='ind_0'>{t('likert_0')}</label></div>
+              <div><Radio value={1} id='ind_1' /><label htmlFor='ind_1'>{t('likert_1')}</label></div>
+              <div><Radio value={2} id='ind_2' /><label htmlFor='ind_2'>{t('likert_2')}</label></div>
+              <div><Radio value={3} id='ind_3' /><label htmlFor='ind_3'>{t('likert_3')}</label></div>
+              <div><Radio value={4} id='ind_4' /><label htmlFor='ind_4'>{t('likert_4')}</label></div>
             </RadioGroup>
           </div>
-          <input type='Submit' value='Submit' />
+          <input type='Submit' value={t('survey_submit_button')} />
         </form>}
     </GameOverSurveyStyle>
   }
@@ -220,7 +221,7 @@ const NotificationHistoryButton = styled('div')`
 
 const NotificationHistory = () => {
   return <div style={{width: '440px', height: '70vh', overflowY: 'scroll'}}>
-    <h3>History</h3>
+    <h3>{t('notification_history_title')}</h3>
     {history.map((h, i) => {
       return <Message key={i} style={{width: '100%', fontSize: '0.8em'}}>
         <Content style={h.style}>
@@ -270,7 +271,7 @@ class App extends Component {
         {this.state.gameOver ?
           <GameOver>
             <GameOverAlert>
-              <h2>{this.state.gameOver.icon} Game Over</h2>
+              <h2>{this.state.gameOver.icon} {t('game_over_notice')}</h2>
               {this.state.gameOver.text}
               <GameOverSurvey />
             </GameOverAlert>
@@ -286,22 +287,22 @@ class App extends Component {
         </Modal>
 
         {this.state.paused ?
-            <OnboardingHint style={{position: 'fixed', right: '1em', bottom: '1em', zIndex: 11, maxWidth: '360px'}}>This is the job graph. Jobs are connected based on the similarity of their skills. The <b>blue</b> node is your current job. <br /><br /><b>Red</b> jobs are jobs you can <b>apply</b> to by clicking on them (it takes {config.applicationMinMonths} months to hear back). Your chance of getting hired depends on your relevant skill levels, your education, and your current job performance.<br /><br /><b>Yellow</b> jobs are jobs you've had previously. You can re-apply to them at any time.<br /><br />Mouse over a job to see its skill requirements, their risk of automation, and your current skill levels.</OnboardingHint> : ''}
+            <OnboardingHint style={{position: 'fixed', right: '1em', bottom: '1em', zIndex: 11, maxWidth: '360px'}}><div dangerouslySetInnerHTML={{__html: t('hint_job_graph', {applicationMonths: config.applicationMinMonths})}}></div></OnboardingHint> : ''}
 
         <HUDArea>
-          <PauseResumeButton onClick={this.togglePause.bind(this)}>{this.state.paused ? (this.state.started ? 'Resume' : 'Start') : 'Pause'}</PauseResumeButton>
+          <PauseResumeButton onClick={this.togglePause.bind(this)}>{this.state.paused ? (this.state.started ? t('resume_button') : t('start_button')) : t('pause_button')}</PauseResumeButton>
           <HUD>
-            <Button onClick={() => this.setState({modalIsOpen: true, modal: Skills})}>Skills</Button>
-            <Button onClick={() => this.setState({modalIsOpen: true, modal: School})}>School</Button>
+            <Button onClick={() => this.setState({modalIsOpen: true, modal: Skills})}>{t('skills_button')}</Button>
+            <Button onClick={() => this.setState({modalIsOpen: true, modal: School})}>{t('school_button')}</Button>
           </HUD>
-          {this.state.paused ? <OnboardingHint style={{marginTop: '0.1em'}}>Here you can see your current age, savings, income, expenses, education level, and job.<br /><br />The <b>Skills</b> menu will show you your skills, and the <b>School</b> menu is where you can enroll in school.</OnboardingHint>: ''}
+          {this.state.paused ? <OnboardingHint style={{marginTop: '0.1em'}}><div dangerouslySetInnerHTML={{__html: t('hint_hud')}}></div></OnboardingHint>: ''}
         </HUDArea>
 
-        <NotificationHistoryButton onClick={() => this.setState({modalIsOpen: true, modal: NotificationHistory})}>Notification history</NotificationHistoryButton>
+        <NotificationHistoryButton onClick={() => this.setState({modalIsOpen: true, modal: NotificationHistory})}>{t('notification_history_button')}</NotificationHistoryButton>
 
         <WorkArea>
           <Work />
-          {this.state.paused ? <OnboardingHint style={{marginTop: '0.1em'}}><b>Work tasks</b> will pile up here. Click to complete them and to increase your <b>performance</b> at your job. This affects your chance of getting hired at new jobs.</OnboardingHint> : ''}
+          {this.state.paused ? <OnboardingHint style={{marginTop: '0.1em'}}><div dangerouslySetInnerHTML={{__html: t('hint_work')}}></div></OnboardingHint> : ''}
         </WorkArea>
 
         <Scene />

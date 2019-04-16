@@ -1,3 +1,4 @@
+import t from 'i18n';
 import log from 'log';
 import config from 'config';
 import {connect} from 'react-redux';
@@ -68,8 +69,8 @@ class IndustryPrograms extends Component {
         {programs[ind].map((p, i) => {
           return <li key={i} onClick={() => this.props.onClick(p)}>
             <ProgramInfoStyle selected={this.props.selected == p}>
-              <h5>{toTitleCase(jobs[p.job.toString()].name)} <span style={{color: '#777', fontWeight: 'normal'}}>{p.years} years</span></h5>
-              <span style={{fontSize: '0.8em', color: '#777'}}>Study <span style={{color: '#222'}}>{p.name}</span></span>
+              <h5>{toTitleCase(jobs[p.job.toString()].name)} <span style={{color: '#777', fontWeight: 'normal'}}>{t('years_duration', {years: p.years})}</span></h5>
+              <span style={{fontSize: '0.8em', color: '#777'}}>{t('study_program', {name: p.name})}</span>
             </ProgramInfoStyle>
           </li>;
         })}
@@ -113,16 +114,16 @@ class School extends Component {
     let secondary = false;
 		let body = '';
 		if (alreadyEnrolled) {
-			body = <h2>You are already enrolled.</h2>;
+			body = <h2>{t('already_enrolled')}</h2>;
 		} else if (fullyEducated) {
-			body = <h2>You are fully educated.</h2>;
+			body = <h2>{t('fully_educated')}</h2>;
 		} else {
 			let nextLevel = education[this.props.player.education+1];
 			let programsInfo = '';
       let secondary = nextLevel.name == 'Secondary Degree';
       if (secondary) {
         programsInfo = <div style={{margin: '1em 0 0 0'}}>
-          <h3 style={{margin: 0, padding: '0px 0px 0.2em', borderBottom: '2px solid black'}}>Select a program to enroll in:</h3>
+          <h3 style={{margin: 0, padding: '0px 0px 0.2em', borderBottom: '2px solid black'}}>{t('select_program')}:</h3>
           <ul style={{maxHeight: '150px', overflowY: 'scroll'}}>
             {Object.keys(programs).map((ind, i) => {
               return <IndustryPrograms key={i}
@@ -143,33 +144,33 @@ class School extends Component {
         needsLoan = totalCost > this.props.player.cash;
         if (needsLoan) {
           loanInfo = <div>
-            <LoanWarning>You can't afford school. If you enroll, you will receive a loan to cover all costs with the following terms:</LoanWarning>
+            <LoanWarning>{t('loan_warning')}:</LoanWarning>
             <div className='item-box'>
-              <div><b>Interest rate:</b> {(config.loanTerms.interestRate*100).toFixed(1)}% fixed, {config.loanTerms.years}-year</div>
+              <div><b>{t('interest_rate')}:</b> {t('loan_terms', {rate: (config.loanTerms.interestRate*100).toFixed(1), years: config.loanTerms.years})}</div>
             </div>
           </div>;
         }
       }
 
-      let totalCostWageMonths = this.props.player.job !== 'Unemployed' ? ` (${Math.ceil(totalCost/(this.props.player.job.wageAfterTaxes/12))} months' wages)` : '';
+      let totalCostWageMonths = this.props.player.job !== 'Unemployed' ? ` (${t('cost_in_wages', {months: Math.ceil(totalCost/(this.props.player.job.wageAfterTaxes/12))})})` : '';
 			body = (
 				<div>
           <div className='item-box'>
-            <div><b>Next level:</b> {nextLevel.name}</div>
+            <div><b>{t('next_level')}:</b> {nextLevel.name}</div>
             {(!secondary || this.state.selectedProgram) ?
-              <div><b>Cost, with living expenses:</b> ${totalCost.toLocaleString()}{totalCostWageMonths}</div>
+              <div><b>{t('school_cost')}:</b> ${totalCost.toLocaleString()}{totalCostWageMonths}</div>
                 : ''}
             {programsInfo}
           </div>
 					{loanInfo}
           {(!secondary || this.state.selectedProgram) ?
-            <Button onClick={() => this.enrollSchool(needsLoan, totalCost)}>Enroll</Button> : ''}
+            <Button onClick={() => this.enrollSchool(needsLoan, totalCost)}>{t('enroll_button')}</Button> : ''}
 				</div>
 			);
 		}
 
     return <SchoolStyle>
-      <h3>Education</h3>
+      <h3>{t('education_title')}</h3>
 			{body}
     </SchoolStyle>
   }
