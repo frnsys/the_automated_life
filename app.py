@@ -27,19 +27,23 @@ def summary(id):
 
     # Otherwise, generate
     if res is None:
-        log = [json.loads(r.decode('utf8')) for r in redis.lrange('fow:{}'.format(id), 0, -1)]
+        log = [json.loads(r.decode('utf8')) for r in redis.lrange('fow:{}'.format(id), 0, -1)][::-1]
 
         # If no data for this id, not found
         if not log: abort(404)
 
         logs = defaultdict(list)
+        events = []
         for e in log:
             logs[e['type']].append(e['ev'])
+            if e['type'] in ['hired', 'enrolled', 'graduated']:
+                events.append(e)
 
         # Not enough data
         if not logs['month']: abort(404)
 
         summary = {
+            'events': events,
             'loans': sum(e['amount'] for e in logs['loan']),
             'jobs': [e for e in logs['hired']],
             'nApplied': len(logs['applied']),

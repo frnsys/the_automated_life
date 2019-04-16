@@ -54,6 +54,7 @@ function reducer(state={}, action) {
       let debtPayment = state.debt.reduce((acc, debt) => {
         if (debt.countdown > 0 && debt.startedPayments) {
           debt.countdown--;
+          debt.remaining -= debt.monthlyPayment;
           return acc + debt.monthlyPayment;
         } else {
           return acc;
@@ -173,6 +174,7 @@ function reducer(state={}, action) {
       let monthlyPayment = Math.round(amount/D);
       state.debt.push({
         amount: amount,
+        remaining: amount,
         monthlyPayment: monthlyPayment,
         countdown: config.loanTerms.years * 12,
         startedPayments: false
