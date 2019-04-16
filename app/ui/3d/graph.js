@@ -192,8 +192,7 @@ class Graph {
       let j = jobs[id];
       let n = this.nodes[id];
 
-      // TODO remove restriction
-      j.similar.slice(0, 2).map(k => {
+      j.similar.map(k => {
         // Create edge only if we haven't
         // already created it
         if (!this.edges[id][k]) {
