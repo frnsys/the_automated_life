@@ -4,7 +4,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "start": "concurrently -n \"WEBPACK,FLASK\" -c \"bgBlue.bold,bgGreen.bold\" \"npm run webpack\" \"npm run flask\"",
-    "webpack": "webpack --watch --progress",
+    "webpack": "webpack --watch --progress --mode=development",
     "flask": "FLASK_APP=app.py FLASK_DEBUG=1 flask run",
     "build": "webpack --colors --progress --mode=production",
     "dev": "webpack-dev-server --watch --progress --mode=development"
@@ -12,6 +12,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
     "chart.js": "^2.8.0",
+    "chartjs-plugin-annotation": "^0.5.7",
     "mathjs": "^5.4.2",
     "numeral": "^2.0.6",
     "react": "^16.5.2",

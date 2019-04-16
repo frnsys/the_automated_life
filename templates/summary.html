@@ -5,9 +5,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Automation World: Results</title>
+  <style>
+    #main {
+        max-width: 720px;
+        margin: 1em auto;
+    }
+    #tooltip {
+        position: fixed;
+        background: #fff;
+        color: #000;
+        border: 2px solid #000;
+        padding: 0.2em 0.5em;
+        font-size: 0.9em;
+        font-family: 'sans-serif';
+        display: none;
+    }
+  </style>
 </head>
 <body>
-    <main></main>
+    <div id="tooltip"></div>
+    <main id="main"></main>
     <script>
         const data = {{ summary|safe }};
     </script>

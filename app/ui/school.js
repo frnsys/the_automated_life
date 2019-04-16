@@ -98,12 +98,14 @@ class School extends Component {
     if (nextLevel.name == 'Secondary Degree') {
       nextJob = this.props.jobs[this.state.selectedProgram.job];
     }
-    log('enrolled', {nextEducation: nextLevel, program: this.state.selectedProgram, time: time});
+
+    let logTime = {year: time.years, month: time.month};
+    log('enrolled', {nextEducation: nextLevel, program: this.state.selectedProgram, time: logTime});
 
     this.props.enrollSchool(this.state.selectedProgram, nextJob);
 		if (withLoan) {
 			this.props.getLoan(totalCost);
-      log('loan', {amount: totalCost, time: time});
+      log('loan', {amount: totalCost, time: logTime});
 		}
     this.props.closeModal();
   }
