@@ -37,7 +37,7 @@ function loop(now) {
     let nextRobot = scenario.schedule[0];
     if (nextRobot) {
       if (time.months >= nextRobot.months) {
-        logic.createRobot(nextRobot);
+        logic.releaseRobot(nextRobot);
         store.dispatch({
           type: 'scenario:increment'
         });
