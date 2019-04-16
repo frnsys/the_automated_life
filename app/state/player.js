@@ -59,10 +59,8 @@ function reducer(state={}, action) {
           return acc;
         }
       }, 0);
-      if (debtPayment) {
-        state.expenses.debt = debtPayment;
-        state.cash -= debtPayment;
-      }
+      state.expenses.debt = debtPayment;
+      state.cash -= debtPayment;
       return {...state}
 
     case 'player:apply': {

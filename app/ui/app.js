@@ -189,7 +189,13 @@ const OnboardingHint = styled('div')`
   font-size: 0.9em;
 `;
 
+const TimeControls = styled('div')`
+  width: 100%;
+  display: flex;
+`;
 const PauseResumeButton = styled('div')`
+  flex: 1;
+  user-select: none;
   padding: 0.1em 0.5em;
   font-size: 0.8em;
   text-align: center;
@@ -201,9 +207,11 @@ const PauseResumeButton = styled('div')`
   border: 2px solid black;
   border-bottom: none;
   box-sizing: border-box;
-  width: 100%;
   &:hover {
     background: red;
+  }
+  &:last-child {
+    border-left: none;
   }
 `
 
@@ -244,6 +252,7 @@ class App extends Component {
       modal: StartMenu,
       modalIsOpen: true,
       paused: true,
+      speedup: window.speedup,
       gameOver: null
     };
 
@@ -258,6 +267,21 @@ class App extends Component {
     let paused = this.state.paused;
     window.paused = !paused;
     this.setState({ paused: !paused, started: true });
+  }
+
+  toggleSpeed() {
+    if (window.speedup < 1) {
+      window.speedup = 1;
+    } else if (window.speedup == 1) {
+      window.speedup = 2;
+    } else if (window.speedup == 2) {
+      window.speedup = 4;
+    } else if (window.speedup == 4) {
+      window.speedup = 8;
+    } else {
+      window.speedup = 0.5;
+    }
+    this.setState({ speedup: window.speedup });
   }
 
   render() {
@@ -290,7 +314,10 @@ class App extends Component {
             <OnboardingHint style={{position: 'fixed', right: '1em', bottom: '1em', zIndex: 11, maxWidth: '360px'}}><div dangerouslySetInnerHTML={{__html: t('hint_job_graph', {applicationMonths: config.applicationMinMonths})}}></div></OnboardingHint> : ''}
 
         <HUDArea>
-          <PauseResumeButton onClick={this.togglePause.bind(this)}>{this.state.paused ? (this.state.started ? t('resume_button') : t('start_button')) : t('pause_button')}</PauseResumeButton>
+          <TimeControls>
+            <PauseResumeButton onClick={this.togglePause.bind(this)}>{this.state.paused ? (this.state.started ? t('resume_button') : t('start_button')) : t('pause_button')}</PauseResumeButton>
+            <PauseResumeButton onClick={this.toggleSpeed.bind(this)}>{window.speedup}x</PauseResumeButton>
+          </TimeControls>
           <HUD>
             <Button onClick={() => this.setState({modalIsOpen: true, modal: Skills})}>{t('skills_button')}</Button>
             <Button onClick={() => this.setState({modalIsOpen: true, modal: School})}>{t('school_button')}</Button>

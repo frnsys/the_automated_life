@@ -6,6 +6,8 @@ import logic from './logic';
 import graph from './ui/3d/graph';
 import skills from 'data/skills.json'
 
+window.speedup = 1;
+
 // Game loop
 let lastTime = 0;
 function loop(now) {
@@ -62,7 +64,7 @@ function loop(now) {
     if (!isNaN(elapsed)) {
       let inSchool = player.job.name == 'Student';
       let unemployed = player.job.name == 'Unemployed' && !player.application;
-      let speedup = 1;
+      let speedup = window.speedup;
       if (inSchool) {
         speedup = config.schoolTimeSpeedup;
       } else if (unemployed) {

@@ -94,7 +94,7 @@ class Skills extends Component {
                   risk = t('moderate');
                 }
                 return <li className={`automation-${risk}`} key={s_id}>
-                  {automatedSkills.includes(s.id) ? <div className="automated"><div>{t('Automated')}</div></div> : ''}
+                  {automatedSkills.includes(s.id) ? <div className="automated"><div>{t('automated')}</div></div> : ''}
                   {changingSkills.includes(s_id.toString()) ? <img title={t('improving_on_job')} alt={t('improving_on_job')} src="/static/arrow.png" style={{width: '10px', margin: '0 2px'}} /> : ''}
                   {s.name}
                   <div className="skill-level-bar">
@@ -112,7 +112,7 @@ class Skills extends Component {
                 let s = skills[s_id];
                 let risk = 'low';
                 return <li className={`automation-${risk}`} key={s_id}>
-                  {automatedSkills.includes(s.id) ? <div className="automated"><div>{t('Automated')}</div></div> : ''}
+                  {automatedSkills.includes(s.id) ? <div className="automated"><div>{t('automated')}</div></div> : ''}
                   {changingSkills.includes(s_id.toString()) ? <img title={t('improving_on_job')} alt={t('improving_on_job')} src="/static/arrow.png" style={{width: '10px', margin: '0 2px'}} /> : ''}
                   {s.name}
                   <div className="skill-level-bar">
