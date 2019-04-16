@@ -6,11 +6,13 @@ import education from 'data/education.json'
 import graph from '../ui/3d/graph';
 
 const student = {
+  id: -1,
   name: 'Student',
   wage: 0,
   wageAfterTaxes: 0
 };
 const unemployed = {
+  id: -2,
   name: 'Unemployed',
   wage: 0,
   wageAfterTaxes: 0
@@ -99,7 +101,7 @@ function reducer(state={}, action) {
           state.debt[state.debt.length-1].startedPayments = true;
         }
       }
-      state.performance = 0;
+      state.performance = 50;
       state.application = null;
       state.job = action.payload; // TODO should we just assign the id, in case this object and the actual job become desync?
       return {...state}

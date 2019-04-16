@@ -302,7 +302,7 @@ class App extends Component {
 
         <WorkArea>
           <Work />
-          {this.state.paused ? <OnboardingHint style={{marginTop: '0.1em'}}><div dangerouslySetInnerHTML={{__html: t('hint_work')}}></div></OnboardingHint> : ''}
+          {this.state.paused ? <OnboardingHint style={{marginTop: '0.1em', position: 'absolute', top: '1.5em'}}><div dangerouslySetInnerHTML={{__html: t('hint_work')}}></div></OnboardingHint> : ''}
         </WorkArea>
 
         <Scene />

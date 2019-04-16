@@ -70,10 +70,10 @@ const HUD = (props) => {
       <ProgressStyle>
         <h6 style={{margin:'0 0 0.5em 0'}}>{t('retirement_progress')}</h6>
         <div style={{display: 'flex'}} data-tip={t('retirement_remaining', {years: config.retirementAge - props.player.startAge - props.time.years})}>
-          <div style={{marginRight: '0.5em'}}>🏖️</div> <Bar><BarFill style={{width: `${Math.min(100, ((props.time.years+(props.time.month/12))/(config.retirementAge-props.player.startAge))*100)}%`}} /></Bar>
+          <div style={{marginRight: '0.5em'}}>🏖️</div> <Bar><BarFill style={{width: `${Math.min(1, ((props.time.years+(props.time.month/12))/(config.retirementAge-props.player.startAge))*100)}%`}} /></Bar>
         </div>
         <div style={{display: 'flex'}} data-tip={t('retirement_savings_remaining', {amount: numeral(Math.max(0, config.retirementSavingsMin - props.player.cash)).format('0,0.0a')})}>
-          <div style={{marginRight: '0.5em'}}>💰</div> <Bar><BarFill style={{width: `${(Math.min(100, props.player.cash/config.retirementSavingsMin)*100)}%`}} /></Bar>
+          <div style={{marginRight: '0.5em'}}>💰</div> <Bar><BarFill style={{width: `${(Math.min(1, props.player.cash/config.retirementSavingsMin)*100)}%`}} /></Bar>
         </div>
       </ProgressStyle>
     </HUDStyle>

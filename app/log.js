@@ -2,6 +2,7 @@ import config from 'config';
 import uuid from 'uuid/v4';
 
 const IDENTIFIER = uuid();
+console.log(`ID:${IDENTIFIER}`);
 
 const log = (type, data) => {
   if (config.enableLogging) {

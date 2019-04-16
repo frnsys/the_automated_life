@@ -17,6 +17,7 @@ function loop(now) {
   elapsed = Math.min(elapsed, 100);
 
   let {scenario, player, robots, time, jobs} = store.getState();
+  let logTime = {year: time.years, month: time.month};
 
   if (!window.paused) {
 
@@ -26,7 +27,7 @@ function loop(now) {
       store.dispatch({
         type: 'player:gameOver'
       });
-      log('gameOver', {time: time});
+      log('gameOver', {time: logTime});
       gameOver({icon: '💸', text: t('game_over_debt')});
       return;
     }
@@ -101,12 +102,26 @@ function loop(now) {
           type: 'robot:countdown'
         });
 
+        log('month', {
+          savings: player.cash,
+          debt: player.debt,
+          expenses: player.expenses,
+          education: player.education,
+          job: {
+            id: player.job.id,
+            wage: player.job.wage,
+            baseWage: player.job.baseWage,
+            wageAfterTaxes: player.job.wageAfterTaxes,
+          },
+          time: logTime
+        });
+
         // Countdown player application
         if (player.application && player.application.countdown <= 0) {
           let job = jobs[player.application.id];
           if (config.perfectApplicant || Math.random() <= player.application.prob) {
             if (player.job.name == 'Student') {
-              log('dropout', {education: player.education, time: time});
+              log('dropout', {education: player.education, time: logTime});
             }
 
             store.dispatch({
@@ -114,11 +129,11 @@ function loop(now) {
               payload: job
             });
             notify(`🎉 ${t('hired', {name: job.name})}`, '', {background: '#1fd157', color: '#fff'});
-            log('hired', {job: job.id, time: time});
+            log('hired', {job: job.id, time: logTime});
             graph.reveal(player.application.id);
           } else {
             notify(`😞 ${t('rejected', {name: job.name, mainFactor: player.application.mainFactor})}`, '', {background: '#ea432a', color: '#fff'});
-            log('rejected', {job: job.id, time: time});
+            log('rejected', {job: job.id, time: logTime});
             graph.resetNodeColor(graph.appliedNode, player);
             graph.appliedNode = null;
           }
@@ -135,7 +150,7 @@ function loop(now) {
             store.dispatch({
               type: 'player:graduate'
             });
-            log('graduated', {education: player.education, time: time});
+            log('graduated', {education: player.education, time: logTime});
           }
         }
 
@@ -143,10 +158,10 @@ function loop(now) {
         if (player.startAge + time.years >= config.retirementAge) {
           if (player.cash >= config.retirementSavingsMin) {
             gameOver({icon: '🏖️', text: t('game_over_win')});
-            log('gameEnd', {success: true, cash: player.cash, time: time});
+            log('gameEnd', {success: true, cash: player.cash, time: logTime});
           } else {
             gameOver({icon: '🤖', text: t('game_over_lose')});
-            log('gameEnd', {success: false, cash: player.cash, time: time});
+            log('gameEnd', {success: false, cash: player.cash, time: logTime});
           }
           store.dispatch({
             type: 'player:gameOver'

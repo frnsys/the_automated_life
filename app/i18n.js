@@ -14,7 +14,7 @@ const lang = getPreferredLanguages().filter(l => availableLanguages.includes(l))
 
 // Load phrases for language
 let phrases = {};
-fetch(`/data/lang/${lang}.json`)
+fetch(`/static/lang/${lang}.json`)
   .then(response => response.json())
   .then(json => {
     phrases = json;
