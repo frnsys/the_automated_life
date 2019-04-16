@@ -35,7 +35,7 @@
     "survey_submit_button": "Submit",
     "robot_release": "RoboCo releases {name}. It excels at {skills}.",
     "birthday_title": "Happy {age}th birthday!",
-    "birthday_body": "You're {yearsLeft} years from retirement. At this rate, you'll save {estimate} by then.",
+    "birthday_body": "You're {yearsLeft} years from retirement. At this rate, you'll save ${estimate} by then.",
     "inflation": "Your living expenses increased due to inflation.",
     "hired": "You were hired as a {name}.",
     "rejected": "Your application as a {name} was rejected because of your {mainFactor}.",
