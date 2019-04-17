@@ -1,4 +1,5 @@
 redis==3.2.1
 Flask==1.0.2
+kombu==4.0.2
 celery==4.0.2
 sentry-sdk==0.6.9
