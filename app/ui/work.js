@@ -59,12 +59,14 @@ const Work = (props) => {
   }
   return <div>
     <WorkBar>
-      <Bar style={{background: '#fff'}}><BarFill style={{width: `${props.player.performance}%`, background: 'linear-gradient(to bottom, #eeeeee 0%,#cccccc 100%)'}} /></Bar>
+      <Bar background='#fff'>
+        <BarFill width={props.player.performance} background='linear-gradient(to bottom, #eeeeee 0%,#cccccc 100%)' />
+      </Bar>
       <PerformanceLabel>{t('performance')}: <span style={{color: performanceColor}}>{performance}</span></PerformanceLabel>
     </WorkBar>
     <div>
       {[...Array(props.player.tasks)].map((i) => {
-        return <WorkButton key={i} onClick={() => {window.paused ? '' : props.work() }}>{t('work_button')}</WorkButton>;
+        return <WorkButton key={i} onClick={() => window.paused ? '' : props.work()}>{t('work_button')}</WorkButton>;
       })}
     </div>
   </div>;

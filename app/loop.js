@@ -6,8 +6,9 @@ import logic from './logic';
 import graph from './ui/3d/graph';
 import skills from 'data/skills.json'
 
-// Set default speedup
+// Set defaults
 window.speedup = 1;
+window.paused = true;
 
 // Game loop
 let lastTime = 0;

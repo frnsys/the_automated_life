@@ -59,13 +59,6 @@ function deepeningAutomation(robot) {
   });
 }
 
-// A new skill resulting from the creation of a robot
-function newSkill(job, robot) {
-  let robotShare = robot.skills.reduce((acc, id) => acc + (job.skills[id] || 0), 0);
-  let jobShare = job.skillsTotal;
-  return robotShare/jobShare * robot.efficiency;
-}
-
 // Do work for a job, returning skill changes
 // `performance` in [0-1]
 function workSkillGain(job, performance) {
