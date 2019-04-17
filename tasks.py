@@ -1,8 +1,14 @@
 import json
 import redis
+import config
+import sentry_sdk
 from celery import Celery
 from celery.schedules import crontab
 from collections import defaultdict
+
+sentry_sdk.init(
+    dsn=config.SENTRY_DSN,
+)
 
 CELERY_BROKER_URL = 'amqp://guest:guest@localhost:5672//'
 CELERY_RESULT_BACKEND = None
