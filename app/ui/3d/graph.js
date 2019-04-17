@@ -24,7 +24,7 @@ const tooltip = (job) => {
   }, []);
 
   let risk = t('low');
-  if (job.automationRisk >= 0.8) {
+  if (job.automationRisk >= 0.7) {
     risk = t('high');
   } else if (job.automationRisk >= 0.4) {
     risk = t('moderate');
