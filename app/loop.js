@@ -31,7 +31,7 @@ function loop(now) {
       store.dispatch({
         type: 'player:gameOver'
       });
-      log('gameOver', {time: logTime});
+      log('gameOver', {success: false, time: logTime});
       gameOver({icon: '💸', text: t('game_over_debt')});
       return;
     }

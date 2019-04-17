@@ -6,8 +6,6 @@ from collections import defaultdict
 
 CELERY_BROKER_URL = 'amqp://guest:guest@localhost:5672//'
 CELERY_RESULT_BACKEND = None
-CELERY_BROKER_URL = 'amqp://guest:guest@localhost:5672//'
-CELERY_RESULT_BACKEND = None
 CELERYBEAT_SCHEDULE = {
     'aggregate_statistics': {
         'task': 'tasks.aggregate_statistics',
