@@ -1,34 +1,17 @@
-import math from 'mathjs';
 import store from 'store';
 import config from 'config';
 import skills from 'data/skills.json'
-import industries from 'data/industries.json'
-
-function createRobot(robot) {
-  let {jobs} = store.getState();
-  robot.deepened = false;
-
-  // Precompute & cache
-  let industryWeights = {};
-  Object.keys(industries).forEach((ind) => {
-    industryWeights[ind] = industries[ind].reduce((acc, job_id) => {
-      let job = jobs[job_id];
-      return acc + robot.skills.reduce((acc, id) => acc + (job.skills[id] || 0), 0);
-    }, 0);
-  });
-  robot.industryWeights = industryWeights;
-
-  releaseRobot(robot);
-  store.dispatch({
-    type: 'robot:create',
-    payload: robot
-  });
-}
 
 // Release a robot into the world,
 // which affects the wages of jobs
 function releaseRobot(robot) {
   let {jobs, robots} = store.getState();
+
+  robot.deepened = false;
+  store.dispatch({
+    type: 'robot:create',
+    payload: robot
+  });
 
   // The new robot isn't yet included in the state,
   // so manually include here
@@ -37,6 +20,7 @@ function releaseRobot(robot) {
     return acc.concat(robot.skills)
   }, []);
 
+  // Compute wage updates
   let updates = Object.values(jobs).map(job => {
     let percentNotAutomated = Object.keys(job.skills).reduce((acc, s_id) => {
       if (automatedSkills.includes(parseInt(s_id))) {
@@ -75,13 +59,6 @@ function deepeningAutomation(robot) {
   });
 }
 
-// A new skill resulting from the creation of a robot
-function newSkill(job, robot) {
-  let robotShare = robot.skills.reduce((acc, id) => acc + (job.skills[id] || 0), 0);
-  let jobShare = job.skillsTotal;
-  return robotShare/jobShare * robot.efficiency;
-}
-
 // Do work for a job, returning skill changes
 // `performance` in [0-1]
 function workSkillGain(job, performance) {
@@ -103,14 +80,13 @@ function jobProficiency(job, player) {
 // Probability of being hired for a job
 function probabilityForJob(job) {
   let {player} = store.getState();
+  let skills = jobProficiency(job, player);
   let performance = player.performance/100;
 
   let education = job.education.slice(0, player.education+1).reduce((acc, percent) => {
     return acc + percent;
   }, 0);
   education /= 100;
-
-  let skills = jobProficiency(job, player);
 
   let factors = { performance, education, skills };
   let mainFactor = Object.keys(factors).reduce((m, k) => {
@@ -134,5 +110,5 @@ function percentAutomated(job) {
   return score/job.skillsTotal;
 }
 
-export default { deepeningAutomation, probabilityForJob, percentAutomated, createRobot,
+export default { deepeningAutomation, probabilityForJob, percentAutomated, releaseRobot,
   workSkillGain, jobProficiency};

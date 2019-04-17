@@ -5,6 +5,7 @@ import skills from 'data/skills.json'
 import education from 'data/education.json'
 import graph from '../ui/3d/graph';
 
+// Special jobs
 const student = {
   id: -1,
   name: 'Student',
@@ -46,11 +47,17 @@ const initialState = {
 
 function reducer(state={}, action) {
   switch (action.type) {
+
+    // Monthly wage
     case 'player:income':
       state.cash += state.job.wageAfterTaxes/12;
       return {...state}
+
+    // Monthly expenses
     case 'player:expenses':
       state.cash -= config.monthlyExpenses;
+
+      // Calculate debt payment, if any
       let debtPayment = state.debt.reduce((acc, debt) => {
         if (debt.countdown > 0 && debt.startedPayments) {
           debt.countdown--;
@@ -64,6 +71,7 @@ function reducer(state={}, action) {
       state.cash -= debtPayment;
       return {...state}
 
+    // Submit application to new job
     case 'player:apply': {
       if (!state.application) {
         state.application = action.payload;
@@ -71,6 +79,8 @@ function reducer(state={}, action) {
       }
       return {...state}
     }
+
+    // Tick application wait time
     case 'player:application': {
       if (state.application) {
         if (state.application.countdown <= 0) {
@@ -81,12 +91,14 @@ function reducer(state={}, action) {
       }
       return {...state}
     }
+
+    // Start new job
     case 'player:hire':
       if (state.job.id) {
         state.pastJobs.push(state.job.id);
       }
 
-      // starting job, set skills
+      // Starting job, set skills
       if (state.pastJobs.length == 0) {
         Object.keys(action.payload.skills).forEach((s_id) => {
           state.skills[s_id] = 0.2;
@@ -100,11 +112,14 @@ function reducer(state={}, action) {
           state.debt[state.debt.length-1].startedPayments = true;
         }
       }
+
+      // Reset stuff for new job
       state.performance = 50;
       state.application = null;
-      state.job = action.payload; // TODO should we just assign the id, in case this object and the actual job become desync?
+      state.job = action.payload;
       return {...state}
 
+    // Enroll in school
     case 'player:enroll':
       let {program, nextJob} = action.payload;
       let nextLevel = education[state.education+1];
@@ -112,15 +127,23 @@ function reducer(state={}, action) {
         state.program = program;
         state.postGradJob = nextJob;
       }
+
+      // Compute cost and years in school
       let years = state.program ? state.program.years : nextLevel.years;
       state.cash -= nextLevel.cost * years;
-      state.job = student;
       state.schoolCountdown = years * 12;
+
+      state.job = student;
       return {...state}
+
+    // Tick school time
     case 'player:learn':
       state.schoolCountdown -= 1;
       return {...state}
+
+    // Finish school
     case 'player:graduate':
+      // Apply graduation effects
       state.education += 1;
       state.schoolCountdown = 0;
       state.job = unemployed;
@@ -128,14 +151,20 @@ function reducer(state={}, action) {
         state.debt[state.debt.length-1].startedPayments = true;
       }
 
+      // If completing education w/ a specific program
+      // (which has an associated job)
+      // automatically start in that job
       if (state.program !== null) {
         graph.unlock(state.program.job, state);
         state.program = null;
         state.job = state.postGradJob;
         state.postGradJob = unemployed;
+
+      // Otherwise, let player apply to any discovered jobs
       } else {
         graph.unlock();
       }
+
       notify(`🎓 ${t('graduated')}`, '', {background: '#1fd157', color: '#fff'});
 
       // Set full performance
@@ -145,6 +174,7 @@ function reducer(state={}, action) {
 
       return {...state}
 
+    // Increase performance
     case 'player:work':
       state.performance = Math.min(state.performance + (config.baseWorkPerClick*(1+state.jobProficiency)/Math.sqrt(state.tasks)), 100);
       state.tasks--;
@@ -158,6 +188,7 @@ function reducer(state={}, action) {
 
       return {...state}
 
+    // Decrease performance
     case 'player:slack':
       let multiplier = (Math.max(1, Math.sqrt(state.tasks/3)));
       state.performance = Math.max(state.performance - (config.slackPerFrame * multiplier), 0);
@@ -166,12 +197,15 @@ function reducer(state={}, action) {
       }
       return {...state}
 
+    // Take out loan
     case 'player:loan':
+      // Compute monthly payment
       let amount = action.payload;
       let i = config.loanTerms.interestRate/12;
       let n = config.loanTerms.years * 12;
       let D = ((1+i)**n - 1)/(i*(1+i)**n);
       let monthlyPayment = Math.round(amount/D);
+
       state.debt.push({
         amount: amount,
         remaining: amount,
@@ -186,6 +220,7 @@ function reducer(state={}, action) {
       state.gameOver = true;
       return {...state}
 
+    // Birthday, aka new year
     case 'player:birthday':
       state.expenses.living = Math.round(state.expenses.living * (1 + config.inflation));
       return {...state}

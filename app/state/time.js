@@ -12,12 +12,18 @@ const initialState = {
 
 function reducer(state={}, action) {
   switch (action.type) {
+
+    // Tick time
     case 'time':
       let {speedup, elapsed} = action.payload;
-      elapsed /= 1000; // to sec
+
       let secPerMonth = config.secPerMonth/speedup;
+      elapsed /= 1000; // convert to sec
+
       state.monthProgress += elapsed/secPerMonth;
       state.newYear = false;
+
+      // New month
       if (state.monthProgress >= 1) {
         state.monthProgress = state.monthProgress - 1;
         state.months += 1;
@@ -30,6 +36,7 @@ function reducer(state={}, action) {
         state.years = years;
         state.year = config.startYear + state.years;
         state.newMonth = true;
+
       } else {
         state.newMonth = false;
       }

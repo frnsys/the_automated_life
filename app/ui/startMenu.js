@@ -47,7 +47,6 @@ class StartMenu extends Component {
     });
     graph.reveal(this.state.selectedJob, true);
     loop();
-    window.paused = true;
     log('started', {job: this.state.selectedJob});
     this.props.closeModal();
   }
@@ -56,7 +55,10 @@ class StartMenu extends Component {
     return <StartMenuStyle>
       <h2>{t('start_welcome')}</h2>
       <p>{t('start_intro')}</p>
-      <p><b><u>{t('start_goal', {age: config.retirementAge, savings: config.retirementSavingsMin.toLocaleString()})}</u></b></p>
+      <p><b><u>{t('start_goal', {
+        age: config.retirementAge,
+        savings: config.retirementSavingsMin.toLocaleString()
+      })}</u></b></p>
       <h3>{t('select_starting_job')}:</h3>
       <ul>
         {config.startingJobs.map((id) => {

@@ -246,8 +246,8 @@ export const Bar = styled('div')`
   width: 20em;
   max-width: 100%;
   height: 1em;
-  background: #eee;
   position: relative;
+  background: ${props => props.background || '#eee'};
 `;
 
 export const BarFill = styled('div')`
@@ -255,8 +255,8 @@ export const BarFill = styled('div')`
   top: 0;
   left: 0;
   bottom: 0;
-  background: #39e567;
-  background: linear-gradient(to bottom, #7de984 0%,#4bab48 100%);
+  background: ${props => props.background || 'linear-gradient(to bottom, #7de984 0%,#4bab48 100%)'};
+  width: ${props => `${props.width < 1 ? props.width * 100 : props.width}%`};
 `;
 
 export const Button = styled('div')`

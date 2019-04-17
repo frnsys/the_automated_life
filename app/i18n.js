@@ -14,12 +14,14 @@ const lang = getPreferredLanguages().filter(l => availableLanguages.includes(l))
 
 // Load phrases for language
 let phrases = {};
-fetch(`/static/lang/${lang}.json`)
-  .then(response => response.json())
-  .then(json => {
-    phrases = json;
-    window.onPhrasesLoad();
-  });
+function loadLanguage(cb) {
+  fetch(`/static/lang/${lang}.json`)
+    .then(response => response.json())
+    .then(json => {
+      phrases = json;
+      cb();
+    });
+}
 
 function t(key, data) {
   data = data || {};
@@ -29,4 +31,5 @@ function t(key, data) {
   }, tmpl);
 }
 
+export { loadLanguage };
 export default t;

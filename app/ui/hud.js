@@ -18,6 +18,28 @@ const HUDStyle = styled('div')`
   max-width: 220px;
   border: 2px solid black;
   background: #fff;
+
+  .stat {
+    margin: 0.25em 0;
+    flex: 1;
+    span {
+      cursor: help;
+    }
+  }
+
+  .stat-group {
+    display: flex;
+  }
+
+  .stat-hint {
+    font-size: 0.75em;
+    color: #888;
+  }
+
+  .hud-children {
+    margin-top: 1em;
+    display: flex;
+  }
 `;
 
 const ProgressStyle = styled('div')`
@@ -30,10 +52,18 @@ const ProgressStyle = styled('div')`
   max-width: 220px;
   border: 2px solid black;
   background: #fff;
+
+  h6 {
+    margin: 0 0 0.5em 0;
+  }
+
+  .stat-icon {
+    margin-right: 0.5em;
+  }
 `;
 
 const Stat = (props) => {
-  return <div style={{margin: '0.25em 0', flex: 1}}><span data-tip={props.name} style={{cursor:'help'}}>{props.children}</span></div>
+  return <div className='stat'><span data-tip={props.name}>{props.children}</span></div>
 }
 
 const HUD = (props) => {
@@ -49,31 +79,49 @@ const HUD = (props) => {
       {props.player.gameOver ? <div className='hud-notice'>{t('game_over_notice')}</div> : ''}
       {inSchool ? <div className='hud-notice'>{t('in_school_notice')}</div> : ''}
       {unemployed ? <div className='hud-notice'>{t('unemployed_notice')}</div> : ''}
-      <Bar><BarFill style={{width: `${props.time.monthProgress*100}%`}} /></Bar>
-      <div style={{display: 'flex'}}>
-        <Stat name={t('stat_date')}>📅 {months[props.time.month-1]} {props.time.year}</Stat>
-        <Stat name={t('stat_age')}>🎂 {props.player.startAge + props.time.years}</Stat>
+      <Bar><BarFill width={props.time.monthProgress} /></Bar>
+      <div className='stat-group'>
+        <Stat name={t('stat_date')}>
+          📅 {months[props.time.month-1]} {props.time.year}
+        </Stat>
+        <Stat name={t('stat_age')}>
+          🎂 {props.player.startAge + props.time.years}
+        </Stat>
       </div>
-      <div style={{display: 'flex'}}>
-        <Stat name={t('stat_savings')}>🏦 ${numeral(props.player.cash).format('0,0.00a')}</Stat>
-        <Stat name={t('stat_wage')}>💸 ${numeral(props.player.job.wageAfterTaxes/12).format('0,0.0a')}/{t('month_unit')}</Stat>
+      <div className='stat-group'>
+        <Stat name={t('stat_savings')}>
+          🏦 ${numeral(props.player.cash).format('0,0.00a')}
+        </Stat>
+        <Stat name={t('stat_wage')}>
+          💸 ${numeral(props.player.job.wageAfterTaxes/12).format('0,0.0a')}/{t('month_unit')}
+        </Stat>
       </div>
-      <div data-tip={expensesDesc} style={{fontSize: '0.75em', color: '#888'}}>{t('monthly_expenses', {amount: (props.player.expenses.living + props.player.expenses.debt).toLocaleString()})}</div>
-      <Stat name={t('stat_education')}>🎓 {education[props.player.education].name}</Stat>
-      {inSchool ? <div style={{fontSize: '0.75em', color: '#888'}}>{t('school_remaining', {months: props.player.schoolCountdown})}</div> : ''}
-      <Stat name={t('stat_current_job')}>🛠️ {props.player.job.name}</Stat>
-      {props.player.application ? <div style={{fontSize: '0.75em', color: '#888'}}>{t('application_notice', {name: props.jobs[props.player.application.id].name})}</div> : ''}
-      <div style={{marginTop: '1em', display: 'flex'}}>
+      <div data-tip={expensesDesc} className='stat-hint'>
+        {t('monthly_expenses', {amount: (props.player.expenses.living + props.player.expenses.debt).toLocaleString()})}
+      </div>
+      <Stat name={t('stat_education')}>
+        🎓 {education[props.player.education].name}
+      </Stat>
+      {inSchool ?
+          <div className='stat-hint'>{t('school_remaining', {months: props.player.schoolCountdown})}</div> : ''}
+      <Stat name={t('stat_current_job')}>
+        🛠️ {props.player.job.name}
+      </Stat>
+      {props.player.application ?
+          <div className='stat-hint'>{t('application_notice', {name: props.jobs[props.player.application.id].name})}</div> : ''}
+      <div className='hud-children'>
         {props.children}
       </div>
 
       <ProgressStyle>
-        <h6 style={{margin:'0 0 0.5em 0'}}>{t('retirement_progress')}</h6>
-        <div style={{display: 'flex'}} data-tip={t('retirement_remaining', {years: config.retirementAge - props.player.startAge - props.time.years})}>
-          <div style={{marginRight: '0.5em'}}>🏖️</div> <Bar><BarFill style={{width: `${Math.min(1, ((props.time.years+(props.time.month/12))/(config.retirementAge-props.player.startAge))*100)}%`}} /></Bar>
+        <h6>{t('retirement_progress')}</h6>
+        <div className='stat-group' data-tip={t('retirement_remaining', {years: config.retirementAge - props.player.startAge - props.time.years})}>
+          <div className='stat-icon'>🏖️</div>
+          <Bar><BarFill width={Math.min(1, (props.time.years+(props.time.month/12))/(config.retirementAge-props.player.startAge))} /></Bar>
         </div>
-        <div style={{display: 'flex'}} data-tip={t('retirement_savings_remaining', {amount: numeral(Math.max(0, config.retirementSavingsMin - props.player.cash)).format('0,0.0a')})}>
-          <div style={{marginRight: '0.5em'}}>💰</div> <Bar><BarFill style={{width: `${(Math.min(1, props.player.cash/config.retirementSavingsMin)*100)}%`}} /></Bar>
+        <div className='stat-group' data-tip={t('retirement_savings_remaining', {amount: numeral(Math.max(0, config.retirementSavingsMin - props.player.cash)).format('0,0.0a')})}>
+          <div className='stat-icon'>💰</div>
+          <Bar><BarFill width={Math.min(1, props.player.cash/config.retirementSavingsMin)} /></Bar>
         </div>
       </ProgressStyle>
     </HUDStyle>
