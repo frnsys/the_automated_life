@@ -1,8 +1,8 @@
 const params = location.search.slice(1);
 export default {
   startYear: 2019,
-  secPerMonth: 3,
-  schoolTimeSpeedup: 20,
+  secPerMonth: 5,
+  schoolTimeSpeedup: 25,
   unemployedTimeSpeedup: 0.2,
 
   // Using data for 1 adult across NY state from:
