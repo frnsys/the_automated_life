@@ -207,7 +207,7 @@ class App extends Component {
             <TimeButton onClick={this.togglePause.bind(this)}>
               {this.state.paused ? (this.state.started ? t('resume_button') : t('start_button')) : t('pause_button')}
             </TimeButton>
-            <TimeButton onClick={this.toggleSpeed.bind(this)}>{window.speedup}x</TimeButton>
+            <TimeButton onClick={this.toggleSpeed.bind(this)}>🕛 {window.speedup}x</TimeButton>
           </TimeControls>
           <HUD>
             <Button onClick={() => this.setState({modalIsOpen: true, modal: Skills})}>{t('skills_button')}</Button>
