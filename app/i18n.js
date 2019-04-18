@@ -10,10 +10,8 @@ const getPreferredLanguages = () => {
 }
 
 // Get most preferred language that is supported
-const lang = getPreferredLanguages().filter(l => availableLanguages.includes(l))[0];
-
 // Fallback to 'en' if lang is undefined
-lang = lang || 'en';
+const lang = getPreferredLanguages().filter(l => availableLanguages.includes(l))[0] || 'en';
 
 // Load phrases for language
 let phrases = {};
