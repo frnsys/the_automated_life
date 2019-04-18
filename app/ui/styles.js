@@ -39,6 +39,8 @@ export const GlobalStyle = createGlobalStyle`
 
   .job-status {
     display: flex;
+    margin-top: 0.25em;
+    font-size: 0.85em;
   }
   .job-risk {
     flex: 1.5;

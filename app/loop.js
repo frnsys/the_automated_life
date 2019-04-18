@@ -52,6 +52,15 @@ function loop(now) {
           name: nextRobot.name,
           skills: skillsDesc})
         }`);
+
+        // Update graph annotations
+        Object.keys(graph.nodes).forEach((n_id) => {
+          let job = jobs[n_id.toString()];
+          let automated = logic.percentAutomated(job);
+          if (automated >= 0.5) {
+            graph.nodes[n_id].anno.innerHTML = `🤖 ${job.name}`;
+          }
+        });
       }
 
       // Teaser news stories

@@ -37,11 +37,16 @@ const tooltip = (job) => {
     .sort((id_a, id_b) => job.skills[id_b] - job.skills[id_a])
     .map(id => skills[id]).slice(0, topNSkills);
 
+  let wageChange = Math.round((job.wageAfterTaxes - job.baseWageAfterTaxes)/12);
+
   return `
     <div class="job-tooltip">
       ${applied ? `<div class="job-applied">${t('application_out')}</div>` : ''}
-      <h3>${job.name}${hadJob ? ` (${t('past_job')})` : ''}</h3>
-      <h5>$${Math.round(job.wageAfterTaxes/12).toLocaleString()}/${t('month_unit')}</h5>
+      <h3>${automated >= 0.5 ? '🤖 ' : ''}${job.name}${hadJob ? ` (${t('past_job')})` : ''}</h3>
+      <h5>
+        $${Math.round(job.wageAfterTaxes/12).toLocaleString()}/${t('month_unit')}
+        ${wageChange != 0 ? `<span style="font-size:0.8em;opacity:0.7;"><span style="color:${wageChange < 0 ? '#ff0000' : '#39e567'};">${wageChange < 0 ? '-' : '+'}$${Math.abs(wageChange).toLocaleString()}</span> due to automation</span>` : ''}
+      </h5>
       <div class="job-industries">${job.industries.map((ind) => `<div>${config.industryIcons[ind]} ${ind.replace(' (Except Public Administration)', '')}</div>`).join(' ')}</div>
       <div class="job-status">
         <div class="job-risk job-risk-${risk}">${t('automation_risk')}: ${risk}</div>
