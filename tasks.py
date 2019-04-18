@@ -24,7 +24,7 @@ celery = Celery('tasks', backend=CELERY_RESULT_BACKEND, broker=CELERY_BROKER_URL
 celery.conf.beat_schedule = CELERYBEAT_SCHEDULE
 
 @celery.task
-def aggregate_statistics(schedule):
+def aggregate_statistics():
     # Load summaries
     keys = [r.decode('utf8') for r in redis.keys('fow:*:summary')]
     aggs = defaultdict(defaultdict(int))
