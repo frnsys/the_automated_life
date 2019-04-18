@@ -93,12 +93,16 @@ const TimeButton = styled('div')`
   cursor: pointer;
   border: 2px solid black;
   border-bottom: none;
+  border-right: none;
   box-sizing: border-box;
   &:hover {
     background: red;
   }
   &:last-child {
-    border-left: none;
+    border-right: 2px solid black;
+  }
+  &:first-child {
+    flex: 0.25;
   }
 `
 
@@ -144,6 +148,7 @@ class App extends Component {
       modal: StartMenu,
       modalIsOpen: true,
       paused: true,
+      help: false,
       speedup: window.speedup,
       gameOver: null
     };
@@ -196,7 +201,7 @@ class App extends Component {
           <this.state.modal closeModal={this.closeModal} />
         </Modal>
 
-        {this.state.paused ?
+        {this.state.paused || this.state.help ?
             <OnboardingHint className='graph-onboarding-hint'>
               <div dangerouslySetInnerHTML={{__html: t('hint_job_graph', {
                 applicationMonths: config.applicationMinMonths
@@ -205,6 +210,7 @@ class App extends Component {
 
         <HUDArea>
           <TimeControls>
+            <TimeButton onMouseEnter={() => this.setState({help: true})} onMouseLeave={() => this.setState({help: false})}>?</TimeButton>
             <TimeButton onClick={this.togglePause.bind(this)}>
               {this.state.paused ? (this.state.started ? t('resume_button') : t('start_button')) : t('pause_button')}
             </TimeButton>
@@ -214,7 +220,7 @@ class App extends Component {
             <Button onClick={() => this.setState({modalIsOpen: true, modal: Skills})}>{t('skills_button')}</Button>
             <Button onClick={() => this.setState({modalIsOpen: true, modal: School})}>{t('school_button')}</Button>
           </HUD>
-          {this.state.paused ? <OnboardingHint className='hud-onboarding-hint'>
+          {this.state.paused || this.state.help ? <OnboardingHint className='hud-onboarding-hint'>
             <div dangerouslySetInnerHTML={{__html: t('hint_hud')}}></div>
           </OnboardingHint>: ''}
         </HUDArea>
@@ -225,7 +231,7 @@ class App extends Component {
 
         <WorkArea>
           <Work />
-          {this.state.paused ? <OnboardingHint className='work-onboarding-hint'>
+          {this.state.paused || this.state.help ? <OnboardingHint className='work-onboarding-hint'>
             <div dangerouslySetInnerHTML={{__html: t('hint_work')}}></div>
           </OnboardingHint> : ''}
         </WorkArea>
