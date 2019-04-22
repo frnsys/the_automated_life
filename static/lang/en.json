@@ -21,6 +21,8 @@
     "game_over_win": "You successfully survived automation and made it to retirement.",
     "game_over_lose": "You weren't able to save enough to retire.",
     "game_over_thanks": "Thank you for playing Automation World.",
+    "game_over_win_share": "I evaded automation!",
+    "game_over_lose_share": "I failed to escape automation.",
     "likert_0": "Strongly Disagree",
     "likert_1": "Disagree",
     "likert_2": "Neutral",

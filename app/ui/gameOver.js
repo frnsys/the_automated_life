@@ -21,6 +21,20 @@ const GameOverAlert = styled('div')`
   h2 {
     margin-top: 0;
   }
+  .sharing {
+    margin-top: 0.25em;
+  }
+  .sharing a {
+    margin-right: 0.5em;
+    background: #395be5;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.2em;
+    font-size: 0.9em;
+  }
+  .sharing a:hover {
+    background: #2142c6;
+  }
 `;
 
 const GameOverSurveyStyle = styled('div')`
@@ -66,7 +80,7 @@ input[type=submit] {
   input {
     display: none;
   }
-  input:checked+label {
+  input:checked+label, label:hover {
     background: #395be5;
     color: #fff;
   }
@@ -74,11 +88,16 @@ input[type=submit] {
 `;
 
 const GameOver = (props) => {
+  let result = props.success ? t('game_over_win_share') : t('game_over_lose_share');
   return (
     <GameOverStyle>
       <GameOverAlert>
         <h2>{props.icon} {t('game_over_notice')}</h2>
         {props.text}
+        <div className='sharing'>
+          <a href={`https://twitter.com/intent/tweet?text=${result}&url=https://${location.host}`}>Share on Twitter</a>
+          <a href={`https://www.facebook.com/sharer/sharer.php?u=https://${location.host}&description=${result}`}>Share on Facebook</a>
+        </div>
         <GameOverSurvey />
       </GameOverAlert>
     </GameOverStyle>);
