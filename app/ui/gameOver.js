@@ -99,11 +99,11 @@ class GameOverSurvey extends Component {
           <div className="form-field">
             <label>{t('survey_age_label')}</label>
             <RadioGroup className='form-radio-group' name='age' selectedValue={this.state.age} onChange={(age) => this.setState({age})}>
-              <div><Radio value={0} id='age_0' /><label htmlFor='age_0'>&lt;18</label></div>
-              <div><Radio value={1} id='age_1' /><label htmlFor='age_1'>18-29</label></div>
-              <div><Radio value={2} id='age_2' /><label htmlFor='age_2'>30-44</label></div>
-              <div><Radio value={3} id='age_3' /><label htmlFor='age_3'>45-64</label></div>
-              <div><Radio value={4} id='age_4' /><label htmlFor='age_4'>65+</label></div>
+              <div><Radio value={0} id='age_0' /><label htmlFor='age_0'>0-24</label></div>
+              <div><Radio value={1} id='age_1' /><label htmlFor='age_1'>25-44</label></div>
+              <div><Radio value={2} id='age_2' /><label htmlFor='age_2'>45-64</label></div>
+              <div><Radio value={3} id='age_3' /><label htmlFor='age_3'>65-74</label></div>
+              <div><Radio value={4} id='age_4' /><label htmlFor='age_4'>75+</label></div>
             </RadioGroup>
           </div>
           <div className="form-field">
