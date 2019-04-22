@@ -15,7 +15,7 @@ const months = [
 const HUDStyle = styled('div')`
   color: #000;
   padding: 0.5em;
-  max-width: 220px;
+  max-width: 240px;
   border: 2px solid black;
   background: #fff;
 
@@ -49,7 +49,7 @@ const ProgressStyle = styled('div')`
   bottom: 1em;
   color: #000;
   padding: 0.5em;
-  max-width: 220px;
+  max-width: 240px;
   border: 2px solid black;
   background: #fff;
 

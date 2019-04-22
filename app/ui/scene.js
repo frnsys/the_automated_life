@@ -33,6 +33,12 @@ class Scene extends Component {
     this.element = findDOMNode(this);
     const width = this.element.clientWidth;
     const height = this.element.clientHeight;
+    this.element.addEventListener('dblclick', () => {
+      this.scene.camera.zoom *= 1.5;
+      this.scene.camera.zoom = Math.min(this.scene.camera.zoom, this.scene.controls.maxZoom);
+      this.scene.camera.updateProjectionMatrix();
+      this.scene.controls.update();
+    });
     this.scene = new ThreeScene({
       width: width,
       height: height
