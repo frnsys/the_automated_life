@@ -3,6 +3,7 @@ import log from 'log';
 import styled from 'styled-components';
 import React, { Component } from 'react';
 import {RadioGroup, Radio} from 'react-radio-group'
+import createChart from '../stats';
 
 const GameOverStyle = styled('div')`
   position: fixed;
@@ -15,9 +16,10 @@ const GameOverStyle = styled('div')`
 `
 const GameOverAlert = styled('div')`
   margin: 2em auto;
-  padding: 2em;
+  padding: 1.5em;
   background: #fff;
-  max-width: 600px;
+  max-width: 900px;
+  display: flex;
   h2 {
     margin-top: 0;
   }
@@ -35,11 +37,38 @@ const GameOverAlert = styled('div')`
   .sharing a:hover {
     background: #2142c6;
   }
+  > div {
+    flex: 1;
+  }
+  > div:first-child {
+    padding-right: 1em;
+  }
+  > div:last-child p:first-child {
+    margin-top: 0;
+  }
+  #chart {
+    padding: 1em 0;
+  }
+  #chart-tooltip {
+    position: fixed;
+    background: #fff;
+    color: #000;
+    border: 2px solid #000;
+    padding: 0.2em 0.5em;
+    font-size: 0.9em;
+    font-family: 'sans-serif';
+    display: none;
+  }
+  .comparisons p {
+    margin: 0;
+  }
+  .comparisons {
+    margin: 0 0 1em 0;
+  }
 `;
 
 const GameOverSurveyStyle = styled('div')`
-border-top: 1px solid black;
-margin: 2em 0 0 0;
+font-size: 0.9em;
 .form-field {
   margin: 0.5em 0 1em 0;
 }
@@ -87,20 +116,57 @@ input[type=submit] {
 }
 `;
 
-const GameOver = (props) => {
-  let result = props.success ? t('game_over_win_share') : t('game_over_lose_share');
-  return (
-    <GameOverStyle>
-      <GameOverAlert>
-        <h2>{props.icon} {t('game_over_notice')}</h2>
-        {props.text}
-        <div className='sharing'>
-          <a href={`https://twitter.com/intent/tweet?text=${result}&url=https://${location.host}`}>Share on Twitter</a>
-          <a href={`https://www.facebook.com/sharer/sharer.php?u=https://${location.host}&description=${result}`}>Share on Facebook</a>
-        </div>
-        <GameOverSurvey />
-      </GameOverAlert>
-    </GameOverStyle>);
+class GameOver extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount() {
+    let main = document.getElementById('chart');
+    createChart(chart, this.props.summary);
+  }
+
+  render() {
+    let props = this.props;
+    let result = props.success ? t('game_over_win_share') : t('game_over_lose_share');
+    let outcomePercent;
+    if (props.success) {
+      outcomePercent = Math.round(props.aggregate.wins * 100);
+    } else {
+      outcomePercent = Math.round((1-props.aggregate.wins) * 100);
+    }
+    let outcome = props.success ? t('game_over_win_summary_result', {percent: outcomePercent}) :
+      t('game_over_lose_summary_result', {percent: outcomePercent});
+    let wageTotal = props.summary.wages.reduce((acc, v) => acc + v, 0);
+    let baseWageTotal = props.summary.baseWages.reduce((acc, v) => acc + v, 0);
+    let counterfactualAmount = baseWageTotal - wageTotal;
+    let nJobs = props.summary.jobs.length;
+    let nJobsDiff = Math.round(nJobs - props.aggregate.n_jobs);
+    let loans = props.summary.loans;
+    let loansDiff = Math.round(loans - props.aggregate.loans);
+    return (
+      <GameOverStyle>
+        <GameOverAlert>
+          <div>
+            <h2>{props.icon} {t('game_over_notice')}</h2>
+            {props.text}
+            <div id="chart"></div>
+            <div id="chart-tooltip"></div>
+            <div className="comparisons">
+              <p>{outcome}</p>
+              <p>{t('njobs_outcome', {nJobs: nJobs, amount: Math.abs(nJobsDiff), comp: nJobsDiff > 0 ? "more" : "less"})}</p>
+              <p>{t('debt_outcome', {loans: props.summary.loans.toLocaleString(), amount: Math.abs(loansDiff).toLocaleString(), comp: loansDiff > 0 ? "more" : "less"})}</p>
+              <p>{t('counterfactual', {amount: Math.abs(Math.round(counterfactualAmount)).toLocaleString(), comp: counterfactualAmount > 0 ? "more" : "less"})}</p>
+            </div>
+            <div className='sharing'>
+              <a href={`https://twitter.com/intent/tweet?text=${result}&url=https://${location.host}`}>{t('twitter_share')}</a>
+              <a href={`https://www.facebook.com/sharer/sharer.php?u=https://${location.host}&description=${result}`}>{t('facebook_share')}</a>
+            </div>
+          </div>
+          <GameOverSurvey />
+        </GameOverAlert>
+      </GameOverStyle>);
+  }
 }
 
 class GameOverSurvey extends Component {

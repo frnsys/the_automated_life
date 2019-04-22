@@ -1,7 +1,7 @@
 import config from 'config';
 import uuid from 'uuid/v4';
 
-const IDENTIFIER = uuid();
+window.IDENTIFIER = uuid();
 console.log(`ID:${IDENTIFIER}`);
 
 const log = (type, data) => {

@@ -157,7 +157,21 @@ class App extends Component {
     this.closeModal = () => this.setState({modalIsOpen: false});
 
     // Hacky way to call game over
-    window.gameOver = (gameOver) => this.setState({gameOver});
+    window.gameOver = (gameOver) => {
+      let IDENTIFIER = '2786654d-9b88-4b8f-9797-39116a744baa'; // TODO testing
+      fetch(`/summary/${IDENTIFIER}`, {
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        }
+      }).then(res => res.json())
+        .then((data) => {
+          gameOver.summary = data.summary;
+          gameOver.aggregate = data.aggregate;
+          this.setState({gameOver});
+        })
+        .catch(err => { console.log(err) });
+    };
   }
 
   togglePause() {

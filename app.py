@@ -65,13 +65,14 @@ def log():
 def summary(id):
     # Get cached summary, if available
     res = redis.get('fow:{}:summary'.format(id))
-
-    # Otherwise, generate
     if res is None:
         abort(404)
 
     summary = json.loads(res)
-    return render_template('summary.html', summary=json.dumps(summary))
+
+    res = redis.get('fow:aggregate')
+    agg = json.loads(res)
+    return jsonify(summary=summary, aggregate=agg)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000, debug=True)
