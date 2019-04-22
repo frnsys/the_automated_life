@@ -57,6 +57,19 @@ input[type=submit] {
     width: auto;
     font-weight: normal;
   }
+  label {
+    background: #cbd2ef;
+    cursor: pointer;
+    padding: 0.2em;
+    display: block;
+  }
+  input {
+    display: none;
+  }
+  input:checked+label {
+    background: #395be5;
+    color: #fff;
+  }
 }
 `;
 
