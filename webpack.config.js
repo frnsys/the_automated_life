@@ -2,8 +2,7 @@ var path = require('path');
 
 module.exports = {
   entry: {
-    'main': ['@babel/polyfill', './main'],
-    'stats': ['@babel/polyfill', './stats']
+    'main': ['@babel/polyfill', './main']
   },
   output: {
     path: path.resolve(__dirname, 'static'),
