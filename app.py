@@ -16,12 +16,16 @@ app = Flask(__name__)
 app = Flask(__name__)
 redis = redis.Redis(host='localhost', port=6379, db=1)
 
+
 @app.route('/')
 def game():
+    """Render the game page"""
     return render_template('index.html')
+
 
 @app.route('/log', methods=['POST'])
 def log():
+    """Receive log messages from player clients"""
     data = request.get_json()
     id = data['id']
     del data['id']
@@ -61,8 +65,11 @@ def log():
 
     return jsonify(success=True)
 
+
 @app.route('/summary/<id>')
 def summary(id):
+    """Get gameplay summary for player and
+    aggregate stats across all players"""
     # Get cached summary, if available
     res = redis.get('fow:{}:summary'.format(id))
     if res is None:
