@@ -4,7 +4,7 @@ import { animated, useTransition } from 'react-spring';
 import styled from 'styled-components';
 
 let id = 0;
-const defaultTimeout = 6000;
+const defaultTimeout = 5000;
 
 const history = [];
 

@@ -168,6 +168,7 @@ function loop(now) {
               '', {background: '#ea432a', color: '#fff'});
             log('rejected', {job: job.id, time: logTime});
             graph.resetNodeColor(graph.appliedNode, player);
+            graph.resetEdgeColor(graph.focusedNodeId, graph.appliedNode.data.id);
             graph.appliedNode = null;
           }
         }

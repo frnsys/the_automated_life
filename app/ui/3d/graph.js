@@ -368,6 +368,20 @@ class Graph {
       node.setColor(unfocusedColor);
     }
   }
+
+  resetEdgeColor(nodeId, nodeId_) {
+    let edge = this.edges[nodeId][nodeId_];
+    let neighbIds = this.focusedNodeId ? Object.keys(this.edges[this.focusedNodeId]) : [];
+    if (edge) {
+      if (edge.visited) {
+        edge.material = visitedLineMat;
+      } else if (neighbIds.includes(nodeId_.toString())) {
+        edge.material = focusedLineMat;
+      } else {
+        edge.material = defaultLineMat;
+      }
+    }
+  }
 }
 
 
