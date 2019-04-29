@@ -78,7 +78,7 @@ export default {
 
   enableLogging: window.location.hostname !== 'localhost',
   debug: params.includes('debug'),
-  perfectApplicant: params.include('perfect'),
-  startHighSchool: params.include('highschool'),
-  testGameOver: params.include('gameover'),
+  perfectApplicant: params.includes('perfect'),
+  startHighSchool: params.includes('highschool'),
+  testGameOver: params.includes('gameover'),
 };
