@@ -66,7 +66,10 @@ function loop(now) {
       // Teaser news stories
       scenario.schedule.forEach((r, i) => {
         if (!r.teased && time.months == r.months - config.newRobotWarningMonths){
-          notify(`💡 ${r.news.headline}`);
+          // Skip teasers if game speed is high
+          if (window.speedup < 2) {
+            notify(`💡 ${r.news.headline}`);
+          }
           store.dispatch({
             type: 'scenario:teased',
             payload: i
@@ -108,7 +111,6 @@ function loop(now) {
         store.dispatch({
           type: 'player:birthday'
         });
-        notify(t('inflation'));
       }
 
       // Check if new month
