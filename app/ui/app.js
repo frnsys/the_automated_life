@@ -53,7 +53,7 @@ const HUDArea = styled('div')`
 const OnboardingHint = styled('div')`
   background: #f6fc88;
   padding: 0.5em;
-  border: 2px solid #b517ff;
+  border: 2px solid #000;
   font-size: 0.9em;
 
   &.graph-onboarding-hint {

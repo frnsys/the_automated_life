@@ -18,7 +18,7 @@ const GameOverAlert = styled('div')`
   margin: 2em auto;
   padding: 1.5em;
   background: #fff;
-  max-width: 900px;
+  max-width: 980px;
   display: flex;
   h2 {
     margin-top: 0;

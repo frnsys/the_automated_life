@@ -10,11 +10,12 @@ import education from 'data/education.json';
 import config from 'config';
 
 const topNSkills = 9;
-const visitedColor = 0xf4ed61;
+const topNNeighbors = 6;
+const visitedColor = 0x51728c;
 const unfocusedColor = 0xaaaaaa;
-const focusedColor = 0x0000ff;
-const appliedColor = 0x79d889;
-const neighbColor = 0xff0000;
+const focusedColor = 0x0e55ef;
+const appliedColor = 0xf9ca2f;
+const neighbColor = 0x4fc6ea;
 
 const tooltip = (job) => {
   let {player, robots} = store.getState();
@@ -81,8 +82,12 @@ const tooltip = (job) => {
 };
 
 const focusedLineMat = new THREE.LineBasicMaterial({
-  color: 0x00ff00,
+  color: 0x44f48d,
   linewidth: 1
+});
+const appliedLineMat = new THREE.LineBasicMaterial({
+  color: appliedColor,
+  linewidth: 3
 });
 const defaultLineMat = new THREE.LineBasicMaterial({
   color: 0xaaaaaa,
@@ -161,6 +166,10 @@ class Graph {
             });
             this.appliedNode = node;
             node.setColor(appliedColor);
+
+            if (this.focusedNodeId) {
+              this.edges[this.focusedNodeId][id].material = appliedLineMat;
+            }
           }
         },
         tooltip: () => tooltip(j)
@@ -197,10 +206,10 @@ class Graph {
       let j = jobs[id];
       let n = this.nodes[id];
 
-      j.similar.map(k => {
+      j.similar.slice(0, topNNeighbors).map(k => {
         // Create edge only if we haven't
         // already created it
-        if (!this.edges[id][k]) {
+        if (!this.edges[id][k] && Object.keys(this.edges[k]).length < topNNeighbors) {
           let m = this.nodes[k];
           let edgeMesh = makeLine([[n.x, n.y], [m.x, m.y]]);
           edgeMesh.visible = false;
