@@ -684,7 +684,7 @@ ul {
   display: flex;
 }
 .game-over-survey .form-radio-group > div {
-  flex: initial
+  flex: initial;
   margin-right: 1em
 }
 .game-over-survey .form-radio-group label,

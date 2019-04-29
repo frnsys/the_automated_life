@@ -72,7 +72,7 @@ class App extends Component {
     // Hacky way to call game over
     window.gameOver = (gameOver) => {
       if (config.testGameOver) {
-        let IDENTIFIER = '2786654d-9b88-4b8f-9797-39116a744baa';
+        IDENTIFIER = '2786654d-9b88-4b8f-9797-39116a744baa';
       }
       fetch(`/summary/${IDENTIFIER}`, {
         headers: {
