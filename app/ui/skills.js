@@ -57,6 +57,10 @@ const SkillsStyle = styled('div')`
     margin: 0;
     font-weight: normal;
   }
+  .skills-info {
+    margin: 0.5em 0 0 0;
+    font-size: 0.85em;
+  }
 
   img {
     width: 10px;
@@ -119,6 +123,7 @@ class Skills extends Component {
         <h5>{t('percent_skills_automated', {
           percent: ((automatedSkills.length/Object.keys(skills).length)*100).toFixed(1)
         })}</h5>
+        <p className="skills-info">{t('skills_info')}</p>
         {skillGroups.map((group) => {
           return (<div key={group.name}>
             <h4>{group.name}</h4>

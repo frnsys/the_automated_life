@@ -13,6 +13,7 @@ import {GameOver, GameOverSurvey} from './gameOver';
 import {Notifications, Message, Content, Title, Body, history} from './notifs';
 import { GlobalStyle, Button } from './styles'
 import React, { Component } from 'react';
+import Tutorial from './tutorial';
 
 Modal.setAppElement('#main');
 const customStyles = {
@@ -154,7 +155,13 @@ class App extends Component {
     };
 
     this.openModal = () => this.setState({modalIsOpen: true});
-    this.closeModal = () => this.setState({modalIsOpen: false});
+    this.closeModal = (nextModal) => {
+      if (typeof nextModal === 'function') {
+        this.setState({modal: nextModal});
+      } else {
+        this.setState({modalIsOpen: false});
+      }
+    };
 
     // Hacky way to call game over
     window.gameOver = (gameOver) => {
@@ -179,6 +186,7 @@ class App extends Component {
   togglePause() {
     let paused = this.state.paused;
     window.paused = !paused;
+    window.started = true;
     this.setState({ paused: !paused, started: true });
   }
 
@@ -214,7 +222,7 @@ class App extends Component {
           shouldCloseOnEsc={!this.state.modal.requireChoice}
           shouldCloseOnOverlayClick={!this.state.modal.requireChoice}
           contentLabel='Game Alert'>
-          <this.state.modal closeModal={this.closeModal} />
+          <this.state.modal closeModal={this.closeModal} togglePause={this.togglePause.bind(this)} />
         </Modal>
 
         {this.state.paused || this.state.help ?
@@ -226,9 +234,9 @@ class App extends Component {
 
         <HUDArea>
           <TimeControls>
-            <TimeButton onMouseEnter={() => this.setState({help: true})} onMouseLeave={() => this.setState({help: false})}>?</TimeButton>
+            <TimeButton onClick={() => this.setState({modal: Tutorial, modalIsOpen: true})}>?</TimeButton>
             <TimeButton onClick={this.togglePause.bind(this)}>
-              {this.state.paused ? (this.state.started ? t('resume_button') : t('start_button')) : t('pause_button')}
+              {this.state.paused ? t('resume_button') : t('pause_button')}
             </TimeButton>
             <TimeButton onClick={this.toggleSpeed.bind(this)}>🕛 {window.speedup}x</TimeButton>
           </TimeControls>

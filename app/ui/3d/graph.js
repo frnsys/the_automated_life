@@ -39,11 +39,17 @@ const tooltip = (job) => {
     .map(id => skills[id]).slice(0, topNSkills);
 
   let wageChange = Math.round((job.wageAfterTaxes - job.baseWageAfterTaxes)/12);
+  let jobAnno = '';
+  if (hadJob) {
+    jobAnno = ` (${t('past_job')})`;
+  } else if (player.job && player.job.id == job.id) {
+    jobAnno = ` (${t('current_job')})`;
+  }
 
   return `
     <div class="job-tooltip">
       ${applied ? `<div class="job-applied">${t('application_out')}</div>` : ''}
-      <h3>${automated >= 0.5 ? '🤖 ' : ''}${job.name}${hadJob ? ` (${t('past_job')})` : ''}</h3>
+      <h3>${automated >= 0.5 ? '🤖 ' : ''}${job.name}${jobAnno}</h3>
       <h5>
         $${Math.round(job.wageAfterTaxes/12).toLocaleString()}/${t('month_unit')}
         ${wageChange != 0 ? `<span style="font-size:0.8em;opacity:0.7;"><span style="color:${wageChange < 0 ? '#ff0000' : '#39e567'};">${wageChange < 0 ? '-' : '+'}$${Math.abs(wageChange).toLocaleString()}</span> due to automation</span>` : ''}
@@ -54,7 +60,7 @@ const tooltip = (job) => {
         <div class="job-automated">${(automated*100).toFixed(0)}% ${t('percent_automated')}</div>
       </div>
       <div class="job-skills">
-        <h5><span>${t('important_skills')}</span> <span>🎓 ${education[job.bestEducation].name}</span></h5>
+        <h5><span>${t('important_skills')}</span> <span>≥ 🎓 ${education[job.bestEducation].name}</span></h5>
         <ul>
           ${requiredSkills.map((s) => {
             let risk = t('low');

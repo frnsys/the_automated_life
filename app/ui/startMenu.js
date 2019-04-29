@@ -8,6 +8,7 @@ import store from 'store';
 import jobs from 'data/jobs.json'
 import styled from 'styled-components';
 import { Button } from './styles'
+import Tutorial from './tutorial';
 
 const StartMenuStyle = styled('div')`
   h2 {
@@ -48,17 +49,13 @@ class StartMenu extends Component {
     graph.reveal(this.state.selectedJob, true);
     loop();
     log('started', {job: this.state.selectedJob});
-    this.props.closeModal();
+    this.props.closeModal(Tutorial);
   }
 
   render() {
     return <StartMenuStyle>
       <h2>{t('start_welcome')}</h2>
       <p>{t('start_intro')}</p>
-      <p><b><u>{t('start_goal', {
-        age: config.retirementAge,
-        savings: config.retirementSavingsMin.toLocaleString()
-      })}</u></b></p>
       <h3>{t('select_starting_job')}:</h3>
       <ul>
         {config.startingJobs.map((id) => {
