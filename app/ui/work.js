@@ -1,36 +1,7 @@
 import t from 'i18n';
 import React from 'react';
 import {connect} from 'react-redux';
-import { Bar, BarFill } from './styles'
 import config from 'config';
-import styled from 'styled-components';
-
-const PerformanceLabel = styled('div')`
-  position: absolute;
-  left: 0.5em;
-  bottom: 0;
-  color: #000;
-  font-size: 0.9em;
-`;
-
-const WorkBar = styled('div')`
-  border: 2px solid black;
-  user-select: none;
-  position: relative;
-`;
-
-const WorkButton = styled('div')`
-  color: #fff;
-  display: inline-block;
-  border: 1px solid #c41010;
-  background: #ea432a;
-  padding: 0.25em 0.5em;
-  cursor: pointer;
-  user-select: none;
-  &:hover {
-    background: #fe0f0f;
-  }
-`;
 
 const Work = (props) => {
   // Don't show work minigame if not employed
@@ -57,16 +28,16 @@ const Work = (props) => {
     performance = t('performance_fantastic');
     performanceColor = '#d119e5';
   }
-  return <div>
-    <WorkBar>
-      <Bar background='#fff'>
-        <BarFill width={props.player.performance} background='linear-gradient(to bottom, #eeeeee 0%,#cccccc 100%)' />
-      </Bar>
-      <PerformanceLabel>{t('performance')}: <span style={{color: performanceColor}}>{performance}</span></PerformanceLabel>
-    </WorkBar>
+  return <div className='work'>
+    <div className='work-bar'>
+      <div className='bar' style={{background: '#fff'}}>
+        <div className='bar-fill' style={{width: `${props.player.performance}%`}} />
+      </div>
+      <div className='performance-label'>{t('performance')}: <span style={{color: performanceColor}}>{performance}</span></div>
+    </div>
     <div>
       {[...Array(props.player.tasks)].map((i) => {
-        return <WorkButton key={i} onClick={() => window.paused ? '' : props.work()}>{t('work_button')}</WorkButton>;
+        return <div className='work-button' key={i} onClick={() => window.paused ? '' : props.work()}>{t('work_button')}</div>;
       })}
     </div>
   </div>;

@@ -1,72 +1,9 @@
 import t from 'i18n';
 import {connect} from 'react-redux';
 import React, { Component } from 'react';
-import styled from 'styled-components';
-import { Bar, BarFill } from './styles'
 import skills from 'data/skills.json'
 import skillGroups from 'data/skillGroups.json'
 import logic from '../logic';
-
-const SkillsStyle = styled('div')`
-  padding: 0 !important;
-
-  .skills-list {
-    max-height: 80vh;
-    overflow-y: scroll;
-    padding: 1em;
-    padding-bottom: 4em;
-
-    > *:last-child {
-      margin-bottom: 4em;
-    }
-  }
-
-  .skill-group {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .skill-group::after {
-    content: '';
-    width: 32%;
-  }
-  .skill-group li {
-    font-size: 0.9em;
-    padding: 0.2em;
-    padding-right: 8px;
-    width: 32%;
-    box-sizing: border-box;
-    background: #eee;
-    margin-bottom: 0.5em;
-    position: relative;
-    word-wrap: break-word;
-  }
-  h3 {
-    margin-bottom: 0;
-  }
-  h4 {
-    background: #111;
-    color: #fff;
-    padding: 0.3em;
-    margin-bottom: 0.5em;
-  }
-  h5 {
-    margin: 0;
-    font-weight: normal;
-  }
-  .skills-info {
-    margin: 0.5em 0 0 0;
-    font-size: 0.85em;
-  }
-
-  img {
-    width: 10px;
-    margin: 0 2px;
-  }
-`;
 
 const improvingArrow = <img title={t('improving_on_job')} alt={t('improving_on_job')} src="/static/arrow.png" />;
 
@@ -116,7 +53,7 @@ class Skills extends Component {
       return acc.concat(r.skills);
     }, []);
 
-    return <SkillsStyle>
+    return <div className='skills'>
       <SkillsLegend />
       <div className="skills-list">
         <h3>{t('your_skills')}</h3>
@@ -145,7 +82,7 @@ class Skills extends Component {
           </ul>
         </div> : ''}
       </div>
-    </SkillsStyle>
+    </div>
   }
 }
 

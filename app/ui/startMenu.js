@@ -6,30 +6,7 @@ import graph from './3d/graph';
 import config from 'config';
 import store from 'store';
 import jobs from 'data/jobs.json'
-import styled from 'styled-components';
-import { Button } from './styles'
 import Tutorial from './tutorial';
-
-const StartMenuStyle = styled('div')`
-  h2 {
-    margin: 0;
-  }
-  h3 {
-    margin-bottom: 0;
-  }
-  ul {
-    margin: 0.5em 0 1em;
-  }
-
-  .selected {
-    background: #39e567;
-  }
-
-  li {
-    cursor: pointer;
-    padding: 0.2em;
-  }
-`;
 
 class StartMenu extends Component {
   static requireChoice = true;
@@ -53,7 +30,7 @@ class StartMenu extends Component {
   }
 
   render() {
-    return <StartMenuStyle>
+    return <div className='start-menu'>
       <h2>{t('start_welcome')}</h2>
       <p>{t('start_intro')}</p>
       <h3>{t('select_starting_job')}:</h3>
@@ -65,8 +42,8 @@ class StartMenu extends Component {
             className={this.state.selectedJob == id ? 'selected' : ''}>{jobs[id].name}</li>;
         })}
       </ul>
-      <Button onClick={this.startGame.bind(this)}>{t('select_starting_job_button')}</Button>
-    </StartMenuStyle>
+      <div className='button' onClick={this.startGame.bind(this)}>{t('select_starting_job_button')}</div>
+    </div>
   }
 }
 

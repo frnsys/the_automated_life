@@ -6,9 +6,7 @@ import programs from 'data/programs.json';
 import jobs from 'data/jobs.json';
 import graph from './3d/graph';
 import store from 'store';
-import {Button} from './styles'
 import {connect} from 'react-redux';
-import styled from 'styled-components';
 import React, {Component} from 'react';
 
 function toTitleCase(str) {
@@ -17,64 +15,6 @@ function toTitleCase(str) {
   });
 }
 
-const SchoolStyle = styled('div')`
-  width: 440px;
-`;
-
-const LoanWarning = styled('div')`
-  color: #ff0000;
-  font-size: 1em !important;
-`;
-
-
-const ProgramsStyle = styled('div')`
-  margin: 1em 0 0 0;
-  > h3 {
-    margin: 0;
-    padding: 0px 0px 0.2em;
-    border-bottom: 2px solid black;
-  }
-  > ul {
-    max-height: 150px;
-    overflow-y: scroll;
-  }
-`;
-
-const ProgramStyle = styled('div')`
-  background: ${props => props.selected ? '#7efc82' : 'none'};
-  &:hover {
-    background: #aefcb0;
-  }
-  cursor: pointer;
-  margin-bottom: 0.5em;
-
-  h5 {
-    margin: 0;
-  }
-  .muted {
-    color: #777;
-    font-weight: normal;
-  }
-  .program-name {
-    color: #777;
-    font-size: 0.8em;
-  }
-`;
-
-const IndustryName = styled('h3')`
-  font-size: 1em;
-  cursor: pointer;
-  margin: 0.25em 0 0 0 !important;
-  color: #395be5;
-  &:hover {
-    text-decoration: underline;
-  }
-`;
-
-const Arrow = styled('span')`
-  vertical-align: middle;
-  font-size: 0.6em;
-`;
 
 class IndustryPrograms extends Component {
   constructor(props) {
@@ -87,14 +27,14 @@ class IndustryPrograms extends Component {
   render() {
     let ind = this.props.industry;
     return <div>
-      <IndustryName onClick={() => this.setState({open: !this.state.open})}><Arrow>{this.state.open ? '▼' : '▶'}</Arrow> {ind}</IndustryName>
+      <h3 className='industry-name' onClick={() => this.setState({open: !this.state.open})}><span className='industry-arrow'>{this.state.open ? '▼' : '▶'}</span> {ind}</h3>
       <ul style={{display: this.state.open ? 'block' : 'none'}}>
         {programs[ind].map((p, i) => {
           return <li key={i} onClick={() => this.props.onClick(p)}>
-            <ProgramStyle selected={this.props.selected == p}>
+            <div className='program' style={{background: this.props.selected ? '#7efc82' : 'none'}}>
               <h5>{toTitleCase(jobs[p.job.toString()].name)} <span className='muted'>{t('years_duration', {years: p.years})}</span></h5>
               <span className='program-name'>{t('study_program', {name: p.name})}</span>
-            </ProgramStyle>
+            </div>
           </li>;
         })}
       </ul>
@@ -158,7 +98,7 @@ class School extends Component {
       secondary = nextLevel.name == 'Secondary Degree';
 
       if (secondary) {
-        programsInfo = <ProgramsStyle>
+        programsInfo = <div className='programs'>
           <h3>{t('select_program')}:</h3>
           <ul>
             {Object.keys(programs).map((ind, i) => {
@@ -168,7 +108,7 @@ class School extends Component {
                 onClick={(p) => this.setState({selectedProgram: p})} />;
             })}
           </ul>
-        </ProgramsStyle>;
+        </div>;
       }
 
 			let loanInfo = '';
@@ -180,7 +120,7 @@ class School extends Component {
         needsLoan = totalCost > this.props.player.cash;
         if (needsLoan) {
           loanInfo = <div>
-            <LoanWarning>{t('loan_warning')}:</LoanWarning>
+            <div className='loan-warning'>{t('loan_warning')}:</div>
             <div className='item-box'>
               <div><b>{t('interest_rate')}:</b> {t('loan_terms', {
                 rate: (config.loanTerms.interestRate*100).toFixed(1),
@@ -206,15 +146,15 @@ class School extends Component {
           {this.props.player.education >= 2 ? <p>{t('school_postsecondary_note')}</p> : ''}
 					{loanInfo}
           {(!secondary || this.state.selectedProgram) ?
-            <Button onClick={() => this.enrollSchool(needsLoan, totalCost)}>{t('enroll_button')}</Button> : ''}
+            <div className='button' onClick={() => this.enrollSchool(needsLoan, totalCost)}>{t('enroll_button')}</div> : ''}
 				</div>
 			);
 		}
 
-    return <SchoolStyle>
+    return <div className='school'>
       <h3>{t('education_title')}</h3>
 			{body}
-    </SchoolStyle>
+    </div>
   }
 }
 

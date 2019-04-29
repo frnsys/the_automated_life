@@ -1,120 +1,8 @@
 import t from 'i18n';
 import log from 'log';
-import styled from 'styled-components';
 import React, { Component } from 'react';
 import {RadioGroup, Radio} from 'react-radio-group'
 import createChart from '../stats';
-
-const GameOverStyle = styled('div')`
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background: rgba(0,0,0,0.75);
-`
-const GameOverAlert = styled('div')`
-  margin: 2em auto;
-  padding: 1.5em;
-  background: #fff;
-  max-width: 980px;
-  display: flex;
-  h2 {
-    margin-top: 0;
-  }
-  .sharing {
-    margin-top: 0.25em;
-  }
-  .sharing a {
-    margin-right: 0.5em;
-    background: #395be5;
-    color: #fff;
-    text-decoration: none;
-    padding: 0.2em;
-    font-size: 0.9em;
-  }
-  .sharing a:hover {
-    background: #2142c6;
-  }
-  > div {
-    flex: 1;
-  }
-  > div:first-child {
-    padding-right: 1em;
-  }
-  > div:last-child p:first-child {
-    margin-top: 0;
-  }
-  #chart {
-    padding: 1em 0;
-  }
-  #chart-tooltip {
-    position: fixed;
-    background: #fff;
-    color: #000;
-    border: 2px solid #000;
-    padding: 0.2em 0.5em;
-    font-size: 0.9em;
-    font-family: 'sans-serif';
-    display: none;
-  }
-  .comparisons p {
-    margin: 0;
-  }
-  .comparisons {
-    margin: 0 0 1em 0;
-  }
-`;
-
-const GameOverSurveyStyle = styled('div')`
-font-size: 0.9em;
-.form-field {
-  margin: 0.5em 0 1em 0;
-}
-label {
-  display: block;
-  font-weight: bold;
-}
-input {
-  width: 100%;
-  box-sizing: border-box;
-}
-input[type=submit] {
-  border: none;
-  background: #395be5;
-  color: #fff;
-  font-weight: bold;
-  font-family: 'Arimo', 'Helvetica', sans-serif;
-  padding: 0.25em 0.5em;
-  cursor: pointer;
-}
-.form-radio-group {
-  display: flex;
-  > div {
-    flex: initial
-    margin-right: 1em
-  }
-  label, input {
-    display: inline;
-    width: auto;
-    font-weight: normal;
-  }
-  label {
-    background: #cbd2ef;
-    cursor: pointer;
-    padding: 0.2em;
-    display: block;
-  }
-  input {
-    display: none;
-  }
-  input:checked+label, label:hover {
-    background: #395be5;
-    color: #fff;
-  }
-}
-`;
 
 class GameOver extends Component {
   constructor(props) {
@@ -145,8 +33,8 @@ class GameOver extends Component {
     let loans = props.summary.loans;
     let loansDiff = Math.round(loans - props.aggregate.loans);
     return (
-      <GameOverStyle>
-        <GameOverAlert>
+      <div className='game-over-overlay'>
+        <div className='game-over-alert'>
           <div>
             <h2>{props.icon} {t('game_over_notice')}</h2>
             {props.text}
@@ -164,8 +52,8 @@ class GameOver extends Component {
             </div>
           </div>
           <GameOverSurvey />
-        </GameOverAlert>
-      </GameOverStyle>);
+        </div>
+      </div>);
   }
 }
 
@@ -190,7 +78,7 @@ class GameOverSurvey extends Component {
   }
 
   render() {
-    return <GameOverSurveyStyle>
+    return <div className='game-over-survey'>
       <p>{t('game_over_thanks')}</p>
       {this.state.submitted ? <p>{t('survey_submitted')}</p> :
         <form onSubmit={(ev) => this.submit(ev)}>
@@ -240,7 +128,7 @@ class GameOverSurvey extends Component {
           </div>
           <input type='Submit' value={t('survey_submit_button')} />
         </form>}
-    </GameOverSurveyStyle>
+    </div>
   }
 }
 

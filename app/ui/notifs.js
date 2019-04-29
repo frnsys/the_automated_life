@@ -1,62 +1,11 @@
 import ReactDOM from 'react-dom';
 import React, { useRef, useState, useEffect } from 'react';
 import { animated, useTransition } from 'react-spring';
-import styled from 'styled-components';
 
 let id = 0;
 const defaultTimeout = 5000;
 
 const history = [];
-
-const Container = styled('div')`
-  font-size: 0.8em;
-  position: fixed;
-  z-index: 9;
-  width: 0 auto;
-  top: ${props => (props.top ? '1em' : 'unset')};
-  bottom: ${props => (props.top ? 'unset' : '1em')};
-  margin: 0 auto;
-  right: 1em;
-  display: flex;
-  flex-direction: ${props => (props.top ? 'column-reverse' : 'column')};
-  pointer-events: none;
-  align-items: ${props => (props.position === 'center' ? 'center' : `flex-${props.position || 'end'}`)};
-  @media (max-width: 680px) {
-    align-items: center;
-  }
-`;
-
-const Message = styled(animated.div)`
-  box-sizing: border-box;
-  position: relative;
-  width: 40ch;
-  margin-bottom: 0.5em;
-  @media (max-width: 680px) {
-    width: 100%;
-  }
-`;
-
-const Title = styled('h5')`
-  font-size: 1em;
-  margin: 0;
-`;
-
-const Body = styled('div')`
-  margin-top: 0.5em;
-`;
-
-const Content = styled('div')`
-  border: 2px solid black;
-  color: #000;
-  background: #fff;
-  padding: 0.5em;
-  font-size: 1em;
-  display: grid;
-  grid-template-columns: ${props => (props.canClose === false ? '1fr' : '1fr auto')};
-  grid-gap: 0.5em;
-  height: auto;
-  overflow: hidden;
-`;
 
 function Notifications({ config = { tension: 125, friction: 20, precision: 0.1 }, timeout = defaultTimeout, children }) {
   const [refMap] = useState(() => new WeakMap())
@@ -79,21 +28,21 @@ function Notifications({ config = { tension: 125, friction: 20, precision: 0.1 }
     setItems(state => [...state, { key: id++, title, msg, style }])
   }), [])
   return (
-    <Container top={false}>
+    <div className='notification-container'>
       {transitions.map(({ key, item, props: { ...style } }) => (
-        <Message key={key}>
-          <Content ref={ref => ref && refMap.set(item, ref)} style={item.style}>
+        <div className='notification-message' key={key}>
+          <div className='notification-content' ref={ref => ref && refMap.set(item, ref)} style={item.style}>
             <div>
-              <Title>{item.title}</Title>
-              {item.msg ? <Body>{item.msg}</Body> : ''}
+              <div className='notification-title'>{item.title}</div>
+              {item.msg ? <div className='notification-body'>{item.msg}</div> : ''}
             </div>
-          </Content>
-        </Message>
+          </div>
+        </div>
       ))}
-    </Container>
+    </div>
   )
 }
 
 export {
-  Notifications, Message, Content, Title, Body, history
+  Notifications, history
 };

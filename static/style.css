@@ -1,0 +1,733 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i');
+
+canvas {
+  cursor: grab;
+}
+
+html,
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arimo', 'Helvetiva', sans-serif;
+  background: #eee;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tooltip {
+  background: #fff;
+  border: 2px solid black;
+  padding: 0.5em;
+}
+.tooltip h5, .tooltip h6 {
+  margin: 0;
+}
+
+.annotation {
+  position: absolute;
+  font-size: 0.3em;
+  line-height: 1;
+}
+
+.job-status {
+  display: flex;
+  margin-top: 0.25em;
+  font-size: 0.85em;
+}
+.job-risk {
+  flex: 1.5;
+}
+.job-risk-low {
+  color: #39e567;
+}
+.job-risk-moderate {
+  color: #f9993e;
+}
+.job-risk-high {
+  color: #fe0f0f;
+}
+.job-tooltip {
+  width: 20em;
+}
+.job-tooltip h3,
+.job-tooltip h5 {
+  margin: 0;
+  font-size: 1em;
+}
+.job-tooltip h5 {
+  margin: 0 0 0.5em 0;
+  font-weight: normal;
+  font-size: 0.8em;
+}
+.job-industries {
+  font-size: 0.65em;
+}
+.job-industries > div {
+  padding: 2px;
+  background: #ddd;
+  display: inline-block;
+  margin-bottom: 1px;
+}
+.job-skills {
+  margin-top: 0.5em;
+  border-top: 2px solid black;
+  font-size: 0.75em;
+}
+.job-skills h5 {
+  display: flex;
+  justify-content: space-between;
+}
+.job-skills span {
+  display: block;
+}
+.job-skills span:last-child {
+  text-align: right;
+}
+.job-skills ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.job-skills li {
+  padding: 0.2em;
+  padding-right: 8px;
+  width: 32%;
+  box-sizing: border-box;
+  background: #eee;
+  margin-bottom: 0.5em;
+  position: relative;
+  word-wrap: break-word;
+}
+.job-skills h5 {
+  margin: 0.5em 0 0.25em 0;
+  font-size: 1em;
+}
+.job-applied {
+  text-align: center;
+  background: #000;
+  color: #fff;
+  padding: 0.2em;
+  margin-bottom: 0.5em;
+}
+
+.skill-level-bar {
+  width: 6px;
+  display: inline-block;
+  background: #bbb;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+.skill-level-bar-fill {
+  background: #555;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.automation-low {
+  border-top: 3px solid #39e567;
+}
+.automation-moderate {
+  border-top: 3px solid #f9993e;
+}
+.automation-high {
+  border-top: 3px solid #fe0f0f;
+}
+
+.skills-legend {
+  font-size: 0.9em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 0.5em;
+  border-top: 2px solid black;
+  z-index: 10;
+}
+
+.job-legend, .skills-legend {
+  display: flex;
+  justify-content: space-between;
+}
+.skill-legend .skill-level-bar {
+  position: relative;
+  height: 10px;
+}
+.skill-legend .skill-level-bar-fill {
+  height: 65%;
+}
+.automation-legend {
+  font-size: 0.9em;
+}
+.automation-legend > div {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+}
+.automation-low-key {
+  background: #39e567;
+}
+.automation-moderate-key {
+  background: #f9993e;
+  margin-left: 8px;
+}
+.automation-high-key {
+  background: #fe0f0f;
+  margin-left: 8px;
+}
+
+.automated {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: -3px;
+  border: 2px solid #888;
+  background: rgba(255,255,255,0.9);
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.hud-notice {
+  background: red;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+}
+
+.info-tooltip {
+  background: #222 !important;
+  border-radius: 0 !important;
+  padding: 0.3em 0.5em !important;
+  margin-top: 0 !important;
+  opacity: 1 !important;
+  z-index: 1000000;
+}
+.info-tooltip::after {
+  border-top-width: 0 !important;
+}
+
+.ReactModal__Content {
+  overflow-y: hidden !important;
+  padding: 0 !important;
+}
+.ReactModal__Content > div{
+  padding: 1em;
+}
+.ReactModal__Content h3 {
+  margin: 0 0 1em 0;
+}
+
+.item-box {
+  background: #eee;
+  border: 1px solid #aaa;
+  padding: 0.5em;
+  margin: 1em 0;
+}
+
+.work .work-button {
+  color: #fff;
+  display: inline-block;
+  border: 1px solid #c41010;
+  background: #ea432a;
+  padding: 0.25em 0.5em;
+  cursor: pointer;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+.work .work-button&:hover {
+  background: #fe0f0f;
+}
+.work-bar {
+  border: 2px solid black;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  position: relative;
+}
+.work-bar .bar-fill {
+  background: linear-gradient(to bottom, #eeeeee 0%,#cccccc 100%);
+}
+.performance-label {
+  position: absolute;
+  left: 0.5em;
+  bottom: 0;
+  color: #000;
+  font-size: 0.9em;
+}
+
+.tutorial h2 {
+  margin: 0;
+}
+.game-goal {
+  background: #fc4040;
+  color: #fff;
+  padding: 0.3em;
+  border: 4px solid #000;
+  text-align: center;
+}
+
+.hud {
+  color: #000;
+  padding: 0.5em;
+  max-width: 240px;
+  border: 2px solid black;
+  background: #fff;
+}
+.hud .stat {
+  margin: 0.25em 0;
+  flex: 1;
+}
+.hud .stat span {
+  cursor: help;
+}
+.hud .stat-group {
+  display: flex;
+}
+.hud .stat-hint {
+  font-size: 0.75em;
+  color: #888;
+}
+.hud .hud-children {
+  margin-top: 1em;
+  display: flex;
+}
+
+.hud-progress {
+  position: fixed;
+  z-index: 3;
+  left: 1em;
+  bottom: 1em;
+  color: #000;
+  padding: 0.5em;
+  max-width: 240px;
+  border: 2px solid black;
+  background: #fff;
+}
+.hud-progress h6 {
+  margin: 0 0 0.5em 0;
+}
+.hud-progress .stat-icon {
+  margin-right: 0.5em;
+}
+
+.school {
+  width: 440px;
+}
+.loan-warning {
+  color: #ff0000;
+  font-size: 1em !important;
+}
+.programs {
+  margin: 1em 0 0 0;
+}
+.programs > h3 {
+  margin: 0;
+  padding: 0px 0px 0.2em;
+  border-bottom: 2px solid black;
+}
+.programs > ul {
+  max-height: 150px;
+  overflow-y: scroll;
+}
+
+.program {
+  cursor: pointer;
+  margin-bottom: 0.5em;
+}
+.program:hover {
+  background: #aefcb0;
+}
+.program h5 {
+  margin: 0;
+}
+.program .muted {
+  color: #777;
+  font-weight: normal;
+}
+.program .program-name {
+  color: #777;
+  font-size: 0.8em;
+}
+.industry-name {
+  font-size: 1em;
+  cursor: pointer;
+  margin: 0.25em 0 0 0 !important;
+  color: #395be5;
+}
+.industry-name:hover {
+  text-decoration: underline;
+}
+.industry-arrow {
+  vertical-align: middle;
+  font-size: 0.6em;
+}
+
+.skills {
+  padding: 0 !important;
+}
+.skills .skills-list {
+  max-height: 80vh;
+  overflow-y: scroll;
+  padding: 1em;
+  padding-bottom: 4em;
+}
+.skills .skills-list > *:last-child {
+  margin-bottom: 4em;
+}
+.skills .skill-group {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.skills .skill-group::after {
+  content: '';
+  width: 32%;
+}
+.skills .skill-group li {
+  font-size: 0.9em;
+  padding: 0.2em;
+  padding-right: 8px;
+  width: 32%;
+  box-sizing: border-box;
+  background: #eee;
+  margin-bottom: 0.5em;
+  position: relative;
+  word-wrap: break-word;
+}
+.skills h3 {
+  margin-bottom: 0;
+}
+.skills h4 {
+  background: #111;
+  color: #fff;
+  padding: 0.3em;
+  margin-bottom: 0.5em;
+}
+.skills h5 {
+  margin: 0;
+  font-weight: normal;
+}
+.skills .skills-info {
+  margin: 0.5em 0 0 0;
+  font-size: 0.85em;
+}
+.skills img {
+  width: 10px;
+  margin: 0 2px;
+}
+
+.hud-area {
+  position: fixed;
+  z-index: 2;
+  left: 1em;
+  top: 1em;
+  max-width: 220px;
+}
+.work-area {
+  position: fixed;
+  z-index: 11;
+  right: 1em;
+  top: 1em;
+  color: #000;
+  width: 17.1em;
+}
+.help-hint {
+  background: #f6fc88;
+  padding: 0.5em;
+  border: 2px solid #000;
+  font-size: 0.9em;
+}
+.help-hint.graph-help-hint {
+  position: fixed;
+  right: 1em;
+  bottom: 1em;
+  z-index: 12;
+  max-width: 360px;
+}
+.help-hint.work-help-hint {
+  margin-top: 0.1em;
+  position: absolute;
+  top: 1.5em;
+}
+.help-hint.hud-help-hint {
+  margin-top: 0.1em;
+}
+
+.time-controls {
+  width: 100%;
+  display: flex;
+}
+.time-button {
+  flex: 1;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  padding: 0.1em 0.5em;
+  font-size: 0.8em;
+  text-align: center;
+  background: #395be5;
+  color: #fff;
+  font-weight: bold;
+  display: inline-block;
+  cursor: pointer;
+  border: 2px solid black;
+  border-bottom: none;
+  border-right: none;
+  box-sizing: border-box;
+}
+.time-button:hover {
+  background: red;
+}
+.time-button:last-child {
+  border-right: 2px solid black;
+}
+.time-button:first-child {
+  flex: 0.25;
+}
+
+.notification-history {
+  width: 440px;
+  height: 70vh;
+  overflow-y: scroll;
+}
+.notification-history-button {
+  position: fixed;
+  right: 1em;
+  bottom: 0.2em;
+  cursor: pointer;
+  color: #888;
+  text-decoration: underline;
+  font-size: 0.8em;
+  z-index: 10;
+  background: #eee;
+}
+
+.notification-title {
+  font-size: 1em;
+  margin: 0;
+}
+.notification-body {
+  margin-top: 0.5em;
+}
+.notification-content {
+  border: 2px solid black;
+  color: #000;
+  background: #fff;
+  padding: 0.5em;
+  font-size: 1em;
+  display: grid;
+  grid-template-columns: '1fr';
+  grid-gap: 0.5em;
+  height: auto;
+  overflow: hidden;
+}
+.notification-message {
+  box-sizing: border-box;
+  position: relative;
+  width: 270px;
+  margin-bottom: 0.5em;
+}
+.notification-container {
+  font-size: 0.8em;
+  position: fixed;
+  z-index: 9;
+  width: 0 auto;
+  top: unset;
+  bottom: 1em;
+  margin: 0 auto;
+  right: 1em;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+  align-items: flex-end;
+}
+
+.bar {
+  width: 20em;
+  max-width: 100%;
+  height: 1em;
+  position: relative;
+  background: #eee;
+}
+.bar-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, #7de984 0%,#4bab48 100%);
+}
+
+.start-menu h2 {
+  margin: 0;
+}
+.start-menu h3 {
+  margin-bottom: 0;
+}
+.start-menu ul {
+  margin: 0.5em 0 1em;
+}
+.start-menu .selected {
+  background: #39e567;
+}
+.start-menu li {
+  cursor: pointer;
+  padding: 0.2em;
+}
+
+.game-over-overlay {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0,0,0,0.75);
+}
+.game-over-alert {
+  margin: 2em auto;
+  padding: 1.5em;
+  background: #fff;
+  max-width: 980px;
+  display: flex;
+}
+.game-over-alert h2 {
+  margin-top: 0;
+}
+.game-over-alert .sharing {
+  margin-top: 0.25em;
+}
+.game-over-alert .sharing a {
+  margin-right: 0.5em;
+  background: #395be5;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.2em;
+  font-size: 0.9em;
+}
+.game-over-alert .sharing a:hover {
+  background: #2142c6;
+}
+.game-over-alert > div {
+  flex: 1;
+}
+.game-over-alert > div:first-child {
+  padding-right: 1em;
+}
+.game-over-alert > div:last-child p:first-child {
+  margin-top: 0;
+}
+.game-over-alert #chart {
+  padding: 1em 0;
+}
+.game-over-alert #chart-tooltip {
+  position: fixed;
+  background: #fff;
+  color: #000;
+  border: 2px solid #000;
+  padding: 0.2em 0.5em;
+  font-size: 0.9em;
+  font-family: 'sans-serif';
+  display: none;
+}
+.game-over-alert .comparisons p {
+  margin: 0;
+}
+.game-over-alert .comparisons {
+  margin: 0 0 1em 0;
+}
+
+.game-over-survey {
+  font-size: 0.9em;
+}
+.game-over-survey .form-field {
+  margin: 0.5em 0 1em 0;
+}
+.game-over-survey label {
+  display: block;
+  font-weight: bold;
+}
+.game-over-survey input {
+  width: 100%;
+  box-sizing: border-box;
+}
+.game-over-survey input[type=submit] {
+  border: none;
+  background: #395be5;
+  color: #fff;
+  font-weight: bold;
+  font-family: 'Arimo', 'Helvetica', sans-serif;
+  padding: 0.25em 0.5em;
+  cursor: pointer;
+}
+.game-over-survey .form-radio-group {
+  display: flex;
+}
+.game-over-survey .form-radio-group > div {
+  flex: initial
+  margin-right: 1em
+}
+.game-over-survey .form-radio-group label,
+.game-over-survey .form-radio-group input {
+  display: inline;
+  width: auto;
+  font-weight: normal;
+}
+.game-over-survey .form-radio-group label {
+  background: #cbd2ef;
+  cursor: pointer;
+  padding: 0.2em;
+  display: block;
+}
+.game-over-survey .form-radio-group input {
+  display: none;
+}
+.game-over-survey .form-radio-group input:checked+label,
+.game-over-survey .form-radio-group label:hover {
+  background: #395be5;
+  color: #fff;
+}
+
+.button {
+  color: #fff;
+  background: #395be5;
+  cursor: pointer;
+  text-align: center;
+  padding: 0.25em 0.5em;
+  font-weight: bold;
+  flex: 1;
+  margin-right: 1px;
+}
+.button:last-child {
+  margin-right: 0;
+}
+.button:hover {
+  background: #2f51d8;
+}
+.button.disabled {
+  background: '#aaa';
+  cursor: default;
+}
+.button.disabled:hover {
+  background: '#aaa';
+}

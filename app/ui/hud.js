@@ -1,8 +1,6 @@
 import t from 'i18n';
 import React from 'react';
-import styled from 'styled-components';
 import {connect} from 'react-redux';
-import { Bar, BarFill } from './styles'
 import skills from 'data/skills.json'
 import education from 'data/education.json'
 import numeral from 'numeral';
@@ -11,56 +9,6 @@ import config from 'config';
 const months = [
   'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
 ];
-
-const HUDStyle = styled('div')`
-  color: #000;
-  padding: 0.5em;
-  max-width: 240px;
-  border: 2px solid black;
-  background: #fff;
-
-  .stat {
-    margin: 0.25em 0;
-    flex: 1;
-    span {
-      cursor: help;
-    }
-  }
-
-  .stat-group {
-    display: flex;
-  }
-
-  .stat-hint {
-    font-size: 0.75em;
-    color: #888;
-  }
-
-  .hud-children {
-    margin-top: 1em;
-    display: flex;
-  }
-`;
-
-const ProgressStyle = styled('div')`
-  position: fixed;
-  z-index: 3;
-  left: 1em;
-  bottom: 1em;
-  color: #000;
-  padding: 0.5em;
-  max-width: 240px;
-  border: 2px solid black;
-  background: #fff;
-
-  h6 {
-    margin: 0 0 0.5em 0;
-  }
-
-  .stat-icon {
-    margin-right: 0.5em;
-  }
-`;
 
 const Stat = (props) => {
   return <div className='stat'><span data-tip={props.name}>{props.children}</span></div>
@@ -75,11 +23,11 @@ const HUD = (props) => {
   }
 
   return (
-    <HUDStyle>
+    <div className='hud'>
       {props.player.gameOver ? <div className='hud-notice'>{t('game_over_notice')}</div> : ''}
       {inSchool ? <div className='hud-notice'>{t('in_school_notice')}</div> : ''}
       {unemployed ? <div className='hud-notice'>{t('unemployed_notice')}</div> : ''}
-      <Bar><BarFill width={props.time.monthProgress} /></Bar>
+      <div className='bar'><div className='bar-fill' style={{width: `${props.time.monthProgress*100}%`}} /></div>
       <div className='stat-group'>
         <Stat name={t('stat_date')}>
           📅 {months[props.time.month-1]} {props.time.year}
@@ -113,18 +61,18 @@ const HUD = (props) => {
         {props.children}
       </div>
 
-      <ProgressStyle>
+      <div className='hud-progress'>
         <h6>{t('retirement_progress')}</h6>
         <div className='stat-group' data-tip={t('retirement_remaining', {years: config.retirementAge - props.player.startAge - props.time.years})}>
           <div className='stat-icon'>🏖️</div>
-          <Bar><BarFill width={Math.min(1, (props.time.years+(props.time.month/12))/(config.retirementAge-props.player.startAge))} /></Bar>
+          <div className='bar'><div className='bar-fill' style={{width: `${Math.min(1, (props.time.years+(props.time.month/12))/(config.retirementAge-props.player.startAge))*100}%`}} /></div>
         </div>
         <div className='stat-group' data-tip={t('retirement_savings_remaining', {amount: numeral(Math.max(0, config.retirementSavingsMin - props.player.cash)).format('0,0.0a')})}>
           <div className='stat-icon'>💰</div>
-          <Bar><BarFill width={Math.min(1, props.player.cash/config.retirementSavingsMin)} /></Bar>
+          <div className='bar'><div className='bar-fill' style={{width: `${Math.min(1, props.player.cash/config.retirementSavingsMin)*100}%`}} /></div>
         </div>
-      </ProgressStyle>
-    </HUDStyle>
+      </div>
+    </div>
   );
 }
 

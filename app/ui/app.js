@@ -7,11 +7,9 @@ import Modal from 'react-modal';
 import Skills from './skills';
 import School from './school';
 import StartMenu from './startMenu';
-import styled from 'styled-components';
 import ReactTooltip from 'react-tooltip'
 import {GameOver, GameOverSurvey} from './gameOver';
-import {Notifications, Message, Content, Title, Body, history} from './notifs';
-import { GlobalStyle, Button } from './styles'
+import {Notifications, history} from './notifs';
 import React, { Component } from 'react';
 import Tutorial from './tutorial';
 
@@ -33,112 +31,20 @@ const customStyles = {
   }
 };
 
-const WorkArea = styled('div')`
-  position: fixed;
-  z-index: 11;
-  right: 1em;
-  top: 1em;
-  color: #000;
-  width: 17.1em;
-`;
-
-const HUDArea = styled('div')`
-  position: fixed;
-  z-index: 2;
-  left: 1em;
-  top: 1em;
-  max-width: 220px;
-`;
-
-
-const HelpHint = styled('div')`
-  background: #f6fc88;
-  padding: 0.5em;
-  border: 2px solid #000;
-  font-size: 0.9em;
-
-  &.graph-help-hint {
-    position: fixed;
-    right: 1em;
-    bottom: 1em;
-    z-index: 11;
-    max-width: 360px;
-  }
-
-  &.work-help-hint {
-    margin-top: 0.1em;
-    position: absolute;
-    top: 1.5em;
-  }
-
-  &.hud-help-hint {
-    margin-top: 0.1em;
-  }
-`;
-
-const TimeControls = styled('div')`
-  width: 100%;
-  display: flex;
-`;
-
-const TimeButton = styled('div')`
-  flex: 1;
-  user-select: none;
-  padding: 0.1em 0.5em;
-  font-size: 0.8em;
-  text-align: center;
-  background: #395be5;
-  color: #fff;
-  font-weight: bold;
-  display: inline-block;
-  cursor: pointer;
-  border: 2px solid black;
-  border-bottom: none;
-  border-right: none;
-  box-sizing: border-box;
-  &:hover {
-    background: red;
-  }
-  &:last-child {
-    border-right: 2px solid black;
-  }
-  &:first-child {
-    flex: 0.25;
-  }
-`
-
-const NotificationHistoryStyle = styled('div')`
-  width: 440px;
-  height: 70vh;
-  overflow-y: scroll;
-`;
-
-const NotificationHistoryButton = styled('div')`
-  position: fixed;
-  right: 1em;
-  bottom: 0.2em;
-  cursor: pointer;
-  color: #888;
-  text-decoration: underline;
-  font-size: 0.8em;
-  z-index: 10;
-  background: #eee;
-`;
-
 const NotificationHistory = () => {
-  return <NotificationHistoryStyle>
+  return <div className='notification-history'>
     <h3>{t('notification_history_title')}</h3>
     {history.map((h, i) => {
-      return <Message key={i} style={{width: '100%', fontSize: '0.8em'}}>
-        <Content style={h.style}>
+      return <div className='notification-message' key={i} style={{width: '100%', fontSize: '0.8em'}}>
+        <div className="notification-content" style={h.style}>
           <div>
-            <Title>{h.title}</Title>
-            {h.msg ? <Body>{h.msg}</Body> : ''}
+            <div className="notification-title">{h.title}</div>
+            {h.msg ? <div className="notification-body">{h.msg}</div> : ''}
           </div>
-        </Content>
-      </Message>
+        </div>
+      </div>
     })}
-  </NotificationHistoryStyle>;
+  </div>;
 };
 
 class App extends Component {
@@ -209,7 +115,6 @@ class App extends Component {
     // Kind of hacky way to make notifications accessible globally
     return (
       <div>
-        <GlobalStyle />
         <ReactTooltip className='info-tooltip' />
         <Notifications children={add => (window.notify = add)} />
 
@@ -226,39 +131,39 @@ class App extends Component {
         </Modal>
 
         {this.state.paused || this.state.help ?
-            <HelpHint className='graph-help-hint'>
+            <div className='help-hint graph-help-hint'>
               <div dangerouslySetInnerHTML={{__html: t('hint_job_graph', {
                 applicationMonths: config.applicationMinMonths
               })}}></div>
-            </HelpHint> : ''}
+            </div> : ''}
 
-        <HUDArea>
-          <TimeControls>
-            <TimeButton onClick={() => this.setState({modal: Tutorial, modalIsOpen: true})}>?</TimeButton>
-            <TimeButton onClick={this.togglePause.bind(this)}>
+        <div className='hud-area'>
+          <div className='time-controls'>
+            <div className='time-button' onClick={() => this.setState({modal: Tutorial, modalIsOpen: true})}>?</div>
+            <div className='time-button' onClick={this.togglePause.bind(this)}>
               {this.state.paused ? t('resume_button') : t('pause_button')}
-            </TimeButton>
-            <TimeButton onClick={this.toggleSpeed.bind(this)}>🕛 {window.speedup}x</TimeButton>
-          </TimeControls>
+            </div>
+            <div className='time-button' onClick={this.toggleSpeed.bind(this)}>🕛 {window.speedup}x</div>
+          </div>
           <HUD>
-            <Button onClick={() => this.setState({modalIsOpen: true, modal: Skills})}>{t('skills_button')}</Button>
-            <Button onClick={() => this.setState({modalIsOpen: true, modal: School})}>{t('school_button')}</Button>
+            <div className='button' onClick={() => this.setState({modalIsOpen: true, modal: Skills})}>{t('skills_button')}</div>
+            <div className='button' onClick={() => this.setState({modalIsOpen: true, modal: School})}>{t('school_button')}</div>
           </HUD>
-          {this.state.paused || this.state.help ? <HelpHint className='hud-help-hint'>
+          {this.state.paused || this.state.help ? <div className='help-hint hud-help-hint'>
             <div dangerouslySetInnerHTML={{__html: t('hint_hud')}}></div>
-          </HelpHint>: ''}
-        </HUDArea>
+          </div>: ''}
+        </div>
 
-        <NotificationHistoryButton onClick={() => this.setState({modalIsOpen: true, modal: NotificationHistory})}>
+        <div className='notification-history-button' onClick={() => this.setState({modalIsOpen: true, modal: NotificationHistory})}>
           {t('notification_history_button')}
-        </NotificationHistoryButton>
+        </div>
 
-        <WorkArea>
+        <div className='work-area'>
           <Work />
-          {this.state.paused || this.state.help ? <HelpHint className='work-help-hint'>
+          {this.state.paused || this.state.help ? <div className='help-hint work-help-hint'>
             <div dangerouslySetInnerHTML={{__html: t('hint_work')}}></div>
-          </HelpHint> : ''}
-        </WorkArea>
+          </div> : ''}
+        </div>
 
         <Scene />
       </div>
