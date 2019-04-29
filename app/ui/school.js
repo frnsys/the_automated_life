@@ -203,6 +203,7 @@ class School extends Component {
                 : ''}
             {programsInfo}
           </div>
+          {this.props.player.education >= 2 ? <p>{t('school_postsecondary_note')}</p> : ''}
 					{loanInfo}
           {(!secondary || this.state.selectedProgram) ?
             <Button onClick={() => this.enrollSchool(needsLoan, totalCost)}>{t('enroll_button')}</Button> : ''}

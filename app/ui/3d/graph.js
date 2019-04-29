@@ -262,7 +262,7 @@ class Graph {
       player = store.getState().player;
     }
 
-    if (this.focusedNodeId) {
+    if (this.focusedNodeId && this.edges[this.focusedNodeId][job_id]) {
       this.edges[this.focusedNodeId][job_id].visited = true;
     }
 

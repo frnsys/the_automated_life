@@ -34,7 +34,7 @@ function reducer(state={}, {type, payload}) {
 
     case 'job:newSkill':
       let robot = payload;
-      notify(t('deepening_automation', {name: robot.name}));
+      // notify(t('deepening_automation', {name: robot.name}));
 
       let s_id = Object.keys(skills).length;
       skills[s_id] = {

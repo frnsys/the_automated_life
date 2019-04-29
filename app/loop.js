@@ -24,6 +24,7 @@ function loop(now) {
   let logTime = {year: time.years, month: time.month};
 
   if (!window.paused) {
+    let inSchool = player.job.name == 'Student';
 
     // Check game over
     if (player.gameOver) return;
@@ -67,7 +68,7 @@ function loop(now) {
       scenario.schedule.forEach((r, i) => {
         if (!r.teased && time.months == r.months - config.newRobotWarningMonths){
           // Skip teasers if game speed is high
-          if (window.speedup < 2) {
+          if (window.speedup < 2 && !inSchool) {
             notify(`💡 ${r.news.headline}`);
           }
           store.dispatch({
@@ -79,7 +80,6 @@ function loop(now) {
     }
 
     if (!isNaN(elapsed)) {
-      let inSchool = player.job.name == 'Student';
       let unemployed = player.job.name == 'Unemployed' && !player.application;
 
       // Tick time
@@ -103,7 +103,8 @@ function loop(now) {
         // Every tenth birthday, show retirement reminder
         if ((age) % 10 == 0) {
           let yearsLeft = config.retirementAge - age;
-          let estimate = Math.round(player.cash + ((player.cash/time.years) * yearsLeft))
+          let cash = player.cash - player.debt.reduce((acc, d) => acc + d.remaining, 0);
+          let estimate = Math.round(cash + ((cash/time.years) * yearsLeft))
             .toLocaleString();
           notify(`🎂 ${t('birthday_title', {age})}`,
             t('birthday_body', {yearsLeft, estimate}));
