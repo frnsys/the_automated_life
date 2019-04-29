@@ -27,7 +27,7 @@
 
 Then visit `localhost:5000`.
 
-To play in debug mode: `localhost:8080/?debug`
+To play in debug mode: `localhost:5000/?debug`
 
 Other debug options, specified as URL params:
 
