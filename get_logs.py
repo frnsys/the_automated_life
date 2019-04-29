@@ -4,8 +4,9 @@ Fetch player logs from Redis
 
 import json
 import redis
+import config
 
-redis = redis.Redis(host='localhost', port=6379, db=1)
+redis = redis.Redis(**config.REDIS)
 
 logs = {}
 ids = [r.decode('utf8') for r in redis.keys('fow:*')]

@@ -12,9 +12,7 @@ sentry_sdk.init(
 )
 
 app = Flask(__name__)
-
-app = Flask(__name__)
-redis = redis.Redis(host='localhost', port=6379, db=1)
+redis = redis.Redis(**config.REDIS)
 
 
 @app.route('/')

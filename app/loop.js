@@ -27,7 +27,7 @@ function loop(now) {
 
     // Check game over
     if (player.gameOver) return;
-    if (player.cash <= config.gameOverBalance) {
+    if (player.cash <= config.gameOverBalance || config.testGameOver) {
       store.dispatch({
         type: 'player:gameOver'
       });
