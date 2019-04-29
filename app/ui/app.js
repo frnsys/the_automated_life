@@ -50,13 +50,13 @@ const HUDArea = styled('div')`
 `;
 
 
-const OnboardingHint = styled('div')`
+const HelpHint = styled('div')`
   background: #f6fc88;
   padding: 0.5em;
   border: 2px solid #000;
   font-size: 0.9em;
 
-  &.graph-onboarding-hint {
+  &.graph-help-hint {
     position: fixed;
     right: 1em;
     bottom: 1em;
@@ -64,13 +64,13 @@ const OnboardingHint = styled('div')`
     max-width: 360px;
   }
 
-  &.work-onboarding-hint {
+  &.work-help-hint {
     margin-top: 0.1em;
     position: absolute;
     top: 1.5em;
   }
 
-  &.hud-onboarding-hint {
+  &.hud-help-hint {
     margin-top: 0.1em;
   }
 `;
@@ -218,11 +218,11 @@ class App extends Component {
         </Modal>
 
         {this.state.paused || this.state.help ?
-            <OnboardingHint className='graph-onboarding-hint'>
+            <HelpHint className='graph-help-hint'>
               <div dangerouslySetInnerHTML={{__html: t('hint_job_graph', {
                 applicationMonths: config.applicationMinMonths
               })}}></div>
-            </OnboardingHint> : ''}
+            </HelpHint> : ''}
 
         <HUDArea>
           <TimeControls>
@@ -236,9 +236,9 @@ class App extends Component {
             <Button onClick={() => this.setState({modalIsOpen: true, modal: Skills})}>{t('skills_button')}</Button>
             <Button onClick={() => this.setState({modalIsOpen: true, modal: School})}>{t('school_button')}</Button>
           </HUD>
-          {this.state.paused || this.state.help ? <OnboardingHint className='hud-onboarding-hint'>
+          {this.state.paused || this.state.help ? <HelpHint className='hud-help-hint'>
             <div dangerouslySetInnerHTML={{__html: t('hint_hud')}}></div>
-          </OnboardingHint>: ''}
+          </HelpHint>: ''}
         </HUDArea>
 
         <NotificationHistoryButton onClick={() => this.setState({modalIsOpen: true, modal: NotificationHistory})}>
@@ -247,9 +247,9 @@ class App extends Component {
 
         <WorkArea>
           <Work />
-          {this.state.paused || this.state.help ? <OnboardingHint className='work-onboarding-hint'>
+          {this.state.paused || this.state.help ? <HelpHint className='work-help-hint'>
             <div dangerouslySetInnerHTML={{__html: t('hint_work')}}></div>
-          </OnboardingHint> : ''}
+          </HelpHint> : ''}
         </WorkArea>
 
         <Scene />
