@@ -12,7 +12,7 @@ import config from 'config';
 const topNSkills = 9;
 const topNNeighbors = 6;
 const visitedColor = 0x51728c;
-const unfocusedColor = 0xdddddd;
+const unfocusedColor = 0xdfdfdf;
 const focusedColor = 0x0e55ef;
 const appliedColor = 0xf9ca2f;
 const neighbColor = 0x4fc6ea;
@@ -85,12 +85,16 @@ const focusedLineMat = new THREE.LineBasicMaterial({
   color: 0x44f48d,
   linewidth: 1
 });
+const visitedLineMat = new THREE.LineBasicMaterial({
+  color: 0xbbbbbb,
+  linewidth: 1
+});
 const appliedLineMat = new THREE.LineBasicMaterial({
   color: appliedColor,
   linewidth: 3
 });
 const defaultLineMat = new THREE.LineBasicMaterial({
-  color: 0xdddddd,
+  color: unfocusedColor,
   linewidth: 1
 });
 
@@ -251,13 +255,23 @@ class Graph {
     if (!player) {
       player = store.getState().player;
     }
+
+    if (this.focusedNodeId) {
+      this.edges[this.focusedNodeId][job_id].visited = true;
+    }
+
     this.focusedNodeId = job_id;
 
     // Set all nodes and edges to muted
     Object.values(this.nodes)
       .filter(n => n.mesh.visible)
       .forEach(n => {
-        n.mesh.position.setZ(0);
+
+        if (player.pastJobs.includes(n.data.id)) {
+          n.mesh.position.setZ(1);
+        } else {
+          n.mesh.position.setZ(0);
+        }
         this.resetNodeColor(n, player);
         n.anno.style.display = 'none';
       });
@@ -265,7 +279,12 @@ class Graph {
       .filter(e => e.visible)
       .forEach(e => {
         e.position.setZ(0);
-        e.material = defaultLineMat;
+        if (e.visited) {
+          e.position.setZ(1);
+          e.material = visitedLineMat;
+        } else {
+          e.material = defaultLineMat;
+        }
       });
 
     // If unemployed or student, job_id is null
@@ -276,7 +295,7 @@ class Graph {
     focusNode.mesh.visible = true;
     focusNode.anno.style.display = 'block';
     focusNode.setColor(focusedColor);
-    focusNode.mesh.position.setZ(1);
+    focusNode.mesh.position.setZ(2);
 
     // Set outward edges to visible,
     // and color neighboring nodes
@@ -323,12 +342,12 @@ class Graph {
       } else if (neighbors.includes(neighb)) {
         node.setColor(neighbColor);
       }
-      node.mesh.position.setZ(1);
+      node.mesh.position.setZ(2);
 
       let line = this.edges[job_id][neighb];
       line.visible = true;
       line.material = focusedLineMat;
-      line.position.setZ(1);
+      line.position.setZ(2);
     });
     this.onReveal(focusNode, bounds, center);
   }
