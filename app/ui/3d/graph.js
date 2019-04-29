@@ -12,7 +12,7 @@ import config from 'config';
 const topNSkills = 9;
 const topNNeighbors = 6;
 const visitedColor = 0x51728c;
-const unfocusedColor = 0xaaaaaa;
+const unfocusedColor = 0xdddddd;
 const focusedColor = 0x0e55ef;
 const appliedColor = 0xf9ca2f;
 const neighbColor = 0x4fc6ea;
@@ -90,7 +90,7 @@ const appliedLineMat = new THREE.LineBasicMaterial({
   linewidth: 3
 });
 const defaultLineMat = new THREE.LineBasicMaterial({
-  color: 0xaaaaaa,
+  color: 0xdddddd,
   linewidth: 1
 });
 
