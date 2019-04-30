@@ -46,7 +46,7 @@ const Skill = (props) => {
 
 class Skills extends Component {
   render() {
-    let skillChanges = logic.workSkillGain(this.props.job, 1);
+    let skillChanges = this.props.job.skills ? logic.workSkillGain(this.props.job, 1) : {};
     let changingSkills = Object.keys(skillChanges);
     let robotSkills = Object.keys(skills).filter((s_id) => skills[s_id].automatibility == 0);
     let automatedSkills = Object.values(this.props.robots).reduce((acc, r) => {
