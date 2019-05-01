@@ -229,7 +229,25 @@ class Graph {
           this._edges.push(edgeMesh);
         }
       });
+
+      // If there are still no edges, i.e. because
+      // it's neighbors already have topNNeighbors edges,
+      // just connect them directly
+      if (Object.keys(this.edges[id]).length == 0) {
+        j.similar.slice(0, topNNeighbors).map(k => {
+          if (!this.edges[id][k]) {
+            let m = this.nodes[k];
+            let edgeMesh = makeLine([[n.x, n.y], [m.x, m.y]]);
+            edgeMesh.visible = false;
+            this.edges[id][k] = edgeMesh;
+            this.edges[k][id] = edgeMesh;
+            this.group.add(edgeMesh);
+            this._edges.push(edgeMesh);
+          }
+        });
+      }
     });
+
 
     // All nodes are interactable
     this.interactables = Object.values(this.nodes).map(n => n.mesh);
@@ -387,4 +405,13 @@ class Graph {
 
 const nodeSize = 6;
 const graph = new Graph(jobs, nodeSize);
+
+// For exporting job-job network
+// let network = Object.keys(graph.edges).reduce((acc, id) => {
+//   let to_nodes = Object.keys(graph.edges[id]);
+//   acc[id] = to_nodes;
+//   return acc;
+// }, {});
+// console.log(JSON.stringify(network));
+
 export default graph;
