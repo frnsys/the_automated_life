@@ -7,6 +7,7 @@ import Modal from 'react-modal';
 import Skills from './skills';
 import School from './school';
 import StartMenu from './startMenu';
+import ConsentForm from './consent';
 import ReactTooltip from 'react-tooltip'
 import {GameOver, GameOverSurvey} from './gameOver';
 import {Notifications, history} from './notifs';
@@ -52,7 +53,7 @@ class App extends Component {
     super();
     this.state = {
       started: false,
-      modal: StartMenu,
+      modal: ConsentForm, //StartMenu,
       modalIsOpen: true,
       paused: true,
       help: false,

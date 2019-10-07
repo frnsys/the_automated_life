@@ -731,3 +731,11 @@ ul {
 .button.disabled:hover {
   background: '#aaa';
 }
+
+.consent-form {
+  max-height: 80vh;
+  overflow-y: scroll;
+}
+.consent-form .button {
+  margin: 1em 0;
+}
