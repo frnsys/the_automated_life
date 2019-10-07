@@ -2,13 +2,19 @@ import json
 import redis
 import config
 import sentry_sdk
+from flask import Flask
 from celery import Celery
 from celery.schedules import crontab
 from collections import defaultdict
+from datastore import db, get_summaries
 
 sentry_sdk.init(
     dsn=config.SENTRY_DSN,
 )
+
+app = Flask(__name__)
+app.config.from_object(config)
+db.init_app(app)
 
 CELERY_BROKER_URL = 'amqp://guest:guest@localhost:5672//'
 CELERY_RESULT_BACKEND = None
@@ -26,11 +32,10 @@ celery.conf.beat_schedule = CELERYBEAT_SCHEDULE
 @celery.task
 def aggregate_statistics():
     # Load summaries
-    keys = [r.decode('utf8') for r in redis.keys('fow:*:summary')]
+    with app.app_context():
+        summaries = get_summaries()
     aggs = defaultdict(lambda: defaultdict(int))
-    for k in keys:
-        res = redis.get(k)
-        data = json.loads(res)
+    for data in summaries:
         aggs['n_jobs']['sum'] += len(data['jobs'])
         aggs['n_jobs']['total'] += 1
         aggs['wins']['sum'] += int(data['success'])
@@ -47,5 +52,4 @@ def aggregate_statistics():
 
     # Compute aggregate stats
     res = redis.set('fow:aggregate', json.dumps(aggs))
-    redis.save()
     return aggs

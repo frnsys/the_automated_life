@@ -1,8 +1,11 @@
 import json
 import redis
 import config
+import hashlib
+import geocoder
+from datastore import db, get_meta, save_meta, append_log, get_logs, save_summary, get_summary
 from collections import defaultdict
-from flask import Flask, request, jsonify, render_template, abort
+from flask import Flask, request, jsonify, render_template, abort, session
 from sentry_sdk.integrations.flask import FlaskIntegration
 import sentry_sdk
 
@@ -12,7 +15,12 @@ sentry_sdk.init(
 )
 
 app = Flask(__name__)
+app.config.from_object(config)
+db.init_app(app)
 redis = redis.Redis(**config.REDIS)
+with app.app_context():
+    db.configure_mappers()
+    db.create_all()
 
 
 @app.route('/')
@@ -27,14 +35,16 @@ def log():
     data = request.get_json()
     id = data['id']
     del data['id']
-    data['ip'] = request.environ['REMOTE_ADDR']
-    redis.lpush('fow:{}'.format(id), json.dumps(data))
-    redis.save()
+    if not get_meta(id):
+        ip = request.environ['REMOTE_ADDR']
+        loc = geocoder.ipinfo(ip)
+        hash = hashlib.sha256(ip.encode('utf8')).hexdigest()
+        save_meta(id, hash, loc)
+    append_log(id, data)
 
     # Compute summary statistics
     if data['type'] == 'gameOver':
-        log = [json.loads(r.decode('utf8')) for r in redis.lrange('fow:{}'.format(id), 0, -1)][::-1]
-
+        log = get_logs(id)
         logs = defaultdict(list)
         events = []
         for e in log:
@@ -58,8 +68,7 @@ def log():
             'end': logs['month'][-1],
             'result': logs['gameEnd'][-1] if logs['gameEnd'] else None
         }
-        redis.set('fow:{}:summary'.format(id), json.dumps(summary))
-        redis.save()
+        save_summary(id, summary)
 
     return jsonify(success=True)
 
@@ -69,11 +78,9 @@ def summary(id):
     """Get gameplay summary for player and
     aggregate stats across all players"""
     # Get cached summary, if available
-    res = redis.get('fow:{}:summary'.format(id))
-    if res is None:
+    summary = get_summary(id)
+    if summary is None:
         abort(404)
-
-    summary = json.loads(res)
 
     res = redis.get('fow:aggregate')
     agg = json.loads(res)
