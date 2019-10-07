@@ -83,6 +83,10 @@ scenario_flags = [
     [False, False, True],
 ]
 
+month_schedule = {row.Skill: random.randint(4, 8) for _, row in automation_schedule.iterrows()}
+deepening_schedule = {row.Skill: random.randint(2*12, 25*12) for _, row in automation_schedule.iterrows()}
+efficiencies = {row.Skill: random.random() for _, row in automation_schedule.iterrows()}
+news = {row.Skill: make_news(row.Skill) for _, row in automation_schedule.iterrows()}
 
 scenarios = []
 print('n skills', len(automation_schedule))
@@ -90,19 +94,18 @@ for i, flags in enumerate(scenario_flags):
     schedule = []
     month = start_month
     for j, row in automation_schedule.iterrows():
-        skill = row.Skill
-        if skill in omitted_skills: continue
-        skill = renamed_skills.get(skill, skill)
-        # TODO do we still want random scenario params?
-        month += random.randint(4,8)
+        sk = row.Skill
+        if sk in omitted_skills: continue
+        skill = renamed_skills.get(sk, sk)
+        month += month_schedule[sk]
         schedule.append({
             'id': j,
             'months': month,
             'name': bot_name(),
             'skills': [skills_idx[skill]],
-            'deepeningCountdown': random.randint(2*12, 25*12),
-            'efficiency': random.random(),
-            'news': make_news(skill)
+            'deepeningCountdown': deepening_schedule[sk],
+            'efficiency': efficiencies[sk],
+            'news': news[sk]
         })
 
     scenario = {
