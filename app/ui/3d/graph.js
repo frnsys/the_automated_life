@@ -16,6 +16,7 @@ const unfocusedColor = 0xdfdfdf;
 const focusedColor = 0x0e55ef;
 const appliedColor = 0xf9ca2f;
 const neighbColor = 0x4fc6ea;
+const distNeighbColor = 0xd7e4e8;
 
 const tooltip = (job) => {
   let {player, robots} = store.getState();
@@ -290,7 +291,6 @@ class Graph {
     Object.values(this.nodes)
       .filter(n => n.mesh.visible)
       .forEach(n => {
-
         if (player.pastJobs.includes(n.data.id)) {
           n.mesh.position.setZ(1);
         } else {
@@ -314,15 +314,9 @@ class Graph {
     // If unemployed or student, job_id is null
     if (job_id === null) return;
 
-    // Set focus node color
-    let focusNode = this.nodes[job_id];
-    focusNode.mesh.visible = true;
-    focusNode.anno.style.display = 'block';
-    focusNode.setColor(focusedColor);
-    focusNode.mesh.position.setZ(2);
-
     // Set outward edges to visible,
     // and color neighboring nodes
+    let focusNode = this.nodes[job_id];
     let bounds = {
       left: focusNode.x,
       top: focusNode.y,
@@ -330,16 +324,32 @@ class Graph {
       bottom: focusNode.y
     };
 
+    let {scenario} = store.getState();
+    let hops = 1;
+    if (scenario.flags.TWO_HOP_NEIGHBORS) {
+      hops = 2;
+    }
+    bounds = this.revealNeighbors(job_id, player, bounds, hops);
+
+    // Set focus node color
+    focusNode.mesh.visible = true;
+    focusNode.anno.style.display = 'block';
+    focusNode.setColor(focusedColor);
+    focusNode.mesh.position.setZ(2);
+
+    this.onReveal(focusNode, bounds, center);
+  }
+
+  revealNeighbors(job_id, player, bounds, hops, immediateNeighbs, focusId) {
     let neighbors = Object.keys(this.edges[job_id]);
     let toReveal = [...neighbors];
 
-    // TESTING revealing more than immediate neighbors
-    // toReveal = toReveal.map((id) => {
-    //   return Object.keys(this.edges[id]);
-    // }).reduce((acc, r) => {
-    //   return acc.concat(r);
-    // }, []).concat(toReveal);
-    // toReveal = [...new Set(toReveal)];
+    if (!immediateNeighbs) {
+      immediateNeighbs = toReveal;
+    }
+    if (!focusId) {
+      focusId = job_id;
+    }
 
     toReveal.map(neighb => {
       let node = this.nodes[neighb];
@@ -364,16 +374,39 @@ class Graph {
       if (player.pastJobs.includes(node.data.id)) {
         node.setColor(visitedColor);
       } else if (neighbors.includes(neighb)) {
-        node.setColor(neighbColor);
+        if (immediateNeighbs.includes(neighb)) {
+          node.setColor(neighbColor);
+        } else {
+          node.setColor(distNeighbColor);
+        }
       }
       node.mesh.position.setZ(2);
 
       let line = this.edges[job_id][neighb];
       line.visible = true;
-      line.material = focusedLineMat;
+      if (immediateNeighbs.includes(neighb) || neighb == focusId) {
+        line.material = focusedLineMat;
+      } else {
+        line.material = defaultLineMat;
+      }
       line.position.setZ(2);
     });
-    this.onReveal(focusNode, bounds, center);
+
+    hops--;
+    if (hops == 0) {
+      return bounds;
+    } else {
+      let boundses = neighbors.map((job_id) => {
+        return this.revealNeighbors(job_id, player, bounds, hops, immediateNeighbs, focusId);
+      });
+      boundses.forEach((b) => {
+        bounds.left = Math.min(b.left, bounds.left);
+        bounds.bottom = Math.min(b.bottom, bounds.bottom);
+        bounds.right = Math.max(b.right, bounds.right);
+        bounds.top = Math.max(b.top, bounds.top);
+      });
+      return bounds;
+    }
   }
 
   resetNodeColor(node, player) {

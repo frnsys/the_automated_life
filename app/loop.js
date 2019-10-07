@@ -10,6 +10,9 @@ import skills from 'data/skills.json'
 window.speedup = 1;
 window.paused = true;
 
+// For collecting wage change data
+// window.wageChanges = {};
+
 // Game loop
 let lastTime = 0;
 function loop(now) {
@@ -116,6 +119,14 @@ function loop(now) {
 
       // Check if new month
       if (time.newMonth) {
+        // For gathering wage change data
+        // Object.keys(jobs).forEach((id) => {
+        //   if (!(id in window.wageChanges)) {
+        //     window.wageChanges[id] = [];
+        //   }
+        //   window.wageChanges[id].push(jobs[id].wageAfterTaxes);
+        // });
+
         store.dispatch({
           type: 'player:income'
         });
@@ -191,6 +202,7 @@ function loop(now) {
 
         // Check game end state
         if (player.startAge + time.years >= config.retirementAge) {
+          // window.location.href = 'data:plain/text,' + JSON.stringify(wageChanges);
           if (player.cash >= config.retirementSavingsMin) {
             gameOver({icon: '🏖️', text: t('game_over_win')});
             log('gameEnd', {success: true, cash: player.cash, time: logTime});

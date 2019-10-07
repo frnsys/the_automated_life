@@ -17,5 +17,6 @@ function reducer(state={}, action) {
 
 let initialState = math.pickRandom(scenarios);
 log('scenario', initialState.name);
+console.log(initialState.flags);
 
 export default { reducer, initialState };
