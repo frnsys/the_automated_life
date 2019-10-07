@@ -105,6 +105,19 @@ for i, row in skill_groups_df.iterrows():
         skill_groups[group_id]['skills'].append(skill_id)
 skill_groups = {id: g for id, g in skill_groups.items() if g['skills']}
 
+satisfactions = defaultdict(list)
+for i, typ in enumerate([
+    'Achievement',
+    'Independence',
+    'Recognition',
+    'Relationships',
+    'Support',
+    'Working_Conditions']):
+    sts = pd.read_csv('../data/src/satisfaction/{}.csv'.format(typ))
+    for id in sts['O*NET-SOC Code']:
+        id = id[:-3]
+        satisfactions[id].append(i)
+
 n_jobs = len(df)
 job_onet_id_to_id = {}
 for i, r in tqdm(df.iterrows()):
@@ -140,7 +153,8 @@ for i, r in tqdm(df.iterrows()):
         'skills': job_skills,
         'pos': job_network_layout[id],
         'industries': inds,
-        'education': ed_levels
+        'education': ed_levels,
+        'satisfaction': list(set(satisfactions[id]))
     }
     for ind in inds:
         industries_jobs[ind].append(idx)

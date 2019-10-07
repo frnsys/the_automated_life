@@ -63,6 +63,8 @@ ul {
   margin: 0 0 0.5em 0;
   font-weight: normal;
   font-size: 0.8em;
+  display: flex;
+  justify-content: space-between;
 }
 .job-industries {
   font-size: 0.65em;
@@ -72,6 +74,11 @@ ul {
   background: #ddd;
   display: inline-block;
   margin-bottom: 1px;
+}
+.job-satisfaction {
+  padding: 0 2px;
+  line-height: 1.5;
+  font-size: 0.75em;
 }
 .job-skills {
   margin-top: 0.5em;

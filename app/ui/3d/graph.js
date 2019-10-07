@@ -18,8 +18,24 @@ const appliedColor = 0xf9ca2f;
 const neighbColor = 0x4fc6ea;
 const distNeighbColor = 0xd7e4e8;
 
+const satisfactions = [
+  'Achievement',
+  'Independence',
+  'Recognition',
+  'Relationships',
+  'Support',
+  'Working_Conditions'
+];
+const satisfactionColors = [
+  '#33dd60',
+  '#aae03e',
+  '#d0e041',
+  '#e09e41',
+  '#ed4731'
+];
+
 const tooltip = (job) => {
-  let {player, robots} = store.getState();
+  let {scenario, player, robots} = store.getState();
 
   let automatedSkills = Object.values(robots).reduce((acc, r) => {
     return acc.concat(r.skills);
@@ -47,13 +63,36 @@ const tooltip = (job) => {
     jobAnno = ` (${t('current_job')})`;
   }
 
+  let satisfaction = job.satisfaction.length/satisfactions.length;
+  let satisfactionLevel = '';
+  let satisfactionColor = '';
+  if (satisfaction > 0.8) {
+    satisfactionLevel = 'Fulfilling';
+    satisfactionColor = satisfactionColors[0];
+  } else if (satisfaction > 0.6) {
+    satisfactionLevel = 'Rewarding';
+    satisfactionColor = satisfactionColors[1];
+  } else if (satisfaction > 0.4) {
+    satisfactionLevel = 'Satisfying';
+    satisfactionColor = satisfactionColors[2];
+  } else if (satisfaction > 0.2) {
+    satisfactionLevel = 'Demoralizing';
+    satisfactionColor = satisfactionColors[3];
+  } else if (satisfaction > 0) {
+    satisfactionLevel = 'Soul-Crushing';
+    satisfactionColor = satisfactionColors[4];
+  }
+
   return `
     <div class="job-tooltip">
       ${applied ? `<div class="job-applied">${t('application_out')}</div>` : ''}
       <h3>${automated >= 0.5 ? '🤖 ' : ''}${job.name}${jobAnno}</h3>
       <h5>
-        $${Math.round(job.wageAfterTaxes/12).toLocaleString()}/${t('month_unit')}
-        ${wageChange != 0 ? `<span style="font-size:0.8em;opacity:0.7;"><span style="color:${wageChange < 0 ? '#ff0000' : '#39e567'};">${wageChange < 0 ? '-' : '+'}$${Math.abs(wageChange).toLocaleString()}</span> due to automation</span>` : ''}
+        <div>
+          $${Math.round(job.wageAfterTaxes/12).toLocaleString()}/${t('month_unit')}
+          ${wageChange != 0 ? `<span style="font-size:0.8em;opacity:0.7;"><span style="color:${wageChange < 0 ? '#ff0000' : '#39e567'};">${wageChange < 0 ? '-' : '+'}$${Math.abs(wageChange).toLocaleString()}</span> due to automation</span>` : ''}
+        </div>
+        ${scenario.flags.JOB_SATISFACTION ? `<div class="job-satisfaction" style='background:${satisfactionColor};'>${satisfactionLevel}</div>` : ''}
       </h5>
       <div class="job-industries">${job.industries.map((ind) => `<div>${config.industryIcons[ind]} ${ind.replace(' (Except Public Administration)', '')}</div>`).join(' ')}</div>
       <div class="job-status">
