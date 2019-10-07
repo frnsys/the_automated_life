@@ -5,10 +5,20 @@ import {Provider} from 'react-redux';
 import {loadLanguage} from './app/i18n';
 import store from 'store';
 
+function checkGDPR(cb) {
+  fetch(`/gdpr`)
+    .then(response => response.json())
+    .then(json => {
+      cb(json.success);
+    });
+}
+
 loadLanguage(() => {
-  render(
-    <Provider store={store}>
-      <App />
-    </Provider>,
-    document.getElementById('main'));
+  checkGDPR((gdpr) => {
+    render(
+      <Provider store={store}>
+        <App gdpr={gdpr} />
+      </Provider>,
+      document.getElementById('main'));
+  });
 });

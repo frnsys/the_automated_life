@@ -49,11 +49,11 @@ const NotificationHistory = () => {
 };
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       started: false,
-      modal: ConsentForm, //StartMenu,
+      modal: props.gdpr ? ConsentForm : StartMenu,
       modalIsOpen: true,
       paused: true,
       help: false,

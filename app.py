@@ -28,6 +28,11 @@ def game():
     """Render the game page"""
     return render_template('index.html')
 
+@app.route('/gdpr')
+def gdpr():
+    ip = request.environ['REMOTE_ADDR']
+    loc = geocoder.ipinfo(ip)
+    return jsonify(gdpr=loc.country in config.EU_COUNTRIES)
 
 @app.route('/log', methods=['POST'])
 def log():
