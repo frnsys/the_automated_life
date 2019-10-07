@@ -3,7 +3,7 @@ import string
 import random
 import pandas as pd
 
-nations = pd.read_csv('data/src/nations.csv')
+nations = pd.read_csv('../data/src/nations.csv')
 nation_adjs = []
 for i, r in nations.iterrows():
     nation = r['Country name']
@@ -53,32 +53,47 @@ def bot_name():
         random.choice('aeiouy'),
         ''.join(random.choice(string.digits) for _ in range(4)))
 
-automation_schedule = pd.read_csv('data/src/orderedOnetSkillsByComputerization.csv')
+automation_schedule = pd.read_csv('../data/src/orderedOnetSkillsByComputerization.csv')
 automation_schedule = automation_schedule.iloc[::-1]
 
 # Limit skills we automate to only those w/ positive correlation
 automation_schedule = automation_schedule[automation_schedule.correlation > 0]
 
-skill_edits = pd.read_csv('data/src/Clean Skills - orderedOnetSkillsByComputerization.csv')
+skill_edits = pd.read_csv('../data/src/Clean Skills - orderedOnetSkillsByComputerization.csv')
 omitted_skills = skill_edits[skill_edits['Omit?'] == 1.0]['Skill'].tolist()
 renamed_skills = skill_edits[skill_edits['Omit?'] != 1.0][['Skill', 'Short name']].dropna()
 renamed_skills = dict(zip(renamed_skills['Skill'], renamed_skills['Short name']))
 
-skills = json.load(open('data/skills.json'))
+skills = json.load(open('../data/skills.json'))
 skills_idx = {s['name']: s['id'] for s in skills.values()}
 
 game_months = (65-18)*12
 start_month = 10
-n_scenarios = 2
+
+# Each is binary
+experimental_conditions = [
+    'TWO_HOP_NEIGHBORS',
+    'JOB_SATISFACTION',
+    'SCHOOL_SUBSIDIES',
+]
+scenario_flags = [
+    [False, False, False],
+    [True, False, False],
+    [False, True, False],
+    [False, False, True],
+]
+
+
 scenarios = []
 print('n skills', len(automation_schedule))
-for i in range(n_scenarios):
+for i, flags in enumerate(scenario_flags):
     schedule = []
     month = start_month
     for j, row in automation_schedule.iterrows():
         skill = row.Skill
         if skill in omitted_skills: continue
         skill = renamed_skills.get(skill, skill)
+        # TODO do we still want random scenario params?
         month += random.randint(4,8)
         schedule.append({
             'id': j,
@@ -92,6 +107,7 @@ for i in range(n_scenarios):
 
     scenario = {
         'name': 'Scenario {}'.format(i),
+        'flags': {experimental_conditions[j]: f for j, f in enumerate(flags)},
         'schedule': schedule
     }
     scenarios.append(scenario)
@@ -102,7 +118,7 @@ for i in range(n_scenarios):
     print('Game months:', game_months)
     print('Schedule:', len(schedule))
 
-with open('data/src/scenarios.json', 'w') as f:
+with open('../data/src/scenarios.json', 'w') as f:
     json.dump(scenarios, f, sort_keys=True, indent=2)
-with open('data/scenarios.json', 'w') as f:
+with open('../data/scenarios.json', 'w') as f:
     json.dump(scenarios, f, sort_keys=True, indent=2)

@@ -16,13 +16,13 @@ MIN_SKILL_WEIGHT = 1.5
 # in the job network (e.g. to reduce overlaps)
 NETWORK_SCALE = 1.8
 
-omit = [l.strip() for l in open('data/src/omitSkills.txt', 'r').readlines()]
-skill_edits = pd.read_csv('data/src/Clean Skills - orderedOnetSkillsByComputerization.csv')
+omit = [l.strip() for l in open('../data/src/omitSkills.txt', 'r').readlines()]
+skill_edits = pd.read_csv('../data/src/Clean Skills - orderedOnetSkillsByComputerization.csv')
 omitted_skills = skill_edits[skill_edits['Omit?'] == 1.0]['Skill'].tolist() + omit
 renamed_skills = skill_edits[skill_edits['Omit?'] != 1.0][['Skill', 'Short name']].dropna()
 renamed_skills = dict(zip(renamed_skills['Skill'], renamed_skills['Short name']))
 
-data = pd.read_csv('data/src/job_industries.csv')
+data = pd.read_csv('../data/src/job_industries.csv')
 industries = {}
 for i, r in data.iterrows():
     inds = r['cleanedIndustry']
@@ -35,7 +35,7 @@ for i, r in data.iterrows():
 
 # Job node positions for network layout
 job_network_layout = {}
-data = json.load(open('data/src/jobNetwork.json'))
+data = json.load(open('../data/src/jobNetwork.json'))
 for job in data['nodes']:
     job_network_layout[job['id']] = {
         'x': job['x'] * NETWORK_SCALE,
@@ -55,7 +55,7 @@ for pt in job_network_layout.values():
 
 # Education levels
 education_levels = defaultdict(dict)
-df = pd.read_csv('data/src/Education, Training, and Experience.tsv', delimiter='\t')
+df = pd.read_csv('../data/src/Education, Training, and Experience.tsv', delimiter='\t')
 df = df.loc[df['Element Name'] =='Required Level of Education']
 for i, r in df.iterrows():
     id = r['O*NET-SOC Code']
@@ -73,20 +73,20 @@ for key, levels in education_levels.items():
     assert math.isclose(sum(levels_list), 100, abs_tol=1e-1)
 
 # Job mean wages
-wages = pd.read_csv('data/src/job_wages.csv')
+wages = pd.read_csv('../data/src/job_wages.csv')
 wages = {r[' Job Title']: r['A_MEAN'] for _, r in wages.iterrows()}
 
 # Industry->jobs lookup
 industries_jobs = defaultdict(list)
 
 # Job-skill matrix
-df = pd.read_csv('data/src/jobSkillRcaMat.csv', delimiter='\t')
+df = pd.read_csv('../data/src/jobSkillRcaMat.csv', delimiter='\t')
 skills = {i: name.strip() for i, name in enumerate(df.columns.tolist()[2:])}
 skills_inv = {name: i for i, name in skills.items()}
 omitted_skills = [skills_inv[name] for name in omitted_skills]
 
 # Skill groupings
-skill_groups_df = pd.read_csv('data/src/onet_content_model_reference.tsv', delimiter='\t')
+skill_groups_df = pd.read_csv('../data/src/onet_content_model_reference.tsv', delimiter='\t')
 skill_groups = {}
 for i, row in skill_groups_df.iterrows():
     id = row['Element ID'].split('.')
@@ -156,7 +156,7 @@ for ind, job_ids in industries_jobs.items():
         jobs_industries[id] = ind
 
 # Skill-skill similarity
-skill_skill = pd.read_csv('data/src/skillSkill.csv', delimiter='\t')
+skill_skill = pd.read_csv('../data/src/skillSkill.csv', delimiter='\t')
 skill_sim = defaultdict(dict)
 for i, r in tqdm(skill_skill.iterrows()):
     a = skills_inv[r['Skill 1']]
@@ -165,7 +165,7 @@ for i, r in tqdm(skill_skill.iterrows()):
     skill_sim[keys[0]][keys[1]] = r['Weight']
 
 # Job-job similarity (for job network)
-df = pd.read_csv('data/src/jobJobSkillSims.tsv', delimiter='\t')
+df = pd.read_csv('../data/src/jobJobSkillSims.tsv', delimiter='\t')
 job_job = np.zeros((n_jobs, n_jobs))
 for i, r in tqdm(df.iterrows()):
     try:
@@ -193,7 +193,7 @@ for idx, job in jobs.items():
     job['similar'] = [int(id) for id in similar]
 
 # Skill-automation exposure
-df = pd.read_csv('data/src/orderedOnetSkillsByComputerization.csv')
+df = pd.read_csv('../data/src/orderedOnetSkillsByComputerization.csv')
 automatibility = {}
 for row in tqdm(df.itertuples()):
     i = skills_inv[row.Skill]
@@ -235,9 +235,9 @@ if not nx.is_connected(G):
     raise Exception('Graph should be fully connected. Try increasing min_neighbors')
 
 # Education level names
-education_ref = json.load(open('data/src/education.json'))
+education_ref = json.load(open('../data/src/education.json'))
 education = []
-df = pd.read_csv('data/src/Education, Training, and Experience Categories.csv')
+df = pd.read_csv('../data/src/Education, Training, and Experience Categories.csv')
 df = df.loc[df['Element Name'] =='Required Level of Education']
 for i, r in df.iterrows():
     # Collapse 3-6 into one cateogry
@@ -269,7 +269,7 @@ program_years = {
     '2 years': 2
 }
 secondary_programs = defaultdict(list)
-programs_df = pd.read_csv('data/src/job_lengths.csv')
+programs_df = pd.read_csv('../data/src/job_lengths.csv')
 for i, r in programs_df.iterrows():
     job_id = job_onet_id_to_id.get(r.job)
     if job_id is None:
@@ -286,7 +286,7 @@ for i, r in programs_df.iterrows():
 
 
 # Shorter job names
-names = pd.read_csv('data/src/job_names.csv')
+names = pd.read_csv('../data/src/job_names.csv')
 for j in jobs.values():
     short_name = names[names.name == j['name']].short_name.values[0]
     j['name'] = short_name.title()
@@ -304,23 +304,23 @@ z = max(j['automationRisk'] for j in jobs.values())
 for j in jobs.values():
     j['automationRisk'] /= z
 
-with open('data/education.json', 'w') as f:
+with open('../data/education.json', 'w') as f:
     json.dump(education, f)
 
-with open('data/programs.json', 'w') as f:
+with open('../data/programs.json', 'w') as f:
     json.dump(secondary_programs, f)
 
-with open('data/jobs.json', 'w') as f:
+with open('../data/jobs.json', 'w') as f:
     json.dump(jobs, f)
 
-with open('data/skills.json', 'w') as f:
+with open('../data/skills.json', 'w') as f:
     json.dump(skills, f)
 
-with open('data/skillGroups.json', 'w') as f:
+with open('../data/skillGroups.json', 'w') as f:
     json.dump(list(skill_groups.values()), f)
 
-with open('data/skillSims.json', 'w') as f:
+with open('../data/skillSims.json', 'w') as f:
     json.dump(skill_sim, f)
 
-with open('data/industries.json', 'w') as f:
+with open('../data/industries.json', 'w') as f:
     json.dump(industries_jobs, f)
