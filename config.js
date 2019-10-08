@@ -79,7 +79,11 @@ export default {
 
   enableLogging: window.location.hostname !== 'localhost',
   debug: params.includes('debug'),
+  forceGdpr: params.includes('gdpr'),
   perfectApplicant: params.includes('perfect'),
   startHighSchool: params.includes('highschool'),
   testGameOver: params.includes('gameover'),
+  schoolSubsidies: params.includes('subsidy'),
+  twoHops: params.includes('twoHops'),
+  jobSatisfaction: params.includes('jobSatisfaction')
 };
