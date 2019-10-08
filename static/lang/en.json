@@ -98,6 +98,8 @@
     "education_title": "Education",
     "cost_in_wages": "{months} months' wages",
     "school_cost": "Cost, with living expenses",
+    "after_subsidy": "Cost after subsidy",
+    "subsidy_note": "You are given an education subsidy of ${subsidy}/year.",
     "school_postsecondary_note": "Post-secondary degrees won't open up new parts of the job graph, but they will make it easier to get hired to more advanced jobs.",
     "start_welcome": "Welcome to The Automated World!",
     "start_intro": "This game is an exploration of job mobility against the proliferation of automation. Your starting job has a high risk of automation. Try to end up in a job that is relatively safe from automation.",

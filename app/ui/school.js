@@ -31,7 +31,7 @@ class IndustryPrograms extends Component {
       <ul style={{display: this.state.open ? 'block' : 'none'}}>
         {programs[ind].map((p, i) => {
           return <li key={i} onClick={() => this.props.onClick(p)}>
-            <div className='program' style={{background: this.props.selected ? '#7efc82' : 'none'}}>
+            <div className='program' style={{background: this.props.selected == p ? '#7efc82' : 'none'}}>
               <h5>{toTitleCase(jobs[p.job.toString()].name)} <span className='muted'>{t('years_duration', {years: p.years})}</span></h5>
               <span className='program-name'>{t('study_program', {name: p.name})}</span>
             </div>
@@ -81,9 +81,15 @@ class School extends Component {
   }
 
   render() {
+    let {scenario} = store.getState();
     let secondary = false;
 		let alreadyEnrolled = this.props.player.job.name == 'Student';
 		let fullyEducated = !(this.props.player.education < education.length - 1);
+
+    let subsidy = 0;
+    if (scenario.flags.SCHOOL_SUBSIDIES || config.schoolSubsidies) {
+      subsidy = config.annualSubsidy;
+    }
 
 		let body = '';
 		if (alreadyEnrolled) {
@@ -113,11 +119,13 @@ class School extends Component {
 
 			let loanInfo = '';
       let totalCost = 0;
+      let totalCostWithSubsidy = 0;
       let needsLoan = false;
       if (!secondary || this.state.selectedProgram) {
         let years = secondary ? this.state.selectedProgram.years : nextLevel.years;
         totalCost = (years * 12 * config.monthlyExpenses) + (nextLevel.cost * years);
-        needsLoan = totalCost > this.props.player.cash;
+        totalCostWithSubsidy = Math.max(0, totalCost - (years * subsidy));
+        needsLoan = totalCostWithSubsidy > 0 && totalCostWithSubsidy > this.props.player.cash;
         if (needsLoan) {
           loanInfo = <div>
             <div className='loan-warning'>{t('loan_warning')}:</div>
@@ -134,6 +142,9 @@ class School extends Component {
       let totalCostWageMonths = this.props.player.job !== 'Unemployed' ? ` (${t('cost_in_wages', {
         months: Math.ceil(totalCost/(this.props.player.job.wageAfterTaxes/12))
       })})` : '';
+      let totalCostWithSubsidyWageMonths = this.props.player.job !== 'Unemployed' ? ` (${t('cost_in_wages', {
+        months: Math.ceil(totalCostWithSubsidy/(this.props.player.job.wageAfterTaxes/12))
+      })})` : '';
 			body = (
 				<div>
           <div className='item-box'>
@@ -144,9 +155,14 @@ class School extends Component {
             {programsInfo}
           </div>
           {this.props.player.education >= 2 ? <p>{t('school_postsecondary_note')}</p> : ''}
+
+          {subsidy ? <div className="item-box">
+              <div>{t('subsidy_note', {subsidy: config.annualSubsidy.toLocaleString()})}</div>
+              <div><b>{t('after_subsidy')}:</b> ${totalCostWithSubsidy.toLocaleString()}{totalCostWithSubsidyWageMonths}</div></div> : ''}
+
 					{loanInfo}
           {(!secondary || this.state.selectedProgram) ?
-            <div className='button' onClick={() => this.enrollSchool(needsLoan, totalCost)}>{t('enroll_button')}</div> : ''}
+            <div className='button' onClick={() => this.enrollSchool(needsLoan, totalCostWithSubsidy)}>{t('enroll_button')}</div> : ''}
 				</div>
 			);
 		}
