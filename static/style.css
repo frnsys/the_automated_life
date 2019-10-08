@@ -280,8 +280,15 @@ ul {
   font-size: 0.9em;
 }
 
+.tutorial {
+  max-height: 80vh;
+  overflow-y: scroll;
+}
 .tutorial h2 {
   margin: 0;
+}
+.tutorial .button {
+  margin: 1em 0;
 }
 .game-goal {
   background: #fc4040;
