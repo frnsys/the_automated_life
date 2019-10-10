@@ -35,7 +35,7 @@ const satisfactionColors = [
 ];
 
 const tooltip = (job) => {
-  let {scenario, player, robots} = store.getState();
+  let {player, robots} = store.getState();
 
   let automatedSkills = Object.values(robots).reduce((acc, r) => {
     return acc.concat(r.skills);
@@ -92,7 +92,7 @@ const tooltip = (job) => {
           $${Math.round(job.wageAfterTaxes/12).toLocaleString()}/${t('month_unit')}
           ${wageChange != 0 ? `<span style="font-size:0.8em;opacity:0.7;"><span style="color:${wageChange < 0 ? '#ff0000' : '#39e567'};">${wageChange < 0 ? '-' : '+'}$${Math.abs(wageChange).toLocaleString()}</span> due to automation</span>` : ''}
         </div>
-        ${scenario.flags.JOB_SATISFACTION || config.jobSatisfaction ? `<div class="job-satisfaction" style='background:${satisfactionColor};'>${satisfactionLevel}</div>` : ''}
+        ${config.jobSatisfaction ? `<div class="job-satisfaction" style='background:${satisfactionColor};'>${satisfactionLevel}</div>` : ''}
       </h5>
       <div class="job-industries">${job.industries.map((ind) => `<div>${config.industryIcons[ind]} ${ind.replace(' (Except Public Administration)', '')}</div>`).join(' ')}</div>
       <div class="job-status">
@@ -363,9 +363,8 @@ class Graph {
       bottom: focusNode.y
     };
 
-    let {scenario} = store.getState();
     let hops = 1;
-    if (scenario.flags.TWO_HOP_NEIGHBORS || config.twoHops) {
+    if (config.twoHops) {
       hops = 2;
     }
     bounds = this.revealNeighbors(job_id, player, bounds, hops);

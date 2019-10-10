@@ -81,13 +81,12 @@ class School extends Component {
   }
 
   render() {
-    let {scenario} = store.getState();
     let secondary = false;
 		let alreadyEnrolled = this.props.player.job.name == 'Student';
 		let fullyEducated = !(this.props.player.education < education.length - 1);
 
     let subsidyPercent = 0;
-    if (scenario.flags.SCHOOL_SUBSIDIES || config.schoolSubsidies) {
+    if (config.schoolSubsidies) {
       subsidyPercent = config.subsidyPercent;
     }
 
