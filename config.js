@@ -22,7 +22,7 @@ export default {
     interestRate: 0.058,
     years: 10
   },
-  annualSubsidy: 10000,
+  subsidyPercent: 0.5,
 
   industryIcons: {
     'Professional, Scientific, and Technical Services': '📝',

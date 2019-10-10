@@ -753,3 +753,13 @@ ul {
 .consent-form .button {
   margin: 1em 0;
 }
+
+.item-box-subsidy {
+  background: #111111;
+  color: #fff;
+  border: 1px solid #000;
+}
+.item-box-subsidy > div:first-child {
+  font-size: 0.85em;
+  margin-bottom: 0.25em;
+}

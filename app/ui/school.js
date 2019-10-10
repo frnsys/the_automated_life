@@ -86,9 +86,9 @@ class School extends Component {
 		let alreadyEnrolled = this.props.player.job.name == 'Student';
 		let fullyEducated = !(this.props.player.education < education.length - 1);
 
-    let subsidy = 0;
+    let subsidyPercent = 0;
     if (scenario.flags.SCHOOL_SUBSIDIES || config.schoolSubsidies) {
-      subsidy = config.annualSubsidy;
+      subsidyPercent = config.subsidyPercent;
     }
 
 		let body = '';
@@ -124,7 +124,7 @@ class School extends Component {
       if (!secondary || this.state.selectedProgram) {
         let years = secondary ? this.state.selectedProgram.years : nextLevel.years;
         totalCost = (years * 12 * config.monthlyExpenses) + (nextLevel.cost * years);
-        totalCostWithSubsidy = Math.max(0, totalCost - (years * subsidy));
+        totalCostWithSubsidy = (1 - subsidyPercent) * totalCost;
         needsLoan = totalCostWithSubsidy > 0 && totalCostWithSubsidy > this.props.player.cash;
         if (needsLoan) {
           loanInfo = <div>
@@ -156,8 +156,8 @@ class School extends Component {
           </div>
           {this.props.player.education >= 2 ? <p>{t('school_postsecondary_note')}</p> : ''}
 
-          {subsidy ? <div className="item-box">
-              <div>{t('subsidy_note', {subsidy: config.annualSubsidy.toLocaleString()})}</div>
+          {subsidyPercent ? <div className="item-box item-box-subsidy">
+              <div>{t('subsidy_note', {subsidy: (config.subsidyPercent * 100).toFixed(0)})}</div>
               <div><b>{t('after_subsidy')}:</b> ${totalCostWithSubsidy.toLocaleString()}{totalCostWithSubsidyWageMonths}</div></div> : ''}
 
 					{loanInfo}
