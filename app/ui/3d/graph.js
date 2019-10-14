@@ -218,7 +218,10 @@ class Graph {
             node.setColor(appliedColor);
 
             if (this.focusedNodeId) {
-              this.edges[this.focusedNodeId][id].material = appliedLineMat;
+              let edge = this.edges[this.focusedNodeId][id];
+              if (edge) {
+                edge.material = appliedLineMat;
+              }
             }
           }
         },
@@ -459,15 +462,18 @@ class Graph {
   }
 
   resetEdgeColor(nodeId, nodeId_) {
-    let edge = this.edges[nodeId][nodeId_];
-    let neighbIds = this.focusedNodeId ? Object.keys(this.edges[this.focusedNodeId]) : [];
-    if (edge) {
-      if (edge.visited) {
-        edge.material = visitedLineMat;
-      } else if (neighbIds.includes(nodeId_.toString())) {
-        edge.material = focusedLineMat;
-      } else {
-        edge.material = defaultLineMat;
+    let outEdges = this.edges[nodeId];
+    if (outEdges) {
+      let edge = outEdges[nodeId_];
+      let neighbIds = this.focusedNodeId ? Object.keys(this.edges[this.focusedNodeId]) : [];
+      if (edge) {
+        if (edge.visited) {
+          edge.material = visitedLineMat;
+        } else if (neighbIds.includes(nodeId_.toString())) {
+          edge.material = focusedLineMat;
+        } else {
+          edge.material = defaultLineMat;
+        }
       }
     }
   }
