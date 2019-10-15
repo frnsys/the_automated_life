@@ -21,6 +21,7 @@ const unemployed = {
 
 const initialState = {
   gameOver: false,
+  gameOverWarned: false,
   startAge: 18,
   performance: 0,
   tasks: 0,
@@ -218,6 +219,14 @@ function reducer(state={}, action) {
 
     case 'player:gameOver':
       state.gameOver = true;
+      return {...state}
+
+    case 'player:gameOverWarned':
+      state.gameOverWarned = true;
+      return {...state}
+
+    case 'player:resetGameOverWarned':
+      state.gameOverWarned = false;
       return {...state}
 
     // Birthday, aka new year

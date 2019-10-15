@@ -122,7 +122,13 @@ class School extends Component {
       let needsLoan = false;
       if (!secondary || this.state.selectedProgram) {
         let years = secondary ? this.state.selectedProgram.years : nextLevel.years;
-        totalCost = (years * 12 * config.monthlyExpenses) + (nextLevel.cost * years);
+        let schoolMonths = years * 12;
+        let debtPayment = this.props.player.debt.reduce((acc, debt) => {
+          let months = Math.min(schoolMonths, debt.countdown);
+          return acc + (months * debt.monthlyPayment);
+        }, 0);
+        let monthlyExpenses = this.props.player.expenses.living + debtPayment/schoolMonths;
+        totalCost = Math.round((years * 12 * monthlyExpenses) + (nextLevel.cost * years));
         totalCostWithSubsidy = (1 - subsidyPercent) * totalCost;
         needsLoan = totalCostWithSubsidy > 0 && totalCostWithSubsidy > this.props.player.cash;
         if (needsLoan) {

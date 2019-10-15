@@ -16,6 +16,7 @@
     "retirement_savings_remaining": "${amount} more needed for retirement",
     "in_school_notice": "In School",
     "unemployed_notice": "Unemployed",
+    "game_over_warning": "You are in deep debt. If you reach ${amount} of debt you will lose the game.",
     "game_over_notice": "Game Over",
     "game_over_debt": "You accumulated too much debt.",
     "game_over_win": "You successfully survived automation and made it to retirement.",

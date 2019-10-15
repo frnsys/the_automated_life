@@ -31,13 +31,24 @@ function loop(now) {
 
     // Check game over
     if (player.gameOver) return;
-    if (player.cash <= config.gameOverBalance || config.testGameOver) {
+    if (player.cash <= config.gameOverBalance/2 && !player.gameOverWarned) {
+      store.dispatch({
+        type: 'player:gameOverWarned'
+      });
+      notify(`${t('game_over_warning',
+        {amount: (config.gameOverBalance*-1).toLocaleString()})}`,
+        '', {background: '#ea432a', color: '#fff'});
+    } else if (player.cash <= config.gameOverBalance || config.testGameOver) {
       store.dispatch({
         type: 'player:gameOver'
       });
       log('gameOver', {success: false, time: logTime});
       gameOver({icon: '💸', text: t('game_over_debt')});
       return;
+    } else if (player.cash > 0 && player.gameOverWarned) {
+      store.dispatch({
+        type: 'player:resetGameOverWarned'
+      });
     }
 
     // Prepare next scheduled robot for release
