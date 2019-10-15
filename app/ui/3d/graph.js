@@ -463,10 +463,10 @@ class Graph {
 
   resetEdgeColor(nodeId, nodeId_) {
     let outEdges = this.edges[nodeId];
-    if (outEdges) {
+    if (outEdges) { // After college, b/c of a jump there may be no edge
       let edge = outEdges[nodeId_];
       let neighbIds = this.focusedNodeId ? Object.keys(this.edges[this.focusedNodeId]) : [];
-      if (edge) {
+      if (edge) { // After college, b/c of a jump there may be no edge
         if (edge.visited) {
           edge.material = visitedLineMat;
         } else if (neighbIds.includes(nodeId_.toString())) {
