@@ -329,7 +329,8 @@ ul {
   align-items: center;
 }
 .hud .button {
-  max-width: 6em;
+  max-width: 50%;
+  font-size: 0.75em;
 }
 .hud .button.disabled {
   background: #aaa;
