@@ -212,9 +212,9 @@ function loop(now) {
         }
 
         // Check game end state
-        if (player.startAge + time.years >= config.retirementAge) {
+        if (player.startAge + time.years >= config.retirementAge || player.retireEarly) {
           // window.location.href = 'data:plain/text,' + JSON.stringify(wageChanges);
-          if (player.cash >= config.retirementSavingsMin) {
+          if (player.cash >= config.retirementSavingsMin || player.retireEarly) {
             gameOver({icon: '🏖️', text: t('game_over_win')});
             log('gameEnd', {success: true, cash: player.cash, time: logTime});
           } else {

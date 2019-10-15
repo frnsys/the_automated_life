@@ -323,6 +323,17 @@ ul {
   margin-top: 1em;
   display: flex;
 }
+.hud h6 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hud .button {
+  max-width: 6em;
+}
+.hud .button.disabled {
+  background: #aaa;
+}
 
 .hud-progress {
   position: fixed;

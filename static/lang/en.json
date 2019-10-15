@@ -12,6 +12,8 @@
     "debt_expenses": "${amount} debt",
     "monthly_expenses": "${amount}/month in expenses",
     "retirement_progress": "Retirement progress",
+    "retirement_early": "Retire early",
+    "retirement_early_tip": "Have ${amount} in savings to retire early",
     "retirement_remaining": "{years} years in until retirement",
     "retirement_savings_remaining": "${amount} more needed for retirement",
     "in_school_notice": "In School",

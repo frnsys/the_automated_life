@@ -14,6 +14,17 @@ const Stat = (props) => {
   return <div className='stat'><span data-tip={props.name}>{props.children}</span></div>
 }
 
+function earlyRetirement(age) {
+  let m = (config.retirementSavingsMin - config.minRetirementAgeSavingsMin)/(config.retirementAge - config.minRetirementAge);
+  return config.minRetirementAgeSavingsMin + (age - config.minRetirementAge) * m;
+}
+
+function canRetire(age, savings) {
+  if (age < config.minRetirementAge) return false;
+  let amount = earlyRetirement(age);
+  return savings >= amount;
+}
+
 const HUD = (props) => {
   let inSchool = props.player.job.name == 'Student';
   let unemployed = props.player.job.name == 'Unemployed';
@@ -21,6 +32,7 @@ const HUD = (props) => {
   if (props.player.expenses.debt > 0) {
     expensesDesc += `, ${t('debt_expenses', {amount: props.player.expenses.debt.toLocaleString()})}`;
   }
+  let age = props.player.startAge + props.time.years;
 
   return (
     <div className='hud'>
@@ -33,7 +45,7 @@ const HUD = (props) => {
           📅 {months[props.time.month-1]} {props.time.year}
         </Stat>
         <Stat name={t('stat_age')}>
-          🎂 {props.player.startAge + props.time.years}
+          🎂 {age}
         </Stat>
       </div>
       <div className='stat-group'>
@@ -62,7 +74,11 @@ const HUD = (props) => {
       </div>
 
       <div className='hud-progress'>
-        <h6>{t('retirement_progress')}</h6>
+        <h6>{t('retirement_progress')} <div
+            style={{visibility: age >= config.minRetirementAge ? 'visible': 'hidden'}}
+            className={`button ${canRetire(age, props.player.cash) ? '' : 'disabled'}`}
+            onClick={() => props.retireEarly()}
+            data-tip={t('retirement_early_tip', {amount: earlyRetirement(age).toLocaleString()})}>{t('retirement_early')}</div></h6>
         <div className='stat-group' data-tip={t('retirement_remaining', {years: config.retirementAge - props.player.startAge - props.time.years})}>
           <div className='stat-icon'>🏖️</div>
           <div className='bar'><div className='bar-fill' style={{width: `${Math.min(1, (props.time.years+(props.time.month/12))/(config.retirementAge-props.player.startAge))*100}%`}} /></div>
@@ -85,4 +101,12 @@ const mapStateToProps = (state, props) => {
   };
 };
 
-export default connect(mapStateToProps)(HUD);
+const mapActionsToProps = {
+	retireEarly: () => {
+		return {
+      type: 'player:retireEarly'
+		};
+	}
+}
+
+export default connect(mapStateToProps, mapActionsToProps)(HUD);

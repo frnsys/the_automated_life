@@ -22,6 +22,7 @@ const unemployed = {
 const initialState = {
   gameOver: false,
   gameOverWarned: false,
+  retireEarly: false,
   startAge: 18,
   performance: 0,
   tasks: 0,
@@ -215,6 +216,10 @@ function reducer(state={}, action) {
         startedPayments: false
       });
       state.cash += amount;
+      return {...state}
+
+    case 'player:retireEarly':
+      state.retireEarly = true;
       return {...state}
 
     case 'player:gameOver':
