@@ -4,7 +4,7 @@ import uuid from 'uuid/v4';
 window.IDENTIFIER = uuid();
 console.log(`ID:${IDENTIFIER}`);
 
-const log = (type, data) => {
+const log = (type, data, cb) => {
   if (config.enableLogging) {
     fetch('/log', {
       headers: {
@@ -18,9 +18,12 @@ const log = (type, data) => {
         ev: data,
         ts: Date.now()
       })
+    }).then(res => {
+      if (cb) cb();
     }).catch(err => { throw err });
   } else {
     console.log(`log:${type}:${JSON.stringify(data)}`);
+    if (cb) cb();
   }
 }
 

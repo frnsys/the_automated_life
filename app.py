@@ -88,7 +88,10 @@ def summary(id):
         abort(404)
 
     res = redis.get('fow:aggregate')
-    agg = json.loads(res)
+    if res:
+        agg = json.loads(res)
+    else:
+        agg = {}
     return jsonify(summary=summary, aggregate=agg)
 
 if __name__ == '__main__':

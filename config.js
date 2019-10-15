@@ -79,7 +79,7 @@ export default {
   slackPerFrame: 0.05,
   taskProb: 0.04,
 
-  enableLogging: window.location.hostname !== 'localhost',
+  enableLogging: window.location.hostname !== 'localhost' || params.includes('log'),
   debug: params.includes('debug'),
   forceGdpr: params.includes('gdpr'),
   perfectApplicant: params.includes('perfect'),

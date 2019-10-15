@@ -38,12 +38,13 @@ function loop(now) {
       notify(`${t('game_over_warning',
         {amount: (config.gameOverBalance*-1).toLocaleString()})}`,
         '', {background: '#ea432a', color: '#fff'});
-    } else if (player.cash <= config.gameOverBalance || config.testGameOver) {
+    } else if (player.cash <= config.gameOverBalance || (config.testGameOver && time.months > 1)) {
       store.dispatch({
         type: 'player:gameOver'
       });
-      log('gameOver', {success: false, time: logTime});
-      gameOver({icon: '💸', text: t('game_over_debt')});
+      log('gameOver', {success: false, time: logTime}, () => {
+        gameOver({icon: '💸', text: t('game_over_debt')});
+      });
       return;
     } else if (player.cash > 0 && player.gameOverWarned) {
       store.dispatch({
@@ -215,11 +216,13 @@ function loop(now) {
         if (player.startAge + time.years >= config.retirementAge || player.retireEarly) {
           // window.location.href = 'data:plain/text,' + JSON.stringify(wageChanges);
           if (player.cash >= config.retirementSavingsMin || player.retireEarly) {
-            gameOver({icon: '🏖️', text: t('game_over_win')});
-            log('gameEnd', {success: true, cash: player.cash, time: logTime});
+            log('gameEnd', {success: true, cash: player.cash, time: logTime}, () => {
+              gameOver({icon: '🏖️', text: t('game_over_win')});
+            });
           } else {
-            gameOver({icon: '🤖', text: t('game_over_lose')});
-            log('gameEnd', {success: false, cash: player.cash, time: logTime});
+            log('gameEnd', {success: false, cash: player.cash, time: logTime}, () => {
+              gameOver({icon: '🤖', text: t('game_over_lose')});
+            });
           }
           store.dispatch({
             type: 'player:gameOver'
