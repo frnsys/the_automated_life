@@ -9,7 +9,7 @@ export default {
   // <http://livingwage.mit.edu/states/36>
   monthlyExpenses: 2200,
 
-  retirementAge: 65,
+  retirementAge: 60,
   retirementSavingsMin: 500000,
   gameOverBalance: -100000,
   deepeningAutomationAlpha: 0.05,
