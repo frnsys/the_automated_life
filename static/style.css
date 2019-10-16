@@ -250,13 +250,14 @@ ul {
 .work .work-button {
   color: #fff;
   display: inline-block;
-  border: 1px solid #c41010;
   background: #ea432a;
   padding: 0.25em 0.5em;
   cursor: pointer;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
+  border: 1px solid rgba(0,0,0,0.2);
+  box-sizing: border-box;
 }
 
 .work .work-button&:hover {
@@ -268,9 +269,28 @@ ul {
   -moz-user-select: none;
   -webkit-user-select: none;
   position: relative;
+  transition: all 0.1s;
+}
+.work-bar.bar-success {
+  border: 2px solid #6FD874;
+}
+.work-bar.bar-failure {
+  border: 2px solid #EA432A;
 }
 .work-bar .bar-fill {
   background: linear-gradient(to bottom, #eeeeee 0%,#cccccc 100%);
+}
+.work-pattern {
+  position: absolute;
+  left: -1em;
+}
+.work-pattern-icon {
+  height: 12px;
+  width: 12px;
+  margin-bottom: 2px;
+  color: #fff;
+  text-align: center;
+  line-height: 0.8;
 }
 .performance-label {
   position: absolute;
