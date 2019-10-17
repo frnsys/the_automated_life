@@ -71,11 +71,18 @@ function workSkillGain(job, performance) {
 
 function jobProficiency(job, player) {
   let proficiency = Object.keys(job.skills).reduce((acc, s_id) => {
-    return acc + (job.skills[s_id] * player.skills[s_id]);
+    let s = job.skills[s_id] * player.skills[s_id];
+    // Fallback
+    if (isNaN(s)) s = job.skills[s_id];
+    return acc + s;
   }, 0);
   proficiency /= job.skillsTotal;
   return proficiency;
 }
+
+window.testJob = {skills: {0: 1}, skillsTotal: 1};
+window.testPlayer = {skills: {}};
+window.TESTING = jobProficiency;
 
 // Probability of being hired for a job
 function probabilityForJob(job) {
