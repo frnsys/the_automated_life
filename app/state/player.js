@@ -1,4 +1,5 @@
 import t from 'i18n';
+import math from 'mathjs';
 import config from 'config';
 import logic from '../logic';
 import skills from 'data/skills.json'
@@ -25,7 +26,7 @@ const initialState = {
   retireEarly: false,
   startAge: 18,
   performance: 0,
-  tasks: 0,
+  tasks: [],
   cash: 0,
   debt: [],
   expenses: {
@@ -45,7 +46,6 @@ const initialState = {
   }, {}),
   pastJobs: []
 };
-
 
 function reducer(state={}, action) {
   switch (action.type) {
@@ -119,6 +119,7 @@ function reducer(state={}, action) {
       state.performance = 50;
       state.application = null;
       state.job = action.payload;
+      state.tasks = [];
       return {...state}
 
     // Enroll in school
@@ -173,13 +174,17 @@ function reducer(state={}, action) {
       // so player isn't penalized when applying to the
       // first job out of school.
       state.performance = 100;
+      return {...state}
 
+    case 'player:task':
+      let taskIndex = action.payload;
+      state.tasks.splice(taskIndex, 1);
       return {...state}
 
     // Increase performance
     case 'player:work':
-      state.performance = Math.min(state.performance + (config.baseWorkPerClick*(1+state.jobProficiency)/Math.sqrt(state.tasks)), 100);
-      state.tasks--;
+      let tpattern = [0,1,1,0];
+      state.performance = Math.min(state.performance + (config.baseWorkPerClick*(1+state.jobProficiency)/Math.sqrt(state.tasks.length) * tpattern.length), 100);
 
       // Improve skills used on this job
       let skillChanges = logic.workSkillGain(state.job, state.performance)
@@ -192,10 +197,16 @@ function reducer(state={}, action) {
 
     // Decrease performance
     case 'player:slack':
-      let multiplier = (Math.max(1, Math.sqrt(state.tasks/3)));
+      let multiplier = Math.max(1, Math.sqrt(state.tasks.length/8));
       state.performance = Math.max(state.performance - (config.slackPerFrame * multiplier), 0);
-      if (Math.random() <= (config.taskProb * 1/multiplier) * window.speedup) {
-        state.tasks++;
+      // TODO
+      // let cognitiveness = Math.max(props.player.job.cognitiveness, 0.8);
+      let cognitiveness = 0.2;
+      if (Math.random() <= (config.taskProb * (1 - cognitiveness) * 1/multiplier) * window.speedup) {
+        let pattern = [0,1,1,0];
+        // let pattern = props.player.job.pattern; // TODO
+        let taskType = math.pickRandom(pattern);
+        state.tasks.push(taskType);
       }
       return {...state}
 

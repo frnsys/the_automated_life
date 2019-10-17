@@ -75,9 +75,15 @@ export default {
 
   // Work minigame
   maxSkillChangePerWork: 0.002,
-  baseWorkPerClick: 6,
-  slackPerFrame: 0.05,
-  taskProb: 0.04,
+  baseWorkPerClick: 8,
+  slackPerFrame: 0.025,
+  taskProb: 0.05,
+  taskColors: [
+    '#EA432A',
+    '#666df9',
+    '#06c943',
+    '#a414e2'
+  ],
 
   enableLogging: window.location.hostname !== 'localhost' || params.includes('log'),
   debug: params.includes('debug'),
