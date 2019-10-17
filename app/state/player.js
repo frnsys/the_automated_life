@@ -199,7 +199,10 @@ function reducer(state={}, action) {
     case 'player:slack':
       let multiplier = Math.max(1, Math.sqrt(state.tasks.length/8));
       state.performance = Math.max(state.performance - (config.slackPerFrame * multiplier), 0);
-      if (Math.random() <= (config.taskProb * 1/multiplier) * window.speedup) {
+      // TODO
+      // let cognitiveness = Math.max(props.player.job.cognitiveness, 0.8);
+      let cognitiveness = 0.2;
+      if (Math.random() <= (config.taskProb * (1 - cognitiveness) * 1/multiplier) * window.speedup) {
         let pattern = [0,1,1,0];
         // let pattern = props.player.job.pattern; // TODO
         let taskType = math.pickRandom(pattern);
