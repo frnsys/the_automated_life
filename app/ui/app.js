@@ -56,6 +56,7 @@ class App extends Component {
       modal: props.gdpr ? ConsentForm : StartMenu,
       modalIsOpen: true,
       paused: true,
+      manualPaused: false,
       help: false,
       speedup: window.speedup,
       gameOver: null
@@ -91,7 +92,18 @@ class App extends Component {
     let paused = this.state.paused;
     window.paused = !paused;
     window.started = true;
-    this.setState({ paused: !paused, started: true });
+    let manualPaused = !paused;
+    this.setState({ paused: !paused, started: true, manualPaused });
+  }
+
+  pause() {
+    window.paused = true;
+    this.setState({ paused: true });
+  }
+
+  unpause() {
+    window.paused = false;
+    this.setState({ paused: false });
   }
 
   toggleSpeed() {
@@ -120,6 +132,8 @@ class App extends Component {
 
         <Modal
           isOpen={this.state.modalIsOpen}
+          onAfterOpen={() => this.pause()}
+          onAfterClose={() => {if (!this.state.manualPaused) this.unpause()}}
           onRequestClose={this.closeModal}
           style={customStyles}
           shouldCloseOnEsc={!this.state.modal.requireChoice}
