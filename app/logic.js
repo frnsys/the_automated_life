@@ -88,6 +88,10 @@ function probabilityForJob(job) {
   }, 0);
   education /= 100;
 
+  if (player.job.name == 'Unemployed') {
+    performance = Math.max(performance, 0.5);
+  }
+
   let factors = { performance, education, skills };
   let mainFactor = Object.keys(factors).reduce((m, k) => {
     if (m === null) return k;

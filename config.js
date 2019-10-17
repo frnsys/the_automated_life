@@ -89,6 +89,7 @@ export default {
   maxSkillChangePerWork: 0.002,
   baseWorkPerClick: 8,
   slackPerFrame: 0.025,
+  maxTasks: 40,
   taskProb: 0.05,
   taskColors: [
     '#EA432A',
@@ -96,6 +97,7 @@ export default {
     '#06c943',
     '#a414e2'
   ],
+  maxBadPerformanceStreak: 4, // in months, after which player is fired
 
   enableLogging: window.location.hostname !== 'localhost' || params.includes('log'),
   debug: params.includes('debug'),

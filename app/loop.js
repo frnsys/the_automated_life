@@ -52,6 +52,13 @@ function loop(now) {
       });
     }
 
+    if (player.wasFired) {
+      graph.reveal(null);
+      store.dispatch({
+        type: 'player:resetFired'
+      });
+    }
+
     // Prepare next scheduled robot for release
     let nextRobot = scenario.schedule[0];
     if (nextRobot) {
@@ -127,7 +134,7 @@ function loop(now) {
           let estimate = Math.round(cash + ((cash/time.years) * yearsLeft))
             .toLocaleString();
           notify(`🎂 ${t('birthday_title', {age})}`,
-            t('birthday_body', {yearsLeft, estimate}));
+            t('birthday_body', {yearsLeft, estimate}), {background: '#666DF9', color: '#fff'});
         }
         store.dispatch({
           type: 'player:birthday'
@@ -150,6 +157,18 @@ function loop(now) {
         store.dispatch({
           type: 'player:expenses'
         });
+
+        if (!inSchool && player.job.name !== 'Unemployed') {
+          store.dispatch({
+            type: 'player:evaluatePerformance'
+          });
+        }
+
+        if (player.badPerformanceStreak > 0 && player.badPerformanceStreak < config.maxBadPerformanceStreak) {
+            notify(`⚠️ ${t('bad_performance_warning',
+              {months: player.badPerformanceStreak})}`,
+              '', {background: '#ea432a', color: '#fff', fontWeight: 'bold'});
+        }
 
         // Countdown robots to deepening automation
         store.dispatch({

@@ -23,9 +23,11 @@ const unemployed = {
 const initialState = {
   gameOver: false,
   gameOverWarned: false,
+  wasFired: false,
   retireEarly: false,
   startAge: 18,
   performance: 0,
+  badPerformanceStreak: 0,
   tasks: [],
   cash: 0,
   debt: [],
@@ -116,7 +118,8 @@ function reducer(state={}, action) {
       }
 
       // Reset stuff for new job
-      state.performance = 50;
+      state.performance = 60;
+      state.badPerformanceStreak = 0;
       state.application = null;
       state.job = action.payload;
       state.tasks = [];
@@ -124,6 +127,9 @@ function reducer(state={}, action) {
 
     // Enroll in school
     case 'player:enroll':
+      // Reset
+      state.badPerformanceStreak = 0;
+
       let {program, nextJob} = action.payload;
       let nextLevel = education[state.education+1];
       if (nextLevel.name == 'Secondary Degree') {
@@ -183,7 +189,7 @@ function reducer(state={}, action) {
 
     // Increase performance
     case 'player:work':
-      let tpattern = [0,1,1,0];
+      let tpattern = [0,1,1,0]; // TODO
       state.performance = Math.min(state.performance + (config.baseWorkPerClick*(1+state.jobProficiency)/Math.sqrt(state.tasks.length) * tpattern.length), 100);
 
       // Improve skills used on this job
@@ -198,16 +204,43 @@ function reducer(state={}, action) {
     // Decrease performance
     case 'player:slack':
       let multiplier = Math.max(1, Math.sqrt(state.tasks.length/8));
-      state.performance = Math.max(state.performance - (config.slackPerFrame * multiplier), 0);
+      state.performance = Math.max(state.performance - (config.slackPerFrame * multiplier/3 * window.speedup), 0);
       // TODO
       // let cognitiveness = Math.max(props.player.job.cognitiveness, 0.8);
       let cognitiveness = 0.2;
-      if (Math.random() <= (config.taskProb * (1 - cognitiveness) * 1/multiplier) * window.speedup) {
-        let pattern = [0,1,1,0];
-        // let pattern = props.player.job.pattern; // TODO
-        let taskType = math.pickRandom(pattern);
-        state.tasks.push(taskType);
+      if (state.tasks.length < config.maxTasks) {
+        if (Math.random() <= (config.taskProb * (1 - cognitiveness) * 1/multiplier) * window.speedup) {
+          let pattern = [0,1,1,0];
+          // let pattern = props.player.job.pattern; // TODO
+          let taskType = math.pickRandom(pattern);
+          state.tasks.push(taskType);
+        }
       }
+
+      // If player goes above terrible performance,
+      // reset bad performance streak
+      if (state.performance > 10) {
+        state.badPerformanceStreak = 0;
+      }
+
+      return {...state}
+
+    case 'player:evaluatePerformance':
+      if (state.performance <= 10) {
+        state.badPerformanceStreak += 1;
+      }
+      if (state.badPerformanceStreak >= config.maxBadPerformanceStreak + 1) {
+        state.job = unemployed;
+        state.wasFired = true;
+        notify(`📉 ${t('fired')}`, '', {background: '#ea432a', color: '#fff', fontWeight: 'bold'});
+
+        // Reset
+        state.badPerformanceStreak = 0;
+      }
+      return {...state}
+
+    case 'player:resetFired':
+      state.wasFired = false;
       return {...state}
 
     // Take out loan

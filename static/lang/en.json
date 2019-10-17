@@ -141,6 +141,8 @@
     "consent_form_section_5": "<em>The Automated Life</em> study involves one single play of the game that lasts roughly 30 minutes and you may play as many times as you like.<br /><br />By checking the box below, you are indicating that you have read and understood the conditions outlined above and consent to participate in the study and agree to the collection, storage, and use of my data as described above.",
     "consent_label": "I understand the conditions and consent.",
     "consent_submit_button": "Submit",
-    "news_title": "Breaking News"
+    "news_title": "Breaking News",
+    "bad_performance_warning": "Your work performance has been terrible for {months} months. You'll be fired if you don't shape up!",
+    "fired": "You were fired because of your performance."
 }
 
