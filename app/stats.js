@@ -16,7 +16,7 @@ const months = [
   'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
 ];
 let stats = ['savings', 'wages', 'baseWages', 'debt', 'expenses'];
-let colors = ['#ff0000', '#0000ff', '#20a1f7', '#34d394', '#f79220'];
+let colors = ['#34d394', '#0000ff', '#20a1f7', '#ff0000', '#f79220'];
 let eventSymbols = {
   'hired': '🛠️',
   'enrolled': '📚',
