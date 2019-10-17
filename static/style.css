@@ -307,7 +307,7 @@ ul {
 .tutorial h2 {
   margin: 0;
 }
-.tutorial .button {
+.tutorial .button, .news .button {
   margin: 1em 0;
 }
 .game-goal {
@@ -794,4 +794,16 @@ ul {
 .item-box-subsidy > div:first-child {
   font-size: 0.85em;
   margin-bottom: 0.25em;
+}
+
+.news {
+  max-height: 80vh;
+}
+.news-opt-out {
+  font-size: 0.8em;
+  color: #555;
+}
+.news h1 {
+  font-style: italic;
+  margin: 0.2em 0 0.5em 0;
 }

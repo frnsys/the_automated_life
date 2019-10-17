@@ -68,6 +68,11 @@ function loop(now) {
           name: nextRobot.name,
           skills: skillsDesc})
         }`);
+        news(`🤖 ${t('robot_release_long', {
+          name: nextRobot.name,
+          skills: skillsDesc})
+        }`);
+
 
         // Update graph annotations
         Object.keys(graph.nodes).forEach((n_id) => {

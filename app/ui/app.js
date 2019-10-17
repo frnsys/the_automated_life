@@ -13,6 +13,7 @@ import {GameOver, GameOverSurvey} from './gameOver';
 import {Notifications, history} from './notifs';
 import React, { Component } from 'react';
 import Tutorial from './tutorial';
+import News from './news';
 
 Modal.setAppElement('#main');
 const customStyles = {
@@ -53,8 +54,10 @@ class App extends Component {
     super(props);
     this.state = {
       started: false,
+      hideNews: false,
       modal: props.gdpr ? ConsentForm : StartMenu,
       modalIsOpen: true,
+      modalData: null,
       paused: true,
       manualPaused: false,
       help: false,
@@ -86,6 +89,19 @@ class App extends Component {
         })
         .catch(err => { console.log(err) });
     };
+
+    // Hacky way to show news modal elsewhere
+    window.news = (news) => {
+      if (!this.state.hideNews) {
+        this.setState({modal: News, modalIsOpen: true, modalData: {
+          news: news,
+          close: (optOut) => {
+            this.setState({ hideNews: optOut });
+            this.closeModal();
+          }
+        }});
+      }
+    }
   }
 
   togglePause() {
@@ -139,7 +155,7 @@ class App extends Component {
           shouldCloseOnEsc={!this.state.modal.requireChoice}
           shouldCloseOnOverlayClick={!this.state.modal.requireChoice}
           contentLabel='Game Alert'>
-          <this.state.modal closeModal={this.closeModal} togglePause={this.togglePause.bind(this)} />
+          <this.state.modal data={this.state.modalData} closeModal={this.closeModal} togglePause={this.togglePause.bind(this)} />
         </Modal>
 
         {this.state.paused || this.state.help ?
