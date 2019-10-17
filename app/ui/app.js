@@ -102,6 +102,15 @@ class App extends Component {
         }});
       }
     }
+
+    document.addEventListener('keydown', (ev) => {
+      if (window.started && !this.state.modalIsOpen) {
+        if (ev.target.tagName == 'input') return;
+        if (ev.key == ' ') {
+          this.togglePause();
+        }
+      }
+    });
   }
 
   togglePause() {
