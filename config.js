@@ -1,4 +1,16 @@
 const params = location.search.slice(1);
+
+function shuffle(a) {
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+let startingJobs = [643, 721, 333, 717];
+shuffle(startingJobs);
+
 export default {
   startYear: 2019,
   secPerMonth: 5,
@@ -18,7 +30,7 @@ export default {
   inflation: 0.015,
   newRobotSkillMinImportance: 0.03,
   newRobotWarningMonths: 8,
-  startingJobs: [643, 721, 333, 717],
+  startingJobs: startingJobs,
   applicationMinMonths: 2,
   loanTerms: {
     interestRate: 0.058,
