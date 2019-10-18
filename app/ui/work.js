@@ -73,11 +73,10 @@ const Work = (props) => {
     performanceColor = '#d119e5';
   }
 
-  let pattern = [0,1,1,0];
-  // let pattern = props.player.job.pattern; // TODO
+  let pattern = props.player.job.pattern;
 
   return <div className='work'>
-    <div class='work-pattern'>
+    <div className='work-pattern'>
       {pattern.map((taskType, i) => {
         return <div className='work-pattern-icon' key={i} style={{backgroundColor: config.taskColors[taskType]}}>{seq[i] == taskType ? '✓' : ''}</div>;
       })}

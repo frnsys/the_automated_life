@@ -105,6 +105,7 @@ for i, row in skill_groups_df.iterrows():
         skill_groups[group_id]['skills'].append(skill_id)
 skill_groups = {id: g for id, g in skill_groups.items() if g['skills']}
 
+# Job satisfaction measures
 satisfactions = defaultdict(list)
 for i, typ in enumerate([
     'Achievement',
@@ -117,6 +118,27 @@ for i, typ in enumerate([
     for id in sts['O*NET-SOC Code']:
         id = id[:-3]
         satisfactions[id].append(i)
+
+# Fraction of cognitive labor
+# Use 2016 data
+cog_fraction = pd.read_csv('../data/src/cogSkillFractionByOccupationByYear.csv', index_col='SOC')
+
+# Normalize
+cfs = cog_fraction['2016']
+cog_fraction['2016'] = (cfs - cfs.min())/(cfs.max() - cfs.min())
+cog_mean = cog_fraction['2016'].mean()
+
+cognitive = {}
+for id, r in cog_fraction.iterrows():
+    cognitive[id] = r['2016']
+
+cog_patterns = [
+    (0.85, [1,0,2,1]),
+    (0.70, [1,0,1,0]),
+    (0.55, [0,1,1,0]),
+    (0.35, [0,0,0,1]),
+    (0.00, [0,0,0,0]),
+]
 
 n_jobs = len(df)
 job_onet_id_to_id = {}
@@ -140,9 +162,12 @@ for i, r in tqdm(df.iterrows()):
         job_network_layout[id]
         wage = wages[name]
         ed_levels = education_levels[id]
+        cog_level = cognitive.get(id, cog_mean)
     except KeyError:
         print('skipping:', id, r[' Job Title'])
         continue
+
+    pattern = next(pat for frac, pat in cog_patterns if cog_level >= frac)
 
     # Save data
     idx = len(jobs)
@@ -154,7 +179,9 @@ for i, r in tqdm(df.iterrows()):
         'pos': job_network_layout[id],
         'industries': inds,
         'education': ed_levels,
-        'satisfaction': list(set(satisfactions[id]))
+        'satisfaction': list(set(satisfactions[id])),
+        'cognitive': cog_level,
+        'pattern': pattern
     }
     for ind in inds:
         industries_jobs[ind].append(idx)

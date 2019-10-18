@@ -189,8 +189,7 @@ function reducer(state={}, action) {
 
     // Increase performance
     case 'player:work':
-      let tpattern = [0,1,1,0]; // TODO
-      state.performance = Math.min(state.performance + (config.baseWorkPerClick*(1+state.jobProficiency)/Math.sqrt(state.tasks.length) * tpattern.length), 100);
+      state.performance = Math.min(state.performance + (config.baseWorkPerClick*(1+state.jobProficiency)/Math.sqrt(state.tasks.length) * state.job.pattern.length), 100);
 
       // Improve skills used on this job
       let skillChanges = logic.workSkillGain(state.job, state.performance)
@@ -204,15 +203,11 @@ function reducer(state={}, action) {
     // Decrease performance
     case 'player:slack':
       let multiplier = Math.max(1, Math.sqrt(state.tasks.length/8));
-      state.performance = Math.max(state.performance - (config.slackPerFrame * multiplier/3 * window.speedup), 0);
-      // TODO
-      // let cognitiveness = Math.max(props.player.job.cognitiveness, 0.8);
-      let cognitiveness = 0.2;
+      let cognitiveness = (1 - Math.max(state.job.cognitive, 0.8));
+      state.performance = Math.max(state.performance - (config.slackPerFrame * multiplier/3 * cognitiveness * window.speedup), 0);
       if (state.tasks.length < config.maxTasks) {
-        if (Math.random() <= (config.taskProb * (1 - cognitiveness) * 1/multiplier) * window.speedup) {
-          let pattern = [0,1,1,0];
-          // let pattern = props.player.job.pattern; // TODO
-          let taskType = math.pickRandom(pattern);
+        if (Math.random() <= (config.taskProb * cognitiveness * 1/multiplier) * window.speedup) {
+          let taskType = math.pickRandom(state.job.pattern);
           state.tasks.push(taskType);
         }
       }

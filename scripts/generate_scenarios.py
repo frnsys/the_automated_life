@@ -3,6 +3,8 @@ import string
 import random
 import pandas as pd
 
+random.seed(1234)
+
 nations = pd.read_csv('../data/src/nations.csv')
 nation_adjs = []
 for i, r in nations.iterrows():
