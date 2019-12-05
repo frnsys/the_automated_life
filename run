@@ -1,0 +1,82 @@
+#!/bin/bash
+
+# VARS
+# ============================================
+DB_USER=fow_user
+DEV_DB=fow_dev
+TEST_DB=fow_test
+DEFAULT_PW=password
+
+
+# FUNCS
+# ============================================
+function db_drop {
+    if [[ ! "$OSTYPE" =~ ^darwin ]]
+    then
+        # On Ubuntu, need to run these commands as the postgres user.
+        PREFIX='sudo -i -u postgres'
+    fi
+    for DB_NAME in $DEV_DB $TEST_DB
+    do
+        if [[ `$PREFIX psql -tAc "SELECT 1 FROM pg_database WHERE datname='$DB_NAME'"` == 1 ]]
+        then
+            echo -e "Dropping database $(tput setaf 3)$DB_NAME$(tput sgr0)..."
+            $PREFIX dropdb $DB_NAME
+        else
+            echo -e "Database $(tput setaf 3)$DB_NAME$(tput sgr0) doesn't exist, moving on..."
+        fi
+    done
+}
+
+function db_create {
+    if [[ ! "$OSTYPE" =~ ^darwin ]]
+    then
+        # On Ubuntu, need to run these commands as the postgres user.
+        PREFIX='sudo -i -u postgres'
+    fi
+
+    # Create user if it doesn't exist.
+    user_exists=`$PREFIX psql postgres -tAc "SELECT 1 FROM pg_roles WHERE rolname='$DB_USER'"`
+    if [[ $user_exists != 1 ]]
+    then
+        echo -e "Creating database user $(tput setaf 3)$DB_USER$(tput sgr0)..."
+        $PREFIX psql postgres -c "CREATE USER $DB_USER PASSWORD '$DEFAULT_PW' NOSUPERUSER CREATEDB NOCREATEROLE INHERIT LOGIN;"
+    else
+        echo -e "Database user $(tput setaf 3)$DB_USER$(tput sgr0) already exists, moving on..."
+    fi
+
+    # Create databases if they don't exist.
+    for DB_NAME in $DEV_DB $TEST_DB
+    do
+        if [[ `$PREFIX psql -tAc "SELECT 1 FROM pg_database WHERE datname='$DB_NAME'"` != 1 ]]
+        then
+            echo -e "Creating database $(tput setaf 3)$DB_NAME$(tput sgr0)..."
+            $PREFIX createdb -U postgres -E utf8 -O $DB_USER $DB_NAME -T template0
+        else
+            echo -e "Database $(tput setaf 3)$DB_NAME$(tput sgr0) already exists, moving on..."
+        fi
+    done
+}
+
+
+
+# CMDS
+# ============================================
+if [ -z $1 ]
+then
+    echo -e "$(tput setaf 3)Tell me what to do...$(tput sgr0)"
+
+elif [ $1 == 'db:create' ]
+then
+    db_create
+
+elif [ $1 == 'db:drop' ]
+then
+    db_drop
+
+elif [ $1 == 'db:reset' ]
+then
+    db_drop
+    db_create
+
+fi

@@ -5,7 +5,7 @@ import hashlib
 import geocoder
 from datastore import db, get_meta, save_meta, append_log, get_logs, save_summary, get_summary
 from collections import defaultdict
-from flask import Flask, request, jsonify, render_template, abort, session
+from flask import Flask, request, jsonify, render_template, abort
 from sentry_sdk.integrations.flask import FlaskIntegration
 import sentry_sdk
 
