@@ -1,0 +1,1530 @@
+0,Menos que un diploma de escuela superior
+1,Diploma de escuela superior
+2,Título de secundaria
+3,Certificado postbachillerato
+4,Título de máster
+5,Certificado de postmáster
+6,Primer diploma profesional
+7,Título de doctorado
+8,Formación postdoctorado
+9,"Servicios profesionales, científicos y técnicos"
+10,Finanzas y seguros
+11,Fabricación
+12,Gobierno
+13,Servicios de educación
+14,Cuidados de la salud y asistencia social
+15,Información
+16,"Arte, entretenimiento y ocio"
+17,"Agricultura, silvicultura, pesca y caza"
+18,Comercio al por mayor
+19,Transporte y almacenamiento
+20,Otros servicios (excepto administración pública)
+21,"Bienes inmuebles, alquiler y leasing"
+22,Construcción
+23,Comercio al por menor
+24,Servicios de alojamiento y alimentación
+25,Servicios de administración y soporte
+26,Dirección de compañías y empresas
+27,"Minería, excavaciones y extracción de petróleo y gas"
+28,Servicios públicos
+29,Contable
+30,Actuario
+31,Operador de maquinaria de uniones adhesivas
+32,Adjudicador
+33,Director de servicios administrativos
+34,Profesor de educación para adultos
+35,Director de publicidad
+36,Agente de ventas de publicidad
+37,Técnico aeroespacial
+38,Ingeniero aeroespacial
+39,"Agente para artistas, intérpretes y atletas"
+40,Técnico en agricultura/ciencias de la alimentación
+41,Ingeniero agrícola
+42,Operador de equipos agrícolas
+43,Inspector agrícola
+44,Profesor de ciencias agrícolas de postsecundaria
+45,Controlador de tráfico aéreo
+46,Supervisor de manejo de cargas aéreas
+47,Mecánico de aviones
+48,Montador de sistemas para aviones
+49,Especialista en operaciones en aeródromos
+50,Piloto de líneas aéreas/ingeniero de vuelo
+51,Conductor de ambulancias
+52,Asistente de atracciones
+53,Anestesista
+54,Trabajador de control de animales
+55,Científico de animales
+56,Entrenador de animales
+57,Antropólogo/arqueólogo
+58,Profesor de antropología/arqueología de postsecundaria
+59,Perito tasador de inmuebles
+60,Mediador
+61,Arquitecto
+62,Delineante
+63,Director de arquitectura e ingeniería
+64,Profesor de arquitectura de postsecundaria
+65,Archivista
+66,Profesor de estudios culturales de postsecundaria
+67,Director de arte
+68,Profesor de arte/drama/música de postsecundaria
+69,Astrónomo
+70,Atleta
+71,Entrenador de atletismo
+72,Científico atmosférico
+73,Profesor de ciencias de la tierra de postsecundaria
+74,Técnico de equipos de audio y vídeo
+75,Especialista en recopilaciones multimedia
+76,Audiólogo
+77,Auxiliar de servicio de automoción y embarcaciones
+78,Reparador de chasis de automoción
+79,Instalador/reparador de cristales de automoción
+80,Mecánico de automoción
+81,Técnico en aviónica
+82,Mozo de equipajes
+83,Alguacil
+84,Panadero
+85,Barbero
+86,Barman
+87,Reparador de bicicletas
+88,Cobrador de cuentas y facturas
+89,Empleado de facturación
+90,Bioquímico/biofísico
+91,Profesor de ciencias biológicas de postsecundaria
+92,Científico de biología
+93,Técnico en biología
+94,Ingeniero de biomedicina
+95,Fabricante de calderas
+96,Empleado de contabilidad
+97,Albañil
+98,Licitaciones de puentes y esclusas
+99,Analista de noticias de radiodifusión
+100,Técnico en radiodifusión
+101,Corredor de inversiones
+102,Analista de presupuestos
+103,Especialista en motores diésel
+104,Conductor de autobús escolar
+105,Conductor de autobús de tránsito
+106,Especialista en operaciones comerciales
+107,Profesor de comercio de postsecundaria
+108,Carnicero
+109,Comprador de productos de granja
+110,Ebanista
+111,Técnico reparador de equipos fotográficos
+112,Operador de cámara
+113,Capitán de buque
+114,Técnico cardiovascular
+115,Profesor de educación técnica de escuela intermedia
+116,Profesor de educación técnica de escuela secundaria
+117,Agente de carga y mercancía
+118,Carpintero
+119,Instalador de moquetas
+120,Cartógrafo
+121,Cajero
+122,Albañil de cemento y técnico de hormigón
+123,Cocinero
+124,Ingeniero químico
+125,Operador de equipos químicos
+126,Operador de plantas químicas
+127,Técnico en química
+128,Profesor de química de postsecundaria
+129,Químico
+130,Ejecutivo jefe
+131,Trabajador social para la familia
+132,Trabajador para el cuidado de los niños
+133,Quiropráctico
+134,Coreógrafo
+135,Técnico civil
+136,Ingeniero civil
+137,Investigador de reclamaciones
+138,Limpiador de vehículos/equipamiento
+139,Operador de equipamiento de decapado de metales
+140,Clérigo
+141,Psicólogo clínico
+142,Entrenador/cazatalentos
+143,Operador de máquinas de revestimiento/pulverizado
+144,Devanador de bobinas
+145,Técnico de servicio de máquinas despachadoras
+146,Trabajador de preparación y servicio de alimentos
+147,Diseñador industrial
+148,Buzo comercial
+149,Piloto comercial
+150,Profesor de comunicaciones de postsecundaria
+151,Trabajador de salud comunitaria
+152,Director de compensaciones y beneficios
+153,Especialista en análisis de puestos de trabajo
+154,Responsable de cumplimiento
+155,Experto informático
+156,Administrador de sistemas informáticos y de información
+157,Ingeniero de hardware para ordenadores
+158,Arquitecto de redes informáticas
+159,Especialista en soporte de redes informáticas
+160,Programador de máquinas herramienta controladas por ordenador
+161,Técnico informático
+162,Operador de ordenadores
+163,Programador informático
+164,Profesor de ciencias informáticas de postsecundaria
+165,Analista de sistemas informáticos
+166,Especialista en soporte para usuarios de ordenadores
+167,Reparador de ordenadores
+168,Operador de máquinas herramienta controladas por ordenador
+169,Conserje
+170,Científico de la conservación
+171,Inspector de construcción/edificios
+172,Trabajador de la construcción
+173,Obrero de la construcción
+174,Director de construcción
+175,Operador de máquinas de minería continua
+176,Instalador/reparador de controles y válvulas
+177,Operador de cinta de transporte
+178,Cocinero de comida rápida
+179,Cocinero de cafetería
+180,Cocinero de restaurante
+181,Cocinero de comida sencilla
+182,Operador de equipos de refrigeración/congelación
+183,Funcionario de prisiones
+184,Empleado de correspondencia
+185,Estimador de costes
+186,Asistente de vestuario
+187,Empleado de negocio de alquiler|
+188,Asistente de mostrador
+189,Mensajero
+190,Escribano de tribunal
+191,Secretario de tribunal
+192,Artista de manualidades
+193,Operador de grúas y torres
+194,Analista de créditos
+195,Autorizador de créditos
+196,Consejero de créditos
+197,Profesor de justicia criminal de postsecundaria
+198,Guardia de cruce
+199,Operador de máquinas de esmerilado/pulido
+200,Curador
+201,Representante del servicio de atención al cliente
+202,Cortador manual/recortador
+203,Operador de máquinas de corte/loncheado
+204,Operador de máquinas de corte/punzonado/prensado
+205,Manipulador de entrada de datos
+206,Administrador de bases de datos
+207,Promotor de productos
+208,Asistente dental
+209,Higienista dental
+210,Técnico en laboratorio dental
+211,Dentista
+212,Operador de grúa
+213,Autoeditor
+214,Investigador criminal
+215,Sonógrafo médico de diagnósticos
+216,Técnico en dietética
+217,Dietista
+218,Encargado de cafetería
+219,Director de educación religiosa
+220,Lavaplatos
+221,Transportista
+222,Vendedor ambulante
+223,Operador de draga
+224,Operador de máquinas herramienta de perforación/taladrado
+225,Conductor/empleado de ventas
+226,Instalador de paneles de yeso
+227,Perforador
+228,Profesor de economía de postsecundaria
+229,Economista
+230,Editor
+231,Administrador de educación
+232,Administrador de escuela primaria y secundaria|
+233,Administrador de escuela postsecundaria
+234,Administrador de centro preescolar
+235,Profesor de educación de postsecundaria
+236,Consejero de orientación
+237,Reparador de motores eléctricos
+238,Montador de equipos eléctricos
+239,Delineante eléctrico
+240,Técnico eléctrico
+241,Reparador de sistemas de transporte eléctricos
+242,Reparador de sistemas eléctricos industriales
+243,Reparador de centrales eléctricas
+244,Ingeniero eléctrico
+245,Instalador/reparador de líneas de potencia eléctrica
+246,Electricista
+247,Técnico en equipos electromecánicos
+248,Montador de equipos electromecánicos
+249,Instalador/reparador de electrónica para vehículos a motor
+250,Instalador/reparador de equipos de ocio doméstico
+251,Ingeniero en electrónica
+252,Profesor de escuela primaria
+253,Instalador/reparador de elevadores
+254,Entrevistador de idoneidad para programas gubernamentales
+255,Embalsamador
+256,Director en gestión de emergencias
+257,Paramédico
+258,Montador de motores
+259,Profesor de ingeniería de postsecundaria
+260,Técnico en ingeniería
+261,Ingeniero
+262,Profesor de lengua/literatura inglesa de postsecundaria
+263,Técnico medioambiental
+264,Ingeniero medioambiental
+265,Técnico en salud medioambiental
+266,Profesor de ciencias medioambientales de postsecundaria
+267,Científico medioambiental
+268,Epidemiólogo
+269,Grabador
+270,Operador de excavadoras/máquinas de carga
+271,Asistente administrativo ejecutivo
+272,Fisiólogo del ejercicio
+273,Manipulador de productos explosivos
+274,Operador de máquinas de extrusionado/troquelado
+275,Operador de máquinas de extrusionado/conformado
+276,Operador de máquinas de conformado/compactado
+277,Creador de patrones
+278,Costurero
+279,Talador
+280,Practicante general
+281,Consejero de gestión de granjas y viviendas
+282,Mecánico de equipos para granjas
+283,Contratista de trabajos en granjas
+284,Granjero
+285,Trabajador de granja
+286,Trabajador de rancho
+287,Diseñador de moda
+288,Constructor de vallas
+289,Fabricante de fibra de vidrio
+290,Archivero
+291,Editor de películas
+292,Analista financiero
+293,Examinador financiero
+294,Administrador financiero
+295,Especialista financiero
+296,Artista plástico
+297,Inspector de incendios
+298,Bombero
+299,Supervisor del área de construcción
+300,Supervisor de funcionario de prisiones
+301,Supervisor de agricultura/pesca/silvicultura
+302,Supervisor de bomberos
+303,Supervisor de preparación de alimentos
+304,Supervisor de jornaleros/trabajadores manuales
+305,Supervisor de servicios de limpieza
+306,Supervisor de jardinería
+307,Supervisor mecánico
+308,Supervisor de ventas al por mayor
+309,Supervisor de soporte administrativo
+310,Supervisor de trabajador de servicio personal
+311,Supervisor policial
+312,Supervisor de trabajador de producción/operación
+313,Supervisor de ventas al por menor
+314,Supervisor de operador de transportes
+315,Guarda de caza y pesca
+316,Pescador
+317,Entrenador de fitness
+318,Auxiliar de vuelo
+319,Colocador de suelos
+320,Lijador/pulidor de suelos
+321,Diseñador floral
+322,Operador de máquinas de alimentación y tabaco
+323,Elaborador de alimentos al por mayor
+324,Operador de máquinas de cocción de alimentos
+325,Trabajador de preparación de alimentos
+326,Científico de alimentos
+327,Distribuidor de comidas de catering
+328,Director de servicios de alimentación
+329,Profesor de lengua extranjera de postsecundaria
+330,Técnico forense
+331,Técnico en conservación
+332,Trabajador forestal y de conservación
+333,Inspector de incendios forestales
+334,Forestal
+335,Profesor de ciencias forestales y de conservación de postsecundaria
+336,Operador de máquinas de forjado
+337,Fabricante de moldes y machos de fundición
+338,Recaudador de fondos
+339,Asistente de funerales
+340,Administrador de servicios funerarios
+341,Operador de calderas/hornos
+342,Pulidor de muebles
+343,Escritor de libros de juegos
+344,Cajero de casino
+345,Cajero de taquilla
+346,Vendedor de juegos
+347,Administrador de juegos
+348,Supervisor de juegos
+349,Investigador de juegos
+350,Operador de estaciones de bombeo de gas
+351,Operador de plantas de gas
+352,Director de operaciones
+353,Consejero en genética
+354,Geógrafo
+355,Profesor de geografía de postsecundaria
+356,Técnico en geología y petróleo
+357,Geocientífico
+358,Vidriero
+359,Clasificador de productos agrícolas
+360,Asistente graduado de enseñanza
+361,Diseñador gráfico
+362,Trabajador de esmerilado/pulido manual
+363,Operador de herramientas para máquinas de esmerilado/pulido/bruñido
+364,Peluquero
+365,Trabajador de eliminación de materiales peligrosos
+366,Ingeniero para la salud y la seguridad
+367,Médico de diagnósticos para la salud
+368,Educador de salud
+369,Profesor de especialidades de la salud de postsecundaria
+370,Técnico de salud
+371,Médico de atención sanitaria
+372,Trabajador social de atención sanitaria
+373,Trabajador de soporte de atención sanitaria
+374,Especialista en dispositivos auditivos
+375,Operador de equipos de tratamiento del calor
+376,Mecánico/instalador de climatización
+377,Conductor de camiones pesados/tractores/remolques
+378,Ayudante de albañil|
+379,Ayudante de carpintero
+380,Ayudante de electricista
+381,Ayudante de técnico de extracción
+382,Ayudante de trabajador de mantenimiento/reparaciones
+383,Ayudante de pintor/escayolista
+384,Ayudante de fontanero
+385,Ayudante de trabajador de producción
+386,Ayudante de techador
+387,Trabajador de mantenimiento de autopistas
+388,Historiador
+389,Profesor de historia de postsecundaria
+390,Operador de montacargas y tornos
+391,Técnico reparador de electrodomésticos
+392,Profesor de economía doméstica de postsecundaria
+393,Auxiliar médico domiciliario
+394,Recepcionista de restaurante
+395,Recepcionista de hotel
+396,Asistente de recursos humanos
+397,Director de recursos humanos
+398,Especialista en recursos humanos
+399,Hidrólogo
+400,Técnico industrial
+401,Ingeniero industrial
+402,Mecánico de maquinaria industrial
+403,Director de producción industrial
+404,Operador de camiones y tractores industriales
+405,Psicólogo de organización industrial
+406,Analista de seguridad de información
+407,Inspector/controlador
+408,Trabajador de mantenimiento/reparaciones
+409,Coordinador de instrucción
+410,Técnico en aislantes
+411,Técnico en aislantes mecánicos
+412,Perito tasador de seguros
+413,Empleado de reclamaciones de seguros
+414,Agente de ventas de seguros
+415,Suscriptor de seguros
+416,Diseñador de interiores
+417,Internista
+418,Traductor
+419,Entrevistador
+420,Conserje
+421,Joyero
+422,Juez
+423,Secretario judicial
+424,Profesor de jardín de infancia
+425,Especialista en relaciones laborales
+426,Jornalero/trabajador manual
+427,Arquitecto de paisajes
+428,Trabajador de paisajismo y jardinería
+429,Operador de tornos/máquinas herramienta de torneado
+430,Trabajador de lavandería/lavado en seco
+431,Profesor de derecho de postsecundaria
+432,Abogado
+433,Trabajador de diseño de metales/plásticos
+434,Secretaría legal
+435,Bibliotecario
+436,Asistente de librería clerical
+437,Profesor de biblioteconomía de postsecundaria
+438,Técnico bibliotecario
+439,Enfermero licenciado práctico/vocacional
+440,"Técnico en ciencias de la vida, físicas y sociales"
+441,Socorrista
+442,Conductor de camiones ligeros/servicios de entrega
+443,Operador de máquinas de carga minera subterránea
+444,Entrevistador de préstamos
+445,Responsable de préstamos
+446,Asistente de vestuarios
+447,Cerrajero
+448,Ingeniero de locomotoras
+449,Hostelero
+450,Inspector de madera
+451,Operador de equipos de tala
+452,Técnico en logística
+453,Alimentador de máquinas
+454,Maquinista
+455,Técnico en imágenes de resonancia magnética
+456,Trabajador de limpieza doméstica
+457,Empleado de correos
+458,Trabajador de mantenimiento/reparaciones
+459,Trabajador de mantenimiento de máquinas
+460,Artista de maquillaje
+461,Analista de administración
+462,Administrador
+463,Manicuro/pedicuro
+464,Instalador de caravanas
+465,Ingeniero de marina
+466,Analista de estudios de mercado
+467,Director de marketing
+468,Terapeuta matrimonial y familiar
+469,Terapeuta masajista
+470,Ingeniero de materiales
+471,Científico de materiales
+472,Profesor de ciencias matemáticas de postsecundaria
+473,Matemático
+474,"Cortador de carne, ave, pescado"
+475,Técnico reparador de puertas mecánicas
+476,Redactor de textos mecánicos
+477,Técnico mecánico
+478,Ingeniero mecánico
+479,Técnico en medicina
+480,Tecnólogo en medicina
+481,Director de servicios médicos y de salud
+482,Técnico en aparatos médicos
+483,Asistente médico
+484,Preparador de equipos médicos
+485,Reparador de equipos médicos
+486,Técnico de registros médicos
+487,Científico médico
+488,Secretario médico
+489,Transcriptor médico
+490,Planificador de eventos
+491,Trabajador de salud mental
+492,Consejero de salud mental
+493,Escaparatista
+494,Operador de hornos de refinamiento de metales
+495,Revisor de contadores
+496,Microbiólogo
+497,Profesor de escuela intermedia
+498,Operador de máquinas de fresado/cepillado
+499,Mecánico industrial
+500,Operador de máquinas de corte de minería
+501,Operador de máquinas de transporte para minería
+502,Ingeniero geólogo
+503,Operador de máquinas de mezclado
+504,Mecánico de equipamiento pesado móvil
+505,Fabricante de modelos de metal/plástico
+506,Fabricante de modelos de madera
+507,Modelo
+508,Moldeador/formador/fundidor
+509,Operador de máquinas de moldeado/fabricación de machos/fundición
+510,Director de funerales
+511,Proyector de películas
+512,Mecánico de embarcaciones de motor
+513,Piloto de embarcaciones de motor
+514,Mecánico de motocicletas
+515,Artista multimedia
+516,Operador de máquinas herramienta múltiples
+517,Técnico de museo
+518,Compositor musical
+519,Reparador/afinador de instrumentos musicales
+520,Director de ciencias naturales
+521,Administrador de sistemas
+522,Auxiliar de cuentas nuevas
+523,Cuidador de animales no agrarios
+524,Ingeniero nuclear
+525,Técnico en medicina nuclear
+526,Operador de reactores de energía nuclear
+527,Técnico nuclear
+528,Enfermero anestesista
+529,Enfermero obstetra
+530,Enfermero especializado
+531,Asistente de enfermería
+532,Profesor e instructor de enfermería de postsecundaria
+533,Obstetra/ginecólogo
+534,Especialista en salud y seguridad ocupacional
+535,Técnico en salud y seguridad ocupacional
+536,Terapeuta ocupacional
+537,Auxiliar de terapia ocupacional
+538,Asistente de terapia ocupacional
+539,Empleado de oficina
+540,Operador de máquinas de oficina
+541,Ingeniero de la construcción
+542,Analista de estudios de operaciones
+543,Técnico de laboratorio oftalmológico
+544,Técnico en medicina oftalmológica
+545,Óptico
+546,Optometrista
+547,Cirujano oral
+548,Encargado de pedidos
+549,Ortodoncista
+550,Ortesista/protesista
+551,Mecánico de motores pequeños
+552,Operador de máquinas de embalaje
+553,Empaquetador manual|
+554,Pintor de la construcción
+555,Pintor de equipos de transporte
+556,Pintor/laqueador/decorador
+557,Operador de máquinas de papelería
+558,Empapelador
+559,Pasante
+560,Trabajador de refuerzo de aparcamientos
+561,Asistente de aparcamientos
+562,Vendedor de piezas
+563,Creador de patrones de metal/plástico
+564,Creador de patrones de madera
+565,Operador de equipos de pavimentación
+566,Asistente de contabilidad
+567,Pediatra
+568,Auxiliar de cuidados personales
+569,Consejero de finanzas personal
+570,Trabajador de control de plagas
+571,Manipulador de pesticidas
+572,Ingeniero de petróleo
+573,Operador de refinería
+574,Farmacéutico
+575,Auxiliar farmacéutico
+576,Técnico farmacéutico
+577,Profesor de filosofía/religión de postsecundaria
+578,Flebotomista
+579,Fotógrafo
+580,Científico físico
+581,Auxiliar de terapias físicas
+582,Asistente de terapias físicas
+583,Terapeuta físico
+584,Asistente de facultativo
+585,Facultativo
+586,Físico
+587,Profesor de física de postsecundaria
+588,Operador de hincadoras de pilotes
+589,Montador de tubos
+590,Operador de plantas
+591,Escayolista
+592,Operador de máquinas de chapado/revestimiento
+593,Fontanero
+594,Pediatra
+595,Policía
+596,Operador de teléfonos de emergencia
+597,Profesor de ciencias políticas de postsecundaria
+598,Científico en ciencias políticas
+599,Empleado de correos
+600,Cartero
+601,Clasificador de cartas
+602,Administrador de correos
+603,Fundidor
+604,Distribuido/despachador de centrales energéticas
+605,Operador de plantas de energía
+606,Técnico de preimpresión
+607,Profesor de preescolar
+608,Planchador de textiles
+609,Encuadernador
+610,Operador de prensa de impresión
+611,Detective privado
+612,Agente de vigilancia
+613,Empleado de adquisiciones
+614,Productor/director
+615,Trabajador de producción
+616,Administrador de producción
+617,Corrector
+618,Administrador de propiedades
+619,Trabajador de servicios de protección
+620,Auxiliar psiquiátrico
+621,Técnico psiquiátrico
+622,Psiquiatra
+623,Psicólogo
+624,Profesor de psicología de postsecundaria
+625,Maestro de ceremonias
+626,Director de relaciones públicas y recaudación de fondos
+627,Especialista en relaciones públicas
+628,Operador de bombas
+629,Comprador
+630,Director de compras
+631,Terapeuta radiólogo
+632,Presentador de radio y televisión
+633,Operador de radio
+634,Instalador/reparador de radios/móviles
+635,Técnico radiológico
+636,Reparador de vagones
+637,Ingeniero de patio ferroviario
+638,Operador de equipos de mantenimiento de vías
+639,Operador de frenos/señales/desvíos de vías
+640,Conductor de trenes
+641,Corredor de propiedades inmobiliarias
+642,Agente de ventas de inmuebles
+643,Empleado de información
+644,Profesor de estudios de ocio/fitness de postsecundaria
+645,Trabajador del ocio
+646,Terapeuta recreativo
+647,Técnico en servicios de vehículo de ocio
+648,Reparador de materiales refractantes
+649,Recolector de residuos y material de reciclaje
+650,Enfermero diplomado
+651,Consejero de rehabilitación
+652,Montador de varillas
+653,Periodista
+654,Empleado de viajes
+655,Consejero residencial
+656,Terapeuta de respiración
+657,Técnico en terapias de respiración
+658,Vendedor al por menor
+659,Técnico en jarcias
+660,Demoledor de rocas
+661,Operador de máquinas de laminación
+662,Operador de maquinaria de soporte de techos en minas
+663,Techador
+664,Operador de perforadoras rotativas
+665,Trabajador de plataformas petroleras no cualificado
+666,Marinero/engrasador marino
+667,Ingeniero de ventas
+668,Director de ventas
+669,Representante de ventas
+670,Representante de ventas de fabricación
+671,Representante de ventas técnico
+672,Operador de máquinas de coser
+673,Profesor de escuela secundaria
+674,Asistente de administración
+675,Agente de ventas de seguridad
+676,Instalador de sistemas de seguridad
+677,Guarda de seguridad
+678,Adoquinador
+679,Profesor de autoenriquecimiento
+680,Procesador de semiconductores
+681,Operador de máquinas separadoras/clarificadoras
+682,Operador de mantenimiento de fosas sépticas/alcantarillado
+683,Operador de unidades de servicio de petróleo/gas/minería
+684,Escenógrafo
+685,Costurero manual
+686,Operador de máquinas de coser
+687,Ayudante de peluquería encargado de lavar el pelo
+688,Trabajador de metales laminados
+689,Ingeniero de barcos
+690,Empleado de envíos/recepciones
+691,Trabajador de la fabricación de zapatos/cuero
+692,Operador de máquinas de zapatería
+693,Reparador de señales y desviadores
+694,Especialista en dermatología
+695,Empaquetador de carne
+696,Supervisor de máquinas tragamonedas
+697,Director de servicios sociales y para la comunidad
+698,Asistente de servicios sociales y humanos
+699,Asistente en investigación de ciencias sociales
+700,Científico de ciencias sociales
+701,Profesor de trabajos sociales de postsecundaria
+702,Sociólogo
+703,Profesor de sociología de postsecundaria
+704,Desarrollador de software para aplicaciones
+705,Desarrollador de software para sistemas
+706,Científico de suelo y planta
+707,Instalador de sistemas solares fotovoltaicos
+708,Técnico en ingeniería del sonido
+709,Profesor de educación especial
+710,Profesor de educación especial de escuela primaria
+711,Profesor de educación especial de escuela intermedia
+712,Profesor de educación especial de escuela secundaria
+713,Logopeda
+714,Operador de calderas
+715,Asistente de estadísticas
+716,Estadístico
+717,Almacenero
+718,Cantero
+719,Trabajador del acero
+720,Fabricante de metales estructurales
+721,Consejero de abuso de sustancias y desórdenes de comportamiento
+722,Conductor de metro/tranvía
+723,Cirujano
+724,Técnico en cirugía
+725,Investigador de encuestas
+726,Técnico en mapeo
+727,Entrevistador
+728,Operador de centralitas
+729,Sastre
+730,Cargador de cisternas en coches/camiones/barcos
+731,Emplastador
+732,Recaudador de impuestos
+733,Preparador de impuestos
+734,Conductor de taxi/chófer
+735,Asistente de profesor
+736,Montador de grupo
+737,Escritor técnico
+738,Instalador/reparador de equipos de telecomunicaciones
+739,Instalador/reparador de líneas de telecomunicaciones
+740,Operador de telemarketing
+741,Operador telefónico
+742,Cajero
+743,Colocador de pavimentos de terrazo
+744,Operador de máquinas de blanqueado/teñido de textiles
+745,Operador de máquinas de corte de textiles
+746,Operador de máquinas de punto/tejido
+747,Operador de máquinas de bobinado de textiles
+748,Colocador de baldosas y mármoles
+749,Montador de dispositivos temporizadores
+750,Constructor de neumáticos
+751,Reparador/cambiador de neumáticos
+752,Examinador de títulos
+753,Fabricante de herramientas y moldes
+754,Rectificador de herramientas
+755,Guía turístico
+756,Técnico de tráfico
+757,Director de formación y desarrollo
+758,Especialista en formación y desarrollo
+759,Policía de tránsito y vías ferroviarias
+760,Asistente de transporte
+761,Inspector de transporte
+762,Revisor de seguridad de transporte
+763,Director logístico
+764,Agente de viajes
+765,Guía de viajes
+766,Podador de árboles
+767,Árbitro
+768,Tapicero
+769,Planificador urbano y regional
+770,Acomodador
+771,Veterinario
+772,Asistente veterinario
+773,Técnico en veterinaria
+774,Profesor de educación vocacional de postsecundaria
+775,Camarero
+776,Técnico reparador de relojes
+777,Operador de plantas de tratamiento de aguas/aguas residuales
+778,Desarrollador de web
+779,Pesador/medidor
+780,Soldador/cortador
+781,Operador de máquinas de soldaduras
+782,Técnico de bombeo de pozos
+783,Comprador al por menor
+784,Técnico de servicio de aerogeneradores
+785,Operador de máquinas de trabajos de madera
+786,Mecanógrafo
+787,Escritor
+788,Zoólogo
+789,Tecnología/técnico de emergencias médicas (paramédico de emergencias)
+790,"Educación, general"
+791,Derecho
+792,"Administración y dirección educativa, general"
+793,Trabajos sociales
+794,Curriculum e instrucción
+795,"Educación y enseñanza especial, general"
+796,Enseñanza de inglés como lengua secundaria o extranjera/profesor de inglés como lengua extranjera
+797,Ciencias de biblioteconomía e información
+798,Tecnología educativa/instructiva
+799,Conductor de camiones y autobuses/operador e instructor de vehículos comerciales
+800,Planificación y servicios financieros
+801,Asistencia para bibliotecas y archivos
+802,"Administración y dirección empresarial, general"
+803,"Biología/ciencias biológicas, general"
+804,"Psicología, general"
+805,Ingeniería mecánica
+806,Contabilidad
+807,Comunicación del habla y retórica
+808,"Arte/estudios de arte, general"
+809,"Ciencias políticas y gobierno, general"
+810,"Ciencias informáticas y de información, general"
+811,"Literatura y lengua inglesa, general"
+812,"Economía, general"
+813,Sociología
+814,Gestión/administración de deportes y fitness
+815,Educación y enseñanza primaria
+816,"Matemáticas, general"
+817,"Historia, general"
+818,Formación y enseñanza de educación física
+819,Lengua y literatura españolas
+820,Estudios bíblicos
+821,"Ciencias de animales, general"
+822,"Química, general"
+823,"Estudios de desarrollo humano y familia, general"
+824,Ciencias medioambientales
+825,Estudios del judaísmo
+826,Desarrollo infantil
+827,Diseño de interiores
+828,Bioquímica
+829,Antropología
+830,"Geología/ciencias de la tierra, general"
+831,"Física, general"
+832,"Recursos naturales/conservación, general"
+833,Geografía
+834,"Microbiología, general"
+835,Educación de profesor de agricultura
+836,"Ciencias atmosféricas y meteorología, general"
+837,Astronomía
+838,Diplomatura en enfermería/enfermero diplomado
+839,Estudios de seguridad/justicia criminal
+840,"Ciencias sociales, general"
+841,Formación y educación preescolar
+842,"Ciencias de asistencia administrativa y secretariado, general"
+843,Ciencias naturales
+844,Técnico en biología/técnico de laboratorios biotecnológicos
+845,Administración pública
+846,"Ingeniería, general"
+847,Ciencias de administración
+848,"Planificación de ciudades/urbana, comunal y regional"
+849,Salud medioambiental
+850,Tecnología de máquinas herramienta/maquinista
+851,Ocupaciones de oficinas generales y servicios clericales
+852,Ciencias de la información geográfica y cartografía
+853,Procesamiento de datos y tecnología/técnico de procesamiento de datos
+854,Operación de equipos de la construcción/pesados/de movimiento de tierras
+855,Transporte por ferrocarril
+856,Inspección/inspector de edificios/viviendas/construcción
+857,Asistente/secretario de administración legal
+858,"Finanzas, general"
+859,"Ciencias y gestión de fauna, flora, peces y regiones forestales"
+860,Ciencias y tecnología forense
+861,Ingeniería medioambiental/salud medioambiental
+862,"Ventas, distribución y operaciones de marketing, general"
+863,Seguros
+864,Arquitectura naval e ingeniería marina
+865,Procesamiento de productos agrícolas y alimenticios
+866,Ciencias policiales/de justicia criminal
+867,Asistencia legal/paralegal
+868,"Tecnología/técnico de electricidad, electrónica y de ingeniería de comunicaciones"
+869,Ciencias de incendios/lucha contra incendios
+870,Tecnología/técnico de salud y seguridad ocupacional
+871,"Correccionales y justicia criminal, otros"
+872,"Tecnología/técnico de calefacción, ventilación, aire acondicionado e ingeniería de refrigeración"
+873,Tecnología/técnico de ingeniería de la construcción
+874,Organización y abogacía comunal
+875,"Tecnología/técnico de ciencias, otros"
+876,Administración de servicios contraincendios
+877,Tecnología de entrevistas/entrevistas
+878,Tecnología/técnico forestal
+879,Administración/gestión de salud/cuidados de la salud
+880,Medicina
+881,Enfermería/enfermero de medicina familiar
+882,Consejero de educación/servicios de consejería y orientación para escuelas
+883,Terapia/terapeuta físico
+884,Terapia/terapeuta ocupacional
+885,Asesoramiento/consejero de salud mental
+886,Odontología
+887,Epidemiología
+888,Quiropráctica
+889,Acupuntura y medicina oriental
+890,Seguridad nacional
+891,Medicina pediátrica/pediatría
+892,Enfermero obstetra/enfermería obstetra
+893,Medicina tradicional china y herbología china
+894,Asesoramiento/consejero de genética
+895,Asistente/auxiliar de enfermería y asistente/auxiliar de cuidado de pacientes
+896,Tecnología/técnico contable y contabilidad
+897,Asistente/especialista de consultoría médica
+898,Técnico en flebotomía/flebotomista
+899,Asistente de medicinas
+900,Auxiliar de salud doméstica/asistente en el hogar
+901,Tecnología/técnico de procesamiento estéril
+902,Tecnólogo/técnico renal/diálisis
+903,Asistente de rehabilitación
+904,Productos de ortodoncia/ortodoncia
+905,Tecnología/técnico de imágenes por resonancia magnética (IRM)
+906,Cirugía oral/maxilofacial
+907,Asistente médico/clínico
+908,Formación de enfermero licenciado práctico/vocacional
+909,Asistencia/asistente dental
+910,Técnico/tecnólogo oftalmológico
+911,Ciencias de la quinesiología y ejercicio
+912,Audiología/audiólogo y patología del habla y la lengua/logopeda
+913,Dietética/dietista
+914,"Gestión de recursos humanos/administración de personal, general"
+915,Bioingeniería e ingeniería biomédica
+916,"Ciencias de laboratorios clínicos, tecnología/técnico en medicina"
+917,Asesoramiento/consejero de rehabilitación vocacional
+918,Recreación terapéutica/terapia recreativa
+919,Tecnología/técnico en medicina nuclear
+920,Tecnología/ciencia radiológica - radiólogo
+921,Terapia/terapeuta en cuidados respiratorios
+922,Higiene/higienista dental
+923,Tecnología/técnico en información de la salud/registros médicos
+924,Técnico/asistente en terapia física
+925,Tecnología/ciencia radiológica médica - terapeuta de radiación
+926,Asistente en terapia ocupacional
+927,Sonografía/sonógrafo en medicina diagnóstica y técnico de ultrasonidos
+928,Técnico de laboratorios clínicos/médicos
+929,Tecnología/tecnólogo en cirugía
+930,Técnico de servicios psiquiátricos/de salud mental
+931,Consejero de abuso de sustancias/adicción
+932,Tecnología/tecnólogo cardiovascular
+933,Asistente/auxiliar de profesor
+934,Tecnología/técnico de laboratorio dental
+935,Trabajador de servicios de desarrollo
+936,Teología/ministerio
+937,Educación y formación para adultos y continuada
+938,Proveedor/asistente de cuidados de niños
+939,Terapia de masajes/masaje terapéutico
+940,Mecánica industrial y tecnología de mantenimiento
+941,Tecnología/asistente de tiendas para máquinas
+942,"Instalación y reparación de equipos eléctricos/electrónicos, general"
+943,Recepcionista
+944,Refuerzo legal de los recursos naturales y servicios de protección
+945,Diseño y fabricación de muebles
+946,"Cosmetología/cosmetólogo, general"
+947,Barbería/barbero
+948,Tecnología/técnico en mecánica diésel
+949,Tecnología/técnico de colisión y reparación de vehículos
+950,Tapicería/tapicero
+951,"Salud pública, general"
+952,"Actuación musical, general"
+953,Relaciones públicas/gestión de imagen
+954,"Historia, crítica y conservación de arte"
+955,"Servicios fúnebres y ciencias mortuorias, general"
+956,Tecnología/técnico en biomedicina
+957,Administración/administrador de salones/salones de belleza
+958,Farmacia
+959,Optometría
+960,Tecnología/técnico de mecánica de automoción/automóviles
+961,Dirección y supervisión de oficinas
+962,Tecnología/técnico de instalación y reparación de ordenadores
+963,Arte de metales y joyería
+964,Conocimientos y operaciones de ventas
+965,Tecnología/técnico de instalación y reparación de electrodomésticos
+966,Tecnología de instalación y reparación de sistemas de comunicación
+967,Fabricación y reparación de instrumentos musicales
+968,Peluquería de perros/mascotas/animales
+969,Tecnología/técnico de laboratorio oftalmológico
+970,Cortar carne/cortador de carne
+971,"Reparación de zapatos, botas y cuero"
+972,Tecnología/técnico de reparación y mantenimiento de motocicletas
+973,Técnico/asistente farmacéutico
+974,Mantenimiento/instalador marino y tecnología/técnico de reparación de barcos
+975,Relojería y joyería
+976,Gestión y supervisión de operaciones
+977,Comercio al por menor y operaciones de comercio al por menor
+978,Servicios de soporte financieros y bancarios
+979,"Comunicaciones gráficas, otros"
+980,Dirección/director de edificación/construcción
+981,Óptico/Óptico de dispensación oftalmológica
+982,Suministros al por mayor y menor de productos agrícolas/para granjas
+983,Especialista en instrumentos auditivos
+984,Modelado de moda
+985,"Instalador de alfombras, suelos y losetas"
+986,Medicina veterinaria
+987,Arquitectura
+988,Diseño gráfico
+989,Tecnología/técnico veterinario/salud animal y asistente de veterinaria
+990,Ciencias de materiales
+991,Tecnología de soldado/soldador
+992,"Tecnología/técnico de redacción y diseño, general"
+993,Tecnología/técnico de electrónica industrial
+994,Tecnología de máquina CNC (computadoras de control numérico)/maquinista CNC
+995,Tecnología/técnico de fabricación de herramientas y troquelado
+996,Ebanistería y carpintería
+997,"Operaciones de gestión de piezas, almacenaje e inventario"
+998,Tecnología/técnico de aeronáutica/ingeniería aeroespacial
+999,Tecnología de metales laminados/laminación
+1000,Maquinista de motores
+1001,Ingeniería química
+1002,"Ingeniería informática, general"
+1003,Ingeniería industrial
+1004,Ingeniería de materiales
+1005,"Operador de equipos gráficos y de impresión, producción general"
+1006,Tecnología/técnico industrial
+1007,Tecnología/técnico de instrumentación
+1008,Ingeniería mecánica/tecnología/técnico mecánico
+1009,Tecnología/técnico de mecánica de fuselaje y de mantenimiento de aviones
+1010,Tecnología/técnico químico
+1011,Manufactura de vestimenta y productos textiles
+1012,Trabajos/trabajador de hierro
+1013,Carpintería/carpintero
+1014,Tecnología de fontanería/fontanero
+1015,Albañilería/albañil
+1016,Tecnología/técnico de energía solar
+1017,Instalación de cartón yeso/yesero
+1018,Montaje/montador de construcciones de metal
+1019,Aislador
+1020,"Tecnología/técnico de mantenimiento de calefacción, aire acondicionado, ventilación y refrigeración"
+1021,Pintura/pintor y empapelador
+1022,Acabados de hormigón/técnico de hormigón
+1023,"Ingeniería civil, general"
+1024,Tecnología/técnico de mantenimiento de equipos pesados
+1025,Fabricación de calderas/calderero
+1026,Asistente de cuidados de emergencia (ambulancia de emergencias)
+1027,Ciencias marinas/Oficial de la marina mercante
+1028,Auxiliar de vuelo de aerolínea
+1029,Servicios de prevención de seguridad y pérdidas
+1030,Piloto de líneas aéreas/comercial/profesional y tripulación
+1031,Tecnología/técnico de mantenimiento de aviones
+1032,"Marketing/administración de marketing, general"
+1033,"Estadísticas, general"
+1034,Ciencias informáticas
+1035,Automatización de negocios/oficinas/tecnología/entrada de datos
+1036,Soporte de servicio para clientes/centro de llamadas/operación de teleservicios
+1037,Mantenimiento de edificios/propiedades
+1038,"Buzo, profesional e instructor"
+1039,Transcripción/transcriptor médico
+1040,Tecnología/técnico de mecánica y reparación de motores pequeños
+1041,"Empleado/técnico de tráfico, aduanas y transporte"
+1042,Tecnología/técnico de gestión de materias peligrosas y residuos
+1043,Transcripciones de tribunal/escribano de tribunal
+1044,Tecnología/técnico de control de calidad
+1045,Reparaciones de cerrajería y de seguridad
+1046,Arquitectura de paisajes
+1047,Administración de servicios turísticos y de viajes
+1048,Planificación de reuniones y eventos
+1049,"Horticultura aplicada/operaciones de horticultura, general"
+1050,Paisajismo y jardinería
+1051,Tecnología de ingeniería medioambiental/tecnología medioambiental
+1052,Tecnología/técnico de reciclado y gestión de calidad y tratamiento del agua
+1053,Trabajador de líneas eléctricas
+1054,Ingeniería eléctrica y electrónica
+1055,Ingeniería nuclear
+1056,Tecnología/técnico nuclear/de energía nuclear
+1057,Agronomía y ciencia de los cultivos
+1058,Mercadotecnia de moda
+1059,Moda/diseño de ropa
+1060,"Diseño y comunicaciones visuales, general"
+1061,Tecnología de maquinaria/equipamiento y mecánica de la agricultura
+1062,Operación de maquinaria agrícola
+1063,Propiedades inmobiliarias
+1064,Tecnología/técnico de artes de grabación
+1065,Especialista en soporte informático
+1066,Periodismo
+1067,"Drama y dramaturgia/artes teatrales, general"
+1068,Cinematografía y producción de películas y vídeos
+1069,"Redacción profesional, técnica, comercial y científica"
+1070,Tecnología/técnico de emisiones de radio y televisión
+1071,"Comunicaciones gráficas, general"
+1072,Preprensa/autoedición y diseño de imágenes digitales
+1073,Preparación de alimentos/cocina profesional/ asistente de cocina
+1074,Barman
+1075,"Gestión/administración de hospitales, general"
+1076,Artes culinarias/formación de jefe de cocina
+1077,Panadería y pastelería arte/panadero/pastelero
+1078,Dirección de casinos
+1079,Tecnología/técnico de minería
+1080,Perforación de pozos/perforador
+1081,Ingeniería de petróleo
+1082,Ingeniería geológica/geofísica
+1083,Tecnología/técnico de petróleo
+1084,Chorreadora/chorreador
+1085,Tecnología y procesamientos de alimentos
+1086,Ingeniería agrícola
+1087,Estudios ecuestres/equinos
+1088,Ciencias de la alimentación
+1089,"Gestión de compras, adquisiciones y contratos"
+1090,"Salud y educación física/fitness, general"
+1091,Entrenamiento de atletismo/entrenador
+1092,"Danza, general"
+1093,"Los investigadores de Singapur han desarrollado hoy una nueva técnica relacionada con la exposición a quemaduras menores, cortes, mordiscos o picaduras."
+1094,"Un nuevo algoritmo del Instituto de Tecnología de Singapur actúa como un humano ante la exposición a quemaduras menores, cortes, mordiscos o picaduras."
+1095,Los ingenieros malgaches han desarrollado hoy una nueva técnica relacionada con los sonidos y niveles de ruido molestos o desagradables.
+1096,El Instituto de Tecnología de Madagascar presentó un sistema que compite con los humanos en cuanto a los sonidos y niveles de ruido molestos o desagradables.
+1097,Los ingenieros ucranianos han descubierto un algoritmo capaz de exponerse a contaminantes.
+1098,El Instituto Ucraniano de Tecnología ha presentado un sistema que compite con los humanos en cuanto a exposición a contaminantes.
+1099,Los investigadores dominicanos han descubierto un algoritmo capaz de pasar tiempo inclinando o retorciendo el cuerpo.
+1100,Un nuevo algoritmo del Instituto Dominicano de Tecnología actúa como un humano al pasar tiempo inclinando o retorciendo el cuerpo.
+1101,Un algoritmo de los ingenieros de Isla del Coco actúa como un humano ante una iluminación extremadamente brillante o inadecuada.
+1102,El Instituto de Tecnología de Isla del Coco ha descubierto un algoritmo capaz de reaccionar a una iluminación extremadamente brillante o inadecuada.
+1103,Un algoritmo de los investigadores basothos actúa como un humano al pasar tiempo haciendo movimientos repetitivos.
+1104,Los investigadores de robótica del Instituto Basotho de Tecnología han desarrollado hoy una nueva técnica relacionada con pasar tiempo haciendo movimientos repetitivos.
+1105,Los científicos británicos han descubierto un algoritmo capaz de aguantar temperaturas muy altas o bajas.
+1106,El Instituto Británico de Tecnología ha presentado un sistema que compite con los humanos en cuanto a aguantar temperaturas muy altas o bajas.
+1107,Los ingenieros de Seychelles han desarrollado hoy una nueva técnica relacionada con la exposición a equipos peligrosos.
+1108,Un nuevo algoritmo del Instituto de Tecnología de Seychelles actúa como un humano ante la exposición a equipos peligrosos.
+1109,Los científicos de Trinidad han descubierto un algoritmo capaz de pasar tiempo andando y corriendo.
+1110,Los investigadores de robótica del Instituto de Tecnología de Trinidad han desarrollado hoy una nueva técnica relacionada con pasar tiempo andando y corriendo.
+1111,Los investigadores de Tonga han desarrollado hoy una nueva técnica que reacciona como un humano en un vehículo o equipamiento abierto.
+1112,El instituto de tecnología de Tonga ha descubierto un algoritmo capaz de reaccionar como un humano en un vehículo o equipamiento abierto.
+1113,"Los ingenieros griegos han descubierto un algoritmo capaz de pasar tiempo subiendo escaleras, andamios y postes."
+1114,"El Instituto Griego de Tecnología ha descubierto un algoritmo capaz de pasar tiempo subiendo escaleras, andamios y postes."
+1115,Los investigadores comorenses han desarrollado hoy una nueva técnica relacionada con la formación en el lugar de trabajo.
+1116,El Instituto Comorense de Tecnología ha presentado un sistema que compite con los humanos en cuanto a formación en el lugar de trabajo.
+1117,Los científicos sudafricanos han descubierto un algoritmo capaz de entrenar en la obra o en la planta.
+1118,El Instituto Sudafricano de Tecnología ha presentado un sistema que compite con los humanos en cuanto a entrenamiento en la obra o en la planta.
+1119,Los ingenieros de Islas Marshall han descubierto un algoritmo capaz de reconocer la importancia de repetir las mismas tareas.
+1120,El Instituto de Tecnología de Islas Marshall ha descubierto un algoritmo capaz de reconocer la importancia de repetir las mismas tareas.
+1121,"Un algoritmo de los investigadores finlandeses actúa como un humano al pasar tiempo de rodillas, agachado, encorvado o gateando."
+1122,"Un nuevo algoritmo del Instituto Finlandés de Tecnología actúa como un humano al pasar tiempo de rodillas, agachado, encorvado o gateando."
+1123,Los científicos chinos han descubierto un algoritmo capaz de pasar tiempo manteniendo y recuperando el equilibrio.
+1124,El Instituto Chino de Tecnología ha presentado un sistema que compite con los humanos en cuanto a pasar tiempo manteniendo o recuperando el equilibrio.
+1125,Los científicos del Vaticano han desarrollado hoy una nueva técnica relacionada con la destreza manual.
+1126,El Instituto de Tecnología del Vaticano ha presentado un sistema que compite con los humanos en cuanto a destreza manual.
+1127,Un algoritmo de los investigadores de Bahamas actúa como un humano al pasar tiempo de pie.
+1128,El Instituto de Tecnología de Bahamas ha presentado un sistema que compite con los humanos en cuanto a pasar tiempo de pie.
+1129,Los científicos islandeses han descubierto un algoritmo capaz de exponerse a condiciones peligrosas.
+1130,Los investigadores de robótica del Instituto Islandés de Tecnología han desarrollado hoy una nueva técnica relacionada con la exposición a condiciones peligrosas.
+1131,Un algoritmo de los investigadores de Seychelles actúa como un humano en cuanto a la destreza de los dedos.
+1132,Los investigadores de robótica del Instituto de Tecnología de Seychelles han desarrollado hoy una nueva técnica relacionada con la destreza de los dedos.
+1133,Un algoritmo de los investigadores de Burkinab√© actúa como un humano en interiores con ambiente no controlado.
+1134,Un nuevo algoritmo del Instituto de Tecnología de Burkinab√© actúa como un humano en interiores con ambiente no controlado.
+1135,Los científicos estadounidenses han desarrollado hoy una nueva técnica relacionada con la precisión de control.
+1136,El Instituto Estadounidense de Tecnología ha presentado un sistema que compite con los humanos en cuanto a precisión de control.
+1137,Un algoritmo de los investigadores de Nigeria actúa como un humano cuando se expone a la vibración del cuerpo entero.
+1138,Un nuevo algoritmo del Instituto de Tecnología de Nigeria actúa como un humano cuando se expone a la vibración del cuerpo entero.
+1139,Los científicos brasileños han desarrollado hoy una nueva técnica relacionada con la exposición a lugares elevados.
+1140,El Instituto Brasileño de Tecnología ha descubierto un algoritmo capaz de exponerse a lugares elevados.
+1141,Los investigadores de Esuatini han descubierto un algoritmo capaz de manejar y mover objetos.
+1142,Un nuevo algoritmo del Instituto de Tecnología de Esuatini actúa como un humano manejando y moviendo objetos.
+1143,Los ingenieros griegos han desarrollado hoy una nueva técnica relacionada con la velocidad muñeca-dedo.
+1144,El Instituto Griego de Tecnología ha presentado un sistema que compite con los humanos en cuanto a velocidad muñeca-dedo.
+1145,Un algoritmo de los científicos de Isla de Navidad actúa como un humano en cuanto a las consecuencias de los errores.
+1146,El Instituto de Tecnología de Isla de Navidad ha presentado un sistema que compite con los humanos en cuanto a gestionar las consecuencias de los errores.
+1147,Los investigadores egipcios han descubierto un algoritmo capaz de dar estabilidad mano-brazo.
+1148,Un nuevo algoritmo del Instituto Egipcio de Tecnología actúa como un humano en cuanto a estabilidad mano-brazo.
+1149,Los científicos de Maldivas han desarrollado hoy una nueva técnica relacionada con controlar máquinas y procesos.
+1150,Los investigadores de robótica del Instituto de Tecnología de Maldivas han desarrollado hoy una nueva técnica relacionada con controlar máquinas y procesos.
+1151,Los científicos de Brunéi han desarrollado hoy una nueva técnica relacionada con la presión del tiempo.
+1152,El Instituto de Tecnología de Brunéi ha presentado un sistema que compite con los humanos en cuanto a presión del tiempo.
+1153,Los científicos etíopes han desarrollado hoy una nueva técnica relacionada con los horarios de trabajo.
+1154,El Instituto Etíope de Tecnología ha descubierto un algoritmo capaz de manejar horarios de trabajo.
+1155,Los investigadores etíopes han descubierto un algoritmo capaz de responsabilizarse de la salud y la seguridad de otros.
+1156,Un nuevo algoritmo del Instituto Etíope de Tecnología actúa como un humano en cuanto a la responsabilidad de la salud y la seguridad de otros.
+1157,Los científicos portugueses han desarrollado hoy una nueva técnica relacionada con la importancia de ser exacto o preciso.
+1158,Los investigadores de robótica del Instituto Portugués de Tecnología han desarrollado hoy una nueva técnica relacionada con la importancia de ser exacto o preciso.
+1159,Los científicos eslovacos han descubierto un algoritmo capaz de tomar decisiones con frecuencia.
+1160,Un nuevo algoritmo del Instituto de Tecnología de Eslovaquia actúa como un humano en cuanto a la frecuencia de toma de decisiones.
+1161,Un algoritmo de los ingenieros niuanos actúa como un humano en cuanto a la velocidad de movimiento de extremidades.
+1162,El Instituto Niuano de Tecnología ha descubierto un algoritmo capaz de dar velocidad de movimiento de las extremidades.
+1163,Un algoritmo de los ingenieros de Antigua actúa como un humano en cuanto a la coordinación de múltiples extremidades.
+1164,Los investigadores de robótica del Instituto de Tecnología de Antigua han desarrollado hoy una nueva técnica relacionada con la coordinación de múltiples extremidades.
+1165,Los ingenieros de Tayikistán han desarrollado hoy una nueva técnica relacionada con la flexibilidad de extensión.
+1166,Un nuevo algoritmo del Instituto de Tecnología de Tayikistán actúa como un humano en cuanto a la flexibilidad de extensión.
+1167,Los investigadores de Islas Salomón han desarrollado hoy una nueva técnica relacionada con la fuerza estática.
+1168,Un nuevo algoritmo del Instituto de Tecnología de Islas Salomón actúa como un humano en cuanto a la fuerza estática.
+1169,Los ingenieros de Gibraltar han desarrollado hoy una nueva técnica relacionada con la operación y el control.
+1170,El Instituto de Tecnología de Gibraltar ha presentado un sistema que compite con los humanos en cuanto a operación y control.
+1171,Los ingenieros alemanes han desarrollado hoy una nueva técnica relacionada con tratar con personas desagradables o enfadadas.
+1172,Los investigadores de robótica del Instituto Alemán de Tecnología han desarrollado hoy una nueva técnica relacionada con tratar con personas desagradables o enfadadas.
+1173,Los investigadores de Santa Elena han desarrollado hoy una nueva técnica relacionada con las discusiones cara a cara.
+1174,El Instituto de Tecnología de Santa Elena ha presentado un sistema que compite con los humanos en cuanto a las discusiones cara a cara.
+1175,Los investigadores del Instituto de Tecnología de las Islas Vírgenes de los Estados Unidos han descubierto un algoritmo capaz de estar en contacto con otros.
+1176,Los investigadores de robótica del Instituto de Tecnología de las Islas Vírgenes de los Estados Unidos han desarrollado hoy una nueva técnica relacionada con el contacto con otros.
+1177,Los científicos de Belice han descubierto un algoritmo capaz de prestar atención auditiva.
+1178,Los investigadores de robótica del Instituto de Tecnología de Belice han desarrollado hoy una nueva técnica relacionada con la atención auditiva.
+1179,Los investigadores de la isla Bouvet han desarrollado hoy una nueva técnica relacionada con la proximidad física.
+1180,Un nuevo algoritmo del Instituto de Tecnología de isla Bouvet actúa como un humano en cuanto a la proximidad física.
+1181,Un algoritmo de los ingenieros de Eslovenia actúa como un humano en cuanto a la reparación y el mantenimiento de equipos mecánicos.
+1182,El Instituto Esloveno de Tecnología ha presentado un sistema que compite con los humanos en cuanto a reparar y mantener equipos mecánicos.
+1183,Los científicos de la Antártida han desarrollado hoy una nueva técnica relacionada con los espacios exteriores y la exposición al clima.
+1184,Un nuevo algoritmo del Instituto de Tecnología de la Antártida actúa como un humano en exteriores y expuesto al clima.
+1185,Los ingenieros noruegos han descubierto un algoritmo capaz de responsabilizarse por los resultados.
+1186,Los investigadores de robótica del Instituto Noruego de Tecnología han desarrollado hoy una nueva técnica relacionada con la responsabilidad de los resultados.
+1187,Un algoritmo de los ingenieros de Camboya actúa como un humano en cuanto a fuerza dinámica.
+1188,Un nuevo algoritmo del Instituto de Tecnología de Camboya actúa como un humano en cuanto a fuerza dinámica.
+1189,"Un algoritmo de los ingenieros británicos actúa como un humano al inspeccionar equipos, estructuras y materiales."
+1190,"Los investigadores de robótica del Instituto Británico de Tecnología han desarrollado hoy una nueva técnica relacionada con inspeccionar equipos, estructuras y materiales."
+1191,Un algoritmo de los ingenieros de Singapur actúa como un humano en cuanto al mantenimiento de equipos.
+1192,El Instituto de Tecnología de Singapur ha descubierto un algoritmo capaz de mantener los equipos.
+1193,Un algoritmo de los investigadores de Seychelles actúa como un humano al trabajar con un grupo o equipo de trabajo.
+1194,El Instituto de Tecnología de Seychelles ha presentado un sistema que compite con los humanos en cuanto a trabajar con un grupo o equipo de trabajo.
+1195,Un algoritmo de los ingenieros de Guinea actúa como un humano en cuanto al aguante.
+1196,Los investigadores de robótica del Instituto de Tecnología de Guinea han desarrollado hoy una nueva técnica relacionada con el aguante.
+1197,Los científicos de S√£o Tom√©an han descubierto un algoritmo capaz de reparar.
+1198,El Instituto de Tecnología de S√£o Tom√©an ha descubierto un algoritmo capaz de reparar.
+1199,Los científicos de Emiratos han desarrollado hoy una nueva técnica relacionada con la atención selectiva.
+1200,Los investigadores de robótica del Instituto de Tecnología de Emiratos Árabes Unidos han desarrollado hoy una nueva técnica relacionada con la atención selectiva.
+1201,Los ingenieros de Taiwán han desarrollado hoy una nueva técnica relacionada con la coordinación general del cuerpo.
+1202,El Instituto de Tecnología de Taiwán ha presentado un sistema que compite con los humanos en cuanto a coordinación general del cuerpo.
+1203,Un algoritmo de los ingenieros de Baréin actúa como un humano en cuanto a sensibilidad auditiva.
+1204,El Instituto de Tecnología de Baréin ha descubierto un algoritmo con sensibilidad auditiva.
+1205,Los ingenieros de Costa Rica han descubierto un algoritmo con sensibilidad a la luz.
+1206,El Instituto de Tecnología de Costa Rica ha descubierto un algoritmo con sensibilidad a la luz.
+1207,"Los ingenieros de Islas Marianas del Norte han descubierto un algoritmo capaz de operar vehículos, dispositivos o equipos mecanizados."
+1208,"El Instituto de Tecnología de Islas Marianas del Norte ha descubierto un algoritmo capaz de operar vehículos, dispositivos o equipos mecanizados."
+1209,Los ingenieros de África Central han desarrollado hoy una nueva técnica relacionada con la localización del sonido.
+1210,Los investigadores de robótica del Instituto de Tecnología de África Central han desarrollado hoy una nueva técnica relacionada con la localización del sonido.
+1211,Los científicos de Mónaco han desarrollado hoy una nueva técnica relacionada con la exposición a la radiación.
+1212,Los investigadores de robótica del Instituto de Tecnología de Mónaco han desarrollado hoy una nueva técnica relacionada con la exposición a la radiación.
+1213,Un algoritmo de los ingenieros australianos actúa como un humano en cuanto a la percepción de profundidad.
+1214,El Instituto Australiano de Tecnología ha presentado un sistema que compite con los humanos en cuanto a percepción de profundidad.
+1215,Los ingenieros de Sudán del Sur han desarrollado hoy una nueva técnica relacionada con la vista de cerca.
+1216,Un nuevo algoritmo del Instituto de Tecnología de Sudán del Sur actúa como un humano en cuanto a la vista de cerca.
+1217,Los investigadores tailandeses han desarrollado hoy una nueva técnica relacionada con la velocidad de percepción.
+1218,Los investigadores de robótica del Instituto Tailandés de Tecnología han desarrollado hoy una nueva técnica relacionada con la velocidad de percepción.
+1219,Un algoritmo de los ingenieros de Saint-Pierre actúa como un humano en cuanto a la vista periférica.
+1220,Los investigadores de robótica del Instituto de Tecnología de Saint-Pierre han desarrollado hoy una nueva técnica relacionada con la vista periférica.
+1221,Los investigadores austríacos han desarrollado hoy una nueva técnica relacionada con la mecánica.
+1222,Un nuevo algoritmo del Instituto Austríaco de Tecnología actúa como un humano en cuanto a mecánica.
+1223,Un algoritmo de los ingenieros de Islas Pitcairn actúa como un humano al producir y procesar.
+1224,El Instituto de Tecnología de Islas Pitcairn ha descubierto un algoritmo capaz de producir y procesar.
+1225,Los ingenieros azeríes han descubierto un algoritmo capaz de mantener el equilibrio general del cuerpo.
+1226,Un nuevo algoritmo del Instituto Azeri de Tecnología actúa como un humano en cuanto al equilibrio general del cuerpo.
+1227,Los ingenieros canadienses han descubierto un algoritmo capaz de mejorar el nivel de competición.
+1228,El Instituto de Tecnología de Canadá ha presentado un sistema que compite con los humanos en cuanto a nivel de competición.
+1229,Los científicos de la Antártida han descubierto un algoritmo con visión nocturna.
+1230,El Instituto de Tecnología de la Antártida ha descubierto un algoritmo con visión nocturna.
+1231,Un algoritmo de los ingenieros de Gabón actúa como un humano en cuanto a duración de la semana laboral típica.
+1232,El Instituto de Tecnología de Gabón ha descubierto un algoritmo capaz de actuar como un humano en relación a la duración de la semana laboral típica.
+1233,Un algoritmo de los investigadores de Somalilandia actúa como un humano en cuanto a orientación espacial.
+1234,Un nuevo algoritmo del Instituto de Tecnología de Somalilandia actúa como un humano en cuanto a orientación espacial.
+1235,Los ingenieros de las Islas Vírgenes Británicas han desarrollado hoy una nueva técnica relacionada con los análisis de control de calidad.
+1236,Un nuevo algoritmo del Instituto de Tecnología de las Islas Vírgenes Británicas actúa como un humano en cuanto a los análisis de control de calidad.
+1237,Los ingenieros de Montserrat han descubierto un algoritmo capaz de coordinar o liderar a otros.
+1238,El Instituto de Tecnología de Montserrat ha presentado un sistema que compite con los humanos en cuanto a coordinar o liderar a otros.
+1239,Los científicos de Esuatini han desarrollado hoy una nueva técnica relacionada con tratar con personas físicamente agresivas.
+1240,El Instituto de Tecnología de Esuatini ha presentado un sistema que compite con los humanos en cuanto a tratar con personas físicamente agresivas.
+1241,Los investigadores birmanos han descubierto un algoritmo con discriminación visual del color.
+1242,El Instituto de Tecnología de Birmania ha descubierto un algoritmo con discriminación visual del color.
+1243,Un algoritmo de los ingenieros finlandeses actúa como un humano en cuanto a la reparación y el mantenimiento de equipos eléctricos.
+1244,Un nuevo algoritmo del Instituto Finlandés de Tecnología actúa como un humano en cuanto a la reparación y el mantenimiento de equipos eléctricos.
+1245,Los científicos bosnios han descubierto un algoritmo capaz de tratar con clientes externos.
+1246,El Instituto de Tecnología de Bosnia ha presentado un sistema que compite con los humanos en cuanto a tratar con clientes externos.
+1247,Los investigadores yemeníes han desarrollado hoy una nueva técnica relacionada con la vista de lejos.
+1248,El Instituto Yemení de Tecnología ha presentado un sistema que compite con los humanos en cuanto a vista de lejos.
+1249,Un algoritmo de los científicos de Guinea actúa como un humano en cuanto al teléfono.
+1250,Un nuevo algoritmo del Instituto de Tecnología de Guinea actúa como un humano en cuanto al teléfono.
+1251,Un algoritmo de los ingenieros malteses actúa como un humano en cuanto a flexibilidad dinámica.
+1252,Un nuevo algoritmo del Instituto de Tecnología de Malta actúa como un humano en cuanto a flexibilidad dinámica.
+1253,Los científicos británicos han desarrollado hoy una nueva técnica relacionada con la edificación y construcción.
+1254,El Instituto Británico de Tecnología ha presentado un sistema que compite con los humanos en cuanto a edificación y construcción.
+1255,Un algoritmo de los científicos de Isla de Navidad actúa como un humano en cuanto a transporte.
+1256,El Instituto de Tecnología de Isla de Navidad ha presentado un sistema que compite con los humanos en cuanto a transporte.
+1257,Los científicos de Puerto Rico han descubierto un algoritmo capaz de pasar tiempo sentado.
+1258,Un nuevo algoritmo del Instituto de Tecnología de Puerto Rico actúa como un humano al pasar tiempo sentado.
+1259,"Los ingenieros de Singapur han descubierto un algoritmo capaz de vigilar procesos, materiales y alrededores."
+1260,"El Instituto de Tecnología de Singapur ha presentado un sistema que compite con los humanos en cuanto a vigilar procesos, materiales y alrededores."
+1261,Un algoritmo de los científicos georgianos actúa como un humano en cuanto a la producción de alimentos.
+1262,El Instituto Georgiano de Tecnología ha presentado un sistema que compite con los humanos en cuanto a la producción de alimentos.
+1263,Un algoritmo de los ingenieros hondureños actúa como un humano en cuanto a la seguridad pública.
+1264,El Instituto Hondureño de Tecnología ha descubierto un algoritmo capaz de reaccionar como un humano en relación a la seguridad pública.
+1265,Un algoritmo de los científicos de la isla Bouvet actúa como un humano en cuanto a compartir tiempo.
+1266,Un nuevo algoritmo del Instituto de Tecnología de isla Bouvet actúa como un humano en cuanto a compartir tiempo.
+1267,Los científicos ecuatorianos han descubierto un algoritmo capaz de exponerse a enfermedades o infecciones.
+1268,El Instituto Ecuatoriano de Tecnología ha presentado un sistema que compite con los humanos en cuanto a exposición a enfermedades o infecciones.
+1269,Un algoritmo de los científicos rusos actúa como un humano en cuanto a visualización.
+1270,El Instituto Ruso de Tecnología ha presentado un sistema que compite con los humanos en cuanto a visualización.
+1271,Un algoritmo de los científicos de Costa de Marfil actúa como un humano en cuanto a escribir cartas y notas.
+1272,Un nuevo algoritmo del Instituto de Tecnología de Costa de Marfil actúa como un humano en cuanto a escribir cartas y notas.
+1273,Los ingenieros de Namibia han desarrollado hoy una nueva técnica relacionada con la fuerza explosiva.
+1274,El Instituto de Tecnología de Namibia ha descubierto un algoritmo con fuerza explosiva.
+1275,"Los investigadores laosianos han descubierto un algoritmo capaz de esbozar, diseñar y especificar dispositivos, piezas y equipos."
+1276,"Un nuevo algoritmo del Instituto Laosiano de Tecnología actúa como un humano en cuanto a esbozar, diseñar y especificar dispositivos, piezas y equipos."
+1277,Habilidades cognitivas
+1278,Habilidades psicomotrices
+1279,Habilidades físicas
+1280,Habilidades sensoriales
+1281,Contenido
+1282,Proceso
+1283,Habilidades sociales
+1284,Habilidades de resolución de problemas complejos
+1285,Habilidades técnicas
+1286,Habilidades con sistemas
+1287,Habilidades de gestión de recursos
+1288,Comercio y administración
+1289,Fabricación y producción
+1290,Ingeniería y tecnología
+1291,Matemáticas y ciencia
+1292,Servicios sanitarios
+1293,Arte y humanidades
+1294,Ley y seguridad pública
+1295,Comunicaciones
+1296,Entrada de información
+1297,Procesos mentales
+1298,Rendimiento del trabajo
+1299,Interacción con otros
+1300,Relaciones interpersonales
+1301,Condiciones de trabajo físico
+1302,Comprensión oral
+1303,Comprensión escrita
+1304,Expresión oral
+1305,Expresión escrita
+1306,Fluidez de ideas
+1307,Originalidad
+1308,Sensibilidad a los problemas
+1309,Razonamiento deductivo
+1310,Razonamiento inductivo
+1311,Solicitud de información
+1312,Flexibilidad de la categoría
+1313,Razonamiento matemático
+1314,Facilidad con los números
+1315,Memorización
+1316,Velocidad de conclusión
+1317,Flexibilidad de conclusión
+1318,Velocidad de percepción
+1319,Orientación espacial
+1320,Visualización
+1321,Atención selectiva
+1322,Compartir tiempo
+1323,Estabilidad mano-brazo
+1324,Destreza manual
+1325,Destreza de los dedos
+1326,Precisión de control
+1327,Coordinación de múltiples extremidades
+1328,Orientación de respuesta
+1329,Control de clasificación
+1330,Tiempo de reacción
+1331,Velocidad muñeca-dedo
+1332,Velocidad de movimiento de las extremidades
+1333,Fuerza estática
+1334,Fuerza explosiva
+1335,Fuerza dinámica
+1336,Fuerza del tronco
+1337,Aguante
+1338,Flexibilidad de extensión
+1339,Flexibilidad dinámica
+1340,Coordinación general del cuerpo
+1341,Equilibrio general del cuerpo
+1342,Vista de cerca
+1343,Vista de lejos
+1344,Discriminación visual del color
+1345,Vista nocturna
+1346,Vista periférica
+1347,Percepción de profundidad
+1348,Sensibilidad a la luz
+1349,Sensibilidad auditiva
+1350,Atención auditiva
+1351,Localización del sonido
+1352,Reconocimiento de voz
+1353,Claridad de voz
+1354,Nivel de educación requerido
+1355,Experiencia laboral relacionada
+1356,Entrenamiento en la obra o en la planta
+1357,Formación en el lugar de trabajo
+1358,Realista
+1359,Investigador
+1360,Artístico
+1361,Social
+1362,Emprendedor
+1363,Convencional
+1364,Primer punto alto de interés
+1365,Segundo punto alto de interés
+1366,Tercer punto alto de interés
+1367,Administración y gestión
+1368,Oficinista
+1369,Economía y contabilidad
+1370,Venta y mercadotecnia
+1371,Servicio al cliente y personal
+1372,Personal y recursos humanos
+1373,Producción y procesamiento
+1374,Producción de alimentos
+1375,Ordenadores y electrónica
+1376,Diseño
+1377,Edificación y construcción
+1378,Mecánica
+1379,Matemáticas
+1380,Física
+1381,Química
+1382,Biología
+1383,Psicología
+1384,Sociología y antropología
+1385,Medicina y odontología
+1386,Terapia y orientación
+1387,Educación y formación
+1388,Inglés
+1389,Idioma extranjero
+1390,Bellas Artes
+1391,Historia y arqueología
+1392,Filosofía y teología
+1393,Seguridad pública
+1394,Derecho y gobierno
+1395,Telecomunicaciones
+1396,Comunicaciones y medios
+1397,Transporte
+1398,Comprensión lectora
+1399,Escucha activa
+1400,Escritura
+1401,Hablar
+1402,Ciencia
+1403,Pensamiento crítico
+1404,Aprendizaje activo
+1405,Estrategias de aprendizaje
+1406,Vigilancia
+1407,Percepción social
+1408,Coordinación
+1409,Persuasión
+1410,Negociación
+1411,Formación
+1412,Orientación de servicio
+1413,Resolución de problemas complejos
+1414,Análisis de operaciones
+1415,Diseño tecnológico
+1416,Selección de equipos
+1417,Instalación
+1418,Programación
+1419,Vigilancia de operaciones
+1420,Operación y control
+1421,Mantenimiento de equipos
+1422,Resolución de problemas
+1423,Reparación
+1424,Análisis de control de calidad
+1425,Juicio y toma de decisiones
+1426,Análisis de sistemas
+1427,Evaluación de sistemas
+1428,Gestión del tiempo
+1429,Gestión de recursos financieros
+1430,Gestión de recursos materiales
+1431,Gestión de recursos humanos
+1432,Obtener información
+1433,"Vigilar procesos, materiales y alrededores"
+1434,"Identificar objetos, acciones y eventos"
+1435,"Inspeccionar equipos, estructuras y materiales"
+1436,"Estimar las características cuantificables de productos, eventos o información"
+1437,"Juzgar las cualidades de las cosas, servicios o personas"
+1438,Procesar información
+1439,Cumplimiento de normas
+1440,Analizar datos e información
+1441,Tomar decisiones y solucionar problemas
+1442,Pensar de forma creativa
+1443,Actualizar y utilizar el conocimiento pertinente
+1444,Desarrollar objetivos y estrategias
+1445,Programar trabajo y actividades
+1446,"Organizar, planificar y priorizar trabajo"
+1447,Realizar actividades físicas en general
+1448,Manejar y mover objetos
+1449,Controlar máquinas y procesos
+1450,Operar vehículos y equipos
+1451,Interactuar con ordenadores
+1452,Trabajar con dispositivos técnicos
+1453,Reparar y mantener equipos mecánicos
+1454,Reparar y mantener equipos electrónicos
+1455,Documentación/recopilación de información
+1456,Interpretación del significado de la información para otros
+1457,"Comunicación con supervisores, iguales o subordinados"
+1458,Comunicación con personas ajenas a la organización
+1459,Establecimiento y mantenimiento de relaciones interpersonales
+1460,Asistencia y cuidado de otros
+1461,Ventas e influencia sobre otros
+1462,Resolver conflictos y negociar con otros
+1463,Trabajar o realizar trabajos directamente con el público
+1464,Coordinar el trabajo y las actividades de otros
+1465,Desarrollar y formar equipos
+1466,Entrenamiento y enseñanza a otros
+1467,"Liderar, dirigir y motivar a subordinados"
+1468,Desarrollar y orientar a otros
+1469,Proporcionar asesoramiento y consejos a otros
+1470,Realizar actividades administrativas
+1471,Contratación de unidades organizativas
+1472,Vigilar y controlar recursos
+1473,Hablar en público
+1474,Teléfono
+1475,Correo electrónico
+1476,Escribir cartas y notas
+1477,Discusiones cara a cara
+1478,Contacto con otros
+1479,Trabajar con un equipo
+1480,Tratar con clientes externos
+1481,Coordinar y liderar a otros
+1482,Ser responsable de la salud y la seguridad de otros
+1483,Ser responsable de los resultados
+1484,Frecuencia de situaciones de conflicto
+1485,Tratar con personas desagradables o enfadadas
+1486,Tratar con personas físicamente agresivas
+1487,"En interior, con ambiente controlado"
+1488,Resistencia a interiores con ambiente inestable
+1489,Resistencia al clima exterior
+1490,"Al aire libre, bajo cubierta"
+1491,Operar vehículos y equipos abiertos
+1492,En un vehículo o equipo cerrado
+1493,Proximidad física
+1494,Resistencia a sonidos desagradables
+1495,Resistencia a temperaturas muy frías y calientes
+1496,Resistencia a iluminación muy brillante y tenue
+1497,Resistencia a contaminantes
+1498,"Espacio de trabajo reducido, posturas forzadas"
+1499,Resistencia del cuerpo entero a las vibraciones
+1500,Resistencia a la radiación
+1501,Resistencia a la enfermedad o infección
+1502,Resistencia a lugares elevados
+1503,Resistencia a condiciones peligrosas
+1504,Resistencia a equipos peligrosos
+1505,Resistencia a lesiones menores
+1506,Pasar tiempo sentado
+1507,Estar de pie
+1508,"Subir escaleras, andamios y postes"
+1509,Andar y correr
+1510,"Arrodillarse, agacharse y gatear"
+1511,Mantener y recuperar el equilibrio
+1512,"Pasar tiempo usando las manos para manejar, controlar o sentir objetos, herramientas y controles"
+1513,Inclinar y retorcer el cuerpo
+1514,Realizar movimientos repetitivos
+1515,"Llevar equipo de seguridad o protección común, como zapatos de seguridad, gafas, guantes, protección auditiva, cascos o chalecos salvavidas"
+1516,"Llevar equipo de seguridad o protección especial, como equipos de respiración, arnés de seguridad, trajes de protección total o protección contra la radiación"
+1517,Gestionar las consecuencias de los errores
+1518,Impacto de las decisiones sobre los compañeros de trabajo o los resultados de la empresa
+1519,Tomar decisiones frecuentes
+1520,Libertad para tomar decisiones
+1521,Nivel de automatización
+1522,Ser exacto o preciso
+1523,Repetir las mismas tareas
+1524,Trabajo estructurado versus no estructurado
+1525,Ser competitivo|
+1526,Lidiar con la presión del tiempo
+1527,Ritmo determinado por la velocidad del equipo
+1528,Manejo de horarios de trabajo
+1529,Duración de la semana laboral típica

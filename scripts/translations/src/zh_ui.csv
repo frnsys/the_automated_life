@@ -1,0 +1,145 @@
+stat_age,年龄
+stat_date,日期
+stat_savings,积蓄
+stat_wage,月工资
+stat_education,教育程度
+stat_current_job,目前的工作
+month_unit,mo
+school_remaining,在校再呆 {months} 月
+application_notice,应用于 {name}
+Fow Game Translations_zh,${amount} 生活
+debt_expenses,${amount} 债务
+monthly_expenses,${amount}/每月的费用
+retirement_progress,退休的进展
+retirement_early,提前退休
+retirement_early_tip,有 ${amount} 存款以提前退休
+retirement_remaining,{years} 距离退休的年限
+retirement_savings_remaining,${amount} 需要更多才能退休
+in_school_notice,在学校
+unemployed_notice,无业
+game_over_warning,您负债太多。如果您负债高达 ${amount}，那么您将输掉这场比赛。
+game_over_notice,游戏结束
+game_over_debt,您积累了太多的债务。
+game_over_win,您成功地从自动化中幸存下来，并退休了。
+game_over_lose,您没有攒够钱退休。
+game_over_thanks,感谢您播放《自动化世界》。请花一点时间填写此调查。
+game_over_win_share,我在 ü§ñ 中逃脱了自动化！
+game_over_lose_share,我在 ü§ñ 中未能逃脱了自动化。
+game_over_lose_summary_result,您没有做到。{percent}% 的玩家也没有做到。
+game_over_win_summary_result,您做到了。{percent}% 的玩家也做到了。
+likert_0,强烈反对
+likert_1,不同意
+likert_2,中性
+likert_3,同意
+likert_4,非常同意
+survey_age_label,年龄
+survey_education_label,教育程度
+survey_occupation_label,职业
+survey_automation_society_question,您认为自动化会给社会带来经济效益吗？
+survey_automation_individual_question,您认为自动化将有益于个人福祉？
+survey_submitted,您的答案已提交。
+survey_submit_button,提交
+robot_release,RoboCo 发布了{name}。它擅长{skills}。
+robot_release_long,经过多年的研究和开发，RoboCo 发布了。它擅长{skills}。任何涉及此技能的工作都会受到影响。
+news_silence_note,隐藏未来的新闻。它们仍然会在右下角显示通知。
+birthday_title,{age}岁生日快乐！
+birthday_body,您离退休还有年。照这个速度，到那时您的存款可以达到 ${estimate}。
+inflation,由于通货膨胀，您的生活费用增加了。
+hired,您被雇为{name}。
+rejected,由于您的{mainFactor}，您申请{name}一职被拒绝。
+deepening_automation,{name}的生产力影响是广泛的。
+drop_out,您辍学了。
+graduated,恭喜您！您毕业了
+performance_terrible,可怕的
+performance_bad,坏的
+performance_mediocre,平常
+performance_good,好的
+performance_fantastic,太棒了
+performance,表现
+work_button,工作
+low_risk_automation,低风险
+mid_risk_automation,中风险
+high_risk_automation,高风险
+low,低
+moderate,中
+high,高
+automated,自动化的
+percent_automated,自动化的
+automation_risk,自动化风险
+improving_on_job,在这项工作上提高
+improving_skill,提高技能
+important_skills,重要的技能
+your_skill_level,您的技能水平
+your_skills,您的技能
+skills_info,随着时间的推移，您的技能会随着工作的需要而自动提高。
+application_out,申请退出
+past_job,过去的工作
+current_job,目前的工作
+robot_maintenance,机器人维护
+percent_skills_automated,{percent}% 的技能已自动化
+Jan,一月
+Feb,二月
+Mar,三月
+Apr,四月
+May,五月
+Jun,六月
+Jul,七月
+Aug,八月
+Sep,九月
+Oct,十月
+Nov,十一月
+Dec,十二月
+years_duration,{years} 年
+study_program,学习 {name}
+already_enrolled,您已经注册。
+fully_educated,教育系统已经教授了您一切。
+select_program,选择要注册的程序
+loan_warning,您负担不起学费。如果您注册，您将获得一笔贷款来支付以下条款的所有费用
+interest_rate,利率
+loan_terms,{rate}% 固定，{years} 年
+next_level,下一级
+enroll_button,注册
+education_title,教育
+cost_in_wages,{months} 月工资
+school_cost,费用，加上生活花费
+after_subsidy,补贴后费用
+subsidy_note,您可以获得一笔教育津贴来支付您{subsidy}%的花费。
+school_postsecondary_note,高等教育学历不会带来新的工作机会，但会让您更容易找到更高级的工作。
+start_welcome,欢迎来到自动化世界！
+start_intro,本游戏是对工作流动性和自动化剧增的探索。您的起步工作有很高的自动化风险。试着找一份相对安全的工作。
+start_goal,您的目标在 {age} 岁退休时有一笔 {age} 的存款。
+select_starting_job,选择您的起步工作
+select_starting_job_button,选择工作
+notification_history_title,历史
+pause_button,暂停
+start_button,开始
+resume_button,简历
+skills_button,查看技能
+school_button,上学
+notification_history_button,通知历史
+hint_job_graph,这是工作网络。工作基于其技能的相似性相互关联。<b style='color:#fff;background:#0e55ef;'>深蓝色</b>节点是您当前的工作。<br /><br /><b style='color:#fff;background:#4fc6ea;'>浅蓝色</b>节点是您可以通过<img src='/static/pointer.png' width='9px' /><span style='text-decoration:underline;'>单击</span><b style='background:#f9ca2f;'>获得的</b>工作（需要 {applicationMonths} 个月的时间才能得到答复）。被录用的机会取决于您的相关<em>技能水平</em>、<em>学历</em>和当前的<em>工作表现</em>。<br /><br /><b style='color:#fff;background:#51728c;'>深灰色</b> 是您以前的工作。您可以随时重新申请。<br /><br /><img src='/static/cursor.png' width='7px' /><span style='text-decoration:underline;'>鼠标滑过</span>一份工作，查看它的技能要求、月薪、自动化风险和您当前的技能水平。
+hint_hud,在这里，您可以查看您当前的 🎂 年龄、🏦 存款、💸 收入、支出、🎓 教育程度和 🛠️ 工作。<br /><br /><b style='color:#fff;background:#395be5;'>技能</b>菜单将显示您的技能，而<b style='color:#fff;background:#395be5;'>学校</b>菜单可让您注册学校。
+hint_work,<b style='color:#fff;background:#ea432a;'>工作任务</b>将在这里显示。<img src='/static/pointer.png' width='9px' /><span style='text-decoration:underline;'>单击</span>任意一项完成任务并提高工作<b style='color:#fff;background:#d119e5;'>表现</b>。这会影响您获得新工作的机会。
+twitter_share,分享到 Twitter
+facebook_share,分享到 Facebook
+counterfactual,如果没有自动化，您会比现在多赚${amount} {comp}。
+njobs_outcome,您做过{nJobs}不同的工作。比其他玩家多{amount} {comp}。
+debt_outcome,您贷款了 ${loans}。比其他玩家多${amount} {comp}。
+how_to_play_title,如何支付
+how_to_play,<p><b style='background:#f9ca2f;'>申请</b>新工作可<img src='/static/pointer.png' width='9px' /><span style='text-decoration:underline;'>单击</span>工作网络中的<b style='color:#fff;background:#4fc6ea;'>淡蓝色</b>节点。<img src='/static/cursor.png' width='7px' /><span style='text-decoration:underline;'>鼠标滑过</span>工作了解详情。</p><p>保持您的<b style='color:#fff;background:#d119e5;'>表现</b>可（<img src='/static/pointer.png' width='9px' /><span style='text-decoration:underline;'>单击</span>）右上角<b style='color:#fff;background:#ea432a;'>工作</b>。</p><p>您的月花费会从您的 üè¶ 存款中自动扣除。如果您负债过多，游戏将结束。</p><p>您可以在左下角跟踪实现退休 üèñÔ∏è 目标的进度。</p><p>如果您遇到困难或者需要一点时间，不要担心。您可以随时<b style='color:#fff;background:#395be5;'>暂停</b>游戏。</p>
+consent_form_title,成人参与者的研究信息和知情同意书
+consent_form_section_1_title,1.研究目的
+consent_form_section_1,在<em>自动化生活</em> 研究中，我们想调查人们如何换工作以避免自动化的负面影响。
+consent_form_section_2_title,2.研究的步骤和内容
+consent_form_section_2,为此，我们需要您玩一个在线视频游戏。该游戏需要在定时环境中做出有关工作、技能和自动化的决定。参与者之间的游戏界面可能会略有改变，以衡量不同信息对人们如何选择游戏的影响。
+consent_form_section_3_title,3.收集到的信息和数据将如何处理？
+consent_form_section_3,本研究是马克斯·普朗克人类发展研究所（MPI）的一个研究项目。收集到的关于您如何玩游戏的匿名数据将仅用于研究目的。<br /><br />不会记录任何个人数据。我们使用您的 IP 地址来确定您访问站点的国家，但我们不会存储完整的 IP 地址。如果您选择参加退出调查，我们将把您的年龄、性别和教育水平等广泛信息与您的游戏路径联系起来。<br /><br />研究数据可以通过研究数据库或科学出版物公开获取。请注意，可公开访问的数据也可用于本研究之外的用途。
+consent_form_section_4_title,4.自愿参加
+consent_form_section_4,参与本研究是自愿的。您可以在游戏结束前的任何时间退出研究。
+consent_form_section_5_title,5.同意
+consent_form_section_5,<em>自动化生活</em>研究包括一个约 30 分钟的游戏。您可以任意玩，不限次数。<br /><br />勾选下面的方框，表示您已阅读并理解上述条件，同意参与研究，并同意按上述方式收集、存储和使用我的数据。
+consent_label,我了解条件并同意。
+consent_submit_button,提交
+news_title,爆炸新闻
+bad_performance_warning,您{months}个月的工作表现很糟糕。如果您不振作起来就会被解雇！
+fired,您因表现欠佳而被解雇。

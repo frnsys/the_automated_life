@@ -1,0 +1,145 @@
+stat_age,Alter
+stat_date,Datum
+stat_savings,Ersparnisse
+stat_wage,Monatslohn
+stat_education,Bildungsgrad
+stat_current_job,Derzeitige Arbeit
+month_unit,mo
+school_remaining,Weitere {months} Monate in der Schule
+application_notice,Angewandt auf {name}
+living_expenses,${amount} Leben
+debt_expenses,${amount} Schulden
+monthly_expenses,${amount}/Monat an Ausgaben
+retirement_progress,Fortschritt im Hinblick auf den Ruhestand
+retirement_early,Frührente/Frühpension
+retirement_early_tip,"Sie brauchen ${amount} an Ersparnissen, um in den Frühruhestand zu gehen"
+retirement_remaining,{years} Jahre bis zum Ruhestand
+retirement_savings_remaining,${amount} Für den Ruhestand werden mehr benötigt
+in_school_notice,In Schule
+unemployed_notice,Arbeitslos
+game_over_warning,"Sie sind stark verschuldet. Wenn Sie Schulden in Höhe von ${amount} erreichen, werden Sie das Spiel verlieren."
+game_over_notice,Das Spiel ist aus
+game_over_debt,Sie haben zu viele Schulden angehäuft.
+game_over_win,Sie haben die Automatisierung erfolgreich überlebt und haben es in den Ruhestand geschafft.
+game_over_lose,"Sie konnten keine ausreichenden Ersparnisse anlegen, um in den Ruhestand zu treten."
+game_over_thanks,"Vielen Dank, dass Sie ""Die automatisierte Welt gespielt"" haben. Nehmen Sie sich bitte einen Augenblick Zeit und füllen Sie die Umfrage aus."
+game_over_win_share,Ich bin der Automatisierung in ü§ñ der automatisierten Welt üåé entgangen!
+game_over_lose_share,"Ich habe es nicht geschafft, der Automatisierung in ü§ñ der automatisierten Welt üåé zu entgehen."
+game_over_lose_summary_result,Sie haben es nicht geschafft. {percent}% der Spieler haben es ebenfalls nicht geschafft.
+game_over_win_summary_result,Sie haben es geschafft. {percent}% der Spieler haben es ebenfalls geschafft.
+likert_0,Ich stimme überhaupt nicht zu
+likert_1,Ich stimme nicht zu
+likert_2,Neutral
+likert_3,Ich stimme zu
+likert_4,Ich stimme absolut zu
+survey_age_label,Alter
+survey_education_label,Bildungsgrad
+survey_occupation_label,Beschäftigung
+survey_automation_society_question,Wird die Gesellschaft Ihrer Meinung nach von der Automatisierung profitieren?
+survey_automation_individual_question,Wird das persönliche Wohlergehen Ihrer Meinung nach von der Automatisierung profitieren?
+survey_submitted,Ihre Antworten wurden versandt.
+survey_submit_button,Absenden
+robot_release,RoboCo bringt {name} heraus. Es ist hervorragend in {skills}.
+robot_release_long,"Nach Jahren der Forschung und Entwicklung hat RoboCo {name} herausgebracht. Es ist hervorragend in {skills}. Sämtliche Arbeiten, die diese Fertigkeit beinhalten, werden davon betroffen sein."
+news_silence_note,Künftige Nachrichten verbergen. Unten rechts werden dennoch Benachrichtigungen angezeigt.
+birthday_title,Herzlichen Glückwunsch zum {age}sten Geburtstag!
+birthday_body,Sie sind noch {yearsLeft} Jahre vom Ruhestand entfernt. In diesem Tempo werden Sie bis dahin ${estimate} gespart haben.
+inflation,Ihre Lebenshaltungskosten sind inflationsbedingt gestiegen.
+hired,Sie wurden als {name} eingestellt.
+rejected,Ihre Bewerbung als {name} wurde abgelehnt wegen Ihrer {mainFactor}.
+deepening_automation,Die Auswirkungen auf die Produktivität von {name} sind weit verbreitet.
+drop_out,Sie haben die Schule abgebrochen.
+graduated,Herzlichen Glückwunsch! Sie haben den Abschluss geschafft.
+performance_terrible,Schrecklich
+performance_bad,Schlecht
+performance_mediocre,Mittelmäßig
+performance_good,Gut
+performance_fantastic,Fantastisch
+performance,Leistung
+work_button,Arbeit
+low_risk_automation,Niedriges Risiko
+mid_risk_automation,Mittleres Risiko
+high_risk_automation,Hohes Risiko
+low,niedrig
+moderate,mäßig
+high,hoch
+automated,Automatisiert
+percent_automated,automatisiert
+automation_risk,Automatisierungsrisiko
+improving_on_job,Verbesserung am Arbeitsplatz
+improving_skill,Qualifikation verbessern
+important_skills,Wichtige Qualifikationen
+your_skill_level,Ihr Qualifikationsniveau
+your_skills,Ihre Qualifikationen
+skills_info,"Ihre Qualifikationen verbessern sich im Laufe der Zeit automatisch, wenn Sie sie für Ihre Arbeiten einsetzen."
+application_out,Antrag verschickt
+past_job,Letzte Arbeitsstelle
+current_job,Derzeitige Arbeitsstelle
+robot_maintenance,Instandhaltung von Robotern
+percent_skills_automated,{percent}% der Qualifikationen sind automatisiert worden
+Jan,Jan
+Feb,Feb
+Mar,März
+Apr,Apr
+May,Mai
+Jun,Juni
+Jul,Juli
+Aug,Aug
+Sep,Sep
+Oct,Okt
+Nov,Nov
+Dec,Dez
+years_duration,{years} Jahre
+study_program,Studie {name}
+already_enrolled,Sie sind bereits angemeldet.
+fully_educated,"Das Bildungssystem hat Ihnen alles beigebracht, was es kann."
+select_program,"Wählen Sie ein Programm aus, um sich dafür anzumelden"
+loan_warning,"Sie können sich die Schule nicht leisten. Wenn Sie sich anmelden, erhalten Sie ein Darlehen zur Deckung aller Kosten zu den folgenden Bedingungen"
+interest_rate,Zinssatz
+loan_terms,"{rate}% fest, {years}-Jahr"
+next_level,Nächste Stufe
+enroll_button,Anmelden
+education_title,Bildung
+cost_in_wages,{months} Monatslohn
+school_cost,"Kosten, mit Lebenshaltungskosten"
+after_subsidy,Kosten nach Beihilfe
+subsidy_note,"Sie erhalten eine Ausbildungsbeihilfe, die {subsidy}% Ihrer Ausgaben deckt."
+school_postsecondary_note,"Weiterführende Schulabschlüsse eröffnen zwar keine neuen Teile des Arbeitsgraphen, sie erleichtern es aber für fortschrittlichere Arbeiten angestellt zu werden."
+start_welcome,Willkommen in der automatisierten Welt!
+start_intro,"Dieses Spiel ist eine Erkundung der Arbeitsmobilität gegenüber der Verbreitung der Automatisierung. Ihre erste Arbeit ist durch die Automatisierung stark gefährdet. Versuchen Sie, in einer Arbeit zu landen, die relativ sicher vor Automatisierung ist."
+start_goal,"Ihr Ziel besteht darin, im Alter von {age} mit einem finanziellen Polster von ${savings} in den Ruhestand zu treten."
+select_starting_job,Wählen Sie Ihre erste Arbeit aus
+select_starting_job_button,Arbeit auswählen
+notification_history_title,Verlauf
+pause_button,Pause
+start_button,Start
+resume_button,Wiederaufnahme
+skills_button,Qualifikationen anzeigen
+school_button,Schule besuchen
+notification_history_button,Benachrichtigungsverlauf
+hint_job_graph,"Dies ist das Arbeitsnetzwerk Die Arbeiten sind anhand der Ähnlichkeiten der für sie erforderlichen Qualifikationen miteinander verknüpft. Der <b style='color:#fff;background:#0e55ef;'>dunkelblaue</b> Knoten ist Ihre derzeitige Arbeit. <br /><br /><b style='color:#fff;background:#4fc6ea;'>Hellblaue</b> Knoten sind Arbeiten, für die Sie sich <b style='background:#f9ca2f;'>bewerben</b> können, indem Sie sie <img src='/static/pointer.png' width='9px' /><span style='text-decoration:underline;'>anklicken</span> (es dauert {applicationMonths} Monate, bis Sie eine Antwort erhalten). Ihre Chance, eingestellt zu werden hängt vom Niveau Ihrer einschlägigen <em>Qualifikationen</em>, Ihrer <em>Bildung</em> und der <em>Leistung</em> in Ihrer derzeitigen Arbeit ab.<br /><br /><b style='color:#fff;background:#51728c;'>Dunkelgraue</b> Arbeiten sind Arbeiten, die Sie bereits hatten. Sie können sich jederzeit wieder für sie bewerben.<br /><br /><img src='/static/cursor.png' width='7px' /><span style='text-decoration:underline;'>Ziehen Sie die Maus über</span> eine Arbeit, um die erforderlichen Qualifikationen, den Monatslohn, die Gefährdung durch Automatisierung und Ihr derzeitiges Qualifikationsniveau einzusehen."
+hint_hud,"Hier sehen Sie Ihr derzeitiges üéÇ Alter, üè¶ Ersparnisse, üí∏ Einkommen, Ausgaben, üéì Bildungsgrad und üõ†Ô∏è Arbeit.<br /><br />Das <b style='color:#fff;background:#395be5;'>Qualifikationen-</b>Menü zeigt Ihnen Ihre Qualifikationen an und im <b style='color:#fff;background:#395be5;'>Schul</b>menü können Sie sich an der Schule anmelden."
+hint_work,"<b style='color:#fff;background:#ea432a;'>Arbeitsaufgaben</b> stapeln sich hier. <img src='/static/pointer.png' width='9px' /><span style='text-decoration:underline;'>Klicken Sie</span> auf eine beliebige, um sie abzuschließen und Ihre <b style='color:#fff;background:#d119e5;'>Leistung</b> bei Ihrer Arbeit zu erhöhen. Dies beeinträchtigt Ihre Chance, bei neuen Arbeitsstellen eingestellt zu werden."
+twitter_share,Auf Twitter teilen
+facebook_share,Auf Facebook teilen
+counterfactual,"Wenn die Automatisierung nicht gewesen wäre, hätten Sie ${amount} {comp} verdient als Sie tatsächlich verdient haben."
+njobs_outcome,Sie waren in {nJobs} verschiedenen Arbeitsstellen beschäftigt. Das ist {amount} {comp} als andere Spieler.
+debt_outcome,Sie haben Darlehen in Höhe von ${loans} aufgenommen. Das ist ${amount} {comp} als andere Spieler.
+how_to_play_title,Wie wird das Spiel gespielt?
+how_to_play,"<p><b style='background:#f9ca2f;'>Bewerben</b> Sie sich für neue Arbeiten, indem Sie auf die <b style='color:#fff;background:#4fc6ea;'>hellblauen</b> Knoten im Arbeitsnetzwerk <img src='/static/pointer.png' width='9px' /><span style='text-decoration:underline;'>klicken</span>. <img src='/static/cursor.png' width='7px' /><span style='text-decoration:underline;'>Ziehen Sie die Maus über</span> Arbeiten, um mehr über sie zu erfahren.</p><p>Behalten Sie Ihre <b style='color:#fff;background:#d119e5;'>Leistung</b> bei, indem Sie in der (<img src='/static/pointer.png' width='9px' /><span style='text-decoration:underline;'>Klicken</span>) <b style='color:#fff;background:#ea432a;'>Arbeit</b> in der Ecke oben rechts ganz oben bleiben.</p><p>Sie haben monatliche Ausgaben, die automatisch von Ihren üè¶ Ersparnissen abgezogen werden. Wenn Sie sich zu hoch verschulden, endet das Spiel.</p><p>Sie können Ihren Fortschritt in Bezug auf Ihr Ruhestand- üèñÔ∏è Ziel in der Ecke unten links verfolgen.</p><p>Wenn Sie stecken bleiben oder einen Moment Pause brauchen, ist das kein Problem. Sie können das Spiel <b style='color:#fff;background:#395be5;'>unterbrechen</b> wann immer Sie wollen.</p>"
+consent_form_title,Informationen zur Studie und Einverständniserklärung für erwachsene Teilnehmer*innen
+consent_form_section_1_title,1. Ziel der Studie
+consent_form_section_1,"In der Studie <em>Das automatisierte Leben</em> wollen wir untersuchen, wie Menschen ihre Arbeit wechseln können, um die negativen Auswirkungen der Automatisierung zu vermeiden."
+consent_form_section_2_title,2. Verfahrensweise und Inhalt der Studie
+consent_form_section_2,"Zu diesem Zweck bitten wir Sie, ein Online-Videospiel zu spielen, bei dem Sie Entscheidungen über Anstellungen, Qualifikationen und Automatisierung in einem zeitlich festgelegten Umfeld treffen müssen. Die Spieloberfläche kann von Teilnehmer*in zu Teilnehmer*in möglicherweise leicht geändert werden, um die Auswirkungen unterschiedlicher Informationen auf die Art und Weise zu messen, wie Menschen spielen."
+consent_form_section_3_title,3. Was passiert mit den erfassten Informationen und Daten?
+consent_form_section_3,"Bei dieser Studie handelt es sich um ein Forschungsprojekt des Max-Planck-Instituts für Bildungsforschung. Die erfassten anonymen Daten darüber, wie Sie das Spiel spielen, werden ausschließlich für Forschungszwecke verwendet.<br /><br />Es werden keine personenbezogenen Daten aufgezeichnet. Wir verwenden Ihre IP-Adresse, um das Land zu ermitteln, aus dem Sie auf die Website zugreifen, wir speichern jedoch nicht die vollständige IP-Adresse selbst. Wenn Sie sich für die Teilnahme an der Abschlussumfrage entscheiden, werden wir grobe Angaben zu Ihrem Alter, Geschlecht und Ihrem Bildungsgrad mit Ihrem Weg durch das Spiel verknüpfen.<br /><br />Die Studiendaten können über Forschungsdatenbanken oder wissenschaftliche Veröffentlichungen öffentlich zugänglich gemacht werden. Beachten Sie bitte, dass die öffentlich zugänglichen Daten auch für Zwecke verwendet werden können, die über diese bestimmte Studie hinausgehen."
+consent_form_section_4_title,4. Teilnahme ist freiwillig
+consent_form_section_4,Die Teilnahme an dieser Studie ist freiwillig. Sie können die Teilnahme an der Studie jederzeit vor Beendigung des Spiels abbrechen.
+consent_form_section_5_title,5. Einwilligung
+consent_form_section_5,"Die Studie <em>Das automatisierte Leben</em> ist mit einem einzigen Spieldurchlauf des Spiels verknüpft, der etwa 30 Minuten dauert und Sie können so viele Male spielen, wie Sie wollen.<br /><br />Wenn Sie das Kästchen unten ankreuzen, erklären Sie, dass Sie die oben dargelegten Bedingungen gelesen und verstanden haben und mit der Teilnahme an der Studie sowie mit der Erfassung, Speicherung und Nutzung Ihrer Daten nach der Beschreibung oben einverstanden sind."
+consent_label,Ich verstehe die Bedingungen und willige ein.
+consent_submit_button,Absenden
+news_title,Eilmeldung
+bad_performance_warning,"Ihre Arbeitsleistung in den letzten {months} Monaten war schrecklich. Sie werden gekündigt, wenn Sie sich nicht bessern."
+fired,Sie wurden wegen Ihrer schlechten Leistung gekündigt.

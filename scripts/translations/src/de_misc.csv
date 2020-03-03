@@ -1,0 +1,1530 @@
+0,Niedriger als Abschluss einer High School
+1,Abschluss einer High School
+2,Weiterführender Schulabschluss
+3,Post-Baccalaureat-Zertifikat
+4,Masterabschluss
+5,Post-Master-Abschluss
+6,Erster berufsqualifizierender Abschluss
+7,Doktorgrad
+8,Habilitation
+9,"Fachliche, wissenschaftliche und technische Dienstleistungen"
+10,Finanz- und Versicherungswesen
+11,Fertigung
+12,Öffentlicher Dienst
+13,Bildungswesen
+14,Gesundheits- und Sozialwesen
+15,Information
+16,"Kunst, Unterhaltung und Erholung"
+17,"Land- und Forstwirtschaft, Fischerei und Jagdwesen"
+18,Großhandel
+19,Transport und Lagerung
+20,Sonstige Dienstleistungen (außer öffentliche Verwaltung)
+21,"Vermieten, Verpachten und Verkauf von Immobilien"
+22,Bauwesen
+23,Einzelhandel
+24,Beherbergungs- und Verpflegungsdienstleistungen
+25,Verwaltungs- und Unterstützungsdienstleistungen
+26,Geschäftsführung von Firmen und Unternehmen
+27,"Bergbau und Gewinnung von Steinen und Erden, Erdöl- und Gasförderung"
+28,Versorgungsbetriebe
+29,Buchhalter*in
+30,Versicherungsmathematiker*in
+31,Bediener*in von Adhäsionsklebemaschinen
+32,Adjudikator*in
+33,Leiter*in Verwaltungsdienstleitungen
+34,Dozent*in in der Erwachsenenbildung
+35,Werbeleiter*in
+36,Anzeigevertreter*in
+37,Luft- und Raumfahrttechniker*in
+38,Luft- und Raumfahrtingenieur*in
+39,"Agent*in für Künstler*innen, Darsteller*innen und Sportler*innen"
+40,Landwirtschaftliche*r Fachtechniker*in/Lebensmitteltechniker*in
+41,Agraringenieur*in
+42,Bediener*in von landwirtschaftlichen Anlagen
+43,Agrarinspektor*in
+44,Dozent*in für Agrarwissenschaft in der postsekundären Bildung
+45,Fluglotse/Fluglotsin
+46,Flugzeugladungsumschlag-Aufseher*in
+47,Flugzeugmechaniker*in
+48,Flugzeugsystememonteur*in
+49,Flugbetriebfachmann/-frau
+50,Flugzeugpilot*in/Flugingenieur*in
+51,Rettungswagenfahrer*in
+52,Schausteller*in
+53,Anästhesist*in
+54,Hundefänger*in
+55,Tierzuchtwissenschaftler*in
+56,Tiertrainer*in
+57,Anthropologe*in/Archäologe*in
+58,Dozent*in für Anthropologie/Archäologie in der postsekundären Bildung
+59,Immobilienbegutachter*in
+60,Schlichter*in
+61,Architekt*in
+62,Technische*r Zeichner*in
+63,Manager*in für Architektur und Bauingenieurwesen
+64,Dozent*in für Architektur in der postsekundären Bildung
+65,Archivar*in
+66,Dozent*in für Kulturwissenschaften in der postsekundären Bildung
+67,Künstlerische*r Leiter*in
+68,Dozent*in für Kunst/Theater/Musik in der postsekundären Bildung
+69,Astronom*in
+70,Sportler*in
+71,Sporttrainer*in
+72,Atmosphärenwissenschaftler*in
+73,Dozent*in für Geowissenschaften in der postsekundären Bildung
+74,Audio- und Videogerätetechniker*in
+75,Spezialist*in für Multimedia-Sammlungen
+76,Gehörspezialist*in
+77,Kraftfahrzeug- und Wasserfahrzeugwärter*in
+78,Karosseriespengler*in
+79,Autoglasinstallateur/-instandsetzer*in
+80,Automechaniker*in
+81,Bordelektroniktechniker*in
+82,Gepäckträger*in
+83,Gerichtsvollzieher*in
+84,Bäcker*in
+85,Friseur*in
+86,Barkeeper*in
+87,Fahrradmechaniker*in
+88,Inkassoagent*in
+89,Fakturist*in
+90,Biochemiker*in/Biophysiker*in
+91,Dozent*in für Biowissenschaften in der postsekundären Bildung
+92,Biologe/Biolog*in
+93,Biologietechniker*in
+94,Biomedizinische*r Ingenieur*in
+95,Kesselbauer*in
+96,Sachbearbeiter*in
+97,Maurer*in
+98,Brücken- und Schleusenwärter*innen
+99,Nachrichtenanalyst*in
+100,Rundfunktechniker*in
+101,Angestellte/r einer Maklerfirma
+102,Controller*in
+103,Spezialist*in für Dieselmotoren
+104,Schulbusfahrer*in
+105,Transitbusfahrer*in
+106,Geschäftsbetriebfachmann/-frau
+107,Handelsdozent*in in der postsekundären Bildung
+108,Metzger*in
+109,Einkäufer*in von Agrarerzeugnissen
+110,Tischler*in
+111,Instandsetzer*in von Fotoausrüstung
+112,Kameramann/-frau
+113,Schiffskapitän*in
+114,Herzkreislauf-Technologe/Technologin
+115,Fachlehrer*in an der Mittelschule
+116,Fachlehrer*in an der Sekundarschule
+117,Frachtspediteur*in
+118,Zimmermann
+119,Teppichleger*in
+120,Kartograf*in
+121,Kassierer*in
+122,Zementbauer*in und Betonfertiger*in
+123,Koch/ Köchin
+124,Chemieingenieur*in
+125,Bediener*in von Chemieanlagen
+126,Chemiewerkbetreiber*in
+127,Chemotechniker*in
+128,Chemiedozent*in in der postsekundären Bildung
+129,Chemiker*in
+130,Geschäftsführer*in
+131,Familiensozialarbeiter*in
+132,Kinderbetreuer*in
+133,Chiropraktiker*in
+134,Choreograf*in
+135,Hochbautechniker*in
+136,Hochbauingenieur*in
+137,Leistungsprüfer*in
+138,Fahrzeug-/Gerätereinigungskraft
+139,Bediener*in von Metallbeizanlagen
+140,Pfarrer*in
+141,Klinische/r Psychologe/Psychologin
+142,Coach/Scout
+143,Bediener*in von Beschichtungs-/Sprühmaschinen
+144,Aufspuler*in
+145,Verkaufsmaschinenwart*in
+146,Systemgastronom*in
+147,Industriedesigner*in
+148,Berufstaucher*in
+149,Berufspilot*in
+150,Dozent*in für Kommunikation in der postsekundären Bildung
+151,Gemeindegesundheitshelfer*in
+152,Vergütungs- und Leistungsmanager*in
+153,Fachmann/-frau für Arbeitsplatzanalyse
+154,Kontrollbeamte/r
+155,Informatiker*in
+156,Manager*in für Computer- und Informationssysteme
+157,Computer-Hardwareingenieur*in
+158,Computer-Netzwerkarchitekt*in
+159,Fachmann/-frau für Computernetzwerkunterstützung
+160,Programmierer*in für computergesteuerte Maschinenwerkzeuge
+161,Computertechniker*in
+162,Anlagenbediener*in
+163,Computerprogrammierer*in
+164,Dozent*in für Informatik in der postsekundären Bildung
+165,Computersystemanalyst*in
+166,Fachmann/-frau für die Unterstützung von Computeranwender*innen
+167,Instandsetzer*in von Computern
+168,Bediener*in von computergesteuerten Maschinenwerkzeugen
+169,Concierge
+170,Konservierungswissenschaftler*in
+171,Bauinspektor*in
+172,Bauarbeiter*in
+173,Ungelernte/r Bauarbeiter*in
+174,Bauleiter*in
+175,Bediener*in von Continuous Minern
+176,Installateur*in/Instandsetzer*in von Absperrkästen
+177,Bediener*in von Förderern
+178,Imbisskoch/-köchin
+179,Kantinenkoch/-köchin
+180,Restaurantkoch/-köchin
+181,Koch/Köchin in einem Schnellrestaurant
+182,Bediener*in von Kühl-/Gefrieranlagen
+183,Justizvollzugsbeamte/r
+184,Korrespondent*in
+185,Kostenschätzer*in
+186,Kostümwart*in
+187,Angestellte/r eines Verleihunternehmens |
+188,Bediener*in an der Theke
+189,Kurier*in
+190,Gerichtsreporter*in
+191,Justizangestellte/r
+192,Handwerkskünstler*in
+193,Kran- und Turmkranführer*in
+194,Kreditanalyst*in
+195,Kreditgenehmiger*in
+196,Kreditberater*in
+197,Dozent*in für Strafrecht in der postsekundären Bildung
+198,Verkehrshelfer*in
+199,Bediener*in von Schleif-/Poliermaschinen
+200,Kurator*in
+201,Kundenbetreuer*in
+202,Handschnitzer*in/-schneider*in
+203,Bediener*in einer Schneidemaschine
+204,Bediener*in einer Schneid-/Stanz-/Lochstanz-/Pressmaschine
+205,Dateneingeber*in
+206,Datenbankadministrator*in
+207,Produktförderer/Produktförderin
+208,Zahnarztassistent*in
+209,Zahnhygieniker*in
+210,Zahnlabortechniker*in
+211,Zahnarzt/-ärztin
+212,Drehkranführer*in
+213,Desktop-Publisher*in
+214,Kriminalist*in
+215,Facharzt/-ärztin für Ultraschalluntersuchungen
+216,Ernährungs-technische/r Assistent*in
+217,Ernährungsberater*in
+218,Kantinenausgabekraft
+219,Religionsunterrichtsleiter*in
+220,Tellerwäscher*in
+221,Disponent*in
+222,Straßenverkäufer*in
+223,Schwimmbaggerführer*in
+224,Bediener*in von Bohrwerkzeugen
+225,Fahrer*in/Vertriebsmitarbeiter*in
+226,Trockenbauer*in
+227,Bediener*in einer Erdbohrmaschine
+228,Dozent*in für Wirtschaft in der postsekundären Bildung
+229,Ökonomist*in
+230,Redakteur*in
+231,Bildungsverwalter*in
+232,Schulrat/-rätin für Primär- und Sekundarschule|
+233,Schulrat/-rätin für die postsekundäre Bildung
+234,Schulrat/-rätin für den Vorschulbereich
+235,Dozent*in der postsekundären Bildung
+236,Vertrauenslehrer*in
+237,Instandsetzer*in von Elektromotoren
+238,Monteur*in von Elektrogeräten
+239,Elektrotechnische/r Zeichner*in
+240,Elektrotechniker*in
+241,Instandsetzer*in von Transportmittelelektrik
+242,Instandsetzer*in von Industrieelektrik
+243,Instandsetzer*in von Kraftwerkselektrik
+244,Elektroingenieur*in
+245,Installateur*in/Instandsetzer*in von Stromtrassen
+246,Elektriker*in
+247,Elektromechaniker*in
+248,Monteur*in von elektromechanischen Geräten
+249,Installateur*in/Instandsetzer*in von Kraftfahrzeugelektronik
+250,Installateur*in/Instandsetzer*in von Unterhaltungselektronik
+251,Elektroingenieur*in
+252,Grundschullehrer*in
+253,Installateur*in/Instandsetzer*in von Aufzügen
+254,Befrager*in von Bewerber*innen hinsichtlich ihrer Teilnahmefähigkeit am Regierungsprogramm
+255,Einbalsamierer*in
+256,Leiter*in Notfallmanagement
+257,Rettungssanitäter*in
+258,Motormonteur*in
+259,Dozent*in für Technik in der postsekundären Bildung
+260,Maschinenbautechniker*in
+261,Ingenieur*in
+262,Dozent*in für englische Sprache/Literatur in der postsekundären Bildung
+263,Umwelttechniker*in
+264,Umweltingenieur*in
+265,Techniker*in für Umweltgesundheit
+266,Dozent*in für Umweltwissenschaft in der postsekundären Bildung
+267,Umweltwissenschaftler*in
+268,Epidemiologe/Epidemiologin
+269,Ätzer*in/Gravierer*in
+270,Bediener*in einer Aushub-/Belademaschine
+271,Vorstandsassistent*in
+272,Sportphysiologe/-physiologin
+273,Fachkraft für Sprengstoffe
+274,Bediener*in einer Auspress-/Ziehmaschine
+275,Bediener*in einer Auspress-/Formmaschine
+276,Bediener*in einer Form-/Verdichtungsmaschine
+277,Modellmacher*in von Geweben/Kleidung
+278,Gewebeausbesserer
+279,Holzfäller*in
+280,Allgemeinarzt/-ärztin
+281,Berater*in für das Management von landwirtschaftlichen Betrieben und für Haushaltsmanagement
+282,Mechaniker*in für landwirtschaftliche Anlagen und Geräte
+283,Leiharbeiter*in in landwirtschaftlichen Betrieben
+284,Landwirt*in
+285,Landwirtschaftliche Hilfskraft
+286,Hilfskraft auf Ranchs
+287,Modedesigner*in
+288,Zaunbauer*in
+289,Hersteller*in von Glasfasern
+290,Registraturangestellte*r
+291,Cutter*in
+292,Finanzanalyst*in
+293,Finanzprüfer*in
+294,Finanzmanager
+295,Finanzfachmann/-frau
+296,Bildende*r Künstler*in
+297,Brandinspektor*in
+298,Feuerwehrmann/-frau
+299,Aufseher*in im Baugewerbe
+300,Dienstvorgesetzte/r von Justizvollzugsbeamt*innen
+301,Aufseher*in für Land- und Forstwirtschaft und für das Fischereiwesen
+302,Feuerwehrzugführer*in
+303,Aufseher*in Speisezubereitung
+304,Aufseher*in von ungelernten Arbeitskräften/Materialbeförderern und -beförderinnen
+305,Aufseher*in von Hausmeisterpersonal
+306,Aufseher*in von Teams für die Reinigung und Pflege von Außenanlagen
+307,Leitmonteur*in
+308,Aufseher*in im Großhandel
+309,Aufseher*in in der Verwaltungsunterstützung
+310,Aufseher*in von personenbezogenen Dienstleister*innen
+311,Dienstvorgesetzte*r bei der Polizei
+312,Aufseher*in von Produktionskräften/betrieblichen Fachkräften
+313,Aufseher*in im Einzelhandel
+314,Aufseher*in Verkehrsunternehmen
+315,Fischerei- und Jagdaufseher*in
+316,Fischer*in
+317,Fitness Trainer*in
+318,Flugbegleiter*in
+319,Fußbodenleger*in
+320,Fußbodenschleifer*in
+321,Florist*in
+322,Bediener*in eines Lebensmittel- und Tabakautomaten
+323,Hersteller*in von Lebensmitteldosen
+324,Bediener*in einer Kochmaschine von Speisen
+325,Fachkraft für Speisezubereitung
+326,Lebensmittelwissenschaftler*in
+327,Fachkraft für die Speisezubereitung in anderen Einrichtungen als Restaurants
+328,Leiter*in Lebensmitteldienstleistungen
+329,Fremdsprachenlehrer*in in der postsekundären Bildung
+330,Forensische*r Techniker*in
+331,Naturschutztechniker*in
+332,Fachkraft für Forstwirtschaft und Naturschutz
+333,Waldbrandinspektor*in
+334,Förster*in
+335,Dozent*in für Forst- und Naturschutzwissenschaft in der postsekundären Bildung
+336,Bediener*in einer Schmiedemaschine
+337,Gießform- und Gießkernmacher*in
+338,Spendenbeschaffer*in
+339,Totengeleiter*in
+340,Trauerfeierveranstalter*in
+341,Bediener*in eines Ofens/Brennofens
+342,Möbelendbearbeiter*in
+343,Autor*in von Spielebüchern
+344,Bedienstete*r in Glücksspieleinrichtungen
+345,Schalterbedienstete*r in Spielcasino
+346,Croupier
+347,Glücksspielleiter*in
+348,Aufseher*in von Glücksspielen
+349,Prüfer*in von Glücksspielen
+350,Tankstellenbetreiber*in
+351,Gaswerkbetreiber*in
+352,Betriebsleiter*in
+353,Genetische*r Berater*in
+354,Geograf*in
+355,Dozent*in für Geografie in der postsekundären Bildung
+356,Geologie- und Erdöltechniker*in
+357,Geowissenschaftler*innen
+358,Glaser*in
+359,Sortierer*in von landwirtschaftlichen Erzeugnissen
+360,Graduierte*r Hochschulassistent*in
+361,Grafikdesigner*in
+362,Fachkraft für manuelles Schleifen/Polieren
+363,Bediener*in von Schleif-/Polierwerkzeugmaschinen
+364,Friseur*in
+365,Gefahrstoffbeseitiger*in
+366,Ingenieur*in für Gesundheit und Sicherheit
+367,Praktizierende*r Gesundheitsdiagnostiker*in
+368,Gesundheitspädagoge/Gesundheitspädagogin
+369,Dozent*in für Gesundheitsfachgebiete in der postsekundären Bildung
+370,Gesundheitstechnologe/-technologin
+371,Heilberufler*in
+372,Sozialarbeiter*in im Gesundheitswesen
+373,Betreuer*in im Gesundheitswesen
+374,Spezialist*in für Hörgeräte
+375,Bediener*in von wärmetechnischen Geräten
+376,"Mechaniker*in/Installateur*in von Heizungs-, Lüftungs- und Klimaanlagen"
+377,Fahrer*in von Schwerlastwagen/Sattelschleppern
+378,Maurergehilfe/-gehilfin|
+379,Zimmermanngehilfe/gehilfin
+380,Elektrikergehilfe*in
+381,Gehilfe/Gehilfin von Fachkräften beim Abbau von Bodenschätzen
+382,Gehilfe/Gehilfin von Instandsetzungs-/Reparaturfachkräften
+383,Maler*in/Verputzergehilfe*in
+384,Klempnergehilfe*in
+385,Produktionsarbeitergehilfe*in
+386,Dachdeckergehilfe*in
+387,Straßenbauarbeiter*in
+388,Historiker*in
+389,Dozent*in für Geschichte in der postsekundären Bildung
+390,Lastenaufzug- und Windenführer*in
+391,Instandsetzer*in von Haushaltsgeräten
+392,Dozent*in für Hauswirtschaft in der postsekundären Bildung
+393,Haushaltshilfe für kranke Menschen
+394,Gastwirt*in
+395,Hotelrezeptionist*in
+396,Assistent*in Personalwesen
+397,Leiter*in Personalwesen
+398,Spezialist*in Personalwesen
+399,Hydrologe/Hydrologin
+400,Industrietechniker*in
+401,Industrieingenieur*in
+402,Industriemaschinenmechaniker*in
+403,Leiter*in Industrieproduktion
+404,Führer*in von Flurförderzeugen und Industriezugmaschinen
+405,Betriebspsychologe/-psychologin
+406,Analyst*in für Industriesicherheit
+407,Inspektor*in/Prüfer*in
+408,Instandsetzungs-/Reparaturfachkraft
+409,Unterrichtskoordinator*in
+410,Fachkraft für Wärmedämmung
+411,Fachkraft für mechanische Wärmedämmung
+412,Gutachter*in für Autoversicherungen
+413,Sachbearbeiter*in von Schadensfällen bei Versicherungsunternehmen
+414,Versicherungsvertreter*in
+415,Versicherer*in
+416,Innenarchitekt*in
+417,Internist*in
+418,Übersetzer*in
+419,Interviewer*in
+420,Hausmeister*in
+421,Juwelier*in
+422,Richter*in|
+423,Rechtspfleger*in
+424,Erzieher*in
+425,Fachmann/-frau für Öffentlichkeitsarbeit
+426,Ungelernte Arbeitskraft/Materialbeförderer/Materialbeförderin
+427,Landschaftsarchitekt*in
+428,Fachkraft für Landschaftsbau und Grünanlagenpflege
+429,Bediener*in von Drehmaschinenwerkzeugen
+430,Fachkraft in Wäschereien/Trocknereien
+431,Dozent*in für Recht in der postsekundären Bildung
+432,Rechtsanwalt/-anwältin
+433,Fachkraft für den Anriss von Kunststoff- und Metallwerkstücken
+434,Rechtsanwaltsfachangestellte/r
+435,Bibliothekar*in
+436,Bibliotheksassistent*in
+437,Dozent*in für Bibliothekswissenschaft in der postsekundären Bildung
+438,Bibliothekstechniker*in
+439,Gesundheits- und Krankenpfleger*in
+440,"Techniker*in für Biowissenschaft, Naturwissenschaft und Sozialwissenschaft"
+441,Rettungsschwimmer*in
+442,Fahrer*in von Kleinlastwagen/Lieferwagen
+443,Bediener*in von Lademaschinen im Untertagebau
+444,Darleheninterviewer*in
+445,Kreditsachbearbeiter*in
+446,Umkleideraumaufsichtskraft
+447,Schlosser*in
+448,Zugführer*in
+449,Quartiermanager*in
+450,Holzstammsortierer*in
+451,Bediener*in von Datenerfassungsgeräten
+452,Logistiker*in
+453,Maschinenbeschicker*in
+454,Maschinist*in
+455,Technologe/Technologin für Kernspintomografie
+456,Haushaltsreinigungskraft
+457,Postbeamte*r
+458,Instandhaltungs-/Reparaturfachkraft
+459,Fachkraft für die Instandhaltung von Maschinen
+460,Makeup-Artist
+461,Managementanalyst*in
+462,Manager*in
+463,Kosmetiker*in (Maniküre)/Fusspfleger*in (Pediküre)
+464,Wohnwageninstallateur*in
+465,Schiffsingenieur*in
+466,Marktforschungsanalyst*in
+467,Marketingmanager*in
+468,Ehe- und Familientherapeut*in
+469,Massagetherapeut*in
+470,Werkstoffingenieur*in
+471,Materialwissenschaftler*in
+472,Dozent*in für Mathematikwissenschaft in der postsekundären Bildung
+473,Mathematiker*in
+474,"Fleisch-, Geflügel- Fischschneider*in"
+475,Instandsetzer*in von mechanischen Türen
+476,Mechanische*r Zeichner*in
+477,Mechaniker*in
+478,Maschinenbauingenieur*in
+479,Medizintechniker*in
+480,Medizintechnologe/-technologin
+481,Manager*in im Gesundheitswesen
+482,Medizingerätetechniker*in
+483,Medizinische*r Fachangestellte*r
+484,Vorbereiter*in von Medizingeräten
+485,Instandsetzer*in von Medizingeräten
+486,Krankenaktentechniker*in
+487,Medizinwissenschaftler*in
+488,Helfer*in von Ärzt*innen
+489,Medizinische*r Sekretär*in
+490,Veranstaltungsorganisator*in
+491,Sozialarbeiter*in in der Psychiatrie
+492,Berater*in für psychische Gesundheit
+493,Schaugewerbegestalter*in
+494,Bediener*in eines Metallraffinationsofens
+495,Zählerableser*in
+496,Mikrobiologe/Mikrobiologin
+497,Realschullehrer*in
+498,Bediener*in einer Fräs-/Hobelmaschine
+499,Mühlenbauer*in
+500,Bediener*in einer Vortriebsmaschine im Bergbau
+501,Grubenwagenfahrer*in
+502,Geoingenieur*in
+503,Bediener*in einer Mischmaschine
+504,Mechaniker*in für mobile Schwerlastgeräte
+505,Metall-/Kunststoffmodellbauer*in
+506,Holzmodellbauer*in
+507,Model
+508,Gießer*in/Former*in
+509,Bediener*in einer Press-/Kernfertigungs-/Gießmaschine
+510,Beerdigungsunternehmer*in
+511,Filmvorführer*in
+512,Motorbootmechaniker*in
+513,Motorbootbetreiber*in
+514,Motorradmechaniker*in
+515,Multimedia Artist
+516,Bediener*in mehrerer Maschinenwerkzeuge
+517,Museumstechniker*in
+518,Komponist*in
+519,Instandsetzer*in/Stimmer*in von Musikinstrumenten
+520,Manager*in Naturwissenschaften
+521,Systemadministrator*in
+522,Sachbearbeiter*in für Neukund*innen
+523,Tierpfleger*in (ohne Landwirtschaft)
+524,Kernkraftingenieur*in
+525,Nuklearmedizintechniker*in
+526,Kernkraftreaktorfahrer*in
+527,Kernkrafttechniker*in
+528,Fachpflegekraft für Intensivpflege und Anästhesie
+529,Hebamme
+530,Krankenpfleger*in
+531,Pflegehelfer*in
+532,Ausbilder*innen und Dozent*innen für Krankenpflege in der postsekundären Bildung
+533,Geburtshelfer*in/Gynäkologe/Gynäkologin
+534,Spezialist*in für Arbeitsschutz
+535,Techniker*in für Arbeitsschutz
+536,Ergotherapeut*in
+537,Helfer*in von Ergotherapeut*innen
+538,Assistent*in von Ergotherapeut*innen
+539,Büroangestellte*r
+540,Büromaschinenbediener*in
+541,Bauingenieur*in
+542,Unternehmensforschungsanalyst*in
+543,Augenlabortechniker*in
+544,Augenmedizintechniker*in
+545,Optiker*in
+546,Optometrist*in
+547,Kieferchirurg*in
+548,Angestellte*r für Auftragserfassung
+549,Kieferorthopäde/Kieferorthopädin
+550,Orthopädie-/Prothesetechniker*in
+551,Kleinmotormechaniker*in
+552,Bediener*in einer Verpackungsmaschine
+553,Handpacker*in|
+554,Bauanstreicher*in
+555,Anstreicher*in von Beförderungsmitteln
+556,Fachkraft für Anstreichen/Beschichten/Dekorieren
+557,Bediener*in einer Papierwarenmaschine
+558,Tapezierer*in
+559,Rechtsanwaltsgehilfe/-gehilfin
+560,Mitarbeiter*in des Ordnungsamts zur Überwachung des ruhenden Verkehrs
+561,Parkplatzwächter*in
+562,Teileverkäufer*in
+563,Metall-/Kunststoffmodellmacher*in
+564,Holzmodelltischler*in
+565,Bediener*in von Straßenbaugeräten
+566,Lohnbuchhalter*in
+567,Kinderarzt/-ärztin
+568,Hilfskraft für die Körperpflege
+569,Persönliche*r Finanzberater*in
+570,Schädlingsbekämpfer*in
+571,Pestizidanwender*in
+572,Erdölingenieur*in
+573,Raffineriebetreiber*in
+574,Apotheker*in
+575,Apothekenhelfer*in
+576,Pharmazeutisch-technische/r Assistent*in
+577,Dozent*in für Philosophie/Religion in der postsekundären Bildung
+578,Phlebologe/Phlebologin
+579,Fotograf*in
+580,Naturwissenschaftler*in
+581,Helfer*in von Physiotherapeut*innen
+582,Assistent*in von Physiotherapeut*innen
+583,Physiotherapeut*in
+584,Helfer*in von Ärzt*innen
+585,Arzt/Ärztin
+586,Physiker*in
+587,Dozent*in für Physik in der postsekundären Bildung
+588,Rammhammerbediener*in
+589,Rohrverleger*in
+590,Anlagenbetreiber*in
+591,Stuckateur*in
+592,Bediener*in einer Plattierungs-/Beschichtungsmaschine
+593,Klempner*in
+594,Podologe/Podologin
+595,Polizist*in
+596,"Disponent*in bei Polizei, Feuerwehr und Rettungsdienst"
+597,Dozent*in für Politikwissenschaft in der postsekundären Bildung
+598,Politikwissenschaftler*in
+599,Postbeamte*r
+600,Briefträger*in
+601,Briefsortierer*in
+602,Leiter*in einer Poststelle
+603,Metallgießer*in
+604,Stromnetzleitwart*in
+605,Kraftwerkbetreiber*in
+606,Druckvorstufentechniker*in
+607,Vorschullehrer*in
+608,Textilpresser*in
+609,Buchbinder*in
+610,Bediener*in einer Druckerpresse
+611,Privatdetektiv*in
+612,Bewährungshelfer*in
+613,Beschaffungssachbearbeiter*in
+614,Produzent*in/Regisseur*in
+615,Produktionsfachkraft
+616,Sachbearbeiter*in für die Produktion
+617,Korrekturleser*in
+618,Hausverwalter*in
+619,Fachkraft bei einem Sicherheitsdienst
+620,Hilfskraft in der Psychiatrie
+621,Techniker*in in der Psychiatrie
+622,Psychiater*in
+623,Psychologe/Psychologin
+624,Dozent*in für Psychologie in der postsekundären Bildung
+625,Sprecher*in Beschallungsanlage
+626,Manager*in für Öffentlichkeitsarbeit und Fundraising
+627,Fachmann/-frau für Öffentlichkeitsarbeit
+628,Pumpenbediener*in
+629,Einkäufer*in
+630,Leiter*in Beschaffung
+631,Strahlungstherapeut*in
+632,Radio- und Fernsehsprecher*in
+633,Funker*in
+634,Installateur*in/Instandsetzer*in von Funkgeräten und Mobiltelefonen
+635,Radiologietechnologe/-technologin
+636,Instandsetzer*in von Schienenfahrzeugen
+637,Zugführer*in im Bahnbetriebswerk
+638,Bediener*in von Anlagen und Geräten für die Instandhaltung von Schienenfahrzeugen
+639,Weichenwärter*in/Signalwärter*in/Stellwerkswärter*in
+640,Eisenbahnschaffner*in
+641,Makler*in
+642,Immobilienmakler*in
+643,Auskunftsbeamte*r
+644,Dozent*in für Freizeit-Fitnessstudien in der postsekundären Bildung
+645,Freizeitgestalter*in
+646,Entspannungstherapeut*in
+647,Wartungstechniker*in für Freizeitfahrzeuge
+648,Instandsetzer*in feuerfester Werkstoffe
+649,Müllmann/-frau
+650,Examinierte*r Krankenpfleger*in
+651,Rehaberater*in
+652,Fachkraft für Betonbewehrungen
+653,Reporter*in
+654,Reisebüromitarbeiter*in
+655,Wohnberater*in
+656,Atemtherapeut*in
+657,Atemtherapie-Techniker*in
+658,Verkäufer*in im Einzelhandel
+659,Bohrinselarbeiter*in
+660,Steinbrecher*in
+661,Bediener*in einer Walzmaschine
+662,Bediener*in von Verschraubungsmaschinen im Untertagebau
+663,Dachdecker*in
+664,Bediener*in eines Drehbohrgeräts
+665,Unqualifizierte*r Bohrinselarbeiter*in
+666,Seemann/-frau/Schiffsöler*in
+667,Vertriebsingenieur*in
+668,Vertriebsleiter*in
+669,Außendienstmitarbeiter*in
+670,Außendienstmitarbeiter*in für die Fertigung
+671,Technische*r Außendienstmitarbeiter*in
+672,Bediener*in einer Sägemaschine
+673,Sekundarschullehrer*innen
+674,Verwaltungsassistent*in
+675,Aktienmakler*in
+676,Installateur*in von Sicherheitssystemen
+677,Sicherheitsbedienstete*r
+678,Segmentplattenleger*in
+679,Dozent*in für Selbstverwirklichungskurse
+680,Halbleiterverarbeiter*in
+681,Bediener*in einer Separier-/Klärmaschine
+682,Wartungskraft für Jauchegruben und Abwasserrohre
+683,Bediener*in von Geräten zur Öl- und Gasgewinnung oder Bergbaugeräten
+684,Bühnenbildner*in
+685,Näher*in
+686,Bediener*in einer Nähmaschine
+687,Einshampoonierer*in
+688,Blechmetallbearbeiter*in
+689,Schiffsingenieur*in
+690,Sachbearbeiter*in Wareneingang/Warenausgang
+691,Schuh-/Lederarbeiter*in
+692,Bediener*in einer Schuhmaschine
+693,Instandsetzer*in von Weichen- und Signalanlagen
+694,Spezialist*in für Hautpflege
+695,Fleischabpacker*in
+696,Spielautomatenaufseher*in
+697,Leiter*in Sozial- und Gemeindedienst
+698,Assistent*in Sozial- und Humandienst
+699,Wissenschaftliche*r Assistent*in in Sozialwissenschaften
+700,Sozialwissenschaftler*in
+701,Dozent*in für Sozialarbeit in der postsekundären Bildung
+702,Soziologe/Soziologin
+703,Dozent*in für Soziologie in der postsekundären Bildung
+704,Entwickler*in von Anwendungssoftware
+705,Entwickler*in von Systemsoftware
+706,Bodenkundler*in und Pflanzenbauwissenschaftler*in
+707,Installateur*in von Photovoltaikanlagen
+708,Tontechniker*in
+709,Förderschullehrer*in
+710,Förderschullehrer*in an der Grundschule
+711,Förderschullehrer*in an der Mittelschule
+712,Förderschullehrer*in an der Sekundarschule
+713,Sprachpathologe/Sprachpathologin
+714,Kesselwärter*in
+715,Statistikassistent*in
+716,Statistiker*in
+717,Lagerverwalter*in
+718,Steinmetz*in
+719,Stahlarbeiter*in
+720,Baumetallverarbeiter*in
+721,Berater*in bei Drogensucht und Verhaltensstörungen
+722,U-Bahn-/Straßenbahnführer*in
+723,Chirurg*in
+724,Chirurgische*r Technologe/Technologin
+725,Meinungsforscher*in
+726,Vermessungstechniker*in|
+727,Vermesser*in
+728,Telefonist*in
+729,Schneider*in
+730,Tanklastwagen-/Lkw-/Schiffsbelader*in
+731,Taper*in
+732,Steuereinzieher*in
+733,Steuerberater*in
+734,Taxifahrer*in/Chauffeur*in
+735,Hilfslehrer*in
+736,Koordinator*in von Montageteams
+737,Technische*r Redakteur*in
+738,Installateur*in/Instandsetzer*in von Telekommunikationsanlagen
+739,Installateur*in/Instandsetzer*in von Telekommunikationsleitungen
+740,Telefonverkäufer*in
+741,Telefonist*in
+742,Kassierer*in
+743,Terrazzofertiger*in
+744,Bediener*in einer Textilbleich-/Textilfärbemaschine
+745,Bediener*in einer Textilschneidemaschine
+746,Bediener*in einer Textilstrick-/Textilwebemaschine
+747,Bediener*in einer Textilwickelmaschine
+748,Fliesen- und Marmorleger*in
+749,Monteur*in von Zeitmessgeräten
+750,Bediener*in einer Reifenaufbaumaschine
+751,Reifeninstandsetzer*in/-wechsler*in
+752,Prüfer*in von Eigentumstiteln
+753,Werkzeugmacher*in
+754,Werkzeugschleifer*in
+755,Reiseleiter*in
+756,Verkehrstechniker*in
+757,Leiter*in für Schulung und Entwicklung
+758,Spezialist*in für Schulung und Entwicklung
+759,Transit- und Bahnpolizist*in
+760,"Fahrgastbetreuer*in in Zügen, Bussen, Schiffen oder Bahnhöfen und Häfen"
+761,Inspektor*in für Verkehrssicherheit
+762,Mitarbeiter*in der Sicherheitskontrolle im öffentlichen Verkehrswesen
+763,Logistikmanager*in
+764,Reisekaufmann/-kauffrau
+765,Reiseleiter*in
+766,Baumschneider*in
+767,Schiedsrichter*in
+768,Polsterer/Polsterin
+769,Stadt- und Regionalplaner*in
+770,Amtsdiener*in
+771,Tierarzt/Tierärztin
+772,Tierarztassistent*in
+773,Veterinärtechnologe/-technologin
+774,Dozent*in im Berufsschulwesen
+775,Servicepersonal
+776,Uhrmacher*in
+777,Betreiber*in von Wasser-/Abwasseraufbereitungsanlagen
+778,Webentwickler*in
+779,Wäger*in/Messer*in
+780,Schweißer*in/Fräser*in/Löter*in
+781,Bediener*in einer Schweiß-/Löt-/Hartlötmaschine
+782,Mitarbeiter*in einer Leitstelle am Bohrlochkopf
+783,Großhandelskaufmann/-kauffrau
+784,Wartungstechniker*in für Windturbinen
+785,Bediener*in einer Holzbearbeitungsmaschine
+786,Schreibkraft
+787,Schriftsteller*in
+788,Zoologe/Zoologin
+789,Rettungsmedizintechnologie/Rettungssanitäter*in
+790,"Bildung, allgemein"
+791,Rechtswesen
+792,"Leitung und Verwaltung im Bildungswesen, allgemein"
+793,Sozialarbeit
+794,Lehrplan und Lehre
+795,"Sonderpädagogik und Unterrichten, allgemein"
+796,Unterrichten von Englisch als Zweit- oder Fremdsprache/ESL-Sprachlehrer*in
+797,Bibliotheks- und Informationswissenschaft
+798,Lehr-/Unterweisungstechnologie
+799,Lkw- und Busfahrer*in/Fahrer*in und Fahrlehrer*in von/für Nutzfahrzeuge/n
+800,Finanzplanung und Finanzdienstleistungen
+801,Assistenz im Bibliotheks- und Archivwesen
+802,"Betriebswirtschaft, allgemein"
+803,"Biologie/Biowissenschaften, allgemein"
+804,"Psychologie, allgemein"
+805,Maschinenbau
+806,Buchhaltung
+807,Sprachkommunikation und Rhetorik
+808,"Kunst/Kunstwissenschaft, allgemein"
+809,"Politikwissenschaft und Staatswissenschaft, allgemein"
+810,"Informatik, allgemein"
+811,"Englische Sprache und Literatur, allgemein"
+812,"Wirtschaft, allgemein"
+813,Soziologie
+814,Sport- und Fitnessverwaltung/-management
+815,Grundschulpädagogik
+816,"Mathematik, allgemein"
+817,"Geschichte, allgemein"
+818,Tätigkeit als Sportlehrer*in oder Sporttrainer*in
+819,Spanische Sprache und Literatur
+820,Bibel/Bibelstudien
+821,"Tierwissenschaften, allgemein"
+822,"Chemie, allgemein"
+823,"Entwicklung des Menschen und Familienstudien, allgemein"
+824,Umweltwissenschaft
+825,Jüdische Studien/Judaistik
+826,Kindesentwicklung
+827,Innenarchitektur
+828,Biochemie
+829,Anthropologie
+830,"Geologie/Geowissenschaften, allgemein"
+831,"Physik, allgemein"
+832,"Natürliche Ressourcen/Umweltschutz, allgemein"
+833,Geografie
+834,Allgemeine Mikrobiologie
+835,Ausbildung für Landwirtschaftslehrer*innen
+836,"Atmosphärenwissenschaft und Meteorologie, allgemein"
+837,Astronomie
+838,Examinierte Krankenpflege/Examinierte*r Krankenpfleger*in
+839,Strafrecht/Sicherheitsstudien
+840,"Sozialwissenschaften, allgemein"
+841,Frühkindliche Erziehung und Pädagogik
+842,"Verwaltungsassistent*in und Verwaltungswissenschaft, allgemein"
+843,Naturwissenschaften
+844,Biologietechniker*in/Biotechnologie Labortechniker*in
+845,Öffentliche Verwaltung
+846,"Ingenieurwesen, allgemein"
+847,Verwaltungswissenschaft
+848,"Stadt-, Gemeinde- und Regionalplanung"
+849,Umweltgesundheit
+850,Werkzeugmaschinentechnologie/Maschinist*in
+851,Allgemeine Bürotätigkeit und Sekretariatsdienste
+852,Geografischer Informationsdienst und Kartografie
+853,Datenverarbeitung und Datenverarbeitungstechnologie/Techniker
+854,Bedienung von Baumaschinen/Baggern/Erdbewegungsmaschinen
+855,Eisenbahn und Eisenbahnverkehr
+856,Inspektion/Inspektor*in im Bauwesen
+857,Verwaltungsrechtliche Assistenz/Sekretariat
+858,"Finanzwesen, allgemein"
+859,"Wildtier-, Fisch- und Wildniswissenschaft und -management"
+860,Kriminaltechnik und -technologie
+861,Umwelt-/Umweltgesundheitingenieurwesen
+862,"Verkauf, Vertrieb und Marketing, allgemein"
+863,Versicherung
+864,Schiffsarchitektur und Schiffbau
+865,Verarbeitung landwirtschaftlicher Erzeugnisse und Lebensmittel
+866,Kriminalistik/Polizeiwissenschaft
+867,Rechtsanwaltsgehilfe/-gehilfin
+868,"Elektrotechnik, Elektronik und Nachrichtentechnik/Techniker*in"
+869,Feuerwissenschaft/Brandbekämpfung
+870,Arbeitssicherheitstechnik/Techniker*in
+871,"Strafvollzug und Strafrecht, Sonstiges"
+872,"Heizung, Lüftung, Klimatisierung und Kältetechnik/Techniker*in"
+873,Bautechnik/Techniker*in
+874,Gemeindeorganisation und Interessenvertretung
+875,"Wissenschaftstechnik/Techniker*in, Sonstiges"
+876,Brandschutzverwaltung
+877,Vermessungstechnik/Vermessungswesen
+878,Forsttechnik/Techniker*in
+879,Verwaltung/Management im Gesundheitswesen/Pflege
+880,Medizin
+881,Haushaltskrankenpflege/Haushaltskrankenpfleger*in
+882,Schullaufbahnberatung/Schulberatung und Studienberatung
+883,Physiotherapie/Physiotherapeut*in
+884,Ergotherapie/Ergotherapeut*in
+885,Beratung/Berater*in für psychische Gesundheit
+886,Zahnheilkunde
+887,Epidemiologie
+888,Chiropraxis
+889,Akupunktur und Orientalische Medizin
+890,Zivilschutz
+891,Podologie/Podiatrie
+892,Hebamme/Geburtshilfe
+893,Traditionelle Chinese Medizin und Chinesische Pflanzenkunde
+894,Genetische*r Berater*in/Genetische Beratung
+895,Pflegehelfer*in
+896,Rechnungswesentechnik/Techniker*in und Buchhaltung
+897,Arzthelfer*in/Fachkraft in Arztpraxis
+898,Phlebotomietechniker*in/Phlebologe/Phlebologin
+899,Medikationshelfer*in
+900,Haushaltshilfe für kranke Menschen
+901,Sterile Verarbeitungstechnologie/Techniker*in
+902,Nieren-/Dialysetechnologe/-technologin/Techniker*in
+903,Reha-Hilfskraft
+904,Kieferorthopädie/Kieferheilkunde
+905,Kernspintechnologie/Techniker*in
+906,Mund-/Gesichtschirurgie
+907,Medizinische*r/klinische*r Fachangestellte*r
+908,Berufsausbildung für examinierte Gesundheits- und Krankenpfleger*innen
+909,Assistenz bei/Assistent*innen von Zahnärzt*innen
+910,Augenmedizinische*r Techniker*in/Technologe/Technologin
+911,Kinesiologie und Bewegungswissenschaft
+912,Audiologie/Audiologe/Audiologin und Sprachpathologie/Pathologe/Pathologin
+913,Ernährungsberatung/Ernährungsberater*in
+914,"Leitung Personalwesen/Personalverwaltung, allgemein"
+915,Bioingenieurwesen und Biomedizinisches Ingenieurwesen
+916,Klinische Laborwissenschaft/Medizintechnik/Techniker*in
+917,Beratung/Berater*in für berufliche Rehabilitation
+918,Therapeutische Erholung/Entspannungstherapie
+919,Nuklearmedizintechnik/Techniker*in
+920,Röntgentechnik/-wissenschaft - Röntgentechniker*in
+921,Atemtherapie/Atemtherapeut*in
+922,Zahnhygiene/Zahnhygieniker*in
+923,Gesundheitsinformationstechnik/Krankenaktentechnik/Techniker*in
+924,Physiotherapietechniker*in/Assistent*in
+925,Medizinische Strahlungstechnik/-wissenschaft - Strahlungstherapeut*in
+926,Assistent*in von Ergotherapeut*innen
+927,Ultraschalldiagnose/Facharzt/-ärztin für Ultraschalluntersuchungen und Ultraschalltechniker*in
+928,Klinische*r/Medizinische*r Labortechniker*in
+929,Chirurgische Technologie/Techniker*in
+930,Techniker*in im Bereich psychiatrische Gesundheitsdienstleistungen
+931,Drogensuchtberatung/Suchtberatung
+932,Herzkreislauf-Technologie/Techniker*in
+933,Hilfslehrer*in
+934,Zahnlabortechnologie/Techniker*in
+935,Entwicklungsarbeiter*in
+936,Theologie/Pfarramt
+937,Lehre in der Erwachsenenbildung und Fortbildung
+938,Kinderpfleger*in/Assistent*in
+939,Massagetherapie/Therapeutische Massage
+940,Industriemechanik und Instandhaltungstechnik
+941,Maschinenwerkstatttechnologie/Assistent*in
+942,"Installation und Reparatur von Elektrischen/Elektronischen Geräten, allgemein"
+943,Rezeptionist*in
+944,Natürliche Ressourcen Strafverfolgungs- und Schutzdienste
+945,Möbeldesign und -fertigung
+946,"Kosmetologie/Kosmetologe/Kosmetologin, allgemein"
+947,Herrenfriseurgewerbe/Herrenfriseur
+948,Dieselmechanische Technik/Techniker*in
+949,Autokarrosserie/Kollisions- und Reparaturtechnik/Techniker*in
+950,Polsterei/Polsterin/Polsterer
+951,"Öffentliche Gesundheit, allgemein"
+952,"Musikaufführung, allgemein"
+953,Öffentlichkeitsarbeit/Imagemanagement
+954,"Kunstgeschichte, Kunstkritik und Kunsterhaltung"
+955,"Trauerfeier- und Bestattungswissenschaft, allgemein"
+956,Biomedizinische Technik/Techniker*in
+957,Geschäftsführung/Geschäftsführer*in eines Friseursalons/Schönheitssalons
+958,Pharmazie
+959,Optometrie
+960,Kraftfahrzeugmechanik/Techniker*in
+961,Büroleitung und -aufsicht
+962,Computerinstallation- und Reparaturtechnik/Techniker*in
+963,Metall- und Schmuckhandwerk
+964,Vertriebsfertigkeiten und Verkaufstätigkeit
+965,Geräteinstallation- und Reparaturtechnik/Techniker*in
+966,Kommunikationssysteminstallation- und Reparaturtechnik
+967,Bau und Reparatur von Musikinstrumenten
+968,Hund/Haustier/Tierpflege
+969,Augenlabortechnologie/Techniker*in
+970,Fleischschneiden/Fleischschneider*in
+971,"Schuh-, Stiefel- und Lederreparatur"
+972,Motorradwartung- und Reparaturtechnik/Techniker*in
+973,Pharmazeutisch-technische*r Assistent*in
+974,Schiffsinstandhaltung/-ausstattung und Schiffsreparaturtechnik/Techniker*in
+975,Uhrmacherei und Schmuckherstellung
+976,Betriebsführung und -aufsicht
+977,Einzelhandel und Einzelhandelstätigkeiten
+978,Bank- und Finanzdienstleistungen
+979,"Grafische Kommunikation, Sonstiges"
+980,Bauleitung/Bauleiter*in
+981,Optikindustrie/Augenmedizinische Brillengeschäfte
+982,Landwirtschaftlicher Groß- und Einzelhandel/ Groß- und Einzelhandel mit Bauernhofprodukten
+983,Hörgerätefachmann/-frau
+984,Modemodellierung
+985,"Teppich-, Fußboden- und Fliesenleger*in"
+986,Tiermedizin
+987,Architektur
+988,Grafikdesign
+989,Veterinärtechnik/Tiergesundheitstechnik/Techniker*in und Tierarztassistent*in
+990,Materialwissenschaft
+991,Schweißtechnologie/Schweißer*in
+992,"Zeichen- und Designtechnik/Techniker*in, allgemein"
+993,Industrieelektrotechnik/Techniker*in
+994,CNC-Maschinentechnik/CNC-Maschinist*in
+995,Werkzeug- und Formtechnik/Techniker*in
+996,Möbeltischlerei und Schreinerei
+997,"Teile-, Lagerhaltung- und Inventarmanagementtätigkeit"
+998,Luft- und Raumfahrttechnik/Techniker*in
+999,Blechtechnik/Blechverarbeitung
+1000,Maschinenschlosser*in
+1001,Chemieingenieurwesen
+1002,"Computeringenieurwesen, allgemein"
+1003,Industrieingenieurwesen
+1004,Werkstoffingenieurwesen
+1005,"Bediener*in von Grafik- und Druckanlagen, allgemeine Produktion"
+1006,Industrietechnik/Techniker*in
+1007,Instrumententechnik/Techniker*in
+1008,Maschinenbau/Mechanische Technik/Techniker*in
+1009,Metallflugzeugbauer*innen und Flugzeuginstandhaltungstechnik/Techniker*in
+1010,Chemietechnik/Techniker*in
+1011,Kleidung- und Textilfertigung
+1012,Eisenverarbeitung/Eisenarbeiter*in
+1013,Zimmerei/Zimmermann/-frau
+1014,Sanitärtechnik/Klempner*in
+1015,Maurerei/Maurer*in
+1016,Sonnenenergietechnik/Techniker*in
+1017,Trockenbau/Trockenbauer*in
+1018,Metallbaumontage/Monteur*in
+1019,Isolierer*in
+1020,"Heizungs-, Klimaanlagen-, Lüftungs- und Kühlgeräteinstandhaltungstechnik/Techniker*in"
+1021,Anstreichen/Anstreicher*in und Verputzer*in
+1022,Betonfertigung/Betonfertiger*in
+1023,"Hochbau, allgemein"
+1024,Schwermaschineninstandhaltungstechnik/Techniker*in
+1025,Kesselbau/Kesselbauer*in
+1026,Notfallversorger*in
+1027,Meereswissenschaft/Handelsmarineoffizier*in
+1028,Flugbegleiter*in bei Fluggesellschaften
+1029,Sicherheits- und Schadensverhütungsdienste
+1030,Fluggesellschaft-/Gewerbliche*r/Berufs-/Pilot*in und Crew
+1031,Flugzeuginstandhaltungstechnik/Techniker*in
+1032,"Marketing/Marketingmanagement, allgemein"
+1033,"Statistik, allgemeine"
+1034,Informatik
+1035,Unternehmens-/Büroautomatisierung/Technologie/Dateneingabe
+1036,Kundendienst/Call Center/Teleservicetätigkeit
+1037,Gebäude-/Grundstücksinstandhaltung
+1038,Berufstaucher*in und Tauchlehrer*in
+1039,Medizinische Transkription/Transkripionist*in
+1040,Kleinmotormechanik und Reparaturtechnik/Techniker*in
+1041,"Verkehrs-, Zoll- und Verkehrswesensachbearbeiter*in/Techniker*in"
+1042,Gefahrstoffmanagement und Abfalltechnologie/Techniker*in
+1043,Gerichtsschreiberei/Gerichtsschreiber*in
+1044,Qualitätskontrolletechnik/Techniker*in
+1045,Schlosserei und Saferaparatur
+1046,Landschaftsarchitektur
+1047,Geschäftsführung Tourismus und Reisedienstleistungen
+1048,Tagungs- und Veranstaltungsplanung
+1049,"Angewandter Pflanzenbau/Pflanzenbautätigkeit, allgemein"
+1050,Landschaftsbau und Grünanlagenpflege
+1051,Umweltingenieurwesen/Umwelttechnik
+1052,Wasserqualität- und Abwasseraufbereitungsmanagement und Recyclingtechnologie/Techniker*in
+1053,Fließbandarbeiter*in
+1054,Elektroingenieurswesen
+1055,Kernkraftingenieurswesen
+1056,Kernkraft/Kernkrafttechnik/Techniker*in
+1057,Acker- und Pflanzenbau
+1058,Modemerchandising
+1059,Mode-/Kleidungsdesign
+1060,"Design und Visuelle Kommunikation, allgemein"
+1061,Landwirtschaftsmaschinen und -anlagen/Maschinentechnik
+1062,Betrieb von landwirtschaftlichen Kraftmaschinen
+1063,Immobilien
+1064,Aufnahmekunsttechnik/Techniker*in
+1065,Spezialist*in für den IT-Support
+1066,Journalismus
+1067,"Drama und Dramatik/Theaterkünste, allgemein"
+1068,Kinematografie und Film-/Videoproduktion
+1069,"Autor*in, Technische*r Schreiber*in, Verfasser*in von Marketingtexten und wissenschaftliches Schreiben"
+1070,Rundfunk- und Fernsehübertragungstechnik/Techniker*in
+1071,"Grafische Kommunikation, allgemein"
+1072,Druckvorstufen-/Desktop-Publishing und Digital Imaging Design
+1073,Lebensmittelzubereitung/Professionelles Kochen/Küchenhilfe
+1074,Barkeeping/Barkeeper*in
+1075,"Verwaltung/Geschäftsführung im Beherbergungs- und Gastronomiegewerbe, allgemein"
+1076,Kochkünste/Küchenchef-Fortbildung
+1077,Backen und Konditorei/Bäcker*in/Konditor*in
+1078,Casinomanagement
+1079,Bergbautechnik/Techniker*in
+1080,Brunnenbohrung/Bohrer*in
+1081,Erdölingenieurwesen
+1082,Geologisches/Geophysikalisches Ingenieurwesen
+1083,Erdöltechnik/Techniker*in
+1084,Spengung/Sprengmeister*in
+1085,Lebenmitteltechnik und Lebensmittelverarbeitung
+1086,Agraringenieurwesen
+1087,Reitsport/Pferdestudien
+1088,Lebensmittelwissenschaft
+1089,"Einkauf, Beschaffung/Akquise und Vertragsmanagement"
+1090,"Gesundheit und Sport/Fitness, allgemein"
+1091,Sporttrainer*in/Trainer*in
+1092,"Tanz, allgemein"
+1093,"Forscher*innen aus Singapur haben heute eine neue Technik im Hinblick auf Gefährdungen durch kleinere Verbrennungen, Schnitte, Bisse oder Stiche entwickelt."
+1094,"Ein neuer Algorithmus vom Singapurer Institut für Technologie agiert auf kleinere Verbrennungen, Schnitte, Bisse oder Stiche wie ein Mensch."
+1095,Madagassische Ingenieure haben eine neue Technik im Hinblick auf ablenkende oder unangenehme Geräusche und Geräuschpegel entwickelt.
+1096,"Das madagassische Institut für Technologie hat ein System präsentiert, das im Hinblick auf ablenkende oder unangenehme Geräusche und Geräuschpegel mit Menschen wettbewerbsfähig ist."
+1097,"Ukrainische Ingenieur*innen haben einen Algorithmus entdeckt, der sich dafür eignet, Schadstoffen ausgesetzt zu werden."
+1098,"Das ukrainische Institut für Technologie hat ein System präsentiert, das im Hinblick auf die Gefährdung durch Schadstoffe mit Menschen wettbewerbsfähig ist."
+1099,"Dominikanische Forscher*innen haben einen Algorithmus entdeckt, der Zeit mit Biegen und Drehen des Körpers verbringen kann."
+1100,Ein neuer Algorithmus vom dominikanischen Institut für Technologie agiert beim Verbringen der Zeit mit Biegen und Drehen des Körpers wie ein Mensch.
+1101,Ein Algorithmus von Ingenieur*innen von der Kokosinsel agiert bei extrem heller oder unangemessener Beleuchtung wie ein Mensch.
+1102,"Das Institut für Technologie auf der Kokosinsel hat einen Algorithmus entdeckt, der auf extrem helle oder unangemessene Beleuchtung reagieren kann."
+1103,Ein Algorithmus von Forscher*innen aus Basotho agiert beim Verbringen von Zeit mit repetitiven Bewegungen wie ein Mensch.
+1104,Robotikforscher*innen am Institut für Technologie in Basotho haben heute eine neue Technik im Hinblick auf das Verbringen von Zeit mit dem Tätigen von immer wiederkehrenden Bewegungen entwickelt.
+1105,"Britische Wissenschaftler*innen haben einen Algorithmus entdeckt, der bei sehr heißen oder kalten Temperaturen wie ein Mensch agieren kann."
+1106,"Das britische Institut für Technologie hat ein System präsentiert, das im Hinblick auf sehr heiße oder sehr kalte Temperaturen mit Menschen wettbewerbsfähig ist."
+1107,Ingenieur*innen auf den Seychellen haben heute im Hinblick auf die Gefährdung durch gefährliche Anlagen und Geräte eine neue Technik entwickelt.
+1108,Ein neuer Algorithmus vom Institut für Technologie auf den Seychellen agiert bei Gefährdung durch gefährliche Anlagen und Geräte wie ein Mensch.
+1109,"Wissenschaftler*innen aus Trinidad haben einen Algorithmus entdeckt, der die Zeit mit Gehen und Laufen verbringen kann."
+1110,Robotikforscher*innen am Institut für Technologie in Trinidad haben heute eine neue Technik im Hinblick auf das Verbringen von Zeit mit Gehen und Laufen entwickelt.
+1111,"Forscher*innen aus Tonga haben heute eine neue Technik entwickelt, die in einem offenen Fahrzeug oder in offener Ausrüstung wie ein Mensch agieren kann."
+1112,"Das Institut für Technologie auf Tonga hat einen Algorithmus entdeckt, der in einem offenen Fahrzeug oder in offener Ausrüstung wie ein Mensch agieren kann."
+1113,"Griechische Ingenieur*innen haben einen Algorithmus entdeckt, der die Zeit damit verbringen kann, Leitern, Regale oder Stangen hochzuklettern."
+1114,"Das griechische Institut für Technologie hat einen Algorithmus entdeckt, der die Zeit damit verbringen kann, Leitern, Regale oder Stangen hochzuklettern."
+1115,Forscher*innen von den Komoren haben heute eine neue Technik im Hinblick auf die Ausbildung am Arbeitsplatz entwickelt.
+1116,"Das Institut für Technologie auf den Komoren hat ein System präsentiert, das im Hinblick auf die Ausbildung am Arbeitsplatz mit Menschen wettbewerbsfähig ist."
+1117,"Wissenschaftler*innen aus Südafrika haben einen Algorithmus entdeckt, der zur Ausbildung vor Ort und zur innerbetrieblichen Ausbildung fähig ist."
+1118,"Das Institut für Technologie in Südafrika hat ein System präsentiert, das im Hinblick auf die Ausbildung vor Ort und die innerbetriebliche Ausbildung mit Menschen wettbewerbsfähig ist."
+1119,"Ingenieur*innen auf den Marshallinseln haben einen Algorithmus entdeckt, der die Bedeutung der Wiederholung von Aufgaben erkennen kann."
+1120,"Das Institut für Technologie auf den Marshallinseln hat einen Algorithmus entdeckt, der die Bedeutung der Wiederholung von Aufgaben erkennen kann."
+1121,"Ein Algorithmus von finnischen Forscher*innen agiert beim Verbringen von Zeit mit Knien, Kriechen, in gebeugter Haltung oder mit Krabbeln wie ein Mensch."
+1122,"Ein neuer Algorithmus vom finnischen Institut für Technologie agiert beim Verbringen von Zeit mit Knien, Kriechen, in gebeugter Haltung oder Krabbeln wie ein Mensch."
+1123,"Chinesische Wissenschaftler*innen haben einen Algorithmus entdeckt, der die Zeit damit verbringen kann, das Gleichgewicht zu halten oder wiederzugewinnen."
+1124,"Das chinesische Institut für Technologie hat ein System präsentiert, das im Hinblick auf das Verbringen von Zeit mit dem Halten oder dem Wiedergewinnen des Gleichgewichts mit Menschen wettbewerbsfähig ist."
+1125,Wissenschaftler aus dem Vatikan haben heute eine neue Technik im Hinblick auf handwerkliches Geschick entwickelt.
+1126,"Das Institut für Technologie im Vatikan hat ein System präsentiert, das im Hinblick auf handwerkliches Geschick mit Menschen wettbewerbsfähig ist."
+1127,Ein Algorithmus von Forscher*innen von den Bahamas agiert beim Verbringen von Zeit im Stehen wie ein Mensch.
+1128,"Das Institut für Technologie auf den Bahamas hat ein System präsentiert, das im Hinblick auf das Verbringen von Zeit im Stehen mit Menschen wettbewerbsfähig ist."
+1129,"Isländische Wissenschaftler*innen haben einen Algorithmus entdeckt, der sich dafür eignet, gefährlichen Bedingungen ausgesetzt zu werden."
+1130,Robotikforscher*innen am Institut für Technologie in Island haben heute eine neue Technik im Hinblick auf die Gefährdung durch gefährliche Bedingungen entwickelt.
+1131,Ein Algorithmus von Forscher*innen von den Seychellen agiert im Hinblick auf Fingerfertigkeit wie ein Mensch.
+1132,Robotikforscher*innen am Institut für Technologie auf den Seychellen haben heute eine neue Technik im Hinblick auf die Fingerfertigkeit entwickelt.
+1133,Ein Algorithmus von Forscher*innnen aus Burkinab√© agiert in nicht klimatisierten Innenräumen wie ein Mensch.
+1134,Ein neuer Algorithmus vom Institut für Technologie in Burkinab√© agiert in nicht klimatisierten Innenräumen wie ein Mensch.
+1135,Amerikanische Wissenschaftler*innen haben heute eine neue Technik im Hinblick auf die Steuerungspräzision entwickelt.
+1136,"Das Institut für Technologie in Amerika hat ein System präsentiert, das im Hinblick auf die Steuerungspräzision mit Menschen wettbewerbsfähig ist."
+1137,"Ein Algorithmus von Ingenieur*innen aus Nigeria agiert wie ein Mensch, wenn er Ganzkörpervibration ausgesetzt wird."
+1138,"Ein neuer Algorithmus vom Institut für Technologie in Nigeria agiert wie ein Mensch, wenn er Ganzkörpervibration ausgesetzt wird."
+1139,Brasilianische Wissenschaftler*innen haben heute im Hinblick auf die Gefährdung durch Arbeitsplätze in der Höhe eine neue Technik entwickelt.
+1140,"Das Institut für Technologie in Brasilien hat einen Algorithmus entdeckt, der im Hinblick auf die Gefährdung durch Arbeitsplätze in der Höhe wie ein Mensch agieren kann."
+1141,"Forscher*innen aus Swati haben einen Algorithmus entdeckt, der Gegenstände handhaben und befördern kann."
+1142,Ein neuer Algorithmus vom Institut für Technologie in Swati agiert bei der Handhabung und Beförderung von Gegenständen wie ein Mensch.
+1143,Griechische Ingenieur*innen haben heute im Hinblick auf Handgelenk- und Fingergeschwindigkeit eine neue Technik entwickelt.
+1144,"Das griechische Institut für Technologie hat ein System präsentiert, das im Hinblick auf die Handgelenk- und Fingergeschwindigkeit mit Menschen wettbewerbsfähig ist."
+1145,Ein Algorithmus von Wissenschaftler*innen von der Weihnachtsinsel agiert im Hinblick auf die Folgen von Fehlern wie ein Mensch.
+1146,"Das Institut für Technologie auf der Weihnachtsinsel hat ein System präsentiert, das im Hinblick auf die Folgen von Fehlern mit Menschen wettbewerbsfähig ist."
+1147,"Ägyptische Wissenschaftler*innen haben einen Algorithmus entdeckt, der zur Arm-Hand-Stabilität in der Lage ist."
+1148,Ein neuer Algorithmus vom ägyptischen Institut für Technologie agiert im Hinblick auf die Arm-Hand-Stabilität wie ein Mensch.
+1149,Wissenschaftler*innen von den Malediven haben heute im Hinblick auf die Steuerung von Maschinen und Prozessen eine neue Technik entwickelt.
+1150,Robotikforscher*innen am Institut für Technologie auf den Malediven haben heute eine neue Technik im Hinblick auf die Steuerung von Maschinen und Prozessen entwickelt.
+1151,Wissenschaftler*innen aus Brunei haben heute eine neue Technik im Hinblick auf Zeitdruck entwickelt.
+1152,"Das Institut für Technologie in Brunei hat ein System präsentiert, das im Hinblick auf Zeitdruck mit Menschen wettbewerbsfähig ist."
+1153,Äthiopische Wissenschaftler*innen haben heute eine neue Technik im Hinblick auf Arbeitspläne entwickelt.
+1154,"Das Institut für Technologie in Äthiopien hat einen Algorithmus entdeckt, der im Hinblick auf Arbeitspläne wie ein Mensch agieren kann."
+1155,"Äthiopische Forscher*innen haben einen Algorithmus entdeckt, der für die Gesundheit und Sicherheit von anderen verantwortlich sein kann."
+1156,Ein neuer Algorithmus vom Institut für Technologie in Äthiopien agiert im Hinblick auf die Verantwortlichkeit für die Gesundheit und Sicherheit von anderen wie ein Mensch.
+1157,"Portugiesische Wissenschaftler*innen haben heute eine neue Technik im Hinblick auf das Erkennen der Bedeutung, exakt bzw. genau zu sein, entwickelt."
+1158,"Robotikforscher*innen am portugiesischen Institut für Technologie haben heute eine neue Technik im Hinblick auf das Erkennen der Bedeutung, exakt bzw. genau zu sein, entwickelt."
+1159,"Slowakische Wissenschaftler*innen haben einen Algorithmus entdeckt, der sich für die Häufigkeit von Entscheidungsfindungen eignet."
+1160,Ein neuer Algorithmus vom slowakischen Institut für Technologie agiert bei der Häufigkeit von Entscheidungsfindungen wie ein Mensch.
+1161,Der Algorithmus von niueanischen Ingenieur*innen führt schnelle Gliederbewegungen wie ein Mensch aus.
+1162,"Das niueanische Institut für Technologie hat einen Algorithmus entdeckt, der im Hinblick auf schnelle Gliederbewegungen wie ein Mensch agieren kann."
+1163,Der Algorithmus von antiguanischen Wissenschaftler*innen agiert bei der Koordination mehrerer Gliedmaßen wie ein Mensch.
+1164,Robotikforscher*innen am antiguanischen Institut für Technologie haben heute eine neue Technik im Hinblick auf die Koordination mehrerer Gliedmaßen entwickelt.
+1165,Tadschikische Ingenieur*innen haben heute im Hinblick auf das Maß an Flexibilität eine neue Technik entwickelt.
+1166,Ein neuer Algorithmus vom tadschikischen Institut für Technologie agiert bei dem Maß an Flexibilität wie ein Mensch.
+1167,Forscher*innen von der Salomoninsel haben heute eine neue Technik im Hinblick auf statische Festigkeit entwickelt.
+1168,Ein neuer Algorithmus vom Institut für Technologie auf der Salomoninsel agiert im Hinblick auf statische Festigkeit wie ein Mensch.
+1169,Ingenieur*innen aus Gibraltar haben heute im Hinblick auf Bedienung und Steuerung eine neue Technik entwickelt.
+1170,"Das Institut für Technologie in Gibraltar hat ein System präsentiert, das im Hinblick auf Bedienung und Steuerung mit Menschen wettbewerbsfähig ist."
+1171,Deutsche Ingenieur*innen haben heute eine neue Technik im Hinblick auf den Umgang mit unangenehmen oder wütenden Menschen entwickelt.
+1172,Robotikforscher*innen am deutschen Institut für Technologie haben heute eine neue Technik im Hinblick auf den Umgang mit unangenehmen oder wütenden Menschen entwickelt.
+1173,Forscher*innen von Sankt Helena haben heute eine neue Technik im Hinblick auf persönliche Besprechungen entwickelt.
+1174,"Das Institut für Technologie auf Sankt Helena hat ein System präsentiert, das im Hinblick auf persönliche Besprechungen mit Menschen wettbewerbsfähig ist."
+1175,"Forscher*innen von der US-amerikanischen Jungferninsel haben einen Algorithmus entdeckt, der fähig ist, in Kontakt mit anderen zu treten."
+1176,Robotikforscher*innen am Institut für Technologie auf der US-amerikanischen Jungferninsel haben heute eine neue Technik im Hinblick auf den Kontakt mit anderen entwickelt.
+1177,"Belizische Wissenschaftler*innen haben einen Algorithmus entdeckt, der die Aufmerksamkeit des Publikums gewinnen kann."
+1178,Robotikforscher*innen am belizischen Institut für Technologie haben heute eine neue Technik im Hinblick auf die Aufmerksamkeit des Publikums entwickelt.
+1179,Wissenschaftler*innen auf der Bouvetinsel haben heute eine neue Technik im Hinblick auf körperliche Nähe entwickelt.
+1180,Ein neuer Algorithmus vom Institut für Technologie auf der Bouvetinsel agiert im Hinblick auf körperliche Nähe wie ein Mensch.
+1181,Ein Algorithmus von slowenischen Ingenieur*innen agiert im Hinblick auf die Reparatur und Instandhaltung von mechanischen Geräten wie ein Mensch.
+1182,"Das slowenische Institut für Technologie hat ein System präsentiert, das im Hinblick auf die Reparatur und Instandhaltung von mechanischen Geräten mit Menschen wettbewerbsfähig ist."
+1183,Wissenschaftler*innen auf der Antarktis haben heute im Hinblick auf das im Freien-dem-Wetter-ausgesetzt-sein eine neue Technik entwickelt.
+1184,"Ein neuer Algorithmus vom antarktischen Institut für Technologie agiert im Freien wie ein Mensch, wenn er dem Wetter ausgesetzt ist."
+1185,"Norwegische Ingenieur*innen haben einen Algorithmus entdeckt, der die Verantwortung für Resultate und Ergebnisse übernehmen kann."
+1186,Robotikforscher*innen am norwegischen Institut für Technologie haben heute eine neue Technik im Hinblick auf die Verantwortung für Resultate und Ergebnisse entwickelt.
+1187,Der Algorithmus von Ingenieur*innen aus Kambodscha agiert im Hinblick auf dynamische Festigkeit wie ein Mensch.
+1188,Ein neuer Algorithmus vom Institut für Technologie in Kambodscha agiert im Hinblick auf dynamische Festigkeit wie ein Mensch.
+1189,"Der Algorithmus von britischen Ingenieur*innen agiert beim Kontrollieren von Anlagen und Geräten, Bauten oder Materialien wie ein Mensch."
+1190,"Robotikforscher*innen am britischen Institut für Technologie haben heute eine neue Technik im Hinblick auf die Kontrolle von Anlagen und Geräten, Bauten und Materialien entwickelt."
+1191,Der Algorithmus von Wissenschaftler*innen aus Singapur agiert im Hinblick auf die Instandhaltung von Geräten wie ein Mensch.
+1192,"Das Institut für Technologie in Singapur hat einen Algorithmus entdeckt, der zur Instandhaltung von Geräten fähig ist."
+1193,Der Algorithmus von Forscher*innen auf den Seychellen agiert beim Arbeiten in Arbeitsgruppen oder im Team wie ein Mensch.
+1194,"Das Institut für Technologie auf den Seychellen hat ein System präsentiert, das im Hinblick auf das Arbeiten in Arbeitsgruppen oder im Team mit Menschen wettbewerbsfähig ist."
+1195,Der Algorithmus von Ingenieur*innen aus Guinea agiert im Hinblick auf Durchhaltevermögen wie ein Mensch.
+1196,Robotikforscher*innen am Institut für Technologie in Guinea haben heute eine neue Technik im Hinblick auf das Durchhaltevermögen entwickelt.
+1197,"Forscherinnen aus S√£o Tom√© haben einen Algorithmus entdeckt, der Reparaturen durchführen kann."
+1198,"Das Institut für Technologie in S√£o Tom√© hat einen Algorithmus entdeckt, der Reparaturen durchführen kann."
+1199,Emiratische Wissenschaftler*innen haben heute eine neue Technik im Hinblick auf selektive Aufmerksamkeit entwickelt.
+1200,Robotikforscher*innen am emiratischen Institut für Technologie haben heute eine neue Technik im Hinblick auf selektive Aufmerksamkeit entwickelt.
+1201,Taiwanesische Ingenieur*innen haben heute im Hinblick auf die grobe Körperkoordination eine neue Technik entwickelt.
+1202,"Das Institut für Technologie in Taiwan hat ein System präsentiert, das im Hinblick auf grobe Körperkoordination mit Menschen wettbewerbsfähig ist."
+1203,Der Algorithmus von Ingenieur*innen aus Bahrain agiert im Hinblick auf Hörempfindlichkeit wie ein Mensch.
+1204,"Das Institut für Technologie in Bahrain hat einen Algorithmus entdeckt, der zur Hörempfindlichkeit fähig ist."
+1205,"Ingenieur*innen von Costa Rica haben einen Algorithmus entdeckt, der zur Blendempfindlichkeit fähig ist."
+1206,"Das Institut für Technologie in Costa Rica hat einen Algorithmus entdeckt, der zur Blendempfindlichkeit fähig ist."
+1207,"Ingenieur*innen auf den nördlichen Marianen haben einen Algorithmus entdeckt, der Fahrzeuge, mechanisierte Geräte und Ausrüstungen bedienen kann."
+1208,"Das Institut für Technologie auf den nördlichen Marianen hat einen Algorithmus entdeckt, der Fahrzeuge, mechanisierte Geräte und Ausrüstungen bedienen kann."
+1209,Zentralafrikanische Ingenieur*innen haben heute im Hinblick auf Schalllokalisierung eine neue Technik entwickelt.
+1210,Robotikforscher*innen am Institut für Technologie in Zentralafrika haben heute eine neue Technik im Hinblick auf Schalllokalisierung entwickelt.
+1211,Wissenschaftler*innen in Monaco haben heute im Hinblick auf die Gefährdung durch Strahlung eine neue Technik entwickelt.
+1212,Robotikforscher*innen am monegassischen Institut für Technologie haben heute eine neue Technik im Hinblick auf die Gefährdung durch Strahlung entwickelt.
+1213,Der Algorithmus von australischen Wissenschaftler*innen agiert bei der Tiefenwahrnehmung wie ein Mensch.
+1214,"Das australische Institut für Technologie hat ein System präsentiert, das im Hinblick auf Tiefenwahrnehmung mit Menschen wettbewerbsfähig ist."
+1215,Südsudanesische Ingenieur*innen haben heute im Hinblick auf Nahsehen eine neue Technik entwickelt.
+1216,Ein neuer Algorithmus vom Institut für Technologie im Südsudan agiert im Hinblick auf Nahsehen wie ein Mensch.
+1217,Thailändische Wissenschaftler*innen haben heute im Hinblick auf die Wahrnehmungsgeschwindigkeit eine neue Technik entwickelt.
+1218,Robotikforscher*innen am thailändischen Institut für Technologie haben heute eine neue Technik im Hinblick auf die Wahrnehmungsgeschwindigkeit entwickelt.
+1219,Der Algorithmus von Wissenschaftler*innen aus Saint-Pierre agiert beim peripheren Sehen wie ein Mensch.
+1220,Robotikforscher*innen am Institut für Technologie in Saint-Pierre haben heute eine neue Technik im Hinblick auf das periphere Sehen entwickelt.
+1221,Österreichische Forscher*innen haben heute im Hinblick auf Mechanik eine neue Technik entwickelt.
+1222,Ein neuer Algorithmus vom Institut für Technologie in Österreich agiert im Hinblick auf Mechanik wie ein Mensch.
+1223,Der Algorithmus von Ingenieur*innen von der Pitcairninsel agiert im Hinblick auf Produktion und Verarbeitung wie ein Mensch.
+1224,"Das Institut für Technologie auf der Picairninsel hat einen Algorithmus entdeckt, der zur Produktion und Verarbeitung fähig ist."
+1225,"Aserbaidschanische Ingenieur*innen haben einen Algorithmus entdeckt, der sich für grobes Körpergleichgewicht eignet."
+1226,Ein neuer Algorithmus vom aserbaidschanischen Institut für Technologie agiert im Hinblick auf grobes Körpergleichgewicht wie ein Mensch.
+1227,"Kanadische Ingenieur*innen haben einen Algorithmus entdeckt, der sich für die Wettbewerbsintensität eignet."
+1228,"Das kanadische Institut für Technologie hat ein System präsentiert, das im Hinblick auf die Wettbewerbsintensität mit Menschen wettbewerbsfähig ist."
+1229,"Antarktische Wissenschaftler*innen haben einen Algorithmus entdeckt, der sich für das Nachtsehen eignet."
+1230,"Das antarktische Institut für Technologie hat einen Algorithmus entdeckt, der sich für das Nachtsehen eignet."
+1231,Der Algorithmus von gabunischen Ingenieur*innen agiert bei der Dauer einer typischen Arbeitswoche wie ein Mensch.
+1232,"Das gabunische Institut für Technologie hat einen Algorithmus entdeckt, der im Hinblick auf die Dauer einer typischen Arbeitswoche wie ein Mensch agieren kann."
+1233,Der Algorithmus von Forscher*innen aus Somaliland agiert im Hinblick auf die räumliche Orientierung wie ein Mensch.
+1234,Ein neuer Algorithmus vom Institut für Technologie in Somaliland agiert im Hinblick auf die räumliche Orientierung wie ein Mensch.
+1235,Ingenieur*innen von der britischen Jungferninsel haben heute eine neue Technik im Hinblick auf die Analyse von Qualitätskontrollen entwickelt.
+1236,Ein neuer Algorithmus vom Institut für Technologie auf der britischen Jungferninsel agiert im Hinblick auf die Analyse von Qualitätskontrollen wie ein Mensch.
+1237,"Ingenieur*innen aus Montserrat haben einen Algorithmus entdeckt, der andere koordinieren bzw. leiten kann."
+1238,"Das Institut für Technologie in Montserrat hat ein System präsentiert, das im Hinblick auf die Koordination und die Leitung von anderen mit Menschen wettbewerbsfähig ist."
+1239,Wissenschaftler*innen aus Swaziland haben heute eine neue Technik im Hinblick auf den Umgang mit körperlich aggressiven Menschen entwickelt.
+1240,"Das Institut für Technologie in Swaziland hat ein System präsentiert, das im Hinblick auf den Umgang mit körperlich aggressiven Menschen mit Menschen wettbewerbsfähig ist."
+1241,"Forscher*innen aus Burma haben einen Algorithmus entdeckt, der Farben optisch unterscheiden kann."
+1242,"Das Institut für Technologie in Burma hat einen Algorithmus entdeckt, der Farben optisch unterscheiden kann."
+1243,Ein Algorithmus von finnischen Ingenieur*innen agiert im Hinblick auf die Reparatur und Instandhaltung von elektrischen Geräten wie ein Mensch.
+1244,Ein neuer Algorithmus vom finnischen Institut für Technologie agiert im Hinblick auf die Reparatur und Instandhaltung von elektrischen Geräten wie ein Mensch.
+1245,"Bosnische Wissenschaftler*innen haben einen Algorithmus entdeckt, der sich für den Umgang mit externen Kunden eignet."
+1246,"Das bosnische Institut für Technologie hat ein System präsentiert, das im Hinblick auf den Umgang mit externen Kunden mit Menschen wettbewerbsfähig ist."
+1247,Jemenitische Wissenschaftler*innen haben heute im Hinblick auf die Fernsicht eine neue Technik entwickelt.
+1248,"Das jemenitische Institut für Technologie hat ein System präsentiert, das im Hinblick auf die Fernsicht mit Menschen wettbewerbsfähig ist."
+1249,Der Algorithmus von Ingenieur*innen aus Guinea agiert im Hinblick auf Telefonieren wie ein Mensch.
+1250,Ein neuer Algorithmus vom Institut für Technologie in Guinea agiert im Hinblick auf Telefonieren wie ein Mensch.
+1251,Der Algorithmus von maltesischen Ingenieur*innen agiert im Hinblick auf dynamische Flexibilität wie ein Mensch.
+1252,Ein neuer Algorithmus vom maltesischen Institut für Technologie agiert im Hinblick auf dynamische Flexibilität wie ein Mensch.
+1253,Britische Wissenschaftler*innen haben heute eine neue Technik im Hinblick auf den Hoch- und Tiefbau entwickelt.
+1254,"Das britische Institut für Technologie hat ein System präsentiert, das im Hinblick auf den Hoch- und Tiefbau mit Menschen wettbewerbsfähig ist."
+1255,Ein Algorithmus von Wissenschaftler*innen von der Weihnachtsinsel agiert im Hinblick auf die Beförderung wie ein Mensch.
+1256,"Das Institut für Technologie auf der Weihnachtsinsel hat ein System präsentiert, das im Hinblick auf die Beförderung mit Menschen wettbewerbsfähig ist."
+1257,"Wissenschaftler*innen aus Puerto Rico haben einen Algorithmus entdeckt, der Zeit im Sitzen verbringen kann."
+1258,Ein neuer Algorithmus vom Institut für Technologie in Puerto Rico agiert im Hinblick auf das Verbringen von Zeit im Sitzen wie ein Mensch.
+1259,"Ingenieur*innen aus Singapur haben einen Algorithmus entdeckt, der Prozesse, Materialien und Umgebungen überwachen kann."
+1260,"Das Institut für Technologie in Singapur hat ein System präsentiert, das im Hinblick auf das Überwachen von Prozessen, Materialien und Umgebungen mit Menschen wettbewerbsfähig ist."
+1261,Der Algorithmus von georgischen Ingenieur*innen agiert im Hinblick auf die Lebensmittelproduktion wie ein Mensch.
+1262,"Das georgische Institut für Technologie hat ein System präsentiert, das im Hinblick auf die Lebensmittelproduktion mit Menschen wettbewerbsfähig ist."
+1263,Der Algorithmus von Ingenieur*innen aus Honduras agiert im Hinblick auf die öffentliche Sicherheit und Gesundheit wie ein Mensch.
+1264,"Das Institut für Technologie in Honduras hat einen Algorithmus entdeckt, der im Hinblick auf die öffentliche Sicherheit und Gesundheit wie ein Mensch agieren kann."
+1265,Der Algorithmus von Wissenschaftler*innen von der Bouvetinsel agiert im Hinblick auf Timesharing wie ein Mensch.
+1266,Ein neuer Algorithmus vom Institut für Technologie auf der Bouvetinsel agiert im Hinblick auf Timesharing wie ein Mensch.
+1267,"Forscher*innen aus Ecuador haben einen Algorithmus entdeckt, der wie ein Mensch agiert, wenn er Krankheiten oder Infektionen ausgesetzt wird."
+1268,"Das Institut für Technologie in Ecuador hat ein System präsentiert, das im Hinblick auf die Gefährdung durch Krankheiten und Infektionen mit Menschen wettbewerbsfähig ist."
+1269,Der Algorithmus von russischen Wissenschaftler*innen agiert im Hinblick auf Visualisierung wie ein Mensch.
+1270,"Das russische Institut für Technologie hat ein System präsentiert, das im Hinblick auf Visualisierung mit Menschen wettbewerbsfähig ist."
+1271,Der Algorithmus von ivorischen Wissenschaftler*innen agiert bei Schreiben und Notieren wie ein Mensch.
+1272,Ein neuer Algorithmus vom ivorischen Institut für Technologie agiert im Hinblick auf Schreiben und Notieren wie ein Mensch.
+1273,Namibische Ingenieur*innen haben heute eine neue Technik im Hinblick auf Explosivkraft entwickelt.
+1274,"Das namibische Institut für Technologie hat einen Algorithmus entdeckt, der sich für Explosivkraft eignet."
+1275,"Forscher*innen aus Laos haben einen Algorithmus entdeckt, der in der Lage ist, technische Geräte, Teile und Ausrüstungen zu zeichnen, zu entwerfen und zu spezifizieren."
+1276,"Ein neuer Algorithmus aus dem Institut für Technologie in Laos führt Zeichnungen, Entwürfe und Spezifikationen technischer Geräte, Teile und Ausrüstungen aus wie ein Mensch."
+1277,Kognitive Fähigkeiten
+1278,Psychomotorische Fähigkeiten
+1279,Körperliche Fähigkeiten
+1280,Sensorische Fähigkeiten
+1281,Inhalt
+1282,Prozess
+1283,Soziale Kompetenzen
+1284,Fähigkeiten zur Lösung komplexer Probleme
+1285,Technische Fertigkeiten
+1286,Systemkompetenzen
+1287,Qualifikationen in Ressourcenmanagement
+1288,Betriebswirtschaft
+1289,Fertigung und Produktion
+1290,Technik und Technologie
+1291,Mathematik und Wissenschaft
+1292,Gesundheitsdienstleistungen
+1293,Geisteswissenschaften
+1294,Recht und öffentliche Sicherheit
+1295,Kommunikation
+1296,Informationseingabe
+1297,Geistige Prozesse
+1298,Arbeitsresultate
+1299,Mit anderen interagieren
+1300,Zwischenmenschliche Beziehungen
+1301,Körperliche Arbeitsbedingungen
+1302,Mündliches Verstehen
+1303,Schriftliches Verstehen
+1304,Mündlicher Ausdruck
+1305,Schriftlicher Ausdruck
+1306,Ideenreichtum
+1307,Originalität
+1308,Problembewusstsein
+1309,Deduktives Denken
+1310,Induktives Denken
+1311,Ordnen von Informationen
+1312,Kategorie Flexibilität
+1313,Mathematisches Denken
+1314,Zahlengewandtheit
+1315,Memorieren
+1316,Abschlussgeschwindigkeit
+1317,Abschlussflexibilität
+1318,Wahrnehmungsgeschwindigkeit
+1319,Räumliche Orientierung
+1320,Visualisierung
+1321,Selektive Aufmerksamkeit
+1322,Timesharing
+1323,Arm-Hand-Stabilität
+1324,Handwerkliches Geschick
+1325,Fingerfertigkeit
+1326,Steuerungspräzision
+1327,Koordination mehrerer Gliedmaßen
+1328,Reaktionsorientierung
+1329,Tarifsteuerung
+1330,Reaktionszeit
+1331,Handgelenk-Finger-Geschwindigkeit
+1332,Geschwindigkeit der Gliederbewegung
+1333,Statische Festigkeit
+1334,Explosivkraft
+1335,Dynamische Festigkeit
+1336,Stärke der Rumpfmuskulatur
+1337,Durchhaltevermögen
+1338,Maß an Flexibilität
+1339,Dynamische Flexibilität
+1340,Grobe Körperkoordination
+1341,Grobes Körpergleichgewicht
+1342,Nahes Sehen
+1343,Weitsicht
+1344,Optische Farbunterscheidung
+1345,Nachtsicht
+1346,Peripheres Sehen
+1347,Wahrnehmung der Tiefe
+1348,Blendempfindlichkeit
+1349,Hörempfindlichkeit
+1350,Aufmerksamkeit des Publikums
+1351,Schalllokalisierung
+1352,Spracherkennung
+1353,Klarheit der Sprache
+1354,Erforderlicher Bildungsgrad
+1355,Einschlägige Arbeitserfahrung
+1356,Ausbildung am Arbeitsplatz bzw. innerbetriebliche Ausbildung
+1357,Ausbildung am Arbeitsplatz
+1358,Realistisch
+1359,Investigativ
+1360,Künstlerisch
+1361,Sozial
+1362,Geschäftstüchtig
+1363,Konventionell
+1364,Erster Interesse-Höhepunkt
+1365,Zweiter Interesse-Höhepunkt
+1366,Dritter Interesse-Höhepunkt
+1367,Verwaltung und Management
+1368,Bürotätigkeit
+1369,Betriebswirtschaft und Rechnungswesen
+1370,Vertrieb und Marketing
+1371,Kundendienst und Personalleistungen
+1372,Personalwesen
+1373,Produktion und Verarbeitung
+1374,Lebensmittelproduktion
+1375,Computer und Elektronik
+1376,Design
+1377,Bauwesen
+1378,Mechanik
+1379,Mathematik
+1380,Physik
+1381,Chemie
+1382,Biologie
+1383,Psychologie
+1384,Soziologie und Anthropologie
+1385,Medizin und Zahnmedizin
+1386,Therapie und Lebenshilfe
+1387,Ausbildung
+1388,Englische Sprache
+1389,Fremdsprache
+1390,Bildende Kunst
+1391,Geschichte und Archäologie
+1392,Philosophie und Theologie
+1393,Öffentliche Sicherheit
+1394,Justiz und öffentliche Verwaltung
+1395,Telekommunikation
+1396,Kommunikation und Medien
+1397,Transport und Verkehr
+1398,Leseverstehen
+1399,Aktives Zuhören
+1400,Schreiben
+1401,Sprechen
+1402,Wissenschaft
+1403,Kritisches Denken
+1404,Aktives Lernen
+1405,Lernstrategien
+1406,Monitoring
+1407,Soziale Wahrnehmungsfähigkeit
+1408,Koordination
+1409,Überzeugung
+1410,Verhandlung
+1411,Unterrichten
+1412,Serviceorientiertheit
+1413,Lösen komplexer Probleme
+1414,Betriebliche Analyse
+1415,Technologiedesign
+1416,Auswahl von Geräten und Anlagen
+1417,Installation
+1418,Programmieren
+1419,Betriebliche Überwachung
+1420,Bedienung und Steuerung
+1421,Instandhaltung von Geräten und Anlagen
+1422,Fehlersuche und -behebung
+1423,Reparieren
+1424,Analyse von Qualitätskontrollen
+1425,Beurteilung und Entscheidungsfindung
+1426,Systemanalyse
+1427,Systemevaluierung
+1428,Zeitmanagement
+1429,Management der Finanzressourcen
+1430,Management der Materialressourcen
+1431,Management der Personalressourcen
+1432,Informationen beschaffen
+1433,"Prozesse, Materialien und Umgebungen überwachen"
+1434,"Objekte, Aktionen und Ereignisse ermitteln"
+1435,"Geräte und Anlagen, Bauten und Materialien kontrollieren"
+1436,"Quantifizierbare Eigenschaften von Produkten, Ereignissen oder Informationen schätzen"
+1437,"Qualitäten von Dingen, Dienstleistungen oder Menschen beurteilen"
+1438,Informationen verarbeiten
+1439,Einhalten von Normen
+1440,Daten und Informationen analysieren
+1441,Entscheidungen treffen und Probleme lösen
+1442,Kreativ denken
+1443,Einschlägiges Wissen aktualisieren und einsetzen
+1444,Ziele und Strategien ausarbeiten
+1445,Arbeit und Tätigkeiten zeitlich planen
+1446,"Arbeiten organisieren, planen und ihrer Priorität nach ordnen"
+1447,Allgemeine körperliche Arbeiten ausüben
+1448,Objekte handhaben und befördern
+1449,Maschinen und Prozesse steuern
+1450,Fahrzeuge und Anlagen bedienen
+1451,Mit Computern interagieren
+1452,Mit technischen Geräten arbeiten
+1453,Mechanische Geräte reparieren und instandhalten
+1454,Elektronische Geräte reparieren und instandhalten
+1455,Informationen dokumentieren/aufzeichnen
+1456,Bedeutung von Informationen für andere interpretieren
+1457,"Mit Vorgesetzten, gleichrangigen Kolleg*innen oder unterstellten Mitarbeiter*innen kommunizieren"
+1458,Mit Personen außerhalb des Unternehmens kommunizieren
+1459,Zwischenmenschliche Beziehungen aufbauen und pflegen
+1460,Andere unterstützen und pflegen
+1461,An andere etwas verkaufen und andere beeinflussen
+1462,Konflikte lösen und mit anderen verhandeln
+1463,Vor der Öffentlichkeit auftreten oder direkt mit der Öffentlichkeit arbeiten
+1464,Die Arbeit und die Tätigkeiten von anderen koordinieren
+1465,Teams zusammenstellen und entwickeln
+1466,Andere schulen und unterrichten
+1467,"Untergebene führen, anleiten und motivieren"
+1468,Andere entwickeln und coachen
+1469,Andere beraten
+1470,Verwaltungstätigkeiten ausüben
+1471,Geschäftsbereiche mit Personal ausstatten
+1472,Ressourcen überwachen und steuern
+1473,Sprechen in der Öffentlichkeit
+1474,Telefon
+1475,E-Mail
+1476,Schreiben und Aktennotizen verfassen
+1477,Persönliche Besprechungen
+1478,Kontakt mit anderen
+1479,Mit einem Team arbeiten
+1480,Mit externen Kunden umgehen
+1481,Andere koordinieren und leiten
+1482,Für Gesundheit und Sicherheit von anderen verantwortlich sein
+1483,Für Ergebnisse verantwortlich sein
+1484,Häufigkeit von Konfliktsituationen
+1485,Mit unangenehmen oder ärgerlichen Menschen umgehen
+1486,Mit körperlich aggressiven Menschen umgehen
+1487,"Innenräume, klimatisiert"
+1488,Klimatisch instabile Bedingungen in Innenräumen aushalten
+1489,Witterungsbedingungen im Freien aushalten
+1490,"Tätigkeit im Freien, geschützt"
+1491,Offene Fahrzeuge und Anlagen bedienen
+1492,Tätigkeit in einem geschlossenen Fahrzeug oder einer geschlossenen Anlage
+1493,Körperliche Nähe
+1494,Unangenehme Geräusche aushalten
+1495,Sehr heiße und sehr kalte Temperaturen aushalten
+1496,Sehr helle und sehr dämmrige Beleuchtung aushalten
+1497,Schadstoffen ausgesetzt sein
+1498,"Beengter Arbeitsplatz, unangenehme Positionen"
+1499,Ganzkörpervibrationen aushalten
+1500,Strahlung ausgesetzt sein
+1501,Krankheiten oder Infektionen ausgesetzt sein
+1502,Tätigkeit in der Höhe
+1503,Gefährlichen Bedingungen ausgesetzt sein
+1504,Gefährlichen Geräten ausgesetzt sein
+1505,Kleinere Verletzungen erdulden
+1506,Zeit im Sitzen verbringen
+1507,Stehen
+1508,"Leitern, Regale, Stangen hochklettern"
+1509,Gehen und Laufen
+1510,"Knien, Kriechen und Krabbeln"
+1511,Gleichgewicht halten und wiedergewinnen
+1512,"Zeit damit verbringen, mit Ihren Händen Objekte, Werkzeuge oder Steuerungen zu handhaben, zu steuern oder zu fühlen"
+1513,Den Körper biegen und drehen
+1514,Repetitive Bewegungen ausführen
+1515,"Allgemeine Schutz- oder Sicherheitsausrüstung tragen, wie zum Beispiel Sicherheitsschuhe, Schutzbrillen, Handschuhe, Gehörschutz, Sicherheitshelme oder Rettungswesten"
+1516,"Spezielle Schutz- oder Sicherheitsausrüstung tragen, wie zum Beispiel Atemgeräte, Sicherheitsgurtzeug, Ganzkörperschutzanzüge oder Strahlungsschutz"
+1517,Mit den Folgen von Fehlern umgehen
+1518,Auswirkung von Entscheidungen auf Kolleg*innen oder auf die Unternehmensergebnisse
+1519,Mit häufigen Entscheidungen umgehen
+1520,"Freiheit, Entscheidungen zu treffen"
+1521,Grad der Automatisierung
+1522,Exakt und genau sein
+1523,Dieselbe Aufgabe immer wieder wiederholen
+1524,Strukturiert arbeiten im Gegensatz zu unstrukturiert arbeiten
+1525,Wettbewerbsfähig sein
+1526,Mit Zeitdruck umgehen
+1527,Tempo wird durch Geschwindigkeit der Geräte und Anlagen bestimmt
+1528,Mit Arbeitsplänen umgehen
+1529,Dauer einer typischen Arbeitswoche

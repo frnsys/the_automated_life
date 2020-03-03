@@ -1,0 +1,145 @@
+stat_age,السن
+stat_date,التاريخ
+stat_savings,المدخرات
+stat_wage,الأجر الشهري
+stat_education,المستوى التعليمي
+stat_current_job,الوظيفة الحالية
+month_unit,شهر
+school_remaining,في المدرسة {months} شهر/أشهر إضافية 
+application_notice,تطبق على {name}
+living_expenses,${amount} العيش
+debt_expenses,${amount} الديون
+monthly_expenses,${amount}/شهر في النفقات
+retirement_progress,السير نحو التقاعد
+retirement_early,التقاعد مبكرًا
+retirement_early_tip,لديك ${amount} من المدخرات للتقاعد مبكرًا
+retirement_remaining,{years} سنة/سنوات حتى التقاعد
+retirement_savings_remaining,${amount} إضافية للتقاعد
+in_school_notice,في المدرسة
+unemployed_notice,عاطل عن العمل
+game_over_warning,تراكمت عليك الديون. إذا بلغت ديونك ${amount}، فستخسر اللعبة.
+game_over_notice,انتهت اللعبة
+game_over_debt,لقد تراكمت عليك الديون.
+game_over_win,نجوت من الأتمتة ووصلت بأمان إلى التقاعد.
+game_over_lose,لم تتمكن من ادخار ما يكفي للتقاعد.
+game_over_thanks,"شكرًا لك على المشاركة في لعبة ""عالم الأتمتة"". نرجو أن تمنحنا بعضًا من وقتك للمشاركة في هذا المسح الاستطلاعي."
+game_over_win_share,لقد أفلتُّ من الأتمتة في ü§ñ عالم الأتمتة üåé!
+game_over_lose_share,لم أنجح في الهروب من الأتمتة في ü§ñ عالم الأتمتة üåé.
+game_over_lose_summary_result,لم تنجح. {percent}% من اللاعبين لم يتمكنوا من ذلك أيضًا.
+game_over_win_summary_result,لقد نجحت. {percent}% من اللاعبين نجحوا أيضًا.
+likert_0,لا أوافق أبدًا
+likert_1,لا أوافق
+likert_2,محايد
+likert_3,أوافق
+likert_4,أوافق تمامًا
+survey_age_label,السن
+survey_education_label,المستوى التعليمي
+survey_occupation_label,المهنة
+survey_automation_society_question,هل تعتقد أن الأتمتة ستفيد المجتمع اقتصاديًا؟
+survey_automation_individual_question,هل تعتقد أن الأتمتة ستعزز رفاهية الأفراد؟
+survey_submitted,أُرسِلت إجابتك.
+survey_submit_button,إرسال
+robot_release,RoboCo تصدر {name} الذي يتفوق في {skills}.
+robot_release_long,"بعد سنوات من البحث والتطوير، أطلقت RoboCo أخيرًا {name} الذي يتفوق في {skills}. ويعني ذلك أن الوظائف التي تضم هذه المهارة ستتأثر من ذلك,."
+news_silence_note,إخفاء الأخبار في المستقبل. ستظل الإشعارات متاحة في الزاوية السفلى اليمنى.
+birthday_title,عيد ميلاد سعيد، لقد بلغت {age} عامًا!
+birthday_body,أمامك {yearsLeft}سنة/سنوات حتى التقاعد. على هذا المعدل، ستدخر ${estimate} حتى ذلك الحين.
+inflation,لقد تزايد إنفاقك على المعيشة بسبب التضخم.
+hired,حصلت على وظيفة {name}.
+rejected,تم رفض طلبك للحصول على وظيفة {name} بسبب {mainFactor}.
+deepening_automation,آثار الإنتاجية في {name} واسعة النطاق.
+drop_out,لقد تركت المدرسة.
+graduated,مبارك! لقد تخرجت.
+performance_terrible,فظيع
+performance_bad,سيء
+performance_mediocre,متوسط
+performance_good,جيد
+performance_fantastic,رائع
+performance,الأداء
+work_button,العمل
+low_risk_automation,خطر محدود
+mid_risk_automation,خطر متوسط
+high_risk_automation,خطر مرتفع
+low,منخفض
+moderate,متوسط
+high,مرتفع
+automated,مؤتمتة
+percent_automated,مؤتمتة
+automation_risk,خطر الأتمتة
+improving_on_job,التحسن في هذه الوظيفة
+improving_skill,مهارة متحسنة
+important_skills,مهارات مهمة
+your_skill_level,مستوى مهارتك
+your_skills,مهاراتك
+skills_info,تتحسن مهاراتك مع مرور الوقت لأنك تستخدمها في وظائفك.
+application_out,تم إرسال الطلب
+past_job,الوظيفة السابقة
+current_job,الوظيفة الحالية
+robot_maintenance,صيانة الروبوتات
+percent_skills_automated,{percent}% من الوظائف تمت أتمتتها
+Jan,يناير
+Feb,فبراير
+Mar,مارس
+Apr,أبريل
+May,مايو
+Jun,يونيو
+Jul,يوليو
+Aug,أغسطس
+Sep,سبتمبر
+Oct,أكتوبر
+Nov,نوفمبر
+Dec,ديسمبر
+years_duration,{years} سنوات
+study_program,دراسة {name}
+already_enrolled,لقد التحقت بالبرنامج مسبقًا.
+fully_educated,قدم لك النظام التعليمي كل ما لديه.
+select_program,اختر برنامجًا للالتحاق به
+loan_warning,لا تملك مالاً كافيًا للالتحاق بالمدرسة. إذا أردت الالتحاق بالبرنامج، فستحصل على قرض لتغطية جميع التكاليف ضمن الشروط التالية
+interest_rate,نسبة الفائدة
+loan_terms,{rate}% ثابتة، {years} سنة/سنوات
+next_level,المستوى التالي
+enroll_button,انضمام
+education_title,التعليم
+cost_in_wages,{months} الأجور الشهرية
+school_cost,التكلفة، إضافة إلى نفقات المعيشة
+after_subsidy,التكلفة بعد الحصول على الدعم
+subsidy_note,حصلت على دعم مالي يغطي {subsidy}% من نفقاتك التعليمية.
+school_postsecondary_note,لن تؤدي الدرجات التي تلي المرحلة الثانوية إلى فتح أجزاء جديدة من الرسم البياني للوظائف، ولكنها ستيسر الحصول على وظيفة أفضل.
+start_welcome,أهلاً بكم في عالم الأتمتة!
+start_intro,تبحث هذه اللعبة في قدرة الوظائف على الصمود أمام انتشار الأتمتة. تبدأ اللعبة بمهنة معرضة لخطر عالٍ أمام الأتمتة حاول أن تصل إلى مهنة آمنة نسبيًا أمام هذا الخطر.
+start_goal,تهدف في هذه اللعبة إلى التقاعد بعمر {age} بادخار يبلغ ${savings}.
+select_starting_job,اختر المهنة التي ستبدأ بها
+select_starting_job_button,اختر المهنة
+notification_history_title,التاريخ
+pause_button,إيقاف
+start_button,بدء
+resume_button,متابعة
+skills_button,استعراض المهارات
+school_button,الالتحاق بالمدرسة
+notification_history_button,سجل الإشعارات
+hint_job_graph,هذه هي شبكة الوظائف. ترتبط الوظائف معًا بحسب مدى تشابه المهارات اللازمة لتأديتها. تمثل العقدة باللون <b style='color:#fff;background:#0e55ef;'>الأزرق الغامق</b> المهنة التي تشغلها حاليًا. <br /><br /><b style='color:#fff;background:#4fc6ea;'>الأزرق الفاتح</b>تمثل العقد باللون  الوظائف التي يمكنك <b style='background:#f9ca2f;'>التقدم </b> إليها <img src='/static/pointer.png' width='9px' />بالنقر عليها (يستغرق الأمر {applicationMonths} شهرًا/شهور للحصول على رد). تعتمد فرصتك في الحصول على الوظيفة على مستويات المهارات ذات الصلة التي تتمتع بها، وعلى مستواك التعليمي، وأدائك الوظيفي الحالي.<br /><br /><b style='color:#fff;background:#51728c;'>باللون الرمادي</b>تمثل الوظائف  الداكن تلك التي شغلتها مسبقًا. يمكنك التقدم إلى هذه الوظائف مرة أخرى في أي وقت.<br /><br /><img src='/static/cursor.png' width='7px' />مرر الفأرة فوق المهنة للاطلاع على المهارات اللازمة، والأجر الشهري، ومدى تعرضها لخطر الأتمتة، ومستويات مهاراتك فيها.
+hint_hud,يمكنك هنا معرفة سنك üéÇ، وحجم مدخراتك üè¶، ومقدار دخلك üí∏، ونفقاتك، ومستواك التعليمي üéì، ووظيفتك üõ†Ô∏è.<br /><br />ستظهر مهاراتك على قائمة <b style='color:#fff;background:#395be5;'>المهارات</b>، وستظهر على قائمة <b style='color:#fff;background:#395be5;'>المدرسة </b> الأماكن التي يمكنك الالتحاق فيها بالمدرسة.
+hint_work,ستتراكم <b style='color:#fff;background:#ea432a;'>مهام العمل</b> هنا. <img src='/static/pointer.png' width='9px' />انقر على أي منها لإنهائها بهدف تعزيز <b style='color:#fff;background:#d119e5;'>أدائك</b> في وظيفتك، وزيادة فرصة تعيينك في وظيفة جديدة.
+twitter_share,شارك على تويتر
+facebook_share,شارك على فيسبوك
+counterfactual,لولا الأتمتة، لكسبت ${amount} {comp} أكثر مما حققت.
+njobs_outcome,لقد شغلت {nJobs} وظائف/وظيفة مختلفة. أي أكثر بـ{amount} {comp} مرة من اللاعبين الآخرين.
+debt_outcome,بلغ حجم قرضك ${loans}. أي أكثر بـ${amount} {comp} من اللاعبين الآخرين.
+how_to_play_title,طريقة اللعب
+how_to_play,<p><b style='background:#f9ca2f;'>تقدم </b>للحصول على وظائف جديدة <img src='/static/pointer.png' width='9px' />بالنقر على العقد باللون <b style='color:#fff;background:#4fc6ea;'>الأزرق الفاتح</b> في شبكة الوظائف. <img src='/static/cursor.png' width='7px' />مرّر الفأرة فوق الوظائف لمعرفة المزيد عنها.</p><p>حافظ على <b style='color:#fff;background:#d119e5;'>أدائك</b> بالبقاء في مستوى عالٍ في (<img src='/static/pointer.png' width='9px' />النقر) <b style='color:#fff;background:#ea432a;'>العمل</b> في الزاوية العليا اليمنى.</p><p>لديك مصاريف شهرية يتم خصمها آليًا من üè¶  مدخراتك. إذا غرقت بالدين، فستنتهي اللعبة.</p><p>يمكنك تتبع التقدم الذي تحرزه نحو هدفك üèñÔ∏è عند التقاعد بالنظر إلى الزواية الدنيا اليسرى.</p><p>إذا انشغلت فجأة، فلا تقلق، لأنك تستطيع <b style='color:#fff;background:#395be5;'>إيقاف</b> اللعبة متى ما أردت ذلك.</p>
+consent_form_title,معلومات حول الدراسة، وبيان موافقة المشاركين البالغين المستندة إلى معلومات واضحة.
+consent_form_section_1_title,1. الغرض من الدراسة
+consent_form_section_1,"نسعى في هذه الدراسة التي أطلقنا عليها اسم ""الحياة في ظل الأتمتة"" إلى البحث في الطرق التي يغير بها الأفراد وظائفهم لتجنب الآثار السلبية الناجمة عن الأتمتة."
+consent_form_section_2_title,2. الإجراء ومضمون الدراسة
+consent_form_section_2,للقيام بذلك، سنطلب منك المشاركة في لعبة على الإنترنت تتطلب منك اتخاذ قرارات حول الوظائف والمهارات والأتمتة ضمن وقت محدد. وتختلف واجهة اللعبة التي تظهر للمشاركين بعض الشيء بهدف قياس أثر المعلومات المختلفة على اختيارات الأفراد لطريقة اللعب.
+consent_form_section_3_title,3. كيف تُستخدم المعلومات والبيانات التي يتم جمعها؟
+consent_form_section_3,تمثل هذه الدراسة مشروعًا بحثيًا يجريه معهد ماكس بلانك (MPI) للتنمية البشرية. لن تستخدم البيانات مجهولة المصدر التي تم جمعها حول أدائك في هذه اللعبة إلا لغايات بحثية فقط.<br /><br />لن يتم تسجيل أي بيانات شخصية. نستخدم عنوان IP الخاص بك لتحديد الدولة التي تدخل منها إلى الموقع، دون أن نخزن عنوان IP كاملاً. إذا اخترت المشاركة في المسح الاستطلاعي الأخير، فسنربط المعلومات العامة حول سنك وجنسك ومستوى تعليمك بمسارك على اللعبة.<br /><br />يمكن نشر بيانات الدراسة للجمهور من خلال قواعد البيانات البحثية أو المنشورات العلمية. ننوه إلى أنه يمكن استخدام هذه الدراسة لأغراض تتجاوز هذه الدراسة على وجه التحديد.
+consent_form_section_4_title,4. المشاركة طوعية
+consent_form_section_4,المشاركة في هذه الدراسة طوعية. يمكنك الانسحاب من هذه الدراسة في أي وقت قبل إنهائها.
+consent_form_section_5_title,5. موافقة
+consent_form_section_5,"تتضمن دراسة ""الحياة في ظل الأتمتة"" لعبة واحدة تستمر نحو 30 دقيقة، ويمكن تكرارها بعدد المرات الذي تشاء.<br /><br />وعند تفعيل المربع أدناه، فإنك تشير إلى أنك قرأت الشروط المبينة أعلاه وفهمتها، وتوافق على المشاركة في الدراسة وعلى جمع البيانات وتخزينها واستخدامها كما هو موضح أعلاه."
+consent_label,فهمت الشروط وأوافق عليها.
+consent_submit_button,إرسال
+news_title,خبر عاجل
+bad_performance_warning,لقد سجلت أداء سيئًا للغاية منذ{months} شهور/شهرًا. سيتم طردك إن لم تحسن من أدائك.
+fired,لقد تم طردك بسبب أدائك.

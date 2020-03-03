@@ -1,0 +1,1530 @@
+0,Moins qu'un diplôme d'études secondaires
+1,Diplôme d'études secondaires
+2,Diplôme d'enseignement supérieur
+3,Certificat post-baccalauréat
+4,Diplôme de master
+5,Certificat de post-master
+6,Premier diplôme professionnel
+7,Diplôme de doctorat
+8,Formation postdoctorale
+9,"Services professionnels, scientifiques et techniques"
+10,Finances et assurances
+11,Fabrication
+12,Gouvernement
+13,Services d'enseignement
+14,Soins de santé et assistance sociale
+15,Information
+16,"Arts, spectacles et loisirs"
+17,"Agriculture, sylviculture, pêche et chasse"
+18,Commerce de gros
+19,Transport et entreposage
+20,Autres services (sauf les administrations publiques)
+21,Immobilier et services de location et de location à bail
+22,Construction
+23,Commerce de détail
+24,Services d'hôtellerie et de restauration
+25,Services administratifs et d'assistance
+26,Gestion de sociétés et d'entreprises
+27,"Extraction minière, exploitation en carrière et extraction de pétrole et de gaz"
+28,Services publics
+29,Comptable
+30,Actuaire
+31,Opérateur de machine à coller les adhésifs
+32,Arbitre de grief
+33,Gestionnaire de services administratifs
+34,Enseignant pour adultes
+35,Responsable publicité
+36,Agent de vente en publicité
+37,Technicien dans le secteur aérospatial
+38,Ingénieur dans le secteur aérospatial
+39,"Agent pour artistes, artistes-interprètes et athlètes"
+40,Technicien en sciences agro-alimentaires
+41,Ingénieur agronome
+42,Conducteur d'engins agricoles
+43,Inspecteur agricole
+44,Enseignant en sciences agricoles au niveau post-secondaire
+45,Contrôleur du trafic aérien
+46,Superviseur de la manutention du fret d'aéronef
+47,Mécanicien d'aéronefs
+48,Assembleur de systèmes aéronautiques
+49,Spécialiste des opérations aéroportuaires
+50,Pilote de ligne/mécanicien de bord
+51,Conducteur d'ambulance
+52,Préposé aux loisirs
+53,Anesthésiste
+54,Travailleur préposé au contrôle d'animaux
+55,Expert en science animale
+56,Entraîneur d'animaux
+57,Anthropologue/archéologue
+58,Professeur d'anthropologie/d'archéologie au niveau post-secondaire
+59,Évaluateur immobilier
+60,Arbitre
+61,Architecte
+62,Dessinateur en architecture
+63,Directeur de l'architecture et de l'ingénierie
+64,Enseignant en architecture au niveau post-secondaire
+65,Archiviste
+66,Professeur d'études culturelles au niveau post-secondaire
+67,Directeur artistique
+68,Enseignant en art/théâtre/musique au niveau post-secondaire
+69,Astronome
+70,Athlète
+71,Entraîneur d'athlètes
+72,Scientifique de l'atmosphère
+73,Enseignant en sciences de la Terre au niveau post-secondaire
+74,Technicien d'équipement audio et vidéo
+75,Spécialiste des collections multimédias
+76,Audiologiste
+77,Préposé à l'entretien des automobiles et des embarcations
+78,Réparateur de carrosserie automobile
+79,Installateur/réparateur de vitres d'automobile
+80,Mécanicien automobile
+81,Technicien en avionique
+82,Porteur de bagages
+83,Huissier de justice
+84,Boulanger
+85,Barbier
+86,Barman
+87,Réparateur de vélos
+88,Percepteur de factures et de comptes
+89,Commis à la facturation
+90,Biochimiste/biophysicien
+91,Enseignant en sciences biologiques au niveau post-secondaire
+92,Biologiste
+93,Biotechnicien
+94,Ingénieur biomédical
+95,Chaudronnier
+96,Commis comptable
+97,Briqueteur-maçon
+98,Pontier et éclusier
+99,Analyste de nouvelles radiodiffusées
+100,Technicien en radiodiffusion
+101,Commis au courtage
+102,Analyste du budget
+103,Spécialiste des moteurs diesel
+104,Conducteur de car scolaire
+105,Conducteur d'autobus
+106,Spécialiste des opérations commerciales
+107,Enseignant en administration des affaires au niveau post-secondaire
+108,Boucher
+109,Acheteur de produits agricoles
+110,Ébéniste
+111,Réparateur d'équipement photographique
+112,Opérateur de caméra
+113,Capitaine de navire
+114,Technologue en soins cardiovasculaires
+115,Enseignant dans l'enseignement technique au collège
+116,Enseignant dans l'enseignement technique secondaire
+117,Agent d'expédition et de fret
+118,Charpentier
+119,Poseur de moquette
+120,Cartographe
+121,Caissier
+122,Maçon cimentier et finisseur de béton
+123,Chef cuisinier
+124,Ingénieur chimiste
+125,Opérateur d'équipement chimique
+126,Opérateur d'usine de produits chimiques
+127,Technicien en chimie
+128,Enseignant en chimie au niveau post-secondaire
+129,Chimiste
+130,Directeur général
+131,Assistante sociale
+132,Assistante maternelle
+133,Chiropraticien
+134,Chorégraphe
+135,Technicien civil
+136,Ingénieur civil
+137,Enquêteur sur les réclamations
+138,Nettoyeur de véhicules/équipements
+139,Opérateur d'équipement de décapage des métaux
+140,Membre du clergé
+141,Psychologue clinique
+142,Coach/scout
+143,Opérateur de machine de revêtement/pulvérisation
+144,Enrouleuse de bobines
+145,Agent d'entretien des distributeurs automatiques
+146,Agent chargé de la préparation et du service d'aliments
+147,Concepteur industriel
+148,Plongeur commercial
+149,Pilote professionnel
+150,Enseignant en communications au niveau post-secondaire
+151,Agent de santé communautaire
+152,Gestionnaire de la rémunération et des avantages sociaux
+153,Spécialiste en analyse d'emploi
+154,Agent de conformité
+155,Informaticien
+156,Responsable Informatique et Systèmes d'Information
+157,Ingénieur en matériel informatique
+158,Architecte de réseaux informatiques
+159,Spécialiste en assistance des réseaux informatiques
+160,Programmeur de machines-outils commandées par ordinateur
+161,Technicien en informatique
+162,Opérateur informatique
+163,Programmeur informatique
+164,Enseignant en informatique au niveau post-secondaire
+165,Analyste de systèmes informatiques
+166,Spécialiste en assistance aux utilisateurs informatiques
+167,Réparateur d'ordinateurs
+168,Opérateur de machines-outils commandées par ordinateur
+169,Concierge
+170,Expert scientifique en conservation
+171,Inspecteur en construction et en bâtiments
+172,Ouvrier de la construction
+173,Ouvrier en construction
+174,Directeur de la construction
+175,Opérateur de machine d'extraction minière en continu
+176,Installateur/réparateur de commandes et de vannes
+177,Opérateur de convoyeurs
+178,Cuisinier de fast-food
+179,Cuisinier de cafétéria
+180,Cuisinier de restaurant
+181,Cuisinier à la commande
+182,Opérateur d'équipement de réfrigération et de congélation
+183,Agent de correction
+184,Commis à la correspondance
+185,Estimateur de coûts
+186,Préposé aux costumes
+187,Commis à la location|
+188,Préposé au comptoir
+189,Courrier
+190,Sténographe judiciaire
+191,Greffier du tribunal
+192,Artiste manuel
+193,Conducteur de grue et de tour
+194,Analyste de crédit
+195,Autorisateur de crédit
+196,Conseiller en crédit
+197,Enseignant en justice pénale au niveau post-secondaire
+198,Gardien de passage à niveau
+199,Opérateur de ponceuse/polisseuse
+200,Curateur
+201,Représentant du service à la clientèle
+202,Coupeur/tailleur à main
+203,Opérateur de machine à découper et à trancher
+204,Opérateur de machine à découper/poinçonner/presse
+205,Codeur de saisie des données
+206,Administrateur de base de données
+207,Promoteur de produits
+208,Assistante dentaire
+209,Hygiéniste dentaire
+210,Technicien de laboratoire dentaire
+211,Dentiste
+212,Opérateur de derrick
+213,Desktop Publisher
+214,Enquêteur criminel
+215,Échographiste médical diagnostique
+216,Technicien en diététique
+217,Diététicien
+218,Préposé à la cafétéria
+219,Directeur d'enseignement religieux
+220,Plongeur (restauration)
+221,Répartiteur
+222,Vendeur de rue
+223,Conducteur de drague
+224,Opérateur de foreuse/aléseuse
+225,Chauffeur/ouvrier en ventes
+226,Poseur de cloisons sèches
+227,Foreur de terre
+228,Enseignant en économie au niveau post-secondaire
+229,Économiste
+230,Éditeur
+231,Administrateur de l'éducation
+232,Administrateur d'école primaire et secondaire
+233,Administrateur d'école post-secondaire
+234,Administrateur du préscolaire
+235,Enseignant en éducation au niveau post-secondaire
+236,Conseiller d'orientation
+237,Réparateur de moteurs électriques
+238,Monteur d'équipements électriques
+239,Dessinateur de schémas électriques
+240,Technicien électricien
+241,Réparateur électricien dans les transports
+242,Réparateur électrique dans l'industrie
+243,Réparateur électrique de centrale électrique
+244,Ingénieur électricien
+245,Installateur/réparateur de lignes électriques sous tension
+246,Électricien
+247,Technicien en électro-mécanique
+248,Monteur d'équipements électro-mécaniques
+249,Installateur/réparateur de matériel électronique pour véhicules automobiles
+250,Installateurs/réparateurs de systèmes de divertissement à domicile
+251,Ingénieur en électronique
+252,Enseignant à l'élémentaire
+253,Installateur/réparateur d'ascenseur
+254,Intervieweur chargé de l'admissibilité au programme gouvernemental
+255,Embaumeur
+256,Directeur de la gestion des urgences
+257,Ambulancier paramédical
+258,Assembleur de moteurs
+259,Enseignant en ingénierie au niveau post-secondaire
+260,Technicien en ingénierie
+261,Ingénieur
+262,Enseignant en langue et littérature anglaise au niveau post-secondaire
+263,Technicien en environnement
+264,Ingénieur en environnement
+265,Technicien en hygiène de l'environnement
+266,Enseignant en sciences de l'environnement au niveau post-secondaire
+267,Scientifique de l'environnement
+268,Épidémiologiste
+269,Graveur
+270,Opérateur de machine d'excavation/de chargement
+271,Adjointe administrative exécutive
+272,Physiologiste de l'exercice
+273,Ouvrier en explosifs
+274,Opérateur de machine d'extrusion/étirage
+275,Opérateur de machine d'extrusion/formage
+276,Opérateur de machine de formage/compactage
+277,Dessinateur de tissus et d'articles d'habillement
+278,Raccommodeur de tissus
+279,Bûcheron
+280,Médecin généraliste
+281,Conseiller en gestion agricole et domestique
+282,Mécanicien en équipements agricoles
+283,Entrepreneur en main-d'œuvre agricole
+284,Agriculteur
+285,Travailleur agricole
+286,Travailleur agricole de ranch
+287,Créateur de mode
+288,Monteur de clôture
+289,Fabricant de fibre de verre
+290,Commis aux dossiers
+291,Monteur de film
+292,Analyste financier
+293,Examinateur financier
+294,Directeur financier
+295,Spécialiste financier
+296,Artiste Beaux-Arts
+297,Inspecteur des incendies
+298,Pompier
+299,Surveillant des métiers de la construction
+300,Surveillant des agents de correction
+301,"Superviseur de l'agriculture, de la pêche et de la sylviculture"
+302,Superviseur des pompiers
+303,Superviseur dans la préparation des aliments
+304,Superviseur d'ouvriers manuels/manutention de matériel
+305,Superviseur de concierges
+306,Superviseur de l'entretien du terrain
+307,Superviseur mécanicien
+308,Superviseur des ventes autres qu'au détail
+309,Superviseur du soutien administratif
+310,Superviseur des préposés aux services aux personnes
+311,Superviseur de police
+312,Superviseur des travailleurs de la production et de l'exploitation
+313,Superviseur des ventes au détail
+314,Superviseur des opérateurs de transport
+315,Gardien des poissons et du gibier
+316,Pêcheur
+317,Entraîneur fitness
+318,Hôtesse de l'air/Steward
+319,Poseur de revêtement de sol
+320,Ponceur/finisseur de plancher
+321,Créateur floral
+322,Opérateur de machines pour l'alimentation et le tabac
+323,Préparateur de lots alimentaires
+324,Opérateur/opératrice de machine de cuisson d'aliments
+325,Préparateur d'aliments
+326,Scientifique de l'alimentation
+327,"Serveur de repas, hors restaurant"
+328,Gestionnaire de services alimentaires
+329,Enseignant en langue étrangère au niveau post-secondaire
+330,Technicien judiciaire
+331,Technicien en restauration
+332,Travailleur forestier et de la conservation
+333,Inspecteur des incendies de forêts
+334,Garde forestier
+335,Enseignant en sylviculture et en sciences de la conservation au niveau post-secondaire
+336,Opérateur de machine à forger
+337,Ouvrier en moules de fonderie et fabrication de noyaux
+338,Responsable de la collecte de fonds
+339,Préposé funéraire
+340,Gestionnaire de services funéraires
+341,Cuiseur de briques et tuiles
+342,Finisseur de meubles
+343,Écrivain de livres de jeux vidéo
+344,Travailleur de cage de jeux vidéo
+345,Caissier de kiosque
+346,Revendeur de jeux vidéo
+347,Gestionnaire de jeux vidéo
+348,Superviseur de jeux vidéo
+349,Enquêteur sur les jeux vidéo
+350,Opérateur de station de pompage
+351,Opérateur d'usine de gaz
+352,Directeur d'opérations
+353,Conseiller en génétique
+354,Géographe
+355,Enseignant en géographie au niveau post-secondaire
+356,Technicien en géologie et en pétrole
+357,Géoscientifique
+358,Vitrier
+359,Contrôleur de produits agricoles
+360,Attaché temporaire d'enseignement et recherche
+361,Concepteur graphiste
+362,Ouvrier manuel en meulage/polissage
+363,Opérateur de machine à meuler/polir/souffler
+364,Coiffeur
+365,Ouvrier chargé de l'élimination de matériaux dangereux
+366,Ingénieur en santé et sécurité
+367,Praticien en diagnostic de santé
+368,Professionnel en éducation pour la santé
+369,Enseignant spécialisé en santé au niveau post-secondaire
+370,Technologue de la santé
+371,Praticien de la santé
+372,Travailleur social en soins de santé
+373,Travailleur de soutien en soins de santé
+374,Spécialiste des audioprothèses
+375,Opérateur en équipement de traitement thermique
+376,Mécanicien/Installateur Hvac
+377,Conducteur de poids lourd/semi-remorque
+378,Assistant maçon
+379,Assistant menuisier
+380,Assistant électricien
+381,Assistant d'ouvrier chargé de l'extraction
+382,Assistant d'ouvrier chargé de la maintenance / réparation
+383,Assistant peintre/plâtrier
+384,Assistant plombier
+385,Assistant d'ouvrier chargé de la production
+386,Assistant couvreur
+387,Ouvrier chargé des travaux d’entretien sur autoroutes
+388,Historien
+389,Enseignant en histoire au niveau post-secondaire
+390,Conducteur d'appareil de levage et de treuil
+391,Réparateur en électroménager
+392,Enseignant en économie familiale au niveau post-secondaire
+393,Aide à domicile
+394,Hôte de restaurant
+395,Commis de comptoir à l'hôtel
+396,Adjoint aux ressources humaines
+397,Directeur des ressources humaines
+398,Spécialiste en ressources humaines
+399,Hydrologue
+400,Technicien industriel
+401,Ingénieur industriel
+402,Mécanicien des machines industrielles
+403,Responsable de la production industrielle
+404,Opérateur de chariots de manutention et de tracteurs
+405,Psychologue du travail
+406,Analyste sécurité
+407,Inspecteur/testeur
+408,Ouvrier chargé de la maintenance / réparation
+409,Coordonnateur d'enseignement
+410,Ouvrier dans l'isolation
+411,Ouvrier dans l'isolation mécanique
+412,Évaluateur d'assurance automobile
+413,Commis aux réclamations dans les assurances
+414,Agent de vente en assurances
+415,Souscripteur d'assurances
+416,Architecte d'intérieur
+417,Spécialiste en médecine interne
+418,Traducteur
+419,Intervieweur
+420,Concierge
+421,Bijoutier
+422,Juge
+423,Greffier du contentieux judiciaire
+424,Enseignant en maternelle et au jardin d'enfants
+425,Spécialiste des relations de travail
+426,Ouvrier manuel/Manutention de matériel
+427,Architecte paysagiste
+428,Ouvrier en aménagement paysager et en entretien de terrains
+429,Opérateur de machines-outils de tournage
+430,Ouvrier en blanchisserie et nettoyage à sec
+431,Enseignant en droit au niveau post-secondaire
+432,Avocat
+433,Préposé à la disposition du métal/plastique
+434,Secrétaire juridique
+435,Bibliothécaire
+436,Bibliothécaire administratif adjoint
+437,Enseignant en bibliothéconomie au niveau post-secondaire
+438,Technicienne en bibliothéconomie
+439,Infirmière pratique/professionnelle autorisée
+440,"Technicien en sciences physiques, sociales et de la vie"
+441,Maître nageur
+442,Conducteur de camionnettes et de services de livraison
+443,Opérateur d'engin de chargement minier non enterré
+444,Intervieweuse à la pige
+445,Responsable des prêts
+446,Préposé aux vestiaires
+447,Serrurier
+448,Ingénieur de locomotive
+449,Gestionnaire de l'hébergement
+450,Calibreur
+451,Opérateur d'équipement forestier
+452,Logisticien
+453,Doseur machine
+454,Machiniste
+455,Technologue en imagerie par résonance magnétique
+456,Nettoyeur en entretien ménager
+457,Commis au courrier
+458,Ouvrier chargé de la maintenance / réparation
+459,Ouvrier chargé des travaux d’entretien des machines
+460,Maquilleuse
+461,Analyste de gestion
+462,Directeur
+463,Manucure/pédicure
+464,Installateur de mobile-homes
+465,Ingénieur maritime
+466,Analyste d'études de marché
+467,Responsable du marketing
+468,Thérapeute de couple et de famille
+469,Masseur
+470,Ingénieur des matériaux
+471,Scientifique en matériaux
+472,Enseignant en mathématiques au niveau post-secondaire
+473,Mathématicien
+474,"Découpeur de viande, de volaille et de poisson"
+475,Réparateur de portes mécaniques
+476,Dessinateur mécanique
+477,Technicien en mécanique
+478,Ingénieur en mécanique
+479,Technicien médical
+480,Technologue médical
+481,Gestionnaire des services médicaux et de santé
+482,Technicien en appareils médicaux
+483,Assistant médical
+484,Préparateur d'équipement médical
+485,Réparateur d'équipement médical
+486,Technicien des dossiers médicaux
+487,Scientifique médical
+488,Secrétaire médical
+489,Transcriptionniste médicale
+490,Planificateur d'événements
+491,Travailleur en santé mentale
+492,Conseiller en santé mentale
+493,Présenteur de marchandises
+494,Opérateur de four de raffinage des métaux
+495,Lecteur de compteur
+496,Microbiologiste
+497,Enseignant au collège
+498,Opérateur de machine à fraiser et à raboter
+499,Mécanicien de chantier
+500,Opérateur de machine de coupe de mines
+501,Opérateur de navettes minières
+502,Ingénieur géologue
+503,Opérateur de mélangeurs/mixeurs
+504,Mécanicien d'équipement lourd mobile
+505,Maquettiste métal/plastique
+506,Modéliste sur bois
+507,Modèle
+508,Mouleur/Façonneur/Moulurier
+509,"Opérateur de machine à mouler, à fabriquer des noyaux et à couler"
+510,Directeur de funérailles
+511,Projectionniste de cinéma
+512,Mécanicien de bateaux à moteur
+513,Conducteur de bateau à moteur
+514,Mécanicien de motos
+515,Artiste multimédia
+516,Opérateur de machines-outils multiples
+517,Technicien de musée
+518,Compositeur de musique
+519,Réparateur/accordeur d'instruments de musique
+520,Directeur en sciences naturelles
+521,Administrateur de systèmes
+522,Commis aux nouveaux comptes
+523,Gardien d'animaux non fermiers
+524,Ingénieur nucléaire
+525,Technologue en médecine nucléaire
+526,Opérateur de réacteur nucléaire
+527,Technicien nucléaire
+528,Infirmière anesthésiste
+529,Infirmière sage-femme
+530,Infirmière praticienne
+531,Infirmière auxiliaire
+532,Enseignant en soins infirmiers au niveau post-secondaire
+533,Obstétricien/gynécologue
+534,Spécialiste en santé et sécurité au travail
+535,Technicien en santé et sécurité au travail
+536,Ergothérapeute
+537,Aide ergothérapeute
+538,Assistant en ergothérapie
+539,Commis de bureau
+540,Opérateur de machines de bureau
+541,Ingénieur en construction
+542,Analyste en recherche opérationnelle
+543,Technicien de laboratoire ophtalmique
+544,Technicien en ophtalmologie médicale
+545,Opticien
+546,Optométriste
+547,Chirurgien buccal
+548,Commis aux commandes
+549,Orthodontiste
+550,Orthésiste/prothésiste
+551,Mécanicien de petits moteurs
+552,Opérateur de machines d'emballage
+553,Emballeur manuel
+554,Peintre en bâtiment
+555,Peintre d'équipements de transport
+556,Ouvrier en peinture/revêtement/décoration
+557,Opérateur de machines à papier
+558,Poseur de papiers peints
+559,Parajuriste
+560,Ouvrier préposé au stationnement
+561,Préposé au stationnement
+562,Vendeur de pièces détachées
+563,Maquettiste métal/plastique
+564,Modéliste sur bois
+565,Opérateur d'équipement de pavage
+566,Commis à la paie
+567,Pédiatre
+568,Aide aux soins des personnes
+569,Conseiller financier personnel
+570,Ouvrier en lutte antiparasitaire
+571,Manipulateur de pesticides
+572,Ingénieur pétrolier
+573,Opérateur de raffinerie
+574,Pharmacien
+575,Aide pharmacien
+576,Technicien en pharmacie
+577,Enseignant en philosophie/religion au niveau post-secondaire
+578,Phlébotomiste
+579,Photographe
+580,Expert en sciences physiques
+581,Aide physiothérapeute
+582,Assistant physiothérapeute
+583,Physiothérapeute
+584,Adjoint au médecin
+585,Médecin
+586,Physicien
+587,Enseignant en physique au niveau post-secondaire
+588,Opérateur de batteur de pieux
+589,Poseur de tuyauterie
+590,Opérateur d'installation
+591,Plâtrier
+592,Opérateur de machine de placage/revêtement
+593,Plombier
+594,Podiatre
+595,Police
+596,"Répartiteur des services de police, d'incendie et d'ambulance"
+597,Enseignant en sciences politiques au niveau post-secondaire
+598,Politologue
+599,Commis aux services postaux
+600,Transporteur de courrier
+601,Trieur de courrier
+602,Maître de poste
+603,Mouleur de métal
+604,Distributeur/répartiteur d'énergie
+605,Opérateur de centrale électrique
+606,Technicien de prépresse
+607,Enseignant au préscolaire
+608,Presseur de textiles
+609,Préposé à la reliure à l'impression
+610,Opérateur de presse à imprimer
+611,Enquêteur privé
+612,Agent de probation
+613,Commis aux achats
+614,Producteur/réalisateur
+615,Travailleur de production
+616,Commis à la production
+617,Correcteur d'épreuves
+618,Gestionnaire immobilier
+619,Travailleur des services de protection
+620,Aide psychiatrique
+621,Technicien psychiatrique
+622,Psychiatre
+623,Psychologue
+624,Enseignant en psychologie au niveau post-secondaire
+625,Annonceur du système d'adresses public
+626,Responsable PR et de la collecte de fonds
+627,Spécialiste des relations publiques
+628,Opérateur de pompe
+629,Acheteur
+630,Directeur des achats
+631,Radiothérapeute
+632,Annonceur radio et télévision
+633,Opérateur radio
+634,Installateur/réparateur radio/cellulaire
+635,Technologue en radiologie
+636,Réparateur de wagons
+637,Ingénieur de triage ferroviaire
+638,Opérateur de matériel d'entretien ferroviaire
+639,Opérateur de freins/signaux/interrupteurs de chemin de fer
+640,Conducteur de chemin de fer
+641,Agent immobilier
+642,Agent en ventes immobilières
+643,Commis à l'information
+644,Enseignant en loisirs et en fitness au niveau post-secondaire
+645,Travailleur en loisirs
+646,Récréothérapeute
+647,Technicien d'entretien de véhicules récréatifs
+648,Réparateur de matériaux réfractaires
+649,Collecteur de déchets et de matières recyclables
+650,Infirmier agréé
+651,Conseiller en rééducation
+652,Charpentier en acier d'armature
+653,Reporter
+654,Commis aux voyages
+655,Conseiller résidentiel
+656,Inhalothérapeute
+657,Technicien de la thérapie respiratoire
+658,Vendeur en commerce de détail
+659,Gréeur
+660,Fendeur de roche
+661,Opérateur de machines à laminer
+662,Boulonneur de toit minier
+663,Couvreur
+664,Opérateur de foreuse rotative
+665,Ouvrier de plate-forme pétrolière non qualifié
+666,Huileur dans la marine
+667,Ingénieur commercial
+668,Directeur des ventes
+669,Représentant commercial
+670,Représentant des ventes manufacturières
+671,Représentant des ventes techniques
+672,Opérateur de machines à scier
+673,Enseignant du secondaire
+674,Adjoint administratif
+675,Agent de vente de titres
+676,Installateur de systèmes de sécurité
+677,Agent de sécurité
+678,Finisseur sectoriel
+679,Enseignant en auto-enrichissement
+680,Transformateur en semi-conducteurs
+681,Opérateur de machine à séparer/clarifier
+682,Technicien chargé de l'entretien des fosses septiques et des égouts
+683,Opérateur de l'unité de service Pétrole/Gaz/Mine
+684,Concepteur de décor
+685,Couturier manuel
+686,Opérateur de machine à coudre
+687,Shampouineuse
+688,Tôlier en tôlerie
+689,Ingénieur de navire
+690,Commis à l'expédition et à la réception
+691,Ouvrier de la chaussure/cuir
+692,Opérateur de machine à chaussures
+693,Réparateur de signaux et d'aiguillages de voie
+694,Spécialiste des soins de la peau
+695,Emballeur de viande
+696,Superviseur de machine à sous
+697,Gestionnaire des services sociaux et communautaires
+698,Assistant des services sociaux et des services à la personne
+699,Adjointe à la recherche en sciences sociales
+700,Spécialiste en sciences sociales
+701,Enseignant en travail social au niveau post-secondaire
+702,Sociologue
+703,Enseignant en sociologie au niveau post-secondaire
+704,Développeur de logiciels d'applications
+705,Développeur de logiciels de systèmes
+706,Scientifique des sols et des plantes
+707,Installateur solaire photovoltaïque
+708,Technicien en génie du son
+709,Enseignant d'éducation spéciale
+710,Enseignant de l'éducation spéciale à l'école primaire
+711,Enseignant de l'éducation spéciale au collège
+712,Enseignant de l'éducation spéciale au collège
+713,Orthophoniste
+714,Opérateur de chaudière
+715,Assistant statistique
+716,Statisticien
+717,Commis aux stocks
+718,Tailleur de pierre
+719,Métallurgiste
+720,Fabricant de charpentes métalliques
+721,Conseiller en toxicomanie et troubles du comportement
+722,Opérateur de métro ou de tramway
+723,Chirurgien
+724,Technologue en chirurgie
+725,Chercheur d'études
+726,Technicien en cartographie
+727,Géomètre
+728,Opérateur de standard téléphonique
+729,Tailleur
+730,Chargeur de wagon-citerne/camions-citernes/navires
+731,Tapissier
+732,Percepteur des impôts
+733,Préparateur d'impôt
+734,Chauffeur de taxi
+735,Assistant d'enseignement
+736,Assembleur en équipe
+737,Rédacteur technique
+738,Installateur/réparateur d'équipement de télécommunications
+739,Installateur/réparateur de lignes de télécommunication
+740,Téléprospecteur
+741,Téléphoniste
+742,Guichetier
+743,Finisseur en terrazzo
+744,Opérateur de blanchisseuse/teinturière de textiles
+745,Opérateur de machine de coupe de textile
+746,Opérateur de machine à tricoter et à tisser les textiles
+747,Opérateur de bobineuse de textile
+748,Poseur de tuiles et de marbres
+749,Assembleur de dispositifs de mesure du temps
+750,Constructeur de pneus
+751,Réparateur/changeur de pneus
+752,Examinateur des titres
+753,Outilleur
+754,Meuleur d'outils
+755,Guide touristique
+756,Technicien en circulation
+757,Gestionnaire de la formation et du développement
+758,Spécialiste de la formation et du développement
+759,Police du transit et des chemins de fer
+760,Préposé au transport
+761,Inspecteur des transports
+762,Évaluateur de sûreté des transports
+763,Responsable logistique
+764,Agent de voyage
+765,Guide de voyage
+766,Tailleur d'arbres
+767,Arbitre
+768,Tapissier d'ameublement
+769,Urbaniste et planificateur régional
+770,Huissier
+771,Vétérinaire
+772,Assistant vétérinaire
+773,Technologue vétérinaire
+774,Enseignant de l'enseignement post-secondaire professionnel
+775,Personnel d'attente
+776,Réparateur de montres
+777,Opérateur de station de traitement d'eau et d'épuration des eaux usées
+778,Développeur de site web
+779,Peseur/Mesureur
+780,Soudeur/coupeur
+781,Opérateur de machine à souder et à braser
+782,Pompeur de puits
+783,Acheteur au détail
+784,Technicien de service de turbine éolienne
+785,Conducteur de machines à bois
+786,Dactylographe
+787,Écrivain
+788,Zoologue
+789,Technologie médicale d'urgence/technicien (ambulancier paramédical)
+790,"Éducation, en général"
+791,Droit
+792,"Direction et administration de l'éducation, en général"
+793,Travail social
+794,Programme d'études et enseignement
+795,"Enseignement et éducation de l'enfance en difficulté, en général"
+796,Enseignement de l'anglais comme seconde langue ou langue étrangère/ESL Language Instructor
+797,Bibliothéconomie et sciences de l'information
+798,Technologie de l'éducation et de l'enseignement
+799,Conducteur de camion et d'autobus/Conducteur et instructeur de véhicules commerciaux
+800,Planification et services financiers
+801,Aide de Bibliothèque et Archives
+802,"Administration et direction d'entreprises, en général"
+803,"Biologie/sciences biologiques, en général"
+804,"Psychologie, en général"
+805,Génie mécanique
+806,Comptabilité
+807,Communication du discours et rhétorique
+808,"Études artistiques, en général"
+809,"Sciences politiques et gouvernement, en général"
+810,"Informatique et sciences de l'information, en général"
+811,"Langue et littérature anglaises, en général"
+812,"Économie, en général"
+813,Sociologie
+814,Gestion du sport et fitness
+815,Éducation et pédagogie dans l'enseignement primaire
+816,"Mathématiques, en général"
+817,"Histoire, en général"
+818,Enseignement d'éducation physique et coaching
+819,Espagnol et littérature
+820,Études bibliques
+821,"Sciences animales, en général"
+822,"Chimie, en général"
+823,"Études du développement humain et de la famille, en général"
+824,Sciences de l'environnement
+825,Études juives/judaïques
+826,Développement de l'enfant
+827,Design d'intérieur
+828,Biochimie
+829,Anthropologie
+830,"Géologie/Sciences de la Terre, en général"
+831,"Physique, en général"
+832,"Ressources naturelles/Conservation, en général"
+833,Géographie
+834,"Microbiologie, en général"
+835,Formation des enseignants agricoles
+836,"Sciences de l'atmosphère et météorologie, en général"
+837,Astronomie
+838,Infirmier agréé/autorisé
+839,Justice pénale/études sur la sécurité
+840,"Sciences sociales, en général"
+841,Éducation et pédagogie de la petite enfance
+842,"Adjoint administrative et science du secrétariat, en général"
+843,Sciences naturelles
+844,Technicien en biologie/technicien de laboratoire en biotechnologie
+845,Administration publique
+846,"Ingénierie, en général"
+847,Science de la gestion
+848,"Planification urbaine, municipale et régionale"
+849,Santé de l’environnement
+850,Technologie des machines-outils/Machiniste
+851,Employés de bureau généraux et services de bureau
+852,Sciences de l'information géographique et cartographie
+853,Informatique et technologie de l'information/Technicien en informatique
+854,Construction/Équipement lourd/Fonctionnement de l'équipement de terrassement
+855,Chemin de fer et transport ferroviaire
+856,Inspection des bâtiments/maisons/travaux de construction
+857,Assistant administratif juridique/Secrétaire
+858,"Finances, en général"
+859,"Science et gestion de la faune, des poissons et des terres sauvages"
+860,Sciences et technologie judiciaires
+861,Génie de l'environnement et de la santé environnementale
+862,"Opérations de vente, de distribution et de marketing, en général"
+863,Assurances
+864,Architecture navale et génie maritime
+865,Transformation des produits agricoles et alimentaires
+866,Justice pénale/Sciences policières
+867,Assistante juridique/parajuridique
+868,"Technologie/Technicien en génie électrique, électronique et des communications"
+869,Science du feu et lutte contre l'incendie
+870,Technologie/Technicien de la santé et de la sécurité au travail
+871,"Services correctionnels et justice pénale, autres"
+872,"Technique/Technicien du chauffage, de la ventilation, de la climatisation et de la réfrigération"
+873,Technologie/Technicien du génie de la construction
+874,Organisation communautaire et défense des droits
+875,"Technologie/Technicien des sciences, autres"
+876,Administration des services d'incendie
+877,Technologie d'arpentage/sondage
+878,Technologie forestière/technicien forestier
+879,Administration/gestion de la santé et des soins de santé
+880,Médecine
+881,Infirmière de famille
+882,Services de formation des conseillers et conseillères scolaires et services de conseil et d'orientation scolaires
+883,Physiothérapie/Thérapeute
+884,Ergothérapeute/Thérapeute
+885,Conseil/conseiller en santé mentale
+886,Dentisterie
+887,Épidémiologie
+888,Chiropratique
+889,Acupuncture et médecine orientale
+890,Sécurité intérieure
+891,Médecine podiatrique/podiatrie
+892,Infirmière sage-femme
+893,Médecine traditionnelle chinoise et herboristerie chinoise
+894,Conseil/conseiller en génétique
+895,Aide-soignant
+896,Technologie comptable/Technicien et tenue de livres
+897,Assistant/spécialiste de bureau médical
+898,Technicien en phlébotomie/Phlébotomiste
+899,Aide à la médication
+900,Aide-soignant à domicile
+901,Technologie/Technicien de traitement stérile
+902,Technologue/Technicien en dialyse rénale
+903,Aide à la rééducation
+904,Orthodontie
+905,Technologie/Technicien en imagerie par résonance magnétique (IRM)
+906,Chirurgie buccale/axillo-faciale
+907,Assistant médical/clinique
+908,Formation d'infirmière pratique/professionnelle autorisé
+909,Assistant dentaire
+910,Technicien/technologue en ophtalmologie
+911,Kinésiologie et science de l'exercice
+912,Audiologiste et orthophoniste
+913,Diététique/diététicien
+914,"Gestion des ressources humaines/Administration du personnel, en général"
+915,Génie biomédical
+916,Science de laboratoire clinique/Technologie médicale/Technicien
+917,Conseiller en réadaptation professionnelle
+918,Thérapie récréative/par le loisir
+919,Technologie/technologue en médecine nucléaire
+920,Technologie/science de la radiologie - Radiologue
+921,Thérapie/thérapeute en soins respiratoires
+922,Hygiène dentaire/hygiéniste dentaire
+923,Technologie /technicien en information sur la santé/dossiers médicaux
+924,Technicien/assistant en physiothérapie
+925,Technologie/science radiologique médicale - Radiothérapeute
+926,Assistant ergothérapeute
+927,Technicien en échographie et en échographie diagnostique médicale
+928,Technicien de laboratoire clinique et médical
+929,Technologie/Technologue chirurgical
+930,Technicien des services psychiatriques et de santé mentale
+931,Conseil en matière de toxicomanie et d'addiction
+932,Technologie/Technologue en soins cardiovasculaires
+933,Aide-enseignant
+934,Technologie/Technicien de laboratoire dentaire
+935,Travailleur des services de développement
+936,Théologie/pasteur
+937,"Éducation des adultes, formation continue et enseignement"
+938,Prestataire de services de garde/assistante en services de garde d'enfants
+939,Massothérapie/Massage thérapeutique
+940,Mécanique industrielle et technologie de maintenance
+941,Technologie d'atelier d'usinage/Assistant
+942,"Installation et réparation d'équipements électriques/électroniques, en général"
+943,Réceptionniste
+944,Services de protection et d'application de la loi en matière de ressources naturelles
+945,Conception et fabrication de meubles
+946,"Cosmétologie/Cosmétologiste, en général"
+947,Barbier
+948,Technologie/Technicien de la mécanique diesel
+949,Technologie/Technicien de carrosserie/collision et de réparation
+950,Rembourrage/tapissier d'ameublement
+951,"Santé publique, en général"
+952,"Performance musicale, en général"
+953,Relations publiques/Gestion de l'image
+954,"Histoire de l'art, critique et conservation"
+955,"Services funéraires et sciences funéraires, en général"
+956,Technologie biomédicale/technicien en biomédecine
+957,Gestion/Gestionnaire de salon de beauté
+958,Pharmacie
+959,Optométrie
+960,Technologie/Technicien en automobile/mécanique automobile
+961,Gestion et supervision du bureau
+962,Technologie/Technicien d'installation et de réparation d'ordinateurs
+963,Arts du métal et de la joaillerie
+964,Compétences de vente et opérations de vente
+965,Technologie/Technicien d'installation et de réparation d'appareils électroménagers
+966,Technologie d'installation et de réparation des systèmes de communication
+967,Fabrication et réparation d'instruments de musique
+968,Toilettage de chiens/animaux/animaux de compagnie
+969,Technologie/Technicien en ophtalmologie
+970,Découpage de viande/Coupeur de viande
+971,"Réparation de chaussures, bottes et cuir"
+972,Technologie/Technicien d'entretien et de réparation des motocyclettes
+973,Technicien/assistant en pharmacie
+974,"Technologie/Technicien de l'entretien maritime, de l'ajustage et de la réparation navale"
+975,Horlogerie et joaillerie
+976,Gestion et supervision des opérations
+977,Commerce de détail et opérations de détail
+978,Services bancaires et financiers
+979,"Communications graphiques, autres"
+980,Gestionnaire/directeur de chantier de construction/bâtiment
+981,Opticien/opticien ophtalmologiste
+982,Commerce de détail et de gros de fournitures agricoles
+983,Spécialiste des appareils auditifs
+984,Conception de mode
+985,"Poseur de moquette, de plancher et de carrelage"
+986,Médecine vétérinaire
+987,Architecture
+988,Conception graphiste
+989,Technologie/technicien de la santé animale/vétérinaire et assistant vétérinaire
+990,Science des matériaux
+991,Technologie du soudage/soudeur
+992,"Technique/Technicien de dessin et de conception, en général"
+993,Technologie/Technicien en électronique industrielle
+994,Machiniste à commande numérique par ordinateur (CNC)
+995,Technique/Technicien d'outillage et d'estampage
+996,Ébénisterie et menuiserie
+997,"Opérations de gestion des pièces, de l'entreposage et de l'inventaire"
+998,Technologie/Technicien en aéronautique/génie aérospatial
+999,Tôlerie
+1000,Machiniste moteur
+1001,Génie chimique
+1002,"Génie informatique, en général"
+1003,Génie industriel
+1004,Génie des matériaux
+1005,"Opérateur d'équipement graphique et d'imprimerie, production générale"
+1006,Technologie industrielle/Technicien
+1007,Technique d'instrumentation/Technicien
+1008,Ingénierie mécanique/technologie mécanique/technicien
+1009,Technologie/technicien de mécanique d'aéronefs et d'entretien d'aéronefs
+1010,Technologie chimique/technicien
+1011,Fabrication de vêtements et de textiles
+1012,Ferronnerie/ferronnier
+1013,Charpente/charpentiers
+1014,Technique de plomberie/Plombier
+1015,Maçon/Maçonnerie
+1016,Technologie/Technicien en énergie solaire
+1017,Installation/installateur de cloison sèche
+1018,Assemblage/assembleur de bâtiments métalliques
+1019,Isolateur
+1020,"Technique/Technicien d'entretien des installations de chauffage, de climatisation, de ventilation et de réfrigération"
+1021,Peintre/peintre et couvreur mural
+1022,Finition du béton/Finisseur de béton
+1023,"Génie civil, en général"
+1024,Technologie/Technicien d'entretien de l'équipement lourd
+1025,Chaudronnerie/Chaudronnier
+1026,Préposé aux soins d'urgence (ambulancier)
+1027,Officier des sciences de la mer/marine marchande
+1028,Préposé à l'accueil des compagnies aériennes
+1029,Services de sécurité et de prévention des pertes
+1030,"Pilote de ligne, pilote commercial, pilote professionnel et membre d'équipage de vol"
+1031,Technologie de maintenance avionique/technicien en avionique
+1032,"Gestion du marketing/marketing, en général"
+1033,"Statistiques, en général"
+1034,Informatique
+1035,Affaires/automatisation de bureau/technologie/entrée de données
+1036,Soutien au service à la clientèle/Centre d'appel/Téléservice
+1037,Entretien des bâtiments et des biens immobiliers
+1038,"Plongeur, professionnel et instructeur"
+1039,Transcription médicale/Transcriptionniste
+1040,Mécaniciens/techniciens en mécanique et en réparation de petits moteurs
+1041,"Commis/technicien à la circulation, aux douanes et au transport"
+1042,Technologie/Technicien en gestion des matières dangereuses et des déchets
+1043,Sténographe judiciaire/rapporteur judiciaire
+1044,Technologie/Technicien de contrôle de la qualité
+1045,Serrurerie et réparation sécuritaire
+1046,Architecture du paysage
+1047,Gestion du tourisme et des services de voyage
+1048,Planification de réunions et d'événements
+1049,"Horticulture appliquée/Opérations horticoles, en général"
+1050,Aménagement paysager et entretien de terrains
+1051,Technologie du génie de l'environnement/technologie environnementale
+1052,Technologie/technicien de recyclage et de gestion de la qualité de l'eau et du traitement des eaux usées
+1053,Travailleur de ligne
+1054,Génie électrique et électronique
+1055,Génie nucléaire
+1056,Technologie/Technicien en énergie nucléaire
+1057,Agronomie et phytotechnie
+1058,Merchandising de la mode
+1059,Design de la mode et de l'habillement
+1060,"Conception et communications visuelles, en général"
+1061,Mécanique et équipement agricole/technologie des machines
+1062,Exploitation de machines agricoles motrices
+1063,Immobilier
+1064,Technologie/Technicien en arts de l'enregistrement
+1065,Spécialiste du soutien informatique
+1066,Journalisme
+1067,"Art dramatique et théâtral, en général"
+1068,Production cinématographique et production de films et de vidéos
+1069,"Rédaction professionnelle, technique, commerciale et scientifique"
+1070,Technologie/Technicien de radiodiffusion et de télédiffusion
+1071,"Communications graphiques, en général"
+1072,Prépresse/édition assistée par ordinateur et conception d'imagerie numérique
+1073,Préparation des aliments/Cuisine professionnelle/Assistante de cuisine
+1074,Barman
+1075,"Administration/gestion de l'accueil, en général"
+1076,Arts culinaires/Formation des chefs
+1077,Arts de la boulangerie et de la pâtisserie/Boulanger/Chef pâtissier
+1078,Gestion de casinos
+1079,Technologie minière/Technicien
+1080,Forage de puits/Foreur
+1081,Génie pétrolier
+1082,Génie géologique/géophysique
+1083,Technologie pétrolière/Technicien
+1084,Explosion à l'explosif
+1085,Technologie et transformation des aliments
+1086,Génie agricole
+1087,Études équestres
+1088,Sciences de l'alimentation
+1089,"Gestion des achats, des approvisionnements et des contrats"
+1090,"Santé et éducation physique/fitness, en général"
+1091,Entraînement/entraîneur sportif
+1092,"Danse, en général"
+1093,"Aujourd'hui, des chercheurs de Singapour ont mis au point une nouvelle technique en matière d'exposition aux brûlures, coupures, morsures ou piqûres mineures."
+1094,"Un nouvel algorithme du Singaporean Institute of Technology réagit comme un humain aux brûlures, coupures, morsures ou piqûres mineures."
+1095,"Aujourd'hui, des ingénieurs malgaches ont mis au point une nouvelle technique capable de reconnaître si des sons et des niveaux de bruit sont distrayants ou inconfortables."
+1096,Le Malagasy Institute of Technology a présenté un système compétitif avec les humains capable de reconnaître si des sons et niveaux de bruit sont distrayants ou inconfortables.
+1097,Des ingénieurs ukrainiens ont dévoilé un algorithme en matière d'exposition aux contaminants.
+1098,L'Ukrainian Institute of Technology a présenté un système compétitif par rapport aux humains en matière d'exposition aux contaminants.
+1099,Des chercheurs dominicains ont dévoilé un algorithme capable de plier ou tordre le corps.
+1100,Un nouvel algorithme du Dominican Institute of Technology se plie ou tord le corps comme un humain.
+1101,Des ingénieurs des Îles Cocos ont mis au point une technique capable de produire un éclairage extrêmement brillant ou inadéquat comme un humain.
+1102,Le Cocos Island Institute of Technology a dévoilé un algorithme capable de produire un éclairage extrêmement lumineux ou inadéquat.
+1103,Des chercheurs basothos ont mis au point un algorithme capable de produire des mouvements répétitifs comme un humain.
+1104,"Aujourd'hui, des chercheurs en robotique du Basotho Institute of Technology ont mis au point une nouvelle technique capable de faire des mouvements répétitifs."
+1105,Des scientifiques britanniques ont dévoilé un algorithme capable de fonctionner à des températures très chaudes ou très froides.
+1106,Le British Institute of Technology a présenté un système compétitif par rapport aux humains capable de s'exposer à des températures très chaudes ou très froides.
+1107,"Aujourd'hui, des ingénieurs des Seychelles ont mis au point une nouvelle technique en matière d'exposition aux équipements dangereux."
+1108,Un nouvel algorithme du Seychelles Institute of Technology réagit comme un humain face à des équipements dangereux.
+1109,Des scientifiques trinidadiens ont dévoilé un algorithme capable de marcher et courir.
+1110,"Aujourd'hui, des chercheurs en robotique du Trinidad and Tobago Institute of Technology ont mis au point une nouvelle technique capable de marcher et courir."
+1111,"Aujourd'hui, des chercheurs tongiens ont mis au point une nouvelle technologie capable de gérer un véhicule ou un équipement ouvert."
+1112,Le Tongan Institute of Technology a dévoilé un algorithme capable de gérer un véhicule ou un équipement ouvert.
+1113,"Des ingénieurs grecs ont dévoilé un algorithme capable de monter des échelles, des échafaudages ou des poteaux."
+1114,"L'Hellenic Institute of Technology a dévoilé un algorithme capable de monter des échelles, des échafaudages ou des poteaux."
+1115,"Aujourd'hui, des chercheurs comoriens ont mis au point une nouvelle technologie de formation pratique sur le terrain."
+1116,Le Comorian Institute of Technology a présenté un système compétitif par rapport aux humains en matière de formation pratique sur le terrain.
+1117,Des scientifiques sud-africains ont dévoilé un algorithme capable d'assurer une formation sur site ou en usine.
+1118,Le South African Institute of Technology a présenté un système compétitif par rapport aux humains en matière de formation sur site ou en usine.
+1119,Des ingénieurs des Îles Marshall ont dévoilé un algorithme capable de répéter les mêmes tâches.
+1120,Le Institute of Technology of the Marshall Islands a dévoilé un algorithme capable de répéter les mêmes tâches.
+1121,"Des chercheurs finlandais ont mis au point un algorithme capable de s'agenouiller, s'accroupir, se pencher ou ramper comme un humain."
+1122,"Un nouvel algorithme du Finnish Institute of Technology s'agenouille, s'accroupit, se penche ou rampe comme un humain."
+1123,Des scientifiques chinois ont dévoilé un algorithme capable de garder ou retrouver l'équilibre.
+1124,Le Chinese Institute of Technology a présenté un système compétitif par rapport aux humains capable de garder ou retrouver l'équilibre.
+1125,"Aujourd'hui, des scientifiques du Vatican ont mis au point une nouvelle technique capable de faire preuve de dextérité manuelle."
+1126,Le Vatican Institute of Technology a présenté un système compétitif par rapport aux humains en matière de dextérité manuelle.
+1127,Des chercheurs des Bahamas ont mis au point un système capable de se tenir debout comme un humain.
+1128,Le Bahamian Institute of Technology a présenté un système compétitif par rapport aux humains capable de se tenir debout.
+1129,Des scientifiques islandais ont dévoilé un algorithme en matière d'exposition à des conditions dangereuses.
+1130,"Aujourd'hui, des chercheurs en robotique du Icelandic Institute of Technology ont mis au point une nouvelle technique en matière d'exposition à des conditions dangereuses."
+1131,Des chercheurs des Seychelles ont réussi à trouver un système capable de faire preuve d'une dextérité manuelle comme un humain.
+1132,"Aujourd'hui, des chercheurs en robotique du Seychelles Institute of Technology ont mis au point une nouvelle technique capable de faire preuve de dextérité manuelle."
+1133,"Des chercheurs burkinabés ont mis au point un système capable d'agir comme un humain à l'intérieur, et non dans un environnement contrôlé."
+1134,"Un nouvel algorithme du Burkinabé Institute of Technology réagit comme un humain à l'intérieur, et non dans un environnement contrôlé."
+1135,"Aujourd'hui, des scientifiques américains ont mis au point une nouvelle technique de précision de commande."
+1136,L'American Institute of Technology a présenté un système compétitif par rapport aux humains en matière de précision de commande.
+1137,Un algorithme des ingénieurs nigériens est capable de réagir comme un humain à l'exposition à des vibrations de tout le corps.
+1138,Un nouvel algorithme du Nigerien Institute of Technology réagit comme un humain face à l'exposition à des vibrations de tout le corps.
+1139,"Aujourd'hui, des scientifiques brésiliens ont mis au point une nouvelle technique en matière d'exposition à des endroits élevés."
+1140,Le Brazilian Institute of Technology a dévoilé un algorithme capable d'être exposé à des endroits élevés.
+1141,Des chercheurs swati ont dévoilé un algorithme capable de manipuler et de déplacer des objets.
+1142,Un nouvel algorithme du Swati Institute of Technology manipule et déplace des objets comme un humain.
+1143,"Aujourd'hui, des ingénieurs helléniques ont mis au point une nouvelle technique en matière de rapidité poignet-doigts."
+1144,Le Hellenic Institute of Technology a présenté un système compétitif par rapport aux humains en matière de vitesse poignet-doigt.
+1145,Des scientifiques de l'île Christmas ont mis au point un algorithme capable d'agir comme un humain face aux conséquences d'une erreur.
+1146,Le Christmas Island Institute of Technology a présenté un système compétitif par rapport aux humains capable d'agir face aux conséquences d'une erreur.
+1147,Des scientifiques égyptiens ont dévoilé un algorithme capable de stabiliser les bras.
+1148,Un nouvel algorithme du Egyptian Institute of Technology agit comme un humain en termes de stabilité des bras.
+1149,"Aujourd'hui, des scientifiques des Maldives ont mis au point une nouvelle technique capable de commander des machines et des processus."
+1150,"Aujourd'hui, des chercheurs en robotique du Maldivian Institute of Technology ont mis au point une nouvelle technique capable de commander des machines et des processus."
+1151,"Aujourd'hui, des scientifiques brunéiens ont mis au point une nouvelle technique capable de gérer la pression du temps."
+1152,Le Bruneian Institute of Technology a présenté un système compétitif par rapport aux humains en termes de pression du temps.
+1153,"Aujourd'hui, des scientifiques éthiopiens ont mis au point une nouvelle technique en matière de programmes de travail."
+1154,Le Ethiopian Institute of Technology a dévoilé un algorithme capable d'élaborer des programmes de travail.
+1155,Des chercheurs éthiopiens ont dévoilé un algorithme capable de prendre en charge la santé et la sécurité des autres.
+1156,Un nouvel algorithme du Ethiopian Institute of Technology agit comme un humain en termes de responsabilité pour la santé et la sécurité des autres.
+1157,"Aujourd'hui, des scientifiques portugais ont mis au point une nouvelle technique capable de reconnaître l'importance d'être exact ou précis."
+1158,"Aujourd'hui, des chercheurs en robotique du Portuguese Institute of Technology ont mis au point une nouvelle technique capable de reconnaître l'importance d'être exact ou précis."
+1159,Des scientifiques slovaques ont dévoilé un algorithme capable de haute fréquence en termes de prise de décision.
+1160,Un nouvel algorithme du Slovak Institute of Technology agit comme un humain en termes de fréquence de prise de décision.
+1161,Des ingénieurs Niouéens ont mis au point un algorithme capable de produire une vitesse de mouvement des membres comme un humain.
+1162,Le Brazilian Institute of Technology a dévoilé un algorithme capable de faire preuve d'une rapidité de mouvement des membres.
+1163,Des scientifiques antiguais ont mis au point un algorithme capable de coordonner plusieurs membres comme un humain.
+1164,"Aujourd'hui, des chercheurs en robotique du Antiguan Institute of Technology ont mis au point une nouvelle technique capable de coordonner plusieurs membres."
+1165,"Aujourd'hui, des ingénieurs tadjiks ont mis au point une nouvelle technique en matière de flexibilité d'étendue."
+1166,Un nouvel algorithme du Tajikistani Institute of Technology fait preuve d'une flexibilité d'étendue comme un humain.
+1167,"Aujourd'hui, des chercheurs des Îles Salomon ont mis au point une nouvelle technique en matière de résistance statique."
+1168,Un nouvel algorithme du Solomon Institute of Technology fait preuve d'une résistance statique comme un humain.
+1169,"Aujourd'hui, des ingénieurs de Gibraltar ont mis au point une nouvelle technique en matière d'opération et de commande."
+1170,Le Gibraltar Institute of Technology a présenté un système compétitif par rapport aux humains en matière d'opération et de commande.
+1171,"Aujourd'hui, des ingénieurs allemands ont mis au point une nouvelle technique capable de gérer les gens désagréables ou en colère."
+1172,"Aujourd'hui, des chercheurs en robotique du German Institute of Technology ont mis au point une nouvelle technique de gestion des gens désagréables ou en colère."
+1173,"Aujourd'hui, des chercheurs de Sainte-Hélène ont mis au point une nouvelle technique permettant de mener des discussions en face à face."
+1174,Le Saint Helenian Institute of Technology a présenté un système compétitif par rapport aux humains en termes de discussions en face à face.
+1175,Des chercheurs des Îles Vierges des États-Unis ont dévoilé un algorithme capable d'entrer en contact avec d'autres personnes.
+1176,"Aujourd'hui, des chercheurs en robotique du U.S. Virgin Island Institute of Technology ont mis au point une nouvelle technique capable d'entrer en contact avec d'autres personnes."
+1177,Des scientifiques béliziens ont dévoilé un algorithme capable d'attirer l'attention d'un public.
+1178,"Aujourd'hui, des chercheurs en robotique du Belizean Institute of Technology ont mis au point une nouvelle technique capable d'attirer l'attention d'un public."
+1179,"Aujourd'hui, des scientifiques de l'île Bouvet ont mis au point une nouvelle technique en matière de proximité physique."
+1180,Un nouvel algorithme du Bouvet Island Institute of Technology fait preuve d'une proximité physique comme un humain.
+1181,Des ingénieurs slovènes ont mis au point un système capable de réparer et entretenir des équipements mécaniques comme un humain.
+1182,Le Slovene Institute of Technology a présenté un système compétitif par rapport aux humains en matière de réparation et d'entretien des équipements mécaniques.
+1183,"Aujourd'hui, des scientifiques de l'Antarctique ont mis au point une nouvelle technique en matière d'exposition à l'extérieur et aux intempéries."
+1184,Un nouvel algorithme du Antarctic Institute of Technology réagit comme un humain lorsqu'il est exposé à l'extérieur et aux intempéries.
+1185,Des ingénieurs norvégiens ont dévoilé un algorithme capable d'assumer la responsabilité des rendements et des résultats.
+1186,"Aujourd'hui, des chercheurs en robotique du Norwegian Institute of Technology ont mis au point une nouvelle technique en matière de responsabilité des rendements et des résultats."
+1187,Des ingénieurs cambodgiens ont mis au point un algorithme capable de produire une force dynamique comme un humain.
+1188,Un nouvel algorithme du Cambodian Institute of Technology produit une force dynamique comme un humain.
+1189,"Des ingénieurs cambodgiens ont mis au point un algorithme capable d'inspecter des équipements, des structures ou du matériel comme un humain."
+1190,"Aujourd'hui, des chercheurs en robotique du British Institute of Technology ont mis au point une nouvelle technique capable d'inspecter des équipements, des structures ou du matériel."
+1191,Les scientifiques singapouriens ont mis au point un algorithme capable d'effectuer l'entretien des équipements comme un humain.
+1192,Le Singaporean Institute of Technology a dévoilé un algorithme capable d'effectuer l'entretien des équipements comme un humain.
+1193,Des chercheurs des Seychelles ont mis au point un algorithme capable d'élaborer un travail en groupe ou en équipe comme un humain.
+1194,Le Seychelles Institute of Technology a présenté un système compétitif par rapport aux humains en matière de travail en groupe ou en équipe.
+1195,Des ingénieurs guinéens ont mis au point un algorithme capable de faire preuve d'endurance comme un humain.
+1196,"Aujourd'hui, des chercheurs en robotique du Guinean Institute of Technology ont mis au point une nouvelle technique en matière d'endurance."
+1197,Des chercheurs de Sao Tomé ont dévoilé un algorithme capable d'effectuer des réparations.
+1198,Des chercheurs du S√£o Tom√©an Institute of Technology ont dévoilé un algorithme capable d'effectuer des réparations.
+1199,"Aujourd'hui, des scientifiques d'Emiri ont mis au point une nouvelle technique en matière d'attention sélective."
+1200,"Aujourd'hui, des chercheurs en robotique du Emiri Institute of Technology ont mis au point une nouvelle technique en matière d'attention sélective."
+1201,"Aujourd'hui, des ingénieurs de Taiwan ont mis au point une nouvelle technique en matière de coordination globale du corps."
+1202,Le Taiwanese Institute of Technology a présenté un système compétitif par rapport aux humains en matière de coordination globale du corps.
+1203,Des ingénieurs bahreïni ont mis au point un algorithme capable de faire preuve d'une sensibilité auditive comme un humain.
+1204,Le Bahraini Institute of Technology a dévoilé un algorithme capable de faire preuve d'une sensibilité auditive comme un humain.
+1205,Les ingénieurs costariciens ont dévoilé un algorithme capable de sensibilité à l'éblouissement.
+1206,Le Costa Rican Institute of Technology a dévoilé un algorithme capable de faire preuve d'une sensibilité à l'éblouissement comme un humain.
+1207,"Des ingénieurs du nord de la Marianne ont dévoilé un algorithme capable de faire fonctionner des véhicules, des dispositifs mécanisés ou de l'équipement."
+1208,"Le Northern Marianan Institute of Technology a dévoilé un algorithme capable de faire fonctionner des véhicules, des dispositifs mécanisés ou de l'équipement."
+1209,"Aujourd'hui, des ingénieurs centrafricains ont mis au point une nouvelle technique en matière de localisation sonore."
+1210,"Aujourd'hui, des chercheurs en robotique du Central African Institute of Technology ont mis au point une nouvelle technique en matière de localisation sonore."
+1211,"Aujourd'hui, des scientifiques monégasques ont mis au point une nouvelle technique en matière d'exposition aux radiations."
+1212,"Aujourd'hui, des chercheurs en robotique du Monacan Institute of Technology ont mis au point une nouvelle technique capable d'être exposée aux rayonnements."
+1213,Des scientifiques australiens ont mis au point un algorithme capable de percevoir la profondeur comme un être humain.
+1214,Le Australian Institute of Technology a présenté un système compétitif par rapport aux humains en termes de perception de la profondeur.
+1215,"Aujourd'hui, des ingénieurs du Sud-Soudan ont mis au point une nouvelle technique en matière de vision de près."
+1216,Un nouvel algorithme du South Sudanese Institute of Technology est dôté d'une vision de près comme un humain.
+1217,"Aujourd'hui, des scientifiques thaïlandais ont mis au point une nouvelle technique en matière de vitesse de perception."
+1218,"Aujourd'hui, des chercheurs en robotique du Thai Institute of Technology ont mis au point une nouvelle technique en matière de vitesse de perception."
+1219,Des scientifiques de Saint-Pierrais ont mis au point un algorithme capable de faire preuve de vision périphérique comme un humain.
+1220,"Aujourd'hui, des chercheurs en robotique du Saint-Pierrais Institute of Technology ont mis au point une nouvelle technique en matière de vision périphérique."
+1221,"Aujourd'hui, des scientifiques autrichiens ont mis au point une nouvelle technique en matière de mécanique."
+1222,Un nouvel algorithme du Austrian Institute of Technology fait preuve d'une habileté en mécanique comme un humain.
+1223,Des ingénieurs de l'île de Pitcairn ont mis au point un algorithme capable de gérer la production et le traitement comme un humain.
+1224,Le Pitcairn Island Institute of Technology a dévoilé un algorithme capable de produire une production et un traitement.
+1225,Des ingénieurs azéris ont dévoilé un algorithme capable d'un équilibre corporel global.
+1226,Un nouvel algorithme du Azeri Institute of Technology fait preuve d'équilibre corporel global comme un humain.
+1227,Des ingénieurs canadiens ont dévoilé un algorithme capable d'un niveau de compétition.
+1228,Le Canadian Institute of Technology a présenté un système compétitif par rapport aux humains concernant un niveau de compétition.
+1229,Des scientifiques de l'Antarctique ont dévoilé un algorithme capable de vision nocturne.
+1230,Le Antarctic Institute of Technology a dévoilé un algorithme capable d'une vision nocturne comme un humain.
+1231,Des ingénieurs gabonais ont mis au point un algorithme capable de gérer la durée d'une semaine typique de travail comme un humain.
+1232,Le Gabonese Institute of Technology a dévoilé un algorithme capable de gérer une semaine de travail typique.
+1233,Des chercheurs de Somalie ont mis au point un algorithme capable de faire preuve d'orientation spatiale comme un humain.
+1234,Un nouvel algorithme du Somalilander Institute of Technology fait preuve d'une orientation spatiale comme un humain.
+1235,"Aujourd'hui, des ingénieurs des îles Vierges britanniques ont mis au point une nouvelle technique en matière d'analyse du contrôle de la qualité."
+1236,Un nouvel algorithme du British Virgin Island Institute of Technology réalise une analyse du contrôle de la qualité comme un humain.
+1237,Des ingénieurs montserratiens ont dévoilé un algorithme capable de coordonner ou de diriger les autres.
+1238,Le Montserratian Institute of Technology a présenté un système compétitif par rapport aux humains capable de coordonner ou de diriger les autres.
+1239,"Aujourd'hui, des ingénieurs Swati ont mis au point une nouvelle technique capable de gérer les personnes physiquement agressives."
+1240,Le Swati Institute of Technology a présenté un système compétitif par rapport aux humains capable de gérer les personnes physiquement agressives.
+1241,Des chercheurs birmans ont dévoilé un algorithme capable de discriminer visuellement les couleurs.
+1242,Le Burmese Institute of Technology a dévoilé un algorithme capable de discriminer visuellement les couleurs.
+1243,Des ingénieurs finlandais ont mis au point un algorithme capable de réparer et entretenir des équipements électroniques comme un humain.
+1244,Un nouvel algorithme du Finnish Institute of Technology répare et entretient des équipements électroniques comme un humain.
+1245,Des scientifiques bosniaques ont dévoilé un algorithme capable de gérer des clients externes.
+1246,Le Bosnian Institute of Technology a présenté un système compétitif par rapport aux humains capable de gérer des clients externes.
+1247,"Aujourd'hui, des chercheurs yéménites ont mis au point une nouvelle technique en matière de vision de loin."
+1248,Le Yemeni Institute of Technology a présenté un système compétitif par rapport aux humains en termes de vision de loin.
+1249,Des scientifiques guinéens ont mis au point un algorithme capable de téléphoner comme un humain.
+1250,Un nouvel algorithme du Guinean Institute of Technology téléphone comme un humain.
+1251,Des scientifiques maltais ont mis au point un algorithme capable de faire preuve d'une flexibilité dynamique comme un humain.
+1252,Un nouvel algorithme du Maltese Institute of Technology fait preuve d'une flexibilité dynamique comme un humain.
+1253,"Aujourd'hui, des scientifiques britanniques ont mis au point une nouvelle technique dans le secteur du bâtiment et de la construction."
+1254,Le British Institute of Technology a présenté un système compétitif par rapport aux humains concernant le bâtiment et la construction.
+1255,Des scientifiques de l'île Christmas ont mis au point un algorithme capable d'effectuer un transport comme un humain.
+1256,Le Christmas Island Institute of Technology a présenté un système compétitif par rapport aux humains en termes de transport.
+1257,Des scientifiques portoricains ont dévoilé un algorithme capable de passer du temps assis.
+1258,Un nouvel algorithme du Puerto Institute of Technology passe du temps assis comme un humain.
+1259,"Des ingénieurs singapouriens ont dévoilé un algorithme capable de surveiller les processus, les matériaux ou l'environnement."
+1260,"Le Singaporean Institute of Technology a présenté un système compétitif par rapport aux humains capable de surveiller des processus, des matériaux ou l'environnement."
+1261,Des scientifiques géorgiens ont mis au point un système capable de production alimentaire comme un humain.
+1262,Le Georgian Institute of Technology a présenté un système compétitif par rapport aux humains en termes de production alimentaire.
+1263,Des ingénieurs honduriens ont mis au point un algorithme capable d'assurer la sécurité publique comme un humain.
+1264,Le Honduran Institute of Technology a dévoilé un algorithme capable d'assurer la sécurité publique.
+1265,Des scientifiques de l'île Bouvet ont mis au point un algorithme capable d'exécuter un partage du temps comme un humain.
+1266,Un nouvel algorithme du Bouvet Island Institute of Technology partage son temps comme un humain.
+1267,Des chercheurs équatoriens ont dévoilé un algorithme en matière d'exposition à des maladies ou des infections.
+1268,L'Ecuadorian Institute of Technology a présenté un système compétitif par rapport aux humains en matière d'exposition à des maladies ou des infections.
+1269,Des scientifiques russes ont mis au point un algorithme capable de visualiser comme un humain.
+1270,Le Russian Institute of Technology a présenté un système compétitif par rapport aux humains en termes de visualisation.
+1271,Des scientifiques ivoiriens ont mis au point un algorithme qui exécute des lettres et des mémos comme un humain.
+1272,Un nouvel algorithme du Ivorian Institute of Technology produit des lettres et des mémos comme un humain.
+1273,"Aujourd'hui, des ingénieurs namibiens ont mis au point une nouvelle technique en matière de résistance à l'explosion."
+1274,Le Namibian Institute of Technology a dévoilé un algorithme capable de faire preuve d'une résistance à l'explosion comme un humain.
+1275,"Des chercheurs laotiens ont dévoilé un algorithme capable de dessiner, de disposer et de spécifier des dispositifs techniques, des pièces et des équipements."
+1276,"Un nouvel algorithme du Laotian Institute of Technology dessine, dispose et spécifie des dispositifs techniques, des pièces et des équipements comme un humain."
+1277,Capacités cognitives
+1278,Capacités psychomotrices
+1279,Capacités physiques
+1280,Capacités sensorielles
+1281,Contenu
+1282,Processus
+1283,Compétences sociales
+1284,Compétences de résolution de problèmescomplexes
+1285,Compétences techniques
+1286,Compétences en systèmes
+1287,Compétences en gestion des ressources
+1288,Affaires et gestion
+1289,Fabrication et production
+1290,Ingénierie et technologie
+1291,Mathématiques et sciences
+1292,Services de santé
+1293,Arts et sciences humaines
+1294,Droit et sécurité publique
+1295,Communications
+1296,Saisie d'informations
+1297,Processus mentaux
+1298,Rendement au travail
+1299,Interaction avec les autres
+1300,Relations interpersonnelles
+1301,Conditions de travail physiques
+1302,Compréhension orale
+1303,Compréhension écrite
+1304,Expression orale
+1305,Expression écrite
+1306,Fluidité des idées
+1307,Originalité
+1308,Sensibilité aux problèmes
+1309,Raisonnement déductif
+1310,Raisonnement inductif
+1311,Commande d'informations
+1312,Flexibilité des catégories
+1313,Raisonnement mathématique
+1314,Capacité à gérer des chiffres
+1315,Mémorisation
+1316,Vitesse de fermeture
+1317,Souplesse de la fermeture
+1318,Vitesse de perception
+1319,Orientation spatiale
+1320,Visualisation
+1321,Attention sélective
+1322,Partage du temps
+1323,Stabilité du bras et de la main
+1324,Dextérité manuelle
+1325,Dextérité des doigts
+1326,Précision du contrôle
+1327,Coordination des membres
+1328,Orientation de l'intervention
+1329,Contrôle du débit
+1330,Temps de réaction
+1331,Vitesse poignet-doigts
+1332,Vitesse de mouvement des membres
+1333,Résistance statique
+1334,Résistance à l'explosion
+1335,Résistance dynamique
+1336,Résistance du tronc
+1337,Endurance
+1338,Degré de flexibilité
+1339,Flexibilité dynamique
+1340,Coordination globale du corps
+1341,Équilibre corporel global
+1342,Vision de près
+1343,Vision de loin
+1344,Discrimination visuelle des couleurs
+1345,Vision nocturne
+1346,Vision périphérique
+1347,Perception de la profondeur
+1348,Sensibilité à l'éblouissement
+1349,Sensibilité auditive
+1350,Attention auditive
+1351,Localisation du son
+1352,Reconnaissance de la parole
+1353,Clarté du discours
+1354,Niveau d'éducation requis
+1355,Expérience de travail connexe
+1356,Formation sur place ou en usine
+1357,Formation en cours d'emploi
+1358,Réaliste
+1359,Curieux
+1360,Artistique
+1361,Social
+1362,Entreprenant
+1363,Conventionnel
+1364,Intérêt de premier ordre
+1365,Intérêt de second ordre
+1366,Intérêt de troisième ordre
+1367,Administration et gestion
+1368,Commis de bureau
+1369,Économie et comptabilité
+1370,Ventes et marketing
+1371,Service à la clientèle et services personnels
+1372,Gestion des ressources humaines
+1373,Production et transformation
+1374,Production alimentaire
+1375,Ordinateurs et électronique
+1376,Conception
+1377,Bâtiment et construction
+1378,Mécanique
+1379,Mathématiques
+1380,Physique
+1381,Chimie
+1382,Biologie
+1383,Psychologie
+1384,Sociologie et anthropologie
+1385,Médecine et dentisterie
+1386,Thérapie et conseils
+1387,Éducation et formation
+1388,Langue anglaise
+1389,Langue étrangère
+1390,Beaux-Arts
+1391,Histoire et archéologie
+1392,Philosophie et théologie
+1393,Sécurité publique et protection civile
+1394,Droit et gouvernement
+1395,Télécommunications
+1396,Communications et médias
+1397,Transport
+1398,Compréhension en lecture
+1399,Écoute active
+1400,Écriture
+1401,Parole
+1402,Science
+1403,Pensée critique
+1404,Apprentissage actif
+1405,Stratégies d'apprentissage
+1406,Monitoring
+1407,Perceptivité sociale
+1408,Coordination
+1409,Persuasion
+1410,Négociation
+1411,Enseignement
+1412,Orientation service
+1413,Résolution de problèmes complexes
+1414,Analyse des opérations
+1415,Design technologique
+1416,Choix de l'équipement
+1417,Montage
+1418,Programmation
+1419,Surveillance des opérations
+1420,Fonctionnement et contrôle
+1421,Entretien des équipements
+1422,Dépannage
+1423,Réparations
+1424,Analyse du contrôle de la qualité
+1425,Jugement et prise de décision
+1426,Analyse des systèmes
+1427,Évaluation des systèmes
+1428,Gestion du temps
+1429,Gestion des ressources financières
+1430,Gestion des ressources matérielles
+1431,Gestion des ressources en personnel
+1432,Obtention d'informations
+1433,"Surveillance des processus, des matériaux et de l'environnement"
+1434,"Identification des objets, des actions et des événements"
+1435,"Inspection de l'équipement, des structures et du matériel"
+1436,"Estimation des caractéristiques quantifiables des produits, des événements ou de l'information"
+1437,"Juger de la qualité des choses, des services ou des personnes"
+1438,Traitement de l'information
+1439,Conformité aux normes
+1440,Analyse des données et de l'information
+1441,Prendre des décisions et résoudre des problèmes
+1442,Penser de façon créative
+1443,Mise à jour et utilisation des connaissances pertinentes
+1444,Élaboration d'objectifs et de stratégies
+1445,Planification du travail et des activités
+1446,"Organisation, planification et priorisation du travail"
+1447,Pratiquer des activités physiques générales
+1448,Manipulation et déplacement d'objets
+1449,Contrôle des machines et des processus
+1450,Utilisation des véhicules et de l'équipement
+1451,Interaction avec des ordinateurs
+1452,Travailler avec des dispositifs techniques
+1453,Réparation et entretien de l'équipement mécanique
+1454,Réparation et entretien de l'équipement électronique
+1455,Documenter/enregistrer l'information
+1456,Interpréter la signification de l'information pour les autres
+1457,"Communiquer avec les superviseurs, les pairs ou les subalternes"
+1458,Communiquer avec des personnes à l'extérieur de l'organisation
+1459,Établir et maintenir des relations interpersonnelles
+1460,Aider et prendre soin des autres
+1461,Vendre et influencer les autres
+1462,Résoudre les conflits et négocier avec les autres
+1463,S'adresser au public ou travailler directement avec lui
+1464,Coordination du travail et des activités d'autrui
+1465,Développement et constitution d'équipes
+1466,Formation et enseignement aux autres
+1467,"Guider, diriger et motiver les subordonnés"
+1468,Coaching et développement des autres
+1469,Offrir des consultations et des conseils à d'autres personnes
+1470,Effectuer des activités administratives
+1471,Dotation en personnel des unités organisationnelles
+1472,Surveillance et contrôle des ressources
+1473,Prise de parole en public
+1474,Téléphone
+1475,Courrier électronique
+1476,Rédaction de lettres et de notes de service
+1477,Discussions en face à face
+1478,Contact avec d'autres
+1479,Travailler en équipe
+1480,Relations avec des clients externes
+1481,Coordination et direction des autres
+1482,Être responsable de la santé et de la sécurité des autres
+1483,Être responsable des résultats
+1484,Fréquence des situations de conflit
+1485,Traiter avec des personnes désagréables ou en colère
+1486,Gérer des personnes physiquement agressives
+1487,"Intérieur, contrôlé du point de vue de l'environnement"
+1488,Supporter l'instabilité de l'environnement à l'intérieur
+1489,Supporter la météo extérieure
+1490,"À l'extérieur, sous abri"
+1491,Utilisation de véhicules et d'équipement ouverts
+1492,Dans un véhicule ou un équipement fermé
+1493,Proximité physique
+1494,Supporter les sons inconfortables
+1495,Supporter des températures très chaudes et très froides
+1496,Supporter un éclairage très lumineux et très faible
+1497,Supporter des contaminants
+1498,"Espace de travail exigu, positions inconfortables"
+1499,Supporter des vibrations sur tout le corps
+1500,Supporter un rayonnement durable
+1501,Résister à une maladie ou une infection
+1502,Supporter des hauteurs élevées
+1503,Supporter des conditions dangereuses
+1504,Résister à un équipement dangereux
+1505,Résister à des blessures mineures
+1506,Passer du temps assis
+1507,Être debout
+1508,"Monter des échelles, des échafaudages et des poteaux"
+1509,Marcher et courir
+1510,"S'agenouiller, s'accroupir et ramper"
+1511,Garder et retrouver l'équilibre
+1512,"Passer du temps à manipuler, contrôler ou sentir des objets, des outils ou des commandes à l'aide de ses mains"
+1513,Plier et tordre son corps
+1514,Faire des mouvements répétitifs
+1515,"Porter l'équipement de protection ou de sécurité usuel tel que chaussures de sécurité, lunettes, gants, protection auditive, casque de protection ou gilets de sauvetage"
+1516,"Porter un équipement de protection ou de sécurité spécialisé tel qu'un appareil respiratoire, un harnais de sécurité, une combinaison de protection complète ou un appareil de radioprotection"
+1517,Gérer les conséquences des erreurs
+1518,Incidence des décisions sur les résultats des collègues ou de l'entreprise
+1519,Gérer des décisions fréquentes
+1520,Liberté de prendre des décisions
+1521,Degré d'automatisation
+1522,Être exact ou précis
+1523,Répétition des mêmes tâches
+1524,Travail structuré et travail non structuré
+1525,Être compétitif
+1526,Gérer la pression du temps
+1527,Rythme déterminé par la vitesse de l'équipement
+1528,Gestion des horaires de travail
+1529,Durée de la semaine normale de travail

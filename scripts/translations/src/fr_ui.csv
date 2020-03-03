@@ -1,0 +1,145 @@
+stat_age,Âge
+stat_date,Date
+stat_savings,Économies
+stat_wage,Salaire mensuel
+stat_education,Niveau d'éducation
+stat_current_job,Emploi actuel
+month_unit,mo
+school_remaining,À l'école pendant plus de {months} mois
+application_notice,Candidat à {name}
+living_expenses,${amount} vivant
+debt_expenses,${amount} dette
+monthly_expenses,${amount}/par mois de dépenses
+retirement_progress,Progression de la retraite
+retirement_early,Retraite anticipée
+retirement_early_tip,Avoir ${amount} d'économies pour prendre une retraite anticipée
+retirement_remaining,{years} années avant la retraite
+retirement_savings_remaining,${amount} de plus nécessaire pour la retraite
+in_school_notice,À l'école
+unemployed_notice,Sans emploi
+game_over_warning,"Vous êtes très endetté. Si vous atteignez un endettement de ${amount}, vous perdrez le jeu."
+game_over_notice,Game Over
+game_over_debt,Vous avez accumulé trop de dettes.
+game_over_win,Vous avez survécu avec succès à l'automatisation et vous êtes arrivé à la retraite.
+game_over_lose,Vous n'avez pas été en mesure d'épargner suffisamment pour prendre votre retraite.
+game_over_thanks,Merci d'avoir joué à The Automated World. Merci de prendre un moment pour remplir ce sondage.
+game_over_win_share,J'ai évité l'automatisation dans ü§ñ The Automated World üåé!
+game_over_lose_share,Je n'ai pas réussi à échapper à l'automatisation dans ü§ñ The Automated World üåé.
+game_over_lose_summary_result,Vous n'avez pas réussi. {percent}% des joueurs non plus.
+game_over_win_summary_result,Vous avez réussi. {percent}% des joueurs aussi.
+likert_0,Pas du tout d'accord
+likert_1,Pas d'accord
+likert_2,Neutre
+likert_3,D'accord
+likert_4,Tout à fait d'accord
+survey_age_label,Âge
+survey_education_label,Niveau d'éducation
+survey_occupation_label,Profession
+survey_automation_society_question,Pensez-vous que l'automatisation profitera économiquement à la société ?
+survey_automation_individual_question,Pensez-vous que l'automatisation sera bénéfique pour le bien-être individuel ?
+survey_submitted,Vos réponses ont été envoyées.
+survey_submit_button,Soumettre
+robot_release,RoboCo publie {name}. Il excelle à {skills}.
+robot_release_long,"Après des années de recherche et de développement, RoboCo a publié {name}. Il excelle à {skills}. Tout emploi faisant appel à cette compétence sera touché."
+news_silence_note,Cacher les actualités futures. Des notifications s'afficheront toujours en bas à droite.
+birthday_title,Joyeux {age}e anniversaire !
+birthday_body,"Il vous reste {yearsLeft} années avant la retraite. À ce rythme, vous économiserez ${estimate} d'ici là."
+inflation,Vos frais de subsistance ont augmenté en raison de l'inflation.
+hired,Vous avez été embauché en tant que {name}.
+rejected,Votre candidature au poste de {name} a été rejetée en raison de votre {mainFactor}.
+deepening_automation,Les effets de productivité de {name} sont répandus.
+drop_out,Vous avez abandonné l'école.
+graduated,Félicitations ! Vous avez obtenu votre diplôme.
+performance_terrible,Affreux
+performance_bad,Mauvais
+performance_mediocre,Médiocre
+performance_good,Bon
+performance_fantastic,Fantastique
+performance,Performance
+work_button,Travail
+low_risk_automation,risque faible
+mid_risk_automation,risque moyen
+high_risk_automation,haut risque
+low,faible
+moderate,modéré
+high,élevé
+automated,Automatisé
+percent_automated,automatisé
+automation_risk,risque lié à l'automatisation
+improving_on_job,S'améliorer dans ce métier
+improving_skill,Améliorer les compétences
+important_skills,Compétences importantes
+your_skill_level,votre niveau de compétence
+your_skills,Vos compétences
+skills_info,Vos compétences s'améliorent automatiquement au fil du temps à mesure que vous les utilisez pour vos emplois.
+application_out,Candidature provenant de
+past_job,Emploi précédent
+current_job,Emploi actuel
+robot_maintenance,Entretien de robot
+percent_skills_automated,{percent}% des compétences ont été automatisées
+Jan,Jan
+Feb,Fév
+Mar,Mar
+Apr,Avr
+May,Mai
+Jun,Juin
+Jul,Jui
+Aug,Aoû
+Sep,Sep
+Oct,Oct
+Nov,Nov
+Dec,Déc
+years_duration,{years} ans
+study_program,Étude {name}
+already_enrolled,Vous êtes déjà inscrit.
+fully_educated,Le système éducatif vous a appris tout ce qu'il peut.
+select_program,Sélectionnez un programme auquel vous voulez vous inscrire
+loan_warning,"Vous n'avez pas les moyens d'aller à l'école. Si vous vous inscrivez, vous recevrez un prêt pour couvrir tous les frais selon les modalités suivantes"
+interest_rate,Taux d'intérêt
+loan_terms,"{rate}% fixe, sur {years} ans"
+next_level,Niveau suivant
+enroll_button,Inscrivez-vous
+education_title,Éducation
+cost_in_wages,{months} mois de salaire
+school_cost,"Coût, y compris les frais de subsistance"
+after_subsidy,Coût après subvention
+subsidy_note,Vous bénéficiez d'une subvention à l'éducation qui couvre {subsidy}% de vos dépenses.
+school_postsecondary_note,"Les diplômes post-secondaires n'ouvriront pas de nouvelles parties du graphique des emplois, mais ils faciliteront l'embauche pour des emplois plus avancés."
+start_welcome,Bienvenue dans The Automated World !
+start_intro,Ce jeu est une exploration de la mobilité professionnelle contre la prolifération de l'automatisation. Votre premier emploi comporte un risque élevé d'automatisation. Essayez de vous retrouver dans un emploi relativement à l'abri de l'automatisation.
+start_goal,Votre objectif est de prendre votre retraite à l'âge de {age} avec un pécule de ${savings}.
+select_starting_job,Sélectionnez votre emploi de départ
+select_starting_job_button,Sélectionner un emploi
+notification_history_title,Historique
+pause_button,Pause
+start_button,Démarrer
+resume_button,Reprendre
+skills_button,Afficher les compétences
+school_button,Aller à l'école
+notification_history_button,Historique des notifications
+hint_job_graph,"Voici le réseau de l'emploi. Les emplois sont reliés entre eux en fonction de la similitude de leurs compétences. Le nœud <b style='color:#fff;background:#0e55ef;'>bleu foncé</b> est votre travail actuel. <br /><br /><b style='color:#fff;background:#4fc6ea;'>bleu clair</b>Les nœuds  sont des emplois auxquels vous pouvez <b style='background:#f9ca2f;'>postuler</b> en <img src='/static/pointer.png' width='9px' />cliquant dessus (il faut {applicationMonths} mois pour obtenir une réponse). Vos chances d'être embauché dépendent de votre niveau de compétence, de votre niveau de scolarité et de votre rendement actuel au travail.<br /><br /><b style='color:#fff;background:#51728c;'>gris foncé</b>Les emplois  sont des emplois que vous avez occupés auparavant. Vous pouvez postuler de nouveau à tout moment.<br /><br /><img src='/static/cursor.png' width='7px' />Passez la souris sur un emploi pour voir ses besoins en compétences, son salaire mensuel, son risque d'automatisation et vos niveaux de compétences actuels."
+hint_hud,"Ici, vous pouvez voir votre üéÇ âge actuel, vos üè économies, votre üí∏ revenu, vos dépenses, votre üéì niveau d'éducation, et votre üõ†Ô∏è emploi.<br /><br />Le menu <b style='color:#fff;background:#395be5;'>Compétences</b> vous montrera vos compétences, et le menu <b style='color:#fff;background:#395be5;'>École</b> est l'endroit où vous pouvez vous inscrire à l'école."
+hint_work,Les <b style='color:#fff;background:#ea432a;'>tâches</b> vont s'accumuler ici. <img src='/static/pointer.png' width='9px' />Cliquez sur n'importe quel bouton pour les compléter et augmenter vos <b style='color:#fff;background:#d119e5;'>performances</b> dans votre travail. Cela affecte vos chances d'être embauché dans de nouveaux emplois.
+twitter_share,Partager sur Twitter
+facebook_share,Partager sur Facebook
+counterfactual,"Sans l'automatisation, vous auriez gagné ${amount} {comp} de plus que vous ne l'avez fait."
+njobs_outcome,Vous avez eu {nJobs} emplois différents. C'est {amount} {comp} que les autres joueurs.
+debt_outcome,Vous avez contracté ${loans} de prêts. C'est ${amount} {comp} que les autres joueurs.
+how_to_play_title,Comment jouer
+how_to_play,"<p><b style='background:#f9ca2f;'>Postulez</b> à de nouvelles offres d'emploi en <img src='/static/pointer.png' width='9px' />cliquant sur les nœuds <b style='color:#fff;background:#4fc6ea;'>bleu clair</b> du réseau d'offres d'emploi. <img src='/static/cursor.png' width='7px' />Passez la souris sur les emplois pour en apprendre davantage à leur sujet.</p><p>Maintenez votre <b style='color:#fff;background:#d119e5;'>performance</b> en restant en haut (<img src='/static/pointer.png' width='9px' /><span style='text-decoration:underline;'>en cliquant</span>) <b style='color:#fff;background:#ea432a;'>du travail</b> dans le coin supérieur droit.</p><p>Vous avez des dépenses mensuelles qui sont automatiquement déduites de vos économies. Si vous vous endettez trop, le jeu se termine.</p><p>Vous pouvez suivre vos progrès vers votre objectif de retraite dans le coin inférieur gauche.</p><p>Si vous êtes coincé ou avez besoin d'un moment, ne vous inquiétez pas. Vous pouvez mettre le jeu en <b style='color:#fff;background:#395be5;'>pause</b> quand vous le souhaitez.</p>"
+consent_form_title,Renseignements concernant l'étude et déclaration de consentement éclairé pour les participants adultes
+consent_form_section_1_title,1. Objectif de l'étude
+consent_form_section_1,"Dans l'étude The Automated Life, nous voulons examiner comment les gens peuvent changer d'emploi afin d'éviter les effets négatifs de l'automatisation."
+consent_form_section_2_title,2. Procédure et contenu de l'étude
+consent_form_section_2,"Pour ce faire, nous vous demanderons de jouer à un jeu vidéo en ligne qui nécessite de prendre des décisions sur des emplois, des compétences et l'automatisation dans un environnement chronométré. L'interface du jeu peut être légèrement modifiée entre les participants afin de mesurer les effets de diverses informations sur la façon dont les gens choisissent de jouer."
+consent_form_section_3_title,3. Qu'adviendra-t-il des informations et des données recueillies ?
+consent_form_section_3,"Cette étude est un projet de recherche du Max-Planck-Institut (MPI) pour le développement humain. Les données anonymes recueillies sur la façon dont vous jouez à ce jeu seront utilisées à des fins de recherche uniquement.<br /><br />Aucune donnée personnelle ne sera enregistrée. Nous utilisons votre adresse IP pour déterminer le pays à partir duquel vous accédez au site, mais nous ne stockons pas l'adresse IP complète elle-même. Si vous choisissez de participer à l'enquête de sortie, nous établirons un lien entre des informations générales sur votre âge, votre sexe ou encore votre niveau d'études et votre parcours dans le jeu.<br /><br />Les données de l'étude peuvent être rendues accessibles au public par des bases de données de recherche ou des publications scientifiques. Veuillez noter que les données accessibles au public peuvent également être utilisées à des fins dépassant le cadre de cette étude particulière."
+consent_form_section_4_title,4. La participation est volontaire
+consent_form_section_4,La participation à cette étude est volontaire. Vous pouvez vous abandonner l'étude à tout moment avant la fin du jeu.
+consent_form_section_5_title,5. Consentement
+consent_form_section_5,"L'étude Automated Life comprend une seule partie d'une durée d'environ 30 minutes et vous pouvez jouer autant de fois que vous le voulez.<br /><br />En cochant la case ci-dessous, vous indiquez que vous avez lu et compris les conditions décrites ci-dessus et que vous consentez à participer à l'étude et à la collecte, au stockage et à l'utilisation de vos données, comme décrit ci-dessus."
+consent_label,Je comprends et j'accepte les conditions.
+consent_submit_button,Soumettre
+news_title,Informations de dernière minute
+bad_performance_warning,Votre rendement au travail a été affreux depuis {months} mois. Vous serez viré si vous ne vous remettez pas en forme !
+fired,Vous avez été viré en raison de vos mauvaises performances.

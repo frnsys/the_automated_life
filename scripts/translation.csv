@@ -1,0 +1,2367 @@
+,file,key,value
+0,education.json,name,Less than a High School Diploma
+1,education.json,name,High School Diploma
+2,education.json,name,Secondary Degree
+3,education.json,name,Post-Baccalaureate Certificate
+4,education.json,name,Master's Degree
+5,education.json,name,Post-Master's Certificate
+6,education.json,name,First Professional Degree
+7,education.json,name,Doctoral Degree
+8,education.json,name,Post-Doctoral Training
+9,industries.json,KEY,"Professional, Scientific, and Technical Services"
+10,industries.json,KEY,Finance and Insurance
+11,industries.json,KEY,Manufacturing
+12,industries.json,KEY,Government
+13,industries.json,KEY,Educational Services
+14,industries.json,KEY,Health Care and Social Assistance
+15,industries.json,KEY,Information
+16,industries.json,KEY,"Arts, Entertainment, and Recreation"
+17,industries.json,KEY,"Agriculture, Forestry, Fishing, and Hunting"
+18,industries.json,KEY,Wholesale Trade
+19,industries.json,KEY,Transportation and Warehousing
+20,industries.json,KEY,Other Services (Except Public Administration)
+21,industries.json,KEY,Real Estate and Rental and Leasing
+22,industries.json,KEY,Construction
+23,industries.json,KEY,Retail Trade
+24,industries.json,KEY,Accommodation and Food Services
+25,industries.json,KEY,Administrative and Support Services
+26,industries.json,KEY,Management of Companies and Enterprises
+27,industries.json,KEY,"Mining, Quarrying, and Oil and Gas Extraction"
+28,industries.json,KEY,Utilities
+29,jobs.json,name,Accountant
+30,jobs.json,name,Actuary
+31,jobs.json,name,Adhesive Bonding Machine Operator
+32,jobs.json,name,Adjudicator
+33,jobs.json,name,Administrative Services Manager
+34,jobs.json,name,Adult Education Teacher
+35,jobs.json,name,Advertising Manager
+36,jobs.json,name,Advertising Sales Agent
+37,jobs.json,name,Aerospace Technician
+38,jobs.json,name,Aerospace Engineer
+39,jobs.json,name,"Artist, Performer, And Athlete Agent"
+40,jobs.json,name,Agricultural/Food Science Technician
+41,jobs.json,name,Agricultural Engineer
+42,jobs.json,name,Agricultural Equipment Operator
+43,jobs.json,name,Agricultural Inspector
+44,jobs.json,name,Postsecondary Agricultural Sciences Teacher
+45,jobs.json,name,Air Traffic Controller
+46,jobs.json,name,Aircraft Cargo Handling Supervisor
+47,jobs.json,name,Aircraft Mechanic
+48,jobs.json,name,Aircraft Systems Assembler
+49,jobs.json,name,Airfield Operations Specialist
+50,jobs.json,name,Airline Pilot/Flight Engineer
+51,jobs.json,name,Ambulance Driver
+52,jobs.json,name,Amusement Attendant
+53,jobs.json,name,Anesthesiologist
+54,jobs.json,name,Animal Control Worker
+55,jobs.json,name,Animal Scientist
+56,jobs.json,name,Animal Trainer
+57,jobs.json,name,Anthropologist/Archeaologist
+58,jobs.json,name,Postsecondary Anthropology/Archeology Teacher
+59,jobs.json,name,Real Estate Appraiser
+60,jobs.json,name,Arbitrator
+61,jobs.json,name,Architect
+62,jobs.json,name,Architectural Drafter
+63,jobs.json,name,Architectural And Engineering Manager
+64,jobs.json,name,Postsecondary Architecture Teacher
+65,jobs.json,name,Archivist
+66,jobs.json,name,Postsecondary Cultural Studies Teacher
+67,jobs.json,name,Art Director
+68,jobs.json,name,Postsecondary Art/Drama/Music Teacher
+69,jobs.json,name,Astronomer
+70,jobs.json,name,Athlete
+71,jobs.json,name,Athletic Trainer
+72,jobs.json,name,Atmospheric Scientist
+73,jobs.json,name,Postsecondary Earth Sciences Teacher
+74,jobs.json,name,Audio And Video Equipment Technician
+75,jobs.json,name,Multimedia Collections Specialist
+76,jobs.json,name,Audiologist
+77,jobs.json,name,Automotive And Watercraft Service Attendant
+78,jobs.json,name,Automotive Body Repairer
+79,jobs.json,name,Automotive Glass Installer/Repairer
+80,jobs.json,name,Automotive Mechanic
+81,jobs.json,name,Avionics Technician
+82,jobs.json,name,Baggage Porter
+83,jobs.json,name,Bailiff
+84,jobs.json,name,Baker
+85,jobs.json,name,Barber
+86,jobs.json,name,Bartender
+87,jobs.json,name,Bicycle Repairer
+88,jobs.json,name,Bill And Account Collector
+89,jobs.json,name,Billing Clerk
+90,jobs.json,name,Biochemist/Biophysicist
+91,jobs.json,name,Postsecondary Biological Science Teacher
+92,jobs.json,name,Biological Scientist
+93,jobs.json,name,Biological Technician
+94,jobs.json,name,Biomedical Engineer
+95,jobs.json,name,Boilermaker
+96,jobs.json,name,Accounting Clerk
+97,jobs.json,name,Brickmason
+98,jobs.json,name,Bridge And Lock Tenders
+99,jobs.json,name,Broadcast News Analyst
+100,jobs.json,name,Broadcast Technician
+101,jobs.json,name,Brokerage Clerk
+102,jobs.json,name,Budget Analyst
+103,jobs.json,name,Diesel Engine Specialist
+104,jobs.json,name,School Bus Driver
+105,jobs.json,name,Transit Bus Driver
+106,jobs.json,name,Business Operations Specialist
+107,jobs.json,name,Postsecondary Business Teacher
+108,jobs.json,name,Butcher
+109,jobs.json,name,Farm Product Buyer
+110,jobs.json,name,Cabinetmaker
+111,jobs.json,name,Photographic Equipment Repairer
+112,jobs.json,name,Camera Operators
+113,jobs.json,name,Water Vessel Captain
+114,jobs.json,name,Cardiovascular Technologist
+115,jobs.json,name,Middle School Technical Education Teacher
+116,jobs.json,name,Secondary School Technical Education Teacher
+117,jobs.json,name,Cargo And Freight Agent
+118,jobs.json,name,Carpenter
+119,jobs.json,name,Carpet Installer
+120,jobs.json,name,Cartographer
+121,jobs.json,name,Cashier
+122,jobs.json,name,Cement Masons And Concrete Finisher
+123,jobs.json,name,Chef
+124,jobs.json,name,Chemical Engineer
+125,jobs.json,name,Chemical Equipment Operator
+126,jobs.json,name,Chemical Plant Operator
+127,jobs.json,name,Chemical Technician
+128,jobs.json,name,Postsecondary Chemistry Teacher
+129,jobs.json,name,Chemist
+130,jobs.json,name,Chief Executive
+131,jobs.json,name,Family Social Worker
+132,jobs.json,name,Childcare Worker
+133,jobs.json,name,Chiropractor
+134,jobs.json,name,Choreographer
+135,jobs.json,name,Civil Technician
+136,jobs.json,name,Civil Engineer
+137,jobs.json,name,Claims Investigator
+138,jobs.json,name,Vehicle/Equipment Cleaner
+139,jobs.json,name,Metal Pickling Equipment Operator
+140,jobs.json,name,Clergy
+141,jobs.json,name,Clinical Psychologist
+142,jobs.json,name,Coach/Scout
+143,jobs.json,name,Coating/Spraying Machine Operator
+144,jobs.json,name,Coil Winder
+145,jobs.json,name,Vending Machine Servicer
+146,jobs.json,name,Food Preparation And Service Worker
+147,jobs.json,name,Industrial Designer
+148,jobs.json,name,Commercial Diver
+149,jobs.json,name,Commercial Pilot
+150,jobs.json,name,Postsecondary Communications Teacher
+151,jobs.json,name,Community Health Worker
+152,jobs.json,name,Compensation And Benefits Manager
+153,jobs.json,name,Job Analysis Specialist
+154,jobs.json,name,Compliance Officer
+155,jobs.json,name,Computer Scientist
+156,jobs.json,name,Computer And Information Systems Manager
+157,jobs.json,name,Computer Hardware Engineer
+158,jobs.json,name,Computer Network Architect
+159,jobs.json,name,Computer Network Support Specialist
+160,jobs.json,name,Computer-Controlled Machine Tool Programmer
+161,jobs.json,name,Computer Technician
+162,jobs.json,name,Computer Operator
+163,jobs.json,name,Computer Programmer
+164,jobs.json,name,Postsecondary Computer Science Teacher
+165,jobs.json,name,Computer Systems Analyst
+166,jobs.json,name,Computer User Support Specialist
+167,jobs.json,name,Computer Repairer
+168,jobs.json,name,Computer-Controlled Machine Tool Operator
+169,jobs.json,name,Concierge
+170,jobs.json,name,Conservation Scientist
+171,jobs.json,name,Construction/Building Inspector
+172,jobs.json,name,Construction Worker
+173,jobs.json,name,Construction Laborer
+174,jobs.json,name,Construction Manager
+175,jobs.json,name,Continuous Mining Machine Operator
+176,jobs.json,name,Control And Valve Installer/Repairer
+177,jobs.json,name,Conveyor Operator
+178,jobs.json,name,Fast Food Cook
+179,jobs.json,name,Cafeteria Cook
+180,jobs.json,name,Restaurant Cook
+181,jobs.json,name,Short Order Cook
+182,jobs.json,name,Cooling/Freezing Equipment Operator
+183,jobs.json,name,Correctional Officer
+184,jobs.json,name,Correspondence Clerk
+185,jobs.json,name,Cost Estimator
+186,jobs.json,name,Costume Attendant
+187,jobs.json,name,Rental Clerk
+188,jobs.json,name,Counter Attendant
+189,jobs.json,name,Courier
+190,jobs.json,name,Court Reporter
+191,jobs.json,name,Court Clerk
+192,jobs.json,name,Craft Artist
+193,jobs.json,name,Crane And Tower Operator
+194,jobs.json,name,Credit Analyst
+195,jobs.json,name,Credit Authorizer
+196,jobs.json,name,Credit Counselor
+197,jobs.json,name,Postsecondary Criminal Justice Eacher
+198,jobs.json,name,Crossing Guard
+199,jobs.json,name,Grinding/Polishing Machine Operator
+200,jobs.json,name,Curator
+201,jobs.json,name,Customer Service Representative
+202,jobs.json,name,Hand Cutter/Trimmer
+203,jobs.json,name,Cutting/Slicing Machine Operator
+204,jobs.json,name,Cutting/Punching/Press Machine Operator
+205,jobs.json,name,Data Entry Keyer
+206,jobs.json,name,Database Administrator
+207,jobs.json,name,Product Promoter
+208,jobs.json,name,Dental Assistant
+209,jobs.json,name,Dental Hygienist
+210,jobs.json,name,Dental Laboratory Technician
+211,jobs.json,name,Dentist
+212,jobs.json,name,Derrick Operator
+213,jobs.json,name,Desktop Publisher
+214,jobs.json,name,Criminal Investigator
+215,jobs.json,name,Diagnostic Medical Sonographer
+216,jobs.json,name,Dietetic Technician
+217,jobs.json,name,Dietitian
+218,jobs.json,name,Cafeteria Attendant
+219,jobs.json,name,Religious Education Director
+220,jobs.json,name,Dishwasher
+221,jobs.json,name,Dispatcher
+222,jobs.json,name,Street Vendor
+223,jobs.json,name,Dredge Operator
+224,jobs.json,name,Drilling/Boring Machine Tool Operator
+225,jobs.json,name,Driver/Sales Worker
+226,jobs.json,name,Drywall Installer
+227,jobs.json,name,Earth Driller
+228,jobs.json,name,Postsecondary Economics Teachers
+229,jobs.json,name,Economist
+230,jobs.json,name,Editor
+231,jobs.json,name,Education Administrator
+232,jobs.json,name,Primary And Secondary School Administrator
+233,jobs.json,name,Postsecondary School Administrator
+234,jobs.json,name,Preschool Administrator
+235,jobs.json,name,Postsecondary Education Teacher
+236,jobs.json,name,Guidance Counselor
+237,jobs.json,name,Electric Motor Repairer
+238,jobs.json,name,Electrical Equipment Assembler
+239,jobs.json,name,Electrical Drafter
+240,jobs.json,name,Electrical Technician
+241,jobs.json,name,Transportation Electrical Repairer
+242,jobs.json,name,Industrial Electrical Repairer
+243,jobs.json,name,Powerhouse Electrical Repairer
+244,jobs.json,name,Electrical Engineer
+245,jobs.json,name,Electrical Power-Line Installer/Repairer
+246,jobs.json,name,Electrician
+247,jobs.json,name,Electro-Mechanical Technician
+248,jobs.json,name,Electromechanical Equipment Assembler
+249,jobs.json,name,Motor Vehicle Electronic Installer/Repairer
+250,jobs.json,name,Home Entertainment Installer/Repairer
+251,jobs.json,name,Electronics Engineer
+252,jobs.json,name,Elementary School Teacher
+253,jobs.json,name,Elevator Installer/Repairer
+254,jobs.json,name,Government Program Eligibility Interviewer
+255,jobs.json,name,Embalmer
+256,jobs.json,name,Emergency Management Director
+257,jobs.json,name,Paramedic
+258,jobs.json,name,Engine Assembler
+259,jobs.json,name,Postsecondary Engineering Teacher
+260,jobs.json,name,Engineering Technician
+261,jobs.json,name,Engineer
+262,jobs.json,name,Postsecondary English Language/Literature Teacher
+263,jobs.json,name,Environmental Technician
+264,jobs.json,name,Environmental Engineer
+265,jobs.json,name,Environmental Health Technician
+266,jobs.json,name,Postsecondary Environmental Science Teacher
+267,jobs.json,name,Environmental Scientist
+268,jobs.json,name,Epidemiologist
+269,jobs.json,name,Etcher/Engraver
+270,jobs.json,name,Excavating/Loading Machine Operator
+271,jobs.json,name,Executive Administrative Assistant
+272,jobs.json,name,Exercise Physiologist
+273,jobs.json,name,Explosives Worker
+274,jobs.json,name,Extruding/Drawing Machine Operator
+275,jobs.json,name,Extruding/Forming Machine Operator
+276,jobs.json,name,Forming/Compacting Machine Operator
+277,jobs.json,name,Fabric/Apparel Patternmaker
+278,jobs.json,name,Fabric Mender
+279,jobs.json,name,Faller
+280,jobs.json,name,General Practitioner
+281,jobs.json,name,Farm And Home Management Advisor
+282,jobs.json,name,Farm Equipment Mechanic
+283,jobs.json,name,Farm Labor Contractor
+284,jobs.json,name,Farmer
+285,jobs.json,name,Farmworker
+286,jobs.json,name,Ranch Farmworker
+287,jobs.json,name,Fashion Designer
+288,jobs.json,name,Fence Erector
+289,jobs.json,name,Fiberglass Fabricator
+290,jobs.json,name,File Clerk
+291,jobs.json,name,Film Editor
+292,jobs.json,name,Financial Analyst
+293,jobs.json,name,Financial Examiner
+294,jobs.json,name,Financial Manager
+295,jobs.json,name,Financial Specialist
+296,jobs.json,name,Fine Artist
+297,jobs.json,name,Fire Inspector
+298,jobs.json,name,Firefighter
+299,jobs.json,name,Construction Trade Supervisor
+300,jobs.json,name,Correctional Officer Supervisor
+301,jobs.json,name,Farming/Fishing/Forestry Supervisor
+302,jobs.json,name,Firefighter Supervisor
+303,jobs.json,name,Food Preparation Supervisor
+304,jobs.json,name,Hand Laborer/Material Mover Supervisor
+305,jobs.json,name,Janitorial Supervisor
+306,jobs.json,name,Groundskeeping Supervisor
+307,jobs.json,name,Mechanic Supervisor
+308,jobs.json,name,Non-Retail Sales Supervisor
+309,jobs.json,name,Administrative Support Supervisor
+310,jobs.json,name,Personal Service Worker Supervisor
+311,jobs.json,name,Police Supervisor
+312,jobs.json,name,Production/Operating Worker Supervisor
+313,jobs.json,name,Retail Sales Supervisor
+314,jobs.json,name,Transportation Operator Supervisor
+315,jobs.json,name,Fish And Game Warden
+316,jobs.json,name,Fisher
+317,jobs.json,name,Fitness Trainer
+318,jobs.json,name,Flight Attendant
+319,jobs.json,name,Floor Layer
+320,jobs.json,name,Floor Sander/Finisher
+321,jobs.json,name,Floral Designer
+322,jobs.json,name,Food And Tobacco Machine Operator
+323,jobs.json,name,Food Batchmaker
+324,jobs.json,name,Food Cooking Machine Operator
+325,jobs.json,name,Food Preparation Worker
+326,jobs.json,name,Food Scientist
+327,jobs.json,name,Nonrestaurant Food Server
+328,jobs.json,name,Food Service Manager
+329,jobs.json,name,Postsecondary Foreign Language Teacher
+330,jobs.json,name,Forensic Technician
+331,jobs.json,name,Conservation Technician
+332,jobs.json,name,Forest And Conservation Worker
+333,jobs.json,name,Forest Fire Inspector
+334,jobs.json,name,Forester
+335,jobs.json,name,Postsecondary Forestry And Conservation Science Teacher
+336,jobs.json,name,Forging Machine Operator
+337,jobs.json,name,Foundry Mold And Coremaker
+338,jobs.json,name,Fundraiser
+339,jobs.json,name,Funeral Attendant
+340,jobs.json,name,Funeral Service Manager
+341,jobs.json,name,Furnace/Kiln Operator
+342,jobs.json,name,Furniture Finisher
+343,jobs.json,name,Gaming Book Writer
+344,jobs.json,name,Gaming Cage Worker
+345,jobs.json,name,Booth Cashier
+346,jobs.json,name,Gaming Dealer
+347,jobs.json,name,Gaming Manager
+348,jobs.json,name,Gaming Supervisor
+349,jobs.json,name,Gaming Investigator
+350,jobs.json,name,Gas Pumping Station Operator
+351,jobs.json,name,Gas Plant Operator
+352,jobs.json,name,Operations Manager
+353,jobs.json,name,Genetic Counselor
+354,jobs.json,name,Geographer
+355,jobs.json,name,Postsecondary Geography Teacher
+356,jobs.json,name,Geological And Petroleum Technician
+357,jobs.json,name,Geoscientists
+358,jobs.json,name,Glazier
+359,jobs.json,name,Agricultural Product Grader
+360,jobs.json,name,Graduate Teaching Assistant
+361,jobs.json,name,Graphic Designer
+362,jobs.json,name,Hand Grinding/Polishing Worker
+363,jobs.json,name,Grinding/Polishing/Buffing Machine Tool Operator
+364,jobs.json,name,Hairdresser
+365,jobs.json,name,Hazardous Materials Removal Worker
+366,jobs.json,name,Health And Safety Engineer
+367,jobs.json,name,Health Diagnosing Practitioner
+368,jobs.json,name,Health Educator
+369,jobs.json,name,Postsecondary Health Specialties Teacher
+370,jobs.json,name,Health Technologist
+371,jobs.json,name,Healthcare Practitioner
+372,jobs.json,name,Healthcare Social Worker
+373,jobs.json,name,Healthcare Support Worker
+374,jobs.json,name,Hearing Aid Specialist
+375,jobs.json,name,Heat Treating Equipment Operator
+376,jobs.json,name,Hvac Mechanic/Installer
+377,jobs.json,name,Heavy/Tractor-Trailer Truck Driver
+378,jobs.json,name,Mason Helper
+379,jobs.json,name,Carpenter Helper
+380,jobs.json,name,Electrician Helper
+381,jobs.json,name,Extraction Worker Helper
+382,jobs.json,name,Maintenance/Repair Worker Helper
+383,jobs.json,name,Painter/Plasterer Helper
+384,jobs.json,name,Plumber Helper
+385,jobs.json,name,Production Worker Helper
+386,jobs.json,name,Roofer Helper
+387,jobs.json,name,Highway Maintenance Worker
+388,jobs.json,name,Historian
+389,jobs.json,name,Postsecondary History Teacher
+390,jobs.json,name,Hoist And Winch Operator
+391,jobs.json,name,Home Appliance Repairer
+392,jobs.json,name,Postsecondary Home Economics Teacher
+393,jobs.json,name,Home Health Aide
+394,jobs.json,name,Restaurant Host
+395,jobs.json,name,Hotel Desk Clerk
+396,jobs.json,name,Human Resources Assistant
+397,jobs.json,name,Human Resources Manager
+398,jobs.json,name,Human Resources Specialist
+399,jobs.json,name,Hydrologist
+400,jobs.json,name,Industrial Technician
+401,jobs.json,name,Industrial Engineer
+402,jobs.json,name,Industrial Machinery Mechanic
+403,jobs.json,name,Industrial Production Manager
+404,jobs.json,name,Industrial Truck And Tractor Operator
+405,jobs.json,name,Industrial-Organizational Psychologist
+406,jobs.json,name,Information Security Analyst
+407,jobs.json,name,Inspector/Tester
+408,jobs.json,name,Maintance/Repair Worker
+409,jobs.json,name,Instructional Coordinator
+410,jobs.json,name,Insulation Worker
+411,jobs.json,name,Mechanical Insulation Worker
+412,jobs.json,name,Auto Insurance Appraiser
+413,jobs.json,name,Insurance Claims Clerk
+414,jobs.json,name,Insurance Sales Agent
+415,jobs.json,name,Insurance Underwriter
+416,jobs.json,name,Interior Designer
+417,jobs.json,name,Internist
+418,jobs.json,name,Translator
+419,jobs.json,name,Interviewer
+420,jobs.json,name,Janitor
+421,jobs.json,name,Jeweler
+422,jobs.json,name,Judge
+423,jobs.json,name,Judicial Law Clerk
+424,jobs.json,name,Kindergarten Teacher
+425,jobs.json,name,Labor Relations Specialist
+426,jobs.json,name,Hand Laborer/Material Mover
+427,jobs.json,name,Landscape Architect
+428,jobs.json,name,Landscaping And Groundskeeping Worker
+429,jobs.json,name,Lathe/Turning Machine Tool Operator
+430,jobs.json,name,Laundry/Dry-Cleaning Worker
+431,jobs.json,name,Postsecondary Law Teacher
+432,jobs.json,name,Lawyer
+433,jobs.json,name,Metal/Plastic Layout Worker
+434,jobs.json,name,Legal Secretary
+435,jobs.json,name,Librarian
+436,jobs.json,name,Clerical Library Assistant
+437,jobs.json,name,Postsecondary Library Science Teacher
+438,jobs.json,name,Library Technician
+439,jobs.json,name,Licensed Practical/Vocational Nurse
+440,jobs.json,name,"Life, Physical, And Social Science Technician"
+441,jobs.json,name,Lifeguard
+442,jobs.json,name,Light Truck/Delivery Services Driver
+443,jobs.json,name,Undeground Mining Loading Machine Operator
+444,jobs.json,name,Loan Interviewer
+445,jobs.json,name,Loan Officer
+446,jobs.json,name,Locker Room Attendant
+447,jobs.json,name,Locksmith
+448,jobs.json,name,Locomotive Engineer
+449,jobs.json,name,Lodging Manager
+450,jobs.json,name,Log Grader
+451,jobs.json,name,Logging Equipment Operator
+452,jobs.json,name,Logistician
+453,jobs.json,name,Machine Feeder
+454,jobs.json,name,Machinist
+455,jobs.json,name,Magnetic Resonance Imaging Technologist
+456,jobs.json,name,Housekeeping Cleaner
+457,jobs.json,name,Mail Clerk
+458,jobs.json,name,Maintenance/Repair Worker
+459,jobs.json,name,Machinery Maintenance Worker
+460,jobs.json,name,Makeup Artist
+461,jobs.json,name,Management Analyst
+462,jobs.json,name,Manager
+463,jobs.json,name,Manicurist/Pedicurist
+464,jobs.json,name,Mobile Home Installer
+465,jobs.json,name,Marine Engineer
+466,jobs.json,name,Market Research Analyst
+467,jobs.json,name,Marketing Manager
+468,jobs.json,name,Marriage And Family Therapist
+469,jobs.json,name,Massage Therapist
+470,jobs.json,name,Materials Engineer
+471,jobs.json,name,Materials Scientist
+472,jobs.json,name,Postsecondary Mathematical Science Teacher
+473,jobs.json,name,Mathematician
+474,jobs.json,name,"Meat, Poultry, Fish Cutter"
+475,jobs.json,name,Mechanical Door Repairer
+476,jobs.json,name,Mechanical Drafter
+477,jobs.json,name,Mechanical Technician
+478,jobs.json,name,Mechanical Engineer
+479,jobs.json,name,Medical Technician
+480,jobs.json,name,Medical Technologist
+481,jobs.json,name,Medical And Health Services Manager
+482,jobs.json,name,Medical Appliance Technician
+483,jobs.json,name,Medical Assistant
+484,jobs.json,name,Medical Equipment Preparer
+485,jobs.json,name,Medical Equipment Repairer
+486,jobs.json,name,Medical Record Technician
+487,jobs.json,name,Medical Scientist
+488,jobs.json,name,Medical Secretary
+489,jobs.json,name,Medical Transcriptionist
+490,jobs.json,name,Event Planner
+491,jobs.json,name,Mental Health Worker
+492,jobs.json,name,Mental Health Counselor
+493,jobs.json,name,Merchandise Displayer
+494,jobs.json,name,Metal-Refining Furnace Operator
+495,jobs.json,name,Meter Reader
+496,jobs.json,name,Microbiologist
+497,jobs.json,name,Middle School Teacher
+498,jobs.json,name,Milling/Planing Machine Operator
+499,jobs.json,name,Millwright
+500,jobs.json,name,Mine Cutting Machine Operator
+501,jobs.json,name,Mine Shuttle Car Operator
+502,jobs.json,name,Geological Engineer
+503,jobs.json,name,Mixing/Blending Machine Operator
+504,jobs.json,name,Mobile Heavy Equipment Mechanic
+505,jobs.json,name,Metal/Plastic Model Maker
+506,jobs.json,name,Wood Model Maker
+507,jobs.json,name,Model
+508,jobs.json,name,Molder/Shaper/Caster
+509,jobs.json,name,Molding/Coremaking/Casting Machine Operator
+510,jobs.json,name,Funeral Director
+511,jobs.json,name,Motion Picture Projectionist
+512,jobs.json,name,Motorboat Mechanic
+513,jobs.json,name,Motorboat Operator
+514,jobs.json,name,Motorcycle Mechanic
+515,jobs.json,name,Multimedia Artist
+516,jobs.json,name,Multiple Machine Tool Operator
+517,jobs.json,name,Museum Technician
+518,jobs.json,name,Music Composer
+519,jobs.json,name,Musical Instrument Repairer/Tuner
+520,jobs.json,name,Natural Sciences Manager
+521,jobs.json,name,Systems Administrator
+522,jobs.json,name,New Accounts Clerk
+523,jobs.json,name,Nonfarm Animal Caretaker
+524,jobs.json,name,Nuclear Engineer
+525,jobs.json,name,Nuclear Medicine Technologist
+526,jobs.json,name,Nuclear Power Reactor Operator
+527,jobs.json,name,Nuclear Technician
+528,jobs.json,name,Nurse Anesthetist
+529,jobs.json,name,Nurse Midwive
+530,jobs.json,name,Nurse Practitioner
+531,jobs.json,name,Nursing Assistant
+532,jobs.json,name,Postsecondary Nursing Instructors And Teacher
+533,jobs.json,name,Obstetrician/Gynecologist
+534,jobs.json,name,Occupational Health And Safety Specialist
+535,jobs.json,name,Occupational Health And Safety Technician
+536,jobs.json,name,Occupational Therapist
+537,jobs.json,name,Occupational Therapy Aide
+538,jobs.json,name,Occupational Therapy Assistant
+539,jobs.json,name,Office Clerk
+540,jobs.json,name,Office Machine Operator
+541,jobs.json,name,Construction Engineer
+542,jobs.json,name,Operations Research Analyst
+543,jobs.json,name,Ophthalmic Laboratory Technician
+544,jobs.json,name,Ophthalmic Medical Technician
+545,jobs.json,name,Optician
+546,jobs.json,name,Optometrist
+547,jobs.json,name,Oral Surgeon
+548,jobs.json,name,Order Clerk
+549,jobs.json,name,Orthodontist
+550,jobs.json,name,Orthotist/Prosthetist
+551,jobs.json,name,Small Engine Mechanic
+552,jobs.json,name,Packaging Machine Operator
+553,jobs.json,name,Hand Packer
+554,jobs.json,name,Construction Painter
+555,jobs.json,name,Transportation Equipment Painter
+556,jobs.json,name,Painting/Coating/Decorating Worker
+557,jobs.json,name,Paper Goods Machine Operator
+558,jobs.json,name,Paperhanger
+559,jobs.json,name,Paralegal
+560,jobs.json,name,Parking Enforcement Worker
+561,jobs.json,name,Parking Lot Attendant
+562,jobs.json,name,Parts Salesperson
+563,jobs.json,name,Metal/Plastic Patternmaker
+564,jobs.json,name,Wood Patternmaker
+565,jobs.json,name,Paving Equipment Operator
+566,jobs.json,name,Payroll Clerk
+567,jobs.json,name,Pediatrician
+568,jobs.json,name,Personal Care Aide
+569,jobs.json,name,Personal Financial Advisor
+570,jobs.json,name,Pest Control Worker
+571,jobs.json,name,Pesticide Handler
+572,jobs.json,name,Petroleum Engineer
+573,jobs.json,name,Refinery Operator
+574,jobs.json,name,Pharmacist
+575,jobs.json,name,Pharmacy Aide
+576,jobs.json,name,Pharmacy Technician
+577,jobs.json,name,Postsecondary Philosophy/Religion Teacher
+578,jobs.json,name,Phlebotomist
+579,jobs.json,name,Photographer
+580,jobs.json,name,Physical Scientist
+581,jobs.json,name,Physical Therapist Aide
+582,jobs.json,name,Physical Therapist Assistant
+583,jobs.json,name,Physical Therapist
+584,jobs.json,name,Physician Assistant
+585,jobs.json,name,Physician
+586,jobs.json,name,Physicist
+587,jobs.json,name,Postsecondary Physics Teacher
+588,jobs.json,name,Pile-Driver Operator
+589,jobs.json,name,Pipelayer
+590,jobs.json,name,Plant Operator
+591,jobs.json,name,Plasterer
+592,jobs.json,name,Plating/Coating Machine Operator
+593,jobs.json,name,Plumber
+594,jobs.json,name,Podiatrist
+595,jobs.json,name,Police
+596,jobs.json,name,"Police, Fire, And Ambulance Dispatcher"
+597,jobs.json,name,Postsecondary Political Science Teacher
+598,jobs.json,name,Political Scientist
+599,jobs.json,name,Postal Service Clerk
+600,jobs.json,name,Postal Service Mail Carrier
+601,jobs.json,name,Postal Service Mail Sorter
+602,jobs.json,name,Postmaster
+603,jobs.json,name,Metal Caster
+604,jobs.json,name,Power Distributor/Dispatcher
+605,jobs.json,name,Power Plant Operator
+606,jobs.json,name,Prepress Technician
+607,jobs.json,name,Preschool Teacher
+608,jobs.json,name,Textile Presser
+609,jobs.json,name,Print Binding Worker
+610,jobs.json,name,Printing Press Operator
+611,jobs.json,name,Private Investigator
+612,jobs.json,name,Probation Officer
+613,jobs.json,name,Procurement Clerk
+614,jobs.json,name,Producer/Director
+615,jobs.json,name,Production Worker
+616,jobs.json,name,Production Cleark
+617,jobs.json,name,Proofreader
+618,jobs.json,name,Property Manager
+619,jobs.json,name,Protective Service Worker
+620,jobs.json,name,Psychiatric Aide
+621,jobs.json,name,Psychiatric Technician
+622,jobs.json,name,Psychiatrist
+623,jobs.json,name,Psychologist
+624,jobs.json,name,Postsecondary Psychology Teacher
+625,jobs.json,name,Public Address System Announcer
+626,jobs.json,name,Pr And Fundraising Manager
+627,jobs.json,name,Public Relations Specialist
+628,jobs.json,name,Pump Operator
+629,jobs.json,name,Buyer
+630,jobs.json,name,Purchasing Manager
+631,jobs.json,name,Radiation Therapist
+632,jobs.json,name,Radio And Television Announcer
+633,jobs.json,name,Radio Operator
+634,jobs.json,name,Radio/Cellular Installer/Repair
+635,jobs.json,name,Radiologic Technologist
+636,jobs.json,name,Rail Car Repairer
+637,jobs.json,name,Rail Yard Engineer
+638,jobs.json,name,Rail Maintenance Equipment Operator
+639,jobs.json,name,Railroad Brake/Signal/Switch Operator
+640,jobs.json,name,Railroad Conductor
+641,jobs.json,name,Real Estate Broker
+642,jobs.json,name,Real Estate Sales Agent
+643,jobs.json,name,Information Clekr
+644,jobs.json,name,Postsecondary Recreation/Fitness Studies Teacher
+645,jobs.json,name,Recreation Worker
+646,jobs.json,name,Recreational Therapist
+647,jobs.json,name,Recreational Vehicle Service Technician
+648,jobs.json,name,Refractory Materials Repairer
+649,jobs.json,name,Refuse And Recyclable Material Collector
+650,jobs.json,name,Registered Nurse
+651,jobs.json,name,Rehabilitation Counselor
+652,jobs.json,name,Rebar Worker
+653,jobs.json,name,Reporter
+654,jobs.json,name,Travel Clerk
+655,jobs.json,name,Residential Advisor
+656,jobs.json,name,Respiratory Therapist
+657,jobs.json,name,Respiratory Therapy Technician
+658,jobs.json,name,Retail Salesperson
+659,jobs.json,name,Rigger
+660,jobs.json,name,Rock Splitter
+661,jobs.json,name,Rolling Machine Operator
+662,jobs.json,name,Mining Roof Bolter
+663,jobs.json,name,Roofer
+664,jobs.json,name,Rotary Drill Operator
+665,jobs.json,name,Unskilled Oil Rig Worker
+666,jobs.json,name,Sailor/Marine Oiler
+667,jobs.json,name,Sales Engineer
+668,jobs.json,name,Sales Manager
+669,jobs.json,name,Sales Representative
+670,jobs.json,name,Manufacturing Sales Representative
+671,jobs.json,name,Technical Sales Representative
+672,jobs.json,name,Sawing Machine Operator
+673,jobs.json,name,Secondary School Teachers
+674,jobs.json,name,Administrative Assistant
+675,jobs.json,name,Securities Sales Agent
+676,jobs.json,name,Security Systems Installer
+677,jobs.json,name,Security Guard
+678,jobs.json,name,Segmental Paver
+679,jobs.json,name,Self-Enrichment Education Teacher
+680,jobs.json,name,Semiconductor Processor
+681,jobs.json,name,Separating/Clarifying Machine Operator
+682,jobs.json,name,Septic/Sewer Servicer
+683,jobs.json,name,Oil/Gas/Mining Service Unit Operator
+684,jobs.json,name,Set Designer
+685,jobs.json,name,Hand Sewer
+686,jobs.json,name,Sewing Machine Operator
+687,jobs.json,name,Shampooer
+688,jobs.json,name,Sheet Metal Worker
+689,jobs.json,name,Ship Engineer
+690,jobs.json,name,Shipping/Receiving Clerk
+691,jobs.json,name,Shoe/Leather Worker
+692,jobs.json,name,Shoe Machine Operator
+693,jobs.json,name,Signal And Track Switch Repairer
+694,jobs.json,name,Skincare Specialist
+695,jobs.json,name,Meat Packer
+696,jobs.json,name,Slot Supervisor
+697,jobs.json,name,Social And Community Service Manager
+698,jobs.json,name,Social And Human Service Assistant
+699,jobs.json,name,Social Science Research Assistant
+700,jobs.json,name,Social Scientist
+701,jobs.json,name,Postsecondary Social Work Teacher
+702,jobs.json,name,Sociologist
+703,jobs.json,name,Postsecondary Sociology Teacher
+704,jobs.json,name,Applications Software Developer
+705,jobs.json,name,Systems Software Developer
+706,jobs.json,name,Soil And Plant Scientist
+707,jobs.json,name,Solar Photovoltaic Installer
+708,jobs.json,name,Sound Engineering Technician
+709,jobs.json,name,Special Education Teacher
+710,jobs.json,name,Primary School Special Education Teacher
+711,jobs.json,name,Middle School Special Education Teacher
+712,jobs.json,name,Secondary School Special Education Teacher
+713,jobs.json,name,Speech-Language Pathologist
+714,jobs.json,name,Boiler Operator
+715,jobs.json,name,Statistical Assistant
+716,jobs.json,name,Statistician
+717,jobs.json,name,Stock Clerk
+718,jobs.json,name,Stonemason
+719,jobs.json,name,Steel Worker
+720,jobs.json,name,Structural Metal Fabricator
+721,jobs.json,name,Substance Abuse And Behavioral Disorder Counselor
+722,jobs.json,name,Subway/Streetcar Operator
+723,jobs.json,name,Surgeon
+724,jobs.json,name,Surgical Technologist
+725,jobs.json,name,Survey Researcher
+726,jobs.json,name,Mapping Technician
+727,jobs.json,name,Surveyor
+728,jobs.json,name,Switchboard Operator
+729,jobs.json,name,Tailor
+730,jobs.json,name,Tank Car/Truck/Ship Loader
+731,jobs.json,name,Taper
+732,jobs.json,name,Tax Collector
+733,jobs.json,name,Tax Preparer
+734,jobs.json,name,Taxi Driver/Chauffeur
+735,jobs.json,name,Teacher Assistant
+736,jobs.json,name,Team Assembler
+737,jobs.json,name,Technical Writer
+738,jobs.json,name,Telecom Equipment Installer/Repairer
+739,jobs.json,name,Telecom Line Installer/Repairer
+740,jobs.json,name,Telemarketer
+741,jobs.json,name,Telephone Operator
+742,jobs.json,name,Teller
+743,jobs.json,name,Terrazzo Finisher
+744,jobs.json,name,Textile Bleaching/Dyeing Machine Operator
+745,jobs.json,name,Textile Cutting Machine Operator
+746,jobs.json,name,Textile Knitting/Weaving Machine Operator
+747,jobs.json,name,Textile Winding Machine Operator
+748,jobs.json,name,Tile And Marble Setter
+749,jobs.json,name,Timing Device Assembler
+750,jobs.json,name,Tire Builder
+751,jobs.json,name,Tire Repairer/Changer
+752,jobs.json,name,Title Examiner
+753,jobs.json,name,Tool And Die Maker
+754,jobs.json,name,Tool Grinder
+755,jobs.json,name,Tour Guide
+756,jobs.json,name,Traffic Technician
+757,jobs.json,name,Training And Development Manager
+758,jobs.json,name,Training And Development Specialist
+759,jobs.json,name,Transit And Railroad Police
+760,jobs.json,name,Transportation Attendant
+761,jobs.json,name,Transportation Inspector
+762,jobs.json,name,Transportation Security Screener
+763,jobs.json,name,Logistics Manager
+764,jobs.json,name,Travel Agent
+765,jobs.json,name,Travel Guide
+766,jobs.json,name,Tree Trimmer
+767,jobs.json,name,Referee
+768,jobs.json,name,Upholsterer
+769,jobs.json,name,Urban And Regional Planner
+770,jobs.json,name,Usher
+771,jobs.json,name,Veterinarian
+772,jobs.json,name,Veterinary Assistant
+773,jobs.json,name,Veterinary Technologist
+774,jobs.json,name,Postsecondary Vocational Education Teacher
+775,jobs.json,name,Waitstaff
+776,jobs.json,name,Watch Repairer
+777,jobs.json,name,Water/Wastewater Treatment Plant Operator
+778,jobs.json,name,Web Developer
+779,jobs.json,name,Weigher/Measurer
+780,jobs.json,name,Welder/Cutter/Solderer
+781,jobs.json,name,Welding/Soldering/Brazing Machine Operator
+782,jobs.json,name,Wellhead Pumper
+783,jobs.json,name,Retail Buyer
+784,jobs.json,name,Wind Turbine Service Technician
+785,jobs.json,name,Woodworking Machine Operator
+786,jobs.json,name,Typist
+787,jobs.json,name,Writer
+788,jobs.json,name,Zoologist
+789,programs.json,KEY,Educational Services
+790,programs.json,name,Emergency Medical Technology/Technician (EMT Paramedic)
+791,programs.json,name,"Education, General"
+792,programs.json,name,Law
+793,programs.json,name,"Educational Leadership and Administration, General"
+794,programs.json,name,Social Work
+795,programs.json,name,"Educational Leadership and Administration, General"
+796,programs.json,name,"Educational Leadership and Administration, General"
+797,programs.json,name,Curriculum and Instruction
+798,programs.json,name,"Special Education and Teaching, General"
+799,programs.json,name,"Special Education and Teaching, General"
+800,programs.json,name,"Special Education and Teaching, General"
+801,programs.json,name,Teaching English as a Second or Foreign Language/ESL Language Instructor
+802,programs.json,name,Library and Information Science
+803,programs.json,name,Library and Information Science
+804,programs.json,name,Educational/Instructional Technology
+805,programs.json,name,Truck and Bus Driver/Commercial Vehicle Operator and Instructor
+806,programs.json,name,Financial Planning and Services
+807,programs.json,name,Library and Archives Assisting
+808,programs.json,name,"Business Administration and Management, General"
+809,programs.json,name,"Biology/Biological Sciences, General"
+810,programs.json,name,"Psychology, General"
+811,programs.json,name,Mechanical Engineering
+812,programs.json,name,"Biology/Biological Sciences, General"
+813,programs.json,name,"Biology/Biological Sciences, General"
+814,programs.json,name,Accounting
+815,programs.json,name,Speech Communication and Rhetoric
+816,programs.json,name,"Art/Art Studies, General"
+817,programs.json,name,"Political Science and Government, General"
+818,programs.json,name,"Computer and Information Sciences, General"
+819,programs.json,name,"English Language and Literature, General"
+820,programs.json,name,"Economics, General"
+821,programs.json,name,Sociology
+822,programs.json,name,Sociology
+823,programs.json,name,Sport and Fitness Administration/Management
+824,programs.json,name,Elementary Education and Teaching
+825,programs.json,name,"Mathematics, General"
+826,programs.json,name,"History, General"
+827,programs.json,name,"Mathematics, General"
+828,programs.json,name,Physical Education Teaching and Coaching
+829,programs.json,name,Spanish Language and Literature
+830,programs.json,name,Bible/Biblical Studies
+831,programs.json,name,"Animal Sciences, General"
+832,programs.json,name,"Chemistry, General"
+833,programs.json,name,"Human Development and Family Studies, General"
+834,programs.json,name,Environmental Science
+835,programs.json,name,Jewish/Judaic Studies
+836,programs.json,name,Child Development
+837,programs.json,name,Interior Design
+838,programs.json,name,Biochemistry
+839,programs.json,name,Anthropology
+840,programs.json,name,"Geology/Earth Science, General"
+841,programs.json,name,"Physics, General"
+842,programs.json,name,"Natural Resources/Conservation, General"
+843,programs.json,name,Geography
+844,programs.json,name,Geography
+845,programs.json,name,"Microbiology, General"
+846,programs.json,name,Agricultural Teacher Education
+847,programs.json,name,Agricultural Teacher Education
+848,programs.json,name,"Atmospheric Sciences and Meteorology, General"
+849,programs.json,name,Astronomy
+850,programs.json,name,Registered Nursing/Registered Nurse
+851,programs.json,name,Criminal Justice/Safety Studies
+852,programs.json,name,"Social Sciences, General"
+853,programs.json,name,Early Childhood Education and Teaching
+854,programs.json,name,"Social Sciences, General"
+855,programs.json,name,"Administrative Assistant and Secretarial Science, General"
+856,programs.json,name,Natural Sciences
+857,programs.json,name,Biology Technician/Biotechnology Laboratory Technician
+858,programs.json,KEY,Government
+859,programs.json,name,Law
+860,programs.json,name,Law
+861,programs.json,name,Law
+862,programs.json,name,Law
+863,programs.json,name,Law
+864,programs.json,name,Social Work
+865,programs.json,name,Public Administration
+866,programs.json,name,"Engineering, General"
+867,programs.json,name,Management Science
+868,programs.json,name,"City/Urban, Community and Regional Planning"
+869,programs.json,name,Environmental Health
+870,programs.json,name,Machine Tool Technology/Machinist
+871,programs.json,name,General Office Occupations and Clerical Services
+872,programs.json,name,Geographic Information Science and Cartography
+873,programs.json,name,Data Processing and Data Processing Technology/Technician
+874,programs.json,name,Construction/Heavy Equipment/Earthmoving Equipment Operation
+875,programs.json,name,Railroad and Railway Transportation
+876,programs.json,name,Building/Home/Construction Inspection/Inspector
+877,programs.json,name,Legal Administrative Assistant/Secretary
+878,programs.json,name,"Business Administration and Management, General"
+879,programs.json,name,"Biology/Biological Sciences, General"
+880,programs.json,name,"Computer and Information Sciences, General"
+881,programs.json,name,"Political Science and Government, General"
+882,programs.json,name,Mechanical Engineering
+883,programs.json,name,Accounting
+884,programs.json,name,"Computer and Information Sciences, General"
+885,programs.json,name,"Economics, General"
+886,programs.json,name,Criminal Justice/Safety Studies
+887,programs.json,name,"Finance, General"
+888,programs.json,name,Criminal Justice/Safety Studies
+889,programs.json,name,"Mathematics, General"
+890,programs.json,name,"History, General"
+891,programs.json,name,"Chemistry, General"
+892,programs.json,name,Environmental Science
+893,programs.json,name,Anthropology
+894,programs.json,name,"Geology/Earth Science, General"
+895,programs.json,name,"Wildlife, Fish and Wildlands Science and Management"
+896,programs.json,name,"Wildlife, Fish and Wildlands Science and Management"
+897,programs.json,name,Forensic Science and Technology
+898,programs.json,name,Environmental/Environmental Health Engineering
+899,programs.json,name,"Sales, Distribution, and Marketing Operations, General"
+900,programs.json,name,Insurance
+901,programs.json,name,Naval Architecture and Marine Engineering
+902,programs.json,name,Agricultural and Food Products Processing
+903,programs.json,name,"Business Administration and Management, General"
+904,programs.json,name,Criminal Justice/Police Science
+905,programs.json,name,Criminal Justice/Police Science
+906,programs.json,name,Criminal Justice/Police Science
+907,programs.json,name,Legal Assistant/Paralegal
+908,programs.json,name,"Electrical, Electronic and Communications Engineering Technology/Technician"
+909,programs.json,name,Fire Science/Fire-fighting
+910,programs.json,name,Fire Science/Fire-fighting
+911,programs.json,name,Fire Science/Fire-fighting
+912,programs.json,name,Occupational Safety and Health Technology/Technician
+913,programs.json,name,"Corrections and Criminal Justice, Other"
+914,programs.json,name,"Heating, Ventilation, Air Conditioning and Refrigeration Engineering Technology/Technician"
+915,programs.json,name,Construction Engineering Technology/Technician
+916,programs.json,name,Community Organization and Advocacy
+917,programs.json,name,"Science Technologies/Technicians, Other"
+918,programs.json,name,Fire Services Administration
+919,programs.json,name,Surveying Technology/Surveying
+920,programs.json,name,Surveying Technology/Surveying
+921,programs.json,name,Forest Technology/Technician
+922,programs.json,name,Air Traffic Controller
+923,programs.json,KEY,Health Care and Social Assistance
+924,programs.json,name,Health/Health Care Administration/Management
+925,programs.json,name,Social Work
+926,programs.json,name,Social Work
+927,programs.json,name,Social Work
+928,programs.json,name,Social Work
+929,programs.json,name,Medicine
+930,programs.json,name,Medicine
+931,programs.json,name,Family Practice Nurse/Nursing
+932,programs.json,name,"Special Education and Teaching, General"
+933,programs.json,name,Counselor Education/School Counseling and Guidance Services
+934,programs.json,name,Physical Therapy/Therapist
+935,programs.json,name,Physician Assistant
+936,programs.json,name,Occupational Therapy/Therapist
+937,programs.json,name,Mental Health Counseling/Counselor
+938,programs.json,name,Dentistry
+939,programs.json,name,Epidemiology
+940,programs.json,name,Chiropractic
+941,programs.json,name,Acupuncture and Oriental Medicine
+942,programs.json,name,Nurse Anesthetist
+943,programs.json,name,Homeland Security
+944,programs.json,name,Podiatric Medicine/Podiatry
+945,programs.json,name,Nurse Midwife/Nursing Midwifery
+946,programs.json,name,Orthotist/Prosthetist
+947,programs.json,name,Traditional Chinese Medicine and Chinese Herbology
+948,programs.json,name,Genetic Counseling/Counselor
+949,programs.json,name,Nursing Assistant/Aide and Patient Care Assistant/Aide
+950,programs.json,name,Emergency Medical Technology/Technician (EMT Paramedic)
+951,programs.json,name,Accounting Technology/Technician and Bookkeeping
+952,programs.json,name,Medical Office Assistant/Specialist
+953,programs.json,name,Phlebotomy Technician/Phlebotomist
+954,programs.json,name,General Office Occupations and Clerical Services
+955,programs.json,name,Medication Aide
+956,programs.json,name,Home Health Aide/Home Attendant
+957,programs.json,name,Home Health Aide/Home Attendant
+958,programs.json,name,Sterile Processing Technology/Technician
+959,programs.json,name,Renal/Dialysis Technologist/Technician
+960,programs.json,name,Rehabilitation Aide
+961,programs.json,name,Rehabilitation Aide
+962,programs.json,name,Orthodontics/Orthodontology
+963,programs.json,name,Magnetic Resonance Imaging (MRI) Technology/Technician
+964,programs.json,name,Oral/Maxillofacial Surgery
+965,programs.json,name,Medical/Clinical Assistant
+966,programs.json,name,Licensed Practical/Vocational Nurse Training
+967,programs.json,name,Dental Assisting/Assistant
+968,programs.json,name,Ophthalmic Technician/Technologist
+969,programs.json,name,"Psychology, General"
+970,programs.json,name,"Psychology, General"
+971,programs.json,name,Kinesiology and Exercise Science
+972,programs.json,name,Biochemistry
+973,programs.json,name,Spanish Language and Literature
+974,programs.json,name,Audiology/Audiologist and Speech-Language Pathology/Pathologist
+975,programs.json,name,Dietetics/Dietitian
+976,programs.json,name,Audiology/Audiologist and Speech-Language Pathology/Pathologist
+977,programs.json,name,"Physics, General"
+978,programs.json,name,Dietetics/Dietitian
+979,programs.json,name,"Human Resources Management/Personnel Administration, General"
+980,programs.json,name,Bioengineering and Biomedical Engineering
+981,programs.json,name,Clinical Laboratory Science/Medical Technology/Technologist
+982,programs.json,name,Vocational Rehabilitation Counseling/Counselor
+983,programs.json,name,Therapeutic Recreation/Recreational Therapy
+984,programs.json,name,Nuclear Medical Technology/Technologist
+985,programs.json,name,Registered Nursing/Registered Nurse
+986,programs.json,name,"Business Administration and Management, General"
+987,programs.json,name,Radiologic Technology/Science - Radiographer
+988,programs.json,name,Respiratory Care Therapy/Therapist
+989,programs.json,name,Dental Hygiene/Hygienist
+990,programs.json,name,Respiratory Care Therapy/Therapist
+991,programs.json,name,Health Information/Medical Records Technology/Technician
+992,programs.json,name,Physical Therapy Technician/Assistant
+993,programs.json,name,Medical Radiologic Technology/Science - Radiation Therapist
+994,programs.json,name,Occupational Therapist Assistant
+995,programs.json,name,Diagnostic Medical Sonography/Sonographer and Ultrasound Technician
+996,programs.json,name,Clinical/Medical Laboratory Technician
+997,programs.json,name,Surgical Technology/Technologist
+998,programs.json,name,Psychiatric/Mental Health Services Technician
+999,programs.json,name,Psychiatric/Mental Health Services Technician
+1000,programs.json,name,Substance Abuse/Addiction Counseling
+1001,programs.json,name,Cardiovascular Technology/Technologist
+1002,programs.json,name,Teacher Assistant/Aide
+1003,programs.json,name,Dental Laboratory Technology/Technician
+1004,programs.json,name,Developmental Services Worker
+1005,programs.json,KEY,Other Services (Except Public Administration)
+1006,programs.json,name,"Educational Leadership and Administration, General"
+1007,programs.json,name,Divinity/Ministry
+1008,programs.json,name,Adult and Continuing Education and Teaching
+1009,programs.json,name,Child Care Provider/Assistant
+1010,programs.json,name,Massage Therapy/Therapeutic Massage
+1011,programs.json,name,Industrial Mechanics and Maintenance Technology
+1012,programs.json,name,Machine Shop Technology/Assistant
+1013,programs.json,name,"Electrical/Electronics Equipment Installation and Repair, General"
+1014,programs.json,name,Receptionist
+1015,programs.json,name,Natural Resources Law Enforcement and Protective Services
+1016,programs.json,name,Furniture Design and Manufacturing
+1017,programs.json,name,"Cosmetology/Cosmetologist, General"
+1018,programs.json,name,"Cosmetology/Cosmetologist, General"
+1019,programs.json,name,"Cosmetology/Cosmetologist, General"
+1020,programs.json,name,Barbering/Barber
+1021,programs.json,name,Diesel Mechanics Technology/Technician
+1022,programs.json,name,Autobody/Collision and Repair Technology/Technician
+1023,programs.json,name,Autobody/Collision and Repair Technology/Technician
+1024,programs.json,name,Upholstery/Upholsterer
+1025,programs.json,name,Speech Communication and Rhetoric
+1026,programs.json,name,Sport and Fitness Administration/Management
+1027,programs.json,name,"Public Health, General"
+1028,programs.json,name,"Public Health, General"
+1029,programs.json,name,"Music Performance, General"
+1030,programs.json,name,"Human Resources Management/Personnel Administration, General"
+1031,programs.json,name,"Natural Resources/Conservation, General"
+1032,programs.json,name,Public Relations/Image Management
+1033,programs.json,name,"Art History, Criticism and Conservation"
+1034,programs.json,name,"Business Administration and Management, General"
+1035,programs.json,name,Early Childhood Education and Teaching
+1036,programs.json,name,Bible/Biblical Studies
+1037,programs.json,name,"Administrative Assistant and Secretarial Science, General"
+1038,programs.json,name,"Funeral Service and Mortuary Science, General"
+1039,programs.json,name,"Funeral Service and Mortuary Science, General"
+1040,programs.json,name,"Funeral Service and Mortuary Science, General"
+1041,programs.json,name,Biomedical Technology/Technician
+1042,programs.json,name,Salon/Beauty Salon Management/Manager
+1043,programs.json,KEY,Retail Trade
+1044,programs.json,name,Pharmacy
+1045,programs.json,name,Optometry
+1046,programs.json,name,Orthotist/Prosthetist
+1047,programs.json,name,Truck and Bus Driver/Commercial Vehicle Operator and Instructor
+1048,programs.json,name,Automobile/Automotive Mechanics Technology/Technician
+1049,programs.json,name,Automobile/Automotive Mechanics Technology/Technician
+1050,programs.json,name,Accounting Technology/Technician and Bookkeeping
+1051,programs.json,name,Office Management and Supervision
+1052,programs.json,name,Computer Installation and Repair Technology/Technician
+1053,programs.json,name,Metal and Jewelry Arts
+1054,programs.json,name,Selling Skills and Sales Operations
+1055,programs.json,name,Appliance Installation and Repair Technology/Technician
+1056,programs.json,name,Communications Systems Installation and Repair Technology
+1057,programs.json,name,Musical Instrument Fabrication and Repair
+1058,programs.json,name,Dog/Pet/Animal Grooming
+1059,programs.json,name,Ophthalmic Laboratory Technology/Technician
+1060,programs.json,name,Meat Cutting/Meat Cutter
+1061,programs.json,name,"Shoe, Boot and Leather Repair"
+1062,programs.json,name,Motorcycle Maintenance and Repair Technology/Technician
+1063,programs.json,name,Pharmacy Technician/Assistant
+1064,programs.json,name,Autobody/Collision and Repair Technology/Technician
+1065,programs.json,name,Marine Maintenance/Fitter and Ship Repair Technology/Technician
+1066,programs.json,name,Watchmaking and Jewelrymaking
+1067,programs.json,name,Glazier
+1068,programs.json,name,Operations Management and Supervision
+1069,programs.json,name,Retailing and Retail Operations
+1070,programs.json,name,Banking and Financial Support Services
+1071,programs.json,name,"Graphic Communications, Other"
+1072,programs.json,name,"Business Administration and Management, General"
+1073,programs.json,name,"Business Administration and Management, General"
+1074,programs.json,name,Interior Design
+1075,programs.json,name,Building/Construction Site Management/Manager
+1076,programs.json,name,Opticianry/Ophthalmic Dispensing Optician
+1077,programs.json,name,Agricultural/Farm Supplies Retailing and Wholesaling
+1078,programs.json,name,Hearing Instrument Specialist
+1079,programs.json,name,Fashion Modeling
+1080,programs.json,name,"Carpet, Floor, and Tile Worker"
+1081,programs.json,name,"Carpet, Floor, and Tile Worker"
+1082,programs.json,KEY,"Professional, Scientific, and Technical Services"
+1083,programs.json,name,Veterinary Medicine
+1084,programs.json,name,Accounting Technology/Technician and Bookkeeping
+1085,programs.json,name,"Psychology, General"
+1086,programs.json,name,Accounting
+1087,programs.json,name,"Economics, General"
+1088,programs.json,name,"Art/Art Studies, General"
+1089,programs.json,name,Architecture
+1090,programs.json,name,Graphic Design
+1091,programs.json,name,Veterinary/Animal Health Technology/Technician and Veterinary Assistant
+1092,programs.json,KEY,Manufacturing
+1093,programs.json,name,Materials Science
+1094,programs.json,name,Welding Technology/Welder
+1095,programs.json,name,"Drafting and Design Technology/Technician, General"
+1096,programs.json,name,Machine Tool Technology/Machinist
+1097,programs.json,name,Machine Tool Technology/Machinist
+1098,programs.json,name,Machine Tool Technology/Machinist
+1099,programs.json,name,Machine Tool Technology/Machinist
+1100,programs.json,name,Industrial Mechanics and Maintenance Technology
+1101,programs.json,name,Machine Shop Technology/Assistant
+1102,programs.json,name,Machine Tool Technology/Machinist
+1103,programs.json,name,Machine Tool Technology/Machinist
+1104,programs.json,name,Machine Tool Technology/Machinist
+1105,programs.json,name,Machine Tool Technology/Machinist
+1106,programs.json,name,Machine Tool Technology/Machinist
+1107,programs.json,name,Machine Tool Technology/Machinist
+1108,programs.json,name,Industrial Electronics Technology/Technician
+1109,programs.json,name,Computer Numerically Controlled (CNC) Machinist Technology/CNC Machinist
+1110,programs.json,name,Tool and Die Technology/Technician
+1111,programs.json,name,Cabinetmaking and Millwork
+1112,programs.json,name,"Parts, Warehousing, and Inventory Management Operations"
+1113,programs.json,name,Cabinetmaking and Millwork
+1114,programs.json,name,Cabinetmaking and Millwork
+1115,programs.json,name,Cabinetmaking and Millwork
+1116,programs.json,name,Cabinetmaking and Millwork
+1117,programs.json,name,Meat Cutting/Meat Cutter
+1118,programs.json,name,"Shoe, Boot and Leather Repair"
+1119,programs.json,name,Aeronautical/Aerospace Engineering Technology/Technician
+1120,programs.json,name,Sheet Metal Technology/Sheetworking
+1121,programs.json,name,Sheet Metal Technology/Sheetworking
+1122,programs.json,name,Engine Machinist
+1123,programs.json,name,Watchmaking and Jewelrymaking
+1124,programs.json,name,Mechanical Engineering
+1125,programs.json,name,Mechanical Engineering
+1126,programs.json,name,Chemical Engineering
+1127,programs.json,name,"Computer Engineering, General"
+1128,programs.json,name,Industrial Engineering
+1129,programs.json,name,Operations Management and Supervision
+1130,programs.json,name,Materials Engineering
+1131,programs.json,name,"Graphic and Printing Equipment Operator, General Production"
+1132,programs.json,name,"Business Administration and Management, General"
+1133,programs.json,name,Industrial Technology/Technician
+1134,programs.json,name,Instrumentation Technology/Technician
+1135,programs.json,name,Mechanical Engineering/Mechanical Technology/Technician
+1136,programs.json,name,Airframe Mechanics and Aircraft Maintenance Technology/Technician
+1137,programs.json,name,Chemical Technology/Technician
+1138,programs.json,name,Chemical Technology/Technician
+1139,programs.json,name,Chemical Technology/Technician
+1140,programs.json,name,Apparel and Textile Manufacture
+1141,programs.json,name,Ironworking/Ironworker
+1142,programs.json,KEY,Construction
+1143,programs.json,name,Welding Technology/Welder
+1144,programs.json,name,Electrician
+1145,programs.json,name,Industrial Mechanics and Maintenance Technology
+1146,programs.json,name,Industrial Mechanics and Maintenance Technology
+1147,programs.json,name,Industrial Mechanics and Maintenance Technology
+1148,programs.json,name,"Drafting and Design Technology/Technician, General"
+1149,programs.json,name,Machine Shop Technology/Assistant
+1150,programs.json,name,Carpentry/Carpenter
+1151,programs.json,name,Plumbing Technology/Plumber
+1152,programs.json,name,Construction/Heavy Equipment/Earthmoving Equipment Operation
+1153,programs.json,name,Construction/Heavy Equipment/Earthmoving Equipment Operation
+1154,programs.json,name,Construction/Heavy Equipment/Earthmoving Equipment Operation
+1155,programs.json,name,Construction/Heavy Equipment/Earthmoving Equipment Operation
+1156,programs.json,name,Construction/Heavy Equipment/Earthmoving Equipment Operation
+1157,programs.json,name,Mason/Masonry
+1158,programs.json,name,Mason/Masonry
+1159,programs.json,name,Mason/Masonry
+1160,programs.json,name,Solar Energy Technology/Technician
+1161,programs.json,name,Communications Systems Installation and Repair Technology
+1162,programs.json,name,Communications Systems Installation and Repair Technology
+1163,programs.json,name,Communications Systems Installation and Repair Technology
+1164,programs.json,name,Drywall Installation/Drywaller
+1165,programs.json,name,Roofer
+1166,programs.json,name,Metal Building Assembly/Assembler
+1167,programs.json,name,Insulator
+1168,programs.json,name,Insulator
+1169,programs.json,name,"Heating, Air Conditioning, Ventilation and Refrigeration Maintenance Technology/Technician"
+1170,programs.json,name,Electrician
+1171,programs.json,name,Sheet Metal Technology/Sheetworking
+1172,programs.json,name,Painting/Painter and Wall Coverer
+1173,programs.json,name,Painting/Painter and Wall Coverer
+1174,programs.json,name,Concrete Finishing/Concrete Finisher
+1175,programs.json,name,"Civil Engineering, General"
+1176,programs.json,name,Environmental/Environmental Health Engineering
+1177,programs.json,name,"Business Administration and Management, General"
+1178,programs.json,name,"Business Administration and Management, General"
+1179,programs.json,name,"Drafting and Design Technology/Technician, General"
+1180,programs.json,name,Heavy Equipment Maintenance Technology/Technician
+1181,programs.json,name,Boilermaking/Boilermaker
+1182,programs.json,name,"Carpet, Floor, and Tile Worker"
+1183,programs.json,name,"Carpet, Floor, and Tile Worker"
+1184,programs.json,KEY,Transportation and Warehousing
+1185,programs.json,name,Truck and Bus Driver/Commercial Vehicle Operator and Instructor
+1186,programs.json,name,Truck and Bus Driver/Commercial Vehicle Operator and Instructor
+1187,programs.json,name,Truck and Bus Driver/Commercial Vehicle Operator and Instructor
+1188,programs.json,name,Automobile/Automotive Mechanics Technology/Technician
+1189,programs.json,name,Emergency Care Attendant (EMT Ambulance)
+1190,programs.json,name,General Office Occupations and Clerical Services
+1191,programs.json,name,Marine Science/Merchant Marine Officer
+1192,programs.json,name,Marine Science/Merchant Marine Officer
+1193,programs.json,name,Railroad and Railway Transportation
+1194,programs.json,name,Railroad and Railway Transportation
+1195,programs.json,name,Railroad and Railway Transportation
+1196,programs.json,name,Railroad and Railway Transportation
+1197,programs.json,name,Railroad and Railway Transportation
+1198,programs.json,name,Airline Flight Attendant
+1199,programs.json,name,Electrician
+1200,programs.json,name,"Business Administration and Management, General"
+1201,programs.json,name,Airframe Mechanics and Aircraft Maintenance Technology/Technician
+1202,programs.json,name,Security and Loss Prevention Services
+1203,programs.json,name,Airline/Commercial/Professional Pilot and Flight Crew
+1204,programs.json,name,Airline/Commercial/Professional Pilot and Flight Crew
+1205,programs.json,name,Heavy Equipment Maintenance Technology/Technician
+1206,programs.json,name,Avionics Maintenance Technology/Technician
+1207,programs.json,name,Air Traffic Controller
+1208,programs.json,KEY,Finance and Insurance
+1209,programs.json,name,Accounting Technology/Technician and Bookkeeping
+1210,programs.json,name,Financial Planning and Services
+1211,programs.json,name,Autobody/Collision and Repair Technology/Technician
+1212,programs.json,name,General Office Occupations and Clerical Services
+1213,programs.json,name,"Finance, General"
+1214,programs.json,name,"Finance, General"
+1215,programs.json,name,"Marketing/Marketing Management, General"
+1216,programs.json,name,"Statistics, General"
+1217,programs.json,name,Insurance
+1218,programs.json,name,Insurance
+1219,programs.json,name,Banking and Financial Support Services
+1220,programs.json,name,Banking and Financial Support Services
+1221,programs.json,name,Banking and Financial Support Services
+1222,programs.json,name,Computer Science
+1223,programs.json,name,"Computer and Information Sciences, General"
+1224,programs.json,name,Legal Assistant/Paralegal
+1225,programs.json,KEY,Administrative and Support Services
+1226,programs.json,name,Accounting Technology/Technician and Bookkeeping
+1227,programs.json,name,Business/Office Automation/Technology/Data Entry
+1228,programs.json,name,Machine Tool Technology/Machinist
+1229,programs.json,name,Customer Service Support/Call Center/Teleservice Operation
+1230,programs.json,name,General Office Occupations and Clerical Services
+1231,programs.json,name,Building/Property Maintenance
+1232,programs.json,name,Retailing and Retail Operations
+1233,programs.json,name,Plumbing Technology/Plumber
+1234,programs.json,name,"Diver, Professional and Instructor"
+1235,programs.json,name,Selling Skills and Sales Operations
+1236,programs.json,name,Medical Transcription/Transcriptionist
+1237,programs.json,name,Small Engine Mechanics and Repair Technology/Technician
+1238,programs.json,name,"Traffic, Customs, and Transportation Clerk/Technician"
+1239,programs.json,name,Hazardous Materials Management and Waste Technology/Technician
+1240,programs.json,name,Court Reporting/Court Reporter
+1241,programs.json,name,Electrician
+1242,programs.json,name,Quality Control Technology/Technician
+1243,programs.json,name,Locksmithing and Safe Repair
+1244,programs.json,name,"Human Resources Management/Personnel Administration, General"
+1245,programs.json,name,Landscape Architecture
+1246,programs.json,name,Tourism and Travel Services Management
+1247,programs.json,name,Meeting and Event Planning
+1248,programs.json,name,Banking and Financial Support Services
+1249,programs.json,name,Criminal Justice/Police Science
+1250,programs.json,name,"Applied Horticulture/Horticulture Operations, General"
+1251,programs.json,name,"Science Technologies/Technicians, Other"
+1252,programs.json,name,"Electrical/Electronics Equipment Installation and Repair, General"
+1253,programs.json,name,Landscaping and Groundskeeping
+1254,programs.json,name,Retailing and Retail Operations
+1255,programs.json,name,Environmental Engineering Technology/Environmental Technology
+1256,programs.json,KEY,Utilities
+1257,programs.json,name,Industrial Mechanics and Maintenance Technology
+1258,programs.json,name,Water Quality and Wastewater Treatment Management and Recycling Technology/Technician
+1259,programs.json,name,Lineworker
+1260,programs.json,name,Electrical and Electronics Engineering
+1261,programs.json,name,Nuclear Engineering
+1262,programs.json,name,Nuclear/Nuclear Power Technology/Technician
+1263,programs.json,name,Nuclear/Nuclear Power Technology/Technician
+1264,programs.json,KEY,Wholesale Trade
+1265,programs.json,name,Computer Installation and Repair Technology/Technician
+1266,programs.json,name,Selling Skills and Sales Operations
+1267,programs.json,name,Agronomy and Crop Science
+1268,programs.json,name,Fashion Merchandising
+1269,programs.json,name,Fashion/Apparel Design
+1270,programs.json,name,"Design and Visual Communications, General"
+1271,programs.json,name,Selling Skills and Sales Operations
+1272,programs.json,name,Agricultural Mechanics and Equipment/Machine Technology
+1273,programs.json,name,Agricultural/Farm Supplies Retailing and Wholesaling
+1274,programs.json,name,Agricultural Power Machinery Operation
+1275,programs.json,KEY,Real Estate and Rental and Leasing
+1276,programs.json,name,Real Estate
+1277,programs.json,name,Real Estate
+1278,programs.json,name,Real Estate
+1279,programs.json,name,Real Estate
+1280,programs.json,name,Building/Property Maintenance
+1281,programs.json,name,Recording Arts Technology/Technician
+1282,programs.json,KEY,Information
+1283,programs.json,name,Computer Support Specialist
+1284,programs.json,name,Selling Skills and Sales Operations
+1285,programs.json,name,Communications Systems Installation and Repair Technology
+1286,programs.json,name,"Cosmetology/Cosmetologist, General"
+1287,programs.json,name,Speech Communication and Rhetoric
+1288,programs.json,name,Computer Science
+1289,programs.json,name,"Marketing/Marketing Management, General"
+1290,programs.json,name,Computer Science
+1291,programs.json,name,Speech Communication and Rhetoric
+1292,programs.json,name,Computer Science
+1293,programs.json,name,Journalism
+1294,programs.json,name,Computer Science
+1295,programs.json,name,Computer Science
+1296,programs.json,name,Journalism
+1297,programs.json,name,"Drama and Dramatics/Theatre Arts, General"
+1298,programs.json,name,"Computer and Information Sciences, General"
+1299,programs.json,name,"Computer and Information Sciences, General"
+1300,programs.json,name,Journalism
+1301,programs.json,name,Electrical and Electronics Engineering
+1302,programs.json,name,Cinematography and Film/Video Production
+1303,programs.json,name,"Professional, Technical, Business, and Scientific Writing"
+1304,programs.json,name,"Computer and Information Sciences, General"
+1305,programs.json,name,Graphic Design
+1306,programs.json,name,Graphic Design
+1307,programs.json,name,Cinematography and Film/Video Production
+1308,programs.json,name,Radio and Television Broadcasting Technology/Technician
+1309,programs.json,name,"Graphic Communications, General"
+1310,programs.json,name,Prepress/Desktop Publishing and Digital Imaging Design
+1311,programs.json,KEY,Accommodation and Food Services
+1312,programs.json,name,Food Preparation/Professional Cooking/Kitchen Assistant
+1313,programs.json,name,Bartending/Bartender
+1314,programs.json,name,Speech Communication and Rhetoric
+1315,programs.json,name,"Hospitality Administration/Management, General"
+1316,programs.json,name,"Hospitality Administration/Management, General"
+1317,programs.json,name,Culinary Arts/Chef Training
+1318,programs.json,name,Culinary Arts/Chef Training
+1319,programs.json,name,Culinary Arts/Chef Training
+1320,programs.json,name,Baking and Pastry Arts/Baker/Pastry Chef
+1321,programs.json,name,Casino Management
+1322,programs.json,name,Casino Management
+1323,programs.json,name,Casino Management
+1324,programs.json,KEY,"Mining, Quarrying, and Oil and Gas Extraction"
+1325,programs.json,name,Construction/Heavy Equipment/Earthmoving Equipment Operation
+1326,programs.json,name,Construction/Heavy Equipment/Earthmoving Equipment Operation
+1327,programs.json,name,Construction/Heavy Equipment/Earthmoving Equipment Operation
+1328,programs.json,name,Construction/Heavy Equipment/Earthmoving Equipment Operation
+1329,programs.json,name,Construction/Heavy Equipment/Earthmoving Equipment Operation
+1330,programs.json,name,Construction/Heavy Equipment/Earthmoving Equipment Operation
+1331,programs.json,name,Mining Technology/Technician
+1332,programs.json,name,Well Drilling/Driller
+1333,programs.json,name,Well Drilling/Driller
+1334,programs.json,name,"Geology/Earth Science, General"
+1335,programs.json,name,Petroleum Engineering
+1336,programs.json,name,Geological/Geophysical Engineering
+1337,programs.json,name,Petroleum Technology/Technician
+1338,programs.json,name,Blasting/Blaster
+1339,programs.json,KEY,"Agriculture, Forestry, Fishing, and Hunting"
+1340,programs.json,name,Construction/Heavy Equipment/Earthmoving Equipment Operation
+1341,programs.json,name,Food Technology and Processing
+1342,programs.json,name,"Animal Sciences, General"
+1343,programs.json,name,"Animal Sciences, General"
+1344,programs.json,name,"Animal Sciences, General"
+1345,programs.json,name,"Natural Resources/Conservation, General"
+1346,programs.json,name,Agricultural Engineering
+1347,programs.json,name,Equestrian/Equine Studies
+1348,programs.json,KEY,Management of Companies and Enterprises
+1349,programs.json,name,Accounting
+1350,programs.json,name,"Computer and Information Sciences, General"
+1351,programs.json,name,Accounting
+1352,programs.json,name,"Finance, General"
+1353,programs.json,name,"Finance, General"
+1354,programs.json,name,"Marketing/Marketing Management, General"
+1355,programs.json,name,"Human Resources Management/Personnel Administration, General"
+1356,programs.json,name,"Human Resources Management/Personnel Administration, General"
+1357,programs.json,name,"Human Resources Management/Personnel Administration, General"
+1358,programs.json,name,"Human Resources Management/Personnel Administration, General"
+1359,programs.json,name,Operations Management and Supervision
+1360,programs.json,name,Food Science
+1361,programs.json,name,"Purchasing, Procurement/Acquisitions and Contracts Management"
+1362,programs.json,name,Fashion Merchandising
+1363,programs.json,KEY,"Arts, Entertainment, and Recreation"
+1364,programs.json,name,Sport and Fitness Administration/Management
+1365,programs.json,name,"Art/Art Studies, General"
+1366,programs.json,name,"Art/Art Studies, General"
+1367,programs.json,name,"Health and Physical Education/Fitness, General"
+1368,programs.json,name,Athletic Training/Trainer
+1369,programs.json,name,"Dance, General"
+1370,programs.json,name,"Art History, Criticism and Conservation"
+1371,programs.json,name,"Art History, Criticism and Conservation"
+1372,programs.json,name,"Purchasing, Procurement/Acquisitions and Contracts Management"
+1373,programs.json,name,"Design and Visual Communications, General"
+1374,programs.json,name,Recording Arts Technology/Technician
+1375,scenarios.json,news.headline,"Singaporean researchers pioneered a new technique in exposed to minor burns, cuts, bites, or stings today."
+1376,scenarios.json,news.body,"A new algorithm from The Singaporean Institute of Technology performs exposed to minor burns, cuts, bites, or stings like a human."
+1377,scenarios.json,news.headline,"Malagasy engineers pioneered a new technique in sounds, noise levels are distracting or uncomfortable today."
+1378,scenarios.json,news.body,"The Malagasy Institute of Technology showcased a system competitive with humans at sounds, noise levels are distracting or uncomfortable."
+1379,scenarios.json,news.headline,Ukrainian engineers unveiled an algorithm capable of exposed to contaminants.
+1380,scenarios.json,news.body,The Ukrainian Institute of Technology showcased a system competitive with humans at exposed to contaminants.
+1381,scenarios.json,news.headline,Dominican researchers unveiled an algorithm capable of spend time bending or twisting the body.
+1382,scenarios.json,news.body,A new algorithm from The Dominican Institute of Technology performs spend time bending or twisting the body like a human.
+1383,scenarios.json,news.headline,Cocos Island engineers performs extremely bright or inadequate lighting like a human.
+1384,scenarios.json,news.body,The Cocos Island Institute of Technology unveiled an algorithm capable of extremely bright or inadequate lighting.
+1385,scenarios.json,news.headline,Basotho researchers performs spend time making repetitive motions like a human.
+1386,scenarios.json,news.body,Robotics researchers at the Basotho Institute of Technology pioneered a new technique in spend time making repetitive motions today.
+1387,scenarios.json,news.headline,British scientists unveiled an algorithm capable of very hot or cold temperatures.
+1388,scenarios.json,news.body,The British Institute of Technology showcased a system competitive with humans at very hot or cold temperatures.
+1389,scenarios.json,news.headline,Seychellois engineers pioneered a new technique in exposed to hazardous equipment today.
+1390,scenarios.json,news.body,A new algorithm from The Seychellois Institute of Technology performs exposed to hazardous equipment like a human.
+1391,scenarios.json,news.headline,Trinidadian scientists unveiled an algorithm capable of spend time walking and running.
+1392,scenarios.json,news.body,Robotics researchers at the Trinidadian Institute of Technology pioneered a new technique in spend time walking and running today.
+1393,scenarios.json,news.headline,Tongan researchers pioneered a new technique in in an open vehicle or equipment today.
+1394,scenarios.json,news.body,The Tongan Institute of Technology unveiled an algorithm capable of in an open vehicle or equipment.
+1395,scenarios.json,news.headline,"Hellenic engineers unveiled an algorithm capable of spend time climbing ladders, scaffolds, or poles."
+1396,scenarios.json,news.body,"The Hellenic Institute of Technology unveiled an algorithm capable of spend time climbing ladders, scaffolds, or poles."
+1397,scenarios.json,news.headline,Comorian researchers pioneered a new technique in on-the-job training today.
+1398,scenarios.json,news.body,The Comorian Institute of Technology showcased a system competitive with humans at on-the-job training.
+1399,scenarios.json,news.headline,South African scientists unveiled an algorithm capable of on-site or in-plant training.
+1400,scenarios.json,news.body,The South African Institute of Technology showcased a system competitive with humans at on-site or in-plant training.
+1401,scenarios.json,news.headline,Marshallese engineers unveiled an algorithm capable of importance of repeating same tasks.
+1402,scenarios.json,news.body,The Marshallese Institute of Technology unveiled an algorithm capable of importance of repeating same tasks.
+1403,scenarios.json,news.headline,"Finnish researchers performs spend time kneeling, crouching, stooping, or crawling like a human."
+1404,scenarios.json,news.body,"A new algorithm from The Finnish Institute of Technology performs spend time kneeling, crouching, stooping, or crawling like a human."
+1405,scenarios.json,news.headline,Chinese scientists unveiled an algorithm capable of spend time keeping or regaining balance.
+1406,scenarios.json,news.body,The Chinese Institute of Technology showcased a system competitive with humans at spend time keeping or regaining balance.
+1407,scenarios.json,news.headline,Vatican scientists pioneered a new technique in manual dexterity today.
+1408,scenarios.json,news.body,The Vatican Institute of Technology showcased a system competitive with humans at manual dexterity.
+1409,scenarios.json,news.headline,Bahamian researchers performs spend time standing like a human.
+1410,scenarios.json,news.body,The Bahamian Institute of Technology showcased a system competitive with humans at spend time standing.
+1411,scenarios.json,news.headline,Icelandic scientists unveiled an algorithm capable of exposed to hazardous conditions.
+1412,scenarios.json,news.body,Robotics researchers at the Icelandic Institute of Technology pioneered a new technique in exposed to hazardous conditions today.
+1413,scenarios.json,news.headline,Seychellois researchers performs finger dexterity like a human.
+1414,scenarios.json,news.body,Robotics researchers at the Seychellois Institute of Technology pioneered a new technique in finger dexterity today.
+1415,scenarios.json,news.headline,"Burkinabé researchers performs indoors, not environmentally controlled like a human."
+1416,scenarios.json,news.body,"A new algorithm from The Burkinabé Institute of Technology performs indoors, not environmentally controlled like a human."
+1417,scenarios.json,news.headline,American scientists pioneered a new technique in control precision today.
+1418,scenarios.json,news.body,The American Institute of Technology showcased a system competitive with humans at control precision.
+1419,scenarios.json,news.headline,Nigerien engineers performs exposed to whole body vibration like a human.
+1420,scenarios.json,news.body,A new algorithm from The Nigerien Institute of Technology performs exposed to whole body vibration like a human.
+1421,scenarios.json,news.headline,Brazilian scientists pioneered a new technique in exposed to high places today.
+1422,scenarios.json,news.body,The Brazilian Institute of Technology unveiled an algorithm capable of exposed to high places.
+1423,scenarios.json,news.headline,Swati researchers unveiled an algorithm capable of handling and moving objects.
+1424,scenarios.json,news.body,A new algorithm from The Swati Institute of Technology performs handling and moving objects like a human.
+1425,scenarios.json,news.headline,Hellenic engineers pioneered a new technique in wrist-finger speed today.
+1426,scenarios.json,news.body,The Hellenic Institute of Technology showcased a system competitive with humans at wrist-finger speed.
+1427,scenarios.json,news.headline,Christmas Island scientists performs consequence of error like a human.
+1428,scenarios.json,news.body,The Christmas Island Institute of Technology showcased a system competitive with humans at consequence of error.
+1429,scenarios.json,news.headline,Egyptian scientists unveiled an algorithm capable of arm-hand steadiness.
+1430,scenarios.json,news.body,A new algorithm from The Egyptian Institute of Technology performs arm-hand steadiness like a human.
+1431,scenarios.json,news.headline,Maldivian scientists pioneered a new technique in controlling machines and processes today.
+1432,scenarios.json,news.body,Robotics researchers at the Maldivian Institute of Technology pioneered a new technique in controlling machines and processes today.
+1433,scenarios.json,news.headline,Bruneian scientists pioneered a new technique in time pressure today.
+1434,scenarios.json,news.body,The Bruneian Institute of Technology showcased a system competitive with humans at time pressure.
+1435,scenarios.json,news.headline,Ethiopian scientists pioneered a new technique in work schedules today.
+1436,scenarios.json,news.body,The Ethiopian Institute of Technology unveiled an algorithm capable of work schedules.
+1437,scenarios.json,news.headline,Ethiopian researchers unveiled an algorithm capable of responsible for others' health and safety.
+1438,scenarios.json,news.body,A new algorithm from The Ethiopian Institute of Technology performs responsible for others' health and safety like a human.
+1439,scenarios.json,news.headline,Portuguese scientists pioneered a new technique in importance of being exact or accurate today.
+1440,scenarios.json,news.body,Robotics researchers at the Portuguese Institute of Technology pioneered a new technique in importance of being exact or accurate today.
+1441,scenarios.json,news.headline,Slovak scientists unveiled an algorithm capable of frequency of decision making.
+1442,scenarios.json,news.body,A new algorithm from The Slovak Institute of Technology performs frequency of decision making like a human.
+1443,scenarios.json,news.headline,Niuean engineers performs speed of limb movement like a human.
+1444,scenarios.json,news.body,The Niuean Institute of Technology unveiled an algorithm capable of speed of limb movement.
+1445,scenarios.json,news.headline,Antiguan scientists performs multilimb coordination like a human.
+1446,scenarios.json,news.body,Robotics researchers at the Antiguan Institute of Technology pioneered a new technique in multilimb coordination today.
+1447,scenarios.json,news.headline,Tajikistani engineers pioneered a new technique in extent flexibility today.
+1448,scenarios.json,news.body,A new algorithm from The Tajikistani Institute of Technology performs extent flexibility like a human.
+1449,scenarios.json,news.headline,Solomon Island researchers pioneered a new technique in static strength today.
+1450,scenarios.json,news.body,A new algorithm from The Solomon Island Institute of Technology performs static strength like a human.
+1451,scenarios.json,news.headline,Gibraltar engineers pioneered a new technique in operation and control today.
+1452,scenarios.json,news.body,The Gibraltar Institute of Technology showcased a system competitive with humans at operation and control.
+1453,scenarios.json,news.headline,German engineers pioneered a new technique in deal with unpleasant or angry people today.
+1454,scenarios.json,news.body,Robotics researchers at the German Institute of Technology pioneered a new technique in deal with unpleasant or angry people today.
+1455,scenarios.json,news.headline,Saint Helenian researchers pioneered a new technique in face-to-face discussions today.
+1456,scenarios.json,news.body,The Saint Helenian Institute of Technology showcased a system competitive with humans at face-to-face discussions.
+1457,scenarios.json,news.headline,U.S. Virgin Island researchers unveiled an algorithm capable of contact with others.
+1458,scenarios.json,news.body,Robotics researchers at the U.S. Virgin Island Institute of Technology pioneered a new technique in contact with others today.
+1459,scenarios.json,news.headline,Belizean scientists unveiled an algorithm capable of auditory attention.
+1460,scenarios.json,news.body,Robotics researchers at the Belizean Institute of Technology pioneered a new technique in auditory attention today.
+1461,scenarios.json,news.headline,Bouvet Island scientists pioneered a new technique in physical proximity today.
+1462,scenarios.json,news.body,A new algorithm from The Bouvet Island Institute of Technology performs physical proximity like a human.
+1463,scenarios.json,news.headline,Slovene engineers performs repairing and maintaining mechanical equipment like a human.
+1464,scenarios.json,news.body,The Slovene Institute of Technology showcased a system competitive with humans at repairing and maintaining mechanical equipment.
+1465,scenarios.json,news.headline,"Antarctic scientists pioneered a new technique in outdoors, exposed to weather today."
+1466,scenarios.json,news.body,"A new algorithm from The Antarctic Institute of Technology performs outdoors, exposed to weather like a human."
+1467,scenarios.json,news.headline,Norwegian engineers unveiled an algorithm capable of responsibility for outcomes and results.
+1468,scenarios.json,news.body,Robotics researchers at the Norwegian Institute of Technology pioneered a new technique in responsibility for outcomes and results today.
+1469,scenarios.json,news.headline,Cambodian engineers performs dynamic strength like a human.
+1470,scenarios.json,news.body,A new algorithm from The Cambodian Institute of Technology performs dynamic strength like a human.
+1471,scenarios.json,news.headline,"British engineers performs inspecting equipment, structures, or material like a human."
+1472,scenarios.json,news.body,"Robotics researchers at the British Institute of Technology pioneered a new technique in inspecting equipment, structures, or material today."
+1473,scenarios.json,news.headline,Singaporean scientists performs equipment maintenance like a human.
+1474,scenarios.json,news.body,The Singaporean Institute of Technology unveiled an algorithm capable of equipment maintenance.
+1475,scenarios.json,news.headline,Seychellois researchers performs work with work group or team like a human.
+1476,scenarios.json,news.body,The Seychellois Institute of Technology showcased a system competitive with humans at work with work group or team.
+1477,scenarios.json,news.headline,Guinean engineers performs stamina like a human.
+1478,scenarios.json,news.body,Robotics researchers at the Guinean Institute of Technology pioneered a new technique in stamina today.
+1479,scenarios.json,news.headline,São Toméan researchers unveiled an algorithm capable of repairing.
+1480,scenarios.json,news.body,The São Toméan Institute of Technology unveiled an algorithm capable of repairing.
+1481,scenarios.json,news.headline,Emiri scientists pioneered a new technique in selective attention today.
+1482,scenarios.json,news.body,Robotics researchers at the Emiri Institute of Technology pioneered a new technique in selective attention today.
+1483,scenarios.json,news.headline,Taiwanese engineers pioneered a new technique in gross body coordination today.
+1484,scenarios.json,news.body,The Taiwanese Institute of Technology showcased a system competitive with humans at gross body coordination.
+1485,scenarios.json,news.headline,Bahraini engineers performs hearing sensitivity like a human.
+1486,scenarios.json,news.body,The Bahraini Institute of Technology unveiled an algorithm capable of hearing sensitivity.
+1487,scenarios.json,news.headline,Costa Rican engineers unveiled an algorithm capable of glare sensitivity.
+1488,scenarios.json,news.body,The Costa Rican Institute of Technology unveiled an algorithm capable of glare sensitivity.
+1489,scenarios.json,news.headline,"Northern Marianan engineers unveiled an algorithm capable of operating vehicles, mechanized devices, or equipment."
+1490,scenarios.json,news.body,"The Northern Marianan Institute of Technology unveiled an algorithm capable of operating vehicles, mechanized devices, or equipment."
+1491,scenarios.json,news.headline,Central African engineers pioneered a new technique in sound localization today.
+1492,scenarios.json,news.body,Robotics researchers at the Central African Institute of Technology pioneered a new technique in sound localization today.
+1493,scenarios.json,news.headline,Monacan researchers pioneered a new technique in exposed to radiation today.
+1494,scenarios.json,news.body,Robotics researchers at the Monacan Institute of Technology pioneered a new technique in exposed to radiation today.
+1495,scenarios.json,news.headline,Australian scientists performs depth perception like a human.
+1496,scenarios.json,news.body,The Australian Institute of Technology showcased a system competitive with humans at depth perception.
+1497,scenarios.json,news.headline,South Sudanese engineers pioneered a new technique in near vision today.
+1498,scenarios.json,news.body,A new algorithm from The South Sudanese Institute of Technology performs near vision like a human.
+1499,scenarios.json,news.headline,Thai researchers pioneered a new technique in perceptual speed today.
+1500,scenarios.json,news.body,Robotics researchers at the Thai Institute of Technology pioneered a new technique in perceptual speed today.
+1501,scenarios.json,news.headline,Saint-Pierrais scientists performs peripheral vision like a human.
+1502,scenarios.json,news.body,Robotics researchers at the Saint-Pierrais Institute of Technology pioneered a new technique in peripheral vision today.
+1503,scenarios.json,news.headline,Austrian researchers pioneered a new technique in mechanical today.
+1504,scenarios.json,news.body,A new algorithm from The Austrian Institute of Technology performs mechanical like a human.
+1505,scenarios.json,news.headline,Pitcairn Island engineers performs production and processing like a human.
+1506,scenarios.json,news.body,The Pitcairn Island Institute of Technology unveiled an algorithm capable of production and processing.
+1507,scenarios.json,news.headline,Azeri engineers unveiled an algorithm capable of gross body equilibrium.
+1508,scenarios.json,news.body,A new algorithm from The Azeri Institute of Technology performs gross body equilibrium like a human.
+1509,scenarios.json,news.headline,Canadian engineers unveiled an algorithm capable of level of competition.
+1510,scenarios.json,news.body,The Canadian Institute of Technology showcased a system competitive with humans at level of competition.
+1511,scenarios.json,news.headline,Antarctic scientists unveiled an algorithm capable of night vision.
+1512,scenarios.json,news.body,The Antarctic Institute of Technology unveiled an algorithm capable of night vision.
+1513,scenarios.json,news.headline,Gabonese engineers performs duration of typical work week like a human.
+1514,scenarios.json,news.body,The Gabonese Institute of Technology unveiled an algorithm capable of duration of typical work week.
+1515,scenarios.json,news.headline,Somalilander researchers performs spatial orientation like a human.
+1516,scenarios.json,news.body,A new algorithm from The Somalilander Institute of Technology performs spatial orientation like a human.
+1517,scenarios.json,news.headline,British Virgin Island engineers pioneered a new technique in quality control analysis today.
+1518,scenarios.json,news.body,A new algorithm from The British Virgin Island Institute of Technology performs quality control analysis like a human.
+1519,scenarios.json,news.headline,Montserratian engineers unveiled an algorithm capable of coordinate or lead others.
+1520,scenarios.json,news.body,The Montserratian Institute of Technology showcased a system competitive with humans at coordinate or lead others.
+1521,scenarios.json,news.headline,Swati scientists pioneered a new technique in deal with physically aggressive people today.
+1522,scenarios.json,news.body,The Swati Institute of Technology showcased a system competitive with humans at deal with physically aggressive people.
+1523,scenarios.json,news.headline,Burmese researchers unveiled an algorithm capable of visual color discrimination.
+1524,scenarios.json,news.body,The Burmese Institute of Technology unveiled an algorithm capable of visual color discrimination.
+1525,scenarios.json,news.headline,Finnish engineers performs repairing and maintaining electronic equipment like a human.
+1526,scenarios.json,news.body,A new algorithm from The Finnish Institute of Technology performs repairing and maintaining electronic equipment like a human.
+1527,scenarios.json,news.headline,Bosnian scientists unveiled an algorithm capable of deal with external customers.
+1528,scenarios.json,news.body,The Bosnian Institute of Technology showcased a system competitive with humans at deal with external customers.
+1529,scenarios.json,news.headline,Yemeni researchers pioneered a new technique in far vision today.
+1530,scenarios.json,news.body,The Yemeni Institute of Technology showcased a system competitive with humans at far vision.
+1531,scenarios.json,news.headline,Guinean scientists performs telephone like a human.
+1532,scenarios.json,news.body,A new algorithm from The Guinean Institute of Technology performs telephone like a human.
+1533,scenarios.json,news.headline,Maltese scientists performs dynamic flexibility like a human.
+1534,scenarios.json,news.body,A new algorithm from The Maltese Institute of Technology performs dynamic flexibility like a human.
+1535,scenarios.json,news.headline,British scientists pioneered a new technique in building and construction today.
+1536,scenarios.json,news.body,The British Institute of Technology showcased a system competitive with humans at building and construction.
+1537,scenarios.json,news.headline,Christmas Island scientists performs transportation like a human.
+1538,scenarios.json,news.body,The Christmas Island Institute of Technology showcased a system competitive with humans at transportation.
+1539,scenarios.json,news.headline,Puerto Rican scientists unveiled an algorithm capable of spend time sitting.
+1540,scenarios.json,news.body,A new algorithm from The Puerto Rican Institute of Technology performs spend time sitting like a human.
+1541,scenarios.json,news.headline,"Singaporean engineers unveiled an algorithm capable of monitor processes, materials, or surroundings."
+1542,scenarios.json,news.body,"The Singaporean Institute of Technology showcased a system competitive with humans at monitor processes, materials, or surroundings."
+1543,scenarios.json,news.headline,Georgian scientists performs food production like a human.
+1544,scenarios.json,news.body,The Georgian Institute of Technology showcased a system competitive with humans at food production.
+1545,scenarios.json,news.headline,Honduran engineers performs public safety and security like a human.
+1546,scenarios.json,news.body,The Honduran Institute of Technology unveiled an algorithm capable of public safety and security.
+1547,scenarios.json,news.headline,Bouvet Island scientists performs time sharing like a human.
+1548,scenarios.json,news.body,A new algorithm from The Bouvet Island Institute of Technology performs time sharing like a human.
+1549,scenarios.json,news.headline,Ecuadorian researchers unveiled an algorithm capable of exposed to disease or infections.
+1550,scenarios.json,news.body,The Ecuadorian Institute of Technology showcased a system competitive with humans at exposed to disease or infections.
+1551,scenarios.json,news.headline,Russian scientists performs visualization like a human.
+1552,scenarios.json,news.body,The Russian Institute of Technology showcased a system competitive with humans at visualization.
+1553,scenarios.json,news.headline,Ivorian scientists performs letters and memos like a human.
+1554,scenarios.json,news.body,A new algorithm from The Ivorian Institute of Technology performs letters and memos like a human.
+1555,scenarios.json,news.headline,Namibian engineers pioneered a new technique in explosive strength today.
+1556,scenarios.json,news.body,The Namibian Institute of Technology unveiled an algorithm capable of explosive strength.
+1557,scenarios.json,news.headline,"Laotian researchers unveiled an algorithm capable of drafting, laying out, and specifying technical devices, parts, and equipment."
+1558,scenarios.json,news.body,"A new algorithm from The Laotian Institute of Technology performs drafting, laying out, and specifying technical devices, parts, and equipment like a human."
+1559,scenarios.json,news.headline,"Singaporean researchers pioneered a new technique in exposed to minor burns, cuts, bites, or stings today."
+1560,scenarios.json,news.body,"A new algorithm from The Singaporean Institute of Technology performs exposed to minor burns, cuts, bites, or stings like a human."
+1561,scenarios.json,news.headline,"Malagasy engineers pioneered a new technique in sounds, noise levels are distracting or uncomfortable today."
+1562,scenarios.json,news.body,"The Malagasy Institute of Technology showcased a system competitive with humans at sounds, noise levels are distracting or uncomfortable."
+1563,scenarios.json,news.headline,Ukrainian engineers unveiled an algorithm capable of exposed to contaminants.
+1564,scenarios.json,news.body,The Ukrainian Institute of Technology showcased a system competitive with humans at exposed to contaminants.
+1565,scenarios.json,news.headline,Dominican researchers unveiled an algorithm capable of spend time bending or twisting the body.
+1566,scenarios.json,news.body,A new algorithm from The Dominican Institute of Technology performs spend time bending or twisting the body like a human.
+1567,scenarios.json,news.headline,Cocos Island engineers performs extremely bright or inadequate lighting like a human.
+1568,scenarios.json,news.body,The Cocos Island Institute of Technology unveiled an algorithm capable of extremely bright or inadequate lighting.
+1569,scenarios.json,news.headline,Basotho researchers performs spend time making repetitive motions like a human.
+1570,scenarios.json,news.body,Robotics researchers at the Basotho Institute of Technology pioneered a new technique in spend time making repetitive motions today.
+1571,scenarios.json,news.headline,British scientists unveiled an algorithm capable of very hot or cold temperatures.
+1572,scenarios.json,news.body,The British Institute of Technology showcased a system competitive with humans at very hot or cold temperatures.
+1573,scenarios.json,news.headline,Seychellois engineers pioneered a new technique in exposed to hazardous equipment today.
+1574,scenarios.json,news.body,A new algorithm from The Seychellois Institute of Technology performs exposed to hazardous equipment like a human.
+1575,scenarios.json,news.headline,Trinidadian scientists unveiled an algorithm capable of spend time walking and running.
+1576,scenarios.json,news.body,Robotics researchers at the Trinidadian Institute of Technology pioneered a new technique in spend time walking and running today.
+1577,scenarios.json,news.headline,Tongan researchers pioneered a new technique in in an open vehicle or equipment today.
+1578,scenarios.json,news.body,The Tongan Institute of Technology unveiled an algorithm capable of in an open vehicle or equipment.
+1579,scenarios.json,news.headline,"Hellenic engineers unveiled an algorithm capable of spend time climbing ladders, scaffolds, or poles."
+1580,scenarios.json,news.body,"The Hellenic Institute of Technology unveiled an algorithm capable of spend time climbing ladders, scaffolds, or poles."
+1581,scenarios.json,news.headline,Comorian researchers pioneered a new technique in on-the-job training today.
+1582,scenarios.json,news.body,The Comorian Institute of Technology showcased a system competitive with humans at on-the-job training.
+1583,scenarios.json,news.headline,South African scientists unveiled an algorithm capable of on-site or in-plant training.
+1584,scenarios.json,news.body,The South African Institute of Technology showcased a system competitive with humans at on-site or in-plant training.
+1585,scenarios.json,news.headline,Marshallese engineers unveiled an algorithm capable of importance of repeating same tasks.
+1586,scenarios.json,news.body,The Marshallese Institute of Technology unveiled an algorithm capable of importance of repeating same tasks.
+1587,scenarios.json,news.headline,"Finnish researchers performs spend time kneeling, crouching, stooping, or crawling like a human."
+1588,scenarios.json,news.body,"A new algorithm from The Finnish Institute of Technology performs spend time kneeling, crouching, stooping, or crawling like a human."
+1589,scenarios.json,news.headline,Chinese scientists unveiled an algorithm capable of spend time keeping or regaining balance.
+1590,scenarios.json,news.body,The Chinese Institute of Technology showcased a system competitive with humans at spend time keeping or regaining balance.
+1591,scenarios.json,news.headline,Vatican scientists pioneered a new technique in manual dexterity today.
+1592,scenarios.json,news.body,The Vatican Institute of Technology showcased a system competitive with humans at manual dexterity.
+1593,scenarios.json,news.headline,Bahamian researchers performs spend time standing like a human.
+1594,scenarios.json,news.body,The Bahamian Institute of Technology showcased a system competitive with humans at spend time standing.
+1595,scenarios.json,news.headline,Icelandic scientists unveiled an algorithm capable of exposed to hazardous conditions.
+1596,scenarios.json,news.body,Robotics researchers at the Icelandic Institute of Technology pioneered a new technique in exposed to hazardous conditions today.
+1597,scenarios.json,news.headline,Seychellois researchers performs finger dexterity like a human.
+1598,scenarios.json,news.body,Robotics researchers at the Seychellois Institute of Technology pioneered a new technique in finger dexterity today.
+1599,scenarios.json,news.headline,"Burkinabé researchers performs indoors, not environmentally controlled like a human."
+1600,scenarios.json,news.body,"A new algorithm from The Burkinabé Institute of Technology performs indoors, not environmentally controlled like a human."
+1601,scenarios.json,news.headline,American scientists pioneered a new technique in control precision today.
+1602,scenarios.json,news.body,The American Institute of Technology showcased a system competitive with humans at control precision.
+1603,scenarios.json,news.headline,Nigerien engineers performs exposed to whole body vibration like a human.
+1604,scenarios.json,news.body,A new algorithm from The Nigerien Institute of Technology performs exposed to whole body vibration like a human.
+1605,scenarios.json,news.headline,Brazilian scientists pioneered a new technique in exposed to high places today.
+1606,scenarios.json,news.body,The Brazilian Institute of Technology unveiled an algorithm capable of exposed to high places.
+1607,scenarios.json,news.headline,Swati researchers unveiled an algorithm capable of handling and moving objects.
+1608,scenarios.json,news.body,A new algorithm from The Swati Institute of Technology performs handling and moving objects like a human.
+1609,scenarios.json,news.headline,Hellenic engineers pioneered a new technique in wrist-finger speed today.
+1610,scenarios.json,news.body,The Hellenic Institute of Technology showcased a system competitive with humans at wrist-finger speed.
+1611,scenarios.json,news.headline,Christmas Island scientists performs consequence of error like a human.
+1612,scenarios.json,news.body,The Christmas Island Institute of Technology showcased a system competitive with humans at consequence of error.
+1613,scenarios.json,news.headline,Egyptian scientists unveiled an algorithm capable of arm-hand steadiness.
+1614,scenarios.json,news.body,A new algorithm from The Egyptian Institute of Technology performs arm-hand steadiness like a human.
+1615,scenarios.json,news.headline,Maldivian scientists pioneered a new technique in controlling machines and processes today.
+1616,scenarios.json,news.body,Robotics researchers at the Maldivian Institute of Technology pioneered a new technique in controlling machines and processes today.
+1617,scenarios.json,news.headline,Bruneian scientists pioneered a new technique in time pressure today.
+1618,scenarios.json,news.body,The Bruneian Institute of Technology showcased a system competitive with humans at time pressure.
+1619,scenarios.json,news.headline,Ethiopian scientists pioneered a new technique in work schedules today.
+1620,scenarios.json,news.body,The Ethiopian Institute of Technology unveiled an algorithm capable of work schedules.
+1621,scenarios.json,news.headline,Ethiopian researchers unveiled an algorithm capable of responsible for others' health and safety.
+1622,scenarios.json,news.body,A new algorithm from The Ethiopian Institute of Technology performs responsible for others' health and safety like a human.
+1623,scenarios.json,news.headline,Portuguese scientists pioneered a new technique in importance of being exact or accurate today.
+1624,scenarios.json,news.body,Robotics researchers at the Portuguese Institute of Technology pioneered a new technique in importance of being exact or accurate today.
+1625,scenarios.json,news.headline,Slovak scientists unveiled an algorithm capable of frequency of decision making.
+1626,scenarios.json,news.body,A new algorithm from The Slovak Institute of Technology performs frequency of decision making like a human.
+1627,scenarios.json,news.headline,Niuean engineers performs speed of limb movement like a human.
+1628,scenarios.json,news.body,The Niuean Institute of Technology unveiled an algorithm capable of speed of limb movement.
+1629,scenarios.json,news.headline,Antiguan scientists performs multilimb coordination like a human.
+1630,scenarios.json,news.body,Robotics researchers at the Antiguan Institute of Technology pioneered a new technique in multilimb coordination today.
+1631,scenarios.json,news.headline,Tajikistani engineers pioneered a new technique in extent flexibility today.
+1632,scenarios.json,news.body,A new algorithm from The Tajikistani Institute of Technology performs extent flexibility like a human.
+1633,scenarios.json,news.headline,Solomon Island researchers pioneered a new technique in static strength today.
+1634,scenarios.json,news.body,A new algorithm from The Solomon Island Institute of Technology performs static strength like a human.
+1635,scenarios.json,news.headline,Gibraltar engineers pioneered a new technique in operation and control today.
+1636,scenarios.json,news.body,The Gibraltar Institute of Technology showcased a system competitive with humans at operation and control.
+1637,scenarios.json,news.headline,German engineers pioneered a new technique in deal with unpleasant or angry people today.
+1638,scenarios.json,news.body,Robotics researchers at the German Institute of Technology pioneered a new technique in deal with unpleasant or angry people today.
+1639,scenarios.json,news.headline,Saint Helenian researchers pioneered a new technique in face-to-face discussions today.
+1640,scenarios.json,news.body,The Saint Helenian Institute of Technology showcased a system competitive with humans at face-to-face discussions.
+1641,scenarios.json,news.headline,U.S. Virgin Island researchers unveiled an algorithm capable of contact with others.
+1642,scenarios.json,news.body,Robotics researchers at the U.S. Virgin Island Institute of Technology pioneered a new technique in contact with others today.
+1643,scenarios.json,news.headline,Belizean scientists unveiled an algorithm capable of auditory attention.
+1644,scenarios.json,news.body,Robotics researchers at the Belizean Institute of Technology pioneered a new technique in auditory attention today.
+1645,scenarios.json,news.headline,Bouvet Island scientists pioneered a new technique in physical proximity today.
+1646,scenarios.json,news.body,A new algorithm from The Bouvet Island Institute of Technology performs physical proximity like a human.
+1647,scenarios.json,news.headline,Slovene engineers performs repairing and maintaining mechanical equipment like a human.
+1648,scenarios.json,news.body,The Slovene Institute of Technology showcased a system competitive with humans at repairing and maintaining mechanical equipment.
+1649,scenarios.json,news.headline,"Antarctic scientists pioneered a new technique in outdoors, exposed to weather today."
+1650,scenarios.json,news.body,"A new algorithm from The Antarctic Institute of Technology performs outdoors, exposed to weather like a human."
+1651,scenarios.json,news.headline,Norwegian engineers unveiled an algorithm capable of responsibility for outcomes and results.
+1652,scenarios.json,news.body,Robotics researchers at the Norwegian Institute of Technology pioneered a new technique in responsibility for outcomes and results today.
+1653,scenarios.json,news.headline,Cambodian engineers performs dynamic strength like a human.
+1654,scenarios.json,news.body,A new algorithm from The Cambodian Institute of Technology performs dynamic strength like a human.
+1655,scenarios.json,news.headline,"British engineers performs inspecting equipment, structures, or material like a human."
+1656,scenarios.json,news.body,"Robotics researchers at the British Institute of Technology pioneered a new technique in inspecting equipment, structures, or material today."
+1657,scenarios.json,news.headline,Singaporean scientists performs equipment maintenance like a human.
+1658,scenarios.json,news.body,The Singaporean Institute of Technology unveiled an algorithm capable of equipment maintenance.
+1659,scenarios.json,news.headline,Seychellois researchers performs work with work group or team like a human.
+1660,scenarios.json,news.body,The Seychellois Institute of Technology showcased a system competitive with humans at work with work group or team.
+1661,scenarios.json,news.headline,Guinean engineers performs stamina like a human.
+1662,scenarios.json,news.body,Robotics researchers at the Guinean Institute of Technology pioneered a new technique in stamina today.
+1663,scenarios.json,news.headline,São Toméan researchers unveiled an algorithm capable of repairing.
+1664,scenarios.json,news.body,The São Toméan Institute of Technology unveiled an algorithm capable of repairing.
+1665,scenarios.json,news.headline,Emiri scientists pioneered a new technique in selective attention today.
+1666,scenarios.json,news.body,Robotics researchers at the Emiri Institute of Technology pioneered a new technique in selective attention today.
+1667,scenarios.json,news.headline,Taiwanese engineers pioneered a new technique in gross body coordination today.
+1668,scenarios.json,news.body,The Taiwanese Institute of Technology showcased a system competitive with humans at gross body coordination.
+1669,scenarios.json,news.headline,Bahraini engineers performs hearing sensitivity like a human.
+1670,scenarios.json,news.body,The Bahraini Institute of Technology unveiled an algorithm capable of hearing sensitivity.
+1671,scenarios.json,news.headline,Costa Rican engineers unveiled an algorithm capable of glare sensitivity.
+1672,scenarios.json,news.body,The Costa Rican Institute of Technology unveiled an algorithm capable of glare sensitivity.
+1673,scenarios.json,news.headline,"Northern Marianan engineers unveiled an algorithm capable of operating vehicles, mechanized devices, or equipment."
+1674,scenarios.json,news.body,"The Northern Marianan Institute of Technology unveiled an algorithm capable of operating vehicles, mechanized devices, or equipment."
+1675,scenarios.json,news.headline,Central African engineers pioneered a new technique in sound localization today.
+1676,scenarios.json,news.body,Robotics researchers at the Central African Institute of Technology pioneered a new technique in sound localization today.
+1677,scenarios.json,news.headline,Monacan researchers pioneered a new technique in exposed to radiation today.
+1678,scenarios.json,news.body,Robotics researchers at the Monacan Institute of Technology pioneered a new technique in exposed to radiation today.
+1679,scenarios.json,news.headline,Australian scientists performs depth perception like a human.
+1680,scenarios.json,news.body,The Australian Institute of Technology showcased a system competitive with humans at depth perception.
+1681,scenarios.json,news.headline,South Sudanese engineers pioneered a new technique in near vision today.
+1682,scenarios.json,news.body,A new algorithm from The South Sudanese Institute of Technology performs near vision like a human.
+1683,scenarios.json,news.headline,Thai researchers pioneered a new technique in perceptual speed today.
+1684,scenarios.json,news.body,Robotics researchers at the Thai Institute of Technology pioneered a new technique in perceptual speed today.
+1685,scenarios.json,news.headline,Saint-Pierrais scientists performs peripheral vision like a human.
+1686,scenarios.json,news.body,Robotics researchers at the Saint-Pierrais Institute of Technology pioneered a new technique in peripheral vision today.
+1687,scenarios.json,news.headline,Austrian researchers pioneered a new technique in mechanical today.
+1688,scenarios.json,news.body,A new algorithm from The Austrian Institute of Technology performs mechanical like a human.
+1689,scenarios.json,news.headline,Pitcairn Island engineers performs production and processing like a human.
+1690,scenarios.json,news.body,The Pitcairn Island Institute of Technology unveiled an algorithm capable of production and processing.
+1691,scenarios.json,news.headline,Azeri engineers unveiled an algorithm capable of gross body equilibrium.
+1692,scenarios.json,news.body,A new algorithm from The Azeri Institute of Technology performs gross body equilibrium like a human.
+1693,scenarios.json,news.headline,Canadian engineers unveiled an algorithm capable of level of competition.
+1694,scenarios.json,news.body,The Canadian Institute of Technology showcased a system competitive with humans at level of competition.
+1695,scenarios.json,news.headline,Antarctic scientists unveiled an algorithm capable of night vision.
+1696,scenarios.json,news.body,The Antarctic Institute of Technology unveiled an algorithm capable of night vision.
+1697,scenarios.json,news.headline,Gabonese engineers performs duration of typical work week like a human.
+1698,scenarios.json,news.body,The Gabonese Institute of Technology unveiled an algorithm capable of duration of typical work week.
+1699,scenarios.json,news.headline,Somalilander researchers performs spatial orientation like a human.
+1700,scenarios.json,news.body,A new algorithm from The Somalilander Institute of Technology performs spatial orientation like a human.
+1701,scenarios.json,news.headline,British Virgin Island engineers pioneered a new technique in quality control analysis today.
+1702,scenarios.json,news.body,A new algorithm from The British Virgin Island Institute of Technology performs quality control analysis like a human.
+1703,scenarios.json,news.headline,Montserratian engineers unveiled an algorithm capable of coordinate or lead others.
+1704,scenarios.json,news.body,The Montserratian Institute of Technology showcased a system competitive with humans at coordinate or lead others.
+1705,scenarios.json,news.headline,Swati scientists pioneered a new technique in deal with physically aggressive people today.
+1706,scenarios.json,news.body,The Swati Institute of Technology showcased a system competitive with humans at deal with physically aggressive people.
+1707,scenarios.json,news.headline,Burmese researchers unveiled an algorithm capable of visual color discrimination.
+1708,scenarios.json,news.body,The Burmese Institute of Technology unveiled an algorithm capable of visual color discrimination.
+1709,scenarios.json,news.headline,Finnish engineers performs repairing and maintaining electronic equipment like a human.
+1710,scenarios.json,news.body,A new algorithm from The Finnish Institute of Technology performs repairing and maintaining electronic equipment like a human.
+1711,scenarios.json,news.headline,Bosnian scientists unveiled an algorithm capable of deal with external customers.
+1712,scenarios.json,news.body,The Bosnian Institute of Technology showcased a system competitive with humans at deal with external customers.
+1713,scenarios.json,news.headline,Yemeni researchers pioneered a new technique in far vision today.
+1714,scenarios.json,news.body,The Yemeni Institute of Technology showcased a system competitive with humans at far vision.
+1715,scenarios.json,news.headline,Guinean scientists performs telephone like a human.
+1716,scenarios.json,news.body,A new algorithm from The Guinean Institute of Technology performs telephone like a human.
+1717,scenarios.json,news.headline,Maltese scientists performs dynamic flexibility like a human.
+1718,scenarios.json,news.body,A new algorithm from The Maltese Institute of Technology performs dynamic flexibility like a human.
+1719,scenarios.json,news.headline,British scientists pioneered a new technique in building and construction today.
+1720,scenarios.json,news.body,The British Institute of Technology showcased a system competitive with humans at building and construction.
+1721,scenarios.json,news.headline,Christmas Island scientists performs transportation like a human.
+1722,scenarios.json,news.body,The Christmas Island Institute of Technology showcased a system competitive with humans at transportation.
+1723,scenarios.json,news.headline,Puerto Rican scientists unveiled an algorithm capable of spend time sitting.
+1724,scenarios.json,news.body,A new algorithm from The Puerto Rican Institute of Technology performs spend time sitting like a human.
+1725,scenarios.json,news.headline,"Singaporean engineers unveiled an algorithm capable of monitor processes, materials, or surroundings."
+1726,scenarios.json,news.body,"The Singaporean Institute of Technology showcased a system competitive with humans at monitor processes, materials, or surroundings."
+1727,scenarios.json,news.headline,Georgian scientists performs food production like a human.
+1728,scenarios.json,news.body,The Georgian Institute of Technology showcased a system competitive with humans at food production.
+1729,scenarios.json,news.headline,Honduran engineers performs public safety and security like a human.
+1730,scenarios.json,news.body,The Honduran Institute of Technology unveiled an algorithm capable of public safety and security.
+1731,scenarios.json,news.headline,Bouvet Island scientists performs time sharing like a human.
+1732,scenarios.json,news.body,A new algorithm from The Bouvet Island Institute of Technology performs time sharing like a human.
+1733,scenarios.json,news.headline,Ecuadorian researchers unveiled an algorithm capable of exposed to disease or infections.
+1734,scenarios.json,news.body,The Ecuadorian Institute of Technology showcased a system competitive with humans at exposed to disease or infections.
+1735,scenarios.json,news.headline,Russian scientists performs visualization like a human.
+1736,scenarios.json,news.body,The Russian Institute of Technology showcased a system competitive with humans at visualization.
+1737,scenarios.json,news.headline,Ivorian scientists performs letters and memos like a human.
+1738,scenarios.json,news.body,A new algorithm from The Ivorian Institute of Technology performs letters and memos like a human.
+1739,scenarios.json,news.headline,Namibian engineers pioneered a new technique in explosive strength today.
+1740,scenarios.json,news.body,The Namibian Institute of Technology unveiled an algorithm capable of explosive strength.
+1741,scenarios.json,news.headline,"Laotian researchers unveiled an algorithm capable of drafting, laying out, and specifying technical devices, parts, and equipment."
+1742,scenarios.json,news.body,"A new algorithm from The Laotian Institute of Technology performs drafting, laying out, and specifying technical devices, parts, and equipment like a human."
+1743,scenarios.json,news.headline,"Singaporean researchers pioneered a new technique in exposed to minor burns, cuts, bites, or stings today."
+1744,scenarios.json,news.body,"A new algorithm from The Singaporean Institute of Technology performs exposed to minor burns, cuts, bites, or stings like a human."
+1745,scenarios.json,news.headline,"Malagasy engineers pioneered a new technique in sounds, noise levels are distracting or uncomfortable today."
+1746,scenarios.json,news.body,"The Malagasy Institute of Technology showcased a system competitive with humans at sounds, noise levels are distracting or uncomfortable."
+1747,scenarios.json,news.headline,Ukrainian engineers unveiled an algorithm capable of exposed to contaminants.
+1748,scenarios.json,news.body,The Ukrainian Institute of Technology showcased a system competitive with humans at exposed to contaminants.
+1749,scenarios.json,news.headline,Dominican researchers unveiled an algorithm capable of spend time bending or twisting the body.
+1750,scenarios.json,news.body,A new algorithm from The Dominican Institute of Technology performs spend time bending or twisting the body like a human.
+1751,scenarios.json,news.headline,Cocos Island engineers performs extremely bright or inadequate lighting like a human.
+1752,scenarios.json,news.body,The Cocos Island Institute of Technology unveiled an algorithm capable of extremely bright or inadequate lighting.
+1753,scenarios.json,news.headline,Basotho researchers performs spend time making repetitive motions like a human.
+1754,scenarios.json,news.body,Robotics researchers at the Basotho Institute of Technology pioneered a new technique in spend time making repetitive motions today.
+1755,scenarios.json,news.headline,British scientists unveiled an algorithm capable of very hot or cold temperatures.
+1756,scenarios.json,news.body,The British Institute of Technology showcased a system competitive with humans at very hot or cold temperatures.
+1757,scenarios.json,news.headline,Seychellois engineers pioneered a new technique in exposed to hazardous equipment today.
+1758,scenarios.json,news.body,A new algorithm from The Seychellois Institute of Technology performs exposed to hazardous equipment like a human.
+1759,scenarios.json,news.headline,Trinidadian scientists unveiled an algorithm capable of spend time walking and running.
+1760,scenarios.json,news.body,Robotics researchers at the Trinidadian Institute of Technology pioneered a new technique in spend time walking and running today.
+1761,scenarios.json,news.headline,Tongan researchers pioneered a new technique in in an open vehicle or equipment today.
+1762,scenarios.json,news.body,The Tongan Institute of Technology unveiled an algorithm capable of in an open vehicle or equipment.
+1763,scenarios.json,news.headline,"Hellenic engineers unveiled an algorithm capable of spend time climbing ladders, scaffolds, or poles."
+1764,scenarios.json,news.body,"The Hellenic Institute of Technology unveiled an algorithm capable of spend time climbing ladders, scaffolds, or poles."
+1765,scenarios.json,news.headline,Comorian researchers pioneered a new technique in on-the-job training today.
+1766,scenarios.json,news.body,The Comorian Institute of Technology showcased a system competitive with humans at on-the-job training.
+1767,scenarios.json,news.headline,South African scientists unveiled an algorithm capable of on-site or in-plant training.
+1768,scenarios.json,news.body,The South African Institute of Technology showcased a system competitive with humans at on-site or in-plant training.
+1769,scenarios.json,news.headline,Marshallese engineers unveiled an algorithm capable of importance of repeating same tasks.
+1770,scenarios.json,news.body,The Marshallese Institute of Technology unveiled an algorithm capable of importance of repeating same tasks.
+1771,scenarios.json,news.headline,"Finnish researchers performs spend time kneeling, crouching, stooping, or crawling like a human."
+1772,scenarios.json,news.body,"A new algorithm from The Finnish Institute of Technology performs spend time kneeling, crouching, stooping, or crawling like a human."
+1773,scenarios.json,news.headline,Chinese scientists unveiled an algorithm capable of spend time keeping or regaining balance.
+1774,scenarios.json,news.body,The Chinese Institute of Technology showcased a system competitive with humans at spend time keeping or regaining balance.
+1775,scenarios.json,news.headline,Vatican scientists pioneered a new technique in manual dexterity today.
+1776,scenarios.json,news.body,The Vatican Institute of Technology showcased a system competitive with humans at manual dexterity.
+1777,scenarios.json,news.headline,Bahamian researchers performs spend time standing like a human.
+1778,scenarios.json,news.body,The Bahamian Institute of Technology showcased a system competitive with humans at spend time standing.
+1779,scenarios.json,news.headline,Icelandic scientists unveiled an algorithm capable of exposed to hazardous conditions.
+1780,scenarios.json,news.body,Robotics researchers at the Icelandic Institute of Technology pioneered a new technique in exposed to hazardous conditions today.
+1781,scenarios.json,news.headline,Seychellois researchers performs finger dexterity like a human.
+1782,scenarios.json,news.body,Robotics researchers at the Seychellois Institute of Technology pioneered a new technique in finger dexterity today.
+1783,scenarios.json,news.headline,"Burkinabé researchers performs indoors, not environmentally controlled like a human."
+1784,scenarios.json,news.body,"A new algorithm from The Burkinabé Institute of Technology performs indoors, not environmentally controlled like a human."
+1785,scenarios.json,news.headline,American scientists pioneered a new technique in control precision today.
+1786,scenarios.json,news.body,The American Institute of Technology showcased a system competitive with humans at control precision.
+1787,scenarios.json,news.headline,Nigerien engineers performs exposed to whole body vibration like a human.
+1788,scenarios.json,news.body,A new algorithm from The Nigerien Institute of Technology performs exposed to whole body vibration like a human.
+1789,scenarios.json,news.headline,Brazilian scientists pioneered a new technique in exposed to high places today.
+1790,scenarios.json,news.body,The Brazilian Institute of Technology unveiled an algorithm capable of exposed to high places.
+1791,scenarios.json,news.headline,Swati researchers unveiled an algorithm capable of handling and moving objects.
+1792,scenarios.json,news.body,A new algorithm from The Swati Institute of Technology performs handling and moving objects like a human.
+1793,scenarios.json,news.headline,Hellenic engineers pioneered a new technique in wrist-finger speed today.
+1794,scenarios.json,news.body,The Hellenic Institute of Technology showcased a system competitive with humans at wrist-finger speed.
+1795,scenarios.json,news.headline,Christmas Island scientists performs consequence of error like a human.
+1796,scenarios.json,news.body,The Christmas Island Institute of Technology showcased a system competitive with humans at consequence of error.
+1797,scenarios.json,news.headline,Egyptian scientists unveiled an algorithm capable of arm-hand steadiness.
+1798,scenarios.json,news.body,A new algorithm from The Egyptian Institute of Technology performs arm-hand steadiness like a human.
+1799,scenarios.json,news.headline,Maldivian scientists pioneered a new technique in controlling machines and processes today.
+1800,scenarios.json,news.body,Robotics researchers at the Maldivian Institute of Technology pioneered a new technique in controlling machines and processes today.
+1801,scenarios.json,news.headline,Bruneian scientists pioneered a new technique in time pressure today.
+1802,scenarios.json,news.body,The Bruneian Institute of Technology showcased a system competitive with humans at time pressure.
+1803,scenarios.json,news.headline,Ethiopian scientists pioneered a new technique in work schedules today.
+1804,scenarios.json,news.body,The Ethiopian Institute of Technology unveiled an algorithm capable of work schedules.
+1805,scenarios.json,news.headline,Ethiopian researchers unveiled an algorithm capable of responsible for others' health and safety.
+1806,scenarios.json,news.body,A new algorithm from The Ethiopian Institute of Technology performs responsible for others' health and safety like a human.
+1807,scenarios.json,news.headline,Portuguese scientists pioneered a new technique in importance of being exact or accurate today.
+1808,scenarios.json,news.body,Robotics researchers at the Portuguese Institute of Technology pioneered a new technique in importance of being exact or accurate today.
+1809,scenarios.json,news.headline,Slovak scientists unveiled an algorithm capable of frequency of decision making.
+1810,scenarios.json,news.body,A new algorithm from The Slovak Institute of Technology performs frequency of decision making like a human.
+1811,scenarios.json,news.headline,Niuean engineers performs speed of limb movement like a human.
+1812,scenarios.json,news.body,The Niuean Institute of Technology unveiled an algorithm capable of speed of limb movement.
+1813,scenarios.json,news.headline,Antiguan scientists performs multilimb coordination like a human.
+1814,scenarios.json,news.body,Robotics researchers at the Antiguan Institute of Technology pioneered a new technique in multilimb coordination today.
+1815,scenarios.json,news.headline,Tajikistani engineers pioneered a new technique in extent flexibility today.
+1816,scenarios.json,news.body,A new algorithm from The Tajikistani Institute of Technology performs extent flexibility like a human.
+1817,scenarios.json,news.headline,Solomon Island researchers pioneered a new technique in static strength today.
+1818,scenarios.json,news.body,A new algorithm from The Solomon Island Institute of Technology performs static strength like a human.
+1819,scenarios.json,news.headline,Gibraltar engineers pioneered a new technique in operation and control today.
+1820,scenarios.json,news.body,The Gibraltar Institute of Technology showcased a system competitive with humans at operation and control.
+1821,scenarios.json,news.headline,German engineers pioneered a new technique in deal with unpleasant or angry people today.
+1822,scenarios.json,news.body,Robotics researchers at the German Institute of Technology pioneered a new technique in deal with unpleasant or angry people today.
+1823,scenarios.json,news.headline,Saint Helenian researchers pioneered a new technique in face-to-face discussions today.
+1824,scenarios.json,news.body,The Saint Helenian Institute of Technology showcased a system competitive with humans at face-to-face discussions.
+1825,scenarios.json,news.headline,U.S. Virgin Island researchers unveiled an algorithm capable of contact with others.
+1826,scenarios.json,news.body,Robotics researchers at the U.S. Virgin Island Institute of Technology pioneered a new technique in contact with others today.
+1827,scenarios.json,news.headline,Belizean scientists unveiled an algorithm capable of auditory attention.
+1828,scenarios.json,news.body,Robotics researchers at the Belizean Institute of Technology pioneered a new technique in auditory attention today.
+1829,scenarios.json,news.headline,Bouvet Island scientists pioneered a new technique in physical proximity today.
+1830,scenarios.json,news.body,A new algorithm from The Bouvet Island Institute of Technology performs physical proximity like a human.
+1831,scenarios.json,news.headline,Slovene engineers performs repairing and maintaining mechanical equipment like a human.
+1832,scenarios.json,news.body,The Slovene Institute of Technology showcased a system competitive with humans at repairing and maintaining mechanical equipment.
+1833,scenarios.json,news.headline,"Antarctic scientists pioneered a new technique in outdoors, exposed to weather today."
+1834,scenarios.json,news.body,"A new algorithm from The Antarctic Institute of Technology performs outdoors, exposed to weather like a human."
+1835,scenarios.json,news.headline,Norwegian engineers unveiled an algorithm capable of responsibility for outcomes and results.
+1836,scenarios.json,news.body,Robotics researchers at the Norwegian Institute of Technology pioneered a new technique in responsibility for outcomes and results today.
+1837,scenarios.json,news.headline,Cambodian engineers performs dynamic strength like a human.
+1838,scenarios.json,news.body,A new algorithm from The Cambodian Institute of Technology performs dynamic strength like a human.
+1839,scenarios.json,news.headline,"British engineers performs inspecting equipment, structures, or material like a human."
+1840,scenarios.json,news.body,"Robotics researchers at the British Institute of Technology pioneered a new technique in inspecting equipment, structures, or material today."
+1841,scenarios.json,news.headline,Singaporean scientists performs equipment maintenance like a human.
+1842,scenarios.json,news.body,The Singaporean Institute of Technology unveiled an algorithm capable of equipment maintenance.
+1843,scenarios.json,news.headline,Seychellois researchers performs work with work group or team like a human.
+1844,scenarios.json,news.body,The Seychellois Institute of Technology showcased a system competitive with humans at work with work group or team.
+1845,scenarios.json,news.headline,Guinean engineers performs stamina like a human.
+1846,scenarios.json,news.body,Robotics researchers at the Guinean Institute of Technology pioneered a new technique in stamina today.
+1847,scenarios.json,news.headline,São Toméan researchers unveiled an algorithm capable of repairing.
+1848,scenarios.json,news.body,The São Toméan Institute of Technology unveiled an algorithm capable of repairing.
+1849,scenarios.json,news.headline,Emiri scientists pioneered a new technique in selective attention today.
+1850,scenarios.json,news.body,Robotics researchers at the Emiri Institute of Technology pioneered a new technique in selective attention today.
+1851,scenarios.json,news.headline,Taiwanese engineers pioneered a new technique in gross body coordination today.
+1852,scenarios.json,news.body,The Taiwanese Institute of Technology showcased a system competitive with humans at gross body coordination.
+1853,scenarios.json,news.headline,Bahraini engineers performs hearing sensitivity like a human.
+1854,scenarios.json,news.body,The Bahraini Institute of Technology unveiled an algorithm capable of hearing sensitivity.
+1855,scenarios.json,news.headline,Costa Rican engineers unveiled an algorithm capable of glare sensitivity.
+1856,scenarios.json,news.body,The Costa Rican Institute of Technology unveiled an algorithm capable of glare sensitivity.
+1857,scenarios.json,news.headline,"Northern Marianan engineers unveiled an algorithm capable of operating vehicles, mechanized devices, or equipment."
+1858,scenarios.json,news.body,"The Northern Marianan Institute of Technology unveiled an algorithm capable of operating vehicles, mechanized devices, or equipment."
+1859,scenarios.json,news.headline,Central African engineers pioneered a new technique in sound localization today.
+1860,scenarios.json,news.body,Robotics researchers at the Central African Institute of Technology pioneered a new technique in sound localization today.
+1861,scenarios.json,news.headline,Monacan researchers pioneered a new technique in exposed to radiation today.
+1862,scenarios.json,news.body,Robotics researchers at the Monacan Institute of Technology pioneered a new technique in exposed to radiation today.
+1863,scenarios.json,news.headline,Australian scientists performs depth perception like a human.
+1864,scenarios.json,news.body,The Australian Institute of Technology showcased a system competitive with humans at depth perception.
+1865,scenarios.json,news.headline,South Sudanese engineers pioneered a new technique in near vision today.
+1866,scenarios.json,news.body,A new algorithm from The South Sudanese Institute of Technology performs near vision like a human.
+1867,scenarios.json,news.headline,Thai researchers pioneered a new technique in perceptual speed today.
+1868,scenarios.json,news.body,Robotics researchers at the Thai Institute of Technology pioneered a new technique in perceptual speed today.
+1869,scenarios.json,news.headline,Saint-Pierrais scientists performs peripheral vision like a human.
+1870,scenarios.json,news.body,Robotics researchers at the Saint-Pierrais Institute of Technology pioneered a new technique in peripheral vision today.
+1871,scenarios.json,news.headline,Austrian researchers pioneered a new technique in mechanical today.
+1872,scenarios.json,news.body,A new algorithm from The Austrian Institute of Technology performs mechanical like a human.
+1873,scenarios.json,news.headline,Pitcairn Island engineers performs production and processing like a human.
+1874,scenarios.json,news.body,The Pitcairn Island Institute of Technology unveiled an algorithm capable of production and processing.
+1875,scenarios.json,news.headline,Azeri engineers unveiled an algorithm capable of gross body equilibrium.
+1876,scenarios.json,news.body,A new algorithm from The Azeri Institute of Technology performs gross body equilibrium like a human.
+1877,scenarios.json,news.headline,Canadian engineers unveiled an algorithm capable of level of competition.
+1878,scenarios.json,news.body,The Canadian Institute of Technology showcased a system competitive with humans at level of competition.
+1879,scenarios.json,news.headline,Antarctic scientists unveiled an algorithm capable of night vision.
+1880,scenarios.json,news.body,The Antarctic Institute of Technology unveiled an algorithm capable of night vision.
+1881,scenarios.json,news.headline,Gabonese engineers performs duration of typical work week like a human.
+1882,scenarios.json,news.body,The Gabonese Institute of Technology unveiled an algorithm capable of duration of typical work week.
+1883,scenarios.json,news.headline,Somalilander researchers performs spatial orientation like a human.
+1884,scenarios.json,news.body,A new algorithm from The Somalilander Institute of Technology performs spatial orientation like a human.
+1885,scenarios.json,news.headline,British Virgin Island engineers pioneered a new technique in quality control analysis today.
+1886,scenarios.json,news.body,A new algorithm from The British Virgin Island Institute of Technology performs quality control analysis like a human.
+1887,scenarios.json,news.headline,Montserratian engineers unveiled an algorithm capable of coordinate or lead others.
+1888,scenarios.json,news.body,The Montserratian Institute of Technology showcased a system competitive with humans at coordinate or lead others.
+1889,scenarios.json,news.headline,Swati scientists pioneered a new technique in deal with physically aggressive people today.
+1890,scenarios.json,news.body,The Swati Institute of Technology showcased a system competitive with humans at deal with physically aggressive people.
+1891,scenarios.json,news.headline,Burmese researchers unveiled an algorithm capable of visual color discrimination.
+1892,scenarios.json,news.body,The Burmese Institute of Technology unveiled an algorithm capable of visual color discrimination.
+1893,scenarios.json,news.headline,Finnish engineers performs repairing and maintaining electronic equipment like a human.
+1894,scenarios.json,news.body,A new algorithm from The Finnish Institute of Technology performs repairing and maintaining electronic equipment like a human.
+1895,scenarios.json,news.headline,Bosnian scientists unveiled an algorithm capable of deal with external customers.
+1896,scenarios.json,news.body,The Bosnian Institute of Technology showcased a system competitive with humans at deal with external customers.
+1897,scenarios.json,news.headline,Yemeni researchers pioneered a new technique in far vision today.
+1898,scenarios.json,news.body,The Yemeni Institute of Technology showcased a system competitive with humans at far vision.
+1899,scenarios.json,news.headline,Guinean scientists performs telephone like a human.
+1900,scenarios.json,news.body,A new algorithm from The Guinean Institute of Technology performs telephone like a human.
+1901,scenarios.json,news.headline,Maltese scientists performs dynamic flexibility like a human.
+1902,scenarios.json,news.body,A new algorithm from The Maltese Institute of Technology performs dynamic flexibility like a human.
+1903,scenarios.json,news.headline,British scientists pioneered a new technique in building and construction today.
+1904,scenarios.json,news.body,The British Institute of Technology showcased a system competitive with humans at building and construction.
+1905,scenarios.json,news.headline,Christmas Island scientists performs transportation like a human.
+1906,scenarios.json,news.body,The Christmas Island Institute of Technology showcased a system competitive with humans at transportation.
+1907,scenarios.json,news.headline,Puerto Rican scientists unveiled an algorithm capable of spend time sitting.
+1908,scenarios.json,news.body,A new algorithm from The Puerto Rican Institute of Technology performs spend time sitting like a human.
+1909,scenarios.json,news.headline,"Singaporean engineers unveiled an algorithm capable of monitor processes, materials, or surroundings."
+1910,scenarios.json,news.body,"The Singaporean Institute of Technology showcased a system competitive with humans at monitor processes, materials, or surroundings."
+1911,scenarios.json,news.headline,Georgian scientists performs food production like a human.
+1912,scenarios.json,news.body,The Georgian Institute of Technology showcased a system competitive with humans at food production.
+1913,scenarios.json,news.headline,Honduran engineers performs public safety and security like a human.
+1914,scenarios.json,news.body,The Honduran Institute of Technology unveiled an algorithm capable of public safety and security.
+1915,scenarios.json,news.headline,Bouvet Island scientists performs time sharing like a human.
+1916,scenarios.json,news.body,A new algorithm from The Bouvet Island Institute of Technology performs time sharing like a human.
+1917,scenarios.json,news.headline,Ecuadorian researchers unveiled an algorithm capable of exposed to disease or infections.
+1918,scenarios.json,news.body,The Ecuadorian Institute of Technology showcased a system competitive with humans at exposed to disease or infections.
+1919,scenarios.json,news.headline,Russian scientists performs visualization like a human.
+1920,scenarios.json,news.body,The Russian Institute of Technology showcased a system competitive with humans at visualization.
+1921,scenarios.json,news.headline,Ivorian scientists performs letters and memos like a human.
+1922,scenarios.json,news.body,A new algorithm from The Ivorian Institute of Technology performs letters and memos like a human.
+1923,scenarios.json,news.headline,Namibian engineers pioneered a new technique in explosive strength today.
+1924,scenarios.json,news.body,The Namibian Institute of Technology unveiled an algorithm capable of explosive strength.
+1925,scenarios.json,news.headline,"Laotian researchers unveiled an algorithm capable of drafting, laying out, and specifying technical devices, parts, and equipment."
+1926,scenarios.json,news.body,"A new algorithm from The Laotian Institute of Technology performs drafting, laying out, and specifying technical devices, parts, and equipment like a human."
+1927,scenarios.json,news.headline,"Singaporean researchers pioneered a new technique in exposed to minor burns, cuts, bites, or stings today."
+1928,scenarios.json,news.body,"A new algorithm from The Singaporean Institute of Technology performs exposed to minor burns, cuts, bites, or stings like a human."
+1929,scenarios.json,news.headline,"Malagasy engineers pioneered a new technique in sounds, noise levels are distracting or uncomfortable today."
+1930,scenarios.json,news.body,"The Malagasy Institute of Technology showcased a system competitive with humans at sounds, noise levels are distracting or uncomfortable."
+1931,scenarios.json,news.headline,Ukrainian engineers unveiled an algorithm capable of exposed to contaminants.
+1932,scenarios.json,news.body,The Ukrainian Institute of Technology showcased a system competitive with humans at exposed to contaminants.
+1933,scenarios.json,news.headline,Dominican researchers unveiled an algorithm capable of spend time bending or twisting the body.
+1934,scenarios.json,news.body,A new algorithm from The Dominican Institute of Technology performs spend time bending or twisting the body like a human.
+1935,scenarios.json,news.headline,Cocos Island engineers performs extremely bright or inadequate lighting like a human.
+1936,scenarios.json,news.body,The Cocos Island Institute of Technology unveiled an algorithm capable of extremely bright or inadequate lighting.
+1937,scenarios.json,news.headline,Basotho researchers performs spend time making repetitive motions like a human.
+1938,scenarios.json,news.body,Robotics researchers at the Basotho Institute of Technology pioneered a new technique in spend time making repetitive motions today.
+1939,scenarios.json,news.headline,British scientists unveiled an algorithm capable of very hot or cold temperatures.
+1940,scenarios.json,news.body,The British Institute of Technology showcased a system competitive with humans at very hot or cold temperatures.
+1941,scenarios.json,news.headline,Seychellois engineers pioneered a new technique in exposed to hazardous equipment today.
+1942,scenarios.json,news.body,A new algorithm from The Seychellois Institute of Technology performs exposed to hazardous equipment like a human.
+1943,scenarios.json,news.headline,Trinidadian scientists unveiled an algorithm capable of spend time walking and running.
+1944,scenarios.json,news.body,Robotics researchers at the Trinidadian Institute of Technology pioneered a new technique in spend time walking and running today.
+1945,scenarios.json,news.headline,Tongan researchers pioneered a new technique in in an open vehicle or equipment today.
+1946,scenarios.json,news.body,The Tongan Institute of Technology unveiled an algorithm capable of in an open vehicle or equipment.
+1947,scenarios.json,news.headline,"Hellenic engineers unveiled an algorithm capable of spend time climbing ladders, scaffolds, or poles."
+1948,scenarios.json,news.body,"The Hellenic Institute of Technology unveiled an algorithm capable of spend time climbing ladders, scaffolds, or poles."
+1949,scenarios.json,news.headline,Comorian researchers pioneered a new technique in on-the-job training today.
+1950,scenarios.json,news.body,The Comorian Institute of Technology showcased a system competitive with humans at on-the-job training.
+1951,scenarios.json,news.headline,South African scientists unveiled an algorithm capable of on-site or in-plant training.
+1952,scenarios.json,news.body,The South African Institute of Technology showcased a system competitive with humans at on-site or in-plant training.
+1953,scenarios.json,news.headline,Marshallese engineers unveiled an algorithm capable of importance of repeating same tasks.
+1954,scenarios.json,news.body,The Marshallese Institute of Technology unveiled an algorithm capable of importance of repeating same tasks.
+1955,scenarios.json,news.headline,"Finnish researchers performs spend time kneeling, crouching, stooping, or crawling like a human."
+1956,scenarios.json,news.body,"A new algorithm from The Finnish Institute of Technology performs spend time kneeling, crouching, stooping, or crawling like a human."
+1957,scenarios.json,news.headline,Chinese scientists unveiled an algorithm capable of spend time keeping or regaining balance.
+1958,scenarios.json,news.body,The Chinese Institute of Technology showcased a system competitive with humans at spend time keeping or regaining balance.
+1959,scenarios.json,news.headline,Vatican scientists pioneered a new technique in manual dexterity today.
+1960,scenarios.json,news.body,The Vatican Institute of Technology showcased a system competitive with humans at manual dexterity.
+1961,scenarios.json,news.headline,Bahamian researchers performs spend time standing like a human.
+1962,scenarios.json,news.body,The Bahamian Institute of Technology showcased a system competitive with humans at spend time standing.
+1963,scenarios.json,news.headline,Icelandic scientists unveiled an algorithm capable of exposed to hazardous conditions.
+1964,scenarios.json,news.body,Robotics researchers at the Icelandic Institute of Technology pioneered a new technique in exposed to hazardous conditions today.
+1965,scenarios.json,news.headline,Seychellois researchers performs finger dexterity like a human.
+1966,scenarios.json,news.body,Robotics researchers at the Seychellois Institute of Technology pioneered a new technique in finger dexterity today.
+1967,scenarios.json,news.headline,"Burkinabé researchers performs indoors, not environmentally controlled like a human."
+1968,scenarios.json,news.body,"A new algorithm from The Burkinabé Institute of Technology performs indoors, not environmentally controlled like a human."
+1969,scenarios.json,news.headline,American scientists pioneered a new technique in control precision today.
+1970,scenarios.json,news.body,The American Institute of Technology showcased a system competitive with humans at control precision.
+1971,scenarios.json,news.headline,Nigerien engineers performs exposed to whole body vibration like a human.
+1972,scenarios.json,news.body,A new algorithm from The Nigerien Institute of Technology performs exposed to whole body vibration like a human.
+1973,scenarios.json,news.headline,Brazilian scientists pioneered a new technique in exposed to high places today.
+1974,scenarios.json,news.body,The Brazilian Institute of Technology unveiled an algorithm capable of exposed to high places.
+1975,scenarios.json,news.headline,Swati researchers unveiled an algorithm capable of handling and moving objects.
+1976,scenarios.json,news.body,A new algorithm from The Swati Institute of Technology performs handling and moving objects like a human.
+1977,scenarios.json,news.headline,Hellenic engineers pioneered a new technique in wrist-finger speed today.
+1978,scenarios.json,news.body,The Hellenic Institute of Technology showcased a system competitive with humans at wrist-finger speed.
+1979,scenarios.json,news.headline,Christmas Island scientists performs consequence of error like a human.
+1980,scenarios.json,news.body,The Christmas Island Institute of Technology showcased a system competitive with humans at consequence of error.
+1981,scenarios.json,news.headline,Egyptian scientists unveiled an algorithm capable of arm-hand steadiness.
+1982,scenarios.json,news.body,A new algorithm from The Egyptian Institute of Technology performs arm-hand steadiness like a human.
+1983,scenarios.json,news.headline,Maldivian scientists pioneered a new technique in controlling machines and processes today.
+1984,scenarios.json,news.body,Robotics researchers at the Maldivian Institute of Technology pioneered a new technique in controlling machines and processes today.
+1985,scenarios.json,news.headline,Bruneian scientists pioneered a new technique in time pressure today.
+1986,scenarios.json,news.body,The Bruneian Institute of Technology showcased a system competitive with humans at time pressure.
+1987,scenarios.json,news.headline,Ethiopian scientists pioneered a new technique in work schedules today.
+1988,scenarios.json,news.body,The Ethiopian Institute of Technology unveiled an algorithm capable of work schedules.
+1989,scenarios.json,news.headline,Ethiopian researchers unveiled an algorithm capable of responsible for others' health and safety.
+1990,scenarios.json,news.body,A new algorithm from The Ethiopian Institute of Technology performs responsible for others' health and safety like a human.
+1991,scenarios.json,news.headline,Portuguese scientists pioneered a new technique in importance of being exact or accurate today.
+1992,scenarios.json,news.body,Robotics researchers at the Portuguese Institute of Technology pioneered a new technique in importance of being exact or accurate today.
+1993,scenarios.json,news.headline,Slovak scientists unveiled an algorithm capable of frequency of decision making.
+1994,scenarios.json,news.body,A new algorithm from The Slovak Institute of Technology performs frequency of decision making like a human.
+1995,scenarios.json,news.headline,Niuean engineers performs speed of limb movement like a human.
+1996,scenarios.json,news.body,The Niuean Institute of Technology unveiled an algorithm capable of speed of limb movement.
+1997,scenarios.json,news.headline,Antiguan scientists performs multilimb coordination like a human.
+1998,scenarios.json,news.body,Robotics researchers at the Antiguan Institute of Technology pioneered a new technique in multilimb coordination today.
+1999,scenarios.json,news.headline,Tajikistani engineers pioneered a new technique in extent flexibility today.
+2000,scenarios.json,news.body,A new algorithm from The Tajikistani Institute of Technology performs extent flexibility like a human.
+2001,scenarios.json,news.headline,Solomon Island researchers pioneered a new technique in static strength today.
+2002,scenarios.json,news.body,A new algorithm from The Solomon Island Institute of Technology performs static strength like a human.
+2003,scenarios.json,news.headline,Gibraltar engineers pioneered a new technique in operation and control today.
+2004,scenarios.json,news.body,The Gibraltar Institute of Technology showcased a system competitive with humans at operation and control.
+2005,scenarios.json,news.headline,German engineers pioneered a new technique in deal with unpleasant or angry people today.
+2006,scenarios.json,news.body,Robotics researchers at the German Institute of Technology pioneered a new technique in deal with unpleasant or angry people today.
+2007,scenarios.json,news.headline,Saint Helenian researchers pioneered a new technique in face-to-face discussions today.
+2008,scenarios.json,news.body,The Saint Helenian Institute of Technology showcased a system competitive with humans at face-to-face discussions.
+2009,scenarios.json,news.headline,U.S. Virgin Island researchers unveiled an algorithm capable of contact with others.
+2010,scenarios.json,news.body,Robotics researchers at the U.S. Virgin Island Institute of Technology pioneered a new technique in contact with others today.
+2011,scenarios.json,news.headline,Belizean scientists unveiled an algorithm capable of auditory attention.
+2012,scenarios.json,news.body,Robotics researchers at the Belizean Institute of Technology pioneered a new technique in auditory attention today.
+2013,scenarios.json,news.headline,Bouvet Island scientists pioneered a new technique in physical proximity today.
+2014,scenarios.json,news.body,A new algorithm from The Bouvet Island Institute of Technology performs physical proximity like a human.
+2015,scenarios.json,news.headline,Slovene engineers performs repairing and maintaining mechanical equipment like a human.
+2016,scenarios.json,news.body,The Slovene Institute of Technology showcased a system competitive with humans at repairing and maintaining mechanical equipment.
+2017,scenarios.json,news.headline,"Antarctic scientists pioneered a new technique in outdoors, exposed to weather today."
+2018,scenarios.json,news.body,"A new algorithm from The Antarctic Institute of Technology performs outdoors, exposed to weather like a human."
+2019,scenarios.json,news.headline,Norwegian engineers unveiled an algorithm capable of responsibility for outcomes and results.
+2020,scenarios.json,news.body,Robotics researchers at the Norwegian Institute of Technology pioneered a new technique in responsibility for outcomes and results today.
+2021,scenarios.json,news.headline,Cambodian engineers performs dynamic strength like a human.
+2022,scenarios.json,news.body,A new algorithm from The Cambodian Institute of Technology performs dynamic strength like a human.
+2023,scenarios.json,news.headline,"British engineers performs inspecting equipment, structures, or material like a human."
+2024,scenarios.json,news.body,"Robotics researchers at the British Institute of Technology pioneered a new technique in inspecting equipment, structures, or material today."
+2025,scenarios.json,news.headline,Singaporean scientists performs equipment maintenance like a human.
+2026,scenarios.json,news.body,The Singaporean Institute of Technology unveiled an algorithm capable of equipment maintenance.
+2027,scenarios.json,news.headline,Seychellois researchers performs work with work group or team like a human.
+2028,scenarios.json,news.body,The Seychellois Institute of Technology showcased a system competitive with humans at work with work group or team.
+2029,scenarios.json,news.headline,Guinean engineers performs stamina like a human.
+2030,scenarios.json,news.body,Robotics researchers at the Guinean Institute of Technology pioneered a new technique in stamina today.
+2031,scenarios.json,news.headline,São Toméan researchers unveiled an algorithm capable of repairing.
+2032,scenarios.json,news.body,The São Toméan Institute of Technology unveiled an algorithm capable of repairing.
+2033,scenarios.json,news.headline,Emiri scientists pioneered a new technique in selective attention today.
+2034,scenarios.json,news.body,Robotics researchers at the Emiri Institute of Technology pioneered a new technique in selective attention today.
+2035,scenarios.json,news.headline,Taiwanese engineers pioneered a new technique in gross body coordination today.
+2036,scenarios.json,news.body,The Taiwanese Institute of Technology showcased a system competitive with humans at gross body coordination.
+2037,scenarios.json,news.headline,Bahraini engineers performs hearing sensitivity like a human.
+2038,scenarios.json,news.body,The Bahraini Institute of Technology unveiled an algorithm capable of hearing sensitivity.
+2039,scenarios.json,news.headline,Costa Rican engineers unveiled an algorithm capable of glare sensitivity.
+2040,scenarios.json,news.body,The Costa Rican Institute of Technology unveiled an algorithm capable of glare sensitivity.
+2041,scenarios.json,news.headline,"Northern Marianan engineers unveiled an algorithm capable of operating vehicles, mechanized devices, or equipment."
+2042,scenarios.json,news.body,"The Northern Marianan Institute of Technology unveiled an algorithm capable of operating vehicles, mechanized devices, or equipment."
+2043,scenarios.json,news.headline,Central African engineers pioneered a new technique in sound localization today.
+2044,scenarios.json,news.body,Robotics researchers at the Central African Institute of Technology pioneered a new technique in sound localization today.
+2045,scenarios.json,news.headline,Monacan researchers pioneered a new technique in exposed to radiation today.
+2046,scenarios.json,news.body,Robotics researchers at the Monacan Institute of Technology pioneered a new technique in exposed to radiation today.
+2047,scenarios.json,news.headline,Australian scientists performs depth perception like a human.
+2048,scenarios.json,news.body,The Australian Institute of Technology showcased a system competitive with humans at depth perception.
+2049,scenarios.json,news.headline,South Sudanese engineers pioneered a new technique in near vision today.
+2050,scenarios.json,news.body,A new algorithm from The South Sudanese Institute of Technology performs near vision like a human.
+2051,scenarios.json,news.headline,Thai researchers pioneered a new technique in perceptual speed today.
+2052,scenarios.json,news.body,Robotics researchers at the Thai Institute of Technology pioneered a new technique in perceptual speed today.
+2053,scenarios.json,news.headline,Saint-Pierrais scientists performs peripheral vision like a human.
+2054,scenarios.json,news.body,Robotics researchers at the Saint-Pierrais Institute of Technology pioneered a new technique in peripheral vision today.
+2055,scenarios.json,news.headline,Austrian researchers pioneered a new technique in mechanical today.
+2056,scenarios.json,news.body,A new algorithm from The Austrian Institute of Technology performs mechanical like a human.
+2057,scenarios.json,news.headline,Pitcairn Island engineers performs production and processing like a human.
+2058,scenarios.json,news.body,The Pitcairn Island Institute of Technology unveiled an algorithm capable of production and processing.
+2059,scenarios.json,news.headline,Azeri engineers unveiled an algorithm capable of gross body equilibrium.
+2060,scenarios.json,news.body,A new algorithm from The Azeri Institute of Technology performs gross body equilibrium like a human.
+2061,scenarios.json,news.headline,Canadian engineers unveiled an algorithm capable of level of competition.
+2062,scenarios.json,news.body,The Canadian Institute of Technology showcased a system competitive with humans at level of competition.
+2063,scenarios.json,news.headline,Antarctic scientists unveiled an algorithm capable of night vision.
+2064,scenarios.json,news.body,The Antarctic Institute of Technology unveiled an algorithm capable of night vision.
+2065,scenarios.json,news.headline,Gabonese engineers performs duration of typical work week like a human.
+2066,scenarios.json,news.body,The Gabonese Institute of Technology unveiled an algorithm capable of duration of typical work week.
+2067,scenarios.json,news.headline,Somalilander researchers performs spatial orientation like a human.
+2068,scenarios.json,news.body,A new algorithm from The Somalilander Institute of Technology performs spatial orientation like a human.
+2069,scenarios.json,news.headline,British Virgin Island engineers pioneered a new technique in quality control analysis today.
+2070,scenarios.json,news.body,A new algorithm from The British Virgin Island Institute of Technology performs quality control analysis like a human.
+2071,scenarios.json,news.headline,Montserratian engineers unveiled an algorithm capable of coordinate or lead others.
+2072,scenarios.json,news.body,The Montserratian Institute of Technology showcased a system competitive with humans at coordinate or lead others.
+2073,scenarios.json,news.headline,Swati scientists pioneered a new technique in deal with physically aggressive people today.
+2074,scenarios.json,news.body,The Swati Institute of Technology showcased a system competitive with humans at deal with physically aggressive people.
+2075,scenarios.json,news.headline,Burmese researchers unveiled an algorithm capable of visual color discrimination.
+2076,scenarios.json,news.body,The Burmese Institute of Technology unveiled an algorithm capable of visual color discrimination.
+2077,scenarios.json,news.headline,Finnish engineers performs repairing and maintaining electronic equipment like a human.
+2078,scenarios.json,news.body,A new algorithm from The Finnish Institute of Technology performs repairing and maintaining electronic equipment like a human.
+2079,scenarios.json,news.headline,Bosnian scientists unveiled an algorithm capable of deal with external customers.
+2080,scenarios.json,news.body,The Bosnian Institute of Technology showcased a system competitive with humans at deal with external customers.
+2081,scenarios.json,news.headline,Yemeni researchers pioneered a new technique in far vision today.
+2082,scenarios.json,news.body,The Yemeni Institute of Technology showcased a system competitive with humans at far vision.
+2083,scenarios.json,news.headline,Guinean scientists performs telephone like a human.
+2084,scenarios.json,news.body,A new algorithm from The Guinean Institute of Technology performs telephone like a human.
+2085,scenarios.json,news.headline,Maltese scientists performs dynamic flexibility like a human.
+2086,scenarios.json,news.body,A new algorithm from The Maltese Institute of Technology performs dynamic flexibility like a human.
+2087,scenarios.json,news.headline,British scientists pioneered a new technique in building and construction today.
+2088,scenarios.json,news.body,The British Institute of Technology showcased a system competitive with humans at building and construction.
+2089,scenarios.json,news.headline,Christmas Island scientists performs transportation like a human.
+2090,scenarios.json,news.body,The Christmas Island Institute of Technology showcased a system competitive with humans at transportation.
+2091,scenarios.json,news.headline,Puerto Rican scientists unveiled an algorithm capable of spend time sitting.
+2092,scenarios.json,news.body,A new algorithm from The Puerto Rican Institute of Technology performs spend time sitting like a human.
+2093,scenarios.json,news.headline,"Singaporean engineers unveiled an algorithm capable of monitor processes, materials, or surroundings."
+2094,scenarios.json,news.body,"The Singaporean Institute of Technology showcased a system competitive with humans at monitor processes, materials, or surroundings."
+2095,scenarios.json,news.headline,Georgian scientists performs food production like a human.
+2096,scenarios.json,news.body,The Georgian Institute of Technology showcased a system competitive with humans at food production.
+2097,scenarios.json,news.headline,Honduran engineers performs public safety and security like a human.
+2098,scenarios.json,news.body,The Honduran Institute of Technology unveiled an algorithm capable of public safety and security.
+2099,scenarios.json,news.headline,Bouvet Island scientists performs time sharing like a human.
+2100,scenarios.json,news.body,A new algorithm from The Bouvet Island Institute of Technology performs time sharing like a human.
+2101,scenarios.json,news.headline,Ecuadorian researchers unveiled an algorithm capable of exposed to disease or infections.
+2102,scenarios.json,news.body,The Ecuadorian Institute of Technology showcased a system competitive with humans at exposed to disease or infections.
+2103,scenarios.json,news.headline,Russian scientists performs visualization like a human.
+2104,scenarios.json,news.body,The Russian Institute of Technology showcased a system competitive with humans at visualization.
+2105,scenarios.json,news.headline,Ivorian scientists performs letters and memos like a human.
+2106,scenarios.json,news.body,A new algorithm from The Ivorian Institute of Technology performs letters and memos like a human.
+2107,scenarios.json,news.headline,Namibian engineers pioneered a new technique in explosive strength today.
+2108,scenarios.json,news.body,The Namibian Institute of Technology unveiled an algorithm capable of explosive strength.
+2109,scenarios.json,news.headline,"Laotian researchers unveiled an algorithm capable of drafting, laying out, and specifying technical devices, parts, and equipment."
+2110,scenarios.json,news.body,"A new algorithm from The Laotian Institute of Technology performs drafting, laying out, and specifying technical devices, parts, and equipment like a human."
+2111,skillGroups.json,name,Cognitive Abilities
+2112,skillGroups.json,name,Psychomotor Abilities
+2113,skillGroups.json,name,Physical Abilities
+2114,skillGroups.json,name,Sensory Abilities
+2115,skillGroups.json,name,Content
+2116,skillGroups.json,name,Process
+2117,skillGroups.json,name,Social Skills
+2118,skillGroups.json,name,Complex Problem Solving Skills
+2119,skillGroups.json,name,Technical Skills
+2120,skillGroups.json,name,Systems Skills
+2121,skillGroups.json,name,Resource Management Skills
+2122,skillGroups.json,name,Business and Management
+2123,skillGroups.json,name,Manufacturing and Production
+2124,skillGroups.json,name,Engineering and Technology
+2125,skillGroups.json,name,Mathematics and Science
+2126,skillGroups.json,name,Health Services
+2127,skillGroups.json,name,Arts and Humanities
+2128,skillGroups.json,name,Law and Public Safety
+2129,skillGroups.json,name,Communications
+2130,skillGroups.json,name,Information Input
+2131,skillGroups.json,name,Mental Processes
+2132,skillGroups.json,name,Work Output
+2133,skillGroups.json,name,Interacting With Others
+2134,skillGroups.json,name,Interpersonal Relationships
+2135,skillGroups.json,name,Physical Work Conditions
+2136,skills.json,name,Oral Comprehension
+2137,skills.json,name,Written Comprehension
+2138,skills.json,name,Oral Expression
+2139,skills.json,name,Written Expression
+2140,skills.json,name,Fluency of Ideas
+2141,skills.json,name,Originality
+2142,skills.json,name,Problem Sensitivity
+2143,skills.json,name,Deductive Reasoning
+2144,skills.json,name,Inductive Reasoning
+2145,skills.json,name,Information Ordering
+2146,skills.json,name,Category Flexibility
+2147,skills.json,name,Mathematical Reasoning
+2148,skills.json,name,Number Facility
+2149,skills.json,name,Memorization
+2150,skills.json,name,Speed of Closure
+2151,skills.json,name,Flexibility of Closure
+2152,skills.json,name,Perceptual Speed
+2153,skills.json,name,Spatial Orientation
+2154,skills.json,name,Visualization
+2155,skills.json,name,Selective Attention
+2156,skills.json,name,Time Sharing
+2157,skills.json,name,Arm-Hand Steadiness
+2158,skills.json,name,Manual Dexterity
+2159,skills.json,name,Finger Dexterity
+2160,skills.json,name,Control Precision
+2161,skills.json,name,Multilimb Coordination
+2162,skills.json,name,Response Orientation
+2163,skills.json,name,Rate Control
+2164,skills.json,name,Reaction Time
+2165,skills.json,name,Wrist-Finger Speed
+2166,skills.json,name,Speed of Limb Movement
+2167,skills.json,name,Static Strength
+2168,skills.json,name,Explosive Strength
+2169,skills.json,name,Dynamic Strength
+2170,skills.json,name,Trunk Strength
+2171,skills.json,name,Stamina
+2172,skills.json,name,Extent Flexibility
+2173,skills.json,name,Dynamic Flexibility
+2174,skills.json,name,Gross Body Coordination
+2175,skills.json,name,Gross Body Equilibrium
+2176,skills.json,name,Near Vision
+2177,skills.json,name,Far Vision
+2178,skills.json,name,Visual Color Discrimination
+2179,skills.json,name,Night Vision
+2180,skills.json,name,Peripheral Vision
+2181,skills.json,name,Depth Perception
+2182,skills.json,name,Glare Sensitivity
+2183,skills.json,name,Hearing Sensitivity
+2184,skills.json,name,Auditory Attention
+2185,skills.json,name,Sound Localization
+2186,skills.json,name,Speech Recognition
+2187,skills.json,name,Speech Clarity
+2188,skills.json,name,Required Level of Education
+2189,skills.json,name,Related Work Experience
+2190,skills.json,name,On-Site or In-Plant Training
+2191,skills.json,name,On-the-Job Training
+2192,skills.json,name,Realistic
+2193,skills.json,name,Investigative
+2194,skills.json,name,Artistic
+2195,skills.json,name,Social
+2196,skills.json,name,Enterprising
+2197,skills.json,name,Conventional
+2198,skills.json,name,First Interest High-Point
+2199,skills.json,name,Second Interest High-Point
+2200,skills.json,name,Third Interest High-Point
+2201,skills.json,name,Administration and Management
+2202,skills.json,name,Clerical
+2203,skills.json,name,Economics and Accounting
+2204,skills.json,name,Sales and Marketing
+2205,skills.json,name,Customer and Personal Service
+2206,skills.json,name,Personnel and Human Resources
+2207,skills.json,name,Production and Processing
+2208,skills.json,name,Food Production
+2209,skills.json,name,Computers and Electronics
+2210,skills.json,name,Engineering and Technology
+2211,skills.json,name,Design
+2212,skills.json,name,Building and Construction
+2213,skills.json,name,Mechanical
+2214,skills.json,name,Mathematics
+2215,skills.json,name,Physics
+2216,skills.json,name,Chemistry
+2217,skills.json,name,Biology
+2218,skills.json,name,Psychology
+2219,skills.json,name,Sociology and Anthropology
+2220,skills.json,name,Geography
+2221,skills.json,name,Medicine and Dentistry
+2222,skills.json,name,Therapy and Counseling
+2223,skills.json,name,Education and Training
+2224,skills.json,name,English Language
+2225,skills.json,name,Foreign Language
+2226,skills.json,name,Fine Arts
+2227,skills.json,name,History and Archeology
+2228,skills.json,name,Philosophy and Theology
+2229,skills.json,name,Public Safety and Security
+2230,skills.json,name,Law and Government
+2231,skills.json,name,Telecommunications
+2232,skills.json,name,Communications and Media
+2233,skills.json,name,Transportation
+2234,skills.json,name,Reading Comprehension
+2235,skills.json,name,Active Listening
+2236,skills.json,name,Writing
+2237,skills.json,name,Speaking
+2238,skills.json,name,Science
+2239,skills.json,name,Critical Thinking
+2240,skills.json,name,Active Learning
+2241,skills.json,name,Learning Strategies
+2242,skills.json,name,Monitoring
+2243,skills.json,name,Social Perceptiveness
+2244,skills.json,name,Coordination
+2245,skills.json,name,Persuasion
+2246,skills.json,name,Negotiation
+2247,skills.json,name,Instructing
+2248,skills.json,name,Service Orientation
+2249,skills.json,name,Complex Problem Solving
+2250,skills.json,name,Operations Analysis
+2251,skills.json,name,Technology Design
+2252,skills.json,name,Equipment Selection
+2253,skills.json,name,Installation
+2254,skills.json,name,Programming
+2255,skills.json,name,Operation Monitoring
+2256,skills.json,name,Operation and Control
+2257,skills.json,name,Equipment Maintenance
+2258,skills.json,name,Troubleshooting
+2259,skills.json,name,Repairing
+2260,skills.json,name,Quality Control Analysis
+2261,skills.json,name,Judgment and Decision Making
+2262,skills.json,name,Systems Analysis
+2263,skills.json,name,Systems Evaluation
+2264,skills.json,name,Time Management
+2265,skills.json,name,Management of Financial Resources
+2266,skills.json,name,Management of Material Resources
+2267,skills.json,name,Management of Personnel Resources
+2268,skills.json,name,Getting Information
+2269,skills.json,name,"Monitoring processes, materials, and surroundings"
+2270,skills.json,name,"Identifying Objects, Actions, and Events"
+2271,skills.json,name,"Inspecting equipment, structures, and material"
+2272,skills.json,name,"Estimating the Quantifiable Characteristics of Products, Events, or Information"
+2273,skills.json,name,"Judging the Qualities of Things, Services, or People"
+2274,skills.json,name,Processing Information
+2275,skills.json,name,Standards compliance
+2276,skills.json,name,Analyzing data and information
+2277,skills.json,name,Making Decisions and Solving Problems
+2278,skills.json,name,Thinking Creatively
+2279,skills.json,name,Updating and Using Relevant Knowledge
+2280,skills.json,name,Developing Objectives and Strategies
+2281,skills.json,name,Scheduling Work and Activities
+2282,skills.json,name,"Organizing, Planning, and Prioritizing Work"
+2283,skills.json,name,Performing General Physical Activities
+2284,skills.json,name,Handling and Moving Objects
+2285,skills.json,name,Controlling Machines and Processes
+2286,skills.json,name,Operating vehicles and equipment
+2287,skills.json,name,Interacting With Computers
+2288,skills.json,name,Working with technical devices
+2289,skills.json,name,Repairing and Maintaining Mechanical Equipment
+2290,skills.json,name,Repairing and Maintaining Electronic Equipment
+2291,skills.json,name,Documenting/Recording Information
+2292,skills.json,name,Interpreting the Meaning of Information for Others
+2293,skills.json,name,"Communicating with Supervisors, Peers, or Subordinates"
+2294,skills.json,name,Communicating with Persons Outside Organization
+2295,skills.json,name,Establishing and Maintaining Interpersonal Relationships
+2296,skills.json,name,Assisting and Caring for Others
+2297,skills.json,name,Selling and influencing others
+2298,skills.json,name,Resolving Conflicts and Negotiating with Others
+2299,skills.json,name,Performing for or Working Directly with the Public
+2300,skills.json,name,Coordinating the Work and Activities of Others
+2301,skills.json,name,Developing and Building Teams
+2302,skills.json,name,Training and Teaching Others
+2303,skills.json,name,"Guiding, Directing, and Motivating Subordinates"
+2304,skills.json,name,Coaching and Developing Others
+2305,skills.json,name,Provide Consultation and Advice to Others
+2306,skills.json,name,Performing Administrative Activities
+2307,skills.json,name,Staffing Organizational Units
+2308,skills.json,name,Monitoring and Controlling Resources
+2309,skills.json,name,Public Speaking
+2310,skills.json,name,Telephone
+2311,skills.json,name,Electronic Mail
+2312,skills.json,name,Writing letters and memos
+2313,skills.json,name,Face-to-Face Discussions
+2314,skills.json,name,Contact With Others
+2315,skills.json,name,Working with a team
+2316,skills.json,name,Dealing with external customers
+2317,skills.json,name,Coordination and leading others
+2318,skills.json,name,Being responsible for others' health and safety
+2319,skills.json,name,Being responsible for outcomes
+2320,skills.json,name,Frequency of Conflict Situations
+2321,skills.json,name,Dealing with unpleasant or angry people
+2322,skills.json,name,Dealing with physically aggressive people
+2323,skills.json,name,"Indoors, Environmentally Controlled"
+2324,skills.json,name,Enduring environmentally unstable indoors
+2325,skills.json,name,Enduring outdoor weather
+2326,skills.json,name,"Outdoors, Under Cover"
+2327,skills.json,name,Operating open vehicles and equipment
+2328,skills.json,name,In an Enclosed Vehicle or Equipment
+2329,skills.json,name,Physical Proximity
+2330,skills.json,name,Enduring uncomfortable sounds
+2331,skills.json,name,Enduring very hot and cold temperatures
+2332,skills.json,name,Enduring very bright and dim lighting
+2333,skills.json,name,Enduring contaminants
+2334,skills.json,name,"Cramped Work Space, Awkward Positions"
+2335,skills.json,name,Enduring whole body vibrations
+2336,skills.json,name,Enduring radiation
+2337,skills.json,name,Enduring diesase or infection
+2338,skills.json,name,Enduring high places
+2339,skills.json,name,Enduring hazardous conditions
+2340,skills.json,name,Enduring hazardous equipment
+2341,skills.json,name,Enduring minor injuries
+2342,skills.json,name,Spending time sitting
+2343,skills.json,name,Standing
+2344,skills.json,name,"Climbing ladders, scaffolds, and poles"
+2345,skills.json,name,Walking and running
+2346,skills.json,name,"Kneeling, crouching, and crawling"
+2347,skills.json,name,Keeping and regaining balance
+2348,skills.json,name,"Spend Time Using Your Hands to Handle, Control, or Feel Objects, Tools, or Controls"
+2349,skills.json,name,Bending and twisting the body
+2350,skills.json,name,Making repetitive motions
+2351,skills.json,name,"Wear Common Protective or Safety Equipment such as Safety Shoes, Glasses, Gloves, Hearing Protection, Hard Hats, or Life Jackets"
+2352,skills.json,name,"Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection"
+2353,skills.json,name,Handling consequence of error
+2354,skills.json,name,Impact of Decisions on Co-workers or Company Results
+2355,skills.json,name,Handling frequent decisions
+2356,skills.json,name,Freedom to Make Decisions
+2357,skills.json,name,Degree of Automation
+2358,skills.json,name,Being exact or accurate
+2359,skills.json,name,Repeating the same tasks
+2360,skills.json,name,Structured versus Unstructured Work
+2361,skills.json,name,"Being competitive"
+2362,skills.json,name,Handling time pressure
+2363,skills.json,name,Pace Determined by Speed of Equipment
+2364,skills.json,name,Handling work schedules
+2365,skills.json,name,Duration of Typical Work Week
