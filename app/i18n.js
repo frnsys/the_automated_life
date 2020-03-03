@@ -1,5 +1,5 @@
 const defaultLanguage = 'en';
-const availableLanguages = ['en'];
+const availableLanguages = ['en', 'ar', 'de', 'es', 'fr', 'zh'];
 const getPreferredLanguages = () => {
   if (navigator.languages && navigator.languages.length) {
     return navigator.languages;
@@ -11,7 +11,7 @@ const getPreferredLanguages = () => {
 
 // Get most preferred language that is supported
 // Fallback to 'en' if lang is undefined
-const lang = getPreferredLanguages().filter(l => availableLanguages.includes(l))[0] || 'en';
+const lang = getPreferredLanguages().filter(l => availableLanguages.includes(l))[0] || defaultLanguage;
 
 // Load phrases for language
 let phrases = {};
@@ -26,7 +26,7 @@ function loadLanguage(cb) {
 
 function t(key, data) {
   data = data || {};
-  let tmpl = phrases[key];
+  let tmpl = phrases[key] || key;
   return Object.keys(data).reduce((acc, k) => {
     return acc.replace(`{${k}}`, data[k]);
   }, tmpl);

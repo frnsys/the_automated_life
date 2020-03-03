@@ -68,9 +68,9 @@ function loop(now) {
           type: 'scenario:increment'
         });
 
-        let skillNames = nextRobot.skills.map((s_id) => skills[s_id].name);
+        let skillNames = nextRobot.skills.map((s_id) => t(skills[s_id].name));
         let skillsDesc = [skillNames.slice(0, -1).join(', '), skillNames.slice(-1)[0]]
-          .join(skillNames.length < 2 ? '' : ' and ').toLowerCase();
+          .join(skillNames.length < 2 ? '' : ' & ').toLowerCase();
         notify(`🤖 ${t('robot_release', {
           name: nextRobot.name,
           skills: skillsDesc})
@@ -86,7 +86,7 @@ function loop(now) {
           let job = jobs[n_id.toString()];
           let automated = logic.percentAutomated(job);
           if (automated >= 0.5) {
-            graph.nodes[n_id].anno.innerHTML = `🤖 ${job.name}`;
+            graph.nodes[n_id].anno.innerHTML = `🤖 ${t(job.name)}`;
           }
         });
       }
@@ -96,7 +96,7 @@ function loop(now) {
         if (!r.teased && time.months == r.months - config.newRobotWarningMonths){
           // Skip teasers if game speed is high
           if (window.speedup < 2 && !inSchool) {
-            notify(`💡 ${r.news.headline}`);
+            notify(`💡 ${t(r.news.headline)}`);
           }
           store.dispatch({
             type: 'scenario:teased',
@@ -203,7 +203,7 @@ function loop(now) {
               type: 'player:hire',
               payload: job
             });
-            notify(`🎉 ${t('hired', {name: job.name})}`,
+            notify(`🎉 ${t('hired', {name: t(job.name)})}`,
               '', {background: '#1fd157', color: '#fff'});
             log('hired', {job: job.id, time: logTime});
             graph.reveal(player.application.id);
@@ -211,7 +211,7 @@ function loop(now) {
           // Rejected
           } else {
             notify(`😞 ${t('rejected',
-              {name: job.name, mainFactor: player.application.mainFactor})}`,
+              {name: t(job.name), mainFactor: player.application.mainFactor})}`,
               '', {background: '#ea432a', color: '#fff'});
             log('rejected', {job: job.id, time: logTime});
             graph.resetNodeColor(graph.appliedNode, player);

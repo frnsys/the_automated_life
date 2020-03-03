@@ -39,7 +39,7 @@ class StartMenu extends Component {
           return <li
             key={id}
             onClick={() => this.setState({selectedJob: id})}
-            className={this.state.selectedJob == id ? 'selected' : ''}>{jobs[id].name}</li>;
+            className={this.state.selectedJob == id ? 'selected' : ''}>{t(jobs[id].name)}</li>;
         })}
       </ul>
       <div className='button' onClick={this.startGame.bind(this)}>{t('select_starting_job_button')}</div>

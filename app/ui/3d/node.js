@@ -7,7 +7,7 @@ class Node {
   constructor(x, y, size, color, data) {
     this.x = x;
     this.y = y;
-    this.data= data || {};
+    this.data = data || {};
 
     this.geometry = makeHexagon(x, y, size);
     this.mesh = new THREE.Mesh(this.geometry, material);

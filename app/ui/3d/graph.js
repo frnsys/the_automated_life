@@ -5,7 +5,6 @@ import * as THREE from 'three';
 import skills from 'data/skills.json'
 import logic from '../../logic';
 import store from 'store';
-import jobs from 'data/jobs.json';
 import education from 'data/education.json';
 import config from 'config';
 
@@ -86,7 +85,7 @@ const tooltip = (job) => {
   return `
     <div class="job-tooltip">
       ${applied ? `<div class="job-applied">${t('application_out')}</div>` : ''}
-      <h3>${automated >= 0.5 ? '🤖 ' : ''}${job.name}${jobAnno}</h3>
+      <h3>${automated >= 0.5 ? '🤖 ' : ''}${t(job.name)}${jobAnno}</h3>
       <h5>
         <div>
           $${Math.round(job.wageAfterTaxes/12).toLocaleString()}/${t('month_unit')}
@@ -94,13 +93,13 @@ const tooltip = (job) => {
         </div>
         ${config.jobSatisfaction ? `<div class="job-satisfaction" style='background:${satisfactionColor};'>${satisfactionLevel}</div>` : ''}
       </h5>
-      <div class="job-industries">${job.industries.map((ind) => `<div>${config.industryIcons[ind]} ${ind.replace(' (Except Public Administration)', '')}</div>`).join(' ')}</div>
+      <div class="job-industries">${job.industries.map((ind) => `<div>${config.industryIcons[ind]} ${t(ind.replace(' (Except Public Administration)', ''))}</div>`).join(' ')}</div>
       <div class="job-status">
         <div class="job-risk job-risk-${risk}">${t('automation_risk')}: ${risk}</div>
         <div class="job-automated">${(automated*100).toFixed(0)}% ${t('percent_automated')}</div>
       </div>
       <div class="job-skills">
-        <h5><span>${t('important_skills')}</span> <span>≥ 🎓 ${education[job.bestEducation].name}</span></h5>
+        <h5><span>${t('important_skills')}</span> <span>≥ 🎓 ${t(education[job.bestEducation].name)}</span></h5>
         <ul>
           ${requiredSkills.map((s) => {
             let risk = t('low');
@@ -109,7 +108,7 @@ const tooltip = (job) => {
             } else if (s.automatibility >= 0.4) {
               risk = t('moderate');
             }
-            return `<li class="automation-${risk}">${automatedSkills.includes(s.id) ? `<div class="automated"><div>${t('automated')}</div></div>` : ''}${s.name} <div class="skill-level-bar"><div class="skill-level-bar-fill" style="height:${player.skills[s.id] * 100}%;"></div></div></li>`;
+            return `<li class="automation-${risk}">${automatedSkills.includes(s.id) ? `<div class="automated"><div>${t('automated')}</div></div>` : ''}${t(s.name)} <div class="skill-level-bar"><div class="skill-level-bar-fill" style="height:${player.skills[s.id] * 100}%;"></div></div></li>`;
           }).join('')}
         </ul>
         <div class="job-legend">
@@ -155,7 +154,7 @@ function makeLine(points) {
 }
 
 class Graph {
-  constructor(jobs, nodeSize) {
+  constructor(nodeSize) {
     this.nodeSize = nodeSize;
     this.group = new THREE.Group();
     this.locked = false;
@@ -173,7 +172,9 @@ class Graph {
       let origin = new Node(0, 0, this.nodeSize, 0x000000);
       this.group.add(origin.mesh);
     }
+  }
 
+  init(jobs) {
     // Create mapping of job_id->node
     this.nodes = Object.keys(jobs).map(id => {
       let j = jobs[id];
@@ -233,7 +234,7 @@ class Graph {
 
       const anno = document.createElement('div');
       anno.classList.add('annotation');
-      anno.innerHTML = j.name;
+      anno.innerHTML = t(j.name);
 
       // node positions seem to become off
       // the further from the origin,
@@ -290,7 +291,6 @@ class Graph {
         });
       }
     });
-
 
     // All nodes are interactable
     this.interactables = Object.values(this.nodes).map(n => n.mesh);
@@ -481,7 +481,7 @@ class Graph {
 
 
 const nodeSize = 6;
-const graph = new Graph(jobs, nodeSize);
+const graph = new Graph(nodeSize);
 
 // For exporting job-job network
 // let network = Object.keys(graph.edges).reduce((acc, id) => {

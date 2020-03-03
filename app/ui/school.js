@@ -27,13 +27,13 @@ class IndustryPrograms extends Component {
   render() {
     let ind = this.props.industry;
     return <div>
-      <h3 className='industry-name' onClick={() => this.setState({open: !this.state.open})}><span className='industry-arrow'>{this.state.open ? '▼' : '▶'}</span> {ind}</h3>
+      <h3 className='industry-name' onClick={() => this.setState({open: !this.state.open})}><span className='industry-arrow'>{this.state.open ? '▼' : '▶'}</span> {t(ind)}</h3>
       <ul style={{display: this.state.open ? 'block' : 'none'}}>
         {programs[ind].map((p, i) => {
           return <li key={i} onClick={() => this.props.onClick(p)}>
             <div className='program' style={{background: this.props.selected == p ? '#7efc82' : 'none'}}>
-              <h5>{toTitleCase(jobs[p.job.toString()].name)} <span className='muted'>{t('years_duration', {years: p.years})}</span></h5>
-              <span className='program-name'>{t('study_program', {name: p.name})}</span>
+              <h5>{toTitleCase(t(jobs[p.job.toString()].name))} <span className='muted'>{t('years_duration', {years: p.years})}</span></h5>
+              <span className='program-name'>{t('study_program', {name: t(p.name)})}</span>
             </div>
           </li>;
         })}
@@ -153,7 +153,7 @@ class School extends Component {
 			body = (
 				<div>
           <div className='item-box'>
-            <div><b>{t('next_level')}:</b> {nextLevel.name}</div>
+            <div><b>{t('next_level')}:</b> {t(nextLevel.name)}</div>
             {(!secondary || this.state.selectedProgram) ?
               <div><b>{t('school_cost')}:</b> ${totalCost.toLocaleString()}{totalCostWageMonths}</div>
                 : ''}

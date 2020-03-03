@@ -37,7 +37,7 @@ const Skill = (props) => {
   return <li className={`automation-${risk}`} key={s_id}>
     {props.automated ? <div className="automated"><div>{t('automated')}</div></div> : ''}
     {props.improving ? improvingArrow : ''}
-    {s.name}
+    {t(s.name)}
     <div className="skill-level-bar">
       <div className="skill-level-bar-fill" style={{height:`${props.skills[s.id] * 100}%`}}></div>
     </div>
@@ -63,7 +63,7 @@ class Skills extends Component {
         <p className="skills-info">{t('skills_info')}</p>
         {skillGroups.map((group) => {
           return (<div key={group.name}>
-            <h4>{group.name}</h4>
+            <h4>{t(group.name)}</h4>
             <ul className="skill-group">
               {group.skills.map((s_id) => <Skill s_id={s_id}
                 skills={this.props.skills}

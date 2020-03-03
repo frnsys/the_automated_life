@@ -60,15 +60,15 @@ const HUD = (props) => {
         {t('monthly_expenses', {amount: (props.player.expenses.living + props.player.expenses.debt).toLocaleString()})}
       </div>
       <Stat name={t('stat_education')}>
-        🎓 {education[props.player.education].name}
+        🎓 {t(education[props.player.education].name)}
       </Stat>
       {inSchool ?
           <div className='stat-hint'>{t('school_remaining', {months: props.player.schoolCountdown})}</div> : ''}
       <Stat name={t('stat_current_job')}>
-        🛠️ {props.player.job.name}
+        🛠️ {t(props.player.job.name == 'Unemployed' ? 'unemployed_notice' : props.player.job.name)}
       </Stat>
       {props.player.application ?
-          <div className='stat-hint'>{t('application_notice', {name: props.jobs[props.player.application.id].name})}</div> : ''}
+          <div className='stat-hint'>{t('application_notice', {name: t(props.jobs[props.player.application.id].name)})}</div> : ''}
       <div className='hud-children'>
         {props.children}
       </div>
