@@ -5,7 +5,7 @@ stat_wage,الأجر الشهري
 stat_education,المستوى التعليمي
 stat_current_job,الوظيفة الحالية
 month_unit,شهر
-school_remaining,في المدرسة {months} شهر/أشهر إضافية 
+school_remaining,في المدرسة {months} شهر/أشهر إضافية
 application_notice,تطبق على {name}
 living_expenses,${amount} العيش
 debt_expenses,${amount} الديون
@@ -143,3 +143,4 @@ consent_submit_button,إرسال
 news_title,خبر عاجل
 bad_performance_warning,لقد سجلت أداء سيئًا للغاية منذ{months} شهور/شهرًا. سيتم طردك إن لم تحسن من أدائك.
 fired,لقد تم طردك بسبب أدائك.
+Student,طالب علم
