@@ -3,7 +3,7 @@ import redis
 import config
 import hashlib
 import geocoder
-from datastore import db, get_meta, save_meta, append_log, get_logs, save_summary, get_summary
+from datastore import db, get_meta, save_meta, append_log, get_logs, save_summary, get_summary, get_summaries
 from collections import defaultdict
 from flask import Flask, request, jsonify, render_template, abort
 from sentry_sdk.integrations.flask import FlaskIntegration
@@ -22,6 +22,28 @@ with app.app_context():
     db.configure_mappers()
     db.create_all()
 
+def aggregate_statistics():
+    # Load summaries
+    summaries = get_summaries()
+    aggs = defaultdict(lambda: defaultdict(int))
+    for data in summaries:
+        aggs['n_jobs']['sum'] += len(data['jobs'])
+        aggs['n_jobs']['total'] += 1
+        aggs['wins']['sum'] += int(data['success'])
+        aggs['wins']['total'] += 1
+        aggs['n_applied']['sum'] += data['nApplied']
+        aggs['n_applied']['total'] += 1
+        aggs['n_rejected']['sum'] += data['nRejected']
+        aggs['n_rejected']['total'] += 1
+        aggs['loans']['sum'] += data['loans']
+        aggs['loans']['total'] += 1
+
+    for stat in list(aggs.keys()):
+        aggs[stat] = aggs[stat]['sum']/aggs[stat]['total']
+
+    # Compute aggregate stats
+    redis.set('fow:aggregate', json.dumps(aggs))
+    return aggs
 
 @app.route('/')
 def game():
@@ -74,6 +96,7 @@ def log():
             'result': logs['gameEnd'][-1] if logs['gameEnd'] else None
         }
         save_summary(id, summary)
+        aggregate_statistics()
 
     return jsonify(success=True)
 

@@ -11,7 +11,6 @@
 # Architecture
 
 - Flask server coordinates logging and game summary calculations, mainly as an interface to Redis
-    - Aggregate game stats are calculated by Celery regularly
 
 # Configuration
 
