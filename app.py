@@ -3,7 +3,7 @@ import redis
 import config
 import hashlib
 import geocoder
-from datastore import db, get_meta, save_meta, append_log, get_logs, save_summary, get_summary, get_summaries
+from datastore import db, get_meta, save_meta, append_log, get_logs, save_summary, get_summary, get_summaries, Meta, Log, Summary
 from collections import defaultdict
 from flask import Flask, request, jsonify, render_template, abort
 from sentry_sdk.integrations.flask import FlaskIntegration
@@ -117,5 +117,55 @@ def summary(id):
         agg = {}
     return jsonify(summary=summary, aggregate=agg)
 
+
+@app.route('/data/logs')
+def logs():
+    auth_key = request.headers.get('X-AUTH')
+    if auth_key != config.AUTH_KEY:
+        abort(401)
+
+    logs = Log.query.all()
+    logs = [{
+        'id': l.id,
+        'session': l.session,
+        'timestamp': l.timestamp,
+        'data': json.loads(l.data)
+    } for l in logs]
+    return jsonify(data=logs)
+
+
+@app.route('/data/summaries')
+def summaries():
+    auth_key = request.headers.get('X-AUTH')
+    if auth_key != config.AUTH_KEY:
+        abort(401)
+
+    summaries = Summary.query.all()
+    summaries = [{
+        'id': l.id,
+        'session': l.session,
+        'timestamp': l.timestamp,
+        'data': json.loads(l.data)
+    } for l in summaries]
+    return jsonify(data=summaries)
+
+
+@app.route('/data/meta')
+def meta():
+    auth_key = request.headers.get('X-AUTH')
+    if auth_key != config.AUTH_KEY:
+        abort(401)
+    metas = Meta.query.all()
+    metas = [{
+        'session': m.session,
+        'ip_hash': m.ip_hash,
+        'lat_lng': [m.lat, m.lng],
+        'city': m.city,
+        'state': m.state,
+        'country': m.country
+    } for m in metas]
+    return jsonify(data=metas)
+
+
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8000, debug=True)
+    app.run(host='0.0.0.0', port=8080, debug=True)

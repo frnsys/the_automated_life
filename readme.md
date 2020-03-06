@@ -33,3 +33,10 @@ Other debug options, specified as URL params:
 - `perfect`: always get hired at jobs you apply to
 - `highschool`: start with a high school education
 - `gameover`: immediately game over (for testing post-game results and survey)
+
+# Accessing data
+
+```
+curl -H "X-AUTH: <key>" https://foo/data/{logs,summaries,meta}
+```
+
