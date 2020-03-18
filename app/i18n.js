@@ -1,5 +1,8 @@
+const params = new URLSearchParams(window.location.search);
+
 const defaultLanguage = 'en';
 const availableLanguages = ['en', 'ar', 'de', 'es', 'fr', 'zh'];
+const rtl = ['ar'];
 const getPreferredLanguages = () => {
   if (navigator.languages && navigator.languages.length) {
     return navigator.languages;
@@ -9,9 +12,17 @@ const getPreferredLanguages = () => {
   }
 }
 
+// Get specified language, if one is
 // Get most preferred language that is supported
 // Fallback to 'en' if lang is undefined
-const lang = getPreferredLanguages().filter(l => availableLanguages.includes(l))[0] || defaultLanguage;
+let lang = params.get('lang') || getPreferredLanguages().filter(l => availableLanguages.includes(l))[0] || defaultLanguage;
+if (!availableLanguages.includes(lang)) {
+  lang = defaultLanguage;
+}
+
+if (rtl.includes(lang)) {
+  document.body.style.direction = 'rtl';
+}
 
 // Load phrases for language
 let phrases = {};
