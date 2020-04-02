@@ -31,4 +31,4 @@ for lang in LANGS:
         data[row.value] = df.loc[i]['value']
 
     with open('../static/lang/{}.json'.format(lang), 'w') as f:
-        json.dump(data, f)
+        json.dump(data, f, sort_keys=True, indent=4)
