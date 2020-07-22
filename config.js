@@ -9,6 +9,24 @@ function shuffle(a) {
 }
 
 let startingJobs = [643, 721, 333, 717];
+// let startingJobs = [147]; // Utilities
+// let startingJobs = [17]; // Transportation and Warehousing
+// let startingJobs = [13]; // Agriculture, Forestry, Fishing, and Hunting
+// let startingJobs = [48]; // Retail Trade
+// let startingJobs = [158]; // Real Estate and Rental and Leasing
+// let startingJobs = [0]; // Professional, Scientific, and Technical Services
+// let startingJobs = [49]; // Other Services (Except Public Administration)
+// let startingJobs = [146]; // Mining, Quarrying, and Oil and Gas Extraction
+// let startingJobs = [2]; // Manufacturing
+// let startingJobs = [123]; // Management of Companies and Enterprises
+// let startingJobs = [7]; // Information
+// let startingJobs = [22]; // Health Care and Social Assistance'
+// let startingJobs = [1]; // Finance and Insurance
+// let startingJobs = [4]; // Educational Services
+// let startingJobs = [66]; // Construction
+// let startingJobs = [10]; // Arts, Entertainment, and Recreation
+// let startingJobs = [59]; // Administrative and Support Services
+// let startingJobs = [53]; // Accommodation and Food Services
 shuffle(startingJobs);
 
 export default {
@@ -39,15 +57,15 @@ export default {
   subsidyPercent: 0.5,
 
   industryIcons: {
-    'Professional, Scientific, and Technical Services': '📝',
+    'Professional, Scientific, and Technical Services': '🔬',
     'Finance and Insurance': '💵',
     'Manufacturing': '🏭',
     'Government': '🏛️',
-    'Educational Services': '🏫',
+    'Educational Services': '📚',
     'Health Care and Social Assistance': '🏥',
     'Information': '🖥️',
     'Arts, Entertainment, and Recreation': '🎭',
-    'Agriculture, Forestry, Fishing, and Hunting': '🌽',
+    'Agriculture, Forestry, Fishing, and Hunting': '🌲',
     'Wholesale Trade': '📦',
     'Transportation and Warehousing': '🚚',
     'Other Services (Except Public Administration)': '🅾️',

@@ -7,6 +7,9 @@ import logic from '../../logic';
 import store from 'store';
 import education from 'data/education.json';
 import config from 'config';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+
+const loader = new GLTFLoader();
 
 const topNSkills = 9;
 const topNNeighbors = 6;
@@ -32,6 +35,7 @@ const satisfactionColors = [
   '#e09e41',
   '#ed4731'
 ];
+
 
 const tooltip = (job) => {
   let {player, robots} = store.getState();
@@ -232,6 +236,9 @@ class Graph {
       // All hidden by default
       node.mesh.visible = false;
 
+      // Use first industry for node job
+      node.industry = j.industries[0];
+
       const anno = document.createElement('div');
       anno.classList.add('annotation');
       anno.innerHTML = t(j.name);
@@ -359,6 +366,7 @@ class Graph {
     // Set outward edges to visible,
     // and color neighboring nodes
     let focusNode = this.nodes[job_id];
+
     let bounds = {
       left: focusNode.x,
       top: focusNode.y,
@@ -377,6 +385,7 @@ class Graph {
     focusNode.anno.style.display = 'block';
     focusNode.setColor(focusedColor);
     focusNode.mesh.position.setZ(2);
+    this.showIconForNode(focusNode);
 
     this.onReveal(focusNode, bounds, center);
   }
@@ -396,6 +405,7 @@ class Graph {
       let node = this.nodes[neighb];
       node.mesh.visible = true;
       node.anno.style.display = 'block';
+      this.showIconForNode(node);
 
       // Determine bounding box
       if (node.x < bounds.left) {
@@ -474,6 +484,34 @@ class Graph {
         } else {
           edge.material = defaultLineMat;
         }
+      }
+    }
+  }
+
+  showIconForNode(node) {
+    if (node.industry) {
+      let slug = node.industry.toLowerCase().replace(/[,()]/g, '').replace(/ /g, '_');
+      if (!node.icon) {
+        loader.load(`/static/models/${slug}.gltf`, (gltf, mat) => {
+          let child = gltf.scene.children[0];
+          child.material.flatShading = true;
+          child.material.fog = false;
+          child.material.metalness = 0;
+          child.material.map.generateMipmaps = false;
+          child.material.map.magFilter = THREE.NearestFilter;
+          child.material.map.minFilter = THREE.NearestFilter;
+          child.material.needsUpdate = true;
+          child.material.emissive = {r: 0.05, g: 0.05, b: 0.05};
+          child.scale.set(6.5,6.5,6.5);
+          child.rotation.y = -Math.PI/4
+          child.rotation.x = Math.PI/8 // or Math.PI/4?
+          child.position.set(node.x, node.y+3, 6.5);
+          window.testchild = child; // TODO
+          node.icon = child;
+          this.group.add(child);
+        });
+      } else {
+        node.icon.visible = true;
       }
     }
   }
