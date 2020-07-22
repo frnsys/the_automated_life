@@ -36,8 +36,13 @@ class GameOver extends Component {
       <div className='game-over-overlay'>
         <div className='game-over-alert'>
           <div>
-            <h2>{props.icon} {t('game_over_notice')}</h2>
-            {props.text}
+            <div className="game-over-title">
+              <div><img src={`/static/gifs/${props.icon}.gif`} /></div>
+              <div>
+                <h2>{t('game_over_notice')}</h2>
+                {props.text}
+              </div>
+            </div>
             <div id="chart"></div>
             <div id="chart-tooltip"></div>
             <div className="comparisons">

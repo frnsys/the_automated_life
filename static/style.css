@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 
 canvas {
   cursor: grab;
@@ -9,7 +9,7 @@ body {
   overflow: hidden;
   margin: 0;
   padding: 0;
-  font-family: 'Arimo', 'Helvetiva', sans-serif;
+  font-family: 'Source Sans Pro', 'Helvetica', sans-serif;
   background: #eee;
 }
 
@@ -643,7 +643,7 @@ ul {
 
 .game-over-overlay {
   position: fixed;
-  z-index: 100;
+  z-index: 100000;
   top: 0;
   bottom: 0;
   right: 0;
@@ -722,7 +722,7 @@ ul {
   background: #395be5;
   color: #fff;
   font-weight: bold;
-  font-family: 'Arimo', 'Helvetica', sans-serif;
+  font-family: 'Source Sans Pro', 'Helvetica', sans-serif;
   padding: 0.25em 0.5em;
   cursor: pointer;
 }
@@ -752,6 +752,16 @@ ul {
 .game-over-survey .form-radio-group label:hover {
   background: #395be5;
   color: #fff;
+}
+.game-over-title {
+  display: flex;
+  padding: 1em 1em 0em 0;
+  background: #f2f2ff;
+  border: 1px solid #d9d9f7;
+}
+.game-over-title img {
+  max-width: 120px;
+  margin-right: 2em;
 }
 
 .button {
@@ -796,7 +806,7 @@ ul {
   margin-bottom: 0.25em;
 }
 
-.news {
+.news, .milestone {
   max-height: 80vh;
 }
 .news-opt-out {
@@ -806,4 +816,11 @@ ul {
 .news h1 {
   font-style: italic;
   margin: 0.2em 0 0.5em 0;
+}
+
+.milestone {
+  text-align: center;
+}
+.milestone img {
+  max-width: 120px;
 }

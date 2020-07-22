@@ -174,6 +174,7 @@ function reducer(state={}, action) {
         graph.unlock();
       }
 
+      milestone(t('graduated'), '', 'graduated');
       notify(`🎓 ${t('graduated')}`, '', {background: '#1fd157', color: '#fff'});
 
       // Set full performance
@@ -227,6 +228,7 @@ function reducer(state={}, action) {
       if (state.badPerformanceStreak >= config.maxBadPerformanceStreak + 1) {
         state.job = unemployed;
         state.wasFired = true;
+        milestone(t('fired'), '', 'fired');
         notify(`📉 ${t('fired')}`, '', {background: '#ea432a', color: '#fff', fontWeight: 'bold'});
 
         // Reset

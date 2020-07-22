@@ -14,6 +14,7 @@ import {Notifications, history} from './notifs';
 import React, { Component } from 'react';
 import Tutorial from './tutorial';
 import News from './news';
+import Milestone from './milestone';
 
 Modal.setAppElement('#main');
 const customStyles = {
@@ -101,6 +102,18 @@ class App extends Component {
           }
         }});
       }
+    }
+
+    // Hack to show milestone modals elsewhere
+    window.milestone = (title, text, icon) => {
+      this.setState({modal: Milestone, modalIsOpen: true, modalData: {
+        title: title,
+        text: text,
+        icon: icon,
+        close: () => {
+          this.closeModal();
+        }
+      }});
     }
 
     document.addEventListener('keydown', (ev) => {
