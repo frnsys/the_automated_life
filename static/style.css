@@ -300,14 +300,14 @@ ul {
   font-size: 0.9em;
 }
 
-.tutorial {
+.reference {
   max-height: 80vh;
   overflow-y: scroll;
 }
-.tutorial h2 {
+.reference h2 {
   margin: 0;
 }
-.tutorial .button, .news .button {
+.reference .button, .news .button {
   margin: 1em 0;
 }
 .game-goal {

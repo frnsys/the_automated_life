@@ -2,7 +2,7 @@ import t from 'i18n';
 import config from 'config';
 import React, { Component } from 'react';
 
-class Tutorial extends Component {
+class Reference extends Component {
   startGame() {
     this.props.togglePause();
     this.props.closeModal();
@@ -15,7 +15,7 @@ class Tutorial extends Component {
   }
 
   render() {
-    return <div className='tutorial'>
+    return <div className='reference'>
       <h2>{t('how_to_play_title')}</h2>
       <p className='game-goal'><b>{t('start_goal', {
         age: config.retirementAge,
@@ -27,4 +27,4 @@ class Tutorial extends Component {
   }
 }
 
-export default Tutorial;
+export default Reference;

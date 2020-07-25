@@ -6,7 +6,7 @@ import graph from './3d/graph';
 import config from 'config';
 import store from 'store';
 import jobs from 'data/jobs.json'
-import Tutorial from './tutorial';
+import Reference from './reference';
 
 class StartMenu extends Component {
   static requireChoice = true;
@@ -26,7 +26,7 @@ class StartMenu extends Component {
     graph.reveal(this.state.selectedJob, true);
     loop();
     log('started', {job: this.state.selectedJob});
-    this.props.closeModal(Tutorial);
+    this.props.closeModal(Reference);
   }
 
   render() {

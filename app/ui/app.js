@@ -12,7 +12,7 @@ import ReactTooltip from 'react-tooltip'
 import {GameOver, GameOverSurvey} from './gameOver';
 import {Notifications, history} from './notifs';
 import React, { Component } from 'react';
-import Tutorial from './tutorial';
+import Reference from './reference';
 import News from './news';
 import Milestone from './milestone';
 
@@ -189,7 +189,7 @@ class App extends Component {
 
         <div className='hud-area'>
           <div className='time-controls'>
-            <div className='time-button' onClick={() => this.setState({modal: Tutorial, modalIsOpen: true})}>?</div>
+            <div className='time-button' onClick={() => this.setState({modal: Reference, modalIsOpen: true})}>?</div>
             <div className='time-button' onClick={this.togglePause.bind(this)}>
               {this.state.paused ? t('resume_button') : t('pause_button')}
             </div>
