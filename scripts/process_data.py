@@ -234,7 +234,8 @@ for idx, job in jobs.items():
     job['similar'] = [int(id) for id in similar]
 
 # Skill-automation exposure
-df = pd.read_csv('../data/src/orderedOnetSkillsByComputerization.csv')
+df = pd.read_csv('../data/src/cf/task_SML.csv')
+import ipdb; ipdb.set_trace()
 automatibility = {}
 for row in tqdm(df.itertuples()):
     i = skills_inv[row.Skill]
