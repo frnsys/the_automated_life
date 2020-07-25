@@ -127,3 +127,17 @@ export default {
   twoHops: params.includes('twoHops'),
   jobSatisfaction: params.includes('jobSatisfaction')
 };
+
+const tutorial = [{
+  tooltip: {
+    position: null, // TODO
+    text: 'foo'
+  },
+  completion: () => {}
+}, {
+  tooltip: {
+    position: null, // TODO
+    text: 'foo'
+  },
+  completion: null
+}];
