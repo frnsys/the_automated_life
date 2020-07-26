@@ -2,6 +2,8 @@
 
 canvas {
   cursor: grab;
+  position: relative;
+  z-index: 1;
 }
 
 html,
@@ -32,6 +34,7 @@ ul {
   position: absolute;
   font-size: 0.3em;
   line-height: 1;
+  pointer-events: none;
 }
 
 .job-status {
@@ -300,14 +303,14 @@ ul {
   font-size: 0.9em;
 }
 
-.tutorial {
+.reference {
   max-height: 80vh;
   overflow-y: scroll;
 }
-.tutorial h2 {
+.reference h2 {
   margin: 0;
 }
-.tutorial .button, .news .button {
+.reference .button, .news .button {
   margin: 1em 0;
 }
 .game-goal {
@@ -354,6 +357,7 @@ ul {
 }
 .hud .button.disabled {
   background: #aaa;
+  pointer-events: none;
 }
 
 .hud-progress {
@@ -823,4 +827,39 @@ ul {
 }
 .milestone img {
   max-width: 120px;
+}
+
+.pregame .help-hint,
+.tutorial--active .help-hint {
+  display: none;
+}
+.hud-progress,
+.hud-area,
+.work-area,
+.time-controls {
+  display: none;
+}
+.tutorial--tooltip {
+  position: absolute;
+  background: #fff;
+  border: 1px solid black;
+  padding: 0.5em;
+  min-width: 210px;
+  z-index: 10;
+}
+.tutorial--tooltip b {
+  color: #395BE5;
+}
+.tutorial--tooltip-next {
+  margin-top: 1em;
+}
+#annotations .tutorial--tooltip {
+  font-size: 0.75em;
+  min-width: 200px;
+}
+.tutorial--skip {
+  color: #888;
+  cursor: pointer;
+  margin: 0.75em 0 0 0;
+  text-align: right;
 }

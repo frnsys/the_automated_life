@@ -58,7 +58,7 @@ class InteractionLayer {
       let mesh = intersects[0].object,
           pos = intersects[0].point,
           obj = mesh.obj;
-      if (obj.data.tooltip) {
+      if (obj.data.tooltip && mesh.visible) {
         tooltip.style.display = 'block';
         tooltip.style.left = `${ev.pageX + 5}px`;
         let top = ev.pageY + 5;

@@ -6,6 +6,7 @@ import graph from './3d/graph';
 import config from 'config';
 import store from 'store';
 import jobs from 'data/jobs.json'
+// import Reference from './reference';
 import Tutorial from './tutorial';
 
 class StartMenu extends Component {
@@ -26,7 +27,14 @@ class StartMenu extends Component {
     graph.reveal(this.state.selectedJob, true);
     loop();
     log('started', {job: this.state.selectedJob});
-    this.props.closeModal(Tutorial);
+    this.props.closeModal();
+
+    // Hack to advance the tutorial throughout the game
+    setTimeout(() => {
+      this.props.togglePause();
+      let tutorial = new Tutorial(this.props.togglePause);
+    }, 250);
+    document.body.classList.remove('pregame');
   }
 
   render() {

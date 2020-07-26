@@ -221,6 +221,14 @@ function reducer(state={}, action) {
 
       return {...state}
 
+    // Create task manually (for tutorial)
+    case 'player:newTask':
+      [...Array(action.payload).keys()].forEach(() => {
+        let taskType = math.pickRandom(state.job.pattern);
+        state.tasks.push(taskType);
+      });
+      return {...state}
+
     case 'player:evaluatePerformance':
       if (state.performance <= 10) {
         state.badPerformanceStreak += 1;

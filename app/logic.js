@@ -80,9 +80,9 @@ function jobProficiency(job, player) {
   return proficiency;
 }
 
-window.testJob = {skills: {0: 1}, skillsTotal: 1};
-window.testPlayer = {skills: {}};
-window.TESTING = jobProficiency;
+// window.testJob = {skills: {0: 1}, skillsTotal: 1};
+// window.testPlayer = {skills: {}};
+// window.TESTING = jobProficiency;
 
 // Probability of being hired for a job
 function probabilityForJob(job) {
