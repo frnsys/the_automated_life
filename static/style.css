@@ -34,6 +34,7 @@ ul {
   position: absolute;
   font-size: 0.3em;
   line-height: 1;
+  pointer-events: none;
 }
 
 .job-status {
@@ -853,9 +854,12 @@ ul {
   margin-top: 1em;
 }
 #annotations .tutorial--tooltip {
-  font-size: 0.5em;
-  min-width: 160px;
+  font-size: 0.75em;
+  min-width: 200px;
 }
-.annotation {
-  pointer-events: none;
+.tutorial--skip {
+  color: #888;
+  cursor: pointer;
+  margin: 0.75em 0 0 0;
+  text-align: right;
 }

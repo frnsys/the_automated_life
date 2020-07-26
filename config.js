@@ -108,7 +108,7 @@ export default {
   baseWorkPerClick: 8,
   slackPerFrame: 0.025,
   maxTasks: 40,
-  taskProb: 0.05,
+  taskProb: 0.125,
   taskColors: [
     '#EA432A',
     '#666df9',
@@ -183,7 +183,19 @@ export default {
           left: `${node.x * (node.x > 0 ? 1.04 : 1.01)}px`
         };
       },
-      text: 'Your current job is connected to other jobs that you can <b>apply</b> to. Jobs you can apply to connected by a green line.\nClick on a job to apply to it. The job you are currently applying to will be highlighted in yellow.',
+      text: 'Your current job is connected to other jobs that you can <b>apply</b> to. Jobs you can apply to connected by a <b>green line</b>.',
+      parent: '#annotations'
+    }
+  }, {
+    tooltip: {
+      position: (player, graph) => {
+        let node = graph.nodes[player.job.id];
+        return {
+          top: `${-node.y-30}px`,
+          left: `${node.x * (node.x > 0 ? 1.04 : 1.01)}px`
+        };
+      },
+      text: '<b>Click</b> on a job to apply to it. The job you are currently applying to will be <b>highlighted in yellow</b>.',
       parent: '#annotations'
     }
   }, {
@@ -287,6 +299,9 @@ export default {
       },
       text: 'If you get stuck, don\'t worry. You can <b>pause</b> at any time and review the game instructions. Good luck!',
       parent: '.hud-area'
+    },
+    onCompletion: () => {
+      document.querySelector('.hud-children .button:last-child').classList.remove('disabled')
     }
   }]
 };

@@ -5,7 +5,8 @@ import store from '../store';
 import graph from './3d/graph';
 
 class Tutorial {
-  constructor() {
+  constructor(togglePause) {
+    this.togglePause = togglePause;
     document.body.classList.add('tutorial--active');
     this.setStep(0);
   }
@@ -13,6 +14,14 @@ class Tutorial {
   startGame() {
     log('finished-tutorial', {});
     document.body.classList.remove('tutorial--active');
+
+    // Create some starting tasks
+    store.dispatch({
+      type: 'player:newTask',
+      payload: 8
+    });
+
+    this.togglePause();
   }
 
   get step() {
@@ -44,7 +53,12 @@ class Tutorial {
     });
 
     let ok = document.createElement('div');
-    ok.innerText = t('next');
+
+    if (this._step == config.tutorial.length - 1) {
+      ok.innerText = t('start_button');
+    } else {
+      ok.innerText = t('next');
+    }
     ok.classList.add('button');
     ok.classList.add('tutorial--tooltip-next');
     ok.addEventListener('click', () => {
@@ -52,11 +66,22 @@ class Tutorial {
     });
     el.appendChild(ok);
 
+    if (this._step == 0) {
+      let skip = document.createElement('div');
+      skip.innerText = t('skip_tutorial');
+      skip.classList.add('tutorial--skip');
+      skip.addEventListener('click', () => {
+        this.skip();
+      });
+      el.appendChild(skip);
+    }
+
     if (step.onStart) step.onStart(store);
     this.el = el;
   }
 
   skip() {
+    this.el.parentNode.removeChild(this.el);
     config.tutorial.forEach((step) => {
       if (step.onCompletion) step.onCompletion();
     });
@@ -68,6 +93,9 @@ class Tutorial {
       if (this.step.onCompletion) this.step.onCompletion();
       this.el.parentNode.removeChild(this.el);
       this.setStep(this._step + 1);
+    }
+    if (this._step == config.tutorial.length) {
+      this.startGame();
     }
   }
 }
