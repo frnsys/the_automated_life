@@ -231,7 +231,7 @@ export default {
           left: `${node.x * (node.x > 0 ? 1.04 : 1.01)}px`
         };
       },
-      text: 'You can view a job\'s <b>risk of automation</b> by <b>hovering</b> over it. Jobs that are <b>over 90% automated</b> will be marked with 🤖.',
+      text: 'You can view a job\'s <b>risk of automation</b> by <b>hovering</b> over it. Jobs that are <b>over 50% automated</b> will be marked with 🤖.',
       parent: '#annotations'
     },
     onCompletion: () => {

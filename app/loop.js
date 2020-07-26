@@ -81,13 +81,12 @@ function loop(now) {
           skills: skillsDesc})
         }`);
 
-
         // Update graph annotations
         Object.keys(graph.nodes).forEach((n_id) => {
           let job = jobs[n_id.toString()];
           let automated = logic.percentAutomated(job);
           if (automated >= 0.5) {
-            graph.nodes[n_id].anno.innerHTML = `🤖 ${t(job.name)}`;
+            graph.nodes[n_id].anno.innerHTML = `${t(job.name)} 🤖`;
           }
         });
       }
