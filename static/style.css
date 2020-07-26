@@ -2,6 +2,8 @@
 
 canvas {
   cursor: grab;
+  position: relative;
+  z-index: 1;
 }
 
 html,
@@ -354,6 +356,7 @@ ul {
 }
 .hud .button.disabled {
   background: #aaa;
+  pointer-events: none;
 }
 
 .hud-progress {
@@ -823,4 +826,36 @@ ul {
 }
 .milestone img {
   max-width: 120px;
+}
+
+.pregame .help-hint,
+.tutorial--active .help-hint {
+  display: none;
+}
+.hud-progress,
+.hud-area,
+.work-area,
+.time-controls {
+  display: none;
+}
+.tutorial--tooltip {
+  position: absolute;
+  background: #fff;
+  border: 1px solid black;
+  padding: 0.5em;
+  min-width: 210px;
+  z-index: 10;
+}
+.tutorial--tooltip b {
+  color: #395BE5;
+}
+.tutorial--tooltip-next {
+  margin-top: 1em;
+}
+#annotations .tutorial--tooltip {
+  font-size: 0.5em;
+  min-width: 160px;
+}
+.annotation {
+  pointer-events: none;
 }

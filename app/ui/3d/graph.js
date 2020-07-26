@@ -169,7 +169,6 @@ class Graph {
     this.annos.id = 'annotations';
     this.annos.style.position = 'absolute';
     this.annos.style.zIndex = '1';
-    this.annos.style.pointerEvents = 'none';
     document.body.appendChild(this.annos);
 
     if (config.debug) {
@@ -187,7 +186,7 @@ class Graph {
 
         // Click on job node to apply to job
         onClick: () => {
-          if (window.paused || this.locked) return;
+          if (this.locked) return;
           let {player} = store.getState();
           let valid = false;
           if (this.focusedNodeId) {

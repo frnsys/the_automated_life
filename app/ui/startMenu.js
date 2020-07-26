@@ -27,7 +27,14 @@ class StartMenu extends Component {
     graph.reveal(this.state.selectedJob, true);
     loop();
     log('started', {job: this.state.selectedJob});
-    this.props.closeModal(Tutorial);
+    this.props.closeModal();
+
+    // Hack to advance the tutorial throughout the game
+    setTimeout(() => {
+      this.props.togglePause();
+      let tutorial = new Tutorial(this.props.togglePause);
+    }, 250);
+    document.body.classList.remove('pregame');
   }
 
   render() {

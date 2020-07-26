@@ -125,19 +125,168 @@ export default {
   testGameOver: params.includes('gameover'),
   schoolSubsidies: params.includes('subsidy'),
   twoHops: params.includes('twoHops'),
-  jobSatisfaction: params.includes('jobSatisfaction')
-};
+  jobSatisfaction: params.includes('jobSatisfaction'),
 
-const tutorial = [{
-  tooltip: {
-    position: null, // TODO
-    text: 'foo'
-  },
-  completion: () => {}
-}, {
-  tooltip: {
-    position: null, // TODO
-    text: 'foo'
-  },
-  completion: null
-}];
+  tutorial: [{
+    tooltip: {
+      position: (player, graph) => {
+        let node = graph.nodes[player.job.id];
+        return {
+          top: `${-node.y-30}px`,
+          left: `${node.x * (node.x > 0 ? 1.04 : 1.01)}px`
+        };
+      },
+      text: 'Welcome to The Automated Life. This is your current job. You can <b>hover</b> over it for more details.',
+      parent: '#annotations'
+    },
+    onCompletion: () => {
+      document.querySelector('.work-area').style.display = 'block';
+    }
+  }, {
+    tooltip: {
+      position: {
+        top: '0px',
+        right: '110%'
+      },
+      text: 'To avoid being fired you need to do your job. <b>Click on "Work" tasks</b> according to the color pattern on the left.',
+      parent: '.work-area'
+    },
+    onStart: (store) => {
+      store.dispatch({
+        type: 'player:newTask',
+        payload: 8
+      });
+      // Effectively pause the game, but running so tasks register
+      window.paused = false;
+      window.speedup = 0.00001;
+    },
+  }, {
+    tooltip: {
+      position: {
+        top: '0px',
+        right: '110%'
+      },
+      text: 'Maintaining good <b>performance</b> also helps with applying to new jobs.',
+      parent: '.work-area'
+    },
+    onCompletion: () => {
+      window.paused = true;
+      window.speedup = 1;
+      document.querySelector('.work-area').style.display = 'block';
+    }
+  }, {
+    tooltip: {
+      position: (player, graph) => {
+        let node = graph.nodes[player.job.id];
+        return {
+          top: `${-node.y-30}px`,
+          left: `${node.x * (node.x > 0 ? 1.04 : 1.01)}px`
+        };
+      },
+      text: 'Your current job is connected to other jobs that you can <b>apply</b> to. Jobs you can apply to connected by a green line.\nClick on a job to apply to it. The job you are currently applying to will be highlighted in yellow.',
+      parent: '#annotations'
+    }
+  }, {
+    tooltip: {
+      position: (player, graph) => {
+        let node = graph.nodes[player.job.id];
+        return {
+          top: `${-node.y-30}px`,
+          left: `${node.x * (node.x > 0 ? 1.04 : 1.01)}px`
+        };
+      },
+      text: 'Jobs have different <b>skill and education requirements</b> that influence your chance of being hired. You can <b>hover over the job</b> to see these requirements.',
+      parent: '#annotations'
+    }
+  }, {
+    tooltip: {
+      position: (player, graph) => {
+        let node = graph.nodes[player.job.id];
+        return {
+          top: `${-node.y-30}px`,
+          left: `${node.x * (node.x > 0 ? 1.04 : 1.01)}px`
+        };
+      },
+      text: 'Over time skills will become <b>automated</b>, lowering wages. Try to be strategic about what jobs you apply to and try to <b>escape automation</b>.',
+      parent: '#annotations'
+    }
+  }, {
+    tooltip: {
+      position: (player, graph) => {
+        let node = graph.nodes[player.job.id];
+        return {
+          top: `${-node.y-30}px`,
+          left: `${node.x * (node.x > 0 ? 1.04 : 1.01)}px`
+        };
+      },
+      text: 'You can view a job\'s <b>risk of automation</b> by <b>hovering</b> over it. Jobs that are <b>over 90% automated</b> will be marked with 🤖.',
+      parent: '#annotations'
+    },
+    onCompletion: () => {
+      document.querySelector('.hud-area').style.display = 'block';
+    }
+  }, {
+    tooltip: {
+      position: {
+        top: '0px',
+        left: '110%'
+      },
+      text: 'Here you can find details about your character, including <b>current savings</b> (🏦), <b>income</b> (💸), and <b>education</b> (🎓).',
+      parent: '.hud-area'
+    },
+    onStart: (store) => {
+      document.querySelector('.hud-children .button:last-child').classList.add('disabled')
+    }
+  }, {
+    tooltip: {
+      position: {
+        top: '0px',
+        left: '110%'
+      },
+      text: 'You can also view your current <b>skill proficiencies</b> and <b>enroll into education</b> programs.',
+      parent: '.hud-area'
+    }
+  }, {
+    tooltip: {
+      position: {
+        top: '0px',
+        left: '110%'
+      },
+      text: 'Your <b>monthly expenses</b> are also shown. These increase with <b>inflation</b> and as you accumulate <b>debt</b>.',
+      parent: '.hud-area'
+    },
+    onCompletion: () => {
+      document.querySelector('.hud-progress').style.display = 'block';
+    }
+  }, {
+    tooltip: {
+      position: {
+        bottom: '0px',
+        left: '110%'
+      },
+      text: 'Your goal is to <b>retire at {age} with ${savings} saved</b>. You can track your progress here.',
+      parent: '.hud-progress'
+    }
+  }, {
+    tooltip: {
+      position: {
+        bottom: '0px',
+        left: '110%'
+      },
+      text: 'You lose if you <b>run out of time</b> or <b>reach ${debtLimit} in debt</b>.',
+      parent: '.hud-progress'
+    },
+    onCompletion: () => {
+      document.querySelector('.time-controls').style.display = 'flex';
+    }
+  }, {
+    tooltip: {
+      position: {
+        top: '0px',
+        left: '110%'
+      },
+      text: 'If you get stuck, don\'t worry. You can <b>pause</b> at any time and review the game instructions. Good luck!',
+      parent: '.hud-area'
+    }
+  }]
+};
