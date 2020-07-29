@@ -297,7 +297,7 @@ export default {
         top: '0px',
         left: '110%'
       },
-      text: 'If you get stuck, don\'t worry. You can <b>pause</b> at any time and review the game instructions. Good luck!',
+      text: 'If you get stuck, don\'t worry. You can <b>pause</b> or press the spacebar at any time and review the game instructions. Good luck!',
       parent: '.hud-area'
     },
     onCompletion: () => {
