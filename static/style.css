@@ -850,6 +850,9 @@ ul {
 .tutorial--tooltip b {
   color: #395BE5;
 }
+.tutorial--tooltip button {
+  max-width: none;
+}
 .tutorial--tooltip-next {
   margin-top: 1em;
 }
@@ -860,6 +863,7 @@ ul {
 .tutorial--skip {
   color: #888;
   cursor: pointer;
-  margin: 0.75em 0 0 0;
+  margin: 0.25em 0 0 0;
   text-align: right;
+  font-size: 0.85em;
 }
