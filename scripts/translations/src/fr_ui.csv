@@ -22,9 +22,9 @@ game_over_notice,Game Over
 game_over_debt,Vous avez accumulé trop de dettes.
 game_over_win,Vous avez survécu avec succès à l'automatisation et vous êtes arrivé à la retraite.
 game_over_lose,Vous n'avez pas été en mesure d'épargner suffisamment pour prendre votre retraite.
-game_over_thanks,Merci d'avoir joué à The Automated World. Merci de prendre un moment pour remplir ce sondage.
-game_over_win_share,J'ai évité l'automatisation dans ü§ñ The Automated World üåé!
-game_over_lose_share,Je n'ai pas réussi à échapper à l'automatisation dans ü§ñ The Automated World üåé.
+game_over_thanks,Merci d'avoir joué à The Automated Life. Merci de prendre un moment pour remplir ce sondage.
+game_over_win_share,J'ai évité l'automatisation dans ü§ñ The Automated Life üåé!
+game_over_lose_share,Je n'ai pas réussi à échapper à l'automatisation dans ü§ñ The Automated Life üåé.
 game_over_lose_summary_result,Vous n'avez pas réussi. {percent}% des joueurs non plus.
 game_over_win_summary_result,Vous avez réussi. {percent}% des joueurs aussi.
 likert_0,Pas du tout d'accord
@@ -105,7 +105,7 @@ school_cost,"Coût, y compris les frais de subsistance"
 after_subsidy,Coût après subvention
 subsidy_note,Vous bénéficiez d'une subvention à l'éducation qui couvre {subsidy}% de vos dépenses.
 school_postsecondary_note,"Les diplômes post-secondaires n'ouvriront pas de nouvelles parties du graphique des emplois, mais ils faciliteront l'embauche pour des emplois plus avancés."
-start_welcome,Bienvenue dans The Automated World !
+start_welcome,Bienvenue dans The Automated Life!
 start_intro,Ce jeu est une exploration de la mobilité professionnelle contre la prolifération de l'automatisation. Votre premier emploi comporte un risque élevé d'automatisation. Essayez de vous retrouver dans un emploi relativement à l'abri de l'automatisation.
 start_goal,Votre objectif est de prendre votre retraite à l'âge de {age} avec un pécule de ${savings}.
 select_starting_job,Sélectionnez votre emploi de départ

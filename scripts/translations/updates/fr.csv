@@ -1578,13 +1578,13 @@
 1576,fully_educated,Le système éducatif vous a appris tout ce qu'il peut.,
 1577,game_over_debt,Vous avez accumulé trop de dettes.,
 1578,game_over_lose,Vous n'avez pas été en mesure d'épargner suffisamment pour prendre votre retraite.,
-1579,game_over_lose_share,Je n'ai pas réussi à échapper à l'automatisation dans 🤖 The Automated World 🌎.,
+1579,game_over_lose_share,Je n'ai pas réussi à échapper à l'automatisation dans 🤖 The Automated Life 🌎.,
 1580,game_over_lose_summary_result,Vous n'avez pas réussi. {percent}% des joueurs non plus.,Vous n'avez pas réussi. % des joueurs non plus.
 1581,game_over_notice,Game Over,
-1582,game_over_thanks,Merci d'avoir joué à The Automated World. Merci de prendre un moment pour remplir ce sondage.,
+1582,game_over_thanks,Merci d'avoir joué à The Automated Life. Merci de prendre un moment pour remplir ce sondage.,
 1583,game_over_warning,"Vous êtes très endetté. Si vous atteignez un endettement de ${amount}, vous perdrez le jeu.",
 1584,game_over_win,Vous avez survécu avec succès à l'automatisation et vous êtes arrivé à la retraite.,
-1585,game_over_win_share,J'ai évité l'automatisation dans 🤖 The Automated World 🌎!,
+1585,game_over_win_share,J'ai évité l'automatisation dans 🤖 The Automated Life 🌎!,
 1586,game_over_win_summary_result,Vous avez réussi. {percent}% des joueurs aussi.,Vous avez réussi. % des joueurs aussi.
 1587,graduated,Félicitations ! Vous avez obtenu votre diplôme.,
 1588,high,élevé,
@@ -1653,7 +1653,7 @@
 1651,start_button,Démarrer,
 1652,start_goal,Votre objectif est de prendre votre retraite à l'âge de {age} avec un pécule de ${savings}.,Votre objectif est de prendre votre retraite à l'âge de  avec un pécule de $.
 1653,start_intro,Ce jeu est une exploration de la mobilité professionnelle contre la prolifération de l'automatisation. Votre premier emploi comporte un risque élevé d'automatisation. Essayez de vous retrouver dans un emploi relativement à l'abri de l'automatisation.,
-1654,start_welcome,Bienvenue dans The Automated World !,
+1654,start_welcome,Bienvenue dans The Automated Life!,
 1655,stat_age,Âge,
 1656,stat_current_job,Emploi actuel,
 1657,stat_date,Date,
