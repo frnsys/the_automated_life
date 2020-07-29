@@ -66,15 +66,14 @@ class Tutorial {
     });
     el.appendChild(ok);
 
-    if (this._step == 0) {
-      let skip = document.createElement('div');
-      skip.innerText = t('skip_tutorial');
-      skip.classList.add('tutorial--skip');
-      skip.addEventListener('click', () => {
-        this.skip();
-      });
-      el.appendChild(skip);
-    }
+    // Skip tutorial button
+    let skip = document.createElement('div');
+    skip.innerText = t('skip_tutorial');
+    skip.classList.add('tutorial--skip');
+    skip.addEventListener('click', () => {
+      this.skip();
+    });
+    el.appendChild(skip);
 
     if (step.onStart) step.onStart(store);
     this.el = el;
