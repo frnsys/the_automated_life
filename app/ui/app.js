@@ -14,6 +14,7 @@ import {Notifications, history} from './notifs';
 import React, { Component } from 'react';
 import Reference from './reference';
 import News from './news';
+import About from './about';
 import Milestone from './milestone';
 
 Modal.setAppElement('#main');
@@ -204,8 +205,13 @@ class App extends Component {
           </div>: ''}
         </div>
 
-        <div className='notification-history-button' onClick={() => this.setState({modalIsOpen: true, modal: NotificationHistory})}>
-          {t('notification_history_button')}
+        <div className='mini-menu'>
+          <div onClick={() => this.setState({modalIsOpen: true, modal: NotificationHistory})}>
+            {t('notification_history_button')}
+          </div>
+          <div onClick={() => this.setState({modalIsOpen: true, modal: About})}>
+            {t('about')}
+          </div>
         </div>
 
         <div className='work-area'>
