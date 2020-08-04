@@ -136,7 +136,7 @@ export default {
           left: `${node.x * (node.x > 0 ? 1.04 : 1.01)}px`
         };
       },
-      text: 'Welcome to The Automated Life. This is your current job. You can <b>hover</b> over it for more details.',
+      text: 'tutorial_welcome',
       parent: '#annotations'
     },
     onCompletion: () => {
@@ -148,7 +148,7 @@ export default {
         top: '0px',
         right: '110%'
       },
-      text: 'To avoid being fired you need to do your job. <b>Click on "Work" tasks</b> according to the color pattern on the left.',
+      text: 'tutorial_work',
       parent: '.work-area'
     },
     onStart: (store) => {
@@ -166,7 +166,7 @@ export default {
         top: '0px',
         right: '110%'
       },
-      text: 'Maintaining good <b>performance</b> also helps with applying to new jobs.',
+      text: 'tutorial_performance',
       parent: '.work-area'
     },
     onCompletion: () => {
@@ -183,7 +183,7 @@ export default {
           left: `${node.x * (node.x > 0 ? 1.04 : 1.01)}px`
         };
       },
-      text: 'Your current job is connected to other jobs that you can <b>apply</b> to. Jobs you can apply to connected by a <b>green line</b>.',
+      text: 'tutorial_jobs',
       parent: '#annotations'
     }
   }, {
@@ -195,7 +195,7 @@ export default {
           left: `${node.x * (node.x > 0 ? 1.04 : 1.01)}px`
         };
       },
-      text: '<b>Click</b> on a job to apply to it. The job you are currently applying to will be <b>highlighted in yellow</b>.',
+      text: 'tutorial_apply',
       parent: '#annotations'
     }
   }, {
@@ -207,7 +207,7 @@ export default {
           left: `${node.x * (node.x > 0 ? 1.04 : 1.01)}px`
         };
       },
-      text: 'Jobs have different <b>skill and education requirements</b> that influence your chance of being hired. You can <b>hover over the job</b> to see these requirements.',
+      text: 'tutorial_skills',
       parent: '#annotations'
     }
   }, {
@@ -219,7 +219,7 @@ export default {
           left: `${node.x * (node.x > 0 ? 1.04 : 1.01)}px`
         };
       },
-      text: 'Over time skills will become <b>automated</b>, lowering wages. Try to be strategic about what jobs you apply to and try to <b>escape automation</b>.',
+      text: 'tutorial_automation',
       parent: '#annotations'
     }
   }, {
@@ -231,7 +231,7 @@ export default {
           left: `${node.x * (node.x > 0 ? 1.04 : 1.01)}px`
         };
       },
-      text: 'You can view a job\'s <b>risk of automation</b> by <b>hovering</b> over it. Jobs that are <b>over 50% automated</b> will be marked with 🤖.',
+      text: 'tutorial_risk',
       parent: '#annotations'
     },
     onCompletion: () => {
@@ -243,7 +243,7 @@ export default {
         top: '0px',
         left: '110%'
       },
-      text: 'Here you can find details about your character, including <b>current savings</b> (🏦), <b>income</b> (💸), and <b>education</b> (🎓).',
+      text: 'tutorial_hud',
       parent: '.hud-area'
     },
     onStart: (store) => {
@@ -255,7 +255,7 @@ export default {
         top: '0px',
         left: '110%'
       },
-      text: 'You can also view your current <b>skill proficiencies</b> and <b>enroll into education</b> programs.',
+      text: 'tutorial_education',
       parent: '.hud-area'
     }
   }, {
@@ -264,7 +264,7 @@ export default {
         top: '0px',
         left: '110%'
       },
-      text: 'Your <b>monthly expenses</b> are also shown. These increase with <b>inflation</b> and as you accumulate <b>debt</b>.',
+      text: 'tutorial_expenses',
       parent: '.hud-area'
     },
     onCompletion: () => {
@@ -276,7 +276,7 @@ export default {
         bottom: '0px',
         left: '110%'
       },
-      text: 'Your goal is to <b>retire at {age} with ${savings} saved</b>. You can track your progress here.',
+      text: 'tutorial_goal',
       parent: '.hud-progress'
     }
   }, {
@@ -285,7 +285,7 @@ export default {
         bottom: '0px',
         left: '110%'
       },
-      text: 'You lose if you <b>run out of time</b> or <b>reach ${debtLimit} in debt</b>.',
+      text: 'tutorial_lose',
       parent: '.hud-progress'
     },
     onCompletion: () => {
@@ -297,7 +297,7 @@ export default {
         top: '0px',
         left: '110%'
       },
-      text: 'If you get stuck, don\'t worry. You can <b>pause</b> or press the spacebar at any time and review the game instructions. Good luck!',
+      text: 'tutorial_pause',
       parent: '.hud-area'
     },
     onCompletion: () => {
