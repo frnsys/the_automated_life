@@ -234,16 +234,16 @@ for idx, job in jobs.items():
     job['similar'] = [int(id) for id in similar]
 
 # Skill-automation exposure
-df = pd.read_csv('../data/src/cf/task_SML.csv')
-import ipdb; ipdb.set_trace()
+df = pd.read_csv('../data/src/WebbBySkill_Regr.csv')
 automatibility = {}
 for row in tqdm(df.itertuples()):
-    i = skills_inv[row.Skill]
+    i = skills_inv[row.skill]
 
-    # Convert from [-1, 1] to [0, 1]
-    auto = (row.correlation + 1)/2
+    # Average of different scores,
+    # normalize later
+    auto = (row.ai_score + row.software_score + row.robot_score)/3
 
-    name = row.Skill
+    name = row.skill
     name = renamed_skills.get(name, name)
 
     skills[i] = {
@@ -251,6 +251,13 @@ for row in tqdm(df.itertuples()):
         'name': name,
         'automatibility': auto
     }
+
+# Normalize to [0, 1]
+auto_min = min(s['automatibility'] for s in skills.values())
+auto_max = max(s['automatibility'] for s in skills.values())
+for i, skill in skills.items():
+    skill['automatibility'] -= auto_min
+    skill['automatibility'] /= auto_max - auto_min
 
 # Create job graph
 G = nx.Graph()
