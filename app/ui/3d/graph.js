@@ -13,7 +13,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 const loader = new GLTFLoader();
 const iconScale = 6.5;
 
-const topNSkills = 9;
+const topNSkills = 6;
 const topNNeighbors = 6;
 const visitedColor = 0x51728c;
 const unfocusedColor = 0xdfdfdf;
@@ -40,7 +40,7 @@ const mats = {
   }),
   visited: new MeshLineMaterial({
     color: 0xbbbbbb,
-    lineWidth: 2,
+    lineWidth: 1,
     ...common
   }),
   applied: new MeshLineMaterial({
@@ -50,7 +50,7 @@ const mats = {
   }),
   default: new MeshLineMaterial({
     color: unfocusedColor,
-    lineWidth: 2,
+    lineWidth: 1,
     ...common
   })
 };
@@ -124,19 +124,21 @@ const tooltip = (job) => {
 
   return `
     <div class="job-tooltip">
-      ${applied ? `<div class="job-applied">${t('application_out')}</div>` : ''}
-      <h3>${automated >= 0.5 ? '🤖 ' : ''}${t(job.name)}${jobAnno}</h3>
-      <h5>
-        <div>
-          $${Math.round(job.wageAfterTaxes/12).toLocaleString()}/${t('month_unit')}
-          ${wageChange != 0 ? `<span style="font-size:0.8em;opacity:0.7;"><span style="color:${wageChange < 0 ? '#ff0000' : '#39e567'};">${wageChange < 0 ? '-' : '+'}$${Math.abs(wageChange).toLocaleString()}</span> due to automation</span>` : ''}
+      <div class="job-info">
+        ${applied ? `<div class="job-applied">${t('application_out')}</div>` : ''}
+        <h3>${automated >= 0.5 ? '🤖 ' : ''}${t(job.name)}${jobAnno}</h3>
+        <h5>
+          <div>
+            $${Math.round(job.wageAfterTaxes/12).toLocaleString()}/${t('month_unit')}
+            ${wageChange != 0 ? `<span style="font-size:0.8em;opacity:0.7;"><span style="color:${wageChange < 0 ? '#ff0000' : '#39e567'};">${wageChange < 0 ? '-' : '+'}$${Math.abs(wageChange).toLocaleString()}</span> due to automation</span>` : ''}
+          </div>
+          ${config.jobSatisfaction ? `<div class="job-satisfaction" style='background:${satisfactionColor};'>${satisfactionLevel}</div>` : ''}
+        </h5>
+        <div class="job-industries">${job.industries.map((ind) => `<div>${config.industryIcons[ind]} ${t(ind.replace(' (Except Public Administration)', ''))}</div>`).join(' ')}</div>
+        <div class="job-status">
+          <div class="job-risk job-risk-${risk}">${t('automation_risk')}: ${risk}</div>
+          <div class="job-automated">${(automated*100).toFixed(0)}% ${t('percent_automated')}</div>
         </div>
-        ${config.jobSatisfaction ? `<div class="job-satisfaction" style='background:${satisfactionColor};'>${satisfactionLevel}</div>` : ''}
-      </h5>
-      <div class="job-industries">${job.industries.map((ind) => `<div>${config.industryIcons[ind]} ${t(ind.replace(' (Except Public Administration)', ''))}</div>`).join(' ')}</div>
-      <div class="job-status">
-        <div class="job-risk job-risk-${risk}">${t('automation_risk')}: ${risk}</div>
-        <div class="job-automated">${(automated*100).toFixed(0)}% ${t('percent_automated')}</div>
       </div>
       <div class="job-skills">
         <h5><span>${t('important_skills')}</span> <span>≥ 🎓 ${t(education[job.bestEducation].name)}</span></h5>

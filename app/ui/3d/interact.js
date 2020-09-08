@@ -1,11 +1,10 @@
 import * as THREE from 'three';
 const tooltip = document.createElement('div');
 tooltip.classList.add('tooltip');
-tooltip.style.position = 'absolute';
+tooltip.style.position = 'fixed';
 tooltip.style.display = 'none';
-tooltip.style.zIndex = '10000';
+tooltip.style.zIndex = '11';
 tooltip.style.pointerEvents = 'none';
-tooltip.style.background = '#ffffffcc';
 document.body.appendChild(tooltip);
 
 class InteractionLayer {
@@ -63,12 +62,12 @@ class InteractionLayer {
       if (mesh.visible) {
         if (obj.data.tooltip) {
           tooltip.style.display = 'block';
-          tooltip.style.left = `${ev.pageX + 5}px`;
-          let top = ev.pageY + 5;
-          if (tooltip.clientHeight + top > window.innerHeight) {
-            top -= tooltip.clientHeight;
-          }
-          tooltip.style.top = `${top}px`;
+          // tooltip.style.left = `${ev.pageX + 5}px`;
+          // let top = ev.pageY + 5;
+          // if (tooltip.clientHeight + top > window.innerHeight) {
+          //   top -= tooltip.clientHeight;
+          // }
+          // tooltip.style.top = `${top}px`;
           if (typeof obj.data.tooltip === 'function') {
             tooltip.innerHTML = obj.data.tooltip();
           } else {
