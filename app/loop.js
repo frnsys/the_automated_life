@@ -207,6 +207,7 @@ function loop(now) {
             notify(`🎉 ${t('hired', {name: t(job.name)})}`,
               '', {background: '#1fd157', color: '#fff'});
             log('hired', {job: job.id, time: logTime});
+            graph.resetEdgeColor(graph.appliedNode, graph.focusedNodeId);
             graph.appliedNode = null;
             graph.reveal(player.application.id);
 
@@ -217,8 +218,9 @@ function loop(now) {
               '', {background: '#ea432a', color: '#fff'});
             log('rejected', {job: job.id, time: logTime});
             graph.resetNodeColor(graph.appliedNode, player);
-            graph.resetEdgeColor(graph.focusedNodeId, graph.appliedNode.data.id);
+            let appliedId = graph.appliedNode.data.id;
             graph.appliedNode = null;
+            graph.resetEdgeColor(graph.focusedNodeId, appliedId);
           }
         }
         store.dispatch({

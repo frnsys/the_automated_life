@@ -16,7 +16,7 @@ const iconScale = 6.5;
 const topNSkills = 6;
 const topNNeighbors = 6;
 const visitedColor = 0x51728c;
-const unfocusedColor = 0xdfdfdf;
+const unfocusedColor = 0xe5e5e5;
 const focusedColor = 0x0e55ef;
 const appliedColor = 0xf9ca2f;
 const neighbColor = 0x4fc6ea;
@@ -529,7 +529,7 @@ class Graph {
       let edge = outEdges[nodeId_];
       let neighbIds = this.focusedNodeId ? Object.keys(this.edges[this.focusedNodeId]) : [];
       if (edge) { // After college, b/c of a jump there may be no edge
-        if (this.appliedNode && (nodeId == this.appliedNode.data.id || nodeId_ == this.appliedNode.data.id)) {
+        if (this.appliedNode && ((nodeId == this.appliedNode.data.id && nodeId_ == this.focusedNodeId) || (nodeId_ == this.appliedNode.data.id && nodeId == this.focusedNodeId))) {
           edge.material = mats.applied;
         } else if (nodeId_ == this.focusedNodeId || nodeId == this.focusedNodeId && neighbIds.includes(nodeId_.toString())) {
           edge.material = mats.focused;
