@@ -46,6 +46,7 @@ class Scene extends Component {
     this.element.appendChild(this.scene.renderer.domElement);
 
     let camera = this.scene.camera;
+    let graph = this.props.graph;
     graph.onReveal = (focusNode, bounds, center) => {
       if (center) {
         camera.position.set(focusNode.x, focusNode.y, camera.position.z);
@@ -54,6 +55,7 @@ class Scene extends Component {
       }
       zoomToFit(bounds, camera, 10);
     };
+    graph.init(this.props.jobs);
     this.scene.add(graph.group);
     this.graph = graph;
 

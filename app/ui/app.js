@@ -16,6 +16,7 @@ import Reference from './reference';
 import News from './news';
 import About from './about';
 import Milestone from './milestone';
+import graph from './3d/graph';
 
 Modal.setAppElement('#main');
 const customStyles = {
@@ -221,7 +222,7 @@ class App extends Component {
           </div> : ''}
         </div>
 
-        <Scene />
+        <Scene jobs={this.props.jobs} graph={graph} />
       </div>
     );
   }

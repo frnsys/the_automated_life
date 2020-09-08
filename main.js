@@ -6,7 +6,6 @@ import {loadLanguage} from './app/i18n';
 import config from './config';
 import store from 'store';
 import jobs from 'data/jobs.json';
-import graph from './app/ui/3d/graph';
 
 function checkGDPR(cb) {
   fetch(`/gdpr`)
@@ -17,11 +16,10 @@ function checkGDPR(cb) {
 }
 
 loadLanguage(() => {
-  graph.init(jobs);
   checkGDPR((gdpr) => {
     render(
       <Provider store={store}>
-        <App gdpr={gdpr || config.forceGdpr} />
+        <App gdpr={gdpr || config.forceGdpr} jobs={jobs} />
       </Provider>,
       document.getElementById('main'));
   });

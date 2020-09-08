@@ -7,6 +7,7 @@ import logic from '../../logic';
 import store from 'store';
 import education from 'data/education.json';
 import config from 'config';
+import {MeshLine,MeshLineMaterial} from 'threejs-meshline';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 const loader = new GLTFLoader();
@@ -19,6 +20,35 @@ const focusedColor = 0x0e55ef;
 const appliedColor = 0xf9ca2f;
 const neighbColor = 0x4fc6ea;
 const distNeighbColor = 0xd7e4e8;
+
+const resolution = new THREE.Vector2(window.innerWidth, window.innerHeight);
+const common = {
+  sizeAttenuation: true,
+  resolution: resolution
+};
+const mats = {
+  focused: new MeshLineMaterial({
+    color: 0x44f48d,
+    lineWidth: 2,
+    ...common
+  }),
+  visited: new MeshLineMaterial({
+    color: 0xbbbbbb,
+    lineWidth: 2,
+    ...common
+  }),
+  applied: new MeshLineMaterial({
+    color: appliedColor,
+    lineWidth: 4,
+    ...common
+  }),
+  default: new MeshLineMaterial({
+    color: unfocusedColor,
+    lineWidth: 2,
+    ...common
+  })
+};
+
 
 const satisfactions = [
   'Achievement',
@@ -130,32 +160,6 @@ const tooltip = (job) => {
   `;
 };
 
-const focusedLineMat = new THREE.LineBasicMaterial({
-  color: 0x44f48d,
-  linewidth: 1
-});
-const visitedLineMat = new THREE.LineBasicMaterial({
-  color: 0xbbbbbb,
-  linewidth: 1
-});
-const appliedLineMat = new THREE.LineBasicMaterial({
-  color: appliedColor,
-  linewidth: 3
-});
-const defaultLineMat = new THREE.LineBasicMaterial({
-  color: unfocusedColor,
-  linewidth: 1
-});
-
-function makeLine(points) {
-  let geo = new THREE.Geometry();
-  points.forEach(p => {
-    let [x, y] = p;
-    let v = new THREE.Vector3(x, y, -1);
-    geo.vertices.push(v);
-  });
-  return new THREE.Line(geo, defaultLineMat);
-}
 
 class Graph {
   constructor(nodeSize) {
@@ -224,7 +228,7 @@ class Graph {
             if (this.focusedNodeId) {
               let edge = this.edges[this.focusedNodeId][id];
               if (edge) {
-                edge.material = appliedLineMat;
+                edge.material = mats.applied;
               }
             }
           }
@@ -271,7 +275,7 @@ class Graph {
         // already created it
         if (!this.edges[id][k] && Object.keys(this.edges[k]).length < topNNeighbors) {
           let m = this.nodes[k];
-          let edgeMesh = makeLine([[n.x, n.y], [m.x, m.y]]);
+          let edgeMesh = this.makeLine([[n.x, n.y], [m.x, m.y]]);
           edgeMesh.visible = false;
           this.edges[id][k] = edgeMesh;
           this.edges[k][id] = edgeMesh;
@@ -287,7 +291,7 @@ class Graph {
         j.similar.slice(0, topNNeighbors).map(k => {
           if (!this.edges[id][k]) {
             let m = this.nodes[k];
-            let edgeMesh = makeLine([[n.x, n.y], [m.x, m.y]]);
+            let edgeMesh = this.makeLine([[n.x, n.y], [m.x, m.y]]);
             edgeMesh.visible = false;
             this.edges[id][k] = edgeMesh;
             this.edges[k][id] = edgeMesh;
@@ -353,9 +357,9 @@ class Graph {
         e.position.setZ(0);
         if (e.visited) {
           e.position.setZ(1);
-          e.material = visitedLineMat;
+          e.material = mats.visited;
         } else {
-          e.material = defaultLineMat;
+          e.material = mats.default;
         }
       });
 
@@ -435,9 +439,9 @@ class Graph {
       let line = this.edges[job_id][neighb];
       line.visible = true;
       if (immediateNeighbs.includes(neighb) || neighb == focusId) {
-        line.material = focusedLineMat;
+        line.material = mats.focused;
       } else {
-        line.material = defaultLineMat;
+        line.material = mats.default;
       }
       line.position.setZ(2);
     });
@@ -477,11 +481,11 @@ class Graph {
       let neighbIds = this.focusedNodeId ? Object.keys(this.edges[this.focusedNodeId]) : [];
       if (edge) { // After college, b/c of a jump there may be no edge
         if (edge.visited) {
-          edge.material = visitedLineMat;
+          edge.material = mats.visited;
         } else if (neighbIds.includes(nodeId_.toString())) {
-          edge.material = focusedLineMat;
+          edge.material = mats.focused;
         } else {
-          edge.material = defaultLineMat;
+          edge.material = mats.default;
         }
       }
     }
@@ -513,6 +517,18 @@ class Graph {
         node.icon.visible = true;
       }
     }
+  }
+
+  makeLine(points) {
+    let verts = [];
+    points.forEach(p => {
+      let [x, y] = p;
+      let v = new THREE.Vector3(x, y, -1);
+      verts.push(v);
+    });
+    let line = new MeshLine();
+    line.setVertices(verts);
+    return new THREE.Mesh(line, mats.default);
   }
 }
 
