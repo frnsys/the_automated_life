@@ -845,6 +845,7 @@ ul {
 }
 
 .pregame .help-hint,
+.pregame .mini-menu,
 .tutorial--active .help-hint {
   display: none;
 }
@@ -909,4 +910,12 @@ a.selected-language,
   line-height: 1.3;
   text-align: right;
   margin-right: 0.25em;
+}
+
+.pregame {
+  background-image: url('/static/intro.png');
+  background-size: cover;
+}
+.pregame .ReactModal__Overlay {
+  background: none !important;
 }
