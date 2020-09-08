@@ -251,13 +251,15 @@ class Graph {
           // Highlight neighbor colors
           let neighbIds = Object.keys(this.edges[id]);
           neighbIds.forEach((n_id) => {
-            let anno = this.nodes[n_id].anno;
-            anno.style.background = '#395BE5';
-            anno.style.color = '#fff';
-            anno.style.fontSize = '0.4em';
-            anno.style.zIndex = '2';
-            if (this.nodes[n_id].icon) {
-              this.nodes[n_id].icon.scale.set(iconScale * 1.5, iconScale * 1.5, iconScale * 1.5);
+            if (this.edges[id][n_id].visible) {
+              let anno = this.nodes[n_id].anno;
+              anno.style.background = '#395BE5';
+              anno.style.color = '#fff';
+              anno.style.fontSize = '0.4em';
+              anno.style.zIndex = '2';
+              if (this.nodes[n_id].icon) {
+                this.nodes[n_id].icon.scale.set(iconScale * 1.5, iconScale * 1.5, iconScale * 1.5);
+              }
             }
           });
           Object.values(this.edges[id]).forEach((edge) => {
