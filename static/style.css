@@ -443,7 +443,6 @@ ul {
   max-height: 80vh;
   overflow-y: scroll;
   padding: 1em;
-  padding-bottom: 4em;
 }
 .skills .skills-list > *:last-child {
   margin-bottom: 4em;
