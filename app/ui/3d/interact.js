@@ -13,6 +13,7 @@ class InteractionLayer {
     this.selectables = selectables;
     this.mouse = new THREE.Vector2();
     this.raycaster = new THREE.Raycaster();
+    this.focused = null;
 
     this.scene.renderer.domElement.addEventListener('mousedown', this.onMouseDown.bind(this), false);
     this.scene.renderer.domElement.addEventListener('touchstart', this.onTouchStart.bind(this), false);
@@ -58,21 +59,34 @@ class InteractionLayer {
       let mesh = intersects[0].object,
           pos = intersects[0].point,
           obj = mesh.obj;
-      if (obj.data.tooltip && mesh.visible) {
-        tooltip.style.display = 'block';
-        tooltip.style.left = `${ev.pageX + 5}px`;
-        let top = ev.pageY + 5;
-        if (tooltip.clientHeight + top > window.innerHeight) {
-          top -= tooltip.clientHeight;
+      if (mesh.visible) {
+        if (obj.data.tooltip) {
+          tooltip.style.display = 'block';
+          tooltip.style.left = `${ev.pageX + 5}px`;
+          let top = ev.pageY + 5;
+          if (tooltip.clientHeight + top > window.innerHeight) {
+            top -= tooltip.clientHeight;
+          }
+          tooltip.style.top = `${top}px`;
+          if (typeof obj.data.tooltip === 'function') {
+            tooltip.innerHTML = obj.data.tooltip();
+          } else {
+            tooltip.innerHTML = obj.data.tooltip;
+          }
         }
-        tooltip.style.top = `${top}px`;
-        if (typeof obj.data.tooltip === 'function') {
-          tooltip.innerHTML = obj.data.tooltip();
-        } else {
-          tooltip.innerHTML = obj.data.tooltip;
+        if (obj.data.onMouseOver && this.focused != obj) {
+          if (this.focused && this.focused.data.onMouseOut) {
+            this.focused.data.onMouseOut();
+          }
+          obj.data.onMouseOver();
+          this.focused = obj;
         }
       }
     } else {
+      if (this.focused && this.focused.data.onMouseOut) {
+        this.focused.data.onMouseOut();
+      }
+      this.focused = null;
       tooltip.style.display = 'none';
     }
   }

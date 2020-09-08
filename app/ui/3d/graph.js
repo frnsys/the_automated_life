@@ -11,6 +11,7 @@ import {MeshLine,MeshLineMaterial} from 'threejs-meshline';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 const loader = new GLTFLoader();
+const iconScale = 6.5;
 
 const topNSkills = 9;
 const topNNeighbors = 6;
@@ -30,6 +31,11 @@ const mats = {
   focused: new MeshLineMaterial({
     color: 0x44f48d,
     lineWidth: 2,
+    ...common
+  }),
+  neighb: new MeshLineMaterial({
+    color: 0x395BE5,
+    lineWidth: 4,
     ...common
   }),
   visited: new MeshLineMaterial({
@@ -233,7 +239,38 @@ class Graph {
             }
           }
         },
-        tooltip: () => tooltip(j)
+        tooltip: () => tooltip(j),
+        onMouseOver: () => {
+          // Highlight neighbor colors
+          let neighbIds = Object.keys(this.edges[id]);
+          neighbIds.forEach((n_id) => {
+            let anno = this.nodes[n_id].anno;
+            anno.style.background = '#395BE5';
+            anno.style.color = '#fff';
+            anno.style.fontSize = '0.4em';
+            anno.style.zIndex = '2';
+            if (this.nodes[n_id].icon) {
+              this.nodes[n_id].icon.scale.set(iconScale * 1.5, iconScale * 1.5, iconScale * 1.5);
+            }
+          });
+          Object.values(this.edges[id]).forEach((edge) => {
+            edge.material = mats.neighb;
+          });
+        },
+        onMouseOut: () => {
+          let neighbIds = Object.keys(this.edges[id]);
+          neighbIds.forEach((n_id) => {
+            let anno = this.nodes[n_id].anno;
+            anno.style.background = 'none';
+            anno.style.color = '#000';
+            anno.style.fontSize = '0.3em';
+            anno.style.zIndex = '1';
+            if (this.nodes[n_id].icon) {
+              this.nodes[n_id].icon.scale.set(iconScale, iconScale, iconScale);
+            }
+            this.resetEdgeColor(id, n_id);
+          });
+        }
       });
 
       // All hidden by default
@@ -505,11 +542,10 @@ class Graph {
           child.material.map.minFilter = THREE.NearestFilter;
           child.material.needsUpdate = true;
           child.material.emissive = {r: 0.05, g: 0.05, b: 0.05};
-          child.scale.set(6.5,6.5,6.5);
+          child.scale.set(iconScale, iconScale, iconScale);
           child.rotation.y = -Math.PI/4
           child.rotation.x = Math.PI/8 // or Math.PI/4?
-          child.position.set(node.x, node.y+3, 6.5);
-          window.testchild = child; // TODO
+          child.position.set(node.x, node.y+3, iconScale);
           node.icon = child;
           this.group.add(child);
         });
