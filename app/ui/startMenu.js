@@ -6,6 +6,7 @@ import graph from './3d/graph';
 import config from 'config';
 import store from 'store';
 import jobs from 'data/jobs.json'
+import {availableLanguages, lang} from '../i18n';
 // import Reference from './reference';
 import Tutorial from './tutorial';
 
@@ -39,6 +40,11 @@ class StartMenu extends Component {
 
   render() {
     return <div className='start-menu'>
+      <div className="languages">
+        {availableLanguages.map((l) => {
+          return <a key={l} href={`/?lang=${l}`} className={l == lang ? 'selected-language': ''}>{l.toUpperCase()}</a>;
+        })}
+      </div>
       <h2>{t('start_welcome')}</h2>
       <p>{t('start_intro')}</p>
       <h3>{t('select_starting_job')}:</h3>

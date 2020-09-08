@@ -637,6 +637,9 @@ ul {
   background: linear-gradient(to bottom, #7de984 0%,#4bab48 100%);
 }
 
+.start-menu {
+  padding-top: 0.5em !important;
+}
 .start-menu h2 {
   margin: 0;
 }
@@ -876,3 +879,24 @@ ul {
   text-align: right;
   font-size: 0.85em;
 }
+
+.languages {
+  font-size: 0.75em;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+.languages a {
+  opacity: 0.5;
+  background: #eee;
+  padding: 0 0.25em;
+  border-radius: 0.25em;
+  text-decoration: none;
+  color: #000;
+}
+a.selected-language,
+.languages a:hover {
+  opacity: 1;
+  background: #39E567;
+}
+
