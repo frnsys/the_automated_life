@@ -312,7 +312,7 @@ class Graph {
         // already created it
         if (!this.edges[id][k] && Object.keys(this.edges[k]).length < topNNeighbors) {
           let m = this.nodes[k];
-          let edgeMesh = this.makeLine([[n.x, n.y], [m.x, m.y]]);
+          let edgeMesh = this.makeLine([n.x, n.y], [m.x, m.y]);
           edgeMesh.visible = false;
           this.edges[id][k] = edgeMesh;
           this.edges[k][id] = edgeMesh;
@@ -328,7 +328,7 @@ class Graph {
         j.similar.slice(0, topNNeighbors).map(k => {
           if (!this.edges[id][k]) {
             let m = this.nodes[k];
-            let edgeMesh = this.makeLine([[n.x, n.y], [m.x, m.y]]);
+            let edgeMesh = this.makeLine([n.x, n.y], [m.x, m.y]);
             edgeMesh.visible = false;
             this.edges[id][k] = edgeMesh;
             this.edges[k][id] = edgeMesh;
@@ -519,7 +519,7 @@ class Graph {
       if (edge) { // After college, b/c of a jump there may be no edge
         if (edge.visited) {
           edge.material = mats.visited;
-        } else if (neighbIds.includes(nodeId_.toString())) {
+        } else if (nodeId_ == this.focusedNodeId || nodeId == this.focusedNodeId && neighbIds.includes(nodeId_.toString())) {
           edge.material = mats.focused;
         } else {
           edge.material = mats.default;
@@ -555,11 +555,31 @@ class Graph {
     }
   }
 
-  makeLine(points) {
+  makeLine(p0, p1) {
     let verts = [];
-    points.forEach(p => {
-      let [x, y] = p;
-      let v = new THREE.Vector3(x, y, -1);
+    let x_mn = Math.min(p0[0], p1[0]);
+    let x_mx = Math.max(p0[0], p1[0]);
+    let y_mn = Math.min(p0[1], p1[1]);
+    let y_mx = Math.max(p0[1], p1[1]);
+    let w = x_mx - x_mn;
+    let h = y_mx - y_mn;
+
+    let pa, pb;
+    if (w > h) {
+      pa = {x: x_mn + w/2, y: y_mn};
+      pb = {x: x_mn + w/2, y: y_mx};
+    } else {
+      pa = {x: x_mn, y: y_mn + h/2};
+      pb = {x: x_mx, y: y_mn + h/2};
+    }
+    p0 = {x: p0[0], y: p0[1]};
+    p1 = {x: p1[0], y: p1[1]};
+    let points = [...new Array(10).keys()].map((i) => {
+      i /= 10;
+      return bezier(i, p0, pa, pb, p1);
+    });
+    points.concat([p1]).forEach(p => {
+      let v = new THREE.Vector3(p.x, p.y, -1);
       verts.push(v);
     });
     let line = new MeshLine();
@@ -579,5 +599,21 @@ const graph = new Graph(nodeSize);
 //   return acc;
 // }, {});
 // console.log(JSON.stringify(network));
+
+// https://stackoverflow.com/a/16227479
+function bezier(t, p0, p1, p2, p3) {
+  var cX = 3 * (p1.x - p0.x),
+      bX = 3 * (p2.x - p1.x) - cX,
+      aX = p3.x - p0.x - cX - bX;
+
+  var cY = 3 * (p1.y - p0.y),
+      bY = 3 * (p2.y - p1.y) - cY,
+      aY = p3.y - p0.y - cY - bY;
+
+  var x = (aX * Math.pow(t, 3)) + (bX * Math.pow(t, 2)) + (cX * t) + p0.x;
+  var y = (aY * Math.pow(t, 3)) + (bY * Math.pow(t, 2)) + (cY * t) + p0.y;
+
+  return {x, y};
+}
 
 export default graph;
