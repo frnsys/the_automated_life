@@ -5,6 +5,7 @@ tooltip.style.position = 'absolute';
 tooltip.style.display = 'none';
 tooltip.style.zIndex = '10000';
 tooltip.style.pointerEvents = 'none';
+tooltip.style.background = '#ffffffcc';
 document.body.appendChild(tooltip);
 
 class InteractionLayer {

@@ -241,6 +241,11 @@ class Graph {
         },
         tooltip: () => tooltip(j),
         onMouseOver: () => {
+          let anno = this.nodes[id].anno;
+          anno.style.background = '#FFD100';
+          anno.style.fontSize = '0.4em';
+          anno.style.zIndex = '2';
+
           // Highlight neighbor colors
           let neighbIds = Object.keys(this.edges[id]);
           neighbIds.forEach((n_id) => {
@@ -258,6 +263,11 @@ class Graph {
           });
         },
         onMouseOut: () => {
+          let anno = this.nodes[id].anno;
+          anno.style.background = 'none';
+          anno.style.fontSize = '0.3em';
+          anno.style.zIndex = '1';
+
           let neighbIds = Object.keys(this.edges[id]);
           neighbIds.forEach((n_id) => {
             let anno = this.nodes[n_id].anno;
