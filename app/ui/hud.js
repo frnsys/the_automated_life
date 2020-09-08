@@ -85,7 +85,7 @@ const HUD = (props) => {
         </div>
         <div className='stat-group' data-tip={t('retirement_savings_remaining', {amount: numeral(Math.max(0, config.retirementSavingsMin - props.player.cash)).format('0,0.0a')})}>
           <div className='stat-icon'>💰</div>
-          <div className='bar'><div className='bar-fill' style={{width: `${Math.min(1, props.player.cash/config.retirementSavingsMin)*100}%`}} /></div>
+          <div className='bar' style={{border: props.player.cash < 0 ? '1px solid red' : ''}}><div className='bar-fill' style={{width: `${Math.min(1, props.player.cash/config.retirementSavingsMin)*100}%`}} />{props.player.cash < 0 ? <div className='stat-debt'>{numeral(-props.player.cash).format('$0,0.0a')} in debt</div> : ''}</div>
         </div>
       </div>
     </div>

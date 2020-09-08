@@ -903,3 +903,10 @@ a.selected-language,
   background: #39E567;
 }
 
+.stat-debt {
+  color: red;
+  font-size: 0.8em;
+  line-height: 1.3;
+  text-align: right;
+  margin-right: 0.25em;
+}
