@@ -38,6 +38,10 @@ const initialState = {
   education: config.startHighSchool ? 1 : 0,
   program: null,
   postGradJob: unemployed,
+
+  // ignore job performance when applying to first job after school
+  ignoreJobPerformance: false,
+
   schoolCountdown: 0, // months
   job: unemployed,
   jobProficiency: 0,
@@ -123,6 +127,7 @@ function reducer(state={}, action) {
       state.application = null;
       state.job = action.payload;
       state.tasks = [];
+      state.ignoreJobPerformance = false;
       return {...state}
 
     // Enroll in school
@@ -156,6 +161,7 @@ function reducer(state={}, action) {
       state.education += 1;
       state.schoolCountdown = 0;
       state.job = unemployed;
+      state.ignoreJobPerformance = true;
       if (state.debt.length > 0) {
         state.debt[state.debt.length-1].startedPayments = true;
       }

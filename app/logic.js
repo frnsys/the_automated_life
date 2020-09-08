@@ -88,7 +88,7 @@ function jobProficiency(job, player) {
 function probabilityForJob(job) {
   let {player} = store.getState();
   let skills = jobProficiency(job, player);
-  let performance = player.performance/100;
+  let performance = player.ignoreJobPerformance ? 1 : player.performance/100;
 
   let education = job.education.slice(0, player.education+1).reduce((acc, percent) => {
     return acc + percent;
