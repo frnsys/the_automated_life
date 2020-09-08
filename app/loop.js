@@ -207,6 +207,7 @@ function loop(now) {
             notify(`🎉 ${t('hired', {name: t(job.name)})}`,
               '', {background: '#1fd157', color: '#fff'});
             log('hired', {job: job.id, time: logTime});
+            graph.appliedNode = null;
             graph.reveal(player.application.id);
 
           // Rejected

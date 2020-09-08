@@ -529,10 +529,12 @@ class Graph {
       let edge = outEdges[nodeId_];
       let neighbIds = this.focusedNodeId ? Object.keys(this.edges[this.focusedNodeId]) : [];
       if (edge) { // After college, b/c of a jump there may be no edge
-        if (edge.visited) {
-          edge.material = mats.visited;
+        if (this.appliedNode && (nodeId == this.appliedNode.data.id || nodeId_ == this.appliedNode.data.id)) {
+          edge.material = mats.applied;
         } else if (nodeId_ == this.focusedNodeId || nodeId == this.focusedNodeId && neighbIds.includes(nodeId_.toString())) {
           edge.material = mats.focused;
+        } else if (edge.visited) {
+          edge.material = mats.visited;
         } else {
           edge.material = mats.default;
         }
