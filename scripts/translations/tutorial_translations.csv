@@ -20,6 +20,6 @@ about_content,"The Automated Life is a project of the Centre for Humans and Mach
 <br /><br />
 The Automated Life was approved by the Ethics Committee of the Max Planck Institute for Human Development and is GDPR compliant. Anonymised and non-personally identifiable data is collected to understand how people play the game. Players may be randomly assigned to see a slightly different version of the game in order to draw insights about how people make decisions and trade-offs regarding switching jobs. Any such insights will be described in a scientific publication that will be publicly available.
 <br /><br />
-The underlying code for this project is open-source and available on <a href=""https://github.com/frnsys/the_automated_life"">Github</a>. The game is described in the following technical document [LINK].
+The underlying code for this project is open-source and available on <a href=""https://github.com/frnsys/the_automated_life"">Github</a>. The game is described in the <a href=""/static/technical_doc.pdf"">following technical document</a>.
 <br /><br />
 Contact <a href=""mailto:theautomatedlife@mpib-berlin.mpg.de"">theautomatedlife@mpib-berlin.mpg.de</a>"
