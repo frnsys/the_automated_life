@@ -14,7 +14,7 @@ MIN_SKILL_WEIGHT = 1.5
 
 # Increase this to further space out nodes
 # in the job network (e.g. to reduce overlaps)
-NETWORK_SCALE = 1.8
+NETWORK_SCALE = 2.5
 
 omit = [l.strip() for l in open('../data/src/omitSkills.txt', 'r').readlines()]
 skill_edits = pd.read_csv('../data/src/Clean Skills - orderedOnetSkillsByComputerization.csv')

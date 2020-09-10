@@ -16,7 +16,7 @@ const iconScale = 6.5;
 const topNSkills = 6;
 const topNNeighbors = 6;
 const visitedColor = 0x51728c;
-const unfocusedColor = 0xe5e5e5;
+const unfocusedColor = 0xcccccc;
 const focusedColor = 0x0e55ef;
 const appliedColor = 0xf9ca2f;
 const neighbColor = 0x4fc6ea;
@@ -50,6 +50,8 @@ const mats = {
   }),
   default: new MeshLineMaterial({
     color: unfocusedColor,
+    transparent: true,
+    opacity: 0.2,
     lineWidth: 1,
     ...common
   })
@@ -184,7 +186,42 @@ class Graph {
     if (config.debug) {
       let origin = new Node(0, 0, this.nodeSize, 0x000000);
       this.group.add(origin.mesh);
+
+      let n = 20;
+      [...Array(n).keys()].forEach((i) => {
+        [...Array(n).keys()].forEach((j) => {
+          let x = (i-(n/2))*100;
+          let y = (j-(n/2))*100;
+          let color = x == 0 || y == 0 ? 0xff0000 : 0x0000ff;
+          let node = new Node(x, y, this.nodeSize, color);
+          this.group.add(node.mesh);
+          this.makeAnnotation(node, `${node.x},\n${node.y}`)
+          });
+      });
     }
+  }
+
+  makeAnnotation(node, text) {
+    const anno = document.createElement('div');
+    node.anno = anno;
+
+    anno.classList.add('annotation');
+    this.annos.appendChild(anno);
+    anno.innerText = text;
+
+    // Get height
+    anno.style.visibility = 'hidden';
+    let annoHeight = anno.offsetHeight;
+
+    // node positions seem to become off
+    // the further from the origin,
+    // this is a hand-adjustment that improves the positioning
+    let xAdjust = (node.x * 0.025) + 6;
+    let yAdjust = (node.y * 0.025);
+    anno.style.top = `${-node.y-annoHeight/2 - yAdjust}px`
+    anno.style.left = `${node.x + xAdjust}px`
+    anno.style.visibility = '';
+    return anno;
   }
 
   init(jobs) {
@@ -267,7 +304,7 @@ class Graph {
         onMouseOut: () => {
           let anno = this.nodes[id].anno;
           anno.style.background = 'none';
-          anno.style.fontSize = '0.3em';
+          anno.style.fontSize = '0.2em';
           anno.style.zIndex = '1';
 
           let neighbIds = Object.keys(this.edges[id]);
@@ -275,7 +312,7 @@ class Graph {
             let anno = this.nodes[n_id].anno;
             anno.style.background = 'none';
             anno.style.color = '#000';
-            anno.style.fontSize = '0.3em';
+            anno.style.fontSize = '0.2em';
             anno.style.zIndex = '1';
             if (this.nodes[n_id].icon) {
               this.nodes[n_id].icon.scale.set(iconScale, iconScale, iconScale);
@@ -291,20 +328,8 @@ class Graph {
       // Use first industry for node job
       node.industry = j.industries[0];
 
-      const anno = document.createElement('div');
-      anno.classList.add('annotation');
-      anno.innerHTML = t(j.name);
-
-      // node positions seem to become off
-      // the further from the origin,
-      // this is a hand-adjustment that improves the positioning
-      anno.style.top = `${-node.y}px`
-      anno.style.left = `${node.x * (node.x > 0 ? 1.04 : 1.01)}px`
-
+      const anno = this.makeAnnotation(node, t(j.name));
       anno.style.display = 'none';
-      node.anno = anno;
-      this.annos.appendChild(anno);
-
       this.edges[id] = {};
       this.group.add(node.mesh);
       return {id: id, node: node};

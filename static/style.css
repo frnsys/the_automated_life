@@ -35,7 +35,7 @@ ul {
 
 .annotation {
   position: absolute;
-  font-size: 0.3em;
+  font-size: 0.2em;
   line-height: 1;
   pointer-events: none;
   padding: 0 0.25em 0.15em;
