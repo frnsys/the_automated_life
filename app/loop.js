@@ -113,8 +113,8 @@ function loop(now) {
       let speedup = window.speedup;
       if (inSchool) {
         speedup = config.schoolTimeSpeedup;
-      } else if (unemployed) {
-        speedup = config.unemployedTimeSpeedup;
+        window.speedup = speedup;
+        window.updateSpeed(speedup);
       }
       store.dispatch({
         type: 'time',

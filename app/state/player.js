@@ -187,6 +187,10 @@ function reducer(state={}, action) {
       // so player isn't penalized when applying to the
       // first job out of school.
       state.performance = 100;
+
+      // Reset speed
+      window.speedup = 0.5;
+      window.updateSpeed(window.speedup);
       return {...state}
 
     case 'player:task':

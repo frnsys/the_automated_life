@@ -118,6 +118,11 @@ class App extends Component {
       }});
     }
 
+    // Hacky way to update speed from elsewhere
+    window.updateSpeed = (speedup) => {
+      this.setState({ speedup: speedup });
+    }
+
     document.addEventListener('keydown', (ev) => {
       if (window.started && !this.state.modalIsOpen) {
         if (ev.target.tagName == 'input') return;
