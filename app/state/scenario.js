@@ -17,16 +17,27 @@ function reducer(state={}, action) {
 }
 
 let initialState = math.pickRandom(scenarios);
-log('scenario', initialState.name);
-console.log(initialState.flags);
-if (initialState.flags.TWO_HOP_NEIGHBORS) {
-  config.twoHops = true;
+
+// If any of these are manually set, make note
+let manualOverride = config.twoHops || config.jobSatisfaction || config.schoolSubsidies;
+if (manualOverride) {
+  log('scenario', 'Manual Override');
+} else {
+  log('scenario', initialState.name);
 }
-if (initialState.flags.JOB_SATISFACTION) {
-  config.jobSatisfaction = true;
+
+if (!manualOverride) {
+  console.log(initialState.flags);
+  if (initialState.flags.TWO_HOP_NEIGHBORS) {
+    config.twoHops = true;
+  }
+  if (initialState.flags.JOB_SATISFACTION) {
+    config.jobSatisfaction = true;
+  }
+  if (initialState.flags.SCHOOL_SUBSIDIES) {
+    config.schoolSubsidies = true;
+  }
 }
-if (initialState.flags.SCHOOL_SUBSIDIES) {
-  config.schoolSubsidies = true;
-}
+log('flags', `TWO_HOP_NEIGHBORS=${+(config.twoHops)};JOB_SATISFACTION=${+(config.jobSatisfaction)};SCHOOL_SUBSIDIES=${+(config.schoolSubsidies)}`);
 
 export default { reducer, initialState };
