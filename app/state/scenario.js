@@ -20,11 +20,6 @@ let initialState = math.pickRandom(scenarios);
 
 // If any of these are manually set, make note
 let manualOverride = config.twoHops || config.jobSatisfaction || config.schoolSubsidies;
-if (manualOverride) {
-  log('scenario', 'Manual Override');
-} else {
-  log('scenario', initialState.name);
-}
 
 if (!manualOverride) {
   console.log(initialState.flags);
@@ -38,6 +33,21 @@ if (!manualOverride) {
     config.schoolSubsidies = true;
   }
 }
-log('flags', `TWO_HOP_NEIGHBORS=${+(config.twoHops)};JOB_SATISFACTION=${+(config.jobSatisfaction)};SCHOOL_SUBSIDIES=${+(config.schoolSubsidies)}`);
+let flags = {
+  twoHops: config.twoHops,
+  jobSatisfaction: config.jobSatisfaction,
+  schoolSubsidies: config.schoolSubsidies
+};
+if (manualOverride) {
+  log('scenario', {
+    name: 'Manual Override',
+    flags: flags
+  });
+} else {
+  log('scenario', {
+    name: initialState.name,
+    flags: flags
+  });
+}
 
 export default { reducer, initialState };
