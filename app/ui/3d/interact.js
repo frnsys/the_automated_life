@@ -88,7 +88,7 @@ class InteractionLayer {
         this.focused.data.onMouseOut();
       }
       this.focused = null;
-      if (!tooltip.dataset.sticky) {
+      if (tooltip.dataset.sticky !== 'true') {
         tooltip.style.display = 'none';
       }
     }
