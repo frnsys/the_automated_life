@@ -42,6 +42,12 @@ for lang in LANGS:
     for i, row in csv.iterrows():
         if isinstance(row[correction_col], str):
             original = row[original_col]
+
+            # Some issues with translations "corrections" where
+            # they drop all the variables
+            if '{' in translations[original] and '{' not in row[correction_col]:
+                continue
+
             translations[original] = row[correction_col]
             changes += 1
     print(lang, changes)
