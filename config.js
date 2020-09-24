@@ -208,6 +208,17 @@ export default {
       },
       text: 'tutorial_skills',
       parent: '#annotations'
+    },
+    onStart: (store) => {
+      let {player} = store.getState();
+      let tooltip = document.getElementById('graph-tooltip');
+      tooltip.style.display = 'block';
+      tooltip.innerHTML = window.jobTooltip(player.job);
+      tooltip.dataset.sticky = true;
+    },
+    onCompletion: () => {
+      let tooltip = document.getElementById('graph-tooltip');
+      tooltip.dataset.sticky = false;
     }
   }, {
     tooltip: {

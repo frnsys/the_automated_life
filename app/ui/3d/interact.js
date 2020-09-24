@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 const tooltip = document.createElement('div');
+tooltip.id = 'graph-tooltip';
 tooltip.classList.add('tooltip');
 tooltip.style.position = 'fixed';
 tooltip.style.display = 'none';
@@ -87,7 +88,9 @@ class InteractionLayer {
         this.focused.data.onMouseOut();
       }
       this.focused = null;
-      tooltip.style.display = 'none';
+      if (!tooltip.dataset.sticky) {
+        tooltip.style.display = 'none';
+      }
     }
   }
 }
