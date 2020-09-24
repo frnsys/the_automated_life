@@ -79,7 +79,7 @@ const HUD = (props) => {
             className={`button ${canRetire(age, props.player.cash) ? '' : 'disabled'}`}
             onClick={() => props.retireEarly()}
             data-tip={t('retirement_early_tip', {amount: earlyRetirement(age).toLocaleString()})}>{t('retirement_early')}</div></h6>
-        <div className='stat-group' data-tip={t('retirement_remaining', {years: config.retirementAge - props.player.startAge - props.time.years})}>
+        <div className='stat-group' data-tip={t('retirement_remaining', {age: age, years: config.retirementAge - props.player.startAge - props.time.years})}>
           <div className='stat-icon'>🏖️</div>
           <div className='bar'><div className='bar-fill' style={{width: `${Math.min(1, (props.time.years+(props.time.month/12))/(config.retirementAge-props.player.startAge))*100}%`}} /></div>
         </div>
