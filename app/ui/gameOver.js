@@ -85,7 +85,11 @@ class GameOverSurvey extends Component {
   render() {
     return <div className='game-over-survey'>
       <p>{t('game_over_thanks')}</p>
-      {this.state.submitted ? <p>{t('survey_submitted')}</p> :
+      {this.state.submitted ? (
+        <div>
+          <p>{t('survey_submitted')}</p>
+          <div class="button" onClick={() => location.reload()}>{t('play_again')}</div>
+        </div>) :
         <form onSubmit={(ev) => this.submit(ev)}>
           <div className="form-field">
             <label>{t('survey_age_label')}</label>
