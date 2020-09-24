@@ -94,10 +94,11 @@ class App extends Component {
     };
 
     // Hacky way to show news modal elsewhere
-    window.news = (news) => {
+    window.news = (news, extra) => {
       if (!this.state.hideNews) {
         this.setState({modal: News, modalIsOpen: true, modalData: {
           news: news,
+          extra: extra,
           close: (optOut) => {
             this.setState({ hideNews: optOut });
             this.closeModal();

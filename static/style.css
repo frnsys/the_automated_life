@@ -846,6 +846,10 @@ ul {
   font-style: italic;
   margin: 0.2em 0 0.5em 0;
 }
+.news-extra {
+  display: block;
+  margin-bottom: 1em;
+}
 
 .milestone {
   text-align: center;
