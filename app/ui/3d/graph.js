@@ -537,6 +537,77 @@ class Graph {
     }
   }
 
+  localBounds() {
+    let {player} = store.getState();
+
+    let job_id = player.job.id;
+    if (job_id === null) return;
+
+    let focusNode = this.nodes[job_id];
+    let bounds = {
+      left: focusNode.x,
+      top: focusNode.y,
+      right: focusNode.x,
+      bottom: focusNode.y
+    };
+    let center = {
+      x: focusNode.x,
+      y: focusNode.y
+    };
+
+    let neighbors = Object.keys(this.edges[job_id]);
+    neighbors.forEach(neighb => {
+      let node = this.nodes[neighb];
+      if (node.x < bounds.left) {
+        bounds.left = node.x - this.nodeSize;
+      }
+      if (node.y < bounds.bottom) {
+        bounds.bottom = node.y - this.nodeSize;
+      }
+      if (node.x > bounds.right) {
+        bounds.right = node.x + this.nodeSize;
+      }
+      if (node.y > bounds.top) {
+        bounds.top = node.y + this.nodeSize;
+      }
+    });
+
+    return {center, bounds};
+  }
+
+  revealedBounds() {
+    let bounds;
+    Object.values(this.nodes).filter((node) => node.mesh.visible)
+      .forEach((node) => {
+        if (!bounds) {
+          bounds = {
+            left: node.x - this.nodeSize,
+            bottom: node.y - this.nodeSize,
+            right: node.x + this.nodeSize,
+            top: node.y + this.nodeSize
+          };
+        } else {
+          if (node.x < bounds.left) {
+            bounds.left = node.x - this.nodeSize;
+          }
+          if (node.y < bounds.bottom) {
+            bounds.bottom = node.y - this.nodeSize;
+          }
+          if (node.x > bounds.right) {
+            bounds.right = node.x + this.nodeSize;
+          }
+          if (node.y > bounds.top) {
+            bounds.top = node.y + this.nodeSize;
+          }
+        }
+      });
+    let center = {
+      x: bounds.left + (bounds.right - bounds.left)/2,
+      y: bounds.top + (bounds.bottom - bounds.top)/2
+    };
+    return {center, bounds};
+  }
+
   resetNodeColor(node, player) {
     let neighbIds = this.focusedNodeId ? Object.keys(this.edges[this.focusedNodeId]) : [];
     if (player.pastJobs.includes(node.data.id)) {

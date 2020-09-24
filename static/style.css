@@ -560,6 +560,15 @@ ul {
 .time-button:first-child {
   flex: 0.25;
 }
+.time-button img {
+  width: 13px;
+  padding: 1px;
+  display: block;
+  margin: 0 auto;
+}
+.zoom-button {
+  flex: 0.25;
+}
 
 .notification-history {
   width: 440px;

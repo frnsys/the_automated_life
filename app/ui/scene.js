@@ -22,10 +22,8 @@ function zoomToFit(bounds, cam, padding) {
   let zoomBottom = (t_b)/(2*((bounds.bottom-padding) - cy - y));
   let zooms = [zoomLeft, zoomRight, zoomTop, zoomBottom];
   let zoom = Math.min(...zooms.map(Math.abs));
-  if (zoom < cam.zoom) {
-    cam.zoom = zoom;
-    cam.updateProjectionMatrix();
-  }
+  cam.zoom = zoom;
+  cam.updateProjectionMatrix();
 }
 
 class Scene extends Component {
@@ -54,6 +52,26 @@ class Scene extends Component {
         this.scene.controls.update();
       }
       zoomToFit(bounds, camera, 10);
+    };
+    graph.zoomToAll = () => {
+      let {center, bounds} = graph.revealedBounds();
+      camera.position.set(center.x, center.y, camera.position.z);
+      this.scene.controls.target.set(center.x, center.y, 0);
+      this.scene.controls.update();
+      zoomToFit(bounds, camera, 10);
+    };
+    graph.zoomToCurrent = () => {
+      let spec = graph.localBounds();
+      if (spec) {
+        let {center, bounds} = spec;
+        camera.position.set(center.x, center.y, camera.position.z);
+        this.scene.controls.target.set(center.x, center.y, 0);
+        this.scene.controls.update();
+        zoomToFit(bounds, camera, 10);
+      } else {
+        // No current job, show full map
+        graph.zoomToAll();
+      }
     };
     graph.init(this.props.jobs);
     this.scene.add(graph.group);

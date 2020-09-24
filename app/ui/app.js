@@ -166,6 +166,14 @@ class App extends Component {
     this.setState({ speedup: window.speedup });
   }
 
+  zoomToAll() {
+    graph.zoomToAll();
+  }
+
+  zoomToCurrent() {
+    graph.zoomToCurrent();
+  }
+
   render() {
     // Kind of hacky way to make notifications accessible globally
     return (
@@ -201,6 +209,8 @@ class App extends Component {
               {this.state.paused ? t('resume_button') : t('pause_button')}
             </div>
             <div className='time-button' onClick={this.toggleSpeed.bind(this)}>🕛 {window.speedup}x</div>
+            <div className='time-button zoom-button' onClick={this.zoomToAll.bind(this)}><img src="/static/resize.svg" /></div>
+            <div className='time-button zoom-button' onClick={this.zoomToCurrent.bind(this)}><img src="/static/pin.svg" /></div>
           </div>
           <HUD>
             <div className='button' onClick={() => this.setState({modalIsOpen: true, modal: Skills})}>{t('skills_button')}</div>
