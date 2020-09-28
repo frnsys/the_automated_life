@@ -72,7 +72,7 @@ function loop(now) {
         let skillNames = nextRobot.skills.map((s_id) => t(skills[s_id].name));
         let skillsDesc = [skillNames.slice(0, -1).join(', '), skillNames.slice(-1)[0]]
           .join(skillNames.length < 2 ? '' : ' & ').toLowerCase();
-        let affectsJob = nextRobot.skills.filter((s_id) => Object.keys(player.job.skills).includes(s_id.toString())).length > 0;
+        let affectsJob = nextRobot.skills.filter((s_id) => player.job.skills && Object.keys(player.job.skills).includes(s_id.toString())).length > 0;
         if (affectsJob) {
           notify(`🤖 ${t('robot_release', {
             name: nextRobot.name,
