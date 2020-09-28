@@ -541,7 +541,7 @@ class Graph {
     let {player} = store.getState();
 
     let job_id = player.job.id;
-    if (job_id === null) return;
+    if (job_id === null || job_id < 0) return;
 
     let focusNode = this.nodes[job_id];
     let bounds = {
