@@ -64,7 +64,12 @@ function reducer(state={}, action) {
 
     // Monthly expenses
     case 'player:expenses':
-      state.cash -= config.monthlyExpenses;
+      let expenses = config.monthlyExpenses;
+
+      // Incorporate education subsidy, if any
+      expenses *= 1 - (state.job.name == 'Student' && config.schoolSubsidies ? 1 - config.subsidyPercent : 0);
+
+      state.cash -= expenses;
 
       // Calculate debt payment, if any
       let debtPayment = state.debt.reduce((acc, debt) => {
@@ -146,7 +151,9 @@ function reducer(state={}, action) {
 
       // Compute cost and years in school
       let years = state.program ? state.program.years : nextLevel.years;
-      state.cash -= nextLevel.cost * years;
+      let subsidyPercent = config.schoolSubsidies ? 1 - config.subsidyPercent : 0;
+      let schoolCost = nextLevel.cost * years * (1-subsidyPercent);
+      state.cash -= schoolCost;
       state.schoolCountdown = years * 12;
 
       state.job = student;
