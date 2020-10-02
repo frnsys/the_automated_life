@@ -144,10 +144,10 @@ class School extends Component {
         }
       }
 
-      let totalCostWageMonths = this.props.player.job !== 'Unemployed' ? ` (${t('cost_in_wages', {
+      let totalCostWageMonths = this.props.player.job.name !== 'Unemployed' ? ` (${t('cost_in_wages', {
         months: Math.ceil(totalCost/(this.props.player.job.wageAfterTaxes/12))
       })})` : '';
-      let totalCostWithSubsidyWageMonths = this.props.player.job !== 'Unemployed' ? ` (${t('cost_in_wages', {
+      let totalCostWithSubsidyWageMonths = this.props.player.job.name !== 'Unemployed' ? ` (${t('cost_in_wages', {
         months: Math.ceil(totalCostWithSubsidy/(this.props.player.job.wageAfterTaxes/12))
       })})` : '';
 			body = (
