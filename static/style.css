@@ -928,6 +928,8 @@ a.selected-language,
   line-height: 1.3;
   text-align: right;
   margin-right: 0.25em;
+  position: relative;
+  z-index: 2;
 }
 
 .pregame {
