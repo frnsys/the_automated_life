@@ -391,6 +391,10 @@ ul {
   color: #ff0000;
   font-size: 1em !important;
 }
+.new-degree {
+  color: #395BE5;
+  text-decoration: underline;
+}
 .programs {
   margin: 1em 0 0 0;
 }

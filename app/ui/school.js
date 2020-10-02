@@ -20,7 +20,8 @@ class IndustryPrograms extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      open: props.open || false
+      open: props.open || false,
+      secondaryDegreeOverride: false
     };
   }
 
@@ -56,7 +57,8 @@ class School extends Component {
 
     let {time} = store.getState();
     let logTime = {year: time.years, month: time.month};
-    let nextLevel = education[this.props.player.education+1];
+    let nextLevelIdx = this.state.secondaryDegreeOverride ? 2 : this.props.player.education+1;
+    let nextLevel = education[nextLevelIdx];
 
     let nextJob = null;
     if (nextLevel.name == 'Secondary Degree') {
@@ -71,7 +73,7 @@ class School extends Component {
       });
 		}
 
-    this.props.enrollSchool(this.state.selectedProgram, nextJob);
+    this.props.enrollSchool(this.state.selectedProgram, nextJob, nextLevelIdx);
     log('enrolled', {
       nextEducation: nextLevel,
       program: this.state.selectedProgram,
@@ -84,6 +86,7 @@ class School extends Component {
     let secondary = false;
 		let alreadyEnrolled = this.props.player.job.name == 'Student';
 		let fullyEducated = !(this.props.player.education < education.length - 1);
+    let postSecondary = this.props.player.education > 1 && !this.state.secondaryDegreeOverride;
 
     let subsidyPercent = 0;
     if (config.schoolSubsidies) {
@@ -99,7 +102,8 @@ class School extends Component {
 
 		} else {
 			let programsInfo = '';
-			let nextLevel = education[this.props.player.education+1];
+      let nextLevelIdx = this.state.secondaryDegreeOverride ? 2 : this.props.player.education+1;
+			let nextLevel = education[nextLevelIdx];
       secondary = nextLevel.name == 'Secondary Degree';
 
       if (secondary) {
@@ -153,13 +157,13 @@ class School extends Component {
 			body = (
 				<div>
           <div className='item-box'>
-            <div><b>{t('next_level')}:</b> {t(nextLevel.name)}</div>
+            <div><b>{t('next_level')}:</b> {this.state.secondaryDegreeOverride ? t('Secondary Degree') : t(nextLevel.name)}</div>
             {(!secondary || this.state.selectedProgram) ?
               <div><b>{t('school_cost')}:</b> ${totalCost.toLocaleString()}{totalCostWageMonths}</div>
                 : ''}
             {programsInfo}
           </div>
-          {this.props.player.education >= 2 ? <p>{t('school_postsecondary_note')}</p> : ''}
+          {postSecondary ? <p>{t('school_postsecondary_note')} <a className='new-degree' onClick={() => this.setState({secondaryDegreeOverride: true})}>{t('new_secondary_degree')}</a></p> : ''}
 
           {subsidyPercent ? <div className="item-box item-box-subsidy">
               <div>{t('subsidy_note', {subsidy: (config.subsidyPercent * 100).toFixed(0)})}</div>
@@ -187,12 +191,13 @@ const mapStateToProps = (state, props) => {
 };
 
 const mapActionsToProps = {
-  enrollSchool: (selectedProgram, nextJob) => {
+  enrollSchool: (selectedProgram, nextJob, nextLevelIdx) => {
     return {
       type: 'player:enroll',
       payload: {
         program: selectedProgram,
-        nextJob: nextJob
+        nextJob: nextJob,
+        nextLevelIdx: nextLevelIdx
       }
     };
   },

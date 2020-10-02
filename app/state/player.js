@@ -37,6 +37,7 @@ const initialState = {
   },
   education: config.startHighSchool ? 1 : 0,
   program: null,
+  nextLevelIdx: null,
   postGradJob: unemployed,
 
   // ignore job performance when applying to first job after school
@@ -135,12 +136,13 @@ function reducer(state={}, action) {
       // Reset
       state.badPerformanceStreak = 0;
 
-      let {program, nextJob} = action.payload;
-      let nextLevel = education[state.education+1];
+      let {program, nextJob, nextLevelIdx} = action.payload;
+      let nextLevel = education[nextLevelIdx];
       if (nextLevel.name == 'Secondary Degree') {
         state.program = program;
         state.postGradJob = nextJob;
       }
+      state.nextLevelIdx = nextLevelIdx;
 
       // Compute cost and years in school
       let years = state.program ? state.program.years : nextLevel.years;
@@ -158,13 +160,14 @@ function reducer(state={}, action) {
     // Finish school
     case 'player:graduate':
       // Apply graduation effects
-      state.education += 1;
+      state.education = state.nextLevelIdx;
       state.schoolCountdown = 0;
       state.job = unemployed;
       state.ignoreJobPerformance = true;
       if (state.debt.length > 0) {
         state.debt[state.debt.length-1].startedPayments = true;
       }
+      state.nextLevelIdx = null;
 
       // If completing education w/ a specific program
       // (which has an associated job)
