@@ -258,11 +258,11 @@ function loop(now) {
         if (player.startAge + time.years >= config.retirementAge || player.retireEarly) {
           // window.location.href = 'data:plain/text,' + JSON.stringify(wageChanges);
           if (player.cash >= config.retirementSavingsMin || player.retireEarly) {
-            log('gameEnd', {success: true, cash: player.cash, time: logTime}, () => {
+            log('gameOver', {success: true, cash: player.cash, time: logTime}, () => {
               gameOver({icon: 'win_retire', text: t('game_over_win')});
             });
           } else {
-            log('gameEnd', {success: false, cash: player.cash, time: logTime}, () => {
+            log('gameOver', {success: false, cash: player.cash, time: logTime}, () => {
               gameOver({icon: 'lose_robot', text: t('game_over_lose')});
             });
           }

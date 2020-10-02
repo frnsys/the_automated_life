@@ -79,18 +79,20 @@ class App extends Component {
 
     // Hacky way to call game over
     window.gameOver = (gameOver) => {
-      fetch(`/summary/${IDENTIFIER}`, {
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        }
-      }).then(res => res.json())
-        .then((data) => {
-          gameOver.summary = data.summary;
-          gameOver.aggregate = data.aggregate;
-          this.setState({gameOver});
-        })
-        .catch(err => { console.log(err) });
+      if (config.enableLogging) {
+        fetch(`/summary/${IDENTIFIER}`, {
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          }
+        }).then(res => res.json())
+          .then((data) => {
+            gameOver.summary = data.summary;
+            gameOver.aggregate = data.aggregate;
+            this.setState({gameOver});
+          })
+          .catch(err => { console.log(err) });
+      }
     };
 
     // Hacky way to show news modal elsewhere

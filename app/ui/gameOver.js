@@ -135,7 +135,7 @@ class GameOverSurvey extends Component {
               <div><Radio value={4} id='ind_4' /><label htmlFor='ind_4'>{t('likert_4')}</label></div>
             </RadioGroup>
           </div>
-          <input type='Submit' value={t('survey_submit_button')} />
+          <input type='Submit' value={t('survey_submit_button')} readOnly={true} />
         </form>}
     </div>
   }

@@ -68,10 +68,25 @@ def log():
         hash = hashlib.sha256(ip.encode('utf8')).hexdigest()
         save_meta(id, hash, loc)
     append_log(id, data)
+    return jsonify(success=True)
 
-    # Compute summary statistics
-    if data['type'] == 'gameOver':
+
+@app.route('/summary/<id>')
+def summary(id):
+    """Get gameplay summary for player and
+    aggregate stats across all players"""
+    # Get cached summary, if available
+    summary = get_summary(id)
+
+    # Otherwise, calculate and save
+    if summary is None:
         log = get_logs(id)
+
+        # Can only generate summary if there are logs
+        # and the game has ended
+        if not log or log[-1]['type'] != 'gameOver':
+            abort(404)
+
         logs = defaultdict(list)
         events = []
         for e in log:
@@ -80,7 +95,7 @@ def log():
                 events.append(e)
 
         summary = {
-            'success': data['ev']['success'],
+            'success': log[-1]['ev']['success'],
             'events': events,
             'loans': sum(e['amount'] for e in logs['loan']),
             'jobs': [e for e in logs['hired']],
@@ -93,22 +108,10 @@ def log():
             'wages': [e['job']['wage'] for e in logs['month']],
             'baseWages': [e['job'].get('baseWage', 0) for e in logs['month']],
             'end': logs['month'][-1],
-            'result': logs['gameEnd'][-1] if logs['gameEnd'] else None
+            'result': logs['gameOver'][-1] if logs['gameOver'] else None
         }
         save_summary(id, summary)
         aggregate_statistics()
-
-    return jsonify(success=True)
-
-
-@app.route('/summary/<id>')
-def summary(id):
-    """Get gameplay summary for player and
-    aggregate stats across all players"""
-    # Get cached summary, if available
-    summary = get_summary(id)
-    if summary is None:
-        abort(404)
 
     res = redis.get('fow:aggregate')
     if res:

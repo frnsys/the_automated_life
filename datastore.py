@@ -45,7 +45,7 @@ def get_meta(id):
     return Meta.query.get(id)
 
 def get_logs(id):
-    return [json.loads(l.data) for l in Log.query.filter_by(session=id).all()]
+    return sorted([json.loads(l.data) for l in Log.query.filter_by(session=id).all()], key=lambda l: l['ts'])
 
 def save_summary(id, data):
     ts = int(time() * 1000) # ms
