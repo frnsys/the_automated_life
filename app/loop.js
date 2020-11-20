@@ -308,20 +308,20 @@ function loop(now) {
 
   // Check if we should trigger tutorial events
   // regardless of pause state
-  let state = store.getState();
-  config.tutorials = config.tutorials.filter((t) => {
-    // Skip if another tutorial is active
-    if (window.tutorialActive) return true;
-
-    // Skip if modal is open
-    if (document.body.classList.contains('ReactModal__Body--open')) return true;
-
-    let triggered = t.trigger(state);
-    if (triggered) {
-      let tutorial = new Tutorial(t);
-    }
-    return !triggered;
-  });
+  // Skip if another tutorial is active or the modal is open
+  if (!window.tutorialActive && !document.body.classList.contains('ReactModal__Body--open')) {
+    let state = store.getState();
+    config.tutorials = config.tutorials.filter((t) => {
+      let triggered = t.trigger(state);
+      if (triggered) {
+        let tutorial = new Tutorial(t);
+      }
+      return !triggered;
+    });
+  } else if (window.tutorialActive && window.tutorialActive.spec.finished) {
+    let state = store.getState();
+    if (window.tutorialActive.finished(state)) window.tutorialActive.finish();
+  }
   if (config.tutorials.length == 0) {
     document.body.classList.remove('tutorial--active');
   }

@@ -8,7 +8,7 @@ class Tutorial {
   constructor(spec) {
     this.spec = spec;
     document.body.classList.add('tutorial--active');
-    window.tutorialActive = true; // to avoid multiple tutorials at once
+    window.tutorialActive = this; // to avoid multiple tutorials at once
     setTimeout(() => {
       this.setStep(0);
     }, this.spec.delay * 1000 || 0);
@@ -42,28 +42,30 @@ class Tutorial {
       el.style[k] = pos[k];
     });
 
-    let ok = document.createElement('div');
-
-    ok.classList.add('button');
-    ok.classList.add('tutorial--tooltip-next');
-    ok.addEventListener('click', () => {
-      this.next();
-    });
-    el.appendChild(ok);
-
-    if (this._step == this.spec.tooltips.length - 1) {
-      ok.innerText = t('ok');
-    } else {
-      ok.innerText = t('next');
-
-      // Skip tutorial button
-      let skip = document.createElement('div');
-      skip.innerText = t('skip_tutorial');
-      skip.classList.add('tutorial--skip');
-      skip.addEventListener('click', () => {
-        this.skip();
+    let last = this._step == this.spec.tooltips.length - 1;
+    if (!last || !this.spec.finished) {
+      let ok = document.createElement('div');
+      ok.classList.add('button');
+      ok.classList.add('tutorial--tooltip-next');
+      ok.addEventListener('click', () => {
+        this.next();
       });
-      el.appendChild(skip);
+      el.appendChild(ok);
+
+      if (last) {
+        ok.innerText = t('ok');
+      } else {
+        ok.innerText = t('next');
+
+        // Skip tutorial button
+        let skip = document.createElement('div');
+        skip.innerText = t('skip_tutorial');
+        skip.classList.add('tutorial--skip');
+        skip.addEventListener('click', () => {
+          this.skip();
+        });
+        el.appendChild(skip);
+      }
     }
 
     if (step.onStart) step.onStart(store, graph);
@@ -71,7 +73,19 @@ class Tutorial {
   }
 
   finish() {
-    window.tutorialActive = false;
+    window.tutorialActive = null;
+    if (this.el.parentNode) {
+      this.el.parentNode.removeChild(this.el);
+    }
+    if (this.spec.finished) {
+      let lastStep = this.spec.tooltips[this.spec.tooltips.length - 1];
+      if (lastStep.onCompletion) lastStep.onCompletion(store, graph);
+    }
+  }
+
+  finished(state) {
+    let last = this._step == this.spec.tooltips.length - 1;
+    return (!this.spec.finished || this.spec.finished(state)) && last;
   }
 
   skip() {
@@ -88,7 +102,7 @@ class Tutorial {
       this.el.parentNode.removeChild(this.el);
       this.setStep(this._step + 1);
     }
-    if (this._step == this.spec.tooltips.length) {
+    if (this._step == this.spec.tooltips.length && !this.spec.finished) {
       this.finish();
     }
   }

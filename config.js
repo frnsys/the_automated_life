@@ -130,6 +130,7 @@ export default {
     // Start of game
     name: 'start',
     trigger: (state) => true,
+    finished: (state) => state.player.performance > 60,
     tooltips: [{
       position: (player, graph) => {
         let node = graph.nodes[player.job.id];
@@ -146,10 +147,6 @@ export default {
         window.speedup = 0.00001;
       },
       onCompletion: (store) => {
-        store.dispatch({
-          type: 'player:newTask',
-          payload: 4
-        });
         document.querySelector('.work-area').style.display = 'block';
       }
     }, {
@@ -159,6 +156,12 @@ export default {
       },
       text: 'tutorial_work',
       parent: '.work-area',
+      onStart: (store) => {
+        store.dispatch({
+          type: 'player:newTask',
+          payload: 8
+        });
+      },
       onCompletion: (store) => {
         store.dispatch({
           type: 'player:newTask',
@@ -171,7 +174,8 @@ export default {
     // After achieving fantastic performance
     name: 'job_application',
     delay: 1,
-    trigger: (state) => state.player.performance > 80,
+    trigger: (state) => state.player.performance > 90,
+    finished: (state) => state.player.application,
     tooltips: [{
       position: (player, graph) => {
         let node = graph.nodes[player.job.id];

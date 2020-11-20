@@ -65,7 +65,7 @@ const Work = (props) => {
   } else if (p <= 60) {
     performance = t('performance_mediocre');
     performanceColor = '#efb428';
-  } else if (p <= 80) {
+  } else if (p <= 90) {
     performance = t('performance_good');
     performanceColor = '#11c441';
   } else if (p <= 100) {
