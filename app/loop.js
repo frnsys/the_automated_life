@@ -5,6 +5,7 @@ import store from 'store';
 import logic from './logic';
 import graph from './ui/3d/graph';
 import skills from 'data/skills.json'
+import Tutorial from './ui/tutorial';
 
 // Set defaults
 window.speedup = 1;
@@ -54,7 +55,7 @@ function loop(now) {
 
     if (player.wasFired) {
       log('fired', {time: logTime});
-      graph.reveal(null);
+      graph.reveal(null, {});
       store.dispatch({
         type: 'player:resetFired'
       });
@@ -208,7 +209,14 @@ function loop(now) {
           let job = jobs[player.application.id];
 
           // Hired
-          if (config.perfectApplicant || Math.random() <= player.application.prob) {
+          if (config.perfectApplicant || Math.random() <= player.application.prob || window.fasttrack) {
+            // Fast track the first job application, for tutorial purposes
+            if (window.fasttrack) {
+              window.speedup = 0.0001;
+              if (player.pastJobs.length >= 1) {
+                window.fasttrack = false;
+              }
+            }
             if (inSchool) {
               log('dropout', {education: player.education, time: logTime});
             }
@@ -223,7 +231,7 @@ function loop(now) {
             log('hired', {job: job.id, time: logTime});
             graph.resetEdgeColor(graph.appliedNode, graph.focusedNodeId);
             graph.appliedNode = null;
-            graph.reveal(player.application.id);
+            graph.reveal(player.application.id, {});
 
           // Rejected
           } else {
@@ -235,6 +243,10 @@ function loop(now) {
             let appliedId = graph.appliedNode.data.id;
             graph.appliedNode = null;
             graph.resetEdgeColor(graph.focusedNodeId, appliedId);
+            store.dispatch({
+              type: 'player:rejected',
+              payload: player.application.mainFactor
+            });
           }
         }
         store.dispatch({
@@ -292,6 +304,26 @@ function loop(now) {
       });
     });
 
+  }
+
+  // Check if we should trigger tutorial events
+  // regardless of pause state
+  let state = store.getState();
+  config.tutorials = config.tutorials.filter((t) => {
+    // Skip if another tutorial is active
+    if (window.tutorialActive) return true;
+
+    // Skip if modal is open
+    if (document.body.classList.contains('ReactModal__Body--open')) return true;
+
+    let triggered = t.trigger(state);
+    if (triggered) {
+      let tutorial = new Tutorial(t);
+    }
+    return !triggered;
+  });
+  if (config.tutorials.length == 0) {
+    document.body.classList.remove('tutorial--active');
   }
 
   lastTime = now;

@@ -8,7 +8,6 @@ import store from 'store';
 import jobs from 'data/jobs.json'
 import {availableLanguages, lang} from '../i18n';
 // import Reference from './reference';
-import Tutorial from './tutorial';
 
 class StartMenu extends Component {
   static requireChoice = true;
@@ -25,16 +24,10 @@ class StartMenu extends Component {
       type: 'player:hire',
       payload: jobs[this.state.selectedJob]
     });
-    graph.reveal(this.state.selectedJob, true);
+    graph.reveal(this.state.selectedJob, {center: true, single: true});
     loop();
     log('started', {job: this.state.selectedJob});
     this.props.closeModal();
-
-    // Hack to advance the tutorial throughout the game
-    setTimeout(() => {
-      this.props.togglePause();
-      let tutorial = new Tutorial(this.props.togglePause);
-    }, 250);
     document.body.classList.remove('pregame');
   }
 

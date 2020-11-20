@@ -89,7 +89,12 @@ function reducer(state={}, action) {
     case 'player:apply': {
       if (!state.application) {
         state.application = action.payload;
-        state.application.countdown = config.applicationMinMonths - 1;
+        if (window.fasttrack) {
+          state.application.countdown = 0;
+          window.speedup = 2;
+        } else {
+          state.application.countdown = config.applicationMinMonths - 1;
+        }
       }
       return {...state}
     }
@@ -103,6 +108,11 @@ function reducer(state={}, action) {
           state.application.countdown = Math.max(state.application.countdown - 1, 0);
         }
       }
+      return {...state}
+    }
+
+    case 'player:rejected': {
+      state.lastRejectionReason = action.payload;
       return {...state}
     }
 

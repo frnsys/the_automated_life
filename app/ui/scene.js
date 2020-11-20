@@ -45,13 +45,15 @@ class Scene extends Component {
 
     let camera = this.scene.camera;
     let graph = this.props.graph;
-    graph.onReveal = (focusNode, bounds, center) => {
+    graph.onReveal = (focusNode, bounds, {center=true, fit=true}) => {
       if (center) {
         camera.position.set(focusNode.x, focusNode.y, camera.position.z);
         this.scene.controls.target.set(focusNode.x, focusNode.y, 0);
         this.scene.controls.update();
       }
-      zoomToFit(bounds, camera, 10);
+      if (fit) {
+        zoomToFit(bounds, camera, 10);
+      }
     };
     graph.zoomToAll = () => {
       let {center, bounds} = graph.revealedBounds();

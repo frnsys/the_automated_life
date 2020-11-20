@@ -126,55 +126,60 @@ export default {
   twoHops: params.includes('twoHops'),
   jobSatisfaction: params.includes('jobSatisfaction'),
 
-  tutorial: [{
-    tooltip: {
+  tutorials: [{
+    // Start of game
+    name: 'start',
+    trigger: (state) => true,
+    tooltips: [{
       position: (player, graph) => {
         let node = graph.nodes[player.job.id];
         return {
-          top: `${-node.y-30}px`,
+          top: `${-node.y+10}px`,
           left: `${node.x * (node.x > 0 ? 1.04 : 1.01)}px`
         };
       },
       text: 'tutorial_welcome',
-      parent: '#annotations'
-    },
-    onCompletion: () => {
-      document.querySelector('.work-area').style.display = 'block';
-    }
-  }, {
-    tooltip: {
+      parent: '#annotations',
+      onStart: () => {
+        // Effectively pause the game, but running so tasks register
+        window.paused = false;
+        window.speedup = 0.00001;
+      },
+      onCompletion: (store) => {
+        store.dispatch({
+          type: 'player:newTask',
+          payload: 4
+        });
+        document.querySelector('.work-area').style.display = 'block';
+      }
+    }, {
       position: {
         top: '0px',
         right: '110%'
       },
       text: 'tutorial_work',
-      parent: '.work-area'
-    },
-    onStart: (store) => {
-      store.dispatch({
-        type: 'player:newTask',
-        payload: 8
-      });
-      // Effectively pause the game, but running so tasks register
-      window.paused = false;
-      window.speedup = 0.00001;
-    },
-  }, {
-    tooltip: {
+      parent: '.work-area',
+    }, {
       position: {
         top: '0px',
         right: '110%'
       },
       text: 'tutorial_performance',
-      parent: '.work-area'
-    },
-    onCompletion: () => {
-      window.paused = true;
-      window.speedup = 1;
-      document.querySelector('.work-area').style.display = 'block';
-    }
+      parent: '.work-area',
+      onCompletion: (store) => {
+        store.dispatch({
+          type: 'player:newTask',
+          payload: 12
+        });
+      }
+    }]
   }, {
-    tooltip: {
+
+    // After achieving fantastic performance
+    name: 'job_application',
+    delay: 1,
+    trigger: (state) => state.player.performance > 80,
+    tooltips: [{
       position: (player, graph) => {
         let node = graph.nodes[player.job.id];
         return {
@@ -183,135 +188,169 @@ export default {
         };
       },
       text: 'tutorial_jobs',
-      parent: '#annotations'
-    }
-  }, {
-    tooltip: {
+      parent: '#annotations',
+      onStart: (store, graph) => {
+        let {player} = store.getState();
+        graph.reveal(player.job.id, {center: true, fit: false});
+
+        // Special flag to fast track the job application
+        // and ensure the player is hired
+        window.fasttrack = true;
+      },
+      onCompletion: (store, graph) => {
+        let {player} = store.getState();
+        graph.reveal(player.job.id, {center: true, fit: false});
+      },
+    }, {
       position: (player, graph) => {
         let node = graph.nodes[player.job.id];
         return {
-          top: `${-node.y-30}px`,
+          top: `${-node.y+10}px`,
           left: `${node.x * (node.x > 0 ? 1.04 : 1.01)}px`
         };
       },
       text: 'tutorial_apply',
-      parent: '#annotations'
-    }
+      parent: '#annotations',
+    }]
   }, {
-    tooltip: {
-      position: (player, graph) => {
-        let node = graph.nodes[player.job.id];
-        return {
-          top: `${-node.y-30}px`,
-          left: `${node.x * (node.x > 0 ? 1.04 : 1.01)}px`
-        };
-      },
-      text: 'tutorial_skills',
-      parent: '#annotations'
-    },
-    onStart: (store) => {
-      let {player} = store.getState();
-      let tooltip = document.getElementById('graph-tooltip');
-      tooltip.style.display = 'block';
-      tooltip.innerHTML = window.jobTooltip(player.job);
-      tooltip.dataset.sticky = true;
-    },
-    onCompletion: () => {
-      let tooltip = document.getElementById('graph-tooltip');
-      tooltip.dataset.sticky = false;
-    }
-  }, {
-    tooltip: {
-      position: (player, graph) => {
-        let node = graph.nodes[player.job.id];
-        return {
-          top: `${-node.y-30}px`,
-          left: `${node.x * (node.x > 0 ? 1.04 : 1.01)}px`
-        };
-      },
-      text: 'tutorial_automation',
-      parent: '#annotations'
-    }
-  }, {
-    tooltip: {
-      position: (player, graph) => {
-        let node = graph.nodes[player.job.id];
-        return {
-          top: `${-node.y-30}px`,
-          left: `${node.x * (node.x > 0 ? 1.04 : 1.01)}px`
-        };
-      },
-      text: 'tutorial_risk',
-      parent: '#annotations'
-    },
-    onCompletion: () => {
-      document.querySelector('.hud-area').style.display = 'block';
-    }
-  }, {
-    tooltip: {
+
+    // After getting hired at second new job
+    name: 'game_objective',
+    delay: 4,
+    trigger: (state) => state.player.pastJobs.length > 1,
+    tooltips: [{
       position: {
         top: '0px',
         left: '110%'
       },
       text: 'tutorial_hud',
-      parent: '.hud-area'
-    },
-    onStart: (store) => {
-      document.querySelector('.hud-children .button:last-child').classList.add('disabled')
-    }
-  }, {
-    tooltip: {
-      position: {
-        top: '0px',
-        left: '110%'
+      parent: '.hud-area',
+      onStart: (store) => {
+        document.querySelector('.hud-area').style.display = 'block';
+        document.querySelector('.hud-children').style.display = 'none';
       },
-      text: 'tutorial_education',
-      parent: '.hud-area'
-    }
-  }, {
-    tooltip: {
+      onCompletion: () => {
+        window.speedup = 1;
+        window.updateSpeed(window.speedup);
+        window.updatePaused(true);
+        document.querySelector('.hud-area').style.display = 'block';
+        document.querySelector('.hud-children').style.display = 'none';
+        document.querySelector('.hud-children .button:first-child').style.visibility = 'hidden';
+        document.querySelector('.hud-children .button:last-child').style.visility = 'hidden';
+      }
+    }, {
       position: {
         top: '0px',
         left: '110%'
       },
       text: 'tutorial_expenses',
-      parent: '.hud-area'
-    },
-    onCompletion: () => {
-      document.querySelector('.hud-progress').style.display = 'block';
-    }
-  }, {
-    tooltip: {
+      parent: '.hud-area',
+      onCompletion: () => {
+        document.querySelector('.hud-progress').style.display = 'block';
+        window.updatePaused(false);
+      }
+    }, {
+      // Explain game objective
       position: {
         bottom: '0px',
         left: '110%'
       },
       text: 'tutorial_goal',
       parent: '.hud-progress'
-    }
-  }, {
-    tooltip: {
+    }, {
       position: {
         bottom: '0px',
         left: '110%'
       },
       text: 'tutorial_lose',
-      parent: '.hud-progress'
-    },
-    onCompletion: () => {
-      document.querySelector('.time-controls').style.display = 'flex';
-    }
-  }, {
-    tooltip: {
+      parent: '.hud-progress',
+      onCompletion: () => {
+        document.querySelector('.time-controls').style.display = 'flex';
+      }
+    }, {
       position: {
         top: '0px',
         left: '110%'
       },
       text: 'tutorial_pause',
       parent: '.hud-area'
-    },
-    onCompletion: () => {
-      document.querySelector('.hud-children .button:last-child').classList.remove('disabled')
-    }
+    }]
+  }, {
+
+    // After first robot releases
+    name: 'automation',
+    trigger: (state) => Object.keys(state.robots).length > 0,
+    tooltips: [{
+      position: {
+        top: '0px',
+        left: '110%'
+      },
+      text: 'tutorial_automation',
+      parent: '.hud-area'
+      onStart: (store, graph) => {
+        window.updatePaused(true);
+      }
+    }, {
+      position: {
+        top: '0px',
+        left: '110%'
+      },
+      text: 'tutorial_risk',
+      parent: '.hud-area'
+    }]
+  }, {
+
+    // After first education-related rejection
+    name: 'education',
+    trigger: (state) => state.player.lastRejectionReason == 'education',
+    tooltips: [{
+      position: {
+        top: '0px',
+        left: '110%'
+      },
+      text: 'tutorial_education_rejected',
+      parent: '.hud-area',
+      onStart: () => {
+        window.updatePaused(true);
+      },
+      onCompletion: () => {
+        document.querySelector('.hud-children').style.display = 'flex';
+        document.querySelector('.hud-children .button:first-child').style.visibility = 'visible';
+      }
+    }, {
+      position: {
+        top: '0px',
+        left: '110%'
+      },
+      text: 'tutorial_education',
+      parent: '.hud-area'
+    }]
+  }, {
+
+    // After first skill-related rejection
+    name: 'skills',
+    trigger: (state) => state.player.lastRejectionReason == 'skills',
+    tooltips: [{
+      position: {
+        top: '0px',
+        left: '110%'
+      },
+      text: 'tutorial_skills_rejected',
+      parent: '.hud-area',
+      onStart: () => {
+        window.updatePaused(true);
+      },
+      onCompletion: () => {
+        document.querySelector('.hud-children').style.display = 'flex';
+        document.querySelector('.hud-children .button:last-child').style.visibility = 'visible';
+      }
+    }, {
+      position: {
+        top: '0px',
+        left: '110%'
+      },
+      text: 'tutorial_skills',
+      parent: '.hud-area'
+    }]
   }]
 };

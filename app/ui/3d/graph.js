@@ -382,13 +382,13 @@ class Graph {
 
   lock() {
     this.locked = true;
-    this.reveal(null);
+    this.reveal(null, {});
   }
 
   unlock(job_id, player=null) {
     this.locked = false;
     if (job_id) {
-      this.reveal(job_id, true, player);
+      this.reveal(job_id, {center: true, player});
     } else {
       Object.values(this.nodes)
         .filter(n => n.mesh.visible)
@@ -402,7 +402,7 @@ class Graph {
 
   // Reveal the node and its neighbors
   // for the given job id
-  reveal(job_id, center=false, player=null) {
+  reveal(job_id, {center=false, fit=true,player=null, single=false}) {
     if (!player) {
       player = store.getState().player;
     }
@@ -451,11 +451,20 @@ class Graph {
       bottom: focusNode.y
     };
 
-    let hops = 1;
-    if (config.twoHops) {
-      hops = 2;
+    if (!single) {
+      let hops = 1;
+      if (config.twoHops) {
+        hops = 2;
+      }
+      bounds = this.revealNeighbors(job_id, player, bounds, hops);
+    } else {
+      bounds = {
+        left: bounds.left - 75,
+        top: bounds.top - 75,
+        right: bounds.right + 75,
+        bottom: bounds.bottom + 75
+      };
     }
-    bounds = this.revealNeighbors(job_id, player, bounds, hops);
 
     // Set focus node color
     focusNode.mesh.visible = true;
@@ -464,7 +473,7 @@ class Graph {
     focusNode.mesh.position.setZ(2);
     this.showIconForNode(focusNode);
 
-    this.onReveal(focusNode, bounds, center);
+    this.onReveal(focusNode, bounds, {center, fit});
   }
 
   revealNeighbors(job_id, player, bounds, hops, immediateNeighbs, focusId) {

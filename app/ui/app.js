@@ -123,7 +123,12 @@ class App extends Component {
 
     // Hacky way to update speed from elsewhere
     window.updateSpeed = (speedup) => {
-      this.setState({ speedup: speedup });
+      this.setState({ speedup });
+    }
+    // Hack way to pause from elsewhere
+    window.updatePaused = (paused) => {
+      window.paused = paused;
+      this.setState({ paused });
     }
 
     document.addEventListener('keydown', (ev) => {
@@ -216,8 +221,8 @@ class App extends Component {
             <div className='time-button zoom-button' onClick={this.zoomToCurrent.bind(this)}><img src="/static/pin.svg" /></div>
           </div>
           <HUD>
-            <div className='button' onClick={() => this.setState({modalIsOpen: true, modal: Skills})}>{t('skills_button')}</div>
             <div className='button' onClick={() => this.setState({modalIsOpen: true, modal: School})}>{t('school_button')}</div>
+            <div className='button' onClick={() => this.setState({modalIsOpen: true, modal: Skills})}>{t('skills_button')}</div>
           </HUD>
           {this.state.paused || this.state.help ? <div className='help-hint hud-help-hint'>
             <div dangerouslySetInnerHTML={{__html: t('hint_hud')}}></div>
