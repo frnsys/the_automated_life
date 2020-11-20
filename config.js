@@ -286,7 +286,7 @@ export default {
         left: '110%'
       },
       text: 'tutorial_automation',
-      parent: '.hud-area'
+      parent: '.hud-area',
       onStart: (store, graph) => {
         window.updatePaused(true);
       }
