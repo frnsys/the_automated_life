@@ -876,7 +876,7 @@ ul {
 .tutorial--tooltip {
   position: absolute;
   background: #fff;
-  border: 1px solid black;
+  border: 6px solid #ff9f0e;
   padding: 0.5em;
   min-width: 210px;
   z-index: 10;
@@ -889,6 +889,7 @@ ul {
 }
 .tutorial--tooltip-next {
   margin-top: 1em;
+  max-width: 100% !important;
 }
 #annotations .tutorial--tooltip {
   /* font-size: 0.75em; */

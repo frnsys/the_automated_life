@@ -159,13 +159,6 @@ export default {
       },
       text: 'tutorial_work',
       parent: '.work-area',
-    }, {
-      position: {
-        top: '0px',
-        right: '110%'
-      },
-      text: 'tutorial_performance',
-      parent: '.work-area',
       onCompletion: (store) => {
         store.dispatch({
           type: 'player:newTask',
@@ -247,7 +240,6 @@ export default {
       parent: '.hud-area',
       onCompletion: () => {
         document.querySelector('.hud-progress').style.display = 'block';
-        window.updatePaused(false);
       }
     }, {
       // Explain game objective
@@ -279,6 +271,7 @@ export default {
 
     // After first robot releases
     name: 'automation',
+    delay: 1,
     trigger: (state) => Object.keys(state.robots).length > 0,
     tooltips: [{
       position: {
@@ -302,6 +295,7 @@ export default {
 
     // After first education-related rejection
     name: 'education',
+    delay: 1,
     trigger: (state) => state.player.lastRejectionReason == 'education',
     tooltips: [{
       position: {
@@ -312,7 +306,14 @@ export default {
       parent: '.hud-area',
       onStart: () => {
         window.updatePaused(true);
+      }
+    }, {
+      position: {
+        top: '0px',
+        left: '110%'
       },
+      text: 'tutorial_education',
+      parent: '.hud-area',
       onCompletion: () => {
         document.querySelector('.hud-children').style.display = 'flex';
         document.querySelector('.hud-children .button:first-child').style.visibility = 'visible';
@@ -322,13 +323,14 @@ export default {
         top: '0px',
         left: '110%'
       },
-      text: 'tutorial_education',
+      text: 'tutorial_education_school',
       parent: '.hud-area'
     }]
   }, {
 
     // After first skill-related rejection
     name: 'skills',
+    delay: 1,
     trigger: (state) => state.player.lastRejectionReason == 'skills',
     tooltips: [{
       position: {
@@ -350,6 +352,13 @@ export default {
         left: '110%'
       },
       text: 'tutorial_skills',
+      parent: '.hud-area'
+    }, {
+      position: {
+        top: '0px',
+        left: '110%'
+      },
+      text: 'tutorial_skills_more',
       parent: '.hud-area'
     }]
   }]
