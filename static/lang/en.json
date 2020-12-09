@@ -149,7 +149,7 @@
   "about": "About",
   "tutorial_welcome": "Welcome to The Automated Life. This is your current job. You can <b>hover</b> over it for more details.'",
   "tutorial_work": "To keep your job (and make it easier to apply to a new one), you need to work. <b>Click on Work tasks</b> according to the color pattern on the left. Give it a try!",
-  "tutorial_jobs": "Your current job is connected to other jobs that you can <b>apply</b> to. Jobs you can apply to connected by a <b>green line</b>.",
+  "tutorial_jobs": "Your current job is connected to other jobs that you can <b>apply</b> to. Jobs you can apply to are connected by a <b>green line</b>.",
   "tutorial_apply": "<b>Click</b> on a job to apply to it. The job you are currently applying to will be <b>highlighted in yellow</b>.",
   "tutorial_skills": "Jobs have different <b>skill requirements</b> that influence your chance of being hired. You can <b>hover over the job</b> to see these. The most <b>important skills</b> are on the right, displayed with your current <b>skill levels</b>.",
   "tutorial_automation": "New <b>robots</b> will be released over time, <b>automating skills and lowering wages</b>. Try to <b>escape automation</b> by being strategic about what jobs you apply to.",
