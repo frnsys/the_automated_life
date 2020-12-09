@@ -897,6 +897,7 @@ ul {
   /* min-width: 200px; */
   font-size: 0.2em;
   min-width: 130px;
+  border-width: 2px;
 }
 .tutorial--skip {
   color: #888;
