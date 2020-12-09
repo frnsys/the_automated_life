@@ -5,7 +5,8 @@ import store from '../store';
 import graph from './3d/graph';
 
 class Tutorial {
-  constructor(spec) {
+  constructor(spec, allTutorials) {
+    this.allTutorials = allTutorials;
     this.spec = spec;
     document.body.classList.add('tutorial--active');
     window.tutorialActive = this; // to avoid multiple tutorials at once
@@ -89,9 +90,12 @@ class Tutorial {
   }
 
   skip() {
+    window.skipTutorials = true;
     this.el.parentNode.removeChild(this.el);
-    this.spec.tooltips.forEach((step) => {
-      if (step.onCompletion) step.onCompletion(store, graph);
+    this.allTutorials.forEach((spec) => {
+      spec.tooltips.forEach((step) => {
+        if (step.onCompletion) step.onCompletion(store, graph);
+      });
     });
     this.finish();
   }

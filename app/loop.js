@@ -314,7 +314,7 @@ function loop(now) {
     config.tutorials = config.tutorials.filter((t) => {
       let triggered = t.trigger(state);
       if (triggered) {
-        let tutorial = new Tutorial(t);
+        let tutorial = new Tutorial(t, config.tutorials);
       }
       return !triggered;
     });
@@ -322,6 +322,7 @@ function loop(now) {
     let state = store.getState();
     if (window.tutorialActive.finished(state)) window.tutorialActive.finish();
   }
+  if (window.skipTutorials) config.tutorials = [];
   if (config.tutorials.length == 0) {
     document.body.classList.remove('tutorial--active');
   }
