@@ -103,7 +103,7 @@ export default {
   }],
 
   // Work minigame
-  maxSkillChangePerWork: 0.002,
+  maxSkillChangePerWork: 0.004,
   baseWorkPerClick: 8,
   slackPerFrame: 0.025,
   maxTasks: 40,
