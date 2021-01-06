@@ -144,6 +144,13 @@ function reducer(state={}, action) {
       state.job = action.payload;
       state.tasks = [];
       state.ignoreJobPerformance = false;
+
+      // Add some starting tasks
+      let nStartTasks = 6;
+      [...Array(nStartTasks).keys()].forEach(() => {
+        let taskType = math.pickRandom(state.job.pattern);
+        state.tasks.push(taskType);
+      });
       return {...state}
 
     // Enroll in school
