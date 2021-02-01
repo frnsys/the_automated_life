@@ -247,7 +247,9 @@ class Graph {
           } else {
             valid = true;
           }
-          if (!player.application && valid) {
+
+          let inSchool = player.job.name == 'Student';
+          if (!player.application && !inSchool && valid) {
             let {time} = store.getState();
             let {prob, mainFactor, factors, details} = logic.probabilityForJob(j);
             let payload = {
