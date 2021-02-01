@@ -41,6 +41,9 @@ ul {
   pointer-events: none;
   padding: 0 0.25em 0.15em;
 }
+.hide-labels .node-label {
+  display: none !important;
+}
 
 .job-info {
   margin-right: 1em;

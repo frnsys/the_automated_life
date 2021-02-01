@@ -201,13 +201,17 @@ class Graph {
     }
   }
 
-  makeAnnotation(node, text) {
+  makeAnnotation(node, text, isNodeLabel) {
     const anno = document.createElement('div');
     node.anno = anno;
 
     anno.classList.add('annotation');
     this.annos.appendChild(anno);
     anno.innerText = text;
+
+    if (isNodeLabel) {
+      anno.classList.add('node-label');
+    }
 
     // Get height
     anno.style.visibility = 'hidden';
@@ -331,7 +335,7 @@ class Graph {
       // Use first industry for node job
       node.industry = j.industries[0];
 
-      const anno = this.makeAnnotation(node, t(j.name));
+      const anno = this.makeAnnotation(node, t(j.name), true);
       anno.style.display = 'none';
       this.edges[id] = {};
       this.group.add(node.mesh);
@@ -475,6 +479,12 @@ class Graph {
     focusNode.setColor(focusedColor);
     focusNode.mesh.position.setZ(2);
     this.showIconForNode(focusNode);
+
+    // Hide node labels if too many visible
+    let nVisibleNodes = Object.values(this.nodes).reduce((acc, n) => acc + (n.mesh.visible ? 1 : 0), 0);
+    if (nVisibleNodes > 10) {
+      this.annos.classList.add('hide-labels');
+    }
 
     this.onReveal(focusNode, bounds, {center, fit});
   }
