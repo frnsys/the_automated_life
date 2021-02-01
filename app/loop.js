@@ -235,8 +235,20 @@ function loop(now) {
 
           // Rejected
           } else {
+            let details = '';
+            if (player.application.mainFactor == 'skills') {
+              let s_id = player.application.details.skillShortfalls[0][0];
+              let skillName = skills[s_id].name;
+              details = t('rejected_skills_details', {
+                skill: t(skillName)
+              });
+            }
             notify(`😞 ${t('rejected',
-              {name: t(job.name), mainFactor: t(player.application.mainFactor)})}`,
+              {
+                name: t(job.name),
+                mainFactor: t(player.application.mainFactor),
+                details: details
+              })}`,
               '', {background: '#ea432a', color: '#fff'});
             log('rejected', {job: job.id, time: logTime});
             graph.resetNodeColor(graph.appliedNode, player);

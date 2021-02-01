@@ -249,11 +249,12 @@ class Graph {
           }
           if (!player.application && valid) {
             let {time} = store.getState();
-            let {prob, mainFactor, factors} = logic.probabilityForJob(j);
+            let {prob, mainFactor, factors, details} = logic.probabilityForJob(j);
             let payload = {
               id: id,
               prob: prob,
-              mainFactor: mainFactor
+              mainFactor: mainFactor,
+              details: details
             }
             store.dispatch({
               type: 'player:apply',

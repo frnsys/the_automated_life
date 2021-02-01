@@ -80,6 +80,15 @@ function jobProficiency(job, player) {
   return proficiency;
 }
 
+function jobSkillLevels(job, player) {
+  let skillComparisons = Object.keys(job.skills).map((s_id) => {
+    let s = job.skills[s_id] * player.skills[s_id];
+    return [s_id, job.skills[s_id] - s];
+  });
+  skillComparisons.sort((a, b) => b[1] - a[1]);
+  return skillComparisons;
+}
+
 // window.testJob = {skills: {0: 1}, skillsTotal: 1};
 // window.testPlayer = {skills: {}};
 // window.TESTING = jobProficiency;
@@ -106,7 +115,12 @@ function probabilityForJob(job) {
   }, null);
 
   let prob = (performance + education + skills)/3;
-  return { prob, mainFactor, factors };
+
+  let details = {};
+  if (mainFactor == 'skills') {
+    details.skillShortfalls = jobSkillLevels(job, player).slice(0, 5);
+  }
+  return { prob, mainFactor, factors, details };
 }
 
 // How much a job is automated
