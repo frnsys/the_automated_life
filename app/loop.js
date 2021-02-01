@@ -236,7 +236,7 @@ function loop(now) {
           // Rejected
           } else {
             notify(`😞 ${t('rejected',
-              {name: t(job.name), mainFactor: player.application.mainFactor})}`,
+              {name: t(job.name), mainFactor: t(player.application.mainFactor)})}`,
               '', {background: '#ea432a', color: '#fff'});
             log('rejected', {job: job.id, time: logTime});
             graph.resetNodeColor(graph.appliedNode, player);
