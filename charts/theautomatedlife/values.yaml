@@ -1,6 +1,0 @@
-registryUrl: docker.gitlab.gwdg.de
-dockerRegistryPrefix: mpib/chm/common/base-images
-
-fowSentryDSN: https://83f0fa47fd6c4429a9fd75a021c70df2@sentry.io/1441472
-fowRedisHost: redis-master.aal.svc.cluster.local
-

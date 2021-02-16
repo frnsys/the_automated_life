@@ -61,9 +61,9 @@ deploy:
   script:
     - set -xv
     - aws --region eu-central-1 eks update-kubeconfig --name chm-test-default --region eu-central-1
-    - helm upgrade -n aal --install theautomatedlife charts/theautomatedlife \
-    --set dockersecret=${DOCKERCFG} \
-    --set imageTag=${IMAGE_TAG} \
-    --set fowRedisPass=${fowRedisPass}  \
-    --set fowPsqlUri=${fowPsqlUri}  \
-    --set fowAuthKey=${fowAuthKey}
+    - helm upgrade -n aal --install theautomatedlife charts/theautomatedlife
+      --set dockersecret=${DOCKERCFG}
+      --set imageTag=${IMAGE_TAG}
+      --set fowRedisPass=${fowRedisPass}
+      --set fowPsqlUri=${fowPsqlUri}
+      --set fowAuthKey=${fowAuthKey}
