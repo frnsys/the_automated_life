@@ -1,0 +1,64 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: future-of-work
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: future-of-work
+    spec:
+      containers:
+      - image: frnsys/future-of-work:{{VERSION}}
+        imagePullPolicy: Always
+        name: future-of-work
+        ports:
+        - containerPort: 8080
+        resources:
+          requests:
+            cpu: 100m
+        env:
+        - name: FOW_SENTRY_DSN
+          value: foo
+        - name: FOW_REDIS_HOST
+          value: foo
+        - name: FOW_REDIS_PASS
+          value: foo
+        - name: FOW_PSQL_URI
+          value: foo
+        - name: FOW_AUTH_KEY
+          value: foo
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: future-of-work
+spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: future-of-work
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: future-of-work
+  annotations:
+    kubernetes.io/tls-acme: "true"
+    kubernetes.io/ingress.class: "nginxtal"
+spec:
+  tls:
+  - hosts:
+    - theautomated.life
+#    secretName: ingress-ca
+  rules:
+  - host: theautomated.life
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: future-of-work
+          servicePort: 80
