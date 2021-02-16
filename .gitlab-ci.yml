@@ -1,0 +1,69 @@
+stages:
+  - build-npm
+  - build-container
+  - deploy
+
+variables:
+  DOCKER_HOST: tcp://localhost:2375/
+  DOCKER_DRIVER: overlay2
+  REGISTERY_URL: docker.gitlab.gwdg.de
+  DOCKER_REGISTERY_PREFIX: mpib/chm/common/base-images
+
+.tags: &tags
+  tags:
+    - chm
+
+.before: &before
+  before_script:
+    - docker login --username ${REGISTERY_USERNAME} --password ${REGISTERY_PASSWORD} docker.gitlab.gwdg.de
+
+.services: &services
+  services:
+    - name: "docker:18.09.0-dind"
+      alias: docker
+
+.commonheader: &commonheader
+  <<: *services
+  <<: *tags
+  <<: *before
+
+build:
+  stage: build-npm
+  <<: *commonheader
+  image: node:12-slim
+  artifacts:
+    paths:
+      - static/
+    expire_in: 2 days
+    when: always
+  script:
+    - npm run build
+
+build-container:
+  stage: build-container
+  image: "docker:18.09.0"
+  <<: *commonheader
+  script:
+    - export IMAGE_TAG=$(date +"%Y%m%d-%H%M%S")-${CI_COMMIT_SHORT_SHA}
+    - echo IMAGE_TAG=$IMAGE_TAG >> deploy.env
+    - docker build --no-cache -f Dockerfile -t ${REGISTERY_URL}/${DOCKER_REGISTERY_PREFIX}/theautomatedlife:${IMAGE_TAG} .
+    - docker push ${REGISTERY_URL}/${DOCKER_REGISTERY_PREFIX}/theautomatedlife:${IMAGE_TAG}
+  artifacts:
+      reports:
+        dotenv:
+          - deploy.env
+
+
+deploy:
+  stage: deploy
+  <<: *commonheader
+  image: ${REGISTERY_URL}/${DOCKER_REGISTERY_PREFIX}/app/cd-tools:0.1
+  script:
+    - set -xv
+    - aws --region eu-central-1 eks update-kubeconfig --name chm-test-default --region eu-central-1
+    - helm upgrade -n aal --install theautomatedlife charts/theautomatedlife \
+    --set dockersecret=${DOCKERCFG} \
+    --set imageTag=${IMAGE_TAG} \
+    --set fowRedisPass=${fowRedisPass}  \
+    --set fowPsqlUri=${fowPsqlUri}  \
+    --set fowAuthKey=${fowAuthKey}
