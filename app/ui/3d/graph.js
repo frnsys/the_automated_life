@@ -289,8 +289,8 @@ class Graph {
         onMouseOver: () => {
           let anno = this.nodes[id].anno;
           anno.style.background = '#FFD100';
-          anno.style.fontSize = '0.4em';
           anno.style.zIndex = '2';
+          anno.classList.add('visible');
 
           // Highlight neighbor colors
           let neighbIds = Object.keys(this.edges[id]);
@@ -299,8 +299,8 @@ class Graph {
               let anno = this.nodes[n_id].anno;
               anno.style.background = '#395BE5';
               anno.style.color = '#fff';
-              anno.style.fontSize = '0.4em';
               anno.style.zIndex = '2';
+              anno.classList.add('visible');
               if (this.nodes[n_id].icon) {
                 this.nodes[n_id].icon.scale.set(iconScale * 1.5, iconScale * 1.5, iconScale * 1.5);
               }
@@ -315,6 +315,7 @@ class Graph {
           anno.style.background = 'none';
           anno.style.fontSize = '0.2em';
           anno.style.zIndex = '1';
+          anno.classList.remove('visible');
 
           let neighbIds = Object.keys(this.edges[id]);
           neighbIds.forEach((n_id) => {
@@ -323,6 +324,7 @@ class Graph {
             anno.style.color = '#000';
             anno.style.fontSize = '0.2em';
             anno.style.zIndex = '1';
+            anno.classList.remove('visible');
             if (this.nodes[n_id].icon) {
               this.nodes[n_id].icon.scale.set(iconScale, iconScale, iconScale);
             }
@@ -484,7 +486,7 @@ class Graph {
 
     // Hide node labels if too many visible
     let nVisibleNodes = Object.values(this.nodes).reduce((acc, n) => acc + (n.mesh.visible ? 1 : 0), 0);
-    if (nVisibleNodes > 10) {
+    if (nVisibleNodes > 20) {
       this.annos.classList.add('hide-labels');
     }
 

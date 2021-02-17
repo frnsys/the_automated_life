@@ -44,6 +44,9 @@ ul {
 .hide-labels .node-label {
   display: none !important;
 }
+.hide-labels .node-label.visible {
+  display: block !important;
+}
 
 .job-info {
   margin-right: 1em;
