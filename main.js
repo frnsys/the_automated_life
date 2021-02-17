@@ -6,6 +6,9 @@ import {loadLanguage} from './app/i18n';
 import config from './config';
 import store from 'store';
 import jobs from 'data/jobs.json';
+import MobileWarning from './app/ui/mobile';
+
+const MIN_WIDTH = 480;
 
 function checkGDPR(cb) {
   fetch(`/gdpr`)
@@ -15,12 +18,18 @@ function checkGDPR(cb) {
     });
 }
 
-loadLanguage(() => {
-  checkGDPR((gdpr) => {
-    render(
-      <Provider store={store}>
-        <App gdpr={gdpr || config.forceGdpr} jobs={jobs} />
-      </Provider>,
-      document.getElementById('main'));
+if (screen.width >= MIN_WIDTH) {
+  loadLanguage(() => {
+    checkGDPR((gdpr) => {
+      render(
+        <Provider store={store}>
+          <App gdpr={gdpr || config.forceGdpr} jobs={jobs} />
+        </Provider>,
+        document.getElementById('main'));
+    });
   });
-});
+} else {
+  loadLanguage(() => {
+    render(<MobileWarning />, document.getElementById('main'));
+  });
+}

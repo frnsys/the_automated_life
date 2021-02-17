@@ -950,3 +950,17 @@ a.selected-language,
 .pregame .ReactModal__Overlay {
   background: none !important;
 }
+
+.mobile-warning {
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.mobile-warning > div {
+  background: #fff;
+  border: 5px solid #333;
+  margin: 1em;
+  padding: 1em;
+}
