@@ -899,7 +899,7 @@ ul {
   /* font-size: 0.75em; */
   /* min-width: 200px; */
   font-size: 0.2em;
-  min-width: 130px;
+  min-width: 21em;
   border-width: 2px;
 }
 .tutorial--skip {

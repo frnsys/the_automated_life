@@ -135,8 +135,8 @@ export default {
       position: (player, graph) => {
         let node = graph.nodes[player.job.id];
         return {
-          top: `${-node.y+5}px`,
-          left: `${node.x * (node.x > 0 ? 1.04 : 1.01) -60}px`
+          top: `${(-node.y+5)/4.31}em`,
+          left: `${(node.x * (node.x > 0 ? 1.04 : 1.01) -60)/4.35}em`
         };
       },
       text: 'tutorial_welcome',
@@ -180,8 +180,8 @@ export default {
       position: (player, graph) => {
         let node = graph.nodes[player.job.id];
         return {
-          top: `${-node.y-30}px`,
-          left: `${node.x * (node.x > 0 ? 1.04 : 1.01)}px`
+          top: `${(-node.y-30)/4.31}em`,
+          left: `${(node.x * (node.x > 0 ? 1.04 : 1.01))/4.35}em`
         };
       },
       text: 'tutorial_jobs',
@@ -202,8 +202,8 @@ export default {
       position: (player, graph) => {
         let node = graph.nodes[player.job.id];
         return {
-          top: `${-node.y+10}px`,
-          left: `${node.x * (node.x > 0 ? 1.04 : 1.01)}px`
+          top: `${(-node.y+10)/4.31}em`,
+          left: `${(node.x * (node.x > 0 ? 1.04 : 1.01))/4.35}em`
         };
       },
       text: 'tutorial_apply',

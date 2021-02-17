@@ -110,8 +110,6 @@ class Scene extends Component {
     pos.project(camera);
     pos.x = ( pos.x * widthHalf ) + widthHalf;
     pos.y = - ( pos.y * heightHalf ) + heightHalf;
-    this.graph.annos.style.top = `${pos.y}px`;
-    this.graph.annos.style.left = `${pos.x}px`;
 
     let pos2 = new THREE.Vector3(1, 1, 0);
     pos2.project(camera);
@@ -119,7 +117,10 @@ class Scene extends Component {
     pos2.y = - ( pos2.y * heightHalf ) + heightHalf;
     let d = pos.distanceTo(pos2);
 
-    this.graph.annos.style.transform = `scale(${d/1.448})`;
+    // this.graph.annos.style.transform = `scale(${d/1.448})`;
+    this.graph.annos.style.top = `${pos.y}px`;
+    this.graph.annos.style.left = `${pos.x}px`;
+    this.graph.annos.style.fontSize = `${d*15}px`;
 
     this.frameId = requestAnimationFrame(this.animate.bind(this));
   }

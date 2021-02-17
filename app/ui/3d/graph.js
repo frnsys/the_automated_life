@@ -222,8 +222,10 @@ class Graph {
     // this is a hand-adjustment that improves the positioning
     let xAdjust = (node.x * 0.025) + 6;
     let yAdjust = (node.y * 0.025);
-    anno.style.top = `${-node.y-annoHeight/2 - yAdjust}px`
-    anno.style.left = `${node.x + xAdjust}px`
+    // anno.style.top = `${-node.y-annoHeight/2 - yAdjust}px`
+    // anno.style.left = `${node.x + xAdjust}px`
+    anno.style.top = `${(-node.y-annoHeight/2 - yAdjust)/4.31}em`
+    anno.style.left = `${(node.x + xAdjust)/4.35}em`
     anno.style.visibility = '';
     return anno;
   }
