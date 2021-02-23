@@ -283,11 +283,11 @@ function loop(now) {
           // window.location.href = 'data:plain/text,' + JSON.stringify(wageChanges);
           if (player.cash >= config.retirementSavingsMin || player.retireEarly) {
             log('gameOver', {success: true, cash: player.cash, time: logTime}, () => {
-              gameOver({icon: 'win_retire', text: t('game_over_win')});
+              gameOver({icon: 'win_retire', text: t('game_over_win'), success: true});
             });
           } else {
             log('gameOver', {success: false, cash: player.cash, time: logTime}, () => {
-              gameOver({icon: 'lose_robot', text: t('game_over_lose')});
+              gameOver({icon: 'lose_robot', text: t('game_over_lose'), success: false});
             });
           }
           store.dispatch({
