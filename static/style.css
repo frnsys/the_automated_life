@@ -689,6 +689,7 @@ ul {
   right: 0;
   left: 0;
   background: rgba(0,0,0,0.75);
+  overflow-y: scroll;
 }
 .game-over-alert {
   margin: 2em auto;
@@ -713,6 +714,10 @@ ul {
 }
 .game-over-alert .sharing a:hover {
   background: #2142c6;
+}
+.game-over-alert .sharing img {
+  max-height: 11px;
+  margin-right: 4px;
 }
 .game-over-alert > div {
   flex: 1;
