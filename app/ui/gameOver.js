@@ -52,8 +52,8 @@ class GameOver extends Component {
               <p>{t('counterfactual', {amount: Math.abs(Math.round(counterfactualAmount)).toLocaleString(), comp: counterfactualAmount > 0 ? "more" : "less"})}</p>
             </div>
             <div className='sharing'>
-              <a target='_blank' href={`https://twitter.com/intent/tweet?text=${result}&url=https://${location.host}`}>{t('twitter_share')}</a>
-              <a target='_blank' href={`https://www.facebook.com/sharer/sharer.php?u=https://${location.host}&description=${result}`}>{t('facebook_share')}</a>
+              <a target='_blank' href={`https://twitter.com/intent/tweet?text=${result}&url=https://${location.host}`}><img src='/static/twitter.svg' />{t('twitter_share')}</a>
+              <a target='_blank' href={`https://www.facebook.com/sharer/sharer.php?u=https://${location.host}&description=${result}`}><img src='/static/facebook.svg' />{t('facebook_share')}</a>
             </div>
           </div>
           <GameOverSurvey />

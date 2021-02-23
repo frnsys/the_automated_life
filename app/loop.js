@@ -44,7 +44,7 @@ function loop(now) {
         type: 'player:gameOver'
       });
       log('gameOver', {success: false, time: logTime}, () => {
-        gameOver({icon: 'lose_debt', text: t('game_over_debt')});
+        gameOver({icon: 'lose_debt', text: t('game_over_debt'), success: false});
       });
       return;
     } else if (player.cash > 0 && player.gameOverWarned) {

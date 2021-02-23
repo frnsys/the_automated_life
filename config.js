@@ -1,5 +1,7 @@
 const params = location.search.slice(1);
 
+const live = window.location.hostname !== 'localhost';
+
 function shuffle(a) {
   for (let i = a.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -116,15 +118,15 @@ export default {
   ],
   maxBadPerformanceStreak: 4, // in months, after which player is fired
 
-  enableLogging: window.location.hostname !== 'localhost' || params.includes('log'),
-  debug: params.includes('debug'),
-  forceGdpr: params.includes('gdpr'),
-  perfectApplicant: params.includes('perfect'),
-  startHighSchool: params.includes('highschool'),
-  testGameOver: params.includes('gameover'),
-  schoolSubsidies: params.includes('subsidy'),
-  twoHops: params.includes('twoHops'),
-  jobSatisfaction: params.includes('jobSatisfaction'),
+  enableLogging: live || params.includes('log'),
+  debug: !live && params.includes('debug'),
+  forceGdpr: !live && params.includes('gdpr'),
+  perfectApplicant: !live && params.includes('perfect'),
+  startHighSchool: !live && params.includes('highschool'),
+  testGameOver: !live && params.includes('gameover'),
+  schoolSubsidies: !live && params.includes('subsidy'),
+  twoHops: !live && params.includes('twoHops'),
+  jobSatisfaction: !live && params.includes('jobSatisfaction'),
 
   tutorials: [{
     // Start of game
