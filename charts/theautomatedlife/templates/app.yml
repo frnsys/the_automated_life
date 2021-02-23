@@ -10,7 +10,7 @@ spec:
         app: future-of-work
     spec:
       containers:
-      - image: frnsys/future-of-work:{{VERSION}}
+      - image: {{ .Values.registryUrl }}/{{ .Values.dockerRegistryPrefix }}/future-of-work:{{ .Values.imageTag }}
         imagePullPolicy: Always
         name: future-of-work
         ports:
@@ -20,15 +20,15 @@ spec:
             cpu: 100m
         env:
         - name: FOW_SENTRY_DSN
-          value: foo
+          value: {{ .Values.fowSentryDSN }}
         - name: FOW_REDIS_HOST
-          value: foo
+          value: {{ .Values.fowRedisHost }}
         - name: FOW_REDIS_PASS
-          value: foo
+          value: {{ .Values.fowRedisPass }}
         - name: FOW_PSQL_URI
-          value: foo
+          value: {{ .Values.fowPsqlUri }}
         - name: FOW_AUTH_KEY
-          value: foo
+          value: {{ .Values.fowAuthKey }}
 ---
 apiVersion: v1
 kind: Service
