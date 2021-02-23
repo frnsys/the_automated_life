@@ -1,5 +1,6 @@
 import t from 'i18n';
 import log from 'log';
+import store from 'store';
 import React, { Component } from 'react';
 import {RadioGroup, Radio} from 'react-radio-group'
 import createChart from '../stats';
@@ -16,6 +17,7 @@ class GameOver extends Component {
 
   render() {
     let props = this.props;
+    let {player, jobs} = store.getState();
     let result = props.success ? t('game_over_win_share') : t('game_over_lose_share');
     let outcomePercent;
     if (props.success) {
@@ -56,7 +58,23 @@ class GameOver extends Component {
               <a target='_blank' href={`https://www.facebook.com/sharer/sharer.php?u=https://${location.host}&description=${result}`}><img src='/static/facebook.svg' />{t('facebook_share')}</a>
             </div>
           </div>
-          <GameOverSurvey />
+          <div>
+            <GameOverSurvey />
+            <div className="past-jobs">
+              {player.pastJobs.slice(1).map((job_id, i) => {
+                let name;
+                if (job_id == -1) {
+                  name = 'Student'
+                } else if (job_id == -2) {
+                  name = 'Unemployed'
+                } else {
+                  name = jobs[job_id].name;
+                }
+                return <span><span key={i} className="past-job">{t(name)}</span> ➔ </span>
+              })}
+              <span className="current-job">{t(player.job.name)}</span>
+            </div>
+          </div>
         </div>
       </div>);
   }

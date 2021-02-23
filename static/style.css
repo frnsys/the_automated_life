@@ -808,6 +808,19 @@ ul {
   max-width: 120px;
   margin-right: 2em;
 }
+.past-jobs {
+  margin-top: 1em;
+  font-size: 0.8em;
+  line-height: 1.6;
+}
+.past-job {
+  background: #dfdfdf;
+  padding: 0.1em 0.15em;
+}
+.current-job {
+  background: #5DDBA9;
+  padding: 0.1em 0.15em;
+}
 
 .button {
   color: #fff;
