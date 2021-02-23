@@ -311,11 +311,15 @@ class Graph {
           });
         },
         onMouseOut: () => {
+          let keepLabel = [this.focusedNodeId].concat(Object.keys(this.edges[this.focusedNodeId]));
+
           let anno = this.nodes[id].anno;
           anno.style.background = 'none';
           anno.style.fontSize = '0.2em';
           anno.style.zIndex = '1';
-          anno.classList.remove('visible');
+          if (!keepLabel.includes(id)) {
+            anno.classList.remove('visible');
+          }
 
           let neighbIds = Object.keys(this.edges[id]);
           neighbIds.forEach((n_id) => {
@@ -324,7 +328,9 @@ class Graph {
             anno.style.color = '#000';
             anno.style.fontSize = '0.2em';
             anno.style.zIndex = '1';
-            anno.classList.remove('visible');
+            if (!keepLabel.includes(n_id)) {
+              anno.classList.remove('visible');
+            }
             if (this.nodes[n_id].icon) {
               this.nodes[n_id].icon.scale.set(iconScale, iconScale, iconScale);
             }
@@ -435,6 +441,7 @@ class Graph {
         }
         this.resetNodeColor(n, player);
         n.anno.style.display = 'none';
+        n.anno.classList.remove('visible');
       });
     Object.values(this._edges)
       .filter(e => e.visible)
@@ -480,6 +487,7 @@ class Graph {
     // Set focus node color
     focusNode.mesh.visible = true;
     focusNode.anno.style.display = 'block';
+    focusNode.anno.classList.add('visible');
     focusNode.setColor(focusedColor);
     focusNode.mesh.position.setZ(2);
     this.showIconForNode(focusNode);
@@ -508,6 +516,7 @@ class Graph {
       let node = this.nodes[neighb];
       node.mesh.visible = true;
       node.anno.style.display = 'block';
+      node.anno.classList.add('visible');
       this.showIconForNode(node);
 
       // Determine bounding box
