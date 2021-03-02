@@ -29,7 +29,7 @@ variables:
 
 build:
   stage: build-npm
-  <<: *commonheader
+  <<: *tags
   image: node:12-slim
   artifacts:
     paths:
@@ -37,6 +37,7 @@ build:
     expire_in: 2 days
     when: always
   script:
+    - npm ci
     - npm run build
 
 build-container:
@@ -57,6 +58,9 @@ build-container:
 deploy:
   stage: deploy
   <<: *commonheader
+  only:
+    refs:
+      - master
   image: ${REGISTERY_URL}/${DOCKER_REGISTERY_PREFIX}/app/cd-tools:0.1
   script:
     - set -xv
