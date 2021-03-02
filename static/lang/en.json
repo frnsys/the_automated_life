@@ -41,7 +41,7 @@
   "survey_submitted": "Your answers have been submitted.",
   "survey_submit_button": "Submit",
   "robot_release": "RoboCo releases {name}. It excels at {skills}.",
-  "robot_release_long": "After years of research and devleopment, RoboCo has released {name}. It excels at {skills}. Any jobs involving this skill will be impacted.",
+  "robot_release_long": "After years of research and development, RoboCo has released {name}. It excels at {skills}. Any jobs involving this skill will be impacted.",
   "news_silence_note": "Hide future news. They will still be notifications in the bottom-right.",
   "birthday_title": "Happy {age}th birthday!",
   "birthday_body": "You're {yearsLeft} years from retirement. At this rate, you'll save ${estimate} by then.",
