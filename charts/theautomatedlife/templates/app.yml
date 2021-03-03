@@ -73,3 +73,16 @@ spec:
         backend:
           serviceName: future-of-work-2
           servicePort: 80
+---
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: future-of-work-2
+spec:
+  maxReplicas: 10
+  minReplicas: 1
+  scaleTargetRef:
+    apiVersion: extensions/v1beta1
+    kind: Deployment
+    name: future-of-work-2
+  targetCPUUtilizationPercentage: 60
