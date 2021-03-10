@@ -1,16 +1,25 @@
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: dockersecret-future-of-work
+type: kubernetes.io/dockerconfigjson
+data:
+  .dockerconfigjson: {{ .Values.dockersecret }}
+---
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: future-of-work
+  name: future-of-work-2
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: future-of-work
+        app: future-of-work-2
     spec:
       containers:
-      - image: {{ .Values.registryUrl }}/{{ .Values.dockerRegistryPrefix }}/future-of-work:{{ .Values.imageTag }}
+      - image: {{ .Values.registryUrl }}/{{ .Values.dockerRegistryPrefix }}/theautomatedlife:{{ .Values.imageTag }}
         imagePullPolicy: Always
         name: future-of-work
         ports:
@@ -29,23 +38,25 @@ spec:
           value: {{ .Values.fowPsqlUri }}
         - name: FOW_AUTH_KEY
           value: {{ .Values.fowAuthKey }}
+      imagePullSecrets:
+        - name: dockersecret-future-of-work
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: future-of-work
+  name: future-of-work-2
 spec:
   ports:
   - port: 80
     targetPort: 8080
     protocol: TCP
   selector:
-    app: future-of-work
+    app: future-of-work-2
 ---
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: future-of-work
+  name: future-of-work-2
   annotations:
     kubernetes.io/tls-acme: "true"
     kubernetes.io/ingress.class: "nginxtal"
@@ -53,12 +64,25 @@ spec:
   tls:
   - hosts:
     - theautomated.life
-#    secretName: ingress-ca
+    #    secretName: ingress-ca
   rules:
   - host: theautomated.life
     http:
       paths:
       - path: /
         backend:
-          serviceName: future-of-work
+          serviceName: future-of-work-2
           servicePort: 80
+---
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: future-of-work-2
+spec:
+  maxReplicas: 10
+  minReplicas: 1
+  scaleTargetRef:
+    apiVersion: extensions/v1beta1
+    kind: Deployment
+    name: future-of-work-2
+  targetCPUUtilizationPercentage: 60
