@@ -7,7 +7,7 @@ type: kubernetes.io/dockerconfigjson
 data:
   .dockerconfigjson: {{ .Values.dockersecret }}
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: future-of-work-2
