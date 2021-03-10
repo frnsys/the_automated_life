@@ -71,3 +71,4 @@ deploy:
       --set fowRedisPass=${fowRedisPass}
       --set fowPsqlUri=${fowPsqlUri}
       --set fowAuthKey=${fowAuthKey}
+      --set fowSentryDSN=${fowSentryDSN}
