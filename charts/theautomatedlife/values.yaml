@@ -1,0 +1,4 @@
+registryUrl: docker.gitlab.gwdg.de
+dockerRegistryPrefix: mpib/chm/common/base-images
+
+fowRedisHost: redis-master.aal.svc.cluster.local
