@@ -12,6 +12,9 @@ kind: Deployment
 metadata:
   name: future-of-work-2
 spec:
+  selector:
+    matchLabels:
+      app: future-of-work-2
   replicas: 1
   template:
     metadata:
