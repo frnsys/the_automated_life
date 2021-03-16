@@ -19,6 +19,7 @@ class GameOver extends Component {
     let props = this.props;
     let {player, jobs} = store.getState();
     let result = props.success ? t('game_over_win_share') : t('game_over_lose_share');
+    result = encodeURI(result);
     let outcomePercent;
     if (props.success) {
       outcomePercent = Math.round(props.aggregate.wins * 100);
@@ -54,7 +55,7 @@ class GameOver extends Component {
               <p>{t('counterfactual', {amount: Math.abs(Math.round(counterfactualAmount)).toLocaleString(), comp: counterfactualAmount > 0 ? "more" : "less"})}</p>
             </div>
             <div className='sharing'>
-              <a target='_blank' href={`https://twitter.com/intent/tweet?text=${result}&url=https://${location.host}`}><img src='/static/twitter.svg' />{t('twitter_share')}</a>
+              <a target='_blank' href={`https://twitter.com/intent/tweet?text=${result}&url=https://${location.host}&hashtags=theautomatedlife`}><img src='/static/twitter.svg' />{t('twitter_share')}</a>
               <a target='_blank' href={`https://www.facebook.com/sharer/sharer.php?u=https://${location.host}&description=${result}`}><img src='/static/facebook.svg' />{t('facebook_share')}</a>
             </div>
           </div>
