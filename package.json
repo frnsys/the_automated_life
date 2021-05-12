@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
-    "chart.js": "^2.8.0",
+    "chart.js": "^2.9.4",
     "chartjs-plugin-annotation": "^0.5.7",
     "mathjs": "^5.4.2",
     "numeral": "^2.0.6",
